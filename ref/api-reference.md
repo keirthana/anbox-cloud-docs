@@ -8,7 +8,7 @@ Anbox Cloud provides the following APIs:
 * Stream Gateway API
 * Anbox Platform SDK API
 
-All these APIs except for the [Anbox HTTP API](https://discourse.ubuntu.com/t/anbox-http-api/17819) have an auto-generated Swagger specification describing its API endpoints.
+All these APIs except for the [Anbox Cloud HTTP API](https://discourse.ubuntu.com/t/anbox-http-api/17819) have an auto-generated specification describing its API endpoints.
 
 ## Authentication
 
@@ -28,7 +28,7 @@ The details of a version of the API can be retrieved using `GET /<version>`. For
 
 If an API version is bumped to a major version, it indicates that backward compatibility is affected.
 
-Feature additions done without breaking backward compatibility only result in addition to `api_extensions` which can be used by the client to check if a given feature is supported by the server.
+Feature additions done without breaking backward compatibility only result in additions to `api_extensions` which can be used by the client to check if a given feature is supported by the server.
 
 ## Return values
 There are three standard return types:
@@ -45,24 +45,24 @@ For a standard synchronous operation, the following dict is returned:
     "type": "sync",
     "status": "Success",
     "status_code": 200,
-    "metadata": {}               # Extra resource/action specific metadata
+    "metadata": {}
 }
 ```
 
-HTTP code must be 200.
+HTTP response status code is 200.
 
 ### Background operation
 When a request results in a background operation, the HTTP code is set to 202 (Accepted) and the Location HTTP header is set to the operation URL.
 
-The body is a dict with the following structure:
+The response body is a dict with the following structure:
 
 ```json
 {
     "type": "async",
     "status": "OK",
     "status_code": 100,
-    "operation": "/1.0/containers/<id>",       # URL to the background operation
-    "metadata": {}                             # Operation metadata (see below)
+    "operation": "/1.0/containers/<id>",
+    "metadata": {}
 }
 ```
 
@@ -70,20 +70,20 @@ The operation metadata structure looks like:
 
 ```json
 {
-    "id": "c6832c58-0867-467e-b245-2962d6527876",           # UUID of the operation
-    "class": "task",                                        # Class of the operation (task, web socket or token)
-    "created_at": "2018-04-02T16:49:36.341463206+02:00",    # When the operation was created
-    "updated_at": "2018-04-02T16:49:36.341463206+02:00",    # Last time the operation was updated
-    "status": "Running",                                    # String version of the operation's status
-    "status_code": 103,                                     # Integer version of the operation's status (use this rather than status)
-    "resources": {                                          # Dictionary of resource types (container, snapshots, images) and affected resources
+    "id": "c6832c58-0867-467e-b245-2962d6527876",
+    "class": "task",
+    "created_at": "2018-04-02T16:49:36.341463206+02:00",
+    "updated_at": "2018-04-02T16:49:36.341463206+02:00",
+    "status": "Running",    
+    "status_code": 103,                        
+    "resources": {                                  
       "containers": [
         "/1.0/containers/3apqo5te"
       ]
     },
-    "metadata": null,                                       # Metadata specific to the operation in question (in this case, nothing)
-    "may_cancel": false,                                    # Whether the operation can be canceled (DELETE over REST)
-    "err": ""                                               # The error string should the operation have failed
+    "metadata": null,                          
+    "may_cancel": false,                       
+    "err": ""                                    
 }
 ```
 
@@ -97,11 +97,11 @@ There are various situations in which something may immediately go wrong, in tho
     "type": "error",
     "error": "Failure",
     "error_code": 400,
-    "metadata": {}                      # More details about the error
+    "metadata": {}           
 }
 ```
 
-HTTP code must be one of 400, 401, 403, 404, 409, 412 or 500.
+HTTP response status code is one of 400, 401, 403, 404, 409, 412 or 500.
 
 ## Status codes
 The REST API often has to return status information, which could be the reason for an error, the current state of an operation or the state of the various resources it exports.
@@ -160,7 +160,7 @@ PATCH can be used to modify a single field inside an object by only specifying t
 ## Authorisation
 Some operation may require a token to be included in the HTTP Authorisation header even if the request is already authenticated using a trusted certificate. If the token is not valid, the request is rejected by the server. This ensures that only authorised clients can access those endpoints.
 
-    `Authorization: bearer <token>`
+    Authorization: bearer <token>
 
 ## File upload
 Some operations require uploading a payload. To prevent the difficulties of handling multipart requests, a unique file is uploaded and its bytes are included in the body of the request. The following metadata associated with the file is included in extra HTTP headers:
