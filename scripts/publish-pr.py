@@ -8,7 +8,7 @@ if len(sys.argv) != 2:
 else:
     pr = sys.argv[1]
 
-    url = requests.get("https://api.github.com/repos/canonical/anbox-cloud-docs/pulls"+pr+"/files?per_page=100")
+    url = requests.get("https://api.github.com/repos/canonical/anbox-cloud-docs/pulls/"+pr+"/files?per_page=100")
     data = json.loads(url.text)
 
     for one in data:
