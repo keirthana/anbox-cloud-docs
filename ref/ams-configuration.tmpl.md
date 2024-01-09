@@ -93,4 +93,4 @@ Once set, this feature flag will be considered by all newly launched instances.
 
 *since 1.20.2*
 
-For debugging purposes Anbox can log ICE candidates from the server and client inside the system log of an instance. This is disabled by default and needs to be explicitly turned on with the feature flag `webrtc.enable_ice_logging`.
+For debugging purposes, Anbox Cloud can log ICE candidates from the server and client inside the system log of an instance. This is disabled by default and needs to be explicitly turned on with the feature flag `webrtc.enable_ice_logging`.
