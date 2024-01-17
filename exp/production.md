@@ -59,6 +59,16 @@ Consider how frequently you want your data backed up and where you want to host 
 
 Load balancing solutions can differ based on your deployment model. You should assess the load balancing solution that you want to use and the number of load balancers that is ideal for your deployment model.
 
+## Energy Efficiency
+
+Anbox Cloud is optimised to use only as much energy as is necessary for an operation to complete. When planning for a production deployment, think through the following questions about energy efficiency to choose the most optimum way possible for your specific requirements:
+
+* Does your hardware match the requirements for your use case?
+* What trade-offs does your requirement allow to improve energy efficiency? For example, is there a way to use a lower streaming resolution? Lowering the resolution will impact the streaming experience but where possible, it could be a trade-off between being energy efficient and the quality of the stream. This needs to be decided based on how you use Anbox Cloud.
+* Does your deployment use GPU encoding or CPU encoding?
+* What is the bandwidth consumption of your deployment and what are the factors that could make it more efficient?
+* Are you using the [appropriate platform](https://discourse.ubuntu.com/t/37322#supported-platforms) for your use case?
+
 ## Monitoring and metrics
 
 Although Anbox Cloud does not offer its own observability solution, Anbox Cloud gathers various performance metrics that you can access through API endpoints to create a monitoring solution.
