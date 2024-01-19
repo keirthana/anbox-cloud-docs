@@ -51,9 +51,9 @@ Not all components are updated with each release. When components are not update
 | `aar`    | `1.20/stable` | 1.20.2 |
 | `ams-node-controller` | `1.20/stable` | 1.20.2 |
 | `anbox-cloud-dashboard` | `1.20/stable` | 1.20.2 |
-| `anbox-stream-agent` | `1.20/stable` | 1.20.2 |
-| `anbox-stream-gateway` | `1.20/stable` | 1.20.2 |
-| `anbox-cloud-appliance` | `1.20/stable` | 1.20.2 |
+| `anbox-stream-agent` | `1.20/stable` | 1.20.1 |
+| `anbox-stream-gateway` | `1.20/stable` | 1.20.1 |
+| `anbox-cloud-appliance` | `1.20/stable` | 1.20.1 |
 
 
 ### Anbox images
