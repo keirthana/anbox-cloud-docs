@@ -64,7 +64,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/manage/ams-access | [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774)|
 | 3 | howto/manage/benchmarks | [Run benchmarks](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770)|
 | 3 | howto/manage/resize-storage | [Resize LXD storage](https://discourse.ubuntu.com/t/resize-lxd-storage/32569)|
-| 2 | howto/dashboard/web-dashboard | [Use the web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871)|
+| 2 | howto/manage/web-dashboard | [Use the web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871)|
 | 2 | howto/application/landing | [Manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) |
 | 3 | howto/application/create | [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)|
 | 3 | howto/application/wait | [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)|
@@ -164,6 +164,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | explanation/security | [Security](https://discourse.ubuntu.com/t/about-security/31217)|
 | 2 | explanation/ams | [AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
 | 2 | explanation/aar | [AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
+| 2 | explanation/web-dashboard | [Dashboard](https://discourse.ubuntu.com/t/anbox-cloud-web-dashboard/41847)
 | 2 | explanation/applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
 | 3 | explanation/resources | [Resources and resource presets](https://discourse.ubuntu.com/t/24960)|
 | 2 | explanation/addons | [Addons](https://discourse.ubuntu.com/t/addons/38727)|
@@ -365,7 +366,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/exp/gpu-support | /docs/explanation/gpus-instances |
 | /docs/howto/container/launch | /docs/howto/instance/create |
 | /docs/howto/stream/debug | /docs/howto/troubleshoot/streaming-issues |
-| /docs/howto/manage/web-dashboard | /docs/howto/dashboard/web-dashboard |
 | /docs/howto/manage/logs | /docs/howto/troubleshoot/logs |
 | /docs/ref/platforms | /docs/explanation/platforms |
 | /docs/ref/instance-types | /docs/reference/application-manifest |
