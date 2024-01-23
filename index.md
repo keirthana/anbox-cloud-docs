@@ -274,10 +274,87 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 [details=Mapping table]
 | Path | Location |
 | ---- | -------- |
-| /docs/tut | /docs/tutorial |
-| /docs/ref | /docs/reference |
-| /docs/exp | /docs/explanation |
-| /docs/release-notes | /docs/reference/release-notes |
+| /docs/tut/creating-addon | /docs/tutorial/creating-addon |
+| /docs/tut/getting-started-dashboard | /docs/tutorial/getting-started-dashboard |
+| /docs/tut/getting-started | /docs/tutorial/getting-started |
+| /docs/tut/installing-appliance | /docs/tutorial/installing-appliance |
+| /docs/tut/landing | /docs/tutorial/landing |
+| /docs/tut/stream-client | /docs/tutorial/stream-client |
+| /docs/ref/addon-manifest | /docs/reference/addon-manifest |
+| /docs/ref/ams-configuration | /docs/reference/ams-configuration |
+| /docs/ref/anbox-https-api | /docs/reference/anbox-https-api |
+| /docs/ref/android-features | /docs/reference/android-features |
+| /docs/ref/api-reference | /docs/reference/api-reference |
+| /docs/ref/application-manifest | /docs/reference/application-manifest |
+| /docs/ref/component-versions | /docs/reference/component-versions |
+| /docs/ref/glossary | /docs/reference/glossary |
+| /docs/ref/hooks | /docs/reference/hooks |
+| /docs/ref/landing | /docs/reference/landing |
+| /docs/ref/license-information | /docs/reference/license-information |
+| /docs/ref/network-ports | /docs/reference/network-ports |
+| /docs/ref/perf-benchmarks | /docs/reference/perf-benchmarks |
+| /docs/ref/prometheus | /docs/reference/prometheus |
+| /docs/ref/provided-images | /docs/reference/provided-images |
+| /docs/ref/releases-versions | /docs/reference/releases-version |
+| /docs/ref/requirements | /docs/reference/requirements |
+| /docs/ref/roadmap | /docs/reference/roadmap |
+| /docs/ref/sdks | /docs/reference/sdks |
+| /docs/ref/supported-codecs | /docs/reference/supported-codecs |
+| /docs/ref/supported-rendering-resources | /docs/reference/supported-rendering-resources |
+| /docs/ref/supported-versions | /docs/reference/supported-versions |
+| /docs/ref/webrtc-streamer | /docs/reference/webrtc-streamer |
+| /docs/ref/release-notes | /docs/reference/release-notes |
+| /docs/ref/appliance-command-reference/landing | /docs/reference/appliance-command-reference/landing|
+| /docs/ref/appliance-command-reference/ams | /docs/reference/appliance-command-reference/ams|
+| /docs/ref/appliance-command-reference/cluster | /docs/reference/appliance-command-reference/cluster|
+| /docs/ref/appliance-command-reference/dashboard | /docs/reference/appliance-command-reference/dashboard|
+| /docs/ref/appliance-command-reference/destroy | /docs/reference/appliance-command-reference/destroy|
+| /docs/ref/appliance-command-reference/gateway | /docs/reference/appliance-command-reference/gateway|
+| /docs/ref/appliance-command-reference/help | /docs/reference/appliance-command-reference/help|
+| /docs/ref/appliance-command-reference/init | /docs/reference/appliance-command-reference/init|
+| /docs/ref/appliance-command-reference/landing | /docs/reference/appliance-command-reference/landing|
+| /docs/ref/appliance-command-reference/status | /docs/reference/appliance-command-reference/status|
+| /docs/ref/appliance-command-reference/upgrade | /docs/reference/appliance-command-reference/upgrade|
+| /docs/ref/amc-command-reference/landing | /docs/reference/amc-command-reference/landing|
+| /docs/ref/amc-command-reference/addon | /docs/reference/amc-command-reference/addon|
+| /docs/ref/amc-command-reference/application | /docs/reference/amc-command-reference/application|
+| /docs/ref/amc-command-reference/benchmark | /docs/reference/amc-command-reference/benchmark|
+| /docs/ref/amc-command-reference/completion | /docs/reference/amc-command-reference/completion|
+| /docs/ref/amc-command-reference/config | /docs/reference/amc-command-reference/config|
+| /docs/ref/amc-command-reference/delete | /docs/reference/amc-command-reference/delete|
+| /docs/ref/amc-command-reference/exec | /docs/reference/amc-command-reference/exec|
+| /docs/ref/amc-command-reference/help | /docs/reference/amc-command-reference/help|
+| /docs/ref/amc-command-reference/image | /docs/reference/amc-command-reference/image|
+| /docs/ref/amc-command-reference/info | /docs/reference/amc-command-reference/info|
+| /docs/ref/amc-command-reference/init | /docs/reference/amc-command-reference/init|
+| /docs/ref/amc-command-reference/launch | /docs/reference/amc-command-reference/launch|
+| /docs/ref/amc-command-reference/list | /docs/reference/amc-command-reference/list|
+| /docs/ref/amc-command-reference/logs | /docs/reference/amc-command-reference/logs|
+| /docs/ref/amc-command-reference/node | /docs/reference/amc-command-reference/node|
+| /docs/ref/amc-command-reference/remote | /docs/reference/amc-command-reference/remote|
+| /docs/ref/amc-command-reference/shell | /docs/reference/amc-command-reference/shell|
+| /docs/ref/amc-command-reference/show-log | /docs/reference/amc-command-reference/show-log|
+| /docs/ref/amc-command-reference/show | /docs/reference/amc-command-reference/show|
+| /docs/ref/amc-command-reference/start | /docs/reference/amc-command-reference/start|
+| /docs/ref/amc-command-reference/stop | /docs/reference/amc-command-reference/stop|
+| /docs/ref/amc-command-reference/wait | /docs/reference/amc-command-reference/wait|
+| /docs/exp/landing | /docs/explanation/landing |
+| /docs/exp/aar | /docs/explanation/aar |
+| /docs/exp/addons | /docs/explanation/addons |
+| /docs/exp/ams | /docs/explanation/ams |
+| /docs/exp/anbox-cloud | /docs/explanation/anbox-cloud |
+| /docs/exp/application-streaming | /docs/explanation/application-streaming |
+| /docs/exp/applications | /docs/explanation/applications |
+| /docs/exp/capacity-planning | /docs/explanation/capacity-planning |
+| /docs/exp/clustering | /docs/explanation/clustering |
+| /docs/exp/gpus-instances | /docs/explanation/gpus-instances |
+| /docs/exp/instances | /docs/explanation/instances |
+| /docs/exp/performance | /docs/explanation/performance |
+| /docs/exp/platforms | /docs/explanation/platforms |
+| /docs/exp/production | /docs/explanation/production |
+| /docs/exp/rendering-architecture | /docs/explanation/rendering-architecture |
+| /docs/exp/resources | /docs/explanation/resources |
+| /docs/exp/security | /docs/explanation/security |
 | /docs/manage/container-access | /docs/howto/instance/access |
 | /docs/howto/container/view-log | /docs/howto/instance/logs |
 | /docs/usage/usecase-container-configuration | /docs/howto/instance/geographic-location |
