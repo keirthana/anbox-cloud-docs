@@ -1,4 +1,4 @@
-The Anbox Cloud Dashboard offers a web GUI that developers can use to create, manage and stream applications from their web browser. You can use the pre-installed dashboard almost immediately after deploying Anbox Cloud.
+The Anbox Cloud Dashboard offers a web GUI that users can use to create, manage and stream applications from their web browser. You can use the pre-installed dashboard almost immediately after deploying Anbox Cloud.
 
 ## Prerequisites
 Before you can log into the dashboard, you must register your Ubuntu One account with the dashboard to authenticate.
