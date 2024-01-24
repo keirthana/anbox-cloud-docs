@@ -1,10 +1,5 @@
 The guides in this section describe how to distribute the load of your Anbox Cloud installation over several machines in a cluster.
 
-For the Anbox Cloud Appliance:
-
-* [How to join a machine to the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-join-a-machine-to-the-anbox-cloud-appliance/29054)
-* [How to configure cluster nodes](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716)
-
 For full Anbox Cloud deployments:
 
 * [How to configure cluster nodes](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716)
@@ -12,3 +7,5 @@ For full Anbox Cloud deployments:
 * [How to scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323)
 
 See [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765) for an introduction to how clustering works in Anbox Cloud.
+
+[note type="information" status="Important"]Currently, Anbox Cloud Appliance does not support clustering.[/note]

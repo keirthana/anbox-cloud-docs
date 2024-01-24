@@ -118,5 +118,3 @@ After registering, you can log into the appliance dashboard at `https://your-mac
 Your Anbox Cloud Appliance is now fully set up and ready to be used! Next, you should check out the [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) or the [Get started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial to familiarise yourself with how to use Anbox Cloud.
 
 You can find more information about how to use the appliance in the documentation. The appliance installation is nearly identical to installing via Juju, so all the commands and examples not relating directly to Juju will apply.
-
-If you want to increase the capacity of your Anbox Cloud Appliance deployment, you can add more machines to it. See [How to join a machine to the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-join-a-machine-to-the-anbox-cloud-appliance/29054) for instructions.

@@ -111,7 +111,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/stream/oob-data | [Exchange OOB data](https://discourse.ubuntu.com/t/exchange-out-of-band-data/21834)|
 | 3 | howto/stream/client-side-keyboard | [Use a client-side keyboard](https://discourse.ubuntu.com/t/integrate-a-client-side-virtual-keyboard/23643)|
 | 2 | howto/cluster/landing | [Manage the cluster](https://discourse.ubuntu.com/t/manage-cluster-nodes/24334) |
-| 3 | howto/cluster/appliance | [Join a machine to the appliance](https://discourse.ubuntu.com/t/how-to-join-a-machine-to-the-anbox-cloud-appliance/29054) |
 | 3 | howto/cluster/configure-nodes | [Configure cluster nodes](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716) |
 | 3 | howto/cluster/scale-up | [Scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322)|
 | 3 | howto/cluster/scale-down | [Scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323)|
@@ -238,7 +237,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 |   | reference/release-notes/1.7.2 | [Release notes-Anbox Cloud 1.7.2](https://discourse.ubuntu.com/t/18265)|
 |   | reference/release-notes/1.7.1 | [Release notes-Anbox Cloud 1.7.1](https://discourse.ubuntu.com/t/17977)|
 |   | reference/appliance-command-reference/ams | [Appliance command reference - ams](https://discourse.ubuntu.com/t/39517)|
-|   | reference/appliance-command-reference/cluster | [Appliance command reference - cluster](https://discourse.ubuntu.com/t/39519)|
 |   | reference/appliance-command-reference/dashboard | [Appliance command reference - dashboard](https://discourse.ubuntu.com/t/39520)|
 |   | reference/appliance-command-reference/destroy | [Appliance command reference - destroy](https://discourse.ubuntu.com/t/39521)|
 |   | reference/appliance-command-reference/gateway | [Appliance command reference - gateway](https://discourse.ubuntu.com/t/39522)|
