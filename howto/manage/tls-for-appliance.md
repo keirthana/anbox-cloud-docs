@@ -113,7 +113,7 @@ You can skip this step if you registered your domain name through Amazon Route 5
 
 If you want to use a domain name that was not registered through Amazon Route 53, you must manually create a [public hosted zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/AboutHZWorkingWith.html) for it, and then make your domain use Amazon Route 53 as its DNS service. A public hosted zone contains routing information for the domain, and Amazon Route 53 uses it to determine to which machine it should route the traffic to your domain.
 
-In the case of the Anbox Cloud Appliance, we want the traffic routed to the AWS load balancer (which we will set up in [step 3](##h-3-create-a-load-balancer-10).
+In the case of the Anbox Cloud Appliance, we want the traffic routed to the AWS load balancer (which we will set up in [step 3](#h-3-create-a-load-balancer-10).
 
 1. To create a public hosted zone, follow the instructions in [Creating a public hosted zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingHostedZone.html) in the Amazon Route 53 documentation.
 
