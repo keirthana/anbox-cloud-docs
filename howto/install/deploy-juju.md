@@ -3,7 +3,7 @@ Anbox Cloud supports various public clouds, such as AWS, Azure and Google. To de
 See the following sections for detailed instructions. If you want to install Anbox Cloud on bare metal instead of a public cloud, see [How to deploy Anbox Cloud on bare metal](https://discourse.ubuntu.com/t/deploy-anbox-cloud-on-bare-metal/26378) instead.
 
 [note type="information" status="Note"]
-There are differences between the full Anbox Cloud installation and the Anbox Cloud Appliance (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This section focuses on **Anbox Cloud**. For instructions on how to install the **Anbox Cloud Appliance**, see [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702) or the [Install the Anbox Cloud Appliance on a dedicated machine](https://discourse.ubuntu.com/t/install-appliance/22681) tutorial.
+There are differences between the full Anbox Cloud installation and the Anbox Cloud Appliance (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud/17802#variants-1)). This section focuses on **Anbox Cloud**. For instructions on how to install the **Anbox Cloud Appliance**, see [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702) or the [Install the Anbox Cloud Appliance on a dedicated machine](https://discourse.ubuntu.com/t/install-appliance/22681) tutorial.
 [/note]
 
 ## Prerequisites
@@ -26,7 +26,7 @@ To install Juju 2.9, enter the following command:
 
     sudo snap install --classic --channel=2.9/stable juju
 
-See [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version) for information about which Juju version is required for your version of Anbox Cloud.
+See [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version-10) for information about which Juju version is required for your version of Anbox Cloud.
 
 ## Authenticate with your cloud
 
@@ -63,7 +63,7 @@ You can retrieve your Ubuntu Pro token at https://ubuntu.com/pro after logging i
 
 [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token will result in a failed deployment. You need an *Ubuntu Pro* subscription.[/note]
 
-To provide your token when deploying with Juju, you need an [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files) named `ua.yaml`. For the `anbox-cloud` bundle, the `ua.yaml` file should look like this:
+To provide your token when deploying with Juju, you need an [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#use-overlay-files-1) named `ua.yaml`. For the `anbox-cloud` bundle, the `ua.yaml` file should look like this:
 
 ```yaml
 applications:
@@ -114,7 +114,7 @@ Therefore, make sure to check the following sections before you run the deploy c
 
 To install Anbox Cloud, deploy the suitable Anbox Cloud bundle to the Juju model. This will add instances to the model and deploy the required applications.
 
-Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles):
+Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles-7):
 
 * For a minimised version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
 
@@ -126,7 +126,7 @@ Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about
 
 ## Customise the hardware configuration
 
-To customise the machine configuration Juju will use for the deployment, create another [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files). Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://juju.is/docs/olm/constraint#heading--complete-list-of-constraints) in the Juju documentation for details.
+To customise the machine configuration Juju will use for the deployment, create another [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#use-overlay-files-1). Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://juju.is/docs/olm/constraint#heading--complete-list-of-constraints) in the Juju documentation for details.
 
 For the `anbox-cloud-core` bundle, such an `overlay.yaml` file looks like this:
 
@@ -165,7 +165,7 @@ To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 <a name="customise-storage"></a>
 ### Customise storage
 
-By default, Anbox Cloud uses a loop file with an automatically calculated size for LXD storage. For optimal performance, however, you should use a dedicated block storage device. See [LXD storage](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#lxd-storage) for more information.
+By default, Anbox Cloud uses a loop file with an automatically calculated size for LXD storage. For optimal performance, however, you should use a dedicated block storage device. See [LXD storage](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#lxd-storage-6) for more information.
 
 The easiest way to do this is to use a storage device defined by Juju:
 

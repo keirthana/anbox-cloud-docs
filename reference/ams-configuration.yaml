@@ -15,7 +15,7 @@ all:
       If set to `true`, AMS automatically published new application
       versions when the bootstrap process is finished. `false`
       disables this. See
-      [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions).
+      [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions-1).
     deprecated: false
   application.auto_update:
     type: "bool"
@@ -24,7 +24,7 @@ all:
       If set to `true`, AMS automatically updates applications
       whenever any dependencies (parent image, addons, global
       configuration) change. `false` disables this. See
-      [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-updates).
+      [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-application-updates-3).
     deprecated: false
   application.default_abi:
     type: "string"
@@ -283,7 +283,7 @@ node:
     default: "4"
     description: >-
       CPU allocation rate used for
-      [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#overcommitting).
+      [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#over-committing-resources-3).
     deprecated: false
   cpus:
     type: "integer"
@@ -306,7 +306,7 @@ node:
       GPU)<br/>10 (for nodes with AMD or Intel GPU)
     description: >-
       Number of
-      [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots)
+      [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots-2)
       available on the node.
     deprecated: false
   memory:
@@ -320,7 +320,7 @@ node:
     default: "2"
     description: >-
       Memory allocation rate used for
-      [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#overcommitting).
+      [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#over-committing-resources-3).
     deprecated: false
   public-address:
     type: "string"

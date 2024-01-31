@@ -46,7 +46,7 @@ If they are not, run the following command to do so:
 
 ## Check Juju version
 
-Before you upgrade, check the required [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version).
+Before you upgrade, check the required [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version-10).
 
 If your deployment uses an earlier Juju version, you must upgrade your controller and all models first. See the [Juju documentation](https://juju.is/docs/olm/upgrade-models) for instructions on how to upgrade the Juju controller and all models to a newer Juju version.
 
@@ -172,4 +172,4 @@ You can check for the status of an existing application by running:
 
     amc application show <application id or name>
 
-In case automatic updates are disabled for applications, AMS cannot update the application. See [Configure automatic application updates](https://discourse.ubuntu.com/t/24201#configure-automatic-updates) to enable automatic updates or to manually update the applications.
+In case automatic updates are disabled for applications, AMS cannot update the application. See [Configure automatic application updates](https://discourse.ubuntu.com/t/24201#configure-automatic-application-updates-3) to enable automatic updates or to manually update the applications.

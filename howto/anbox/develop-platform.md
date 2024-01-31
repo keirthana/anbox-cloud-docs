@@ -8,7 +8,7 @@ A platform module must be built on the same version of Ubuntu as the Anbox runti
 
 However, if you're running the Anbox Cloud Appliance on a machine with a different Ubuntu version, you can build the platform on a separate system (for example, in a LXD or docker instance or on another machine).
 
-To get started, you must first install the [Anbox Platform SDK](https://github.com/anbox-cloud/anbox-platform-sdk). To do so, follow the [installation instructions](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-platform-sdk).
+To get started, you must first install the [Anbox Platform SDK](https://github.com/anbox-cloud/anbox-platform-sdk). To do so, follow the [installation instructions](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-platform-sdk-1).
 
 ## Build the example platform
 
@@ -37,7 +37,7 @@ To try out the `minimal` platform, complete the following steps:
 
         amc launch --raw --devmode --instance-type=a4.3
 
-   If you chose the `nvidia` example, you must select an [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) that supports GPUs:
+   If you chose the `nvidia` example, you must select an [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type-1) that supports GPUs:
 
         amc launch --raw --devmode --instance-type=g4.3
 
@@ -45,7 +45,7 @@ To try out the `minimal` platform, complete the following steps:
 
    The command prints out the ID of the instance. Note down this ID; you will need it in the next step.
 
-   The start of the raw instance takes some time, because it runs through the full [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap) before the instance is ready to be used.
+   The start of the raw instance takes some time, because it runs through the full [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2) before the instance is ready to be used.
 
 1. When the instance is fully up and running, copy the `platform_minimal.so` module to it:
 

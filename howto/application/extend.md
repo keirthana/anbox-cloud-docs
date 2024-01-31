@@ -5,7 +5,6 @@ You can extend an application either by adding [hooks](#application-hooks) direc
 
 For both options, you must create one or more hooks first. The options differ in how you add these hooks to your application.
 
-<a name="create-hook"></a>
 ## Create a hook
 
 A hook is a script file that runs a series of commands at a specific time in the application life cycle. See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for detailed information.
@@ -58,7 +57,7 @@ Complete the following steps to create a hook that changes the Android system lo
    ```
 
    [note type="information" status="Important"]
-   In the file, replace `<working_dir>` with the [environment variable](https://discourse.ubuntu.com/t/hooks/28555#env-variables) that points to the current working directory for the hook. If you plan to run the hook [as an application hook](#application-hooks), use `$APP_DIR`. If you plan to run the hook [through an addon](#addon), use `$ADDON_DIR`.
+   In the file, replace `<working_dir>` with the [environment variable](https://discourse.ubuntu.com/t/hooks/28555#environment-variables-1) that points to the current working directory for the hook. If you plan to run the hook [as an application hook](#application-hooks), use `$APP_DIR`. If you plan to run the hook [through an addon](#addon), use `$ADDON_DIR`.
    [/note]
 1. Make all files in the `hooks` directory executable:
 
@@ -99,7 +98,7 @@ Complete the following steps to create a hook that replaces the standard Android
    ```
 
    [note type="information" status="Important"]
-   In the file, replace `<working_dir>` with the [environment variable](https://discourse.ubuntu.com/t/hooks/28555#env-variables) that points to the current working directory for the hook. If you plan to run the hook [as an application hook](#application-hooks), use `$APP_DIR`. If you plan to run the hook [through an addon](#addon), use `$ADDON_DIR`.
+   In the file, replace `<working_dir>` with the [environment variable](https://discourse.ubuntu.com/t/hooks/28555#environment-variables-1) that points to the current working directory for the hook. If you plan to run the hook [as an application hook](#application-hooks), use `$APP_DIR`. If you plan to run the hook [through an addon](#addon), use `$ADDON_DIR`.
    [/note]
 1. Make all files in the `hooks` directory executable:
 
@@ -117,7 +116,7 @@ You can add your hooks directly to an application. To do so, complete the follow
    instance-type: a4.3
    ```
 
-1. Prepare one or more hooks as described in [Create a hook](#create-hook).
+1. Prepare one or more hooks as described in [Create a hook](#create-a-hook-1).
 
 1. Move the `hooks` directory and any other files that are required by the hook into the `app` directory. The folder structure should look like this:
 
@@ -136,7 +135,7 @@ You can add your hooks directly to an application. To do so, complete the follow
 After the application is created, launch an instance. You should see that the hook is executed and that, for example, the system locale is changed or the standard Android launcher is replaced.
 
 [note type="information" status="Important"]
-By default, the files required for the hooks (for example, APK files) are removed automatically from the application image after the [application bootstrap](https://discourse.ubuntu.com/t/17760) is completed. According to your application requirements, consider using the [`bootstrap.keep`](https://discourse.ubuntu.com/t/application-manifest/24197#bootstrap) attribute in the application manifest file if you want to keep any content needed by the application running in a regular instance.
+By default, the files required for the hooks (for example, APK files) are removed automatically from the application image after the [application bootstrap](https://discourse.ubuntu.com/t/17760) is completed. According to your application requirements, consider using the [`bootstrap.keep`](https://discourse.ubuntu.com/t/application-manifest/24197#bootstrap-process-2) attribute in the application manifest file if you want to keep any content needed by the application running in a regular instance.
 [/note]
 
 <a name="addon"></a>
@@ -144,7 +143,7 @@ By default, the files required for the hooks (for example, APK files) are remove
 
 If you want to use your hooks in multiple applications, you should include them in an addon. To do so, complete the following steps:
 
-1. In a new `my-addon` directory, prepare one or more hooks as described in [Create a hook](#create-hook).
+1. In a new `my-addon` directory, prepare one or more hooks as described in [Create a hook](#create-a-hook-1).
 1. Create a `manifest.yaml` file in the `my-addon` directory with the following content:
 
    ```

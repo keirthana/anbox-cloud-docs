@@ -101,7 +101,7 @@ A service that runs on every LXD node and puts the appropriate firewall rules in
 
 An SDK that provides Go language bindings for connecting to AMS through the exposed REST API.
 
-See [AMS SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#ams-sdk).
+See [AMS SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#ams-sdk-4).
 
 <a name="anbox"></a>
 ### Anbox
@@ -134,7 +134,7 @@ See https://discourse.ubuntu.com/t/about-anbox-cloud/17802.
 
 A self-contained deployment variant of Anbox Cloud.
 
-See [Variants](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#variants).
+See [Variants](https://discourse.ubuntu.com/t/anbox-cloud/17802#variants-1).
 
 <a name="anbox-cloud-cluster"></a>
 ### Anbox Cloud cluster
@@ -172,14 +172,14 @@ See [Anbox Platform SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#a
 
 A command-line tool (`anbox-shell`) that provides an ADB shell with root permissions granted, which you can use to access the Android system in the instance.
 
-See [Access an instance with AMC](https://discourse.ubuntu.com/t/17772#amc).
+See [Access an instance with AMC](https://discourse.ubuntu.com/t/17772#access-an-instance-with-amc-1).
 
 <a name="anbox-streaming-sdk"></a>
 ### Anbox Streaming SDK
 
 An SDK that allows the development of custom streaming clients, using JavaScript.
 
-See [Anbox Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk).
+See [Anbox Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8).
 
 <a name="android-app"></a>
 ### Android app
@@ -250,7 +250,7 @@ The package to launch in an application instance once the system has booted.
 
 The process that builds the application and optimises it to run on Anbox Cloud.
 
-See [Bootstrap process](https://discourse.ubuntu.com/t/about-applications/17760#bootstrap).
+See [Bootstrap process](https://discourse.ubuntu.com/t/about-applications/17760#bootstrap-process-2).
 
 <a name="control-node"></a>
 ### Control node
@@ -315,7 +315,7 @@ See https://discourse.ubuntu.com/t/17763.
 
 An abstraction for a set of resources that is available to an instance.
 
-See https://discourse.ubuntu.com/t/application-manifest/24197#instance-type.
+See https://discourse.ubuntu.com/t/application-manifest/24197#instance-type-1.
 
 [note type="information" status="Note"] The `instance-type` attribute in the application manifest will be deprecated effective version 1.20 and will be removed in future releases. After the `instance-type` attribute becomes unsupported, this term will be replaced with the term *Resource preset*.[/note]
 
@@ -451,7 +451,7 @@ See [Ubuntu One](https://login.ubuntu.com/).
 
 A software component that monitors the app in an instance and terminates the instance if the app crashes or is moved to the background.
 
-See [Watchdog settings](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog).
+See [Watchdog settings](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog-5).
 
 <a name="web-dashboard"></a>
 ### Web dashboard

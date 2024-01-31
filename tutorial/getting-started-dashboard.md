@@ -3,12 +3,12 @@ This tutorial guides you through the first steps of using Anbox Cloud. You will 
 The web dashboard provides an easy-to use interface to Anbox Cloud. However, it currently supports a limited set of functionality, which means that it might not be sufficient for all use cases. If you want to learn how to manage Anbox Cloud from the command line, see the [Get started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial.
 
 ## Preparation
+
 If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
 
 - [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702)
 - [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336) (note that you must install the streaming stack for the web dashboard to be available)
 
-<a name="virtual-device"></a>
 ## 1. Create a virtual device
 
 Let's start exploring what Anbox Cloud can do by launching a virtual device that runs a specific Android version.
@@ -44,11 +44,11 @@ When the application has been initialised and its status changes to `ready`, com
 
 ## 3. Create an application from an APK
 
-To create an application for a specific Android app, follow the steps in [1. Create a virtual device](#virtual-device), but upload the APK of the Android app.
+To create an application for a specific Android app, follow the steps in [1. Create a virtual device](#h-1-create-a-virtual-device-2), but upload the APK of the Android app.
 
 [note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [How to port Android apps](https://discourse.ubuntu.com/t/port-android-apps/17776) for more information.[/note]
 
-Choose a [resource preset](https://discourse.ubuntu.com/t/application-manifest/24197#resources) suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, make sure to mention the GPU requirement using the `resources` attribute. Otherwise, the container will use a GPU if available or software encoding.
+Choose a [resource preset](https://discourse.ubuntu.com/t/application-manifest/24197#resources-7) suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, make sure to mention the GPU requirement using the `resources` attribute. Otherwise, the container will use a GPU if available or software encoding.
 
 You can launch and test the application in the same way as you did for the virtual device.
 
