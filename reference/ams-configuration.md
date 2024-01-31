@@ -6,8 +6,8 @@ AMS provides various configuration items to customise its behaviour. The followi
 | Name | Type | Default |  Description            |
 |------|------|---------|-------------------------|
 | `application.addons` | string | - | Comma-separated list of addons that every application managed by AMS will use. See [How to enable an addon globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285). |
-| `application.auto_publish` | bool | true | If set to `true`, AMS automatically published new application versions when the bootstrap process is finished. `false` disables this. See [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions). |
-| `application.auto_update` | bool | true | If set to `true`, AMS automatically updates applications whenever any dependencies (parent image, addons, global configuration) change. `false` disables this. See [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-updates). |
+| `application.auto_publish` | bool | true | If set to `true`, AMS automatically published new application versions when the bootstrap process is finished. `false` disables this. See [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions-1). |
+| `application.auto_update` | bool | true | If set to `true`, AMS automatically updates applications whenever any dependencies (parent image, addons, global configuration) change. `false` disables this. See [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-application-updates-3). |
 | `application.default_abi` | string | - | Default Android ABI that applications should use. See [Android ABIs](https://developer.android.com/ndk/guides/abis) for a list of available ABIs. |
 | `application.max_published_versions` | integer | 3 | Maximum number of published versions per application. If the number of versions of an application exceeds this configuration, AMS will automatically clean up older versions. |
 | `container.apt_mirror` | string | - | APT mirror to use within the containers. By default, `http://archive.ubuntu.com` (amd64) or `http://ports.ubuntu.com` (arm64) is used. This configuration item is deprecated since 1.20, use `instance.apt_mirror` instead. |
@@ -42,19 +42,18 @@ AMS provides various configuration items to customise its behaviour. The followi
 | `registry.url` | string | - | URL of the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) to use. |
 | `scheduler.strategy` | string | `spread` | Strategy that the internal instance scheduler in AMS uses to distribute instances across available LXD nodes: `binpack`, `spread` |
 
-<a name="node-specific"></a>
 ## Node-specific configuration
 
 In a cluster setup, there are configuration items that can be customised for each node. The following table lists the available configuration items and their meaning.
 
 | Name | Type | Default |  Description            |
 |------|------|---------|-------------------------|
-| `cpu-allocation-rate` | integer | 4 | CPU allocation rate used for [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#overcommitting). |
+| `cpu-allocation-rate` | integer | 4 | CPU allocation rate used for [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#over-committing-resources-3). |
 | `cpus` | integer | all available | Number of CPUs dedicated to instances. |
 | `gpu-encoder-slots` | integer | 0 (for nodes without GPU or with AMD GPU)<br/>32 (for nodes with NVIDIA GPU)<br/>10 (for nodes with Intel GPU) | Number of GPU encoder slots available on the node. |
-| `gpu-slots` | integer | 0 (for nodes without GPU)<br/>32 (for nodes with NVIDIA GPU)<br/>10 (for nodes with AMD or Intel GPU) | Number of [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots) available on the node. |
+| `gpu-slots` | integer | 0 (for nodes without GPU)<br/>32 (for nodes with NVIDIA GPU)<br/>10 (for nodes with AMD or Intel GPU) | Number of [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots-2) available on the node. |
 | `memory` | integer | all available | Memory dedicated to instances. |
-| `memory-allocation-rate` | integer | 2 | Memory allocation rate used for [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#overcommitting). |
+| `memory-allocation-rate` | integer | 2 | Memory allocation rate used for [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#over-committing-resources-3). |
 | `public-address` | string | - | The public, reachable address of the node. |
 | `subnet` | string | - | The network subnet of the machine where the node runs. |
 | `tags` | string | - | Tags to identify the node. |
@@ -86,13 +85,13 @@ The feature flag will be considered by all new launched instances once set.
 
 The Android virtual keyboard is disabled by default but can be enabled with the `enable_virtual_keyboard` feature flag.
 
-For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the [application bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap).
+For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the [application bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2).
 
 #### Client-Side Virtual Keyboard
 
 The client-side virtual keyboard is disabled by default but can be enabled with the `enable_anbox_ime` feature flag. It requires the client application to embed [Anbox WebView](https://discourse.ubuntu.com/t/integrate-a-client-side-virtual-keyboard/23643) which interacts with the client-side virtual keyboard for text editing and sends the text to the Android container.
 
-For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the [application bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap).
+For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the [application bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2).
 
 #### WiFi
 
@@ -104,7 +103,7 @@ The feature flag will be considered by all newly launched instances once set.
 
 By default, Android is not allowed to reboot. With the `allow_android_reboot` feature flag, this can be allowed.
 
-Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) if reboots are allowed.
+Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog-5) if reboots are allowed.
 
 The feature flag will be considered by all newly launched instances once set.
 
