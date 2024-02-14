@@ -146,10 +146,10 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | reference/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
 | 2 | reference/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
 | 2 | reference/api-reference | [APIs](https://discourse.ubuntu.com/t/api-reference/24339) |
-| 3 | reference/ams-http-api | [AMS HTTP API](https://anbox-cloud.github.io/latest/ams/)|
+| 3 | reference/ams-http-api | [AMS HTTP API](https://canonical.github.io/anbox-cloud.github.com/latest/ams/)|
 | 3 | reference/anbox-https-api | [Anbox HTTP API](https://discourse.ubuntu.com/t/anbox-http-api-reference/17819)|
-| 3 | reference/anbox-stream-gateway | [Stream Gateway API](https://anbox-cloud.github.io/latest/anbox-stream-gateway/)|
-| 3 | reference/anbox-platform-sdk-api | [Anbox Platform SDK API](https://anbox-cloud.github.io/latest/anbox-platform-sdk/)|
+| 3 | reference/anbox-stream-gateway | [Stream Gateway API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-stream-gateway/)|
+| 3 | reference/anbox-platform-sdk-api | [Anbox Platform SDK API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/)|
 | 2 | reference/sdks | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
 | 2 | reference/network-ports | [Network ports](https://discourse.ubuntu.com/t/network-ports/33650)|
 | 2 | reference/addon-manifest | [Addon manifest](https://discourse.ubuntu.com/t/addons/25293)|
