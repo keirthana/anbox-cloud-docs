@@ -7,7 +7,6 @@ The following commands are available for the `anbox-cloud-appliance` tool:
 | Command | Description|
 |---------|------------|
 |[`ams`](https://discourse.ubuntu.com/t/39517)    | Manage access to the Anbox Management Service (AMS)|
-|[`cluster`](https://discourse.ubuntu.com/t/39519)| Manage cluster nodes|
 |[`dashboard`](https://discourse.ubuntu.com/t/39520)| Manage the web dashboard of appliance|
 |[`destroy`](https://discourse.ubuntu.com/t/39521) | Destroy the appliance|
 |[`gateway`](https://discourse.ubuntu.com/t/39522) | Manage the appliance stream gateway|

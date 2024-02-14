@@ -1,14 +1,4 @@
-While it is possible to install Anbox Cloud on a single machine, you usually want to distribute the load over several machines in a cluster.
-
-The Anbox Cloud Appliance provides only basic and experimental support for multi-node setups, however, Anbox Cloud provides full clustering support.
-
-## Multi-node support for the Anbox Cloud Appliance
-
-If you're running the Anbox Cloud Appliance and you want to extend the available instance capacity, you can [join additional machines to the appliance](https://discourse.ubuntu.com/t/how-to-join-a-machine-to-the-anbox-cloud-appliance/29054).
-
-The appliance uses [FAN networking](https://wiki.ubuntu.com/FanNetworking) to spawn an overlay network that allows instances on different machines to communicate with each other. This setup extends the capacity, but currently, it does not provide support for high availability (HA).
-
-[note type="information" status="Note"]FAN networking requires a `/16` or `/24` subnet on the network interface. If the appliance is installed on a machine that is not on such a subnet, the appliance disables FAN networking. In such cases, extending the appliance with additional nodes is be possible.[/note]
+While it is possible to install Anbox Cloud on a single machine, Anbox Cloud Appliance does not support multi-node setups. If you intend to distribute the load across multiple machines in a cluster, it is recommended to use Anbox Cloud for full deployments instead.
 
 ## Clustering for full Anbox Cloud deployments
 
