@@ -513,7 +513,7 @@ Platform | Field name       | Available since   | JSON type | Access | Descripti
 `webrtc` | `rtc_log`         | 1.15 | Boolean   | read/write | Enable/disable [RTC event logging](https://webrtc.googlesource.com/src/+/lkgr/logging/g3doc/rtc_event_log.md). Logs are written to `/var/lib/anbox/traces/rtc_log.*` inside the instance. |
 `webrtc` | `stream_active`   | 1.15 | Boolean   | read | `true` if a client is actively streaming, `false` if no client is connected. |
 
-
+<a name="heading--10vhal"></a>
 ### `/1.0/vhal`
 
 This endpoint queries the [Android VHAL](https://source.android.com/docs/automotive/vhal)
@@ -620,7 +620,7 @@ Return value for the input above:
     "type": "sync"
 }
 ```
-
+<a name="heading--10vhalconfig"></a>
 ### `/1.0/vhal/config`
 
 This endpoint queries the [Android VHAL](https://source.android.com/docs/automotive/vhal)
