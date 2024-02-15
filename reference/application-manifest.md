@@ -11,8 +11,8 @@ Name          | Value type | Description | Status |
 `image` (optional) | string     | Name or ID of an image to be used for the application. The default image is used if empty. [Jump to details](#image-2) | Supported |
 `addons` (optional) | array      | List of addons to be installed during the application bootstrap process. | Supported |
 `tags` (optional) | array      | List of tags to be associated with the application. | Supported |
-`boot-package` (optional) | string     | Package to launch once the system has booted (default: package name retrieved from the APK if APK file is present). | Supported |
-`boot-activity` (optional) | string     | Activity of boot package to launch once the system has booted (default: main activity as defined in the application manifest). | Supported |
+`boot-package` (optional) | string     | Package to launch once the system has booted (default: package name retrieved from the APK if APK file is present). | Supported on AOSP only |
+`boot-activity` (optional) | string     | Activity of boot package to launch once the system has booted (default: main activity as defined in the application manifest). | Supported on AOSP only |
 `video-encoder` (optional) | string     | Video encoder to be used by an instance launched from the application  (default: `gpu-preferred`). Possible values are: `gpu`, `gpu-preferred`, `software`. [Jump to details](#video-encoder-4) | Supported |
 `watchdog` (optional)    | map        | Watchdog settings to be configured on application installation. [Jump to details](#watchdog-5)| Supported |
 `services` (optional)    | array      | Services to be provided from the installed application. [Jump to details](#services-6) | Supported |

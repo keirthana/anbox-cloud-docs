@@ -143,6 +143,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | reference/supported-rendering-resources | [Supported rendering resources](https://discourse.ubuntu.com/t/supported-rendering-resources/37322) |
 | 2 | reference/supported-codecs | [Supported codecs](https://discourse.ubuntu.com/t/37323)|
 | 2 | reference/android-features | [Supported Android features](https://discourse.ubuntu.com/t/supported-android-features/28825)|
+| 2 | reference/anbox-features | [Supported Anbox features](TBD)|
 | 2 | reference/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
 | 2 | reference/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
 | 2 | reference/api-reference | [APIs](https://discourse.ubuntu.com/t/api-reference/24339) |
