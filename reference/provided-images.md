@@ -8,8 +8,8 @@ The following table lists supported images available on the official image serve
 
 | Name                        | Based on | Android Version | Ubuntu Version | Available since |
 |-----------------------------|----------|-----------------|----------------|---------------|
-| `jammy:android13:amd64`     | AAOS     | 13              | 22.04          | 1.21.0 |
-| `jammy:android13:arm64`     | AAOS     | 13              | 22.04          | 1.21.0 |
+| `jammy:aaos13:amd64`        | AAOS     | 13              | 22.04          | 1.21.0 |
+| `jammy:aaos13:arm64`        | AAOS     | 13              | 22.04          | 1.21.0 |
 | `jammy:android13:amd64`     | AOSP     | 13              | 22.04          | 1.16.0 |
 | `jammy:android13:arm64`     | AOSP     | 13              | 22.04          | 1.16.0 |
 | `jammy:android12:amd64`     | AOSP     | 12              | 22.04          | 1.14.0 |
