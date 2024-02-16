@@ -125,7 +125,7 @@ Once set, this feature flag will be considered by all newly launched instances.
 
 #### Custom Android ID
 
-*since 1.18.0*
+*since 1.18.0, supported on AOSP images only*
 
 To enable the Android container to use a custom Android ID, add the feature flag `android.allow_custom_android_id` upon application creation. A system app can influence the Android ID of a specific app during the Android runtime by setting the system property in the format of:
   ```
