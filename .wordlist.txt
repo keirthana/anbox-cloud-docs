@@ -17,6 +17,7 @@ AMI
 AMS
 analytics
 Anbox
+anonymization
 ANR
 anv
 AOSP

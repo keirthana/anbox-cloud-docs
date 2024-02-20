@@ -99,6 +99,10 @@ Once set, this feature flag will be considered by all newly launched instances.
 
 *since 1.20.2*
 
+[note type="caution" status="Warning"]
+Enabling this will print IP addresses of WebRTC clients connecting to the Anbox Cloud instances in the logs without anonymization in clear text.
+[/note]
+
 For debugging purposes, Anbox Cloud can log ICE candidates from the server and client inside the system log of an instance. This is disabled by default and needs to be explicitly turned on with the feature flag `webrtc.enable_ice_logging`.
 
 Once set, this feature flag will be considered by all newly launched instances.
