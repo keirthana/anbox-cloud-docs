@@ -17,7 +17,9 @@ To use the AWS S3 storage backend, you must create a dedicated S3 bucket for the
 
 If you don’t plan to use the [CloudFront CDN](#aws-cloudfront-cdn-support-3), you should use a region close to your Anbox Cloud deployment to keep download times low.
 
-To allow the AAR to access the S3 bucket, create an [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) user with the following policy:
+### Configure bucket access for AAR
+
+To allow the AAR to access the S3 bucket, create an [IAM Policy](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html):
 
 ```json
 {
@@ -51,17 +53,26 @@ To allow the AAR to access the S3 bucket, create an [IAM](https://docs.aws.amazo
 
 Replace `aar0` in the policy with the name of your bucket.
 
-Once you created the IAM user, create an access key for the user, which the AAR will use. See the [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for more details on this.
+There are two ways to configure the bucket access for AAR using the policy created earlier:
 
-Add the credentials to the `config.yaml` file:
+1. Create an IAM user and an access key for this user, which the AAR will use. See the [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for more details on this. Assign the policy created earlier to this user.
 
-```
+2. Create an instance profile using the IAM policy created earlier and attach the instance profile to the instance where AAR is deployed. For more information, see the [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) for more details on this.
+
+### Configure AAR
+
+Add the following configuration to the `config.yaml` file:
+
+```yaml
 aar:
   storage_config: |
     storage:
       s3:
         region: eu-west-3
         bucket: aar0
+        # Access Key and Secret Access Key are only required if an IAM user is
+        # used to access the bucket. They can be omitted if an instance profile
+        # is going to be attached to the instance.
         access-key: <your access key>
         secret-access-key: <your secret access key>
 ```
@@ -78,13 +89,16 @@ Once you have set up a CloudFront distribution for your S3 bucket, you only need
 
 Add the credentials to the `config.yaml` file:
 
-```
+```yaml
 aar:
   storage_config: |
     storage:
       s3:
         region: eu-west-3
         bucket: aar0
+        # Access Key and Secret Access Key are only required if an IAM user is
+        # used to access the bucket. They can be omitted if an instance profile
+        # is going to be attached to the instance.
         access-key: <your access key>
         secret-access-key: <your secret access key>
         cloudfront:
