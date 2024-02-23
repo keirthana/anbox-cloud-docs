@@ -8,7 +8,7 @@ The following how-to guides are available for operations on applications:
 * [Delete an application](https://discourse.ubuntu.com/t/how-to-delete-an-application/24199)
 * [Extend an application](https://discourse.ubuntu.com/t/how-to-extend-an-application/28554)
 * [List applications](https://discourse.ubuntu.com/t/how-to-list-applications/24200)
-* [Stream an application](tbd)
+* [Stream an application](https://discourse.ubuntu.com/t/how-to-stream-applications/42688)
 * [Test an application](https://discourse.ubuntu.com/t/how-to-test-your-application/17775)
 * [Update an application](https://discourse.ubuntu.com/t/how-to-update-an-application/24201)
 * [Pass custom data to an application](https://discourse.ubuntu.com/t/how-to-pass-custom-data-to-an-application/30368)
