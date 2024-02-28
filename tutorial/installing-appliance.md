@@ -2,6 +2,9 @@ The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machi
 
 There are differences between the Anbox Cloud Appliance and the full Anbox Cloud installation (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud/17802#variants-1)). This tutorial focuses on installing the **Anbox Cloud Appliance** on a single dedicated machine.
 
+ [note type="caution" status="Warning"]Remember that installing the Anbox Cloud Appliance will take over the entire instance, install packages and override existing components to configure them as required. If you have existing components, for example, LXD containers, installing and initialising the appliance could override any existing configuration. Hence, it is important to try this tutorial on a machine dedicated for Anbox Cloud.[/note]
+
+
 If you want to install **Anbox Cloud** instead, see [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336) or if you want to install the appliance on a cloud platform, see [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702).
 
 This tutorial guides you through the steps that are required to install and initialise the Anbox Cloud Appliance on the machine from the [snap](https://snapcraft.io/anbox-cloud-appliance).
@@ -12,7 +15,7 @@ Make sure you have the following prerequisites:
 
 * An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
 * A virtual or bare metal machine running Ubuntu 20.04 or 22.04. See the detailed requirements [here](https://discourse.ubuntu.com/t/requirements/17734).
-* [note type="caution" status="Warning"]It is not recommended to run Anbox Cloud on an Ubuntu desktop appliance. Always use the [server](https://ubuntu.com/download/server) or the [cloud](https://ubuntu.com/download/cloud) variant.[/note]
+  [note type="caution" status="Warning"]It is not recommended to run Anbox Cloud on an Ubuntu desktop appliance. Always use the [server](https://ubuntu.com/download/server) or the [cloud](https://ubuntu.com/download/cloud) variant.[/note]
 * Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to https://ubuntu.com/pro to retrieve it.
   [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.[/note]
 
