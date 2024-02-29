@@ -2,6 +2,8 @@ Similar to the Anbox Management Service (AMS), the stream gateway exposes its AP
 
 ## Access the stream gateway
 
+### Prerequisites
+
 To access the stream gateway,
 * The gateway's HTTP API must be exposed. This is the default configuration.
 * All calls to the stream gateway must be authenticated. Authentication takes the form of a single token per client that you must embed in your requests. A token is associated to a *service account*, has a limited lifetime, and can be revoked at any time.
@@ -36,7 +38,10 @@ curl -X GET https://20.234.75.29:4000/1.0/sessions \
 curl -X GET https://20.234.75.29:4000/1.0/sessions?api_token=AgEUYW5ib3...QSyzaA_GHLYQ
 ```
 
-[note type="information" status="Note"]The Anbox Stream SDK handles the token automatically for all its requests.[/note]
+[note type="information" status="Note"]
+- The Anbox Stream SDK handles the token automatically for all its requests.
+- The token does not get renewed automatically. If it expires, create a new token.
+[/note]
 
 ### Deleting a token
 
