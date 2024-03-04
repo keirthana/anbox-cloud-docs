@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `logs`
+
 The `logs` command shows runtime logs of an instance. You can display system-level logs of the instance or the nested Android container.
 
     amc logs <instance_id> [options]

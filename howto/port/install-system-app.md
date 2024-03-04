@@ -1,3 +1,6 @@
+(howto-install-apk-system-app)=
+# How to install an APK as a system app
+
 Usually, Anbox Cloud installs APKs as user apps in the Android container. It is possible to install apps as system apps though.
 
 [note type="information" status="Note"]Installing apps as system apps is not supported on AAOS images.[/note]

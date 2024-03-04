@@ -1,3 +1,6 @@
+(ref-application-manifest)=
+# Application manifest
+
 An application manifest defines the various attributes of an application.
 
 The available attributes are listed in the following table:

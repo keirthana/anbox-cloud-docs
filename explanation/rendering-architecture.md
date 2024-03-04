@@ -1,3 +1,6 @@
+(exp-rendering-architecture)=
+# Rendering architecture
+
 The rendering pipeline of Anbox Cloud can vary depending on the GPU used. This guide explains in detail, the rendering architecture of Anbox Cloud while discussing the different rendering pipeline models.
 
 ## Overview
@@ -37,4 +40,3 @@ For AMD and Intel GPUs, Anbox Cloud uses Vulkan as API in the Android space and 
 * [Supported rendering resources](https://discourse.ubuntu.com/t/37322)
 * [SurfaceFlinger](https://source.android.com/docs/core/graphics/surfaceflinger-windowmanager)
 * [Wayland](https://wayland.freedesktop.org/)
-

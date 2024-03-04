@@ -1,3 +1,6 @@
+(ref-release-notes)=
+# Release notes
+
 This page outlines the release notes of all versions of Anbox Cloud. If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.
 
 For instructions on how to update your Anbox Cloud deployment to later versions, see [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186).

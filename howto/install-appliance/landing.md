@@ -1,3 +1,6 @@
+(howto-install-appliance)=
+# How to install the Anbox Cloud Appliance
+
 The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machine. This offering is well suited for initial prototype and small scale deployments.
 
 The guides in this section describe how to install the Anbox Cloud Appliance on different cloud platforms. There is a difference between the full Anbox Cloud installation and the Anbox Cloud Appliance (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud/17802#variants-1)). This section focuses on the **Anbox Cloud Appliance**. For instructions on how to install **Anbox Cloud**, see [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336).
@@ -18,3 +21,11 @@ Other clouds are also supported, but the Anbox Cloud Appliance is not available 
 * For [Google Cloud](https://cloud.google.com/) : [How to install the appliance on Google Cloud](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-google-cloud/36254)
 
 For all other cloud platforms, follow the steps detailed in [Install the Anbox Cloud Appliance on a dedicated machine](https://discourse.ubuntu.com/t/install-appliance/22681) guide.
+
+```{toctree}
+:hidden:
+
+aws
+azure
+google-cloud
+```

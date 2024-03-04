@@ -1,3 +1,6 @@
+(howto-ts-view-logs)=
+# How to view logs
+
 There are two types of logs that help you understand what is happening in your Anbox Cloud installation:
 
 - Logs for the applications that you are running, on a cluster or node level. See [How to view the instance logs](https://discourse.ubuntu.com/t/24329) for information about this type of logs.

@@ -1,3 +1,6 @@
+(howto-upgrade-anbox-cloud)=
+# How to upgrade Anbox Cloud
+
 [note type="information" status="Note"]If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.[/note]
 
 Anbox Cloud allows upgrades from older versions to newer version. This describes the steps necessary to perform the upgrade.

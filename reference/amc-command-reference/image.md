@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `image`
+
 The `image` command manages images that contain everything necessary to properly run an Android application in an instance.
 
 Images can be provided manually or via an image server. You can add, update or

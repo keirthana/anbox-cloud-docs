@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `list`
+
 The `list` command lists all the instances.
 
     amc list [options]

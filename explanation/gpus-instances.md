@@ -1,3 +1,6 @@
+(exp-gpus-instances)=
+# GPUs and instances
+
 Anbox Cloud has support for managing GPUs and can provide them to individual instances for rendering and video encoding functionality.
 
 [note type="information" status="Important"]This topic is applicable only for container instances because Anbox Cloud currently does not support GPU provisioning for virtual machines. This feature is planned for a future release.[/note]
@@ -29,4 +32,3 @@ Since software rendering and video encoding will utilise the CPU, you won't be a
 
 ## Related information
 * [Supported rendering resources](https://discourse.ubuntu.com/t/37322)
-

@@ -1,3 +1,6 @@
+(howto-ts-streaming-issues)=
+# Troubleshoot streaming issues
+
 Debugging issues that occur when streaming your application can be tricky. The following instructions give you some pointers on how to start tracking down streaming issues.
 
 First of all, check the error message that occurs. Unfortunately, it is often hard to determine why a connection fails, which is why the error message does not always give a clear indication of the source of the error. Typical errors are covered though, so in these cases, the error message should give you an idea on where to look.

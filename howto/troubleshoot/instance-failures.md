@@ -1,3 +1,6 @@
+(howto-ts-instance-failures)=
+# Troubleshoot instance failures
+
 The following information should help you in determining why your instance failed.
 
 ## More information on instance failures

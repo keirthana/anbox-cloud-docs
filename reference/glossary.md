@@ -1,3 +1,6 @@
+(ref-glossary)=
+# Glossary
+
 [Details="Alphabetical list of terms"]
 - [AAM](#aam)
 - [AAR (Anbox Application Registry)](#aar)

@@ -1,3 +1,6 @@
+(ref-android-features)=
+# Supported Android features
+
 Anbox Cloud implements support for various Android features. The following table lists certain Android features and if they are supported in Anbox Cloud.
 
 | Feature           | Supported | Notes  |

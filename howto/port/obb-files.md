@@ -1,3 +1,6 @@
+(howto-port-apk-oob)=
+# How to port APKs with OBB files
+
 Google Play has a limit on how big an APK file can be (see [APK Expansion Files](https://developer.android.com/google/play/expansion-files.html)). Larger Android apps must be split up into the main part as an APK file and the expansion part as an OBB file:
 
 - APK: Contains the executables and native libraries (`*.so` files), plugins, basic assets and data required by the application to load for the first time.

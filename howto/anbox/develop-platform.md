@@ -1,3 +1,6 @@
+(howto-develop-platform-plugin)=
+# How to develop a platform plugin
+
 Anbox Cloud provides a platform SDK that allows the development of custom platform plugins for the Anbox runtime, for use cases where the [default platforms](https://discourse.ubuntu.com/t/18733) don't fit. For example, a custom platform can be used to integrate a custom streaming protocol with the Anbox runtime.
 
 This guide assumes that all steps are run on an Ubuntu 22.04 machine that hosts the [Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681).

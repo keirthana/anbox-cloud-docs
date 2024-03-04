@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `benchmark`
+
 The `benchmark` command allows you to benchmark your Anbox Cloud deployment. Benchmarking your deployment helps in evaluating the performance of Anbox Cloud for a well-defined workload.
 
     amc benchmark (<app_id> | <image_id>) [options]

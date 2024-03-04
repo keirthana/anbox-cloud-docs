@@ -1,3 +1,6 @@
+(howto-manage-anbox-howto)=
+# How to manage Anbox Cloud
+
 The guides in this section help you to manage and work with your Anbox Cloud or Anbox Cloud Appliance installation.
 
 * [Set up TLS for the appliance](https://discourse.ubuntu.com/t/28552)
@@ -9,3 +12,13 @@ The guides in this section help you to manage and work with your Anbox Cloud or 
 ## Related information
 
 * [Appliance command reference](https://discourse.ubuntu.com/t/39525)
+
+```{toctree}
+:hidden:
+
+ams-access
+benchmarks
+images
+resize-storage
+tls-for-appliance
+```

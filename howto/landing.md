@@ -1,3 +1,6 @@
+(how-to-guides)=
+# How-to guides
+
 The *How-to* guides in this section give directions on how to achieve your goals when configuring, managing or using Anbox Cloud. These *How-to*  guides are more useful when you are familiar with Anbox Cloud and seek to achieve specific tasks. They help you complete your tasks but may require you to understand and adapt the steps to fit your specific requirements.
 
 ## Installing and configuring Anbox Cloud
@@ -39,3 +42,25 @@ Learn resolutions for common issues with Anbox Cloud and how to collect useful d
 * [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/17837)
 
 Also check out the [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) for step-by-step instructions that help you get started with Anbox Cloud, as well as the [Reference](https://discourse.ubuntu.com/t/reference/28828) and [Explanation](https://discourse.ubuntu.com/t/explanation/28829) sections for other helpful information.
+
+
+```{toctree}
+:hidden:
+
+aar/landing
+addons/landing
+anbox/landing
+application/landing
+application/virtual-devices
+cluster/landing
+install/landing
+install-appliance/landing
+instance/landing
+manage/landing
+manage/web-dashboard
+monitor/landing
+port/landing
+stream/landing
+troubleshoot/landing
+update/landing
+```

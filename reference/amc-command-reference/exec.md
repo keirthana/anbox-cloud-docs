@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `exec`
+
 The `exec` command executes commands directly inside an instance without a shell environment.
 
     amc exec <instance_id> -- <command> [options]

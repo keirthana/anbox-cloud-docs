@@ -1,3 +1,6 @@
+(ref-rendering-resources)=
+# Supported rendering resources
+
 This guide lists various supported GPU vendors, drivers, platforms, APIs and discuss the rendering pipelines used for different GPUs.
 
 [note type="information" status="Important"]Currently Anbox Cloud does not support GPU for virtual machines.[/note]

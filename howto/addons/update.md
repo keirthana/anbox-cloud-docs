@@ -1,3 +1,6 @@
+(howto-update-addons)=
+# How to update addons
+
 You can update an existing addon with a new version by using the following command:
 
 ```bash

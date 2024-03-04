@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `show`
+
 The `show` command displays information about an instance.
 
     amc show <instance_id> --format=json

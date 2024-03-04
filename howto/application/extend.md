@@ -1,3 +1,6 @@
+(howto-extend-application)=
+# How to extend an application
+
 You can extend an application either by adding [hooks](#application-hooks) directly to the application or by creating an [addon](#addon) that includes one or more hooks and adding it to the application.
 
 * If you want to extend one application only, you should use application hooks. They are easy and quick to set up and do not require creating an addon.

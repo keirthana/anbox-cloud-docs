@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `gateway`
+
 The `gateway` command allows and manages access to the HTTP API of the stream gateway. If the HTTP API is exposed (which is the default), authenticated clients can connect to it.
 
     anbox-cloud-appliance gateway <subcommand>

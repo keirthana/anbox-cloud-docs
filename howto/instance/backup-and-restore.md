@@ -1,3 +1,6 @@
+(howto-backup-restore-application-data)=
+# How to back up and restore application data
+
 Backup and restoration of application data can be achieved easily with the `aam`  (Anbox Application Manager) utility helper installed in the image. The `aam` can bundle any necessary application data together into a tarball file or extract the tarball file to a particular application folder according to the specified package name.
 
 ## Back up application data

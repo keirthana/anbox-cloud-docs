@@ -1,3 +1,6 @@
+(howto-access-ams-remote)=
+# How to control AMS remotely
+
 By default, the Anbox Management Client (AMC) runs on the same machine as the [Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/about-ams/24321) and connects to it through a UNIX socket.
 
 If you want to control AMS remotely, you can install the AMC on a separate machine and configure it to connect to AMS through a secure HTTP connection.

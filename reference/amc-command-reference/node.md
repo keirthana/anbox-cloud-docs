@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `node`
+
 The `node` command manage LXD nodes of the deployment that run instances with Anbox Cloud and are managed by the Anbox Management Service (AMS). See https://discourse.ubuntu.com/t/17765 for more information.
 
     amc node <subcommand>

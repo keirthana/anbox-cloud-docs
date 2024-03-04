@@ -1,3 +1,6 @@
+(exp-security)=
+# Security
+
 Anbox Cloud is secure by design, which means that its architecture, its components and all communication between components are designed to be fundamentally secure.
 
 Anbox Cloud uses the secure [LXD](https://ubuntu.com/lxd) for container and virtual machine management. To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD instance.

@@ -1,3 +1,6 @@
+(howto-ts-anbox-cloud)=
+# How to troubleshoot Anbox Cloud
+
 The topics in this guide describe some commonly encountered problems with Anbox Cloud and provide instructions for resolving them. If you encounter an issue with Anbox Cloud, check if any of the following scenarios help in resolving your issue.
 
 [note type="information" status="Note"] If the deployment is older than 3 months, you must upgrade Anbox Cloud to the latest version and see if the required fixes are already part of the upgrade. See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/how-to-upgrade-anbox-cloud/17750) for upgrade instructions.[/note]
@@ -65,3 +68,15 @@ Use `amc show <instance_id>` command to list the available logs. See [View store
 
 * [View Anbox Cloud logs](https://discourse.ubuntu.com/t/17771)
 * [View instance logs](https://discourse.ubuntu.com/t/24329)
+
+```{toctree}
+:hidden:
+
+application-creation
+dashboard-issues
+initial-setup
+instance-failures
+logs
+lxd-cluster
+streaming-issues
+```

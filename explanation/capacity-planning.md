@@ -1,3 +1,7 @@
+
+(exp-capacity-planning)=
+# Capacity planning
+
 When planning your Anbox Cloud deployment, you should start by estimating how much capacity you need, to be able to provide your application to your users and how many users (translating to the number of Android containers) you expect. Based on this estimate, you can then size your deployment and figure out how many cluster nodes you need and what resources they should have.
 
 When estimating capacity, consider the following questions to better understand your requirements:

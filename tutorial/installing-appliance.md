@@ -1,3 +1,6 @@
+(tut-installing-appliance)=
+# Install the appliance on a dedicated machine
+
 The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machine. This offering is well suited for initial prototype and small scale deployments.
 
 There are differences between the Anbox Cloud Appliance and the full Anbox Cloud installation (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud/17802#variants-1)). This tutorial focuses on installing the **Anbox Cloud Appliance** on a single dedicated machine.

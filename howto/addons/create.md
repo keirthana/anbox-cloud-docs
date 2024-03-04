@@ -1,3 +1,6 @@
+(howto-create-addons)=
+# How to create an addon
+
 To create or update an addon, you need a specific file structure for the directory containing your addon files. In the directory where you created your addon files, also create the following:
 
 - A file named `manifest.yaml`. See [Addon manifest](https://discourse.ubuntu.com/t/25293) to learn about valid keys in an addon manifest file.

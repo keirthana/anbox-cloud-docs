@@ -1,3 +1,8 @@
+(howto-ts-web-dashboard)=
+# Troubleshoot issues while using the web dashboard
+
+You might encounter the following issues when using the dashboard.
+
 ## Session with an Error status
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*

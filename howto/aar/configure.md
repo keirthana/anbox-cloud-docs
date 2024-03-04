@@ -1,3 +1,6 @@
+(howto-configure-aar)=
+# How to configure an AAR
+
 The [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application-registry/17761) uses a certificate-based authentication system that uses TLS server and client certificates to establish a trusted connection between the AAR and AMS.
 
 AAR and AMS must exchange certificates to set up a trust relation. The recommended way to do this is with Juju. If you are using the Anbox Cloud Appliance, however, you must register the clients manually.

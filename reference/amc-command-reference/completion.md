@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `completion`
+
 The `completion` command allows you to generate the auto completion script for the specified shell.
 
     amc completion <subcommand>

@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `wait`
+
 The `wait` command waits for an instance to reach a specific condition.
 
     amc wait (<app_id> | <instance_id>) --condition <key=value> [options]

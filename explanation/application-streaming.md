@@ -1,3 +1,6 @@
+(exp-application-streaming)=
+# Application Streaming
+
 This guide covers the usage of the Streaming Stack and assumes that you know [how to get access to the Stream Gateway API](https://discourse.ubuntu.com/t/access-the-stream-gateway/17784).
 
 ## Streaming stack overview
