@@ -1,3 +1,6 @@
+(howto-start-instance)=
+# How to start an instance
+
 When an instance is either initialised with the `amc init` (see [Create an instance](https://discourse.ubuntu.com/t/24327)) command or stopped with the `amc stop` command (See [Stop an instance](https://discourse.ubuntu.com/t/33925)), you must start it explicitly with the `amc start` command:
 
     amc start <instance_id>

@@ -1,3 +1,6 @@
+(howto-deploy-anbox-baremetal)=
+# How to deploy Anbox Cloud on bare metal
+
 To deploy Anbox Cloud on a public cloud (such as AWS, Azure or Google) or using MAAS or OpenStack, see the instructions in [How to deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/deploy-anbox-cloud-with-juju/17744).
 
 Alternatively, you can follow the instructions in this document to use the [manual cloud provider](https://jaas.ai/docs/manual-cloud) that Juju offers. This method allows you to deploy Anbox Cloud with Juju on a set of SSH connected machines.

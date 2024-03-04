@@ -1,3 +1,6 @@
+(tut-getting-started-dashboard)=
+# Getting started with Anbox Cloud (web dashboard)
+
 This tutorial guides you through the first steps of using Anbox Cloud. You will learn how to create and access a virtual Android device or an application using the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
 
 The web dashboard provides an easy-to use interface to Anbox Cloud. However, it currently supports a limited set of functionality, which means that it might not be sufficient for all use cases. If you want to learn how to manage Anbox Cloud from the command line, see the [Get started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial.

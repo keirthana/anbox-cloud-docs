@@ -1,3 +1,6 @@
+---
+orphan: true
+---
 All the communications between AMS and its clients happen using a  RESTful API over HTTP which is then encapsulated over either TLS for  remote operations or a Unix socket for local operations
 
 Not all REST API endpoints require authentication:

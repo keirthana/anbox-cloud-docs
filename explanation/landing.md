@@ -1,3 +1,6 @@
+(exp-explanation)=
+# Explanation
+
 The explanatory and conceptual guides in this section provide a better understanding of Anbox Cloud and enable you to get the most out of it.
 
 ## Anbox Cloud: Architecture and components
@@ -34,3 +37,24 @@ Understand deployment configurations to plan your deployment.
 
 
 Also check out the [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) for step-by-step instructions that help you get familiar with Anbox Cloud, the [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) for instructions on how to achieve specific goals when using Anbox Cloud and the [Reference](https://discourse.ubuntu.com/t/reference/28828) section for reference material.
+
+```{toctree}
+:hidden:
+
+aar
+addons
+ams
+anbox-cloud
+application-streaming
+applications
+capacity-planning
+clustering
+gpus-instances
+instances
+performance
+platforms
+production
+rendering-architecture
+resources
+security
+```

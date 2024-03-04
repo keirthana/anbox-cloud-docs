@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `application`
+
 The `application` command allows you to manage applications using the Anbox Management Client (AMC).
 
     amc application <subcommand>

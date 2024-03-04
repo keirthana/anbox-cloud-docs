@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `launch`
+
 The `launch` command launches an instance.
 
     amc launch <app_id | image_id> [options]

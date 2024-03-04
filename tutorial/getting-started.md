@@ -1,3 +1,6 @@
+(tut-getting-started-cli)=
+# Getting started with Anbox Cloud (CLI)
+
 This tutorial guides you through the first steps of managing Anbox Cloud from the command line. You will learn how to communicate with [AMS](https://discourse.ubuntu.com/t/about-ams/24321) and how to create and access a virtual Android device or an application.
 
 The tutorial focuses on using the command line to work with Anbox Cloud, which gives you access to all features of Anbox Cloud. Alternatively, you can use the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871), which provides a simpler user interface but does not support all functionality. See the [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial for an introduction on how to use the web dashboard.

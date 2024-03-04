@@ -1,3 +1,6 @@
+(howto-ts-lxd-clustering)=
+# Troubleshoot issues with LXD clustering
+
 The following issues might occur if you use clustering.
 
 ## AMS hook failed: `lxd-relation-changed`

@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `shell`
+
 The `shell` command opens a shell inside a running instance.
 
     amc shell <instance_id>

@@ -1,3 +1,6 @@
+(howto-addons)=
+# How to use addons
+
 In Anbox Cloud, addons can be used to customise the images used for the [instances](https://discourse.ubuntu.com/t/26204#instance). See [Addons](https://discourse.ubuntu.com/t/38727) and [Addon manifest](https://discourse.ubuntu.com/t/25293) to learn about addons in detail.
 
 If this is your first time creating an addon, follow the [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284) tutorial to learn how to write a simple addon.
@@ -11,3 +14,16 @@ You can use addons to, for example:
 - Provide support for other platforms (see [Example: Emulate platforms](https://discourse.ubuntu.com/t/example-emulate-platforms/25291))
 
 If you have used addons before Anbox Cloud 1.12, see the [migration guide](https://discourse.ubuntu.com/t/migrate-from-previous-addon-versions/25287) to update your addons to use the new hooks.
+
+```{toctree}
+:hidden:
+
+backup-and-restore
+create
+customise-android
+emulate-platforms
+enable-globally
+install-tools
+migrate
+update
+```

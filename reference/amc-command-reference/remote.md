@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `remote`
+
 The `remote` command allows interacting with remote Anbox Management Service (AMS) daemons. See [How to control AMS remotely](https://discourse.ubuntu.com/t/17774) for more information.
 
     amc remote <subcommand>

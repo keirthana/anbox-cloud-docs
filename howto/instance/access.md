@@ -1,3 +1,6 @@
+(howto-access-instance)=
+# How to access an instance
+
 In some cases, it might be necessary to access an individual instance for debugging reasons.
 
 You can do this on the command line with the `amc` command, or you can use [scrcpy](https://github.com/Genymobile/scrcpy) for graphical access.

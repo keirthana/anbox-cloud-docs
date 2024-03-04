@@ -1,3 +1,6 @@
+(ref-addon-manifest)=
+# Addon manifest
+
 The following table lists the valid keys in an addon manifest:
 
 | Name                  | Type         | Description    | Allowed values  |

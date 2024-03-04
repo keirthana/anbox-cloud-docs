@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `help`
+
 The `help` command displays detailed information about the `anbox-cloud-appliance` tool.
 
     anbox-cloud-appliance help

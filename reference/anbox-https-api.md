@@ -1,3 +1,6 @@
+(anbox-https-api)=
+# Anbox HTTPS API
+
 Anbox Cloud provides an HTTP API endpoint through a Unix socket at `/run/users/1000/anbox/api.socket` inside every [instance](https://discourse.ubuntu.com/t/26204#instance). The API allows controlling certain aspects of the Anbox runtime and the Android container.
 
 ## Accessing the API endpoint

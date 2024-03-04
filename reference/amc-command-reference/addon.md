@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `addon`
+
 The `addon` command allows you to manage addons that are necessary for customising images.
 
     amc addon <subcommand>

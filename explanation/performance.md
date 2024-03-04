@@ -1,3 +1,6 @@
+(exp-performance)=
+# Performance
+
 The performance of your Anbox Cloud deployment depends on multiple factors. To ensure optimal performance, check and monitor all areas and tune your deployment based on your findings.
 
 To measure the performance based on different parameters, you should [run performance benchmarks](https://discourse.ubuntu.com/t/how-to-run-benchmarks/17770). See the provided [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709) as a reference for what performance you can expect with different hardware configurations.

@@ -1,3 +1,6 @@
+(howto-run-benchmarks)=
+# How to run benchmarks
+
 Anbox Cloud provides tools for benchmarking different aspects of your deployment. These tools enable you to put Anbox Cloud under load and use the results to evaluate the performance for a well-defined workload.
 
 See [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709) for an overview of results that you can expect for selected hardware configurations.

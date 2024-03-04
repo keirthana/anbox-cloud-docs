@@ -1,3 +1,6 @@
+(howto-manage-images)=
+# How to manage Anbox Cloud images
+
 An image is the base for an instance running in the Anbox Cloud. It contains all necessary components, like Anbox or the Android root file system. Each release of Anbox Cloud comes with an updated image.
 
 See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for information about which images Anbox Cloud provides.

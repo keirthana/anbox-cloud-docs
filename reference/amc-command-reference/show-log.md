@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `show-log`
+
 The `show-log` command shows the log file of an instance.
 
     amc show-log <instance_id> <log_name>

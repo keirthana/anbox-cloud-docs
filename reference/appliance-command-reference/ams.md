@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `ams`
+
 The `ams` command provides access to the Anbox Management Service (AMS) through subcommands. It exposes the AMS HTTPS service on the public endpoint of the machine on which the appliance is running. Using this command, you can expose or unexpose AMS through the load balancer.
 
     anbox-cloud-appliance ams <subcommand>

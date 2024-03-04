@@ -1,3 +1,6 @@
+(howto-create-application)=
+# How to create an application
+
 An application can be created using the Anbox Cloud dashboard or through the CLI.
 
 Any application must be created first to be available on the Anbox Cloud cluster. The internal process will prepare an instance based on the currently available image with the application package installed. This instance is then used for any newly launched instances to support fast boot times.

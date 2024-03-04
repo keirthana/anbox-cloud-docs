@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `start`
+
 The `start` command starts an existing instance that is in a prepared or a stopped status. This command can be used to start an instance when:
 * An instance is just initialised with the `amc init` command and not started.
 * An instance is in an error status.

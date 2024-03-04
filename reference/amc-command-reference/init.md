@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `init`
+
 The `init` command creates an instance but does not start it immediately.
 
     amc init <app_id | image_id> [options]

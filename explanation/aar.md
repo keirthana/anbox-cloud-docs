@@ -1,3 +1,6 @@
+(exp-aar)=
+# Anbox Application Registry
+
 The Anbox Application Registry (AAR) provides a central repository for applications created on Anbox Cloud. Using an AAR is very useful for larger deployments involving multiple regions, in order to keep applications in sync.
 
 ## How AAR works

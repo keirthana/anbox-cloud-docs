@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `info`
+
 The `info` command displays general information about the connected AMS service.
 
     amc info --format=json

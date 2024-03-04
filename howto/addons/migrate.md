@@ -1,3 +1,6 @@
+(howto-migrate-addons)=
+# How to migrate from previous versions
+
 Starting with Anbox Cloud 1.12, use the following new hooks instead of the deprecated ones:
 
 * Use `pre-start` instead of `install`

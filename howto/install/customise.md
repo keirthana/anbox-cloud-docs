@@ -1,3 +1,6 @@
+(howto-customise-installation)=
+# How to customise your installation
+
 There are two main ways to customise the Anbox Cloud deployment:
 
 1. Use overlays in conjunction with the published Anbox Cloud bundle.

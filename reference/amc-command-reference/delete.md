@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `delete`
+
 The `delete` command deletes an instance.
 
     amc delete <instance_id> [options]

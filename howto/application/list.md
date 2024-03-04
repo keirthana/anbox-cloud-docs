@@ -1,3 +1,6 @@
+(howto-list-applications)=
+# How to list applications
+
 To list all available applications, use the following command:
 
     amc application ls

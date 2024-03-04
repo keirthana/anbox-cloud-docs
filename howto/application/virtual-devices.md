@@ -1,3 +1,6 @@
+(howto-create-virtual-device)=
+# How to create a virtual Android device
+
 In addition to running individual Android apps, Anbox Cloud allows you to stream the whole Android experience. The following sections describe how to set up such a virtual Android device experience.
 
 ## Set up an application for the virtual device

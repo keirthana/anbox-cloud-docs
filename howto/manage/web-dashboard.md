@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 The Anbox Cloud Dashboard offers a web GUI that users can use to create, manage and stream applications from their web browser. If you have configured the [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application-registry/17761), you can also view applications in the registry using the **Registry** button on the main menu. You can use the pre-installed dashboard almost immediately after deploying Anbox Cloud.
+=======
+(howto-use-web-dashboard)=
+# How to use the web dashboard
+
+The Anbox Cloud Dashboard offers a web GUI that users can use to create, manage and stream applications from their web browser. You can use the pre-installed dashboard almost immediately after deploying Anbox Cloud.
+>>>>>>> 9f4f722 (Fix titles and navigation)
 
 ## Prerequisites
 

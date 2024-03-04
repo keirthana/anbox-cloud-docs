@@ -1,3 +1,6 @@
+(howto-install-appliance-aws)=
+# How to install the appliance on AWS
+
 You can install the Anbox Cloud Appliance on AWS in one of two ways:
 
 - Install through the AWS Marketplace. This is the recommended way, because this method simplifies the installation and deployment process and allows billing to be handled directly through AWS.

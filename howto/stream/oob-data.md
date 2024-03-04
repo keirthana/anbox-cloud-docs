@@ -1,3 +1,6 @@
+(howto-exchange-oob-data)=
+# How to exchange out-of-band data
+
 Enabling out-of-band (OOB) data transmission between an Android application and a WebRTC client makes it possible to exchange data and trigger actions between an Android application and a WebRTC client.
 
 Anbox Cloud provides two versions of this OOB data exchange:

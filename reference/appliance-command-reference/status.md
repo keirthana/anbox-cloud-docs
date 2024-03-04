@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `status`
+
 The `status` command displays the following information about the Anbox Cloud Appliance:
 
 * Status of the appliance

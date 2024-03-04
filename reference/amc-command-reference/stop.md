@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+# `stop`
+
 The `stop` command stops a running instance.
 
     amc stop <instance_id> [options]
