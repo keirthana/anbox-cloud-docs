@@ -128,6 +128,7 @@ Name           | Value type | Description
 `protocols`    | array of strings | Protocols to be used by the service (Possible values are: `tcp`, `udp`)
 `expose`       | Boolean    | Expose service to be accessible externally or internally
 
+(sec-application-manifest-resources)=
 ## Resources
 
 The `resources` directive helps you define the required resources for your application.

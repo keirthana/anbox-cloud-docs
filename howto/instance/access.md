@@ -21,6 +21,7 @@ If you only want to watch the Android log output, use the following command:
 
 `amc shell` and `amc exec` open various possibilities for automation use cases. See the help output of the commands for further details.
 
+(sec-access-instance-scrcpy)=
 ## Access an instance with scrcpy
 
 The AMS services enable connecting remotely over a network to instance via [scrcpy](https://github.com/Genymobile/scrcpy).

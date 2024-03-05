@@ -26,6 +26,8 @@ The following table lists the different statuses that an application can have de
 
 If you encounter the `error` or the `unknown` status, see if you can identify the base instance and troubleshoot using the instance logs (See [How to view the instance logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329)). If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant instance logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
 
+
+(sec-application-bootstrap)=
 ## Bootstrap process
 
 When [creating an application](https://discourse.ubuntu.com/t/create-an-application/24198) from a directory, a tarball, or a zip archive, AMS will perform a bootstrap process, which builds the application and synchronises it across all LXD nodes in the cluster. There are major benefits that the bootstrap process provides:

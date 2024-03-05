@@ -1,7 +1,7 @@
 (tut-create-addon)=
 # Create an addon
 
-This tutorial guides you through the creation of a simple [addon](/howto/addons/landing.md). The addon that we create in this tutorial is an example for enabling SSH access on a container.
+This tutorial guides you through the creation of a simple addon. The addon that we create in this tutorial is an example for enabling SSH access on a container.
 
 ## 1. Write the addon metadata
 
@@ -36,14 +36,12 @@ Make the file executable. To do so, enter the following command (in the `ssh-add
 chmod +x hooks/pre-start
 ```
 
-[note type="information" status="Tip"]
-
+```{tip}
 - Supported hooks are `pre-start`, `post-start` and `post-stop`.
 - Use the `INSTANCE_TYPE` variable to distinguish between regular and base instances.
 
-See [Hooks](/reference/hooks.md) for more information.
-[/note]
-
+See {ref}`ref-hooks` for more information.
+```
 Create an SSH key in your addon directory and move the private key to a location outside of the addon directory (for example, your home directory):
 ```bash
 ssh-keygen -f ssh-addon-key -t ecdsa -b 521
@@ -97,17 +95,22 @@ The `amc wait` command returns when your application is ready to launch. You can
 amc launch my-application --service +ssh
 ```
 
-The SSH port 22 is closed by default. In the above command, we open it by [exposing its service](/howto/instance/expose-services.md) by using `--service`.[/note]
+```{note}
+The SSH port 22 is closed by default. In the above command, we open it by exposing its service by using `--service`. See {ref}`howto-expose-services` for more information.
+```
 
 You can now access your container via SSH:
 ```bash
 ssh -i ~/ssh-addon-key root@<container_ip> -p <exposed port>
 ```
 
-[note type="information" status="Note"] The exposed port can be found be running `amc ls`, under the `ENDPOINTS` column. Exposed ports usually start around port 10000.[/note]
+```{note}
+The exposed port can be found be running `amc ls`, under the `ENDPOINTS` column. Exposed ports usually start around port 10000.
+```
 
 ## Related information
 
-* [Addon reference](https://discourse.ubuntu.com/t/addons/25293)
-* [How to update addons](https://discourse.ubuntu.com/t/update-addons/25286)
-* [Extend an application](https://discourse.ubuntu.com/t/extand-an-application/28554)
+* {ref}`exp-addons`
+* {ref}`ref-addon-manifest`
+* {ref}`howto-update-addons`
+* {ref}`howto-extend-application`
