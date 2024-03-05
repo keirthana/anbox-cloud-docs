@@ -1,4 +1,4 @@
-This tutorial guides you through the process of setting up a web-based streaming client using the Anbox Cloud streaming stack.
+This tutorial guides you through the process of setting up a web-based streaming client using the Anbox Cloud streaming stack. The connection between the stream client and the server uses WebRTC backed by web sockets which enable the real time communications required for streaming. To know more about the WebRTC configuration, see [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195).
 
 ## Preparation
 
@@ -19,6 +19,12 @@ On the machine where Anbox Cloud Appliance is installed, create the service acco
 The output of this command provides the access token. Make a note of this token to use when you make a request to the stream gateway API.
 
 See [How to access the stream gateway](https://discourse.ubuntu.com/t/how-to-access-the-stream-gateway/17784) for more information on creating, using and deleting the access token.
+
+### Download the Anbox Cloud streaming SDK
+
+Download the [Anbox Cloud streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8) from GitHub:
+
+    git clone https://github.com/anbox-cloud/anbox-streaming-sdk.git
 
 ### Create an application
 
@@ -44,7 +50,8 @@ Create a `demo.html` file inside `/srv/stream-client`:
 </head>
 <body>
     <script type="module">
-    import {AnboxStream, AnboxStreamGatewayConnector} from './anbox-stream-sdk.js';
+        // Replace <path_to_stream_sdk> with the filepath of the SDK downloaded earlier
+    import {AnboxStream, AnboxStreamGatewayConnector} from '<path_to_stream_sdk>/js/anbox-stream-sdk.js';
 
     const connector = new AnboxStreamGatewayConnector({
         // Replace 'https://gateway.url.net' with the host IP address or domain name
@@ -131,9 +138,9 @@ Enter your desired password when prompted.
 
 ## Add a middleware definition
 
-The appliance uses [`traefik`](https://traefik.io/) as the reverse proxy for routing incoming requests and you need to add a middleware definition for the stream client to the `traefik` configuration. See [Adding Basic Authentication](https://doc.traefik.io/traefik/v2.0/middlewares/basicauth/) for more details.
+The appliance uses Traefik as the reverse proxy for routing incoming requests and you need to add a middleware definition for the stream client to the Traefik configuration.
 
-Create `stream-ui.yaml` under `/var/snap/anbox-cloud-appliance/common/traefik/conf/` with the following content for `traefik` to redirect requests to the service. 
+Create `stream-ui.yaml` under `/var/snap/anbox-cloud-appliance/common/traefik/conf/` with the following content for Traefik to redirect requests to the service. 
 
 ```yaml
 http:
@@ -169,8 +176,14 @@ Set the right permissions for the `stream-ui.yaml`:
 
     chmod 0600 /var/snap/anbox-cloud-appliance/common/traefik/conf/stream-ui.yaml
 
-With HTTP basic authentication configured, users will be asked to enter the credentials to access the site. Restart `traefik` for the configuration changes to take effect:
+With HTTP basic authentication configured, users will be asked to enter the credentials to access the site. Restart Traefik for the configuration changes to take effect:
 
     sudo snap restart anbox-cloud-appliance.traefik
 
 Now you can go to `https://<ip>/demo/`, enter the HTTP basic authentication credentials and view the web-based streaming client.
+
+## Related information
+
+* [WebRTC](https://webrtc.org/)
+* [Traefik](https://traefik.io/)
+* [Adding Basic Authentication for Traefik](https://doc.traefik.io/traefik/v2.0/middlewares/basicauth/)
