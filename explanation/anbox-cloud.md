@@ -7,6 +7,7 @@ Anbox Cloud maintains a single Android system per [instance](https://discourse.u
 
 Watch [this video](https://youtu.be/P7md88WhOC0?si=eUGiQtQ-9uXmZOQu) to learn more about how you can deploy Anbox Cloud with charms.
 
+(sec-variants)=
 ## Variants
 
 Anbox Cloud comes in two variants that serve different purposes:

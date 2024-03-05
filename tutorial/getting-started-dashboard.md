@@ -1,22 +1,25 @@
 (tut-getting-started-dashboard)=
 # Getting started with Anbox Cloud (web dashboard)
 
-This tutorial guides you through the first steps of using Anbox Cloud. You will learn how to create and access a virtual Android device or an application using the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
+This tutorial guides you through the first steps of using Anbox Cloud. You will learn how to create and access a virtual Android device or an application using the web dashboard.
 
-The web dashboard provides an easy-to use interface to Anbox Cloud. However, it currently supports a limited set of functionality, which means that it might not be sufficient for all use cases. If you want to learn how to manage Anbox Cloud from the command line, see the [Get started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial.
+The web dashboard provides an easy-to use interface to Anbox Cloud. However, it currently supports a limited set of functionality, which means that it might not be sufficient for all use cases. If you want to learn how to manage Anbox Cloud from the command line, see the {ref}`tut-getting-started-cli` tutorial.
 
 ## Preparation
 
 If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
 
-- [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702)
-- [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336) (note that you must install the streaming stack for the web dashboard to be available)
+- {ref}`howto-install-appliance`
+- {ref}`howto-install-anbox-cloud`
 
+(sec-create-virtual-device)=
 ## 1. Create a virtual device
 
 Let's start exploring what Anbox Cloud can do by launching a virtual device that runs a specific Android version.
 
-[note type="information" status="Note"]With "virtual device" we mean a simulated device that runs a plain Android operating system without any special apps installed. Technically speaking, Anbox Cloud treats such a virtual device as an "empty" application, thus an application that is not running a specific APK.[/note]
+```{note}
+With "virtual device" we mean a simulated device that runs a plain Android operating system without any special apps installed. Technically speaking, Anbox Cloud treats such a virtual device as an "empty" application, thus an application that is not running a specific APK.
+```
 
 Complete the following steps to create a virtual device:
 
@@ -47,17 +50,19 @@ When the application has been initialised and its status changes to `ready`, com
 
 ## 3. Create an application from an APK
 
-To create an application for a specific Android app, follow the steps in [1. Create a virtual device](#h-1-create-a-virtual-device-2), but upload the APK of the Android app.
+To create an application for a specific Android app, follow the steps in {ref}`sec-create-virtual-device`, but upload the APK of the Android app.
 
-[note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [How to port Android apps](https://discourse.ubuntu.com/t/port-android-apps/17776) for more information.[/note]
+```{important}
+Not all Android apps are compatible with Anbox Cloud. See {ref}`howto-port-android-apps` for more information.
+```
 
-Choose a [resource preset](https://discourse.ubuntu.com/t/application-manifest/24197#resources-7) suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, make sure to mention the GPU requirement using the `resources` attribute. Otherwise, the container will use a GPU if available or software encoding.
+Choose a {ref}`resource preset <sec-application-manifest-resources>` suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, make sure to mention the GPU requirement using the `resources` attribute. Otherwise, the container will use a GPU if available or software encoding.
 
 You can launch and test the application in the same way as you did for the virtual device.
 
 ## 4. Update an application
 
-You can have several versions of an application. See [How to update an application](https://discourse.ubuntu.com/t/update-an-application/24201) for detailed information.
+You can have several versions of an application. See {ref}`howto-update-application` for detailed information.
 
 Complete the following steps to add a new version to your application:
 
@@ -72,9 +77,9 @@ While following this tutorial, you created several applications. You can see the
 
 To delete an application, click the **Delete application** button in the **Actions** column and confirm the deletion.
 
-[note type="information" status="Tip"]
+```{tip}
 To skip the confirmation window, hold **Shift** when clicking the **Delete application** button.
-[/note]
+```
 
 ## 6. Inspect instances
 
@@ -106,6 +111,10 @@ Complete the following steps to inspect an instance:
 
 You now know how to use the web dashboard to create, launch and test applications in Anbox Cloud.
 
-If you are interested in more advanced use cases, check out the [Get started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial to learn how to use Anbox Cloud from the command line.
+If you are interested in more advanced use cases, check out the {ref}`tut-getting-started-cli` tutorial to learn how to use Anbox Cloud from the command line.
 
-Also see the documentation about [How to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [How to work with instances](https://discourse.ubuntu.com/t/24335).
+## Related information
+
+* {ref}`howto-use-web-dashboard`
+* {ref}`howto-manage-applications`
+* {ref}`howto-instance`
