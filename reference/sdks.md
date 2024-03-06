@@ -14,7 +14,7 @@ For more details about custom platform plugins, refer to the [Anbox Platform SDK
 
 The Anbox Platform SDK can be downloaded via Git from GitHub:
 
-    git clone https://github.com/anbox-cloud/anbox-platform-sdk.git
+    git clone https://github.com/canonical/anbox-platform-sdk.git
 
 You need the following build dependencies:
 
@@ -31,13 +31,13 @@ The Anbox Platform SDK provides a collection of example platform plugins to help
 
 The AMS SDK offers a set of [Go](https://golang.org/) packages and utilities for any external [Go](https://golang.org/) code to be able to connect to the AMS service through the exposed REST API.
 
-See the [AMS SDK documentation](https://github.com/anbox-cloud/ams-sdk) on GitHub for more information.
+See the [AMS SDK documentation](https://github.com/canonical/ams-sdk) on GitHub for more information.
 
 ### Download and installation
 
 The AMS SDK can be downloaded via Git from GitHub:
 
-    git clone https://github.com/anbox-cloud/ams-sdk.git
+    git clone https://github.com/canonical/ams-sdk.git
 
 To start using the SDK, simply add the content of the provided SDK zip file into your projects `vendor/` directory or your `GOPATH`.
 
@@ -47,7 +47,7 @@ The AMS SDK comes with a set of examples demonstrating the capabilities of the S
 
 ### Authentication setup
 
-Clients must authenticate to AMS before communicating with it. For more information, see [How to control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) and the [AMS SDK documentation](https://github.com/anbox-cloud/ams-sdk) on GitHub.
+Clients must authenticate to AMS before communicating with it. For more information, see [How to control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) and the [AMS SDK documentation](https://github.com/canonical/ams-sdk) on GitHub.
 
 ## Anbox Cloud Streaming SDK
 
@@ -83,7 +83,7 @@ To use the Anbox Cloud streaming SDK, you must have [deployed the Anbox Streamin
 
 You can download the Anbox Cloud streaming SDK via Git from GitHub:
 
-    git clone https://github.com/anbox-cloud/anbox-streaming-sdk.git
+    git clone https://github.com/canonical/anbox-streaming-sdk.git
 
 ### Examples
 

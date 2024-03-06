@@ -8,11 +8,11 @@ A platform module must be built on the same version of Ubuntu as the Anbox runti
 
 However, if you're running the Anbox Cloud Appliance on a machine with a different Ubuntu version, you can build the platform on a separate system (for example, in a LXD or docker instance or on another machine).
 
-To get started, you must first install the [Anbox Platform SDK](https://github.com/anbox-cloud/anbox-platform-sdk). To do so, follow the [installation instructions](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-platform-sdk-1).
+To get started, you must first install the [Anbox Platform SDK](https://github.com/canonical/anbox-platform-sdk). To do so, follow the [installation instructions](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-platform-sdk-1).
 
 ## Build the example platform
 
-The [Anbox Platform SDK](https://github.com/anbox-cloud/anbox-platform-sdk) comes with various examples that demonstrate different features. The following steps use the `minimal` example. Alternatively, choose the `nvidia` example if you're working with NVIDIA GPUs and want to see graphical output.
+The [Anbox Platform SDK](https://github.com/canonical/anbox-platform-sdk) comes with various examples that demonstrate different features. The following steps use the `minimal` example. Alternatively, choose the `nvidia` example if you're working with NVIDIA GPUs and want to see graphical output.
 
 To build the `minimal` platform example, run the following commands:
 

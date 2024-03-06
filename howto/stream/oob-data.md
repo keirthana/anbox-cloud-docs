@@ -266,7 +266,7 @@ try {
 }
 ```
 <!-- wokeignore:rule=master -->
-For a complete Android example, see the [out_of_band_v2](https://github.com/anbox-cloud/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project.
+For a complete Android example, see the [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project.
 
 ## Version 1
 
@@ -303,9 +303,9 @@ be disallowed, and a security exception will be raised.
 
 #### Import Java library
 
-Check out the [Anbox Streaming SDK](https://github.com/anbox-cloud/anbox-streaming-sdk) from GitHub:
+Check out the [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk) from GitHub:
 
-    git clone https://github.com/anbox-cloud/anbox-streaming-sdk.git
+    git clone https://github.com/canonical/anbox-streaming-sdk.git
 
 To import the `com.canonical.anbox.platform_api_skeleton.jar` library into your
 Android project, refer to the official [documentation](https://developer.android.com/studio/build/dependencies)
