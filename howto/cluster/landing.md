@@ -11,9 +11,8 @@ For full Anbox Cloud deployments:
 
 See [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765) for an introduction to how clustering works in Anbox Cloud.
 
-<<<<<<< HEAD
 [note type="information" status="Important"]Currently, Anbox Cloud Appliance does not support clustering.[/note]
-=======
+
 ```{toctree}
 :hidden:
 
@@ -22,4 +21,3 @@ configure-nodes
 scale-down
 scale-up
 ```
->>>>>>> 9f4f722 (Fix titles and navigation)

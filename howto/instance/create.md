@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
-=======
 (howto-create-instance)=
 # How to create an instance
-
-You can either launch an instance with `amc launch` or initialise an instance with the `amc init` command for a registered application or image (see [Application instances vs. raw instances](https://discourse.ubuntu.com/t/17763#application-vs-raw)), by using the `amc` tool or through another service over the REST API that the AMS service provides. The `amc init` command only creates the instance, while the `amc launch` command creates and starts it.
->>>>>>> 9f4f722 (Fix titles and navigation)
+To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
 
 ## Using the dashboard
 

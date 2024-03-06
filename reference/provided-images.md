@@ -18,7 +18,6 @@ The following table lists supported images available on the official image serve
 | `jammy:android12:amd64`     | AOSP     | 12              | 22.04          | 1.14.0 |
 | `jammy:android12:arm64`     | AOSP     | 12              | 22.04          | 1.14.0 |
 
-
 ## Support for Anbox Cloud images
 
 Currently, Anbox Cloud provides images based on Ubuntu 22.04 (jammy). Deprecations, if any, are announced at least two releases in advance.

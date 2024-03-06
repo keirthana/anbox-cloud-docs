@@ -32,6 +32,7 @@ The first two fields which imply display width and display height respectively a
 
 Then the specified display setting will be applied after the instance gets started.
 
+(sec-null-platform)=
 ## Configuration for `null` platform
 
 Display settings for the `null` platform can be configured in the same way as for the `swrast` platform.

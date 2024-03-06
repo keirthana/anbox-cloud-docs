@@ -52,6 +52,7 @@ The AMS SDK comes with a set of examples demonstrating the capabilities of the S
 
 Clients must authenticate to AMS before communicating with it. For more information, see [How to control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) and the [AMS SDK documentation](https://github.com/canonical/ams-sdk) on GitHub.
 
+(sec-streaming-sdk)=
 ## Anbox Cloud Streaming SDK
 
 The Anbox Cloud streaming SDK allows the development of custom streaming clients using JavaScript. This SDK handles all aspects of streaming, from the WebRTC protocol to handling controls, game pads, speakers and screen resolutions.

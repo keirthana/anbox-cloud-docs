@@ -106,7 +106,7 @@ applications:
 ```
 
 You will use the overlay file during the deployment.
-<a name="deploy-anbox-cloud"></a>
+(sec-deploy-anbox-cloud-juju)=
 ## Deploy Anbox Cloud
 
 [note type="information" status="Note"]
@@ -165,7 +165,7 @@ To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
     juju deploy anbox-cloud --overlay ua.yaml --overlay overlay.yaml
 
-<a name="customise-storage"></a>
+(sec-customise-storage-juju)=
 ### Customise storage
 
 By default, Anbox Cloud uses a loop file with an automatically calculated size for LXD storage. For optimal performance, however, you should use a dedicated block storage device. See [LXD storage](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#lxd-storage-6) for more information.
