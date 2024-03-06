@@ -21,7 +21,7 @@ When you start a streaming session, you can pass in custom data through the Anbo
 
   ![Specify extra data in the web dashboard](https://assets.ubuntu.com/v1/16e9a133-manage_applications_extra-data.png)
 
-* When starting the session through the Stream Gateway API, provide your custom data through the `extra_data` field. See [Create session](https://anbox-cloud.github.io/latest/anbox-stream-gateway/#/session/handle-new-session) in the Anbox Stream Gateway documentation.
+* When starting the session through the Stream Gateway API, provide your custom data through the `extra_data` field. See [Create session](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-stream-gateway/#/session/handle-new-session) in the Anbox Stream Gateway documentation.
 
 In both cases, the data is added to the `/var/lib/anbox/userdata` file in JSON format. This file already contains data added by the Stream Gateway for the streaming session. The custom data is available under the `extra_data` field. For example:
 

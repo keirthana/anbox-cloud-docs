@@ -34,7 +34,7 @@ See [Component versions](https://discourse.ubuntu.com/t/21413) to refer to the a
 
 ## Supported platforms
 
-Anbox Cloud can make use of different [platforms](https://anbox-cloud.github.io/latest/anbox-platform-sdk/) to customise its behaviour and currently supports 3 platforms.
+Anbox Cloud can make use of different [platforms](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/) to customise its behaviour and currently supports 3 platforms.
 
 | Name     	| Behaviour                                                                                                                                            	|
 |----------	|-----------------------------------------------------------------------------------------------------------------------------------------------------	|

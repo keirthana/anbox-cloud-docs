@@ -75,7 +75,7 @@ Status            |  Description
 
 AMS allows to start an instance in development mode. This mode turns off some features that are usually active in an instance. It is mainly useful when developing addons inside an instance.
 
-When development mode is enabled, the instance sends status updates to AMS when the Anbox runtime is terminated, however, AMS allows the instance to continue running. This allows you to restart the Anbox runtime inside the instance, providing an easy way to test [addons](https://discourse.ubuntu.com/t/addons/25293) or develop a [platform plugin](https://anbox-cloud.github.io/latest/anbox-platform-sdk/).
+When development mode is enabled, the instance sends status updates to AMS when the Anbox runtime is terminated, however, AMS allows the instance to continue running. This allows you to restart the Anbox runtime inside the instance, providing an easy way to test [addons](https://discourse.ubuntu.com/t/addons/25293) or develop a [platform plugin](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/).
 
 To check whether development mode is enabled, run `amc show <instance_ID>` or look at the `/var/lib/anbox/session.yaml` file in the instance. If the `devmode` field in the configuration file is set to `true`, development mode is active.
 
