@@ -28,4 +28,4 @@ In addition to the `cpus`, `memory` and the `disk-size` requirements, if your ap
 
 ## Related information
 
-* [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)
+* {ref}`ref-application-manifest`

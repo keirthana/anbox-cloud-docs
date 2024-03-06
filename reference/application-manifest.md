@@ -69,7 +69,7 @@ resources:
   disk-size: 3GB
 node-selector: [foo, bar]
 ```
-
+(sec-application-manifest-video-encoder)=
 ## Video encoder
 
 A video encoder type can be specified through the `video-encoder` field in the manifest file when creating an application, so that an instance launched from the application can use a GPU or software video encoder according to different scenarios. Virtual machines do not have GPU support and hence will use software video encoding.
@@ -84,6 +84,7 @@ When `gpu` video encoder is specified in the manifest, AMS can fail to create an
  - All GPU slots are used up by running instances.
  - There is no GPU support across the entire LXD cluster.
 
+(sec-application-manifest-watchdog)=
 ## Watchdog
 
 The `watchdog` attribute includes the following field definitions:

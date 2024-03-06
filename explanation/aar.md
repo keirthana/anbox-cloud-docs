@@ -23,6 +23,6 @@ AMS can act in two different roles, `publisher` or `client` when working with an
 
 ## Related information
 
-* [How to deploy an AAR](https://discourse.ubuntu.com/t/installation-application-registry/17749)
-* [How to configure an AAR](https://discourse.ubuntu.com/t/configure-an-aar/24319)
-* [How to revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)
+* {ref}`howto-deploy-aar`
+* {ref}`howto-configure-aar`
+* {ref}`howto-revoke-aar`

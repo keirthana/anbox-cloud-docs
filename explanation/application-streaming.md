@@ -1,7 +1,7 @@
 (exp-application-streaming)=
-# Application Streaming
+# Application streaming
 
-This guide covers the usage of the Streaming Stack and assumes that you know [how to get access to the Stream Gateway API](https://discourse.ubuntu.com/t/access-the-stream-gateway/17784).
+This guide covers the usage of the streaming stack and assumes that you know how to access the stream gateway. If you are not familiar with accessing the stream gateway, see {ref}`howto-access-stream-gateway`.
 
 ## Streaming stack overview
 
@@ -76,6 +76,6 @@ If you do not enable streaming when launching the instance, you cannot enable it
 
 ## Related information
 
-* [Installing Streaming Stack](https://discourse.ubuntu.com/t/installation-quickstart/17744#deploy-anbox-cloud)
+* {ref}`sec-deploy-anbox-cloud-juju` (installs streaming stack)
 * [Signalling](https://www.html5rocks.com/en/tutorials/webrtc/infrastructure/)
-* [Supported codecs](https://discourse.ubuntu.com/t/37323)
+* {ref}`ref-codecs`

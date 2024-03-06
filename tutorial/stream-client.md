@@ -1,3 +1,6 @@
+(tut-set-up-stream-client)=
+# Set up a stream client
+
 This tutorial guides you through the process of setting up a web-based streaming client using the Anbox Cloud streaming stack. The connection between the stream client and the server uses WebRTC backed by web sockets which enable the real time communications required for streaming. To know more about the WebRTC configuration, see {ref}`ref-webrtc`.
 
 ## Preparation

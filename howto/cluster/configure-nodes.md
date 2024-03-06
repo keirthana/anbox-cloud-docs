@@ -30,7 +30,7 @@ config:
     gpu-encoder-slots: 0
     tags: []
 ```
-
+(sec-config-allocation-rates)=
 ## Configure allocation rates
 
 AMS allows over-committing available resources on a node. This mechanism improves resource usage, because usually, instances don't use 100% of their dedicated resources all of the time.
@@ -54,6 +54,7 @@ Use the following command to prevent the node from accepting new instances:
 
     amc node set <node> unschedulable true
 
+(sec-config-gpu-slots)=
 ## Configure GPU slots and GPU encoder slots
 
 GPU slots are used to share GPUs amongst instances. See [GPUs and instances](https://discourse.ubuntu.com/t/17768) and [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots-2) for more information.
