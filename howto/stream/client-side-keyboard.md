@@ -15,9 +15,9 @@ To enable the app running in the Android container to receive the texts sent fro
 
 ## 1. Import the AAR library
 
-Check out the [Anbox Streaming SDK](https://github.com/anbox-cloud/anbox-streaming-sdk) from GitHub:
+Check out the [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk) from GitHub:
 
-    git clone https://github.com/anbox-cloud/anbox-streaming-sdk.git
+    git clone https://github.com/canonical/anbox-streaming-sdk.git
 
 The `android/libs` folder contains the `com.canonical.anbox.streaming_sdk.aar` AAR file. See the official [documentation](https://developer.android.com/studio/projects/android-library) for how to import an Android library into an Android application project.
 
