@@ -3,7 +3,7 @@ orphan: true
 ---
 # `node`
 
-The `node` command manage LXD nodes of the deployment that run instances with Anbox Cloud and are managed by the Anbox Management Service (AMS). See https://discourse.ubuntu.com/t/17765 for more information.
+The `node` command manage LXD nodes of the deployment that run instances with Anbox Cloud and are managed by the Anbox Management Service (AMS). See {ref}`exp-clustering` for more information.
 
     amc node <subcommand>
 
@@ -67,7 +67,9 @@ where `attribute` can be one of the following:
 
 Removes a node from the Anbox Cloud cluster thereby making it unable to host instances.
 
-[note type="information" status="Note]You cannot delete a node with running instances unless you use the `--force` flag.[/note]
+```{note}
+You cannot delete a node with running instances unless you use the `--force` flag.
+```
 
     amc node remove <node_name> [options]
 
@@ -83,7 +85,7 @@ The following options are available:
 
 ### `set`
 
-Set specific configuration for a node. See [AMS configuration](https://discourse.ubuntu.com/t/20872) for a list of available configuration items.
+Set specific configuration for a node. See {ref}`ref-ams-configuration` for a list of available configuration items.
 
     amc node set <node_name> <config_item_name> <config_item_value> [options] --timeout=10m
 

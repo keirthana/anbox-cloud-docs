@@ -13,7 +13,7 @@ The following subcommands are available:
 
 ### `add`
 
-Create an addon from the contents of the provided directory, tarball or zip archive. See how to [create an addon](https://discourse.ubuntu.com/t/40632) or [create an addon tutorial](https://discourse.ubuntu.com/t/create-an-addon/25284) for more information.
+Create an addon from the contents of the provided directory, tarball or zip archive. See {ref}`howto-create-addons` or {ref}`tut-create-addon` for more information.
 
     amc addon add <addon_name> (<directory> | <tarball> | <zip archive>) --timeout=3m
 

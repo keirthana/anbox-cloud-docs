@@ -3,7 +3,7 @@
 Load custom shapes:
 
 1. Go to **File** > **Open Library**.
-2. Select the `discourse-docs/images/anbox-drawio.xml` file.
+2. Select the `anbox-cloud-docs/images/anbox-drawio.xml` file.
 
 Configure custom styles and colours:
 

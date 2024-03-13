@@ -1,7 +1,7 @@
 (ref-amc-commands)=
 # AMC command reference
 
-The Anbox Management Client (AMC) is a command line utility offered by Anbox Cloud that interacts with the [Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/24321).
+The Anbox Management Client (AMC) is a command line utility offered by Anbox Cloud that interacts with the Anbox Management Service (AMS).
 
 Use `amc --help` or `amc <command> --help` to display usage information for the tool and its commands. The following commands are available for use with `amc`:
 

@@ -6,8 +6,8 @@ orphan: true
 The `image` command manages images that contain everything necessary to properly run an Android application in an instance.
 
 Images can be provided manually or via an image server. You can add, update or
-delete them from AMS. See https://discourse.ubuntu.com/t/24185 and
-https://discourse.ubuntu.com/t/17758 for more information.
+delete them from AMS. See {ref}`ref-provided-images` and
+{ref}`howto-manage-images` for more information.
 
     amc image <subcommand>
 

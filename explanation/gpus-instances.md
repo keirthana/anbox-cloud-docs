@@ -27,7 +27,7 @@ If you want to let an application use the GPU (even if you are not interested in
 
     amc launch --enable-graphics my-application
 
-<a name="software-rendering"></name>
+(sec-sw-rendering-video-encoding)=
 ## Force software rendering and video encoding
 
 It is possible to instruct an instance to run with software rendering. To do so, change the {ref}`sec-application-manifest-resources` of the application to not require a GPU. Anbox Cloud will then automatically determine that no GPU is available and use software rendering instead if an instance is launched with graphics enabled.

@@ -9,28 +9,31 @@ Name          | Value type | Description | Status |
 --------------|------------|-------------------------|----|
 `name`          | string     | Verbose name of the application. The following special characters are not allowed: `< > : " / \ \| ? *`, as well as space | Supported |
 `version`       | string     | Version to encode with the application. Maximum length is 50 characters. | Supported |
-`instance-type` | string     | Instance type that all [instances](https://discourse.ubuntu.com/t/26204#instance) created for the application will use. [Jump to details](#instance-type-1) | Deprecated since 1.20 |
+`instance-type` | string     | Instance type that all instances created for the application will use. {ref}`Learn more <sec-application-manifest-instance-type>` | Deprecated since 1.20 |
 `required-permissions` | array of strings | List of permissions to automatically grant to the application. See [Android Permissions](https://developer.android.com/guide/topics/permissions/overview) for a list of available permissions. If `[*]` was given, all required runtime permissions for the application will be granted on application installation. | Supported |
-`image` (optional) | string     | Name or ID of an image to be used for the application. The default image is used if empty. [Jump to details](#image-2) | Supported |
+`image` (optional) | string     | Name or ID of an image to be used for the application. The default image is used if empty. {ref}`Learn more <sec-application-manifest-image>` | Supported |
 `addons` (optional) | array      | List of addons to be installed during the application bootstrap process. | Supported |
 `tags` (optional) | array      | List of tags to be associated with the application. | Supported |
 `boot-package` (optional) | string     | Package to launch once the system has booted (default: package name retrieved from the APK if APK file is present). | Supported on AOSP only |
 `boot-activity` (optional) | string     | Activity of boot package to launch once the system has booted (default: main activity as defined in the application manifest). | Supported on AOSP only |
-`video-encoder` (optional) | string     | Video encoder to be used by an instance launched from the application  (default: `gpu-preferred`). Possible values are: `gpu`, `gpu-preferred`, `software`. [Jump to details](#video-encoder-4) | Supported |
-`watchdog` (optional)    | map        | Watchdog settings to be configured on application installation. [Jump to details](#watchdog-5)| Supported |
-`services` (optional)    | array      | Services to be provided from the installed application. [Jump to details](#services-6) | Supported |
-`resources` (optional)   | map        | Resources to be allocated on application installation. [Jump to details](#resources-7) | Supported |
-`extra-data` (optional)  | array      | List of additional data to be installed on application installation. [Jump to details](#extra-data-8) | Supported |
-`hooks` (optional) | object | Hooks settings to be configured on application installation. [Jump to details](#hooks-9) | Supported |
-`bootstrap` (optional) | object | Application bootstrap settings to be configured on application installation. [Jump to details](#bootstrap-10)| Supported |
+`video-encoder` (optional) | string     | Video encoder to be used by an instance launched from the application  (default: `gpu-preferred`). Possible values are: `gpu`, `gpu-preferred`, `software`. {ref}`Learn more <sec-application-manifest-video-encoder>` | Supported |
+`watchdog` (optional)    | map        | Watchdog settings to be configured on application installation. {ref}`Learn more <sec-application-manifest-watchdog>`| Supported |
+`services` (optional)    | array      | Services to be provided from the installed application. {ref}`Learn more <sec-application-manifest-services>` | Supported |
+`resources` (optional)   | map        | Resources to be allocated on application installation. {ref}`Learn more <sec-application-manifest-resources>` | Supported |
+`extra-data` (optional)  | array      | List of additional data to be installed on application installation. {ref}`Learn more <sec-application-manifest-extra-data>` | Supported |
+`hooks` (optional) | object | Hooks settings to be configured on application installation. {ref}`Learn more <sec-application-manifest-hooks>` | Supported |
+`bootstrap` (optional) | object | Application bootstrap settings to be configured on application installation. {ref}`Learn more <sec-application-manifest-bootstrap>`| Supported |
 `features` (optional) | array | List of feature flags to be defined for instances created from the application. | Supported |
-`node-selector` (optional) | array | List of selectors which will limit what node an instance for the application can be scheduled on. [Jump to details](#node-selector-3) | Supported |
+`node-selector` (optional) | array | List of selectors which will limit what node an instance for the application can be scheduled on. {ref}`Learn more <sec-application-manifest-node-selector>` | Supported |
 
+(sec-application-manifest-instance-type)=
 ## Instance type
 
-[note type="information" Status="Note"] The `instance-type` attribute is deprecated since 1.20. For any application, a default set of resources will be chosen. If you wish to set specific resources to your application, use the [`resources` attribute](#resources) to do so. 
+```{note}
+The `instance-type` attribute is deprecated since 1.20. For any application, a default set of resources will be chosen. If you wish to set specific resources to your application, use the [`resources` attribute](#resources) to do so.
 
-When using the web dashboard to create an application, the field *Instance type* is changed to *Resource type* to maintain backward compatibility. [/note]
+When using the web dashboard to create an application, the field *Instance type* is changed to *Resource type* to maintain backward compatibility.
+```
 
 Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single instance with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of instances or particular applications.
 
@@ -49,15 +52,17 @@ g6.3  | 6          | 3 GB  | 3 GB      |  1        |
 g8.3  | 8          | 3 GB  | 3 GB      |  1        |
 g10.3 | 10         | 3 GB  | 3 GB      |  1        |
 
+(sec-application-manifest-image)=
 ## Image
 
-The `image` attribute defines which image the application is based on. If left empty, your application is based on the default image. See [How to manage images](https://discourse.ubuntu.com/t/managing-images/17758) for more details on this. Available images on your installation can be listed with the following command:
+The `image` attribute defines which image the application is based on. If left empty, your application is based on the default image. See {ref}`howto-manage-images` for more details on this. Available images on your installation can be listed with the following command:
 
     amc image list
 
+(sec-application-manifest-node-selector)=
 ## Node selector
 
-The `node-selector` attribute allows specifying a list of selectors to limit the LXD nodes on which an instance for the application can be scheduled. AMS will match the selector against the [tags](https://discourse.ubuntu.com/t/how-to-configure-cluster-nodes/28716#tags-5) specified for each node.
+The `node-selector` attribute allows specifying a list of selectors to limit the LXD nodes on which an instance for the application can be scheduled. AMS will match the selector against the tags specified for each node. See {ref}`sec-tags` for more information.
 
 The following manifest specifies a node selector that instructs the AMS to schedule only those instances having the tags `foo` and `bar`, onto a node:
 
@@ -118,6 +123,7 @@ The rules forbid launching another activity, not part of the installed package o
 
 Supplying `['*']` to the `allowed-packages` when the watchdog is enabled allows any application to be displayed in the foreground without triggering a watchdog.
 
+(sec-application-manifest-services)=
 ## Services
 
 An instance launched from the installed application can expose `services` you want to make accessible from outside the instance. You must define the following properties for each service:
@@ -143,8 +149,9 @@ Name           | Value type | Minimum value  | Description
 
 Note that if all required fields (`cpus`/`memory`/`disk-size`) of `resources` are supplied in the application manifest and the deprecated `instance-type` field is also provided, `instance-type` will be overridden by the requirements in the `resources` fields upon application installation.
 
-See [How to configure available resources](https://discourse.ubuntu.com/t/24960) for more information.
+See {ref}`exp-resources-presets` for more information.
 
+(sec-application-manifest-extra-data)=
 ## Extra data
 
 Some Android applications which contain large program assets such as graphics or media files use so-called [OBB](https://developer.android.com/google/play/expansion-files) files to store additional data. These data files are separated from the APK and saved onto the external or internal SD card of an Android device. The `extra-data` field can be used in this case to install an APK with separated OBB files or any other additional data into the Android system.
@@ -203,10 +210,12 @@ The manifest and extra data in our example are placed next to the application pa
 └── manifest.yaml
 ```
 
+(sec-application-manifest-hooks)=
 ## Hooks
 
-Hooks allow you to run custom scripts when a certain event is triggered in the life cycle of an instance. See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for more details about the usage of hooks in an application.
+Hooks allow you to run custom scripts when a certain event is triggered in the life cycle of an instance. See {ref}`ref-hooks` for more details about the usage of hooks in an application.
 
+(sec-application-manifest-bootstrap)=
 ## Bootstrap
 
 An application bootstrap can be fine-tuned through the `bootstrap` field.
@@ -215,7 +224,7 @@ The `bootstrap` attribute includes the following field definitions:
 
 Name                  | Value type | Description
 ----------------------|------------|-------------------------
-`keep`                |  array     | Contents under the [APP_DIR](https://discourse.ubuntu.com/t/hooks/28555#environment-variables-1) directory to be preserved in the application image after the bootstrap is finished. Wildcard patterns are supported. See [pattern syntax](https://golang.org/pkg/path/filepath/#Match) for more details.
+`keep`                |  array     | Contents under the APP_DIR directory to be preserved in the application image after the bootstrap is finished. Wildcard patterns are supported.  See {ref}`sec-env-variables` and [pattern syntax](https://golang.org/pkg/path/filepath/#Match) for more information.
 
 To minimise the application size, most contents under the `APP_DIR` directory are removed when the application bootstrap is finished. By default, only the metadata content is preserved. If a hook requires any other files under the `APP_DIR` directory during the regular instance runtime, you must include them in the application image.
 

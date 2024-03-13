@@ -58,7 +58,7 @@ GPU slots are used to share GPUs amongst instances, but they do not impose limit
 
 The main purpose of GPU slots is to control the number of instances that are launched on a node that has a GPU installed, which reduces contention for GPU resources.
 ```
-
+(sec-over-committing)=
 ## Over-committing resources
 
 If the unused resources on a cluster node don't suffice to launch an instance for an application with its defined resource requirements, the instance cannot be launched. This behaviour is very restrictive, and in many cases unnecessary.

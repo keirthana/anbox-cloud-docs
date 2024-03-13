@@ -1,4 +1,4 @@
-(howto-upgrade-appliance)
+(howto-upgrade-appliance)=
 # How to upgrade the Anbox Cloud Appliance
 
 Before you upgrade the Anbox Cloud Appliance, make sure all packages on the machines that are part of the deployment are up-to-date. To do so, run the following commands on each machine:

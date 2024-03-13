@@ -67,6 +67,7 @@ Running this command does the following:
 1. Installs `anbox-cloud-appliance` snap from the `latest/stable` track.
 1. Configures the `apt` repositories for Anbox Cloud.
 
+(sec-initialise-appliance)=
 ## Initialise the appliance
 
 After the installation, access the appliance in your web browser by entering the IP of your machine (in the following steps referred to as `https://your-machine-address`). This web page provides status information for the following initialisation process.
