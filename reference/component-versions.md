@@ -52,7 +52,7 @@ Not all components are updated with each release. When components are not update
 | `anbox-stream-agent` | `1.21/stable` | 1.21.1 |
 | `anbox-stream-gateway` | `1.21/stable` | 1.21.1 |
 | `anbox-cloud-appliance` | `1.21/stable` | 1.21.1 |
-
+| `anbox-cloud-tests` | `1.21/stable` | 1.21.1 |
 
 ### Anbox images
 
