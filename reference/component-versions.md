@@ -2,7 +2,7 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
-## 1.21.0
+## 1.21.1
 
 ### Charms
 
@@ -16,7 +16,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.21/stable` | 320 |
 | `aar` | `1.21/stable` | 314 |
 | `anbox-stream-gateway` | `1.21/stable` | 325 |
-| `ams-load-balancer` | `1.21/stable` | 315 |
 | `ams-lxd` | `1.21/stable` | 312 |
 | `anbox-stream-agent` | `1.21/stable` | 320 |
 | `nats ` | `latest/stable` | 11 |
@@ -31,7 +30,67 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.21/stable` | 319 |
 | `aar` | `1.21/stable` | 313 |
 | `anbox-stream-gateway` | `1.21/stable` | 324 |
-| `ams-load-balancer` | `1.21/stable` | 314 |
+| `ams-lxd` | `1.21/stable` | 311 |
+| `anbox-stream-agent` | `1.21/stable` | 319 |
+| `nats ` | `latest/stable` | 11 |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.21/stable` | 182 |
+| `anbox-cloud-core` | `1.21/stable` | 189 |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.21/stable` | 1.21.1 |
+| `aar`    | `1.21/stable` | 1.21.1 |
+| `ams-node-controller` | `1.21/stable` | 1.21.1 |
+| `anbox-cloud-dashboard` | `1.21/stable` | 1.21.1 |
+| `anbox-stream-agent` | `1.21/stable` | 1.21.1 |
+| `anbox-stream-gateway` | `1.21/stable` | 1.21.1 |
+| `anbox-cloud-appliance` | `1.21/stable` | 1.21.1 |
+
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.21.1 |
+| `jammy:android13:arm64` | 1.21.1 |
+| `jammy:android12:amd64` | 1.21.1 |
+| `jammy:android12:arm64` | 1.21.1 |
+
+## 1.21.0
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.21/stable` | 307 |
+| `ams-node-controller` | `1.21/stable` | 315 |
+| `coturn` | `1.21/stable` | 309 |
+| `ams` | `1.21/stable` | 320 |
+| `aar` | `1.21/stable` | 314 |
+| `anbox-stream-gateway` | `1.21/stable` | 325 |
+| `ams-lxd` | `1.21/stable` | 312 |
+| `anbox-stream-agent` | `1.21/stable` | 320 |
+| `nats ` | `latest/stable` | 11 |
+
+#### Ubuntu 20.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.21/stable` | 306 |
+| `ams-node-controller` | `1.21/stable` | 314 |
+| `coturn` | `1.21/stable` | 308 |
+| `ams` | `1.21/stable` | 319 |
+| `aar` | `1.21/stable` | 313 |
+| `anbox-stream-gateway` | `1.21/stable` | 324 |
 | `ams-lxd` | `1.21/stable` | 311 |
 | `anbox-stream-agent` | `1.21/stable` | 319 |
 | `nats ` | `latest/stable` | 11 |
@@ -79,7 +138,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.20/stable` | 272 |
 | `aar` | `1.20/stable` | 266 |
 | `anbox-stream-gateway` | `1.20/stable` | 277 |
-| `ams-load-balancer` | `1.20/stable` | 267 |
 | `ams-lxd` | `1.20/stable` | 264 |
 | `anbox-stream-agent` | `1.20/stable` | 272 |
 | `nats ` | `latest/stable` | 11 |
@@ -94,7 +152,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.20/stable` | 271 |
 | `aar` | `1.20/stable` | 265 |
 | `anbox-stream-gateway` | `1.20/stable` | 276 |
-| `ams-load-balancer` | `1.20/stable` | 266 |
 | `ams-lxd` | `1.20/stable` | 263 |
 | `anbox-stream-agent` | `1.20/stable` | 271 |
 | `nats ` | `latest/stable` | 11 |
@@ -144,7 +201,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.20/stable` | 272 |
 | `aar` | `1.20/stable` | 266 |
 | `anbox-stream-gateway` | `1.20/stable` | 277 |
-| `ams-load-balancer` | `1.20/stable` | 267 |
 | `ams-lxd` | `1.20/stable` | 264 |
 | `anbox-stream-agent` | `1.20/stable` | 272 |
 | `nats ` | `latest/stable` | 11 |
@@ -159,7 +215,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.20/stable` | 271 |
 | `aar` | `1.20/stable` | 265 |
 | `anbox-stream-gateway` | `1.20/stable` | 276 |
-| `ams-load-balancer` | `1.20/stable` | 266 |
 | `ams-lxd` | `1.20/stable` | 263 |
 | `anbox-stream-agent` | `1.20/stable` | 271 |
 | `nats ` | `latest/stable` | 11 |
@@ -209,7 +264,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.20/stable` | 241 |
 | `aar` | `1.20/stable` | 235 |
 | `anbox-stream-gateway` | `1.20/stable` | 246 |
-| `ams-load-balancer` | `1.20/stable` | 236 |
 | `ams-lxd` | `1.20/stable` | 233 |
 | `anbox-stream-agent` | `1.20/stable` | 241 |
 | `nats ` | `latest/stable` | 11 |
@@ -224,7 +278,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.20/stable` | 240 |
 | `aar` | `1.20/stable` | 234 |
 | `anbox-stream-gateway` | `1.20/stable` | 245 |
-| `ams-load-balancer` | `1.20/stable` | 235 |
 | `ams-lxd` | `1.20/stable` | 232 |
 | `anbox-stream-agent` | `1.20/stable` | 240 |
 | `nats ` | `latest/stable` | 11 |
@@ -274,7 +327,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.19/stable` | 221 |
 | `aar` | `1.19/stable` | 215 |
 | `anbox-stream-gateway` | `1.19/stable` | 226 |
-| `ams-load-balancer` | `1.19/stable` | 216 |
 | `ams-lxd` | `1.19/stable` | 213 |
 | `anbox-stream-agent` | `1.19/stable` | 221 |
 | `nats ` | `latest/stable` | 11 |
@@ -289,7 +341,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.19/stable` | 220 |
 | `aar` | `1.19/stable` | 214 |
 | `anbox-stream-gateway` | `1.19/stable` | 225 |
-| `ams-load-balancer` | `1.19/stable` | 215 |
 | `ams-lxd` | `1.19/stable` | 212 |
 | `anbox-stream-agent` | `1.19/stable` | 220 |
 | `nats ` | `latest/stable` | 11 |
@@ -339,7 +390,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.19/stable` | 193 |
 | `aar` | `1.19/stable` | 187 |
 | `anbox-stream-gateway` | `1.19/stable` | 198 |
-| `ams-load-balancer` | `1.19/stable` | 188 |
 | `ams-lxd` | `1.19/stable` | 185 |
 | `anbox-stream-agent` | `1.19/stable` | 193 |
 | `nats ` | `latest/stable` | 11 |
@@ -354,7 +404,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.19/stable` | 192 |
 | `aar` | `1.19/stable` | 186 |
 | `anbox-stream-gateway` | `1.19/stable` | 197 |
-| `ams-load-balancer` | `1.19/stable` | 187 |
 | `ams-lxd` | `1.19/stable` | 184 |
 | `anbox-stream-agent` | `1.19/stable` | 192 |
 | `nats ` | `latest/stable` | 11 |
@@ -404,7 +453,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.19/stable` | 175 |
 | `aar` | `1.19/stable` | 169 |
 | `anbox-stream-gateway` | `1.19/stable` | 180 |
-| `ams-load-balancer` | `1.19/stable` | 170 |
 | `ams-lxd` | `1.19/stable` | 167 |
 | `anbox-stream-agent` | `1.19/stable` | 175 |
 | `nats ` | `latest/stable` | 11 |
@@ -419,7 +467,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.19/stable` | 174 |
 | `aar` | `1.19/stable` | 168 |
 | `anbox-stream-gateway` | `1.19/stable` | 179 |
-| `ams-load-balancer` | `1.19/stable` | 169 |
 | `ams-lxd` | `1.19/stable` | 166 |
 | `anbox-stream-agent` | `1.19/stable` | 174 |
 | `nats ` | `latest/stable` | 11 |
@@ -469,7 +516,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.18/stable` | 148 |
 | `aar` | `1.18/stable` | 141 |
 | `anbox-stream-gateway` | `1.18/stable` | 153 |
-| `ams-load-balancer` | `1.18/stable` | 143 |
 | `ams-lxd` | `1.18/stable` | 139 |
 | `anbox-stream-agent` | `1.18/stable` | 147 |
 | `nats ` | `latest/stable` | 11 |
@@ -484,7 +530,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.18/stable` | 147 |
 | `aar` | `1.18/stable` | 140 |
 | `anbox-stream-gateway` | `1.18/stable` | 152 |
-| `ams-load-balancer` | `1.18/stable` | 142 |
 | `ams-lxd` | `1.18/stable` | 138 |
 | `anbox-stream-agent` | `1.18/stable` | 146 |
 | `nats ` | `latest/stable` | 11 |
@@ -542,7 +587,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.18/stable` | 144 |
 | `aar` | `1.18/stable` | 137 |
 | `anbox-stream-gateway` | `1.18/stable` | 149 |
-| `ams-load-balancer` | `1.18/stable` | 139 |
 | `ams-lxd` | `1.18/stable` | 135 |
 | `anbox-stream-agent` | `1.18/stable` | 143 |
 | `nats ` | ` latest/stable` | 11 |
@@ -557,7 +601,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.18/stable` | 143 |
 | `aar` | `1.18/stable` | 136 |
 | `anbox-stream-gateway` | `1.18/stable` | 148 |
-| `ams-load-balancer` | `1.18/stable` | 138 |
 | `ams-lxd` | `1.18/stable` | 134 |
 | `anbox-stream-agent` | `1.18/stable` | 142 |
 | `nats ` | ` latest/stable` | 11 |
@@ -614,7 +657,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.18/stable` | 129 |
 | `aar` | `1.18/stable` | 122 |
 | `anbox-stream-gateway` | `1.18/stable` | 134 |
-| `ams-load-balancer` | `1.18/stable` | 124 |
 | `ams-lxd` | `1.18/stable` | 121 |
 | `anbox-stream-agent` | `1.18/stable` | 129 |
 | `nats ` | ` latest/stable` | 11 |
@@ -629,7 +671,6 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.18/stable` | 128 |
 | `aar` | `1.18/stable` | 121 |
 | `anbox-stream-gateway` | `1.18/stable` | 133 |
-| `ams-load-balancer` | `1.18/stable` | 123 |
 | `ams-lxd` | `1.18/stable` | 120 |
 | `anbox-stream-agent` | `1.18/stable` | 128 |
 | `nats ` | ` latest/stable` | 11 |
@@ -671,4 +712,3 @@ Not all components are updated with each release. When components are not update
 | `bionic:android11:arm64` | 1.18.0 |
 | `bionic:android10:amd64` | 1.18.0 |
 | `bionic:android10:arm64` | 1.18.0 |
-
