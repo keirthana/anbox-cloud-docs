@@ -27,7 +27,7 @@ unit-anbox-cloud-dashboard-0:
     enqueued: 2021-02-10 14:04:44 +0000 UTC
     started: 2021-02-10 14:04:44 +0000 UTC
 ```
-
+(sec-register-ubuntu-one-appliance)=
 ### Register an Ubuntu One account in Anbox Cloud Appliance
 
 If you followed the instructions in the [Install the Anbox Cloud Appliance on a dedicated machine](https://discourse.ubuntu.com/t/install-appliance/22681) tutorial or in [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702), you already registered your Ubuntu One account.

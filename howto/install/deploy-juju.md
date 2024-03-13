@@ -106,6 +106,7 @@ applications:
 ```
 
 You will use the overlay file during the deployment.
+
 (sec-deploy-anbox-cloud-juju)=
 ## Deploy Anbox Cloud
 

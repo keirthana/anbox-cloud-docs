@@ -25,7 +25,7 @@ See {ref}`howto-access-stream-gateway` for more information on creating, using a
 
 ### Download the Anbox Cloud streaming SDK
 
-Download the [Anbox Cloud streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8) from GitHub:
+Download the {ref}`sec-streaming-sdk` from GitHub:
 
     git clone https://github.com/canonical/anbox-streaming-sdk.git
 

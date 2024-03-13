@@ -12,6 +12,6 @@ The following table lists the valid keys in an addon manifest:
 
 ## Related information
 
-* [Addons](https://discourse.ubuntu.com/t/38727)
-* [Tutorial: Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284)
-* [How to use addons](https://discourse.ubuntu.com/t/managing-addons/17759)
+* {ref}`tut-create-addon`
+* {ref}`howto-create-addons`
+* {ref}`howto-addons`

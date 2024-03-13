@@ -1,3 +1,6 @@
+(ref-aosp-aaos)=
+# Supported features for AOSP vs AAOS images
+
 Anbox Cloud provides images based on the Android Open Source Project (AOSP), an operating system typically used in mobile devices or an Anbox Cloud AAOS image which is based on the Android Automotive OS (AAOS), an infotainment platform used in automobiles. Supported Anbox features differ depending what a given image is based on.
 
 The following table lists some Anbox features and whether they are supported for a given base.

@@ -12,7 +12,7 @@ Anbox Cloud provides the following APIs:
 * Stream Gateway API
 * Anbox Platform SDK API
 
-All these APIs except for the [Anbox Cloud HTTP API](https://discourse.ubuntu.com/t/anbox-http-api/17819) have an auto-generated specification describing its API endpoints.
+All these APIs except for the {ref}`anbox-https-api` have an auto-generated specification describing its API endpoints.
 
 ## Authentication
 

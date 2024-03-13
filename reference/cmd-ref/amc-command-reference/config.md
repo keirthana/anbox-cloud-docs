@@ -3,7 +3,7 @@ orphan: true
 ---
 # `config`
 
-The `config` command helps manage the global configuration for the Anbox Management Service (AMS). See [AMS configuration](https://discourse.ubuntu.com/t/20872) for a list of
+The `config` command helps manage the global configuration for the Anbox Management Service (AMS). See {ref}`ref-ams-configuration` for a list of
 available configuration items.
 
     amc config <subcommand>

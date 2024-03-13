@@ -7,7 +7,8 @@ The `destroy` command deletes the deployment that the Anbox Cloud Appliance has 
 
     anbox-cloud-appliance destroy <options>
 
-[note type="caution" status="Warning"]This command resets the Anbox Cloud Appliance and destroys all data. Execution of the command cannot be stopped or reverted. Hence, before destroying a deployment, ensure to backup all necessary data.[/note]
+```{caution}This command resets the Anbox Cloud Appliance and destroys all data. Execution of the command cannot be stopped or reverted. Hence, before destroying a deployment, ensure to backup all necessary data.
+```
 
 ## Options
 

@@ -21,7 +21,7 @@ The `account` command can be used with two subcommands - `create` and `delete`:
 
 The `account create` command creates an account to access the Anbox stream gateway.
 
-This command creates an account with the given <account-name> and returns a token which you can use for accessing the Anbox Stream Gateway HTTP API directly or through the Anbox Stream SDK. See [How to access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) for more information.
+This command creates an account with the given <account-name> and returns a token which you can use for accessing the Anbox Stream Gateway HTTP API directly or through the Anbox Stream SDK. See {ref}`howto-access-stream-gateway` for more information.
 
     anbox-cloud-appliance gateway account create <account-name>
 
