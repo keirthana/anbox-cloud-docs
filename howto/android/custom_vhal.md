@@ -1,3 +1,6 @@
+(sec-replace-anbox-vhal)=
+# Replace the Anbox VHAL
+
 *since 1.22.0*
 
 [note type="information" status="Note"]

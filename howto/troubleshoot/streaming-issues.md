@@ -58,4 +58,4 @@ If streaming starts, but keeps stalling and the quality is bad, the reason is us
 
 In this case, check the WebRTC log to see if there is a high packet loss, and if so, in what situations it occurs. Most likely it is due to a bad network connection between the web dashboard (or your client application) and Anbox Cloud.
 
-See [About performance > Client devices](https://discourse.ubuntu.com/t/about-performance/29416#client-devices) for more information.
+See {ref}`sec-client-devices` for more information.

@@ -38,7 +38,7 @@ Anbox Cloud provides various metrics to help decide when to scale up or down. Ba
 
 Future versions of Anbox Cloud will provide a framework which will help to implement such a model.
 
-See {ref}`howto-scale-up-cluster` and {ref}`howto-scaling-down-cluster` for instructions on how to add or remove nodes from the cluster.
+See {ref}`howto-scale-up-cluster` and {ref}`howto-scale-down-cluster` for instructions on how to add or remove nodes from the cluster.
 
 ## Related information
 

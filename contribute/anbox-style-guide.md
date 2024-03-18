@@ -1,8 +1,10 @@
+
+(style-guide)=
 # Anbox Cloud Documentation Style Guide
 
-Anbox Cloud documentation’s navigational structure, style, and content follows the Diátaxis systematic framework for technical documentation authoring. So the information is split into tutorials, how-to guides, reference material, and explanatory text. See [Diátaxis](https://diataxis.fr/).
+Anbox Cloud documentation’s navigational structure, style, and content follows the Diátaxis systematic framework for technical documentation authoring. So the information is categorised into tutorials, how-to guides, reference material, and explanatory text. See [Diátaxis](https://diataxis.fr/).
 
-This product-specific style guide lists any extra guidelines or deviation from the Ubuntu style guide's guidelines.
+This product-specific style guide lists any extra guidelines or deviations from the [Ubuntu style guide](https://docs.ubuntu.com/styleguide/en).
 
 ## Format
 

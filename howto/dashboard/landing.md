@@ -1,6 +1,6 @@
 (howto-use-web-dashboard)=
 # How to use the web dashboard
-The Anbox Cloud Dashboard offers a web GUI that users can use to create, manage and stream applications from their web browser. If you have configured the [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application-registry/17761), you can also view applications in the registry using the **Registry** button on the main menu. You can use the pre-installed dashboard almost immediately after deploying Anbox Cloud.
+The Anbox Cloud Dashboard offers a web GUI that users can use to create, manage and stream applications from their web browser. If you have configured the Anbox Application Registry (AAR), you can also view applications in the registry using the **Registry** button on the main menu. You can use the pre-installed dashboard almost immediately after deploying Anbox Cloud.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ unit-anbox-cloud-dashboard-0:
 (sec-register-ubuntu-one-appliance)=
 ### Register an Ubuntu One account in Anbox Cloud Appliance
 
-If you followed the instructions in the [Install the Anbox Cloud Appliance on a dedicated machine](https://discourse.ubuntu.com/t/install-appliance/22681) tutorial or in [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702), you already registered your Ubuntu One account.
+If you followed the instructions in the {ref}`tut-installing-appliance` tutorial, you already registered your Ubuntu One account.
 
 To add more accounts, use the following command:
 
@@ -43,3 +43,8 @@ The generated link is valid for one hour.
 ## Using the dashboard
 
 To access the dashboard, go to `https://<your-machine-address>/`. The dashboard uses self-signed certificates. You might see a warning from your browser and have to accept the certificates manually.
+
+## Related information
+
+* {ref}`exp-web-dashboard`
+* {ref}`exp-aar`

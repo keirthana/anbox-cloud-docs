@@ -3,7 +3,7 @@
 
 Developing and testing addons using the Anbox Management Service (AMS) may be time-consuming. Instead, an instance with `--devmode` enabled can provide a safe environment to develop and test addons and their hooks without having to upload the addon to the AMS.
 
-This guide explains how to use an instance in development mode to develop and test an addon using Anbox runtime. See [development mode](https://discourse.ubuntu.com/t/17763#dev-mode) to learn more about development mode enabled instances.
+This guide explains how to use an instance in development mode to develop and test an addon using Anbox runtime. See {ref}`sec-dev-mode` to learn more about development mode enabled instances.
 
 ## Launch an instance in development mode
 
@@ -27,7 +27,7 @@ Alternatively, you can use `amc exec <instance_id> <command_options>` to directl
 
 Use the instance as a remote environment to develop your addon. To make your addon source available within the instance, either copy the addon manifest and hooks using the [`lxc file push`](https://documentation.ubuntu.com/lxd/en/latest/howto/instances_access_files/#push-files-from-the-local-machine-to-the-instance) command or clone a git repository using SSH.
 
-You can test your addon hooks by running it inside the instance shell. For example, `ADDON_DIR=$PWD ./hooks/install` can help test if the install hook of the addon works. See [environment variables](https://discourse.ubuntu.com/t/28555#environment-variables-1) for a list of available variables.
+You can test your addon hooks by running it inside the instance shell. For example, `ADDON_DIR=$PWD ./hooks/install` can help test if the install hook of the addon works. See {ref}`sec-env-variables` for a list of available variables.
 
 To troubleshoot issues within the instance, try either of the following options:
 * Run `amc logs <instance_id>` on the host to see the Anbox runtime logs.

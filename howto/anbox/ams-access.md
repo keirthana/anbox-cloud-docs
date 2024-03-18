@@ -1,7 +1,7 @@
 (howto-access-ams-remote)=
 # How to control AMS remotely
 
-By default, the Anbox Management Client (AMC) runs on the same machine as the [Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/about-ams/24321) and connects to it through a UNIX socket.
+By default, the Anbox Management Client (AMC) runs on the same machine as the Anbox Management Service (AMS) and connects to it through a UNIX socket.
 
 If you want to control AMS remotely, you can install the AMC on a separate machine and configure it to connect to AMS through a secure HTTP connection.
 
@@ -15,7 +15,7 @@ To do so, use the following command:
 
 ## Install a trusted certificate
 
-Controlling AMS remotely requires trusted security certificates. You can generate self-signed certificates or use certificates signed by a Certificate Authority. See [Security certificates for remote clients](https://discourse.ubuntu.com/t/anbox-management-service-ams/24321#security-certificates-for-remote-clients-2) for more information.
+Controlling AMS remotely requires trusted security certificates. You can generate self-signed certificates or use certificates signed by a Certificate Authority. See {ref}`sec-security-cert-remote-clients` for more information.
 
 ### Self-signed certificates
 
@@ -65,7 +65,9 @@ After setting up the security certificates, configure AMC to connect to the remo
 
     amc remote add <your remote name> https://<IP address of the AMS machine>:8444
 
-[note type="information" status="Tip"]If you haven't changed the port AMS is listening on, it's 8444 by default.[/note]
+```{tip}
+If you haven't changed the port AMS is listening on, it's 8444 by default.
+```
 
 The command connects to AMS and shows you the fingerprint of the server certificate. If it matches what you expect, acknowledge the fingerprint by typing "yes".
 
@@ -74,3 +76,6 @@ Finally, switch to the new remote by running the following command:
     amc remote set-default <your remote name>
 
 All invocations of the `amc` command will from now on use the new remote.
+
+## Related information
+* {ref}`exp-ams`

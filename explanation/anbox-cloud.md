@@ -136,6 +136,7 @@ If you are doing a full deployment, configure the storage before starting the de
 
 If you are using the Anbox Cloud Appliance, you are prompted during the initialisation process to specify the storage location, and, if you choose a loop file, its size. When choosing a size, keep in mind that the loop file cannot be larger than the root disk, and that it will cause the disk to fill up as the loop file grows to its maximum size over time. The created storage pool is used to store all Anbox Cloud content, including the instances created by Juju.
 
+(sec-juju-bundles)=
 ## Juju bundles
 
 The regular Anbox Cloud variant provides two different Juju bundles:

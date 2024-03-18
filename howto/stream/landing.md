@@ -1,16 +1,16 @@
 (howto-streaming)=
 # How to implement streaming
 
-The guides in this section describe how to use the Streaming Stack to implement specific streaming features in your application.
-
-See [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769) for an introduction to the Streaming Stack.
-
-For an introduction to the Streaming SDK, see [Anbox Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-cloud-streaming-sdk-8).
+The following guides in this section describe how to use the Streaming Stack to implement specific streaming features in your application.
 
 ```{toctree}
-:hidden:
+:titlesonly:
 
-access
-client-side-keyboard
-oob-data
+Access stream gateway <access>
+Exchange out-of-band-data <oob-data>
+Integrate client side keyboard <client-side-keyboard>
 ```
+
+See {ref}`exp-application-streaming` for an introduction to the Streaming Stack.
+
+For an introduction to the Streaming SDK, see {ref}`sec-streaming-sdk`.

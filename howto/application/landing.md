@@ -3,19 +3,18 @@
 
 The guides in this section describe how to manage your applications.
 
-See [Applications](https://discourse.ubuntu.com/t/managing-applications/17760) for an introduction to how applications are used in Anbox Cloud. To check which configuration options are available for applications, see [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197).
+See {ref}`exp-applications` for an introduction to how applications are used in Anbox Cloud. To check which configuration options are available for applications, see {ref}`ref-application-manifest`.
 
-To check which configuration options are available for applications, see [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197).
+The following how-to guides are available for operations on applications:
 
 ```{toctree}
-:hidden:
-
-create
-delete
-extend
-list
-test
-update
-userdata
-wait
+:titlesonly:
+Create an application <create>
+Delete an application <delete>
+Extend an application <extend>
+List applications <list>
+Test an application <test>
+Update an application <update>
+Pass custom data to an application <pass-custom-data>
+Wait for an application <wait>
 ```

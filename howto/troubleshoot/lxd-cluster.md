@@ -46,7 +46,9 @@ The easiest way to make the AMS unit work again is to remove the faulty LXD node
 
     juju remove-unit --force lxd/5
 
-[note type="information" status="Note"]Add `--destroy-storage` to the command if you allocated dedicated storage for LXD.[/note]
+```{note}
+Add `--destroy-storage` to the command if you allocated dedicated storage for LXD.
+```
 
 After the LXD unit is successfully removed, resolve the failed hook of the AMS unit. To do that, first disable automatic retries to prevent Juju from re-running the failed hook:
 
