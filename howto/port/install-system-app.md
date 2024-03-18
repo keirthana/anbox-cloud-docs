@@ -3,7 +3,9 @@
 
 Usually, Anbox Cloud installs APKs as user apps in the Android container. It is possible to install apps as system apps though.
 
-[note type="information" status="Note"]Installing apps as system apps is not supported on AAOS images.[/note]
+```{note}
+Installing apps as system apps is not supported on AAOS images.
+```
 
 A user app is normally signed by the developer and has restricted permissions at runtime. A system app, on the other hand, is usually [signed with the platform key](https://source.android.com/devices/tech/ota/sign_builds) when building an Android image. It is pre-installed under the system partition and runs a process with some ["signature" protection level permissions](https://developer.android.com/guide/topics/manifest/permission-element.html#plevel) in the Android container.
 
@@ -41,7 +43,7 @@ Then build and sign the application alongside with other Android applications wh
 
 To install the signed APK as a system app in the Android container, create an addon and invoke the `aam install-system-app` command in a `pre-start` hook.
 
-Follow the [tutorial](https://discourse.ubuntu.com/t/creating-an-addon/25284) to create the basic layout of an addon, with a `manifest.yaml` file and a `hooks` folder. Place the APK into the addon folder and create a `pre-start` hook with the following content (assuming that the APK file is named `app.apk`):
+Follow the {ref}`tut-create-addon` tutorial to create the basic layout of an addon, with a `manifest.yaml` file and a `hooks` folder. Place the APK into the addon folder and create a `pre-start` hook with the following content (assuming that the APK file is named `app.apk`):
 
 ```bash
 #!/bin/bash -ex

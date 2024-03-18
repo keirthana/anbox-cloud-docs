@@ -1,9 +1,9 @@
 (howto-develop-platform-plugin)=
 # How to develop a platform plugin
 
-Anbox Cloud provides a platform SDK that allows the development of custom platform plugins for the Anbox runtime, for use cases where the [default platforms](https://discourse.ubuntu.com/t/18733) don't fit. For example, a custom platform can be used to integrate a custom streaming protocol with the Anbox runtime.
+Anbox Cloud provides a platform SDK that allows the development of custom platform plugins for the Anbox runtime, for use cases where the default platforms (see {ref}`exp-platforms`) don't fit. For example, a custom platform can be used to integrate a custom streaming protocol with the Anbox runtime.
 
-This guide assumes that all steps are run on an Ubuntu 22.04 machine that hosts the [Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681).
+This guide assumes that all steps are run on an Ubuntu 22.04 machine that hosts the Anbox Cloud Appliance. See {ref}`tut-installing-appliance`.
 
 ## Preparation
 
@@ -11,11 +11,11 @@ A platform module must be built on the same version of Ubuntu as the Anbox runti
 
 However, if you're running the Anbox Cloud Appliance on a machine with a different Ubuntu version, you can build the platform on a separate system (for example, in a LXD or docker instance or on another machine).
 
-To get started, you must first install the [Anbox Platform SDK](https://github.com/canonical/anbox-platform-sdk). To do so, follow the [installation instructions](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-platform-sdk-1).
+To get started, you must first install the [Anbox Platform SDK](https://github.com/canonical/anbox-platform-sdk). See {ref}`ref-sdks` for more information.
 
 ## Build the example platform
 
-The [Anbox Platform SDK](https://github.com/canonical/anbox-platform-sdk) comes with various examples that demonstrate different features. The following steps use the `minimal` example. Alternatively, choose the `nvidia` example if you're working with NVIDIA GPUs and want to see graphical output.
+The Anbox Platform SDK comes with various examples that demonstrate different features. The following steps use the `minimal` example. Alternatively, choose the `nvidia` example if you're working with NVIDIA GPUs and want to see graphical output.
 
 To build the `minimal` platform example, run the following commands:
 
@@ -32,23 +32,27 @@ The build process creates a `platform_minimal.so` module in the `build` director
 
 ## Install the example platform
 
-[AMS](https://discourse.ubuntu.com/t/about-ams/24321) allows launching instances in a special [development mode](https://discourse.ubuntu.com/t/17763#dev-mode), which is helpful when developing, for example, addons or platforms. In development mode, the Anbox runtime does not terminate the instance when it detects failures or other problems.
+The Anbox Management Service (AMS) allows launching instances in a special development mode, which is helpful when developing addons or platforms. In development mode, the Anbox runtime does not terminate the instance when it detects failures or other problems. 
+
+We will be using this development mode to install the platform. See {ref}`sec-dev-mode` for more information.
 
 To try out the `minimal` platform, complete the following steps:
 
-1. Start a [raw instance](https://discourse.ubuntu.com/t/17763#application-vs-raw) with development mode turned on:
+1. Start a raw instance with development mode turned on:
 
-        amc launch --raw --devmode --instance-type=a4.3
+        amc launch --raw --devmode --cpus 4 --memory 3GB
 
-   If you chose the `nvidia` example, you must select an [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type-1) that supports GPUs:
+   If you chose the `nvidia` example, you must select an instance type that supports GPUs (See {ref}`sec-application-manifest-instance-type` if you need more information on the different instance types):
 
-        amc launch --raw --devmode --instance-type=g4.3
+        amc launch --raw --devmode --cpus 4 --memory 3GB --gpu-slots 1
 
-    [note type="information" status="Note"]Use the `--vm` option to launch a VM instance.[/note]
+    ```{note}
+    Use the `--vm` option to launch a VM instance.
+    ```
 
    The command prints out the ID of the instance. Note down this ID; you will need it in the next step.
 
-   The start of the raw instance takes some time, because it runs through the full [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2) before the instance is ready to be used.
+   The start of the raw instance takes some time, because it runs through the full bootstrap process before the instance is ready to be used. See {ref}`sec-application-bootstrap` for more information on the bootstrap process.
 
 1. When the instance is fully up and running, copy the `platform_minimal.so` module to it:
 
@@ -92,7 +96,7 @@ When you want to stop Anbox, you can use `CTRL`+`C` to send it the signal to ter
 
 ## Package the platform
 
-To ship the platform to actual instance via AMS, you must create an [addon](https://discourse.ubuntu.com/t/managing-addons/17759) package that installs the platform into the instance.
+To ship the platform to actual instance via AMS, you must create an addon package that installs the platform into the instance.
 
 A very simple addon to install the created `minimal` platform looks as follows:
 
@@ -120,3 +124,8 @@ When launching an instance, you must explicitly specify the platform that the An
     amc launch --raw --addon minimal --platform minimal
 
 Use the `--vm` option to launch a VM instance.
+
+## Related information
+* {ref}`exp-instances`
+* {ref}`exp-addons`
+* {ref}`howto-create-addons`

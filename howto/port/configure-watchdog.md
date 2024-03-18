@@ -1,7 +1,7 @@
 (howto-configure-watchdog)=
 # How to configure the watchdog
 
-The [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog-5) monitors the app installed by the boot package. By default, it terminates the instance if the app crashes or is moved to the background.
+The {ref}`sec-application-manifest-watchdog` monitors the app installed by the boot package. By default, it terminates the instance if the app crashes or is moved to the background.
 
 ## Disable the watchdog
 

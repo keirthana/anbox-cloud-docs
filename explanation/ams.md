@@ -11,6 +11,7 @@ Since AMS exposes an HTTP interface, any tool can use the [AMS HTTP API](https:/
 
 You can also develop your own client by using the {ref}`sec-ams-sdk`.
 
+(sec-security-cert-remote-clients)=
 ### Security certificates for remote clients
 
 If the AMC is running on the same machine as AMS, it communicates with AMS through a UNIX domain socket, not through HTTP. Therefore, you do not need to worry about security certificates for local clients. However, in case of remote clients, interacting with AMS through HTTP requires a secure and trusted setup for communications, using TLS and [certificates](https://en.wikipedia.org/wiki/X.509).

@@ -45,6 +45,7 @@ The Anbox Management Service (AMS) provides various configuration items to custo
 | `registry.url` | string | No | - | URL of the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) to use. |
 | `scheduler.strategy` | string | No | `spread` | Strategy that the internal instance scheduler in AMS uses to distribute instances across available LXD nodes: `binpack`, `spread` |
 
+(sec-node-configuration)=
 ## Node-specific configuration
 
 In a cluster setup, there are configuration items that can be customised for each node. The following table lists the available configuration items and their meaning.

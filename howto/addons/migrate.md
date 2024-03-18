@@ -19,4 +19,6 @@ fi
 # Rest of the code for your addon
 ```
 
-[note type="caution" type="Warning"]Copying your existing addons without modifications might have unintended side effects, because your hooks will run for every instance.[/note]
+```{caution}
+Copying your existing addons without modifications might have unintended side effects, because your hooks will run for every instance.
+```

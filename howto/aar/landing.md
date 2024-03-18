@@ -1,13 +1,13 @@
 (howto-aar)=
 # How to manage an AAR
 
-The guides in this section describe how to manage the Anbox Application Registry (AAR).
-See [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/anbox-application-registry-aar/17761) for an overview of AAR and how it works.
+The following guides in this section describe how to manage the Anbox Application Registry (AAR).
 
 ```{toctree}
-:hidden:
+:titlesonly:
 
-configure
-deploy
-revoke
+Configure AAR <configure>
+Deploy AAR <deploy>
+Revoke an AAR client <revoke>
 ```
+See {ref}`exp-aar` for an overview of AAR and how it works.

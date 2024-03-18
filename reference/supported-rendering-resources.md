@@ -38,6 +38,7 @@ For AMD GPUs, Anbox Cloud uses the [Mesa radv](https://docs.mesa3d.org/drivers/r
 
 See {ref}`ref-component-versions` to refer to the actual version supported for any particular Anbox Cloud release.
 
+(sec-supported-platforms)=
 ## Supported platforms
 
 Anbox Cloud can make use of different [platforms](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/) to customise its behaviour and currently supports 3 platforms.

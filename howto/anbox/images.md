@@ -3,7 +3,7 @@
 
 An image is the base for an instance running in the Anbox Cloud. It contains all necessary components, like Anbox or the Android root file system. Each release of Anbox Cloud comes with an updated image.
 
-See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for information about which images Anbox Cloud provides.
+See {ref}`ref-provided-images` for information about which images Anbox Cloud provides.
 
 ## Configure image server
 
@@ -54,7 +54,9 @@ Images that are synchronised from the image server are marked as immutable. To d
 
 If you're not using `--force`, the command will fail.
 
-[note type="information" status="Note"]Unless you have only one image left, you cannot delete an image that is marked as default. You must set a new default image first.[/note]
+```{note}
+Unless you have only one image left, you cannot delete an image that is marked as default. You must set a new default image first.
+```
 
 ### Delete an image version
 
@@ -76,6 +78,6 @@ For instance, to fetch the arm64 Android 13 image of the 1.18.0 release:
 
 You can then use the `foobar` image as you would any other image.
 
-[note type="information" status="Important"]
+```{important}
 Image updates contain important security patches and optimisations. Use older images only when strictly necessary.
-[/note]
+```

@@ -5,7 +5,9 @@ AMS allows an instance to expose a service to the outer network. For that, it pr
 
     amc launch -s tcp:22 bdp7kmahmss3p9i8huu0
 
-[note type="information" status="Note"]The specified port is exposed only on the IP address assigned to the instance. As the instance is normally not accessible from outside, the LXD node it is running on AMS sets up port forwarding rules on the node and maps the specified port to one in a higher port range (`10000 - 110000`).[/note]
+```{note}
+The specified port is exposed only on the IP address assigned to the instance. As the instance is normally not accessible from outside, the LXD node it is running on AMS sets up port forwarding rules on the node and maps the specified port to one in a higher port range (`10000 - 110000`).
+```
 
 The list of instances (`amc ls`) will now show the instance and the exposed port `22`:
 

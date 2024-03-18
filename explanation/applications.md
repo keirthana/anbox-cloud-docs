@@ -104,7 +104,7 @@ When the application bootstrap succeeds, the base instance is automatically remo
 * {ref}`howto-create-application`
 * {ref}`howto-delete-application`
 * {ref}`howto-list-applications`
-* {ref}`howto-scaling-down-cluster`
+* {ref}`howto-scale-down-cluster`
 * {ref}`howto-test-application`
 * {ref}`howto-update-application`
 * {ref}`howto-wait-for-application`

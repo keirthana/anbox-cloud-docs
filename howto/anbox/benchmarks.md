@@ -3,9 +3,11 @@
 
 Anbox Cloud provides tools for benchmarking different aspects of your deployment. These tools enable you to put Anbox Cloud under load and use the results to evaluate the performance for a well-defined workload.
 
-See [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709) for an overview of results that you can expect for selected hardware configurations.
+See {ref}`ref-performance-benchmarks` for an overview of results that you can expect for selected hardware configurations.
 
-[note type="information" status="Important"]Benchmarks provide useful information only if you run them with an application and workload that reflects your real-life scenario. For example, if you run the benchmark with an Android app that just sits idle and does not constantly refresh the screen by itself, you will get a low FPS number. This number does not reflect the real scenario though, because in reality, your users actually use the app and thus cause a higher workload.[/note]
+```{important}
+Benchmarks provide useful information only if you run them with an application and workload that reflects your real-life scenario. For example, if you run the benchmark with an Android app that just sits idle and does not constantly refresh the screen by itself, you will get a low FPS number. This number does not reflect the real scenario though, because in reality, your users actually use the app and thus cause a higher workload.
+```
 
 ## Run instance benchmarks
 
@@ -17,7 +19,7 @@ Check the help output to see all available arguments and their purpose:
 
     amc benchmark -h
 
-The benchmark command launches the specified number of instances on the Anbox [`null` platform](https://discourse.ubuntu.com/t/anbox-platforms/18733) with the following default display specification:
+The benchmark command launches the specified number of instances on the Anbox `null` platform (see {ref}`exp-platforms`) with the following default display specification:
 
  | Display spec            | Value |
  | ----------------------- | ----- |
@@ -34,7 +36,9 @@ You can configure a different display specification through the `--userdata` par
 | `swrast`              | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
 | `webrtc`              | JSON-based                            | {<br>"display_width": <display_width>,<br>"display_height": <display_height>,<br>"display_density": <display_density>,<br>"fps": <display_fps>,<br>"render_only": true<br> } |
 
-[note type="information" status="Note"]If you're running a benchmark against the `webrtc` platform, make sure to specify `"render_only": true` to launch the instances in render-only mode. Otherwise, the instance creation will fail, because the `amc benchmark` command doesn't interact with the stream gateway for the benchmark execution.[/note]
+```{note}
+If you're running a benchmark against the `webrtc` platform, make sure to specify `"render_only": true` to launch the instances in render-only mode. Otherwise, the instance creation will fail, because the `amc benchmark` command doesn't interact with the stream gateway for the benchmark execution.
+```
 
 ### Example
 
@@ -131,7 +135,7 @@ Check the help output to see all available arguments and their purpose:
 
     anbox-cloud-tests.benchmark -h
 
-To run the benchmark, you must provide an authentication token for the Anbox Stream Gateway. Check [How to access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) if you haven't already created an authentication token.
+To run the benchmark, you must provide an authentication token for the Anbox Stream Gateway. See {ref}`howto-access-stream-gateway` if you haven't already created an authentication token.
 
 If your Anbox Stream Gateway is behind a self-signed TLS certificate, you must specify the `--insecure-tls` option.
 
