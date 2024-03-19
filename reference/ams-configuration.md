@@ -3,61 +3,61 @@
 
 AMS provides various configuration items to customise its behaviour. The following table lists the available configuration items and their meaning.
 
-| Name | Type | Default |  Description            |
-|------|------|---------|-------------------------|
-| `application.addons` | string | - | Comma-separated list of addons that every application managed by AMS will use. See [How to enable an addon globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285). |
-| `application.auto_publish` | bool | true | If set to `true`, AMS automatically published new application versions when the bootstrap process is finished. `false` disables this. See [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions-1). |
-| `application.auto_update` | bool | true | If set to `true`, AMS automatically updates applications whenever any dependencies (parent image, addons, global configuration) change. `false` disables this. See [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-application-updates-3). |
-| `application.default_abi` | string | - | Default Android ABI that applications should use. See [Android ABIs](https://developer.android.com/ndk/guides/abis) for a list of available ABIs. |
-| `application.max_published_versions` | integer | 3 | Maximum number of published versions per application. If the number of versions of an application exceeds this configuration, AMS will automatically clean up older versions. |
-| `container.apt_mirror` | string | - | APT mirror to use within the containers. By default, `http://archive.ubuntu.com` (amd64) or `http://ports.ubuntu.com` (arm64) is used. This configuration item is deprecated since 1.20, use `instance.apt_mirror` instead. |
-| `container.default_platform` | string | - | The name of the platform that Anbox Cloud uses by default to launch containers. This configuration item is deprecated since 1.20, use `instance.default_platform` instead. |
-| `container.features` | string | - | Comma-separated list of features to enable (see list below). This configuration item is deprecated since 1.20, use `instance.features` instead. |
-| `container.network_proxy` | string | - | Network proxy to use inside the containers. This configuration item is deprecated since 1.20, use `instance.network_proxy` instead. |
-| `container.security_updates` | bool | true | If set to `true`, automatic Ubuntu security updates are applied during the application bootstrap process. `false` disables this. |
-| `core.proxy_http` | string | - | HTTP proxy to use for HTTP requests that AMS performs. |
-| `core.proxy_https` | string | - | HTTPS proxy to use for HTTPS requests that AMS performs. |
-| `core.proxy_ignore_hosts` | string | - | Comma-separated list that defines the hosts for which a configured proxy is not used. |
-| `core.trust_password` | string | - | The AMS trust password. |
-| `cpu.limit_mode` | string | scheduler | The mode AMS uses to limit CPU access for an instance. See [About performance](https://discourse.ubuntu.com/t/about-performance/29416) for details. Possible values are: `scheduler`, `pinning` |
-| `gpu.allocation_mode` | string | `all` | Method of allocating GPUs: `all` tells AMS to allocate all available GPUs on a system to an instance. `single` allocates only a single GPU. |
-| `gpu.type` | string | `none` | Type of GPU: `none`, `intel`, `nvidia`, `amd` |
-| `images.allow_insecure` | bool | false | If set to `true`, AMS allows accepting untrusted certificates provided by the configured image server. |
-| `images.auth` | string | - | Authentication details for AMS to access the image server. When reading this configuration, a Boolean value that indicates whether the item is set is returned, to avoid exposing credentials. |
-| `images.update_interval` | string | `5m` | Frequency of image updates (for example: 1h, 30m). |
-| `images.url` | string | `https://images.anbox-cloud.io/stable/` | URL of the image server to use. |
-| `images.version_lockstep` | bool | true | Whether to put the version of the latest pulled image and the AMS version in a lockstep. This ensures that a deployment is not automatically updated to newer image versions if AMS is still at an older version. This only applies for new major and minor but not patch version updates. |
-| `instance.apt_mirror` | string | - | APT mirror to use within the instances. By default, `http://archive.ubuntu.com` (amd64) or `http://ports.ubuntu.com` (arm64) is used. |
-| `instance.default_platform` | string | - | The name of the platform that Anbox Cloud uses by default to launch instances. |
-| `instance.features` | string | - | Comma-separated list of features to enable (see list below). |
-| `instance.network_proxy` | string | - | Network proxy to use inside the instances. |
-| `instance.security_updates` | bool | true | If set to `true`, automatic Ubuntu security updates are applied during the application bootstrap process. `false` disables this. This configuration item is deprecated since 1.20, use `instance.security_updates` instead. |
-| `load_balancer.url` | string | - | URL of the load balancer behind which AMS sits. The URL is handed to instances started by AMS to allow them to contact AMS through the load balancer and not via the address of an individual AMS instance. |
-| `node.queue_size` | integer | 100 | Maximum size of the queue containing requests to start and stop instances per LXD node. Changing the value requires a restart of AMS. |
-| `node.workers_per_queue` | integer | 4 | Number of workers processing instance start and stop requests. Changing the value requires a restart of AMS. |
-| `registry.filter` | string | - | Comma-separated list of tags to filter for when applications are fetched from the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761). If empty, no filter is applied. |
-| `registry.fingerprint` | string | - | Fingerprint of the certificate that the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) uses to TLS-secure its HTTPS endpoint. This is used by AMS for mutual TLS authentication with the registry. |
-| `registry.mode` | string | `pull` | Mode in which the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) client in AMS operates: `manual`, `pull`, `push` |
-| `registry.update_interval` | string | `1h` | Frequency of [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) updates (for example: 1h, 30m). |
-| `registry.url` | string | - | URL of the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) to use. |
-| `scheduler.strategy` | string | `spread` | Strategy that the internal instance scheduler in AMS uses to distribute instances across available LXD nodes: `binpack`, `spread` |
+| Name | Type | Deprecated |    Default    | Description           |
+|-----|------|------------|---------------|-----------------------|
+| `application.addons` | string | No | - | Comma-separated list of addons that every application managed by AMS will use. See [How to enable an addon globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285). |
+| `application.auto_publish` | bool | No | true | If set to `true`, AMS automatically published new application versions when the bootstrap process is finished. `false` disables this. See [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions-1). |
+| `application.auto_update` | bool | No | true | If set to `true`, AMS automatically updates applications whenever any dependencies (parent image, addons, global configuration) change. `false` disables this. See [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-application-updates-3). |
+| `application.default_abi` | string | No | - | Default Android ABI that applications should use. See [Android ABIs](https://developer.android.com/ndk/guides/abis) for a list of available ABIs. |
+| `application.max_published_versions` | integer | No | 3 | Maximum number of published versions per application. If the number of versions of an application exceeds this configuration, AMS will automatically clean up older versions. |
+| `container.apt_mirror` | string | Yes | - | APT mirror to use within the containers. By default, `http://archive.ubuntu.com` (amd64) or `http://ports.ubuntu.com` (arm64) is used. This configuration item is deprecated since 1.20, use `instance.apt_mirror` instead. |
+| `container.default_platform` | string | Yes | - | The name of the platform that Anbox Cloud uses by default to launch containers. This configuration item is deprecated since 1.20, use `instance.default_platform` instead. |
+| `container.features` | string | Yes | - | Comma-separated list of features to enable (see list below). This configuration item is deprecated since 1.20, use `instance.features` instead. |
+| `container.network_proxy` | string | Yes | - | Network proxy to use inside the containers. This configuration item is deprecated since 1.20, use `instance.network_proxy` instead. |
+| `container.security_updates` | bool | Yes | true | If set to `true`, automatic Ubuntu security updates are applied during the application bootstrap process. `false` disables this. |
+| `core.proxy_http` | string | No | - | HTTP proxy to use for HTTP requests that AMS performs. |
+| `core.proxy_https` | string | No | - | HTTPS proxy to use for HTTPS requests that AMS performs. |
+| `core.proxy_ignore_hosts` | string | No | - | Comma-separated list that defines the hosts for which a configured proxy is not used. |
+| `core.trust_password` | string | No | - | The AMS trust password. |
+| `cpu.limit_mode` | string | No | scheduler | The mode AMS uses to limit CPU access for an instance. See [About performance](https://discourse.ubuntu.com/t/about-performance/29416) for details. Possible values are: `scheduler`, `pinning` |
+| `gpu.allocation_mode` | string | No | `all` | Method of allocating GPUs: `all` tells AMS to allocate all available GPUs on a system to an instance. `single` allocates only a single GPU. |
+| `gpu.type` | string | No | `none` | Type of GPU: `none`, `intel`, `nvidia`, `amd` |
+| `images.allow_insecure` | bool | No | false | If set to `true`, AMS allows accepting untrusted certificates provided by the configured image server. |
+| `images.auth` | string | No | - | Authentication details for AMS to access the image server. When reading this configuration, a Boolean value that indicates whether the item is set is returned, to avoid exposing credentials. |
+| `images.update_interval` | string | No | `5m` | Frequency of image updates (for example: 1h, 30m). |
+| `images.url` | string | No | `https://images.anbox-cloud.io/stable/` | URL of the image server to use. |
+| `images.version_lockstep` | bool | No | true | Whether to put the version of the latest pulled image and the AMS version in a lockstep. This ensures that a deployment is not automatically updated to newer image versions if AMS is still at an older version. This only applies for new major and minor but not patch version updates. |
+| `instance.apt_mirror` | string | No | - | APT mirror to use within the instances. By default, `http://archive.ubuntu.com` (amd64) or `http://ports.ubuntu.com` (arm64) is used. |
+| `instance.default_platform` | string | No | - | The name of the platform that Anbox Cloud uses by default to launch instances. |
+| `instance.features` | string | No | - | Comma-separated list of features to enable (see list below). |
+| `instance.network_proxy` | string | No | - | Network proxy to use inside the instances. |
+| `instance.security_updates` | bool | No | true | If set to `true`, automatic Ubuntu security updates are applied during the application bootstrap process. `false` disables this. This configuration item is deprecated since 1.20, use `instance.security_updates` instead. |
+| `load_balancer.url` | string | No | - | URL of the load balancer behind which AMS sits. The URL is handed to instances started by AMS to allow them to contact AMS through the load balancer and not via the address of an individual AMS instance. |
+| `node.queue_size` | integer | No | 100 | Maximum size of the queue containing requests to start and stop instances per LXD node. Changing the value requires a restart of AMS. |
+| `node.workers_per_queue` | integer | No | 4 | Number of workers processing instance start and stop requests. Changing the value requires a restart of AMS. |
+| `registry.filter` | string | No | - | Comma-separated list of tags to filter for when applications are fetched from the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761). If empty, no filter is applied. |
+| `registry.fingerprint` | string | No | - | Fingerprint of the certificate that the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) uses to TLS-secure its HTTPS endpoint. This is used by AMS for mutual TLS authentication with the registry. |
+| `registry.mode` | string | No | `pull` | Mode in which the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) client in AMS operates: `manual`, `pull`, `push` |
+| `registry.update_interval` | string | No | `1h` | Frequency of [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) updates (for example: 1h, 30m). |
+| `registry.url` | string | No | - | URL of the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) to use. |
+| `scheduler.strategy` | string | No | `spread` | Strategy that the internal instance scheduler in AMS uses to distribute instances across available LXD nodes: `binpack`, `spread` |
 
 ## Node-specific configuration
 
 In a cluster setup, there are configuration items that can be customised for each node. The following table lists the available configuration items and their meaning.
 
-| Name | Type | Default |  Description            |
-|------|------|---------|-------------------------|
-| `cpu-allocation-rate` | integer | 4 | CPU allocation rate used for [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#over-committing-resources-3). |
-| `cpus` | integer | all available | Number of CPUs dedicated to instances. |
-| `gpu-encoder-slots` | integer | 0 (for nodes without GPU or with AMD GPU)<br/>32 (for nodes with NVIDIA GPU)<br/>10 (for nodes with Intel GPU) | Number of GPU encoder slots available on the node. |
-| `gpu-slots` | integer | 0 (for nodes without GPU)<br/>32 (for nodes with NVIDIA GPU)<br/>10 (for nodes with AMD or Intel GPU) | Number of [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots-2) available on the node. |
-| `memory` | integer | all available | Memory dedicated to instances. |
-| `memory-allocation-rate` | integer | 2 | Memory allocation rate used for [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#over-committing-resources-3). |
-| `public-address` | string | - | The public, reachable address of the node. |
-| `subnet` | string | - | The network subnet of the machine where the node runs. |
-| `tags` | string | - | Tags to identify the node. |
-| `unschedulable` | bool | false | If set to `true`, the node cannot be scheduled, which prevents new instances from being launched on it. |
+| Name | Type | Deprecated |    Default    | Description           |
+|-----|------|------------|---------------|-----------------------|
+| `cpu-allocation-rate` | integer | No | 4 | CPU allocation rate used for [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#over-committing-resources-3). |
+| `cpus` | integer | No | all available | Number of CPUs dedicated to instances. |
+| `gpu-encoder-slots` | integer | No | 0 (for nodes without GPU or with AMD GPU)<br/>32 (for nodes with NVIDIA GPU)<br/>10 (for nodes with Intel GPU) | Number of GPU encoder slots available on the node. |
+| `gpu-slots` | integer | No | 0 (for nodes without GPU)<br/>32 (for nodes with NVIDIA GPU)<br/>10 (for nodes with AMD or Intel GPU) | Number of [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots-2) available on the node. |
+| `memory` | integer | No | all available | Memory dedicated to instances. |
+| `memory-allocation-rate` | integer | No | 2 | Memory allocation rate used for [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#over-committing-resources-3). |
+| `public-address` | string | No | - | The public, reachable address of the node. |
+| `subnet` | string | No | - | The network subnet of the machine where the node runs. |
+| `tags` | string | No | - | Tags to identify the node. |
+| `unschedulable` | bool | No | false | If set to `true`, the node cannot be scheduled, which prevents new instances from being launched on it. |
 
 See [Configure cluster nodes](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716) for instructions on how to set these configuration items.
 
