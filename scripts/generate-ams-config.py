@@ -11,12 +11,13 @@ with open("reference/ams-configuration.yaml", 'r') as f:
     # Loop through the different sections/tables in the YAML file
     # and generate a table for each
     for which, options in config.items():
-        table = "| Name | Type | Default |  Description            |\n"
-        table += "|------|------|---------|-------------------------|\n"
+        table = "| Name | Type | Deprecated |    Default    | Description           |\n"
+        table += "|-----|------|------------|---------------|-----------------------|\n"
 
         for option, info in sorted(options.items()):
             table += "| `" + str(option) + "` "
             table += "| " + str(info['type']) + " "
+            table += "| " + str(info['deprecated']) + " "
             table += "| " + str(info['default']) + " "
             table += "| " + str(info['description']) + " |\n"
 
