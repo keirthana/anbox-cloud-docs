@@ -12,7 +12,7 @@ VirGL support in Anbox Cloud requires the NVIDIA driver series 545 or newer. Wit
 The 545 series is a [feature branch](https://docs.nvidia.com/datacenter/tesla/drivers/index.html#comparison) and only supported for a short period of time by NVIDIA. Only the 550 series is going to be supported for a longer time period and should be used as soon as available as a stable release. Please note that not all driver releases are qualified for all GPU models.
 [/note]
 
-By default, Anbox Cloud installs the current long term release series of the NVIDIA driver, which is 535 (as of Anbox Cloud 1.21). To install 545 or newer, we need to upgrade an existing Anbox Cloud installation which is currently only supported for the Anbox Cloud Appliance. Support for upgrading an existing deployment of regular Anbox Cloud is planned for the [1.21.1 release](https://discourse.ubuntu.com/t/19359).
+By default, Anbox Cloud installs the current long term release series of the NVIDIA driver, which is 535 (as of Anbox Cloud 1.21). To install 545 or newer, we need to upgrade an existing Anbox Cloud installation which is currently only supported for the Anbox Cloud Appliance.
 
 Before performing the driver upgrade, you have to stop all active instances on your installation. You do not have to delete them but need to stop them, for example by running:
 
