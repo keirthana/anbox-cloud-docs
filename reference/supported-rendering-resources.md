@@ -72,7 +72,7 @@ The following OpenGL ES extensions are known to be unsupported by all used GPU d
 * [`GL_EXT_shader_framebuffer_fetch`](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt)
 * [`GL_EXT_shader_framebuffer_fetch_non_coherent`](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt)
 
-## Related information
+## Related topics
 
 * {ref}`exp-rendering-architecture`
 * {ref}`exp-platforms`

@@ -131,7 +131,7 @@ Finally, reboot the AAR:
 
     snap restart aar
 
-## Related information
+## Related topics
 * {ref}`exp-aar`
 * {ref}`howto-revoke-aar`
 * [Juju relations](https://jaas.ai/docs/relations)

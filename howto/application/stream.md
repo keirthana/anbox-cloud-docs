@@ -55,7 +55,7 @@ The downloaded `.csv` file has the following statistics:
 
 Use the **Sharing** button on the session page to share a streaming session with users without an account. The button generates a link using which users without an account can join your session.
 
-## Related information
+## Related topics
 
 * {ref}`tut-set-up-stream-client`
 * {ref}`howto-access-stream-gateway`

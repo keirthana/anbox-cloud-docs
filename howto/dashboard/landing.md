@@ -44,7 +44,7 @@ The generated link is valid for one hour.
 
 To access the dashboard, go to `https://<your-machine-address>/`. The dashboard uses self-signed certificates. You might see a warning from your browser and have to accept the certificates manually.
 
-## Related information
+## Related topics
 
 * {ref}`exp-web-dashboard`
 * {ref}`exp-aar`

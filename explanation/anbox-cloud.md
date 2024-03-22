@@ -157,6 +157,6 @@ You can download the bundle with `juju download <charm_name>`, thus `juju downlo
 
 If you don't need to stream the visual output of the Android containers, you can use the `anbox-cloud-core` bundle. Otherwise, you should use the `anbox-cloud` bundle. However, even without the streaming stack, there are still ways to get visual access for inspection purposes. See {ref}`howto-access-instance` for more information.
 
-## Related information
+## Related topics
 
 * {ref}`exp-instances`

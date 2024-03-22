@@ -52,7 +52,7 @@ You can access AMS either by IP or through a UNIX socket. The IP depends on your
 If your client requires the AMS certificate, you can find it in `/var/snap/ams/common/server/ams.crt`.
 ```
 
-## Related information
+## Related topics
 
 * {ref}`howto-access-ams-remote`
 * {ref}`ref-ams-configuration`

@@ -21,7 +21,7 @@ AMS can act in two different roles, `publisher` or `client` when working with an
 
     The `client` role allows only read access to the AAR. AMS instances registered as clients consume the applications pushed by the publishers.
 
-## Related information
+## Related topics
 
 * {ref}`howto-deploy-aar`
 * {ref}`howto-configure-aar`

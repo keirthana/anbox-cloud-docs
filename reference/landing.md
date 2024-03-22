@@ -58,7 +58,7 @@ Learn about the available metrics and benchmarks for measuring performance.
 | {ref}`ref-prometheus-metrics`| Performance metrics that Anbox Cloud provides |
 | {ref}`ref-performance-benchmarks`| Benchmarks for the performance that you can achieve with different versions and configurations of Anbox Cloud |
 
-## Other related information
+## Other
 
 | Guides | Description |
 |--|--|

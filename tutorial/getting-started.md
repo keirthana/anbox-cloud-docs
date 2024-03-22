@@ -14,7 +14,7 @@ If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must 
 * {ref}`howto-install-appliance`
 * {ref}`howto-install-anbox-cloud`
 
-## 1. Run AMC
+## Run AMC
 
 The Anbox Management Client `amc` communicates with the AMS. You will use `amc` to manage all aspects of Anbox Cloud that are related to AMS.
 
@@ -38,9 +38,13 @@ To check if `amc` is set up to access the correct AMS, run the following command
 
     amc remote list
 
-## 2. Ensure images are available
+## Ensure images are available
 
-Next, check whether AMS has synchronised all images from the Canonical hosted image server. You can list all synchronised images with the `amc image ls` command:
+The next step is to check whether AMS has synchronised all images from the Canonical hosted image server. To list all the synchronised images, run:
+
+        amc image ls
+
+The output should look similar to:
 
 ```bash
 +----------------------+------------------------+--------+----------+--------------+---------+
@@ -50,15 +54,11 @@ Next, check whether AMS has synchronised all images from the Canonical hosted im
 +----------------------+------------------------+--------+----------+--------------+---------+
 | cgrqjnmk9eqlsruefco0 | jammy:android12:arm64  | active | 1        | aarch64      | false   |
 +----------------------+------------------------+--------+----------+--------------+---------+
-| cgrqk2uk9eqlsruefcog | jammy:android11:arm64  | active | 1        | aarch64      | false   |
-+----------------------+------------------------+--------+----------+--------------+---------+
 ```
-
-See {ref}`ref-provided-images` for more information.
 
 If the images are not yet available, wait a few minutes, then try again.
 
-## 3. Create a virtual device
+## Create a virtual device
 
 Let's start exploring what Anbox Cloud can do by launching a virtual device that runs a specific Android version.
 
@@ -96,7 +96,7 @@ Complete the following steps to create a virtual device:
    +----------------------+--------------------+---------------+--------+------+-----------+--------+---------------------+
    ```
 
-## 4. Log on to the virtual device
+## Log on to the virtual device
 
 When the application for the virtual device is ready, you can launch it and log on to it:
 
@@ -134,7 +134,7 @@ When the application for the virtual device is ready, you can launch it and log 
 5. Enter some commands. For example, enter `ls` to display the files inside the Android container, or `logcat` to display the logs.
 6. Enter `exit` or press `Ctrl`+`D` once to exit the Android shell, and then again to exit the Linux container.
 
-## 5. Test the virtual device
+## Test the virtual device
 
 You can test the virtual device by connecting to it from your local machine and mirroring its screen. To do so, use the `scrcpy` tool. See {ref}`sec-access-instance-scrcpy` for more detailed instructions.
 
@@ -177,7 +177,7 @@ To connect to your virtual device with `scrcpy`, complete the following steps:
 
         scrcpy
 
-## 6. Create an application from an APK
+## Create an application from an APK
 
 Creating an application for a specific Android app is very similar to creating a virtual device, except that you provide an APK of the Android app when creating the Anbox Cloud application.
 
@@ -218,7 +218,7 @@ If no specific resources are mentioned, the {ref}`default resource preset <exp-r
 
 When the application is ready, you can launch it and then test it in the same way as the virtual device by either [logging on to it](#log-on-to-the-virtual-device) or [connecting to it with `scrcpy`](#test-the-virtual-device).
 
-## 7. Update an application
+## Update an application
 
 You can have several versions of an application. See {ref}`howto-update-application` for detailed information.
 
@@ -251,7 +251,7 @@ Complete the following steps to add a new version to your application:
 
 When you launch an application without explicitly specifying a version, AMS uses the latest published version of the application. Therefore, when you now launch the application again, the new version of your application is selected and the ADB service is exposed automatically.
 
-## 8. List and delete applications and containers
+## List and delete applications and containers
 
 While following this tutorial, you created several applications and containers. Let's check them out and delete the ones that aren't needed anymore:
 
@@ -312,8 +312,9 @@ This tutorial used a container to illustrate how to create and work with applica
 
 If you are interested in a more easy-to-use interface, check out the {ref}`tut-getting-started-dashboard` tutorial to learn how to manage Anbox Cloud using the web dashboard.
 
-## Related information
+## Related topics
 
 * {ref}`howto-use-web-dashboard`
 * {ref}`howto-manage-applications`
 * {ref}`howto-instance`
+* {ref}`ref-provided-images`

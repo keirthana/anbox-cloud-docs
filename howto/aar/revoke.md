@@ -14,7 +14,7 @@ Use the following command to revoke a certificate:
 This operation is irreversible. You cannot reverse a revocation or add the certificate again.
 ```
 
-## Related information
+## Related topics
 * {ref}`exp-aar`
 * {ref}`howto-configure-aar`
 * {ref}`howto-deploy-aar`

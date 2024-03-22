@@ -180,6 +180,6 @@ addons: [my-addon]
 
 The application will now execute the hook and you should see that, for example, the system locale is changed or the standard Android launcher is replaced.
 
-## Related information
+## Related topics
 * {ref}`exp-addons`
 * {ref}`howto-create-addons`.

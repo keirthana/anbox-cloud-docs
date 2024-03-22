@@ -187,7 +187,7 @@ With HTTP basic authentication configured, users will be asked to enter the cred
 
 Now you can go to `https://<ip>/demo/`, enter the HTTP basic authentication credentials and view the web-based streaming client.
 
-## Related information
+## Related topics
 
 * [WebRTC](https://webrtc.org/)
 * [Traefik](https://traefik.io/)
