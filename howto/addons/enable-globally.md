@@ -17,5 +17,5 @@ If you define both global addons and application-specific addons, applications w
 Addons can delay the start of your applications. Therefore, keep them light.
 ```
 
-## Related information
+## Related topics
 * {ref}`ref-application-manifest`

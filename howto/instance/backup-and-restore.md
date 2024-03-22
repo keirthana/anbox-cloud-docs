@@ -70,6 +70,6 @@ And exclude the following files:
 * Files with `jpeg` suffix below the folder `/sdcard/Android/data/com.canonical.candy/user_data`
 * Files with `cfg` suffix below the folder `/data/data/com.canonical.candy/new_level`
 
-## Related information
+## Related topics
 
 * {ref}`howto-backup-restore-example`

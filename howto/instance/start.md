@@ -23,6 +23,6 @@ When the `--no-wait` option is specified, the `amc start` command exits immediat
 Starting an instance that has stopped with an error status is is not allowed. Doing so would cause the `amc start` command to fail.
 ```
 
-## Related information
+## Related topics
 * {ref}`howto-create-instance`
 * {ref}`howto-stop-instance`

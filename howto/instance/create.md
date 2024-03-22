@@ -140,7 +140,7 @@ To launch an instance with development mode enabled, add the `--devmode` flag to
 
     amc launch --devmode <application_id>
 
-## Related information
+## Related topics
 
 * {ref}`exp-instances`
 * {ref}`howto-access-instance`

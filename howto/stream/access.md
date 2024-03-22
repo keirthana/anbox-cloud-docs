@@ -58,7 +58,7 @@ If you are running the Anbox Cloud Appliance, use the following command:
 
 Type `anbox-stream-gateway --help` to list all commands.
 
-## Related information
+## Related topics
 
 * {ref}`exp-application-streaming`
 * {ref}`exp-ams`

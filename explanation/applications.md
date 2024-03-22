@@ -95,7 +95,7 @@ Alternatively, {ref}`check the instance logs <howto-view-instance-logs>` to trou
 
 When the application bootstrap succeeds, the base instance is automatically removed and the status of the application changes to `ready` indicating that the application is ready to use.
 
-## Related information
+## Related topics
 
 * {ref}`exp-addons`
 * {ref}`ref-application-manifest`

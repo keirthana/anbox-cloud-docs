@@ -85,7 +85,7 @@ When development mode is enabled, the instance sends status updates to AMS when 
 
 To check whether development mode is enabled, run `amc show <instance_ID>` or look at the `/var/lib/anbox/session.yaml` file in the instance. If the `devmode` field in the configuration file is set to `true`, development mode is active.
 
-## Related information
+## Related topics
 
 * {ref}`exp-addons`
 * [Platform plugin](https://anbox-cloud.github.io/latest/anbox-platform-sdk/)

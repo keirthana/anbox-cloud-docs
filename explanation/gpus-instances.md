@@ -34,7 +34,7 @@ It is possible to instruct an instance to run with software rendering. To do so,
 
 Since software rendering and video encoding will utilise the CPU, you won't be able to run as many instances on a system when compared to running instances with a GPU.
 
-## Related information
+## Related topics
 * {ref}`exp-addons`
 * {ref}`ref-application-manifest`
 * {ref}`ref-rendering-resources`

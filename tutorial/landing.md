@@ -18,9 +18,9 @@ Also check out the {ref}`how-to-guides` for instructions on how to achieve speci
 ```{toctree}
 :hidden:
 
-installing-appliance
-getting-started-dashboard
-getting-started
+Install Anbox Cloud Appliance <installing-appliance>
+Getting started (dashboard) <getting-started-dashboard>
+Getting started (CLI) <getting-started>
 stream-client
 creating-addon
 ```

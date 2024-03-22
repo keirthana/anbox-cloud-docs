@@ -40,6 +40,6 @@ Future versions of Anbox Cloud will provide a framework which will help to imple
 
 See {ref}`howto-scale-up-cluster` and {ref}`howto-scale-down-cluster` for instructions on how to add or remove nodes from the cluster.
 
-## Related information
+## Related topics
 
 * {ref}`howto-manage-cluster`

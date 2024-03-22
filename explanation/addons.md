@@ -28,7 +28,7 @@ Try to attach addons to individual applications unless you need a global addon. 
 For base instances, if your addon needs additional tools and dependencies during its installation, make sure you remove them afterwards (as part of the `post-stop` hook). This will make your application image lighter and all instances launched from it will start faster.
 
 
-## Related information
+## Related topics
 
 * {ref}`tut-create-addon`
 * {ref}`ref-hooks`

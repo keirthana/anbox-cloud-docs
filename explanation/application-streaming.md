@@ -70,9 +70,9 @@ Starting from 1.22.0, Anbox Cloud offers a much simpler way to create instances 
 
 You can request AMS to create an instance and AMS will be able to dynamically create a session for the newly launched instance by contacting the stream agent. The agent mediates communication between stream gateway and AMS and provides the necessary session information to the AMS. The AMS proceeds with successfully creating an instance that can be streamed.
 
-[note type="information" status="Note"]
+```{note}
 If you do not enable streaming when launching the instance, you cannot enable it on that instance later. You will have to launch a new instance with streaming enabled.
-[/note]
+```
 
 ## Related information
 

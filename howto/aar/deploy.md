@@ -119,7 +119,7 @@ Then update the AAR configuration via the charm configuration:
 
     juju config aar -f config.yaml
 
-## Related information
+## Related topics
 * {ref}`exp-aar`
 * {ref}`howto-configure-aar`
 * {ref}`howto-revoke-aar`

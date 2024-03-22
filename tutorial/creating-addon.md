@@ -3,7 +3,7 @@
 
 This tutorial guides you through the creation of a simple addon. The addon that we create in this tutorial is an example for enabling SSH access on a container.
 
-## 1. Write the addon metadata
+## Write the addon metadata
 
 In a new `ssh-addon` directory, create a `manifest.yaml` file with the following content:
 ```yaml
@@ -12,7 +12,7 @@ description: |
   Enable SSH access when starting a container
 ```
 
-## 2. Add a hook
+## Add a hook
 
 Next to your `manifest.yaml` file in the `ssh-addon` directory, create a `hooks` directory. This is where we'll put the hooks we want to implement.
 
@@ -49,7 +49,7 @@ mv ssh-addon-key ~/
 ```
 Alternatively, you can use an existing key and move the public key into the addon directory.
 
-## 3. Create the addon
+## Create the addon
 
 Your addon structure currently looks like this:
 ```bash
@@ -70,7 +70,7 @@ When your addon is created, you can view it with:
 amc addon list
 ```
 
-## 4. Use the addon in an application
+## Use the addon in an application
 
 Create an application manifest file (`my-application/manifest.yaml`) and include the addon name under `addons`:
 
@@ -108,7 +108,7 @@ ssh -i ~/ssh-addon-key root@<container_ip> -p <exposed port>
 The exposed port can be found be running `amc ls`, under the `ENDPOINTS` column. Exposed ports usually start around port 10000.
 ```
 
-## Related information
+## Related topics
 
 * {ref}`exp-addons`
 * {ref}`ref-addon-manifest`

@@ -19,7 +19,7 @@ Apart from these views, the dashboard also allows you to work with the {ref}`exp
 * Registry view - Allows a list view of applications uploaded to the registry.
 * Configuration view - Allows you to edit the {ref}`ref-ams-configuration` attributes from the dashboard.
 
-## Related information
+## Related topics
 
 * {ref}`howto-use-web-dashboard`
 * {ref}`howto-deploy-anbox-juju`
