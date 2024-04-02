@@ -77,11 +77,11 @@ See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for 
 
 To allow identifying and referencing instances easier you can give them a name at creation time. Names must be unique and can be used with all CLI commands.
 
-To create an instance with a name run
+To create an instance with a name, run:
 
     amc launch --name=foo ...
 
-This will create an instance with the name "foo" which can then be used in other CLI commands, for example when opening a shell for interacting with the instance
+This will create an instance with the name "foo" which can then be used in other CLI commands. For example, when opening a shell for interacting with the instance, the following command can be used:
 
     amc shell foo
 
