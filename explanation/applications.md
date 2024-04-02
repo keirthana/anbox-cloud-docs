@@ -9,19 +9,19 @@ To run on the Anbox Cloud platform, applications must fulfil the following requi
 
 If your application fulfils these requirements but you are still having issues running it on Anbox Cloud, file a [bug report](https://bugs.launchpad.net/indore-extern/+filebug).
 
-## Possible application status
+## Possible application statuses
 
-The following table lists the different status that an application can have depending on its state and what each status means:
+The following table lists the different statuses that an application can have depending on its state and what each status means:
 
 | Application status | Description |
 |--------------------|-------------|
 | `initializing` | The application is being created. Wait until the application reaches the `ready` state. |
 | `ready` | The application is successfully created and ready to be used. |
-| `deleted` | The application is deleted and no longer available for use. |
+| `deleted` | The application has been deleted and no longer available for use. |
 | `error` | The application has encountered an error. |
 | `unknown` | A possible error occurred and the real state of the application cannot be determined. |
 
-If you encounter the `error` or the `unknown` status, use [`amc-showlog`](https://discourse.ubuntu.com/t/amc-command-reference-show-log/40792) to troubleshoot. If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant AMS logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
+If you encounter the `error` or the `unknown` status, see if you can identify the base instance and troubleshoot using the instance logs (See [How to view the instance logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329)). If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant AMS logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
 
 ## Bootstrap process
 
