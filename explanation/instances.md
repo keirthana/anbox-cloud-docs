@@ -66,7 +66,7 @@ An instance moves through different stages and correspondingly can have the foll
 | `prepared`        | AMS has decided the LXD node on which it will schedule the instance. |
 | `started`         | The instance is started and now booting. During the boot sequence, possible hooks are executed. Once all hooks have been executed, the instance will switch to `running`. |
 | `running`         | The instance is fully up and running. |
-| `stopped`         | The instance is fully stopped and will be deleted by AMS. |
+| `stopped`         | The instance is stopped. If you wish to restart the instance, use `amc stop <instance_id>`.|
 | `deleted`         | The instance has been deleted and will be removed from the AMS database soon. |
 | `error`           | An error occurred while processing the instance. The instance is stopped. |
 | `unknown`         | A possible error occurred and the real state of the instance cannot be determined. |
