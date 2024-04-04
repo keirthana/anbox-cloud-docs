@@ -67,7 +67,7 @@ Anbox Cloud includes some features which are not enabled by default but can be c
 
 To configure a feature globally for all instances, use a command similar to the following:
 
-    amc config set instance.feature foo,bar
+    amc config set instance.features foo,bar
 
 To configure a feature for one application in the manifest, use a syntax similar to the following:
 
