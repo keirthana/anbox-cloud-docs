@@ -14,4 +14,4 @@ The following table lists the different statuses that an image can have dependin
 | `error` | The image has encountered an error. |
 | `unknown` | A possible error occurred and the real state of the image cannot be determined. |
 
-If you encounter the `error` or the `unknown` status, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant AMS logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
+If you encounter the `error` or the `unknown` status, [file a bug](https://bugs.launchpad.net/anbox-cloud).

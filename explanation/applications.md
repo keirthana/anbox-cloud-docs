@@ -21,7 +21,7 @@ The following table lists the different statuses that an application can have de
 | `error` | The application has encountered an error. |
 | `unknown` | A possible error occurred and the real state of the application cannot be determined. |
 
-If you encounter the `error` or the `unknown` status, see if you can identify the base instance and troubleshoot using the instance logs (See [How to view the instance logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329)). If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant AMS logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
+If you encounter the `error` or the `unknown` status, see if you can identify the base instance and troubleshoot using the instance logs (See [How to view the instance logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329)). If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant instance logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
 
 ## Bootstrap process
 

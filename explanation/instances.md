@@ -71,7 +71,7 @@ An instance moves through different stages and correspondingly can have the foll
 | `error`           | An error occurred while processing the instance. The instance is stopped. |
 | `unknown`         | A possible error occurred and the real state of the instance cannot be determined. |
 
-If you encounter the `error` or the `unknown` status, use [`amc show <instance_id>`](https://discourse.ubuntu.com/t/amc-command-reference-show/40793) or [`amc-showlog`](https://discourse.ubuntu.com/t/amc-command-reference-show-log/40792) to troubleshoot. If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant AMS logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
+If you encounter the `error` or the `unknown` status, use [`amc show <instance_id>`](https://discourse.ubuntu.com/t/amc-command-reference-show/40793) or [`amc-showlog`](https://discourse.ubuntu.com/t/amc-command-reference-show-log/40792) to troubleshoot. If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant instance logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
 
 <a name="dev-mode"></a>
 ## Development mode
