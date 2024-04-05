@@ -174,6 +174,8 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | explanation/addons | [Addons](https://discourse.ubuntu.com/t/addons/38727)|
 | 2 | explanation/application-streaming | [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
 | 2 | explanation/instances | [Instances](https://discourse.ubuntu.com/t/17763)|
+| 2 | explanation/images | [Images](https://discourse.ubuntu.com/t/images/43914) |
+| 2 | explanation/nodes | [Nodes](https://discourse.ubuntu.com/t/nodes/43915) |
 | 2 | explanation/platforms | [Platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)|
 | 2 | explanation/gpus-instances | [GPUs and instances](https://discourse.ubuntu.com/t/17768)|
 | 2 | explanation/clustering | [Clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
