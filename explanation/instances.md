@@ -56,19 +56,22 @@ When an instance is stopped, it executes the following steps in order:
 Beyond that, the instance will be removed from AMS either because you deleted it or because an error occurred during its runtime.
 ![Instance stop|575x521](https://assets.ubuntu.com/v1/abb5becf-instance_stop.png)
 
-### Possible instance status
+### Possible instance statuses
 
-An instance moves through different stages and correspondingly can have the following status depending on its current state.
+An instance moves through different stages and correspondingly can have the following statuses depending on its current state.
 
-Status            |  Description
-----------------|------------
-`created`     | AMS has created an internal database object for the instance and will next schedule the instance onto a suitable LXD node.
-`prepared` | AMS has decided the LXD node on which it will schedule the instance.
-`started` | The instance is started and now booting. During the boot sequence, possible hooks are executed. Only when all hooks have been executed, the instance will switch to `running`.
-`running` | The instance is fully up and running.
-`stopped` | The instance is fully stopped and will be deleted by AMS.
-`deleted` | The instance is deleted and will be removed from the AMS database soon.
-`error` | An error occurred while processing the instance. The instance is stopped. Further information about the error can be viewed with `amc show <instance id>`.
+| Status            |  Description |
+|-------------------|--------------|
+| `created`         | AMS has created an internal database object for the instance and will next schedule the instance onto a suitable LXD node. |
+| `prepared`        | AMS has decided the LXD node on which it will schedule the instance. |
+| `started`         | The instance is started and now booting. During the boot sequence, possible hooks are executed. Once all hooks have been executed, the instance will switch to `running`. |
+| `running`         | The instance is fully up and running. |
+| `stopped`         | The instance has been stopped and can be restarted when required.|
+| `deleted`         | The instance has been deleted and will be removed from the AMS database soon. |
+| `error`           | An error occurred while processing the instance. The instance is stopped. |
+| `unknown`         | A possible error occurred and the real state of the instance cannot be determined. |
+
+If you encounter the `error` or the `unknown` status, use [`amc show <instance_id>`](https://discourse.ubuntu.com/t/amc-command-reference-show/40793) or [`amc-showlog`](https://discourse.ubuntu.com/t/amc-command-reference-show-log/40792) to troubleshoot. If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant instance logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
 
 <a name="dev-mode"></a>
 ## Development mode
