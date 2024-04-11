@@ -7,7 +7,7 @@ name: my-application
 resources:
   cpus: 2
   memory: 3GB
-  disk-size: 15GB
+  disk-size: 3GB
 ```
 For a virtual machine instance, the default resource preset is:
 
@@ -16,7 +16,7 @@ name: my-application
 resources:
   cpus: 2
   memory: 3GB
-  disk-size: 3GB
+  disk-size: 15GB
 ```
 
 If your application requires different resources than the default, specify the required resources in the application manifest to override some or all of default resource preset options.
