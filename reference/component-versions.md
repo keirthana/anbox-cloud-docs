@@ -62,7 +62,8 @@ Not all components are updated with each release. When components are not update
 | `jammy:android13:arm64` | 1.21.2 |
 | `jammy:android12:amd64` | 1.21.2 |
 | `jammy:android12:arm64` | 1.21.2 |
-
+| `jammy:aaos13:amd64` (Experimental)    | 1.21.2 |
+| `jammy:aaos13:arm64` (Experimental)    | 1.21.2 |
 
 ## 1.21.1
 
@@ -124,6 +125,8 @@ Not all components are updated with each release. When components are not update
 | `jammy:android13:arm64` | 1.21.1 |
 | `jammy:android12:amd64` | 1.21.1 |
 | `jammy:android12:arm64` | 1.21.1 |
+| `jammy:aaos13:amd64` (Experimental)    | 1.21.1 |
+| `jammy:aaos13:arm64` (Experimental)    | 1.21.1 |
 
 ## 1.21.0
 
@@ -185,6 +188,9 @@ Not all components are updated with each release. When components are not update
 | `jammy:android13:arm64` | 1.21.0 |
 | `jammy:android12:amd64` | 1.21.0 |
 | `jammy:android12:arm64` | 1.21.0 |
+| `jammy:aaos13:amd64` (Experimental)    | 1.21.0 |
+| `jammy:aaos13:arm64` (Experimental)   | 1.21.0 |
+
 
 ## 1.20.2
 
