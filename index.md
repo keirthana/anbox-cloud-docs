@@ -164,7 +164,8 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 0 | | |
 | 1 | explanation/landing | [Explanation](https://discourse.ubuntu.com/t/explanation/28829) |
 | 2 | explanation/anbox-cloud | [Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) |
-| 2 | explanation/rendering-architecture | [Rendering architecture](https://discourse.ubuntu.com/t/about-rendering-architecture/35129)
+| 2 | explanation/rendering-architecture | [Rendering architecture](https://discourse.ubuntu.com/t/about-rendering-architecture/35129) |
+| 2 | explanation/aaos | [AAOS](tbd)|
 | 2 | explanation/security | [Security](https://discourse.ubuntu.com/t/about-security/31217)|
 | 2 | explanation/ams | [AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
 | 2 | explanation/aar | [AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
