@@ -270,6 +270,7 @@ swrast
 syscall
 syscalls
 systemd
+SystemUI
 telegraf
 transcode
 tryCapture
