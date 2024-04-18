@@ -165,7 +165,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 1 | explanation/landing | [Explanation](https://discourse.ubuntu.com/t/explanation/28829) |
 | 2 | explanation/anbox-cloud | [Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) |
 | 2 | explanation/rendering-architecture | [Rendering architecture](https://discourse.ubuntu.com/t/about-rendering-architecture/35129) |
-| 2 | explanation/aaos | [AAOS](tbd)|
+| 2 | explanation/aaos | [AAOS](https://discourse.ubuntu.com/t/android-automotive-os-aaos/44274)|
 | 2 | explanation/security | [Security](https://discourse.ubuntu.com/t/about-security/31217)|
 | 2 | explanation/ams | [AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
 | 2 | explanation/aar | [AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
@@ -186,7 +186,8 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 0 | | |
 | 1 | |[Documentation feedback](https://forms.gle/6yzgLbwN8rVYSdvG9)|
 | 0 | | |
-|   | reference/release-notes/1.21.1 | [Release notes - Anbox Cloud 1.21.1](https://discourse.ubuntu.com/t/43279)|
+|   | reference/release-notes/1.21.1 | [Release notes-Anbox Cloud 1.21.2](https://discourse.ubuntu.com/t/44276)|
+|   | reference/release-notes/1.21.1 | [Release notes-Anbox Cloud 1.21.1](https://discourse.ubuntu.com/t/43279)|
 |   | reference/release-notes/1.21.0 | [Release notes-Anbox Cloud 1.21.0](https://discourse.ubuntu.com/t/42429)|
 |   | reference/release-notes/1.20.2 | [Release notes-Anbox Cloud 1.20.2](https://discourse.ubuntu.com/t/41686)|
 |   | reference/release-notes/1.20.1 | [Release notes-Anbox Cloud 1.20.1](https://discourse.ubuntu.com/t/40988)|

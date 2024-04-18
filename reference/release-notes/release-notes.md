@@ -15,7 +15,7 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Release date   |  Release notes  |
 |----|----|
-| April 18 2024 | [Anbox Cloud 1.21.2](tbd) |
+| April 18 2024 | [Anbox Cloud 1.21.2](https://discourse.ubuntu.com/t/44276) |
 | March 13 2024 | [Anbox Cloud 1.21.1](https://discourse.ubuntu.com/t/43279) |
 | February 14 2024 | [Anbox Cloud 1.21.0](https://discourse.ubuntu.com/t/42429) |
 
