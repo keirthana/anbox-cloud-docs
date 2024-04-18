@@ -7,7 +7,6 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Tentative Release date | Planned release version |
 |----|----|
-| April 17 2024 | Anbox Cloud 1.21.2 |
 | May 15 2024 | Anbox Cloud 1.22.0 |
 | June 13 2024 | Anbox Cloud 1.22.1 |
 | July 17 2024 | Anbox Cloud 1.22.2 |
@@ -16,10 +15,9 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Release date   |  Release notes  |
 |----|----|
+| April 18 2024 | [Anbox Cloud 1.21.2](tbd) |
 | March 13 2024 | [Anbox Cloud 1.21.1](https://discourse.ubuntu.com/t/43279) |
 | February 14 2024 | [Anbox Cloud 1.21.0](https://discourse.ubuntu.com/t/42429) |
-| January 17 2024 | [Anbox Cloud 1.20.2](https://discourse.ubuntu.com/t/41686) |
-
 
 ### What's new in 1.21.x?
 
@@ -36,6 +34,12 @@ Along with bug fixes and general improvements, Anbox Cloud 1.21.x includes:
 
 ## Older releases
 [Details=Expand to access release notes of earlier versions]
+
+## 2024
+|  Release date  |  Release notes  |
+|----|----|
+| January 17 2024 | [Anbox Cloud 1.20.2](https://discourse.ubuntu.com/t/41686) |
+
 ## 2023
 |  Release date  |  Release notes  |
 |----|----|
