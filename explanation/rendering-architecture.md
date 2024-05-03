@@ -22,7 +22,9 @@ As the Venus Vulkan driver only provides Vulkan API support for Android, we use 
 
 In terms of performance, this could be perceived to have some transmission overhead when compared to the rendering on Intel and AMD GPUs. However, Anbox Cloud is optimised to keep this overhead minimal and the additional overhead due to the transmission of Vulkan API calls from the Android space to the Ubuntu side renderer is not significant enough to affect most use cases.
 
-In older versions Anbox Cloud used a similar rendering pipeline for NVIDIA GPUs which only supports OpenGL ES and EGL but cannot provide Vulkan API support.
+In older versions, Anbox Cloud used a similar rendering pipeline for NVIDIA GPUs which only supports OpenGL ES and EGL but cannot provide Vulkan API support.
+
+Starting 1.22.0, Anbox Cloud uses VirGL as the default renderer for NVIDIA GPUs. If VirGL is not compatible for your use case (and you require the older implementation), [contact us](https://anbox-cloud.io/contact-us).
 
 ### For Intel and AMD
 
