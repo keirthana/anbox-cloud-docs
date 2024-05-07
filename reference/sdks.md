@@ -71,6 +71,7 @@ Having these two components makes it easier to plug your own software in the SDK
 | Send commands to the Android container           |        ✓       |
 | Game pad support                                 |        ✓       |
 | Camera support                                   |        ✓       |
+| Pointer lock                                     |        ✓       |
 | Sensor support                                   |                 |
 | Location support                                 |        ✓       |
 | Supported platforms                              |       All       |
