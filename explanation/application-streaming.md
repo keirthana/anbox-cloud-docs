@@ -16,7 +16,7 @@ The stream gateway provides the initial place where a client and an instance can
 
 ### Stream agent
 
-The stream agent is the middleware between the stream gateway and the Anbox Management Service (AMS), It is responsible for securing access to AMS, launching instances, relay status information and more.
+The stream agent is the middleware between the stream gateway and the Anbox Management Service (AMS). It is responsible for securing access to AMS, launching instances, relaying status information and more.
 
 ### AMS
 
@@ -36,7 +36,7 @@ The following illustration shows how the streaming stack components interact wit
 
 ## Streaming an application by creating a session
 
-While streaming an application, session creation can happen in two ways as illustrated in the diagram above. Until the 1.22.0 release, to create Anbox Cloud instances that can be streamed, a session needed to be created on the stream gateway first. Once the session is created, the instance creation will be triggered as detailed in the process below:
+While streaming an application, session creation can happen in two ways as illustrated in the diagram above. Until the 1.22.0 release, a session had to be first created on the stream gateway to be able to create Anbox Cloud instances that can be streamed. Once the session was created, the instance creation will be triggered as detailed in the process below:
 
 ### 1. Creating the session
 
