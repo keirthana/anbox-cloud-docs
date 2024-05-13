@@ -32,7 +32,7 @@ A messaging queue to allow components to communicate.
 
 The following illustration shows how the streaming stack components interact with each other when streaming visual output from an instance:
 
-![Streaming stack sequence|2400x1350](https://assets.ubuntu.com/v1/f6b703b0-Cloud-streaming-stack_v4-1-1.png)
+![Streaming stack sequence|2400x1350](https://assets.ubuntu.com/v1/635d9cc5-streaming_stack.png)
 
 ## Streaming an application by creating a session
 
