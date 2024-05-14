@@ -20,7 +20,7 @@ Not all components are updated with each release. When components are not update
 | `anbox-stream-agent` | `1.22/stable` | 420 |
 | `nats ` | `latest/stable` | 11 |
 
-#### Ubuntu 20.04
+#### Ubuntu 20.04 (Deprecated)
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|

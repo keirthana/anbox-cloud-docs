@@ -159,6 +159,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | reference/webrtc-streamer | [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)|
 | 2 | reference/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
 | 2 | reference/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
+| 2 | reference/deprecation-notices | [Deprecations](tbd)|
 | 2 | reference/license-information | [License information](https://discourse.ubuntu.com/t/license-information/36649) |
 | 2 | reference/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
 | 0 | | |
