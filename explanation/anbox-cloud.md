@@ -25,6 +25,7 @@ See the following table for a comparison of features for the different variants:
 | [Community support](https://discourse.ubuntu.com/c/anbox-cloud/) | ✓ | ✓ |
 | [Vendor support available](https://ubuntu.com/support) | ✓* | ✓ |
 | [Clustering support](https://discourse.ubuntu.com/t/clustering/17765)| - | ✓ |
+| [Custom images](tbd)| ✓ | ✓ |
 
 *\* When purchasing the Anbox Cloud Appliance through the AWS Marketplace, the Ubuntu Pro subscription does not include vendor support.*
 
