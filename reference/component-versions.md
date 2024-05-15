@@ -10,36 +10,36 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud-dashboard` | `1.22/stable` | 407 |
-| `ams-node-controller` | `1.22/stable` | 415 |
-| `coturn` | `1.22/stable` | 409 |
-| `ams` | `1.22/stable` | 438 |
-| `aar` | `1.22/stable` | 414 |
-| `anbox-stream-gateway` | `1.22/stable` | 425 |
-| `ams-lxd` | `1.22/stable` | 412 |
-| `anbox-stream-agent` | `1.22/stable` | 420 |
+| `anbox-cloud-dashboard` | `1.22/stable` | 417 |
+| `ams-node-controller` | `1.22/stable` | 425 |
+| `coturn` | `1.22/stable` | 419 |
+| `ams` | `1.22/stable` | 449 |
+| `aar` | `1.22/stable` | 426 |
+| `anbox-stream-gateway` | `1.22/stable` | 435 |
+| `ams-lxd` | `1.22/stable` | 422 |
+| `anbox-stream-agent` | `1.22/stable` | 430 |
 | `nats ` | `latest/stable` | 11 |
 
 #### Ubuntu 20.04 (Deprecated)
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud-dashboard` | `1.22/stable` | 406 |
-| `ams-node-controller` | `1.22/stable` | 414 |
-| `coturn` | `1.22/stable` | 408 |
-| `ams` | `1.22/stable` | 437 |
-| `aar` | `1.22/stable` | 413 |
-| `anbox-stream-gateway` | `1.22/stable` | 424 |
-| `ams-lxd` | `1.22/stable` | 411 |
-| `anbox-stream-agent` | `1.22/stable` | 420 |
+| `anbox-cloud-dashboard` | `1.22/stable` | 416 |
+| `ams-node-controller` | `1.22/stable` | 424 |
+| `coturn` | `1.22/stable` | 418 |
+| `ams` | `1.22/stable` | 448 |
+| `aar` | `1.22/stable` | 425 |
+| `anbox-stream-gateway` | `1.22/stable` | 434 |
+| `ams-lxd` | `1.22/stable` | 421 |
+| `anbox-stream-agent` | `1.22/stable` | 429 |
 | `nats ` | `latest/stable` | 11 |
 
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.22/stable` | 228 |
-| `anbox-cloud-core` | `1.22/stable` | 236 |
+| `anbox-cloud` | `1.22/stable` | 234 |
+| `anbox-cloud-core` | `1.22/stable` | 242 |
 
 ### Snaps
 
