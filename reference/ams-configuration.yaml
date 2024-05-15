@@ -277,7 +277,7 @@ all:
       distribute instances across available LXD nodes: `binpack`,
       `spread`
     deprecated: "No"
-    agent.api.fingerprint:
+  agent.api.fingerprint:
     type: "string"
     default: "-"
     description: >-
