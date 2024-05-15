@@ -347,3 +347,22 @@ node:
       If set to `true`, the node cannot be scheduled, which prevents
       new instances from being launched on it.
     deprecated: "No"
+  agent.api.fingerprint:
+    type: "string"
+    default: "-"
+    description: >-
+      Fingerprint of certificate in the AMS trust store which is
+      trusted when communicating with the stream agent.
+    deprecated: "No"  
+  agent.api.token:
+    type: "string"
+    default: "-"
+    description: >-
+      Token to be used for API authentication with stream agent.
+    deprecated: "No"
+  agent.api.url:
+    type: "string"
+    default: "-"
+    description: >-
+      URL for stream agent API endpoint.
+    deprecated: "No"
