@@ -120,7 +120,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/anbox/develop-addon | [Develop and test addons](https://discourse.ubuntu.com/t/develop-and-test-addons-in-development-mode/36914) |
 | 2 | howto/android/landing | [Work with Android](https://discourse.ubuntu.com/t/how-to-work-with-android-in-anbox-cloud/42428) |
 | 3 | howto/android/graphics-debugging-with-renderdoc | [Graphics debugging with Renderdoc](https://discourse.ubuntu.com/t/how-to-debug-graphics-with-renderdoc/42427) |
-| 3 | howto/android/odm_vhal | [Replace the Anbox VHAL](https://discourse.ubuntu.com/t/replace-the-anbox-vhal/45070) |
+| 3 | howto/android/custom_vhal | [Replace the Anbox VHAL](https://discourse.ubuntu.com/t/replace-the-anbox-vhal/45070) |
 | 2 | howto/troubleshoot/landing | [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/how-to-troubleshoot-anbox-cloud/17837)|
 | 3 | howto/troubleshoot/initial-setup | [Troubleshoot initial setup](https://discourse.ubuntu.com/t/troubleshoot-issues-with-initial-setup/35704)|
 | 3 | howto/troubleshoot/logs | [View logs](https://discourse.ubuntu.com/t/managing-logs/17771)|
