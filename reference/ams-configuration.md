@@ -5,6 +5,7 @@ The Anbox Management Service (AMS) provides various configuration items to custo
 
 | Name | Type | Deprecated |    Default    | Description           |
 |-----|------|------------|---------------|-----------------------|
+| `agent.api.fingerprint` | string | No | - | Fingerprint of certificate in the AMS trust store which is trusted when communicating with the stream agent. |
 | `agent.api.token` | string | No | - | Token to be used for API authentication with stream agent. |
 | `agent.api.url` | string | No | - | URL for stream agent API endpoint. |
 | `application.addons` | string | No | - | Comma-separated list of addons that every application managed by AMS will use. See [How to enable an addon globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285). |
@@ -42,7 +43,7 @@ The Anbox Management Service (AMS) provides various configuration items to custo
 | `registry.mode` | string | No | `pull` | Mode in which the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) client in AMS operates: `manual`, `pull`, `push` |
 | `registry.update_interval` | string | No | `1h` | Frequency of [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) updates (for example: 1h, 30m). |
 | `registry.url` | string | No | - | URL of the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) to use. |
-| `scheduler.strategy` | string | No | - | Fingerprint of certificate in the AMS trust store which is trusted when communicating with the stream agent. |
+| `scheduler.strategy` | string | No | `spread` | Strategy that the internal instance scheduler in AMS uses to distribute instances across available LXD nodes: `binpack`, `spread` |
 
 ## Node-specific configuration
 
