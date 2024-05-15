@@ -188,6 +188,7 @@ OAuth
 OBB
 OBD
 observability
+ODM
 OES
 OOB
 OOM
@@ -305,6 +306,7 @@ virglrenderer
 VM
 VMs
 VNC
+VNDK
 VPC
 VPN
 VPU
