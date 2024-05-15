@@ -5,6 +5,8 @@ The Anbox Management Service (AMS) provides various configuration items to custo
 
 | Name | Type | Deprecated |    Default    | Description           |
 |-----|------|------------|---------------|-----------------------|
+| `agent.api.token` | string | No | - | Token to be used for API authentication with stream agent. |
+| `agent.api.url` | string | No | - | URL for stream agent API endpoint. |
 | `application.addons` | string | No | - | Comma-separated list of addons that every application managed by AMS will use. See [How to enable an addon globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285). |
 | `application.auto_publish` | bool | No | true | If set to `true`, AMS automatically published new application versions when the bootstrap process is finished. `false` disables this. See [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions-1). |
 | `application.auto_update` | bool | No | true | If set to `true`, AMS automatically updates applications whenever any dependencies (parent image, addons, global configuration) change. `false` disables this. See [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-application-updates-3). |
@@ -40,7 +42,7 @@ The Anbox Management Service (AMS) provides various configuration items to custo
 | `registry.mode` | string | No | `pull` | Mode in which the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) client in AMS operates: `manual`, `pull`, `push` |
 | `registry.update_interval` | string | No | `1h` | Frequency of [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) updates (for example: 1h, 30m). |
 | `registry.url` | string | No | - | URL of the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) to use. |
-| `scheduler.strategy` | string | No | `spread` | Strategy that the internal instance scheduler in AMS uses to distribute instances across available LXD nodes: `binpack`, `spread` |
+| `scheduler.strategy` | string | No | - | Fingerprint of certificate in the AMS trust store which is trusted when communicating with the stream agent. |
 
 ## Node-specific configuration
 
@@ -48,9 +50,6 @@ In a cluster setup, there are configuration items that can be customised for eac
 
 | Name | Type | Deprecated |    Default    | Description           |
 |-----|------|------------|---------------|-----------------------|
-| `agent.api.fingerprint` | string | No | - | Fingerprint of certificate in the AMS trust store which is trusted when communicating with the stream agent. |
-| `agent.api.token` | string | No | - | Token to be used for API authentication with stream agent. |
-| `agent.api.url` | string | No | - | URL for stream agent API endpoint. |
 | `cpu-allocation-rate` | integer | No | 4 | CPU allocation rate used for [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#over-committing-resources-3). |
 | `cpus` | integer | No | all available | Number of CPUs dedicated to instances. |
 | `gpu-encoder-slots` | integer | No | 0 (for nodes without GPU or with AMD GPU)<br/>32 (for nodes with NVIDIA GPU)<br/>10 (for nodes with Intel GPU) | Number of GPU encoder slots available on the node. |
