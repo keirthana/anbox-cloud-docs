@@ -48,6 +48,9 @@ In a cluster setup, there are configuration items that can be customised for eac
 
 | Name | Type | Deprecated |    Default    | Description           |
 |-----|------|------------|---------------|-----------------------|
+| `agent.api.fingerprint` | string | No | - | Fingerprint of certificate in the AMS trust store which is trusted when communicating with the stream agent. |
+| `agent.api.token` | string | No | - | Token to be used for API authentication with stream agent. |
+| `agent.api.url` | string | No | - | URL for stream agent API endpoint. |
 | `cpu-allocation-rate` | integer | No | 4 | CPU allocation rate used for [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#over-committing-resources-3). |
 | `cpus` | integer | No | all available | Number of CPUs dedicated to instances. |
 | `gpu-encoder-slots` | integer | No | 0 (for nodes without GPU or with AMD GPU)<br/>32 (for nodes with NVIDIA GPU)<br/>10 (for nodes with Intel GPU) | Number of GPU encoder slots available on the node. |
