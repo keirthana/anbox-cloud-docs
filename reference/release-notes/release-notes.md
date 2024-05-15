@@ -7,28 +7,28 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Tentative Release date | Planned release version |
 |----|----|
-| May 15 2024 | Anbox Cloud 1.22.0 |
 | June 13 2024 | Anbox Cloud 1.22.1 |
 | July 17 2024 | Anbox Cloud 1.22.2 |
+| August 14 2024 | Anbox Cloud 1.23.0 |
 
 ## Recent releases
 
 | Release date   |  Release notes  |
 |----|----|
-| April 18 2024 | [Anbox Cloud 1.21.2](https://discourse.ubuntu.com/t/44276) |
-| March 13 2024 | [Anbox Cloud 1.21.1](https://discourse.ubuntu.com/t/43279) |
-| February 14 2024 | [Anbox Cloud 1.21.0](https://discourse.ubuntu.com/t/42429) |
+| May 15 2024 | [Anbox Cloud 1.22.0](tbd) |
 
-### What's new in 1.21.x?
+### What's new in 1.22.x?
 
-Along with bug fixes and general improvements, Anbox Cloud 1.21.x includes:
+Along with bug fixes and general improvements, Anbox Cloud 1.22.x includes:
 
-* Android Automotive OS (AAOS) images
-* Alpha support for Vehicle Hardware Abstraction Layer (VHAL)
-* Full support for Vulkan on NVIDIA GPUs
-* Experimental video upscaling on the client side
-* System tracing for Android
-* Improvements to Anbox Management Service (AMS) API responses
+* Support for 64-bit only systems
+* Support for custom images
+* Support for Vulkan 1.3 for Android 13 images
+* VirGL as the default renderer
+* Stream-enabled instance creation
+* Upgrade to NVIDIA 550 driver series
+* Support for pointer lock
+* VHAL enhancements
 * Dashboard improvements
 * Android security updates
 
@@ -39,6 +39,9 @@ Along with bug fixes and general improvements, Anbox Cloud 1.21.x includes:
 |  Release date  |  Release notes  |
 |----|----|
 | January 17 2024 | [Anbox Cloud 1.20.2](https://discourse.ubuntu.com/t/41686) |
+| February 14 2024 | [Anbox Cloud 1.21.0](https://discourse.ubuntu.com/t/42429) |
+| March 13 2024 | [Anbox Cloud 1.21.1](https://discourse.ubuntu.com/t/43279) |
+| April 18 2024 | [Anbox Cloud 1.21.2](https://discourse.ubuntu.com/t/44276) |
 
 ## 2023
 |  Release date  |  Release notes  |

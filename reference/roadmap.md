@@ -12,6 +12,6 @@ Anbox Cloud follows a defined release cycle with frequent minor and patch releas
 
 | Release | Target Date | What to expect| 
 |---------|-------------|---------------|
-| 1.22.0 | May 15 2024 | * Support for custom Android system images<br/> * Support for 64 bit only ARM/x86 systems<br/>* Stability improvements for AAOS images and VHAL<br/>* VirGL enabled by default for NVIDIA GPUs<br/>* Update to NVIDIA 550 driver series<br/>* Android security updates for May 2024<br/> * Bug fixes |
 | 1.22.1 | June 13 2024 | * Android security updates for June 2024<br/> * Bug fixes |
 | 1.22.2 | July 18 2024 | * Android security updates for July 2024<br/> * Bug fixes |
+| 1.23.0 | August 14 2024 | * AAOS enhancements<br/> * Support for multiple subclusters in the web dashboard<br/> * Android security updates for August 2024<br/> * Bug fixes|
