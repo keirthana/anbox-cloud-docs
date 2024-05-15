@@ -73,7 +73,7 @@ See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for 
 
 ### Launch an instance with streaming enabled
 
-*since 1.23.0*
+*since 1.22.0*
 
 If you want to stream the visual output from an instance, specify it at the time of instance creation. Otherwise, the instance cannot be streamed. In previous versions of Anbox Cloud, it was only possible to create an instance that has streaming enabled via the [Stream Gateway API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-stream-gateway/). The same can now be achieved through the [AMS API](https://canonical.github.io/anbox-cloud.github.com/latest/ams/) or the `amc` CLI.
 
@@ -86,6 +86,20 @@ AMS will automatically create a streaming session for the instance. You can find
 If you want to to further customise the streaming configuration such as display settings or frame rate, use the corresponding arguments: `--display-size`, `--display-density` and `--fps`. For example, to create an instance with a 1080p resolution, a frame rate of 60 and a DPI of 120, run:
 
     amc launch --enable-streaming --display-size=1920x1080 --display-density=120 --fps=60 ...
+
+### Launch an instance with a specific name
+
+*since 1.22.0*
+
+To allow identifying and referencing instances easier you can give them a name at creation time. Names must be unique and can be used with all CLI commands.
+
+To create an instance with a name, run:
+
+    amc launch --name=foo ...
+
+This will create an instance with the name "foo" which can then be used in other CLI commands. For example, when opening a shell for interacting with the instance, the following command can be used:
+
+    amc shell foo
 
 ### Launch an instance on a specific node
 

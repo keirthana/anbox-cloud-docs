@@ -27,9 +27,16 @@ In the next sections, you will learn how to connect an instance running on Anbox
 
 ### Install scrcpy
 
-Scrcpy is not available from the official Ubuntu repositories. Therefore, you must install scrcpy in one of the following ways:
+Install scrcpy in one of the following ways:
 <!-- wokeignore:rule=master -->
 * Build scrcpy from the source by following the official [guide](https://github.com/Genymobile/scrcpy/blob/master/doc/build.md)
+
+* Install scrcpy from the Ubuntu repository
+
+        apt install scrcpy
+
+  <!-- wokeignore:rule=master -->
+  [note type="information" status="Note"]The packaged version from the Ubuntu repositories may not be the latest. It is recommended to follow the instructions mentioned in the [scrcpy documentation](https://github.com/Genymobile/scrcpy/blob/master/doc/linux.md#latest-version) to install the latest version of scrcpy.[/note]
 
 * Install scrcpy from the [Ubuntu snap store](https://snapcraft.io):
 

@@ -10,7 +10,7 @@ The following options are available:
 | `-c`, `--cpus` | Integer | Number of CPU cores to be assigned for the instance. | 2 |
 | `--devmode` |    | Enables developer mode for the instance. | Disabled |
 | `--disable-watchdog` | | Disables watchdog for the instance. Applicable for regular instances only. | |
-| `-d`, `--disk-size` | String | Disk size of the instance. | 15 GB for a container instance;<br/> 3 GB for a virtual machine instance |
+| `-d`, `--disk-size` | String | Disk size of the instance. | 3 GB for a container instance;<br/> 15 GB for a virtual machine instance |
 | `--enable-graphics` | | Enables graphics for the instance | Disabled |
 | `-f`, `--features` | String | Comma-separated list of features to enable for the Anbox runtime inside the instance | |
 | `-g`, `--gpu-slots` |  Integer | Number of GPU slots to be assigned for the instance. | -1 |

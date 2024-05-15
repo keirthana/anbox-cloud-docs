@@ -2,6 +2,34 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+## 1.21.2
+
+### Charms
+
+N/A
+
+### Bundles
+
+N/A
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `anbox-cloud-appliance` | `1.21/stable` | 1.21.2 |
+
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.21.2 |
+| `jammy:android13:arm64` | 1.21.2 |
+| `jammy:android12:amd64` | 1.21.2 |
+| `jammy:android12:arm64` | 1.21.2 |
+| `jammy:aaos13:amd64` (Experimental)    | 1.21.2 |
+| `jammy:aaos13:arm64` (Experimental)    | 1.21.2 |
+
 ## 1.21.1
 
 ### Charms
@@ -62,6 +90,8 @@ Not all components are updated with each release. When components are not update
 | `jammy:android13:arm64` | 1.21.1 |
 | `jammy:android12:amd64` | 1.21.1 |
 | `jammy:android12:arm64` | 1.21.1 |
+| `jammy:aaos13:amd64` (Experimental)    | 1.21.1 |
+| `jammy:aaos13:arm64` (Experimental)    | 1.21.1 |
 
 ## 1.21.0
 
@@ -123,6 +153,9 @@ Not all components are updated with each release. When components are not update
 | `jammy:android13:arm64` | 1.21.0 |
 | `jammy:android12:amd64` | 1.21.0 |
 | `jammy:android12:arm64` | 1.21.0 |
+| `jammy:aaos13:amd64` (Experimental)    | 1.21.0 |
+| `jammy:aaos13:arm64` (Experimental)   | 1.21.0 |
+
 
 ## 1.20.2
 
