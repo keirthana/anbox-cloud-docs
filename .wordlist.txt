@@ -119,6 +119,7 @@ gRPC
 gzip
 HAProxy
 HIDL
+Honkai
 hotfix
 HTTPS
 HW
@@ -293,6 +294,7 @@ unpublish
 unschedulable
 untrusted
 uptime
+userspace
 UTF
 validator
 vCPU
