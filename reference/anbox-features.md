@@ -9,7 +9,7 @@ The following table lists some Anbox features and whether they are supported for
 | [Custom Android ID](https://discourse.ubuntu.com/t/ams-configuration/20872#custom-android-id-10)                    | ✓    |   -   |
 | [VHAL HTTP API](https://discourse.ubuntu.com/t/anbox-http-api/17819#h-10vhal-31)                                    | -    |   ✓   |
 | [VhalConnector](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/classanbox_1_1VhalConnector.html) in Platform SDK API                                                                                                                   | -    |   ✓   |
-| [Custom images](tbd)                                                                                                | -    |   ✓   |                                                                           |      | ✓    |
+| [Custom images](https://discourse.ubuntu.com/t/custom-images/45071)                                                                                                | -    |   ✓   |                                                                           |      | ✓    |
 
 ## Feature flags
 
