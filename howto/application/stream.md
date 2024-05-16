@@ -1,3 +1,6 @@
+(howto-stream-applications)=
+# How to stream applications
+
 You can stream applications using the Anbox Cloud dashboard or your custom stream client. You can also stream applications by launching an instance with streaming enabled, using the `amc` CLI.
 
 ## Using the CLI

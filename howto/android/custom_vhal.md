@@ -1,12 +1,12 @@
-(sec-replace-anbox-vhal)=
+(howto-replace-anbox-vhal)=
 # Replace the Anbox VHAL
 
 *since 1.22.0*
 
-[note type="information" status="Note"]
+```{note}
 Replacing the Anbox VHAL is only supported on [AAOS images](https://discourse.ubuntu.com/t/24185).
 The Anbox Cloud dashboard does not support custom VHAL implementations.
-[/note]
+```
 
 This document will guide through the process of replacing the Anbox Cloud VHAL
 implementation with your own implementation placed in the
