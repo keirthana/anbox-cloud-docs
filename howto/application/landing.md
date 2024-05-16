@@ -13,6 +13,7 @@ Create an application <create>
 Delete an application <delete>
 Extend an application <extend>
 List applications <list>
+Stream applications <stream>
 Test an application <test>
 Update an application <update>
 Pass custom data to an application <pass-custom-data>

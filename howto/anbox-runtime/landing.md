@@ -10,5 +10,4 @@ The following guides are available:
 
 Develop addons in devmode <develop-addon>
 Develop a platform plugin <develop-platform>
-Enable VirGL support <enable-virgl>
 ```

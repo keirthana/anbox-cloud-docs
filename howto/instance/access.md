@@ -39,8 +39,10 @@ Install scrcpy in one of the following ways:
 
         apt install scrcpy
 
+  ```{note}
   <!-- wokeignore:rule=master -->
-  [note type="information" status="Note"]The packaged version from the Ubuntu repositories may not be the latest. It is recommended to follow the instructions mentioned in the [scrcpy documentation](https://github.com/Genymobile/scrcpy/blob/master/doc/linux.md#latest-version) to install the latest version of scrcpy.[/note]
+  The packaged version from the Ubuntu repositories may not be the latest. It is recommended to follow the instructions mentioned in the [scrcpy documentation](https://github.com/Genymobile/scrcpy/blob/master/doc/linux.md#latest-version) to install the latest version of scrcpy.
+  ```
 
 * Install scrcpy from the [Ubuntu snap store](https://snapcraft.io):
 

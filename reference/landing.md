@@ -77,6 +77,7 @@ api-reference
 application-manifest
 cmd-ref/landing.md
 component-versions
+deprecation-notices
 glossary
 hooks
 license-information
