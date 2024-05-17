@@ -1,10 +1,25 @@
 The Anbox Cloud Appliance is not yet available from the Azure Marketplace. However, you can install the Anbox Cloud Appliance snap on an Azure machine.
 
-The following instructions guide you through all relevant steps to deploy the Anbox Cloud Appliance on Azure. For additional information, see the [Microsoft documentation](https://docs.microsoft.com/en-gb/azure/virtual-machines/) about creating virtual machines in Azure.
+## Deploy using a quickstart template
+<!-- wokeignore:rule=master -->
+An [Azure quickstart template](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/canonical/anbox) is available for deploying the Anbox Cloud Appliance on Azure. The template automatically deploys and configures the necessary settings for the Anbox Cloud Appliance.
+<!-- wokeignore:rule=master -->
+Once you have completed the [deployment steps](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/canonical/anbox#deployment-steps), finish the installation by performing the following steps:
+
+1. [Initialise the appliance](https://discourse.ubuntu.com/t/install-the-anbox-cloud-appliance-on-a-dedicated-machine/22681#initialise-the-appliance-6)
+1. [Register your Ubuntu SSO account with the appliance dashboard](https://discourse.ubuntu.com/t/install-the-anbox-cloud-appliance-on-a-dedicated-machine/22681#register-with-the-dashboard-9).
+
+    [note type="information" status="Tip"]The output from the template will contain the public IP address of the VM that is required to complete this step.[/note]
+
+## Deploy manually
+
+An alternate option to using the quickstart template is to deploy manually. If you wish to deploy Anbox Cloud Appliance manually on Azure, the following instructions guide you through all relevant steps.
+
+[details=Click here for details]
 
 The entire deployment process will take 20-30 minutes, depending on the selected hardware and the network conditions.
 
-## Check the prerequisites
+### Prerequisites
 
 Check the hardware requirements for the Anbox Cloud Appliance [here](https://discourse.ubuntu.com/t/requirements/17734#anbox-cloud-appliance-4).
 
@@ -15,11 +30,9 @@ In addition, make sure you have the following prerequisites:
   [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.[/note]
 * An Azure account that you use to create the virtual machine.
 
-## Create a virtual machine
+Once you have the prerequisites, the first step is to create a virtual machine on which you can install the Anbox Cloud Appliance.
 
-Complete the following steps to create a virtual machine on which you can install the Anbox Cloud Appliance.
-
-### 1. Deploy a Linux virtual machine
+### 1. Create a Linux virtual machine
 
 Log on to the [Microsoft Azure Portal](https://portal.azure.com/) and select the **Quickstart Center** service.
 
@@ -78,7 +91,9 @@ Azure will prompt you to download your private key before it starts creating the
 
 When deployment is complete, you can log on to the machine and install the Anbox Cloud Appliance.
 
-## Connect to the virtual machine using SSH
+For additional information, see the [Microsoft documentation](https://docs.microsoft.com/en-gb/azure/virtual-machines/) about creating virtual machines in Azure.
+
+### Connect to the virtual machine using SSH
 
 To install the Anbox Cloud Appliance, you must connect to the virtual machine that you just created, using SSH.
 
@@ -95,5 +110,6 @@ Perform the following steps to finish the appliance installation on the virtual 
 1. Initialise the appliance.
 1. Register your Ubuntu SSO account with the appliance dashboard.
 
-When you are done, you can log into the appliance dashboard using `https://your-machine-address` with your Ubuntu SSO account.
+[/details]
 
+When you are done, you can log into the appliance dashboard using `https://your-machine-address` with your Ubuntu SSO account.
