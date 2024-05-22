@@ -103,10 +103,10 @@ If you don't run any of the services in a high availability configuration, upgra
 
 To upgrade all charms, run the following commands:
 
-    juju refresh --channel=1.20/stable anbox-cloud-dashboard
-    juju refresh --channel=1.20/stable anbox-stream-gateway
-    juju refresh --channel=1.20/stable anbox-stream-agent
-    juju refresh --channel=1.20/stable coturn
+    juju refresh --channel=1.22/stable anbox-cloud-dashboard
+    juju refresh --channel=1.22/stable anbox-stream-gateway
+    juju refresh --channel=1.22/stable anbox-stream-agent
+    juju refresh --channel=1.22/stable coturn
     juju refresh --channel=latest/stable nats
 
 [note type="information" status="Note"]
