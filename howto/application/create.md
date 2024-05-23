@@ -38,6 +38,7 @@ services:
     protocols: [tcp]
     expose: false
 resources:
+  cpus: 4
   memory: 4GB
   disk-size: 8GB
 ```
