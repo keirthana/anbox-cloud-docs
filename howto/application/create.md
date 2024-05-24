@@ -116,6 +116,7 @@ versions:
       expose: false
       name: adb
 resources:
+  cpus: 4
   memory: 4GB
   disk-size: 8GB
 ```
