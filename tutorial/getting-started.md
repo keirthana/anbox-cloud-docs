@@ -215,7 +215,10 @@ Complete the following steps to add a new version to your application:
 
    ```yaml
    name: my-application
-   instance-type: a4.3
+   resources:
+     cpus: 4
+     memory: 3GB
+     disk-size: 3GB
    services:
     - name: adb
       port: 5559

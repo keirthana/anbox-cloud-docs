@@ -113,7 +113,10 @@ You can add your hooks directly to an application. To do so, complete the follow
 
    ```
    name: my-app
-   instance-type: a4.3
+   resources:
+     cpus: 4
+     memory: 3GB
+     disk-size: 3GB
    ```
 
 1. Prepare one or more hooks as described in [Create a hook](#create-a-hook-1).
@@ -168,7 +171,10 @@ Once the addon is uploaded to AMS, you can reference it from any application man
 
 ```
 name: my-app
-instance-type: a4.3
+resources:
+  cpus: 4
+  memory: 3GB
+  disk-size: 3GB
 addons: [my-addon]
 ```
 

@@ -71,7 +71,10 @@ Create an application manifest file (`my-application/manifest.yaml`) and include
 
 ```yaml
 name: my-application
-instance-type: a4.3
+resources:
+  cpus: 4
+  memory: 3GB
+  disk-size: 3GB
 addons:
   - ssh
 ```
