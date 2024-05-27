@@ -124,6 +124,7 @@ hotfix
 HTTPS
 HW
 HWE
+HVAC
 IAM
 idmapped
 IDR
