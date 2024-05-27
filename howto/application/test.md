@@ -95,8 +95,8 @@ In this example we use the following application `manifest.yaml`:
 name: app
 resources:
   cpus: 4
-  memory: 4GB
-  disk-size: 8GB
+  memory: 3GB
+  disk-size: 3GB
 ```
 
 Once the application is fully bootstrapped by AMS, you can launch an instance for it with the following command:
