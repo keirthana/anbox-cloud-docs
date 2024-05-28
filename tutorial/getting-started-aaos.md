@@ -53,3 +53,5 @@ As you modify the temperatures, you can see the changes reflecting on the HVAC p
 ## Learn more
 
 Learn about the various [supported system properties in the VHAL](https://source.android.com/docs/automotive/vhal/system-properties).
+
+You can also the [Anbox HTTP API](https://discourse.ubuntu.com/t/anbox-http-api/17819#heading--10vhal) to adjust the properties using the CLI.
