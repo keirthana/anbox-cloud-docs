@@ -2,6 +2,7 @@ Before you upgrade the Anbox Cloud Appliance, make sure all packages on the mach
 
     sudo apt update
     sudo apt upgrade
+    sudo snap refresh
 
 The Anbox Cloud Appliance includes an `upgrade` command which will perform all relevant upgrade steps to a newer version of the appliance.  First, run `anbox-cloud-appliance status` to check if an update is available:
 
