@@ -4,7 +4,7 @@ Anbox Cloud implements support for various Android features. The following table
 |--------------------|-----------------|-------------|
 | [OpenGL ES](https://source.android.com/devices/graphics/arch-egl-opengl) <= 3.2   |  ✓  | |
 | [Vulkan](https://source.android.com/devices/graphics/arch-vulkan) 1.1 |  ✓  | |
-| [Vulkan](https://source.android.com/devices/graphics/arch-vulkan) 1.3 |    | Planned for 1.22 on Android 13 or newer |
+| [Vulkan](https://source.android.com/devices/graphics/arch-vulkan) 1.3 |  ✓  | For Android 13 or newer |
 | [Camera](https://source.android.com/devices/camera) |  ✓  |     |
 | [Sensors](https://source.android.com/devices/sensors) |  ✓  |   |
 | Location           |  ✓  |          |
@@ -21,4 +21,4 @@ Anbox Cloud implements support for various Android features. The following table
 | [Disk encryption](https://source.android.com/security/encryption) | | |
 | [Verified Boot](https://source.android.com/security/verifiedboot) | | |
 | [Trusted Execution Environment (TEE)](https://source.android.com/security/trusty) | | |
-| [64-bit only support](https://developer.android.com/ndk/guides/abis) | | Planned for 1.22 |
+| [64-bit only support](https://developer.android.com/ndk/guides/abis) |  ✓  | 64-bit only systems/kernels are automatically detected and Android support adjust accordingly |
