@@ -44,11 +44,18 @@ Once the session is created, you can see the Android UI streaming. The controls 
 Try setting the temperature by performing the following steps:
 
 - Select *All VHAL properties* on the right.
-- In the *Search* bar, enter *HVAC_TEMPERATURE_SET*. 
 - Click on the HVAC panel icon to open it.
-- Modify the temperatures for *Area 1* and *Area 2*
+- In the *Search* bar, enter *HVAC_TEMPERATURE_DISPLAY_UNITS*. This indicates the unit of temperature.
+    - Update the value from 49 to 50. This updates the unit to Celsius.
 
-As you modify the temperatures, you can see the changes reflecting on the HVAC panel.
+        [note type="information" status="Note"]
+        By default, the HVAC panel displays the temperature in Fahrenheit while the VHAL properties show values in Celsius. To avoid confusion, this step switches the HVAC panel display to Celsius.
+        [/note]
+- In the *Search* bar, enter *HVAC_TEMPERATURE_SET*.
+- Modify the temperatures for *Area 1* and *Area 2*.
+- Click *Save*.
+
+As you modify the temperatures and save your changes, you can see the temperature updating on the HVAC panel.
 
 ## Learn more
 
