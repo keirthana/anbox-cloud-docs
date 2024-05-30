@@ -60,7 +60,10 @@ The following manifest specifies a node selector that instructs the AMS to sched
 
 ```
 name: candy
-instance-type: a4.3
+resources:
+  cpus: 4
+  memory: 3GB
+  disk-size: 3GB
 node-selector: [foo, bar]
 ```
 
@@ -91,8 +94,11 @@ When an instance is launched, Anbox enables an application watchdog by default f
 
 ```yaml
 name: candy
-instance-type: a4.3
 image: default
+resources:
+  cpus: 4
+  memory: 3GB
+  disk-size: 3GB
 watchdog:
   disabled: true
 ```
@@ -121,9 +127,7 @@ Name           | Value type | Description
 
 ## Resources
 
-Anbox Cloud provides a set of [instance types](#instance-type) that define the resources available to an instance. For example, if you start an instance for an application that uses the instance type `a4.3`, the instance is assigned 4 vCPU cores, 3 GB of RAM and 3 GB of disk space.
-
-If your application requires resources that do not correspond to any of the provided instance types, you can use the `resources` directive to override some or all of the predefined resources.
+The `resources` directive helps you define the required resources for your application.
 
 Name           | Value type | Minimum value  | Description
 ---------------|------------|----------------|-------------------------
@@ -132,7 +136,7 @@ Name           | Value type | Minimum value  | Description
 `disk-size`    | string     |     3 GB       | Disk size to be assigned to the application
 `gpu-slots`(optional) | integer |     0      | Number of GPU slots to be assigned to the application
 
-If all required fields (`cpus`/`memory`/`disk-size`) of `resources` are supplied in the application manifest, the `instance-type` field is no longer needed. Even if the `instance-type` field is provided, it will be overridden by the requirements in the `resources` fields upon application installation.
+Note that if all required fields (`cpus`/`memory`/`disk-size`) of `resources` are supplied in the application manifest and the deprecated `instance-type` field is also provided, `instance-type` will be overridden by the requirements in the `resources` fields upon application installation.
 
 See [How to configure available resources](https://discourse.ubuntu.com/t/24960) for more information.
 
@@ -212,7 +216,10 @@ To minimise the application size, most contents under the `APP_DIR` directory ar
 
 ```yaml
 name: my-application
-instance-type: a4.3
+resources:
+  cpus: 4
+  memory: 3GB
+  disk-size: 3GB
 bootstrap:
   keep:
     - 'apks/*.apk'

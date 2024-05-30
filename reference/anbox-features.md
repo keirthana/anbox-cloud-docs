@@ -22,7 +22,10 @@ To configure a feature globally for all instances, use a command similar to the 
 To configure a feature for one application in the manifest, use a syntax similar to the following:
 
     name: my-app
-    instance-type: a4.3
+    resources:
+      cpus: 4
+      memory: 3GB
+      disk-size: 3GB
     features: ["foo", "bar"]
 
 ### System UI

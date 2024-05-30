@@ -27,8 +27,11 @@ Let's assume that you have an application that consists of an APK file and an OB
 
    ```yaml
    name: com.foo.bar
-   instance-type: a4.3
    required-permissions: ['*']
+   resources:
+     cpus: 4
+     memory: 3GB
+     disk-size: 3GB
    extra-data:
      main.203779.com.foo.bar.obb:
        target: /sdcard/Android/obb/com.foo.bar/

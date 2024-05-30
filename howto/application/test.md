@@ -93,7 +93,10 @@ In this example we use the following application `manifest.yaml`:
 
 ```
 name: app
-instance-type: a4.3
+resources:
+  cpus: 4
+  memory: 3GB
+  disk-size: 3GB
 ```
 
 Once the application is fully bootstrapped by AMS, you can launch an instance for it with the following command:
