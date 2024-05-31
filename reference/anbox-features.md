@@ -60,14 +60,6 @@ Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/applica
 
 The feature flag will be considered by all newly launched instances once set.
 
-### AV1 software encoder
-
-*since 1.17.0*
-
-The AV1 software encoder is disabled by default but can be enabled with the `experimental.force_av1_software_encoding` feature flag. To transcode the video stream encoded in AV1 codec, all clients must support AV1 decoding.
-
-Once set, this feature flag will be considered by all newly launched instances.
-
 ### Development settings
 
 *since 1.18.0*
