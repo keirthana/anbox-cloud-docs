@@ -7,6 +7,7 @@ The following tutorials help you install the Anbox cloud Appliance and start usi
 
 The following tutorials are optional and help you further explore features of Anbox Cloud:
 1. [Set up a stream client](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328)
+1. [Get started with AAOS](https://discourse.ubuntu.com/t/create-and-stream-an-aaos-application/45467)
 1. [Create an addon](https://discourse.ubuntu.com/t/25284)
 
 Also check out the [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) for instructions on how to achieve specific goals when using Anbox Cloud, as well as the [Reference](https://discourse.ubuntu.com/t/reference/28828) and [Explanation](https://discourse.ubuntu.com/t/explanation/28829) sections for other helpful information.

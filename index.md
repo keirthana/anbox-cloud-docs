@@ -41,7 +41,8 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | tutorial/getting-started-dashboard | [2. Get started using the web dashboard](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)|
 | 2 | tutorial/getting-started | [3. Get started using the CLI](https://discourse.ubuntu.com/t/getting-started/17756)|
 | 2 | tutorial/stream-client | [4. Set up a stream client (Optional)](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328) |
-| 2 | tutorial/creating-addon | [5. Create an addon (Optional)](https://discourse.ubuntu.com/t/creating-an-addon/25284)|
+| 2 | tutorial/getting-started-aaos | [5. Get started with AAOS (Optional)](https://discourse.ubuntu.com/t/create-and-stream-an-aaos-application/45467)|
+| 2 | tutorial/creating-addon | [6. Create an addon (Optional)](https://discourse.ubuntu.com/t/creating-an-addon/25284)|
 | 0 | | |
 | 1 | howto/landing | [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) |
 | 2 | howto/install-appliance/landing | [Install the appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702) |
