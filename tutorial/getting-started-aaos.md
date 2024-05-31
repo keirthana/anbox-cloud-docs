@@ -2,8 +2,8 @@ This tutorial guides you through basic operations that you can do with an applic
 
 In this tutorial, we will be focusing on the following tasks:
 - Creating an application using an AAOS image.
-- Stream the application you created with a specific screen resolution.
-- Set the temperature of the automotive using the Vehicle Hardware Abstraction Layer (VHAL) controls.
+- Streaming the application you created with a specific screen resolution.
+- Setting the temperature of the automotive using the Vehicle Hardware Abstraction Layer (VHAL) controls.
 
 ## Prerequisites
 We will use the appliance dashboard to perform the tasks for this tutorial. So if you haven’t installed the Anbox Cloud Appliance yet, you must do that first.
