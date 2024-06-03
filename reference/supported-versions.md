@@ -2,8 +2,8 @@ Anbox Cloud currently officially supports only the most recent release. Older re
 
 To ensure you receive latest security updates and bug fixes you should upgrade to a new release of Anbox Cloud shortly after it was released.
 
-Current release: **1.20**
-Next release: **1.21** (scheduled for February 2024)
+Current release: **1.22**
+Next release: **1.23** (scheduled for August 2024)
 
 See the [Anbox Cloud Roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359) for details on the exact schedule of upcoming Anbox Cloud versions.
 
