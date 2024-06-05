@@ -4,7 +4,6 @@ Anbox Cloud implements support for various Android features. The following table
 |--------------------|-----------------|-------------|
 | [OpenGL ES](https://source.android.com/devices/graphics/arch-egl-opengl) <= 3.2   |  ✓  | |
 | [Vulkan](https://source.android.com/devices/graphics/arch-vulkan) 1.1 |  ✓  | |
-| [Vulkan](https://source.android.com/devices/graphics/arch-vulkan) 1.3 |  ✓  | For Android 13 or newer |
 | [Camera](https://source.android.com/devices/camera) |  ✓  |     |
 | [Sensors](https://source.android.com/devices/sensors) |  ✓  |   |
 | Location           |  ✓  |          |
