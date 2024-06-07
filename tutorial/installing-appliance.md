@@ -42,7 +42,7 @@ Before installing the appliance, you must attach the machine on which you want t
 
 On your machine, run the following command to install the Anbox Cloud Appliance and additional dependencies.
 
-    pro enable anbox-cloud
+    sudo pro enable anbox-cloud
 
 Running this command does the following:
 
@@ -82,10 +82,10 @@ Alternatively, you can also use the `anbox-cloud-appliance status` command to mo
 
 ```bash
 status: initializing
-progress: 60
+progress: 80
 update-available: false
 reboot-needed: false
-version: 1.19.1
+version: 1.22.0
 ```
 
 ## Register with the dashboard
