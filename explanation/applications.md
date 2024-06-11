@@ -10,8 +10,9 @@ To run on the Anbox Cloud platform, applications must fulfil the following requi
 * The application *should not* download any additional resources on regular startup to contribute to short startup times. If additional resources need to be downloaded, this can be done during the application bootstrap phase.
 * The application *must not* require the *Google Play services* to be available as Anbox Cloud does not include them.
 
-If your application fulfils these requirements but you are still having issues running it on Anbox Cloud, file a [bug report](https://bugs.launchpad.net/indore-extern/+filebug).
+If your application fulfils these requirements but you are still having issues running it on Anbox Cloud, file a [bug report](https://bugs.launchpad.net/anbox-cloud/+filebug).
 
+(sec-application-status)=
 ## Possible application statuses
 
 The following table lists the different statuses that an application can have depending on its state and what each status means:
@@ -24,7 +25,7 @@ The following table lists the different statuses that an application can have de
 | `error` | The application has encountered an error. |
 | `unknown` | A possible error occurred and the real state of the application cannot be determined. |
 
-If you encounter the `error` or the `unknown` status, see if you can identify the base instance and troubleshoot using the instance logs (See [How to view the instance logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329)). If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the [relevant instance logs](https://discourse.ubuntu.com/t/how-to-view-the-instance-logs/24329#view-stored-logs-2).
+If you encounter the `error` or the `unknown` status, see if you can identify the base instance and troubleshoot using the instance logs (See {ref}`howto-view-instance-logs`). If you are still unable to figure out the issue, [file a bug](https://bugs.launchpad.net/anbox-cloud) with the {ref}`relevant instance logs <howto-view-instance-logs>`.
 
 
 (sec-application-bootstrap)=

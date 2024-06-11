@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Anbox Cloud documentation
 
 This repository hosts the product documentation for Anbox Cloud.

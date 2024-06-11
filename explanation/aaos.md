@@ -11,4 +11,4 @@ The [Vehicle Abstraction Layer (VHAL)](https://source.android.com/docs/automotiv
 
 ## Related information
 
-* [Supported features (AOSP vs AAOS)](https://discourse.ubuntu.com/t/supported-features-aosp-vs-aaos/42520)
+* {ref}`ref-aosp-aaos`

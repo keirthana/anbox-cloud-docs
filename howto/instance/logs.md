@@ -20,6 +20,7 @@ To follow the log and get automatic updates for new entries, add the `-f` argume
 
 This will show the logs and update the output whenever new entries are added.
 
+(sec-view-stored-logs)=
 ## View stored logs
 
 If an instance fails to start or a runtime error occurs, AMS collects relevant log files from the instance and makes them available for inspection.

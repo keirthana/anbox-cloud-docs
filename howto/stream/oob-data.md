@@ -20,6 +20,7 @@ See the instructions for exchanging OOB data using a specific implementation ver
 * [Version 2](#version-2)
 * [Version 1](#version-1)
 
+(sec-oob-data-version-2)=
 ## Version 2
 
 The following instructions will walk you through how to set up data channels and perform data transmission in both directions between an Android application and a WebRTC platform.
@@ -273,6 +274,7 @@ try {
 <!-- wokeignore:rule=master -->
 For a complete Android example, see the [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project.
 
+(sec-oob-data-version-1)=
 ## Version 1
 
 ```{caution}

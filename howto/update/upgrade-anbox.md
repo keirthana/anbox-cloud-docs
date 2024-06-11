@@ -60,7 +60,7 @@ If your deployment uses an earlier Juju version, you must upgrade your controlle
 The deployed Juju charms need to be upgraded next.
 
 ```{note}
-- You can find a list of all charm, snap, bundle and Debian package versions for each Anbox Cloud release in the [component versions](https://discourse.ubuntu.com/t/component-versions/21413) overview. This also includes the charm and bundle revisions and channels for each release.
+- You can find a list of all charm, snap, bundle and Debian package versions for each Anbox Cloud release in the {ref}`ref-component-versions` overview. This also includes the charm and bundle revisions and channels for each release.
 
 - If you want to deploy a particular revision of a charm, you can do so by adding `--revision=<rev>` to the `juju upgrade-charm` command.
 

@@ -24,7 +24,7 @@ Installing a user app as a system app in an Android container requires the follo
 
 When the application is created successfully, the APK will be installed as a system app in the Android container.
 
-### Make a system app
+## Make a system app
 
 To build your app as a system app instead of a user app, add the attribute `android:sharedUserId="android.uid.system"` into the `<manifest>` tag in the `AndroidManifest.xml` file of your Android app. This attribute will allow the app to run a process with system privileges.
 
@@ -39,7 +39,7 @@ To build your app as a system app instead of a user app, add the attribute `andr
 
 Then build and sign the application alongside with other Android applications when building your Android image. Alternatively, sign it with [Android Studio](https://developer.android.com/studio/publish/app-signing). This method does not require the system platform key. Instead, you can use the keys that are generated from Android Studio to sign the application.
 
-### Create an addon
+## Create an addon
 
 To install the signed APK as a system app in the Android container, create an addon and invoke the `aam install-system-app` command in a `pre-start` hook.
 
@@ -75,7 +75,7 @@ Add this addon to AMS with the following command:
 
     amc addon add install-system-app .
 
-### Include the addon in an application
+## Include the addon in an application
 
 To use this addon in an application, include the addon name under `addons` in the application manifest file when creating an application. You must also enable the feature `allow_custom_system_signatures`, which ensures that the `aam install-system-app` command that is invoked in the `pre-start` hook of the addon works properly.
 

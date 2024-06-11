@@ -13,6 +13,7 @@ Each worker node runs [LXD](https://ubuntu.com/lxd) in [clustering mode](https:/
 
 Anbox Cloud is optimised to provide instances at high density per host. To determine how many cluster nodes you need and what resources they should have, you must estimate the capacity that you require for your use case. See {ref}`exp-capacity-planning` for more information.
 
+(sec-lxd-auto-scaling)=
 ### LXD auto scaling
 
 Different use cases for Anbox Cloud require elasticity of the LXD cluster to deal with dynamic user demand throughout a certain time period. This involves increasing the number of nodes of the LXD cluster when demand increases and reducing the number of nodes when demand decreases. As Anbox Cloud provides fine-grained capacity management to have tight control over how many users/instances are running on a single node, the driving factor for an auto scaling implementation cannot be deduced from CPU, memory or GPU load but from the planned capacity of the currently available nodes in the cluster.
