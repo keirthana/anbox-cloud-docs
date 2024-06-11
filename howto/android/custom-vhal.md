@@ -4,14 +4,14 @@
 *since 1.22.0*
 
 ```{note}
-Replacing the Anbox VHAL is only supported on [AAOS images](https://discourse.ubuntu.com/t/24185).
+Replacing the Anbox VHAL is only supported on {ref}`AAOS images <ref-provided-images>`.
 The Anbox Cloud dashboard does not support custom VHAL implementations.
 ```
 
 This document will guide through the process of replacing the Anbox Cloud VHAL
 implementation with your own implementation placed in the
 [ODM partition](https://source.android.com/docs/core/architecture/partitions/odm-partitions)
-using an [addon](https://discourse.ubuntu.com/t/38727).
+using {ref}`exp-addons`.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ property to `odm`. This will be done by writing that system property to the
 
 In the following example, we will name our addon `custom-vhal`.
 To override the VHAL implementation, we will use a
-[pre-start hook](https://discourse.ubuntu.com/t/28555) which is executed
+{ref}`pre-start hook <ref-hooks>` which is executed
 before Android gets started.
 
 The directory layout for the addon is strict and must be:
@@ -95,8 +95,7 @@ cp "${ADDON_DIR}/vhal.rc" "${ANDROID_ODM_DIR}/etc/init/"
 echo "ro.anbox.automotive.vhal=odm" >> "${ANDROID_ODM_DIR}/etc/build.prop"
 ```
 
-The addon
-[`manifest.yaml`](https://discourse.ubuntu.com/t/25293) file
+The {ref}`ref-addon-manifest` file
 contains metadata:
 
 ```yaml
@@ -123,14 +122,13 @@ Anbox Cloud applications.
 
 If you plan to always override the Anbox Cloud VHAL implementation in all
 applications, you can
-[enable the addon globally](https://discourse.ubuntu.com/t/25285):
+enable the addon globally (see {ref}`howto-enable-addons-globally`):
 
 ```bash
 amc config set application.addons custom-vhal
 ```
 
-Otherwise, add it to your
-[application manifest](https://discourse.ubuntu.com/t/24197):
+Otherwise, add it to your {ref}`ref-application-manifest`:
 
 ```yaml
 name: my-app
@@ -140,6 +138,6 @@ addons:
 
 ## Related information
 
-- [Create an addon](https://discourse.ubuntu.com/t/25284)
-- [How to use addons](https://discourse.ubuntu.com/t/17759)
-- [How to extend an application](https://discourse.ubuntu.com/t/28554)
+- {ref}`howto-create-addons`
+- {ref}`howto-addons`
+- {ref}`howto-extend-application`

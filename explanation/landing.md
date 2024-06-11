@@ -34,6 +34,7 @@ Understand deployment configurations to plan your deployment.
 | {ref}`exp-capacity-planning` | How to estimate the required capacity for your Anbox Cloud deployment |
 | {ref}`exp-gpus-instances` | How to manage GPUs and make them available to instances |
 | {ref}`exp-security` | Important aspects to keep your Anbox Cloud deployment secure |
+| {ref}`exp-custom-images` | Learn about customising AAOS images |
 
 
 Also check out the {ref}`tutorials` for step-by-step instructions that help you get familiar with Anbox Cloud, the {ref}`how-to-guides` for instructions on how to achieve specific goals when using Anbox Cloud and the {ref}`reference` section for reference material.
@@ -51,6 +52,7 @@ applications
 application-streaming
 capacity-planning
 clustering
+custom-images
 gpus-instances
 images
 instances

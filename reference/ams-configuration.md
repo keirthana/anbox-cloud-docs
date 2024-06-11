@@ -8,12 +8,12 @@ The Anbox Management Service (AMS) provides various configuration items to custo
 | `agent.api.fingerprint`<br/>*(string, N/A)*  | Fingerprint of certificate in the AMS trust store which is trusted when communicating with the stream agent. |
 | `agent.api.token`<br/>*(string, N/A)* | Token to be used for API authentication with stream agent. |
 | `agent.api.url`<br/>*(string, N/A)* | URL for stream agent API endpoint. |
-| `application.addons`<br/>*(string, N/A)* | Comma-separated list of addons that every application managed by AMS will use. See [How to enable an addon globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285). |
-| `application.auto_publish`<br/>*(bool, `true`)* | If set to `true`, AMS automatically published new application versions when the bootstrap process is finished. `false` disables this. See [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions-1). |
-| `application.auto_update`<br/>*(bool, `true`)* | If set to `true`, AMS automatically updates applications whenever any dependencies (parent image, addons, global configuration) change. `false` disables this. See [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-application-updates-3). |
+| `application.addons`<br/>*(string, N/A)* | Comma-separated list of addons that every application managed by AMS will use. See {ref}`howto-enable-addons-globally`. |
+| `application.auto_publish`<br/>*(bool, `true`)* | If set to `true`, AMS automatically published new application versions when the bootstrap process is finished. `false` disables this. See {ref}`sec-publish-app-versions`. |
+| `application.auto_update`<br/>*(bool, `true`)* | If set to `true`, AMS automatically updates applications whenever any dependencies (parent image, addons, global configuration) change. `false` disables this. See {ref}`sec-configure-automatic-app-updates`. |
 | `application.default_abi`<br/>*(string, N/A)* | Default Android ABI that applications should use. See [Android ABIs](https://developer.android.com/ndk/guides/abis) for a list of available ABIs. |
 | `application.max_published_versions`<br/>*(integer, `3`)* | Maximum number of published versions per application. If the number of versions of an application exceeds this configuration, AMS will automatically clean up older versions. |
-| `container.apt_mirror`<br/>*(string, N/A)*<br/>*(Deprecated)* | APT mirror to use within the containers. By default, `http://archive.ubuntu.com` (amd64) or `http://ports.ubuntu.com` (arm64) is used. This configuration item is deprecated since 1.20, use `instance.apt_mirror` instead. |
+| `container.apt_mirror`<br/>*(string,<br/>`http://archive.ubuntu.com` (AMD64)<br/> `http://ports.ubuntu.com` (ARM64))*<br/>*(Deprecated)* | APT mirror to use within the containers. This configuration item is deprecated since 1.20, use `instance.apt_mirror` instead. |
 | `container.default_platform`<br/>*(string, N/A)*<br/>*(Deprecated)* | The name of the platform that Anbox Cloud uses by default to launch containers. This configuration item is deprecated since 1.20, use `instance.default_platform` instead. |
 | `container.features`<br/>*(string, N/A)*<br/>*(Deprecated)* | Comma-separated list of features to enable (see list below). This configuration item is deprecated since 1.20, use `instance.features` instead. |
 | `container.network_proxy`<br/>*(string, N/A)*<br/>*(Deprecated)* | Network proxy to use inside the containers. This configuration item is deprecated since 1.20, use `instance.network_proxy` instead. |
@@ -22,7 +22,7 @@ The Anbox Management Service (AMS) provides various configuration items to custo
 | `core.proxy_https`<br/>*(string, N/A)* | HTTPS proxy to use for HTTPS requests that AMS performs. |
 | `core.proxy_ignore_hosts`<br/>*(string, N/A)* | Comma-separated list that defines the hosts for which a configured proxy is not used. |
 | `core.trust_password`<br/>*(string, N/A)* | The AMS trust password. |
-| `cpu.limit_mode`<br/>*(string, `scheduler`)* | The mode AMS uses to limit CPU access for an instance. See [About performance](https://discourse.ubuntu.com/t/about-performance/29416) for details. Possible values are: `scheduler`, `pinning` |
+| `cpu.limit_mode`<br/>*(string, `scheduler`)* | The mode AMS uses to limit CPU access for an instance. See {ref}`exp-performance` for details. Possible values are: `scheduler`, `pinning` |
 | `gpu.allocation_mode`<br/>*(string, `all`)* | Method of allocating GPUs: `all` tells AMS to allocate all available GPUs on a system to an instance. `single` allocates only a single GPU. |
 | `gpu.type`<br/>*(string, `none`)* | Type of GPU: `none`, `intel`, `nvidia`, `amd` |
 | `images.allow_insecure`<br/>*(bool, `false`)* | If set to `true`, AMS allows accepting untrusted certificates provided by the configured image server. |
@@ -30,7 +30,7 @@ The Anbox Management Service (AMS) provides various configuration items to custo
 | `images.update_interval`<br/>*(string, `5m`)* | Frequency of image updates (for example: 1h, 30m). |
 | `images.url`<br/>*(string, `https://images.anbox-cloud.io/stable/`)*  | URL of the image server to use. |
 | `images.version_lockstep`<br/>*(bool, `true`)*  | Whether to put the version of the latest pulled image and the AMS version in a lockstep. This ensures that a deployment is not automatically updated to newer image versions if AMS is still at an older version. This only applies for new major and minor but not patch version updates. |
-| `instance.apt_mirror`<br/>*(string, N/A)*   | APT mirror to use within the instances. By default, `http://archive.ubuntu.com` (amd64) or `http://ports.ubuntu.com` (arm64) is used. |
+| `instance.apt_mirror`<br/>*(string,<br/>`http://archive.ubuntu.com` (AMD64) `http://ports.ubuntu.com` (ARM64))*   | APT mirror to use within the instances. |
 | `instance.default_platform`<br/>*(string, N/A)*  | The name of the platform that Anbox Cloud uses by default to launch instances. |
 | `instance.features`<br/>*(string, N/A)*  | Comma-separated list of features to enable (see list below). |
 | `instance.network_proxy`<br/>*(string, N/A)* | Network proxy to use inside the instances. |
@@ -38,11 +38,11 @@ The Anbox Management Service (AMS) provides various configuration items to custo
 | `load_balancer.url`<br/>*(string, N/A)* | URL of the load balancer behind which AMS sits. The URL is handed to instances started by AMS to allow them to contact AMS through the load balancer and not via the address of an individual AMS instance. |
 | `node.queue_size`<br/>*(integer, `100`)*  | Maximum size of the queue containing requests to start and stop instances per LXD node. Changing the value requires a restart of AMS. |
 | `node.workers_per_queue`<br/>*(integer, `4`)*  | Number of workers processing instance start and stop requests. Changing the value requires a restart of AMS. |
-| `registry.filter`<br/>*(string, N/A)*  | Comma-separated list of tags to filter for when applications are fetched from the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761). If empty, no filter is applied. |
-| `registry.fingerprint`<br/>*(string, N/A)*  | Fingerprint of the certificate that the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) uses to TLS-secure its HTTPS endpoint. This is used by AMS for mutual TLS authentication with the registry. |
-| `registry.mode`<br/>*(string, `pull`)*  | Mode in which the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) client in AMS operates: `manual`, `pull`, `push` |
-| `registry.update_interval`<br/>*(string, `1h`)*  | Frequency of [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) updates (for example: 1h, 30m). |
-| `registry.url`<br/>*(string, N/A)*  | URL of the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) to use. |
+| `registry.filter`<br/>*(string, N/A)*  | Comma-separated list of tags to filter for when applications are fetched from the {ref}`exp-aar`. If empty, no filter is applied. |
+| `registry.fingerprint`<br/>*(string, N/A)*  | Fingerprint of the certificate that the {ref}`exp-aar` uses to TLS-secure its HTTPS endpoint. This is used by AMS for mutual TLS authentication with the registry. |
+| `registry.mode`<br/>*(string, `pull`)*  | Mode in which the {ref}`exp-aar` client in AMS operates: `manual`, `pull`, `push` |
+| `registry.update_interval`<br/>*(string, `1h`)*  | Frequency of {ref}`exp-aar` updates (for example: 1h, 30m). |
+| `registry.url`<br/>*(string, N/A)*  | URL of the {ref}`exp-aar` to use. |
 | `scheduler.strategy`<br/>*(string, `spread`)*  | Strategy that the internal instance scheduler in AMS uses to distribute instances across available LXD nodes: `binpack`, `spread` |
 
 (sec-node-configuration)=

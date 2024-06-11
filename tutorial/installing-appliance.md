@@ -101,7 +101,7 @@ update-available: false
 reboot-needed: false
 version: 1.22.0
 ```
-
+(sec-register-dashboard)=
 ## Register with the dashboard
 
 Once the initialisation process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation. This registration is needed to access the {ref}`exp-web-dashboard`.

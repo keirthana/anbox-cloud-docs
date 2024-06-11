@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Customise drawio/diagrams.net
 
 Load custom shapes:

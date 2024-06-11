@@ -5,14 +5,14 @@ Anbox Cloud provides images based on the Android Open Source Project (AOSP), an 
 
 The following table lists some Anbox features and whether they are supported for a given base.
 
-| Feature                                                                                                             | AOSP | AAOS |
-|---------------------------------------------------------------------------------------------------------------------|------|------|
-| boot-package and boot-activity in [application manifest](https://discourse.ubuntu.com/t/application-manifest/24197) | ✓    |   -   |
-| [Install app as system app](https://discourse.ubuntu.com/t/how-to-install-an-apk-as-a-system-app/27086)             | ✓    |   -   |
-| [Custom Android ID](https://discourse.ubuntu.com/t/ams-configuration/20872#custom-android-id-10)                    | ✓    |   -   |
-| [VHAL HTTP API](https://discourse.ubuntu.com/t/anbox-http-api/17819#h-10vhal-31)                                    | -    |   ✓   |
-| [VhalConnector](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/classanbox_1_1VhalConnector.html) in Platform SDK API                                                                                                                   | -    |   ✓   |
-| [Custom images](https://discourse.ubuntu.com/t/custom-images/45071)                                                                                                | -    |   ✓   |                                                                           |      | ✓    |
+|Feature   | AOSP | AAOS |
+|--------|------|------|
+| boot-package and boot-activity in {ref}`ref-application-manifest` | ✓    |   -   |
+| {ref}`howto-install-apk-system-app`             | ✓    |   -   |
+| [Custom Android ID](#custom-android-id)                    | ✓    |   -   |
+| {ref}`VHAL HTTP API <sec-anbox-https-api-vhal>`                                   | -    |   ✓   |
+| [VhalConnector](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/classanbox_1_1VhalConnector.html) in Platform SDK API                                                    | -    |   ✓   |
+| {ref}`exp-custom-images`     | -    |   ✓   | 
 
 ## Feature flags
 
@@ -45,15 +45,15 @@ The feature flag will be considered by all new launched instances once set.
 
 The Android virtual keyboard is disabled by default but can be enabled with the `enable_virtual_keyboard` feature flag.
 
-For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the [application bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2).
+For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the application {ref}`bootstrap process <sec-application-bootstrap>`.
 
 ### Client-Side Virtual Keyboard
 
 *since 1.11.0*
 
-The client-side virtual keyboard is disabled by default but can be enabled with the `enable_anbox_ime` feature flag. It requires the client application to embed [Anbox WebView](https://discourse.ubuntu.com/t/integrate-a-client-side-virtual-keyboard/23643) which interacts with the client-side virtual keyboard for text editing and sends the text to the Android container.
+The client-side virtual keyboard is disabled by default but can be enabled with the `enable_anbox_ime` feature flag. It requires the client application to embed {ref}`Anbox WebView <sec-application-bootstrap>` which interacts with the client-side virtual keyboard for text editing and sends the text to the Android container.
 
-For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the [application bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap-process-2).
+For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the application {ref}`bootstrap process <sec-application-bootstrap>`.
 
 ### WiFi
 
@@ -69,7 +69,7 @@ The feature flag will be considered by all newly launched instances once set.
 
 By default, Android is not allowed to reboot. With the `allow_android_reboot` feature flag, this can be allowed.
 
-Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog-5) if reboots are allowed.
+Note that you must disable the {ref}`sec-application-manifest-watchdog` if reboots are allowed.
 
 The feature flag will be considered by all newly launched instances once set.
 
