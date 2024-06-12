@@ -96,6 +96,7 @@ To enable the Android container to use a custom Android ID, add the feature flag
 
 Once set, this feature flag will be considered by all newly launched instances.
 
+(sec-gl-async-swap)=
 ### GL Async Swap Support
 
 *since 1.21.0*

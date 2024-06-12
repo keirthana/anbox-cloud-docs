@@ -77,7 +77,7 @@ Afterwards you can find the network endpoint of the instance in the output of th
 The endpoint of the ADB service exposed from the running instance is available at 10.226.4.200:10000 on the public network.
 
 ```{caution}
-Exposing the ADB service over the public internet brings security risks from having plain text data intercepted by third parties. It's always preferable to run scrcpy [through an encrypted SSH tunnel](#through-ssh-tunnel-6) if possible.
+Exposing the ADB service over the public internet brings security risks from having plain text data intercepted by third parties. It's always preferable to run scrcpy [through an encrypted SSH tunnel](#through-ssh-tunnel) if possible.
 ```
 
 ### Run scrcpy
