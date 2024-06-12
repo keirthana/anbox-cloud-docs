@@ -12,25 +12,26 @@ Anbox Cloud documentation is written in a combination of MyST and Markdown synta
 
 ## General
 
-* Write inclusively and assume a friendly tone rather than an overly formal one.
+* Use inclusive language and assume a friendly tone rather than an overly formal one.
 * Use monospace format for:
     * Inline code and code blocks
-    * File names: “manifest.yaml”
-    * References to utilities/programs: “like python3 or curl”
-    * File and directory paths: “in the /example/dir directory”
-    * Command options: “the --force command option”
+    * File names
+    * References to utilities/programs
+    * File and directory paths
+    * Command options
 * Avoid long sentences. If it is a complex statement, try and break it down into multiple sentences.While the Canonical copy style guide has guidance about hyphens when joining words, it does not elaborate much on prefixes.
-* Use bold and italics very sparingly. UI controls can be bold.
+* Use bold and italics very sparingly.Use italics for user interface fields and bold for UI elements that call for action.
 * Use single spaces between sentences.
 * Use angle brackets to indicate variables.
 * All extra whitespace should be removed, especially at the end of lines.
+* Add a new line at the end of the file.
 
 ## Section titles
 
 * Insert a blank line after a section title.
 * Do not skip heading levels when creating sections.
 * Avoid using multiple section titles sequentially without any text between them.
-* Avoid manual HTML anchors, links to section titles can be picked up from the automatic page-level TOC on the right.
+* Avoid manual HTML anchors, links to section titles can be picked up from the page-level TOC.
 
 ## Admonishments
 
@@ -47,9 +48,7 @@ Keeping the types of admonishments to a minimum could be simplistic and also red
 
 ### Oxford/Serial Comma
 
-The [Canonical copy style guide](https://docs.google.com/document/d/1AX-kSNztuAmShEoohe8L3LNLRnSKF7I0qkZGNeoGOok/edit#) discourages the use of the oxford/serial comma but there's still a lot of debate around it. The Anbox Cloud documentation does not restrict the usage of oxford comma because at worst, it can be annoying and can be construed as a practice of USA style of writing. However, there are places where not using it leads to ambiguous statements and sometimes, statements that have a whole different meaning.
-
-In summary, the Anbox Cloud docs do not use the oxford comma in an attempt to adhere to the Canonical style guide as much as possible but exceptions are allowed for the sake of technical accuracy.
+The Anbox Cloud documentation does not use the oxford comma but exceptions are allowed for the sake of technical accuracy and ease of readability.
 
 ### Hyphens for Prefixes
 
