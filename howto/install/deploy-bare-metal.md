@@ -10,7 +10,7 @@ Alternatively, you can follow the instructions in this document to use the [manu
 Before you start the installation, ensure that you have the required prerequisites:
 
 * At least three Ubuntu machines. See {ref}`sec-minimum-hardware-requirements` for details and recommendations.
-* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to https://ubuntu.com/pro to retrieve it.
+* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
   ```{caution}
   The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.
   ```

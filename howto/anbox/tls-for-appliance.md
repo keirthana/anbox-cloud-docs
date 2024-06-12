@@ -110,7 +110,7 @@ Before you start, make sure the following requirements are met:
   ```{note}
   The screenshots in the following instructions use an example domain name that is not owned or controlled by Canonical. Replace it with your own domain name when following the setup instructions.
   ```
-- The Anbox Cloud Appliance is installed and initialised. See {ref}`howto-install-appliance-aws` and {ref}`sec-initialise-appliance` for instrcutions.
+- The Anbox Cloud Appliance is installed and initialised. See {ref}`howto-install-appliance-aws` and {ref}`sec-initialise-appliance` for instructions.
 
 Then complete the following steps.
 

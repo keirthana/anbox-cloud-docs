@@ -22,7 +22,7 @@ We welcome your engagement with the Anbox Cloud community and appreciate all con
 
 - Improve your skills
 
-    Contributing to the Anbox Cloud docs is a great way to improve your documentation and technical communication skills. You’ll get experience writing clear, concise documentation following [Diataxis](https://diataxis.fr/) principles.
+    Contributing to the Anbox Cloud docs is a great way to improve your documentation and technical communication skills. You’ll get experience writing clear, concise documentation following [Diátaxis](https://diataxis.fr/) principles.
 
 - Learn more about Anbox Cloud
 
@@ -34,7 +34,7 @@ We welcome your engagement with the Anbox Cloud community and appreciate all con
 
 ### Style and language
 
-Anbox Cloud documentation follows [Diataxis](https://diataxis.fr/) principles. Before starting to contribute, we encourage you to familiarise yourself with Diataxis.
+Anbox Cloud documentation follows [Diátaxis](https://diataxis.fr/) principles. Before starting to contribute, we encourage you to familiarise yourself with Diátaxis.
 
 To accommodate different kinds of audience, try to:
 

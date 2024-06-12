@@ -13,7 +13,7 @@ Anbox Cloud documentation is written in a combination of MyST and Markdown synta
 ## General
 
 * Use inclusive language and assume a friendly tone rather than an overly formal one.
-* Use monospace format for:
+* Use monospaced font for:
     * Inline code and code blocks
     * File names
     * References to utilities/programs
@@ -23,7 +23,7 @@ Anbox Cloud documentation is written in a combination of MyST and Markdown synta
 * Use bold and italics very sparingly.Use italics for user interface fields and bold for UI elements that call for action.
 * Use single spaces between sentences.
 * Use angle brackets to indicate variables.
-* All extra whitespace should be removed, especially at the end of lines.
+* All extra white space should be removed, especially at the end of lines.
 * Add a new line at the end of the file.
 
 ## Section titles
@@ -31,7 +31,7 @@ Anbox Cloud documentation is written in a combination of MyST and Markdown synta
 * Insert a blank line after a section title.
 * Do not skip heading levels when creating sections.
 * Avoid using multiple section titles sequentially without any text between them.
-* Avoid manual HTML anchors, links to section titles can be picked up from the page-level TOC.
+* Avoid manual HTML anchors, links to section titles can be picked up from the page-level table of contents.
 
 ## Admonishments
 
@@ -56,9 +56,9 @@ Use hyphens when the starting letter of a word is in capital case or starts with
 
     **Note:** You might be required to add such words to the wordlist as spellcheck could flag these words.
 
-**Example:**
-* Pre-employment
-* Preconfigure
+**Examples:**
+* `Pre-employment`
+* `Preconfigure`
 
 ## Terminology
 
@@ -79,7 +79,7 @@ Simple images can be made using an image editor of your choice or you can use [d
 
 ## Redirects
 
-Add redirects whenever a filepath changes as it affects the URL of the page.
+Add redirects whenever a file path changes as it affects the URL of the page.
 
 
 
