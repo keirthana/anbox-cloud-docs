@@ -64,7 +64,7 @@ You can have multiple models on each controller, which means that you can deploy
 
 Every deployment of Anbox Cloud must be attached to the Ubuntu Pro service Canonical provides. This provides your deployment with the correct licences you're granted as part of your licence agreement with Canonical, next to other services available through your subscription like [Livepatch](https://ubuntu.com/livepatch).
 
-You can retrieve your Ubuntu Pro token at https://ubuntu.com/pro after logging in. You should record the token as you will need it for every deployment of Anbox Cloud.
+You can retrieve your Ubuntu Pro token at [`https://ubuntu.com/pro`](https://ubuntu.com/pro) after logging in. You should record the token as you will need it for every deployment of Anbox Cloud.
 
 ```{caution}
 The *Ubuntu Pro (Infra-only)* token will result in a failed deployment. You need an *Ubuntu Pro* subscription.
