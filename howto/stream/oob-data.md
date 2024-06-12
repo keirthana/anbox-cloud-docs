@@ -13,7 +13,7 @@ Anbox Cloud provides two versions of this OOB data exchange:
   This version supports only half-duplex data transmission. It allows sending data from an Android application to a WebRTC client through the Anbox WebRTC platform, but it is not possible to receive data from the WebRTC client to an Android application.
 
 ```{caution}
-The support for [version 1](#version-1-10) of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release. Therefore, you should migrate your integration of version 1 of the OOB data exchange to [version 2](#version-2-1) for full-duplex data transmission and better performance.
+The support for [version 1](#version-1) of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release. Therefore, you should migrate your integration of version 1 of the OOB data exchange to [version 2](#version-2) for full-duplex data transmission and better performance.
 ```
 
 See the instructions for exchanging OOB data using a specific implementation version below:

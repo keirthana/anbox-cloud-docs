@@ -34,7 +34,7 @@ We welcome your engagement with the Anbox Cloud community and appreciate all con
 
 ### Style and language
 
-Anbox Cloud documentation follows [Diataxis](https://diataxis.fr/) principles. You are particularly encouraged to read up on Diataxis before starting to contribute.
+Anbox Cloud documentation follows [Diataxis](https://diataxis.fr/) principles. Before starting to contribute, we encourage you to familiarise yourself with Diataxis.
 
 To accommodate different kinds of audience, try to:
 
@@ -42,7 +42,7 @@ To accommodate different kinds of audience, try to:
 - Write inclusively and assume very little prior knowledge of the reader.
 - Link or explain phrases, acronyms and concepts that may be unfamiliar, and if unsure, err on the side of caution.
 
-We (mostly) adhere to the [Ubuntu style guide](https://docs.ubuntu.com/styleguide/en). Any deviations from the Ubuntu style guide are documented in the [Anbox Cloud documentation style guide](./anbox-style-guide.md).
+We (mostly) adhere to the [Ubuntu style guide](https://docs.ubuntu.com/styleguide/en). Any deviations from the Ubuntu style guide are documented in the [Anbox Cloud documentation style guide](./contribute/anbox-style-guide.md).
 
 ### Quality checks
 * The following pre-commit checks are run automatically before every commit:

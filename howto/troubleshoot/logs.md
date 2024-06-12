@@ -8,7 +8,7 @@ There are two types of logs that help you understand what is happening in your A
 
 ## View logs for Anbox Cloud
 
-The Anbox Cloud deployment has centralised logging set up as default. Each unit in your cluster automatically sends logging information to the controller based on the current [logging level](#logging-level-4). You can use the Juju command line to easily inspect these logs and to change the logging level.
+The Anbox Cloud deployment has centralised logging set up as default. Each unit in your cluster automatically sends logging information to the controller based on the current [logging level](#logging-level). You can use the Juju command line to easily inspect these logs and to change the logging level.
 
 To view the logs from the current controller and model, simply run:
 

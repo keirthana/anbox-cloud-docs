@@ -543,7 +543,7 @@ endpoint will fail with a 500 error code on non-automotive Anbox images.
     * `area_id`: Valid area identifier for the property. Can be omitted for global properties. Can be given in decimal, octal, or hexadecimal format.
     * Some properties require additional data for getting their values. See [OBD2_FREEZE_FRAME](https://cs.android.com/android/platform/superproject/+/android10-release:hardware/interfaces/automotive/vehicle/2.0/types.hal;l=2061-2089) for an example. This additional data must be passed as JSON in the request body. The values must be set in the fields `int32_values`, `int64_values`, `float_values`, `bytes`, or `string_value`.
 
-To get the list of available properties and areas, query first the [`1.0/vhal/config` endpoint](#heading--10vhalconfig).
+To get the list of available properties and areas, query first the [`1.0/vhal/config` endpoint](#10vhalconfig).
 
 Example return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/vhal/0x15600503/0x31 | jq .`:
 
@@ -572,7 +572,7 @@ Example return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sock
 
 Usually, only one of `bytes`, `float_values`, `int32_values`, `int64_values`,
 `string_value` is set, and the rest is empty or omitted, depending on the
-property type (see [`1.0/vhal/config`](#heading--10vhalconfig)).
+property type (see [`1.0/vhal/config`](#10vhalconfig)).
 `MIXED` property types may have multiple of these values set at the same time, see
 [VHAL property types](https://source.android.com/docs/automotive/vhal/property-configuration#property-types).
 
