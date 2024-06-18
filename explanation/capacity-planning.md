@@ -113,7 +113,7 @@ To avoid your cluster running out of resources even at peak loads, you must size
 - Tweak the resource preset for your application to give less resources to each instance. The impact of doing this depends very much on your application.
 - Base your estimate on a lower maximum number of instances (for example, 150 instances), which will lead to your cluster running out of resources before the peak load is reached.
 
-## Related information
+## Related topics
 
-* {ref}`ref-application-manifest`
 * {ref}`exp-clustering`
+* {ref}`ref-application-manifest`

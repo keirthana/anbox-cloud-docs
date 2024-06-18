@@ -30,8 +30,9 @@ For base instances, if your addon needs additional tools and dependencies during
 
 ## Related topics
 
-* {ref}`tut-create-addon`
-* {ref}`ref-hooks`
 * {ref}`exp-instances`
+* {ref}`tut-create-addon`
 * {ref}`howto-addons`
+* {ref}`ref-hooks`
+
 

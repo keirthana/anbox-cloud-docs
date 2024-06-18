@@ -74,7 +74,7 @@ You can request AMS to create an instance and AMS will be able to dynamically cr
 If you do not enable streaming when launching the instance, you cannot enable it on that instance later. You will have to launch a new instance with streaming enabled.
 ```
 
-## Related information
+## Related topics
 
 * {ref}`sec-deploy-anbox-cloud-juju` (installs streaming stack)
 * [Signalling](https://www.html5rocks.com/en/tutorials/webrtc/infrastructure/)

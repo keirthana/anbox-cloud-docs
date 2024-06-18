@@ -126,6 +126,7 @@ When launching an instance, you must explicitly specify the platform that the An
 Use the `--vm` option to launch a VM instance.
 
 ## Related topics
-* {ref}`exp-instances`
+
 * {ref}`exp-addons`
+* {ref}`exp-instances`
 * {ref}`howto-create-addons`

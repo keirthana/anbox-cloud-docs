@@ -78,4 +78,5 @@ Finally, switch to the new remote by running the following command:
 All invocations of the `amc` command will from now on use the new remote.
 
 ## Related topics
+
 * {ref}`exp-ams`

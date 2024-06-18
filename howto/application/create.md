@@ -129,4 +129,5 @@ resources:
 Once the status of the application switches to `ready`, the application is ready and can be used. See {ref}`howto-wait-for-application` for information about how to monitor the application status.
 
 ## Related topics
+
 * {ref}`sec-application-bootstrap`

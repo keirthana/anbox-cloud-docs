@@ -142,6 +142,6 @@ To launch an instance with development mode enabled, add the `--devmode` flag to
 
 ## Related topics
 
+* {ref}`exp-application-streaming`
 * {ref}`exp-instances`
 * {ref}`howto-access-instance`
-* {ref}`exp-application-streaming`
