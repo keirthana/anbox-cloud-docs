@@ -9,6 +9,6 @@ Since the 1.21.0 release, in addition to providing images based on the Android O
 
 The [Vehicle Abstraction Layer (VHAL)](https://source.android.com/docs/automotive/vhal) enables Android Automotive to communicate with and control the different vehicle hardware controls.
 
-## Related information
+## Related topics
 
 * {ref}`ref-aosp-aaos`

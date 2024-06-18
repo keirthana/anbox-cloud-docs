@@ -21,6 +21,6 @@ Apart from these views, the dashboard also allows you to work with the {ref}`exp
 
 ## Related topics
 
+* {ref}`tut-installing-appliance`
 * {ref}`howto-use-web-dashboard`
 * {ref}`howto-deploy-anbox-juju`
-* {ref}`tut-installing-appliance`

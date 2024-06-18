@@ -70,6 +70,8 @@ Furthermore, the network connection is crucial. When implementing your applicati
 Also make sure to optimise the network path from the Anbox Cloud server to the client devices. This optimisation could be very specific to your use case. For public clouds, it often means choosing the region that is located closest to the end users. When using a bare metal installation, you should deploy servers that are geographically close to the end users. There might also be other solutions depending on the network service route.
 
 ## Related topics
-* {ref}`ref-hooks`
-* {ref}`howto-run-benchmarks`
+
 * {ref}`exp-capacity-planning`
+* {ref}`howto-run-benchmarks`
+* {ref}`ref-hooks`
+

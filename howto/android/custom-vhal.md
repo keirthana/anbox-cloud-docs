@@ -136,7 +136,7 @@ addons:
   - custom-vhal
 ```
 
-## Related information
+## Related topics
 
 - {ref}`howto-create-addons`
 - {ref}`howto-addons`

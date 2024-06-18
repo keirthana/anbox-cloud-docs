@@ -62,5 +62,5 @@ Type `anbox-stream-gateway --help` to list all commands.
 
 * {ref}`exp-application-streaming`
 * {ref}`exp-ams`
-* {ref}`sec-streaming-sdk`
 * {ref}`tut-set-up-stream-client`
+* {ref}`sec-streaming-sdk`

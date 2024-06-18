@@ -111,6 +111,6 @@ The exposed port can be found be running `amc ls`, under the `ENDPOINTS` column.
 ## Related topics
 
 * {ref}`exp-addons`
-* {ref}`ref-addon-manifest`
 * {ref}`howto-update-addons`
 * {ref}`howto-extend-application`
+* {ref}`ref-addon-manifest`
