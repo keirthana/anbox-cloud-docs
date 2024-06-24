@@ -2,6 +2,8 @@ Anbox Cloud provides a rich software stack that enables you to run Android appli
 
 Anbox Cloud maintains a single Android system per [instance](https://discourse.ubuntu.com/t/26204#instance), providing higher density and better performance per host while ensuring security and isolation of each instance. Depending on the target platform, payload, and desired application performance (for example, frame rate), Anbox Cloud can run more than 100 instances on a single machine.
 
+Watch [this video](https://youtu.be/P7md88WhOC0?si=eUGiQtQ-9uXmZOQu) to learn more about how you can deploy Anbox Cloud with charms.
+
 ## Variants
 
 Anbox Cloud comes in two variants that serve different purposes:
