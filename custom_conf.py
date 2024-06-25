@@ -130,9 +130,17 @@ linkcheck_ignore = [
     'http://127.0.0.1:8000'
     ]
 
-# Pages on which to ignore anchors
-# (This list will be appended to linkcheck_anchors_ignore_for_url)
-custom_linkcheck_anchors_ignore_for_url = []
+# This setting will check the links but not the anchors
+# This list will be appended to linkcheck_anchors_ignore_for_url
+custom_linkcheck_anchors_ignore_for_url = [
+    r'https://matrix\.to/#/#anbox-cloud:ubuntu\.com',
+    r'https://canonical\.github\.io/anbox-cloud\.github\.com/latest/anbox-stream-gateway/#/session/handle-new-session',
+]
+
+# Pages to ignore for link check
+linkcheck_exclude_documents = [
+    r'.*/release-notes/.*'
+]
 
 ############################################################
 ### Additions to default configuration

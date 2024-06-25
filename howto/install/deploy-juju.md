@@ -134,7 +134,7 @@ Choose between the available {ref}`sec-juju-bundles`:
 
 ## Customise the hardware configuration
 
-To customise the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://juju.is/docs/olm/constraint#heading--complete-list-of-constraints) in the Juju documentation for details.
+To customise the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://juju.is/docs/juju/constraint#heading--list-of-constraints) in the Juju documentation for details.
 
 For the `anbox-cloud-core` bundle, such an `overlay.yaml` file looks like this:
 
