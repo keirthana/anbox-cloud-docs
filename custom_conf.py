@@ -127,12 +127,23 @@ redirects = {
 
 # Links to ignore when checking links
 linkcheck_ignore = [
-    'http://127.0.0.1:8000'
+    'http://127.0.0.1:8000',
+    'https://support.canonical.com/',
+    'https://assets.ubuntu.com/manager'
     ]
 
-# Pages on which to ignore anchors
-# (This list will be appended to linkcheck_anchors_ignore_for_url)
-custom_linkcheck_anchors_ignore_for_url = []
+# This setting will check the links but not the anchors
+# This list will be appended to linkcheck_anchors_ignore_for_url
+custom_linkcheck_anchors_ignore_for_url = [
+    r'https://matrix\.to/.*',
+    r'https://canonical\.github\.io/anbox-cloud\.github\.com/.*',
+    r'https://juju.is/docs/juju/.*',
+]
+
+# Pages to ignore for link check
+linkcheck_exclude_documents = [
+    r'.*/release-notes/.*'
+]
 
 ############################################################
 ### Additions to default configuration

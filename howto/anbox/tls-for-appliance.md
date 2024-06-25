@@ -163,7 +163,7 @@ DNS propagation usually takes a while. When it completes and the validation is s
 
 To use the Anbox Cloud Appliance through your domain name, AWS must route the HTTPS traffic for your domain to the Anbox Cloud Appliance. To ensure this, you must create a load balancer that listens for traffic and routes it to the appliance.
 
-1. Go to the [Load balancers](https://us-east-1.console.aws.amazon.com/ec2/home#LoadBalancers:) page in the EC2 dashboard.
+1. Go to the Load balancers page in the EC2 dashboard.
 1. Click **Create load balancer**.
 1. Choose `Application Load Balancer` as the load balancer type.
 1. For the **Basic configuration**, keep the default options (scheme: internet-facing, IP address type: `IPv4`).

@@ -179,7 +179,7 @@ Configure custom styles and colours:
 
 # Upload images to the asset manager
 
-Images should be uploaded to [`https://manager.assets.ubuntu.com/`](https://manager.assets.ubuntu.com/) .
+Images should be uploaded to [Ubuntu assets](https://assets.ubuntu.com/manager) .
 
 To do this from the command line, get an API token and install [`https://github.com/canonical/canonicalwebteam.upload-assets`](https://github.com/canonical/canonicalwebteam.upload-assets)
 
