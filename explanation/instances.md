@@ -100,11 +100,3 @@ To check whether development mode is enabled, run `amc show <instance_ID>` or lo
 * {ref}`howto-stop-instance`
 * {ref}`howto-view-instance-logs`
 * {ref}`howto-wait-for-application`
-
-
-
-
-
-
-
-

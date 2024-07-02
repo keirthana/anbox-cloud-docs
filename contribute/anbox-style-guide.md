@@ -19,8 +19,8 @@ Anbox Cloud documentation is written in a combination of MyST and Markdown synta
     * References to utilities/programs
     * File and directory paths
     * Command options
-* Avoid long sentences. If it is a complex statement, try and break it down into multiple sentences.While the Canonical copy style guide has guidance about hyphens when joining words, it does not elaborate much on prefixes.
-* Use bold and italics very sparingly.Use italics for user interface fields and bold for UI elements that call for action.
+* Avoid long sentences. If it is a complex statement, try and break it down into multiple sentences. While the Canonical copy style guide has guidance about hyphens when joining words, it does not elaborate much on prefixes.
+* Use bold and italics very sparingly. Use italics for user interface fields and bold for UI elements that call for action.
 * Use single spaces between sentences.
 * Use angle brackets to indicate variables.
 * All extra white space should be removed, especially at the end of lines.
@@ -80,7 +80,3 @@ Simple images can be made using an image editor of your choice or you can use [d
 ## Redirects
 
 Add redirects whenever a file path changes as it affects the URL of the page.
-
-
-
-

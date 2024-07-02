@@ -39,7 +39,7 @@ With Anbox Cloud, you can scale your deployment to as many clusters and subclust
 
 You should also assess the number of instances that you require for each model/service. For example, think about the number of Juju controller instances that you need. See [Make a controller highly available](https://juju.is/docs/olm/manage-controllers#heading--make-a-controller-highly-available) for more information.
 
-Anbox Cloud comes with support for High Availability (HA) for both Core and the Streaming Stack.You can define HA by adding new Juju units. See {ref}`howto-enable-ha` to plan your HA requirements.
+Anbox Cloud comes with support for High Availability (HA) for both Core and the Streaming Stack. You can define HA by adding new Juju units. See {ref}`howto-enable-ha` to plan your HA requirements.
 
 ## Security
 

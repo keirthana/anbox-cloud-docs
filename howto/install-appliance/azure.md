@@ -21,104 +21,105 @@ Once you have completed the [deployment steps](https://github.com/Azure/azure-qu
 An alternate option to using the quickstart template is to deploy manually. If you wish to deploy Anbox Cloud Appliance manually on Azure, the following instructions guide you through all relevant steps.
 
 <details>
-<summary></summary>
+<summary>Click for details</summary>
 
-  The entire deployment process will take 20-30 minutes, depending on the selected hardware and the network conditions.
+The entire deployment process will take 20-30 minutes, depending on the selected hardware and the network conditions.
 
-  ## Prerequisites
+### Prerequisites
 
-  Check the hardware requirements listed in {ref}`ref-requirements` for the Anbox Cloud Appliance.
+Check the hardware requirements listed in {ref}`ref-requirements` for the Anbox Cloud Appliance.
 
-  In addition, make sure you have the following prerequisites:
+In addition, make sure you have the following prerequisites:
 
-  * An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
-  * Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
-    ```{caution}
-    The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.
-    ```
-  * An Azure account that you use to create the virtual machine.
+* An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
+* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to [Ubuntu Pro](https://ubuntu.com/pro) to retrieve it.
 
-  Once you have the prerequisites, the first step is to create a virtual machine on which you can install the Anbox Cloud Appliance.
+```{caution}
+  The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.
+```
+* An Azure account that you use to create the virtual machine.
 
-  ### 1. Create a Linux virtual machine
+Once you have the prerequisites, the first step is to create a virtual machine on which you can install the Anbox Cloud Appliance.
 
-  Log on to the [Microsoft Azure Portal](https://portal.azure.com/) and select the **Quickstart Center** service.
+### 1. Create a Linux virtual machine
 
-  ![Quickstart Center](https://assets.ubuntu.com/v1/0ca30941-azure_quickstart-co.png)
+Log on to the [Microsoft Azure Portal](https://portal.azure.com/) and select the **Quickstart Center** service.
 
-  In the Quickstart Center, select **Deploy a virtual machine**. On the resulting screen, select **Create a Linux virtual machine**.
+![Quickstart Center](https://assets.ubuntu.com/v1/0ca30941-azure_quickstart-co.png)
 
-  ![Deploy a virtual machine](https://assets.ubuntu.com/v1/d0ac4cf5-azure_deploy-vm-co.png)
+In the Quickstart Center, select **Deploy a virtual machine**. On the resulting screen, select **Create a Linux virtual machine**.
 
-  ### 2. Configure basic settings
+![Deploy a virtual machine](https://assets.ubuntu.com/v1/d0ac4cf5-azure_deploy-vm-co.png)
 
-  On the **Basics** tab of the virtual machine configuration, specify the required information. Several of the options are specific to how and where you want to deploy your virtual machine. In most cases you can keep the default values, but make sure to set the following configurations:
+### 2. Configure basic settings
 
-  * Select the latest Ubuntu image (Ubuntu Server 22.04 LTS) for the architecture that you want to use. The following instructions and screenshots use the Arm64 architecture.
-  * Select a size that matches the hardware requirements(see {ref}`sec-minimum-hardware-requirements`). For example, select `Standard_D16ps_v5`, which has 16 vCPUs and 64 GB of RAM.
-  * Change the user name of the administrator account to `ubuntu`.
-  * Accept the defaults for the inbound port rules for now; these rules will be configured later in the setup process.
+On the **Basics** tab of the virtual machine configuration, specify the required information. Several of the options are specific to how and where you want to deploy your virtual machine. In most cases you can keep the default values, but make sure to set the following configurations:
 
-  ![Basics tab](https://assets.ubuntu.com/v1/9c8844a2-azure_config-basics-co.png)
+* Select the latest Ubuntu image (Ubuntu Server 22.04 LTS) for the architecture that you want to use. The following instructions and screenshots use the Arm64 architecture.
+* Select a size that matches the hardware requirements(see {ref}`sec-minimum-hardware-requirements`). For example, select `Standard_D16ps_v5`, which has 16 vCPUs and 64 GB of RAM.
+* Change the user name of the administrator account to `ubuntu`.
+* Accept the defaults for the inbound port rules for now; these rules will be configured later in the setup process.
 
-  Click **Next: Disks** to continue to the next tab.
+![Basics tab](https://assets.ubuntu.com/v1/9c8844a2-azure_config-basics-co.png)
 
-  ### 3. Configure disks
+Click **Next: Disks** to continue to the next tab.
 
-  Azure separates the main disk for the operating system and any data disks. On the **Disks** tab of the virtual machine configuration, you can configure the OS disk and attach data disks.
+### 3. Configure disks
 
-  For the Anbox Cloud Appliance, you should attach a separate data disk of at least 50 GB. To do so, click **Create and attach a new disk**. You can accept the default settings and change the disk size according to your requirements. For performance reasons, we recommend using 100 GB or more.
+Azure separates the main disk for the operating system and any data disks. On the **Disks** tab of the virtual machine configuration, you can configure the OS disk and attach data disks.
 
-  ![Create and attach a new disk](https://assets.ubuntu.com/v1/8fea8b11-azure_config-disk.png)
+For the Anbox Cloud Appliance, you should attach a separate data disk of at least 50 GB. To do so, click **Create and attach a new disk**. You can accept the default settings and change the disk size according to your requirements. For performance reasons, we recommend using 100 GB or more.
 
-  Click **Next: Networking** to continue to the next tab.
+![Create and attach a new disk](https://assets.ubuntu.com/v1/8fea8b11-azure_config-disk.png)
 
-  ### 4. Configure networking
+Click **Next: Networking** to continue to the next tab.
 
-  For networking, the Anbox Cloud Appliance requires the following change to the default settings:
+### 4. Configure networking
 
-  1. For the **NIC network security group**, select **Advanced** and create a network security group.
-  1. Add an inbound security rule that allows access to the following destination port ranges: `80,443,8444,5349,10000-11000,60000-60100`
-  1. Change the name of the rule and, if relevant for your setup, adapt the priority of the rule.
+For networking, the Anbox Cloud Appliance requires the following change to the default settings:
 
-  ![Network security group configuration](https://assets.ubuntu.com/v1/a7be81a2-azure_config-secgroup-co.png)
+1. For the **NIC network security group**, select **Advanced** and create a network security group.
+1. Add an inbound security rule that allows access to the following destination port ranges: `80,443,8444,5349,10000-11000,60000-60100`
+1. Change the name of the rule and, if relevant for your setup, adapt the priority of the rule.
 
-  ### 5. Finalise the configuration
+![Network security group configuration](https://assets.ubuntu.com/v1/a7be81a2-azure_config-secgroup-co.png)
 
-  Check the configuration settings on the remaining tabs and make sure they are suitable for your deployment. The Anbox Cloud Appliance does not require any changes to the default configuration for these areas.
+### 5. Finalise the configuration
 
-  ### 6. Review and create
+Check the configuration settings on the remaining tabs and make sure they are suitable for your deployment. The Anbox Cloud Appliance does not require any changes to the default configuration for these areas.
 
-  On the **Review + create** tab, check the final configuration. If everything looks good, click **Create** to launch the virtual machine.
+### 6. Review and create
 
-  ![Review + create](https://assets.ubuntu.com/v1/c6ff12de-azure_config-review.png)
+On the **Review + create** tab, check the final configuration. If everything looks good, click **Create** to launch the virtual machine.
 
-  Azure will prompt you to download your private key before it starts creating the virtual machine. Make sure to save the private key in a secure location and with secure permissions (0600).
+![Review + create](https://assets.ubuntu.com/v1/c6ff12de-azure_config-review.png)
 
-  ![Deployment](https://assets.ubuntu.com/v1/fafd883f-azure_progress.png)
+Azure will prompt you to download your private key before it starts creating the virtual machine. Make sure to save the private key in a secure location and with secure permissions (0600).
 
-  When deployment is complete, you can log on to the machine and install the Anbox Cloud Appliance.
+![Deployment](https://assets.ubuntu.com/v1/fafd883f-azure_progress.png)
 
-  For additional information, see the [Microsoft documentation](https://docs.microsoft.com/en-gb/azure/virtual-machines/) about creating virtual machines in Azure.
+When deployment is complete, you can log on to the machine and install the Anbox Cloud Appliance.
 
-  ### Connect to the virtual machine using SSH
+For additional information, see the [Microsoft documentation](https://docs.microsoft.com/en-gb/azure/virtual-machines/) about creating virtual machines in Azure.
 
-  To install the Anbox Cloud Appliance, you must connect to the virtual machine that you just created, using SSH.
+### Connect to the virtual machine using SSH
 
-  To do so, go to the resource page of your virtual machine and find its public IP address. Then use SSH to log on to the machine, using the user name `ubuntu` and the private key file that you downloaded during the creation of the virtual machine. For example:
+To install the Anbox Cloud Appliance, you must connect to the virtual machine that you just created, using SSH.
 
-      ssh -i Downloads/anbox-cloud-appliance_key.pem ubuntu@192.0.2.15
+To do so, go to the resource page of your virtual machine and find its public IP address. Then use SSH to log on to the machine, using the user name `ubuntu` and the private key file that you downloaded during the creation of the virtual machine. For example:
 
-  ## Finish the installation
+    ssh -i Downloads/anbox-cloud-appliance_key.pem ubuntu@192.0.2.15
 
-  Perform the following steps to finish the appliance installation on the virtual machine. If you are not already familiar with how to perform these steps, see {ref}`tut-installing-appliance` for detailed instructions.
+### Finish the installation
 
-  1. Install the Anbox Cloud Appliance on the virtual machine.  
+Perform the following steps to finish the appliance installation on the virtual machine. If you are not already familiar with how to perform these steps, see {ref}`tut-installing-appliance` for detailed instructions.
+
+1. Install the Anbox Cloud Appliance on the virtual machine.
     ```{note}
     Remember to attach the virtual machine to your Ubuntu Pro subscription, while installing the appliance.
     ```
-  1. Initialise the appliance.
-  1. Register your Ubuntu SSO account with the appliance dashboard.
+1. Initialise the appliance.
+1. Register your Ubuntu SSO account with the appliance dashboard.
 
 </details>
 

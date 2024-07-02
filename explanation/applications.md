@@ -109,6 +109,3 @@ When the application bootstrap succeeds, the base instance is automatically remo
 * {ref}`howto-update-application`
 * {ref}`howto-wait-for-application`
 * {ref}`ref-application-manifest`
-
-
-
