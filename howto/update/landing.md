@@ -10,7 +10,7 @@ If possible, Anbox Cloud automatically enables [Livepatch](https://ubuntu.com/se
 ```{toctree}
 :titlesonly:
 
-Control updates <control>
+Control updates <control-updates>
 Upgrade Anbox Cloud Appliance <upgrade-appliance>
 Upgrade Anbox Cloud (regular) <upgrade-anbox>
 ```

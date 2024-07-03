@@ -6,8 +6,8 @@ The following guides in this section help you to manage and work with your Anbox
 ```{toctree}
 :titlesonly:
 
-Control AMS remotely <ams-access>
-Manage images <images>
+Control AMS remotely <control-ams-remotely>
+Manage images <manage-images>
 Resize LXD storage <resize-storage>
 Run benchmarks <benchmarks>
 Set up TLS <tls-for-appliance>

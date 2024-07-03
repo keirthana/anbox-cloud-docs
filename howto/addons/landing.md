@@ -19,12 +19,12 @@ If you have used addons before Anbox Cloud 1.12, see {ref}`howto-migrate-addons`
 :hidden:
 
 
-Create an addon <create>
-Enable an addon globally <enable-globally>
-Migrate addons to new hooks <migrate>
-Update addons <update>
-Example: Customise Android <customise-android>
-Example: Emulate platforms <emulate-platforms>
-Example: Backup and restore data <backup-and-restore>
-Example: Install tools <install-tools>
+Create an addon <create-addon>
+Enable an addon globally <enable-addons-globally>
+Migrate addons to new hooks <migrate-addon>
+Update addons <update-addon>
+Example: Customise Android <customise-android-example>
+Example: Emulate platforms <emulate-platforms-example>
+Example: Backup and restore data <backup-and-restore-example>
+Example: Install tools <install-tools-example>
 ```

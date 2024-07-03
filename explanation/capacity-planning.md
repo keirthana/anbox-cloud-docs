@@ -28,7 +28,7 @@ A default resource preset will be set for every application. A resource preset s
 
 Depending on the resources that your application requires, if the {ref}`default resource preset <exp-resources-presets>` does not suit, you can choose suitable {ref}`sec-application-manifest-resources` that fit your application.
 
-When an instance for an application is launched, it takes the specified amount of resources. AMS internally summarises the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see [Over-committing resources](#over-committing-resources) for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
+When an instance for an application is launched, it takes the specified amount of resources. AMS internally summarises the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see {ref}`sec-over-committing` for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
 
     No suitable node to satisfy instance requirement available
 

@@ -3,7 +3,7 @@
 
 A node is a machine in the LXD cluster. Depending on whether it is running the management components of Anbox Cloud or streaming services, the node can serve multiple purposes such as a control node, worker node etc. The Anbox Management Service(AMS) hosts metadata that is necessary for its functioning on the nodes.
 
-# Possible node statuses
+## Possible node statuses
 
 The following table lists the different statuses that a node can have depending on its state and what each status means:
 

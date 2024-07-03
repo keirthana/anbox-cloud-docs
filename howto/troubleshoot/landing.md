@@ -6,13 +6,13 @@ The following troubleshooting guides describe some commonly encountered problems
 ```{toctree}
 :titlesonly:
 
-Instance failures <instance-failures>
-Issues with application creation <application-creation>
-Issues with clustering <lxd-cluster>
-Issues with initial setup <initial-setup>
-Issues with streaming <streaming-issues>
-Issues with web dashboard <dashboard-issues>
-View logs <logs>
+Instance failures <troubleshoot-instance-failures>
+Issues with application creation <troubleshoot-application-creation>
+Issues with clustering <troubleshoot-cluster-issues>
+Issues with initial setup <troubleshoot-initial-setup>
+Issues with streaming <troubleshoot-streaming-issues>
+Issues with web dashboard <troubleshoot-dashboard-issues>
+View logs <view-logs>
 ```
 
 ```{note}

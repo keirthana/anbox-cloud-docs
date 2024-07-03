@@ -19,9 +19,9 @@ Also check out the {ref}`how-to-guides` for instructions on how to achieve speci
 :hidden:
 
 Install Anbox Cloud Appliance <installing-appliance>
-Getting started (AAOS) <getting-started-aaos>
-Getting started (dashboard) <getting-started-dashboard>
-Getting started (CLI) <getting-started>
-stream-client
+Get started (AAOS) <getting-started-aaos>
+Get started (dashboard) <getting-started-dashboard>
+Get started (CLI) <getting-started>
+set-up-stream-client
 creating-addon
 ```

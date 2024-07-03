@@ -6,9 +6,9 @@ The following guides in this section describe how to use the Streaming Stack to 
 ```{toctree}
 :titlesonly:
 
-Access stream gateway <access>
-Exchange out-of-band-data <oob-data>
-Integrate client side keyboard <client-side-keyboard>
+Access stream gateway <access-stream-gateway>
+Exchange out-of-band-data <exchange-oob-data>
+Integrate client side keyboard <integrate-virtual-keyboard>
 ```
 
 See {ref}`exp-application-streaming` for an introduction to the Streaming Stack.

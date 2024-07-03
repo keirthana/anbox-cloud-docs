@@ -9,13 +9,13 @@ The following how-to guides are available for operations on applications:
 
 ```{toctree}
 :titlesonly:
-Create an application <create>
-Delete an application <delete>
-Extend an application <extend>
-List applications <list>
-Stream applications <stream>
-Test an application <test>
-Update an application <update>
+Create an application <create-application>
+Delete an application <delete-application>
+Extend an application <extend-application>
+List applications <list-applications>
+Stream applications <stream-application>
+Test an application <test-application>
+Update an application <update-application>
 Pass custom data to an application <pass-custom-data>
-Wait for an application <wait>
+Wait for an application <wait-for-application>
 ```

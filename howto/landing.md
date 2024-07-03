@@ -47,8 +47,7 @@ Also check out the {ref}`tutorials` for step-by-step instructions that help you 
 ```{toctree}
 :hidden:
 
-Implement streaming <stream/landing>
-Install Anbox Cloud Appliance <install-appliance/landing>
+Install the Appliance <install-appliance/landing>
 Install Anbox Cloud (regular) <install/landing>
 Manage AAR <aar/landing>
 Manage Addons <addons/landing>
@@ -56,8 +55,9 @@ Manage Anbox Cloud <anbox/landing>
 Manage Applications <application/landing>
 Manage cluster nodes <cluster/landing>
 Manage Instances <instance/landing>
-Monitor Anbox Cloud <monitor/landing>
+Monitor <monitor/landing>
 Port Android apps <port/landing>
+Stream <stream/landing>
 Troubleshoot Anbox Cloud <troubleshoot/landing>
 Update Anbox Cloud <update/landing>
 Use web dashboard <dashboard/landing>

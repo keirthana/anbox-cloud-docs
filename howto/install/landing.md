@@ -10,9 +10,9 @@ The following guides in this section describe how to install Anbox Cloud.
 ```{toctree}
 :titlesonly:
 
-Customise your installation <customise>
+Customise your installation <customise-installation>
 Deploy on bare metal <deploy-bare-metal>
 Deploy with Juju <deploy-juju>
-Enable high availability <high-availability>
-Validate deployment <validate>
+Enable high availability <enable-high-availability>
+Validate deployment <validate-deployment>
 ```

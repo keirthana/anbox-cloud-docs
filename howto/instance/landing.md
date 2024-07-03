@@ -6,16 +6,16 @@ The following guides in this section describe how to work with instances in Anbo
 ```{toctree}
 :titlesonly:
 
-Access an instance <access>
-Backup and restore data <backup-and-restore>
-Create an instance <create>
-Delete an instance <delete>
+Access an instance <access-instance>
+Backup and restore data <backup-restore-application-data>
+Create an instance <create-instance>
+Delete an instance <delete-instance>
 Expose services on an instance <expose-services>
-Configure geographic location <geographic-location>
-List instances <list>
-View instance logs <logs>
-Start an instance <start>
-Stop an instance <stop>
-Wait for an instance <wait>
+Configure geographic location <configure-geographic-location>
+List instances <list-instances>
+View instance logs <view-instance-logs>
+Start an instance <start-instance>
+Stop an instance <stop-instance>
+Wait for an instance <wait-for-instance>
 ```
 See {ref}`exp-instances` for an introduction to how instances are used in Anbox Cloud.

@@ -8,6 +8,6 @@ The following guides are available:
 ```{toctree}
 :titlesonly:
 
-Develop addons in devmode <develop-addon>
-Develop a platform plugin <develop-platform>
+Develop addons in devmode <develop-addon-devmode>
+Develop a platform plugin <develop-platform-plugin>
 ```

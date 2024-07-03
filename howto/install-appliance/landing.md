@@ -25,7 +25,7 @@ For all other cloud platforms, follow the steps detailed in {ref}`tut-installing
 ```{toctree}
 :hidden:
 
-AWS <aws>
-Azure <azure>
-Google Cloud <google-cloud>
+Install on AWS <install-on-aws>
+Install on Azure <install-on-azure>
+Install on Google Cloud <install-on-google-cloud>
 ```
