@@ -22,7 +22,7 @@ N/A
 | `anbox-cloud-dashboard` | `1.22/stable` | 1.22.2 |
 | `anbox-stream-agent` | `1.22/stable` | 1.22.2 |
 | `anbox-stream-gateway` | `1.22/stable` | 1.22.2 |
-| `anbox-cloud-appliance` | `1.22/stable` | 1.22.2 |
+| `anbox-cloud-appliance` | `1.22/stable` | 1.22.1 |
 
 
 ### Anbox images
