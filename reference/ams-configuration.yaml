@@ -100,7 +100,8 @@ all:
     type: "string"
     default: "-"
     description: >-
-      Network proxy to use inside the instances.
+      Network proxy to use inside the instances. This value must have
+      the format <hostname>:<port>
     deprecated: "No"
   container.security_updates:
     type: "bool"
