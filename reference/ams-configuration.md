@@ -33,8 +33,7 @@ The Anbox Management Service (AMS) provides various configuration items to custo
 | `instance.apt_mirror`<br/>*(string,<br/>`http://archive.ubuntu.com` (AMD64) `http://ports.ubuntu.com` (ARM64))*   | APT mirror to use within the instances. |
 | `instance.default_platform`<br/>*(string, N/A)*  | The name of the platform that Anbox Cloud uses by default to launch instances. |
 | `instance.features`<br/>*(string, N/A)*  | Comma-separated list of features to enable (see list below). |
-| `instance.network_proxy`<br/>*(string, N/A)* | Network proxy to use inside the instances. This value must have
-      the format <hostname>:<port> |
+| `instance.network_proxy`<br/>*(string, N/A)* | Network proxy to use inside the instances. This value must have the format `<hostname>:<port>` |
 | `instance.security_updates`<br/>*(bool, `true`)*  | If set to `true`, automatic Ubuntu security updates are applied during the application bootstrap process. `false` disables this. This configuration item is deprecated since 1.20, use `instance.security_updates` instead. |
 | `load_balancer.url`<br/>*(string, N/A)* | URL of the load balancer behind which AMS sits. The URL is handed to instances started by AMS to allow them to contact AMS through the load balancer and not via the address of an individual AMS instance. |
 | `node.queue_size`<br/>*(integer, `100`)*  | Maximum size of the queue containing requests to start and stop instances per LXD node. Changing the value requires a restart of AMS. |
