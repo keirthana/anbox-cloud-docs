@@ -12,7 +12,6 @@ Anbox Cloud follows a defined release cycle with frequent minor and patch releas
 
 | Release | Target Date | What to expect| 
 |---------|-------------|---------------|
-| 1.22.2 | July 18 2024 | * Android security updates for July 2024<br/> * Bug fixes |
 | 1.23.0 | August 14 2024 | * Improvements to VHAL support<br/> *Overhaul of Anbox Cloud Appliance snap<br/>  * AAOS enhancements<br/> * Support for multiple subclusters in the web dashboard<br/> * Android security updates for August 2024<br/> * Bug fixes|
 | 1.23.1 | September 18 2024 | * Android security updates for September 2024<br/> * Bug fixes |
 | 1.23.2 | October 16 2024 | * Android security updates for October 2024<br/> * Bug fixes |

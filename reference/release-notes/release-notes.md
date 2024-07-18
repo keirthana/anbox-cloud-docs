@@ -7,7 +7,6 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Tentative Release date | Planned release version |
 |----|----|
-| July 17 2024 | Anbox Cloud 1.22.2 |
 | August 14 2024 | Anbox Cloud 1.23.0 |
 | September 18 2024 | Anbox Cloud 1.23.1 |
 | October 16 2024 | Anbox Cloud 1.23.2 |
@@ -16,6 +15,7 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Release date   |  Release notes  |
 |----|----|
+| July 18 2024 | [Anbox Cloud 1.22.2](https://discourse.ubuntu.com/t/46495) |
 | June 13 2024 | [Anbox Cloud 1.22.1](https://discourse.ubuntu.com/t/45752) |
 | May 15 2024 | [Anbox Cloud 1.22.0](https://discourse.ubuntu.com/t/45074) |
 
