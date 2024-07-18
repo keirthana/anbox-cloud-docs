@@ -33,6 +33,21 @@ Anbox Cloud documentation is written in a combination of MyST and Markdown synta
 * Avoid using multiple section titles sequentially without any text between them.
 * Avoid manual HTML anchors, links to section titles can be picked up from the page-level table of contents.
 
+## Cross references
+
+Always use [explicit targets](https://webaim.org/techniques/alttext/) for pages and sections to cross reference content within documentation. For external links or to reference a section on the same page, use markdown link syntax.
+
+The target names must be unique for each page and topic.
+
+Anbox Cloud documentation adheres to the following convention when naming explicit targets:
+* Reference: `ref-xxx-yyy`
+* Explanation: `exp-xxx-yyy`
+* How-to guides: `howto-xxx-yyy`
+* Tutorials: `tut-xxx-yyy`
+* Section targets in any topic: `sec-xxx-yyy`
+
+This helps in maintaining consistency in target naming and creating unique target names.
+
 ## Admonishments
 
 While admonishments can be useful to convey important information, they can be a distraction when used often. So before adding an admonishment, assess if the content really belongs in one.
@@ -77,6 +92,12 @@ While images and screenshots are very helpful in visual appeal and getting the m
 
 Simple images can be made using an image editor of your choice or you can use [diagrams.net](https://www.diagrams.net).
 
+### Alternative text for images
+
+Use alternative text (or alt text) for images when visual details cannot be included in the written content. You can leave the alternative text empty if it is more appropriate, for example, an icon that has a label.
+
+When writing alt text for images, consider the content, its context and purpose. It should accurately reflect the content and at the same time be concise.
+
 ## Redirects
 
-Add redirects whenever a file path changes as it affects the URL of the page.
+Set up redirects in [`custom_conf.py`](/custom_conf.py) whenever a file path changes as it affects the URL of the page.
