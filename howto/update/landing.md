@@ -11,6 +11,6 @@ If possible, Anbox Cloud automatically enables [Livepatch](https://ubuntu.com/se
 :titlesonly:
 
 Control updates <control-updates>
-Upgrade Anbox Cloud Appliance <upgrade-appliance>
-Upgrade Anbox Cloud (regular) <upgrade-anbox>
+Upgrade the Appliance <upgrade-appliance>
+Upgrade Anbox Cloud <upgrade-anbox>
 ```

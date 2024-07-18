@@ -15,7 +15,7 @@ When porting an Android app to Anbox Cloud (usually in the form of an APK), ther
 
 Choose APK architecture <choose-apk-architecture>
 Configure Watchdog <configure-watchdog>
-Grant runtime permissions to app <grant-runtime-permissions>
+Grant runtime permissions <grant-runtime-permissions>
 Install APK as system app <install-apk-system-app>
 Port APKs with OBB file <port-apk-obb-files>
 ```

@@ -47,7 +47,7 @@ aar
 anbox-cloud
 web-dashboard
 ams
-aaos
+AAOS <aaos>
 applications
 application-streaming
 capacity-planning

@@ -72,6 +72,7 @@ Also check out the {ref}`tutorials` for step-by-step instructions that help you 
 
 addon-manifest
 ams-configuration
+Anbox Cloud images <provided-images>
 sdks
 api-reference
 application-manifest
@@ -84,12 +85,11 @@ license-information
 network-ports
 perf-benchmarks
 prometheus
-provided-images
 release-notes/release-notes.md
 requirements
 roadmap
 android-features
-anbox-features
+Supported features <anbox-features>
 supported-rendering-resources
 supported-versions
 supported-codecs

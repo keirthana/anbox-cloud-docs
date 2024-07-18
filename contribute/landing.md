@@ -15,5 +15,5 @@ Consistency is vital in documentation, which is why we request contributors to f
 
 ```{toctree}
 :hidden:
-anbox-style-guide
+Style guide <anbox-style-guide>
 ```
