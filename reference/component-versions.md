@@ -5,6 +5,39 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.22.2
+
+### Charms
+
+N/A
+
+### Bundles
+
+N/A
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.22/stable` | 1.22.2 |
+| `aar`    | `1.22/stable` | 1.22.2 |
+| `ams-node-controller` | `1.22/stable` | 1.22.2 |
+| `anbox-cloud-dashboard` | `1.22/stable` | 1.22.2 |
+| `anbox-stream-agent` | `1.22/stable` | 1.22.2 |
+| `anbox-stream-gateway` | `1.22/stable` | 1.22.2 |
+
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.22.2 |
+| `jammy:android13:arm64` | 1.22.2 |
+| `jammy:android12:amd64` | 1.22.2 |
+| `jammy:android12:arm64` | 1.22.2 |
+| `jammy:aaos13:amd64` (Experimental)    | 1.22.2 |
+| `jammy:aaos13:arm64` (Experimental)   | 1.22.2 |
+
 ## 1.22.1
 
 ### Charms
