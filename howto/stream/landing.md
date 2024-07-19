@@ -9,6 +9,7 @@ The following guides in this section describe how to use the Streaming Stack to 
 Access stream gateway <access-stream-gateway>
 Exchange out-of-band-data <exchange-oob-data>
 Integrate client side keyboard <integrate-virtual-keyboard>
+Enable client-side video upscaling <enable-client-side-video-upscaling>
 ```
 
 See {ref}`exp-application-streaming` for an introduction to the Streaming Stack.
