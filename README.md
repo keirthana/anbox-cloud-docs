@@ -44,20 +44,30 @@ To accommodate different kinds of audience, try to:
 
 We (mostly) adhere to the [Ubuntu style guide](https://docs.ubuntu.com/styleguide/en). Any deviations from the Ubuntu style guide are documented in the [Anbox Cloud documentation style guide](./contribute/anbox-style-guide.md).
 
+To help with syntax, there is a [cheat sheet](./contribute/doc-cheat-sheet.md) that lists the syntax for commonly used Markdown and MyST markup. For more detailed guidance, see the [MyST style guide](https://canonical-documentation-with-sphinx-and-readthedocscom.readthedocs-hosted.com/style-guide-myst/).
+
 ### Quality checks
-* The following pre-commit checks are run automatically before every commit:
-  - Inclusive language checks (`woke`)
-  - Spellcheck (`spellcheck`)
 
-#### Running pre-commit checks
+**GitHub Actions**
 
-To be able to run these pre-commit checks:
+The following GitHub actions run automatically on every pull request:
+- Inclusive language check
+- Spellcheck
+- Accessibility check
+- Link check
+
+**Pre-commit hooks**
+
+To be able to run pre-commit checks, the following prerequisites should be fulfilled:
 
 * Install the `pre-commit` package from the Ubuntu repositories.
 * Install the `aspell` and `aspell-en` packages from the Ubuntu repositories. This is required by the spellchecker.
 * Navigate to the top-level directory of this repository and run `pre-commit install --install-hooks`.
 
-#### Overriding pre-commit checks
+When the prerequisites are met, the following pre-commit checks are run automatically before every commit. They help in resolving basic issues before committing your changes.
+
+- Inclusive language checks (`woke`)
+- Spellcheck (`spellcheck`)
 
 Enabling pre-commit checks are optional as these checks are executed on pull requests automatically. If you do not want to run these checks before commits or to skip a particular check, use the following tips:
 
