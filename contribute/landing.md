@@ -1,7 +1,7 @@
 (contribute)=
 # Contribute to Anbox Cloud documentation
 
-Although Anbox Cloud is a closed-source product, the documentation for Anbox Cloud is open and is available at the [Anbox Cloud documentation respository](https://github.com/canonical/anbox-cloud-docs) on GitHub.
+Although Anbox Cloud is a closed-source product, the documentation for Anbox Cloud is open and is available at the [Anbox Cloud documentation repository](https://github.com/canonical/anbox-cloud-docs) on GitHub.
 
 We welcome contributions, suggestions, fixes and constructive feedback from the user community. If you feel something is inaccurate, unclear or broken, you have a number of ways to fix it:
 
