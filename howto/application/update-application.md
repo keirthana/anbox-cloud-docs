@@ -111,7 +111,7 @@ Each version takes up space on the LXD nodes. To free up space and remove old an
 The command will ask for your approval before the version is removed as it might affect your users. If you want to bypass the check, you can add the `--yes` flag to the command.
 
 (sec-configure-automatic-app-updates)=
-## Configure automatic application updates
+## Configure automatic updates
 
 AMS automatically updates an application whenever any of its dependencies (parent image, addons, global configuration) changes. This produces a new version for the application, which is automatically published if the `application.auto_publish` configuration item is enabled.
 
@@ -131,7 +131,7 @@ When automatic updates are disabled, applications must be manually updated for a
 
 This will initiate the update process and create a new application version.
 
-## Change image an application is based on
+## Change base image
 
 The image an application is based on can be changed with the following command:
 

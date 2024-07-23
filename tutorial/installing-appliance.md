@@ -13,7 +13,7 @@ If you want to install **Anbox Cloud** instead, see {ref}`howto-install-anbox-cl
 
 This tutorial guides you through the steps that are required to install and initialise the Anbox Cloud Appliance on the machine from the [snap](https://snapcraft.io/anbox-cloud-appliance).
 
-## Prerequisites
+## Preparation
 
 Make sure you have the following prerequisites:
 

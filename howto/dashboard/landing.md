@@ -6,7 +6,7 @@ The Anbox Cloud Dashboard offers a web GUI that users can use to create, manage 
 
 Before you can log into the dashboard, you must register your Ubuntu One account with the dashboard to authenticate.
 
-### Register an Ubuntu One account in Anbox Cloud
+### Register in Anbox Cloud
 
 On a regular Anbox Cloud deployment, use the following Juju action to register an Ubuntu One account:
 
@@ -28,7 +28,7 @@ unit-anbox-cloud-dashboard-0:
     started: 2021-02-10 14:04:44 +0000 UTC
 ```
 (sec-register-ubuntu-one-appliance)=
-### Register an Ubuntu One account in Anbox Cloud Appliance
+### Register in the appliance
 
 If you followed the instructions in the {ref}`tut-installing-appliance` tutorial, you already registered your Ubuntu One account.
 

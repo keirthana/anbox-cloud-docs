@@ -41,7 +41,7 @@ In addition, make sure you have the following prerequisites:
 
 Once you have the prerequisites, the first step is to create a virtual machine on which you can install the Anbox Cloud Appliance.
 
-### 1. Create a Linux virtual machine
+### Create a Linux virtual machine
 
 Log on to the [Microsoft Azure Portal](https://portal.azure.com/) and select the **Quickstart Center** service.
 
@@ -51,7 +51,7 @@ In the Quickstart Center, select **Deploy a virtual machine**. On the resulting 
 
 ![Deploy a virtual machine](https://assets.ubuntu.com/v1/d0ac4cf5-azure_deploy-vm-co.png)
 
-### 2. Configure basic settings
+### Configure basic settings
 
 On the **Basics** tab of the virtual machine configuration, specify the required information. Several of the options are specific to how and where you want to deploy your virtual machine. In most cases you can keep the default values, but make sure to set the following configurations:
 
@@ -64,7 +64,7 @@ On the **Basics** tab of the virtual machine configuration, specify the required
 
 Click **Next: Disks** to continue to the next tab.
 
-### 3. Configure disks
+### Configure disks
 
 Azure separates the main disk for the operating system and any data disks. On the **Disks** tab of the virtual machine configuration, you can configure the OS disk and attach data disks.
 
@@ -74,7 +74,7 @@ For the Anbox Cloud Appliance, you should attach a separate data disk of at leas
 
 Click **Next: Networking** to continue to the next tab.
 
-### 4. Configure networking
+### Configure networking
 
 For networking, the Anbox Cloud Appliance requires the following change to the default settings:
 
@@ -84,11 +84,11 @@ For networking, the Anbox Cloud Appliance requires the following change to the d
 
 ![Network security group configuration](https://assets.ubuntu.com/v1/a7be81a2-azure_config-secgroup-co.png)
 
-### 5. Finalise the configuration
+### Finalise the configuration
 
 Check the configuration settings on the remaining tabs and make sure they are suitable for your deployment. The Anbox Cloud Appliance does not require any changes to the default configuration for these areas.
 
-### 6. Review and create
+### Review and create
 
 On the **Review + create** tab, check the final configuration. If everything looks good, click **Create** to launch the virtual machine.
 
@@ -102,7 +102,7 @@ When deployment is complete, you can log on to the machine and install the Anbox
 
 For additional information, see the [Microsoft documentation](https://docs.microsoft.com/en-gb/azure/virtual-machines/) about creating virtual machines in Azure.
 
-### Connect to the virtual machine using SSH
+### Connect to the VM
 
 To install the Anbox Cloud Appliance, you must connect to the virtual machine that you just created, using SSH.
 

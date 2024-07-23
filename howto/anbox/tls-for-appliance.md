@@ -3,21 +3,25 @@
 
 The Anbox Cloud Appliance uses a self-signed certificate to provide HTTPS services. If you want to serve the appliance over HTTPS using a valid SSL/TLS certificate, follow the steps in this document to generate and install a valid SSL/TLS certificate on the Anbox Cloud Appliance.
 
-```{note}
-This document assumes you have the Anbox Cloud Appliance installed. If you haven't, follow the {ref}`tut-installing-appliance` tutorial to do so.
-```
-
 If you run the appliance on AWS, you can choose to use the AWS Certificate Manager. Otherwise, you must manage the certificate yourself manually.
 
-## Manage the certificate yourself
+## Prerequisites
 
-To generate and install a certificate yourself, complete the following steps.
+Before you start, make sure the following requirements are met:
 
-### 1. Add a DNS record
+- The Anbox Cloud Appliance is installed and initialised. See {ref}`howto-install-appliance-aws` and {ref}`sec-initialise-appliance` for instructions.
+
+- If you want to use the AWS certificate manager, you should have a domain name for use with the Anbox Cloud Appliance registered, either through Amazon Route 53 (see [Register a new domain](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register.html) in the Amazon Route 53 documentation) or  through another domain provider.
+
+## Manage the certificate manually
+
+To generate and install a certificate yourself, complete the following steps:
+
+### Add a DNS record
 
 Setting up DNS redirection depends on your DNS provider. Refer to the documentation of your provider to create a DNS record pointing to the IP/DNS of the AWS instance where the Anbox Cloud Appliance is running.
 
-### 2. Configure the location
+### Configure the location
 
 Configure the location for the appliance using the created DNS name:
 
@@ -27,7 +31,7 @@ Configure the location for the appliance using the created DNS name:
 This option is experimental. It will be removed in a future release when a better replacement exists.
 ```
 
-### 3. Generate an SSL certificate
+### Generate an SSL certificate
 
 There are many ways to create a valid SSL certificate. One way is to use [Let's Encrypt](https://letsencrypt.org/) to generate a free SSL certificate.
 
@@ -54,7 +58,7 @@ These files will be updated when the certificate renews.
 Certbot has set up a scheduled task to automatically renew this certificate in the background.
 ```
 
-### 4. Install the SSL certificate
+### Install the SSL certificate
 
 Copy the generated certificate to the `/var/snap/anbox-cloud-appliance/common/traefik/tls` directory:
 
@@ -103,19 +107,12 @@ The appliance will face a short downtime during the renewal of the SSL certifica
 
 If you run the Anbox Cloud Appliance on AWS, you can use the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/) to provision and manage your TLS certificate.
 
-Before you start, make sure the following requirements are met:
-
-- You have a domain name for use with the Anbox Cloud Appliance registered, either through Amazon Route 53 (see [Register a new domain](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register.html) in the Amazon Route 53 documentation) or  through another domain provider.
-
-  ```{note}
+```{note}
   The screenshots in the following instructions use an example domain name that is not owned or controlled by Canonical. Replace it with your own domain name when following the setup instructions.
   ```
-- The Anbox Cloud Appliance is installed and initialised. See {ref}`howto-install-appliance-aws` and {ref}`sec-initialise-appliance` for instructions.
-
-Then complete the following steps.
 
 (sec-configure-routing-info-name-servers)=
-### 1. Configure routing information and name servers
+### Configure routing information and name servers
 
 ```{note}
 You can skip this step if you registered your domain name through Amazon Route 53.
@@ -142,7 +139,7 @@ In the case of the Anbox Cloud Appliance, we want the traffic routed to the AWS 
 
    ![Configure custom name servers for your domain with your domain provider](https://assets.ubuntu.com/v1/433fdfd9-manage_tls_enter-nameservers.png)
 
-### 2. Create a public certificate
+### Create a public certificate
 
 To create a public certificate using the AWS Certificate Manager, you must first request a certificate and then validate that you own the domain that the certificate applies to.
 
@@ -159,7 +156,7 @@ DNS propagation usually takes a while. When it completes and the validation is s
 
 ![Valid certificate in AWS Certification Manager](https://assets.ubuntu.com/v1/b95943aa-manage_tls_certificate-status.png)
 
-### 3. Create a load balancer
+### Create a load balancer
 
 To use the Anbox Cloud Appliance through your domain name, AWS must route the HTTPS traffic for your domain to the Anbox Cloud Appliance. To ensure this, you must create a load balancer that listens for traffic and routes it to the appliance.
 
@@ -193,7 +190,7 @@ To use the Anbox Cloud Appliance through your domain name, AWS must route the HT
    ![Listener settings](https://assets.ubuntu.com/v1/3308aa3a-manage_tls_listener-settings.png)
 1. Check the **Summary**, and if everything looks correct, click **Create load balancer**.
 
-### 4. Direct traffic from your domain to the load balancer
+### Direct traffic from your domain to the load balancer
 
 When the load balancer is created, AWS assigns it an automatic DNS name. The following example shows where to find it:
 
@@ -220,7 +217,7 @@ The following example shows the DNS record with type `A` for the example domain:
 
 ![DNS records for the public hosted zone](https://assets.ubuntu.com/v1/5a4986bd-manage_tls_dns-records.png)
 
-### 5. Configure the appliance to use the domain name
+### Configure the appliance to use the domain name
 
 Finally, configure the Anbox Cloud Appliance to use the domain name that you prepared.
 

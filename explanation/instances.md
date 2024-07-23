@@ -6,7 +6,7 @@ Instances are the centre piece of the Anbox Cloud stack. Every time you launch a
 All instances in Anbox Cloud are ephemeral, which means that as soon as an instance is stopped, all of its data is deleted. Anbox Cloud **DOES NOT** back up any data from the Android or the outer Ubuntu instance. Backup and restore of data must be implemented separately through addons. See {ref}`howto-backup-restore-example` for information on how to do this.
 
 (sec-regular-base-instances)=
-## Regular instances vs. base instances
+## Regular vs. base instances
 
 Anbox Cloud differentiates between two types of instances: regular and base. The instance type is visible in the output of the `amc ls` command.
 
@@ -17,7 +17,7 @@ Base instances are temporary containers or virtual machines that are used when b
 When we refer to instances in this documentation without specifying the instance type, we mean regular instances.
 
 (sec-application-raw-instances)=
-## Application instances vs. raw instances
+## Application vs. raw instances
 
 Instances are based on either {ref}`exp-applications` or {ref}`Images <ref-provided-images>`. So if you launch an application or an image, Anbox Management Service (AMS) automatically creates an instance for it.
 

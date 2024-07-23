@@ -20,11 +20,11 @@ Before starting the procedure,
 
 To start the installation, you must create and configure a virtual machine:
 
-### 1. Create a virtual machine
+### Create a virtual machine
 
 Log in to [Google Cloud](https://console.cloud.google.com) and select the project for this deployment. Select **VM instances > Create Instance > New VM instance**.
 
-### 2. Configure basic settings
+### Configure basic settings
 
 * *Name* - Name of the virtual machine instance
 * *Labels* - Organisational labels to keep track of your resources on Google Cloud
@@ -33,7 +33,7 @@ Log in to [Google Cloud](https://console.cloud.google.com) and select the projec
 
 Most of the configuration depends on your deployment and its location. For the settings that are not mentioned in this guide, you can choose to proceed with the default options or see [Google's documentation](https://cloud.google.com/compute/docs/instances/create-start-instance) to customise your virtual machine on Google Cloud.
 
-### 3. Configure disks
+### Configure disks
 
 Configure the boot disk by selecting **Boot disk > Change** to choose the operating system and boot disk size.
 
@@ -53,7 +53,7 @@ For Anbox Cloud Appliance, adding an additional disk is recommended for efficien
 
 ![Add new disk|690x440](https://assets.ubuntu.com/v1/8acf5d22-add-new-disk-2.png)
 
-### 4. Configure firewall mapping
+### Configure firewall mapping
 
 There are two ways to map the firewall rules to the virtual machine in Google Cloud:
 
@@ -63,7 +63,7 @@ There are two ways to map the firewall rules to the virtual machine in Google Cl
 
 For more information, see [Google's documentation](https://cloud.google.com/firewall/docs/using-firewalls).
 
-### 5. Launch the virtual machine
+### Launch the VM
 
 Select **Create** to create the virtual machine on Google Cloud. For additional information on creating a virtual machine in Google Cloud, see [Google's documentation](https://cloud.google.com/compute/docs/instances/create-start-instance).
 
@@ -96,7 +96,7 @@ If you want to use the service account to map the firewall rule to the instance,
 
 Select **Create** to create the firewall rule.
 
-## Connect to the virtual machine using SSH
+## Connect to the VM
 
 On the virtual machine instance page, connect to the instance using SSH. See [Google's documentation](https://cloud.google.com/compute/docs/ssh-in-browser) for more information. 
 

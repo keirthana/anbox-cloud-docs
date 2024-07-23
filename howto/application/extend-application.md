@@ -29,7 +29,7 @@ You must then add the hook file to your application, either as an application ho
 
 The following sections give some examples for hooks.
 
-### Create a hook for changing the Android system locale
+### Change the Android system locale
 
 Complete the following steps to create a hook that changes the Android system locale to Korean:
 <!-- wokeignore:rule=master -->
@@ -65,7 +65,7 @@ Complete the following steps to create a hook that changes the Android system lo
 
         cd .. && chmod +x hooks/*
 
-### Create a hook to replace the standard Android launcher
+### Replace the standard Android launcher
 
 Complete the following steps to create a hook that replaces the standard Android launcher with the custom launcher [Lawnchair](https://lawnchair.app/):
 

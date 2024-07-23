@@ -8,7 +8,7 @@ Currently Anbox Cloud does not support GPU for virtual machines.
 ```
 
 (sec-supported-gpus)=
-## Supported GPU vendors and GPU models
+## Supported GPU vendors and models
 
 Being a cloud solution, Anbox Cloud is optimised for GPUs that are designed for a data centre. We currently support the following GPU vendors:
 

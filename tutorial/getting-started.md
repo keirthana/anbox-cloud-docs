@@ -177,7 +177,7 @@ To connect to your virtual device with `scrcpy`, complete the following steps:
 
         scrcpy
 
-## Create an application from an APK
+## Create an application
 
 Creating an application for a specific Android app is very similar to creating a virtual device, except that you provide an APK of the Android app when creating the Anbox Cloud application.
 
@@ -251,7 +251,7 @@ Complete the following steps to add a new version to your application:
 
 When you launch an application without explicitly specifying a version, AMS uses the latest published version of the application. Therefore, when you now launch the application again, the new version of your application is selected and the ADB service is exposed automatically.
 
-## List and delete applications and containers
+## Delete applications and containers
 
 While following this tutorial, you created several applications and containers. Let's check them out and delete the ones that aren't needed anymore:
 

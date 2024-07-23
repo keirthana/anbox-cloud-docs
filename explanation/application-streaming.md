@@ -41,11 +41,11 @@ The following illustration shows how the streaming stack components interact wit
 
 While streaming an application, session creation can happen in two ways as illustrated in the diagram above. Until the 1.22.0 release, a session had to be first created on the stream gateway to be able to create Anbox Cloud instances that can be streamed. Once the session was created, the instance creation will be triggered as detailed in the process below:
 
-### 1. Creating the session
+### Session creation
 
 A session is created by calling the gateway API at `POST /1.0/sessions`. The returned object contains information about the created session as well as a web socket `url` that is necessary to start the signalling process.
 
-### 2. Starting the signalling process
+### Signalling process
 
 Using the session information, the signalling process between the client and the instance starts:
 
@@ -58,13 +58,13 @@ Using the session information, the signalling process between the client and the
 
 Details about messages exchanged between the client and the instance are not covered in this guide, but you can find more information on [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling).
 
-### 3. Establishing the stream
+### Establishing the stream
 
 When optimal ICE candidates have been selected and codec capabilities have been agreed upon, the actual tracks are sent. These tracks can be either video, audio or binary. The binary data channel can be useful to send arbitrary data-like controls.
 
 The streams can then be consumed to display the final content.
 
-## Streaming an application by creating a stream-enabled instance
+## Stream-enabled instances
 
 Starting from 1.22.0, Anbox Cloud offers a much simpler way to create instances that can be streamed. This is the alternative implementation depicted in the streaming stack diagram.
 

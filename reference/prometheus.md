@@ -142,7 +142,7 @@ The following table contains all routes and their corresponding labels (ignoring
 
 The Anbox Stream Gateway provides metrics about the streaming activities of your cluster or server and the Anbox Stream Gateway API access.
 
-### Anbox Stream Gateway endpoint
+### Access endpoint
 
 You can access the Anbox Stream Gateway metrics from any machine that is on the same network as your Anbox Cloud installation. Use the following endpoint:
 
@@ -178,7 +178,7 @@ You can then access the endpoint with `curl`, for example:
 
     curl -k -u prometheusadmin:thepassword https://192.0.2.55:9105/internal/1.0/metrics
 
-### Anbox Stream Gateway metrics
+### Metrics
 
 Metrics prefixed with `anbox_stream_gateway_` give information about your cluster related to streaming, for example, the number of sessions and agents.
 These metrics are available since Anbox Cloud 1.7.2.
@@ -189,7 +189,7 @@ These metrics are available since Anbox Cloud 1.7.2.
 | `anbox_stream_gateway_accounts_total` | Total number of accounts                        |
 | `anbox_stream_gateway_agents_total`   | Number of active and unresponsive agents        |
 
-### Anbox Stream Gateway API metrics
+### API metrics
 
 Metrics prefixed with `anbox_stream_gateway_http_` allow to track access to the streaming API.
 These metrics are available since Anbox Cloud 1.9.0.
