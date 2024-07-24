@@ -9,7 +9,7 @@ Anbox Cloud allows upgrades from older versions to newer version. This describes
 
 The upgrade instructions detail the revisions each charm needs to be upgraded to, to bring it to the latest version. Next to the upgrade of the charms any used images or addons need to be updated as well.
 
-## Before you begin
+## Prerequisites
 
 As with all upgrades, there is a possibility that there may be unforeseen difficulties. It is highly recommended that you make a backup of any important data, including any running workloads.
 

@@ -34,7 +34,7 @@ Complete the following steps to create a virtual device:
    ![Add application](https://assets.ubuntu.com/v1/7cb08440-add-application.png)
 8. You are redirected to the application view. Wait until the application status changes to `ready`.
 
-## Launch and test the virtual device
+## Test the virtual device
 
 When the application has been initialised and its status changes to `ready`, complete the following steps to launch and test the virtual device:
 
@@ -48,7 +48,7 @@ When the application has been initialised and its status changes to `ready`, com
 
    ![Stream the virtual device](https://assets.ubuntu.com/v1/9d9ba326-interact-virtual-device.png)
 
-## Create an application from an APK
+## Create an application
 
 To create an application for a specific Android app, follow the steps in {ref}`sec-create-virtual-device`, but upload the APK of the Android app.
 

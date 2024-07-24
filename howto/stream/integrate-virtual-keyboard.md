@@ -17,7 +17,7 @@ For the complete implementation details, refer to the `enhanced_webview_streamin
 To enable the app running in the Android container to receive the texts sent from the client-side virtual keyboard, you must declare the feature `enable_anbox_ime` in the application manifest file when creating an application.
 ```
 
-## 1. Import the AAR library
+## Import the AAR library
 
 Check out the [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk) from GitHub:
 
@@ -27,7 +27,7 @@ The `android/libs` folder contains the `com.canonical.anbox.streaming_sdk.aar` A
 
 The `examples/android` folder contains the `enhanced_webview_streaming` Android application. Refer to this application as an example for this feature integration.
 
-## 2. Integrate components
+## Integrate components
 
 After importing the AAR file, add the `AnboxWebView` element to the activity layout file and adjust its layout to your needs. For example:
 
@@ -38,7 +38,7 @@ After importing the AAR file, add the `AnboxWebView` element to the activity lay
         android:layout_height="match_parent" />
    ```
 
-## 3. Build communication bridge
+## Build communication bridge
 
 In your web application code, define the JavaScript functions that can be invoked from the Android Java layer (Anbox WebView). Those functions are just wrappers of the APIs that are exposed from the JavaScript SDK.
 

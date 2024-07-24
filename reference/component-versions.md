@@ -229,7 +229,9 @@ N/A
 
 ## 1.21.0
 
-### Charms for Ubuntu 22.04
+### Charms 
+
+#### Ubuntu 22.04
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
@@ -243,7 +245,7 @@ N/A
 | `anbox-stream-agent` | `1.21/stable` | 320 |
 | `nats ` | `latest/stable` | 11 |
 
-### Charms for Ubuntu 20.04
+#### Ubuntu 20.04
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|

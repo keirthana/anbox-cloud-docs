@@ -16,16 +16,14 @@ Anbox Cloud provides two versions of this OOB data exchange:
 The support for [version 1](#version-1) of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release. Therefore, you should migrate your integration of version 1 of the OOB data exchange to [version 2](#version-2) for full-duplex data transmission and better performance.
 ```
 
-See the instructions for exchanging OOB data using a specific implementation version below:
-* [Version 2](#version-2)
-* [Version 1](#version-1)
+The following instructions guide you to exchange OOB data using a specific implementation version:
 
 (sec-oob-data-version-2)=
-## Version 2
+## Version 2: full-duplex bidirectional data transmission
 
 The following instructions will walk you through how to set up data channels and perform data transmission in both directions between an Android application and a WebRTC platform.
 
-### Web application
+### Prepare your web application
 
 In your web-based client application, import the {ref}`sec-streaming-sdk`.
 
@@ -275,7 +273,7 @@ try {
 For a complete Android example, see the [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project.
 
 (sec-oob-data-version-1)=
-## Version 1
+## Version 1 : half-duplex unidirectional data
 
 ```{caution}
 The support for version 1 of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release.
@@ -363,8 +361,6 @@ public class FakeCameraActivity extends AppCompatActivity {
 
 A client application that receives a message from the Android application can be written
 in JavaScript, C or C++ by using the Anbox Streaming SDK.
-
-#### Web application
 
 For a web-based application, you can use the JavaScript SDK which you can find under {ref}`sec-streaming-sdk`. To receive the data sent from the Android application running in the instance, implement the `messageReceived` callback
 of the `AnboxStream` object:

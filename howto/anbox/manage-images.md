@@ -29,7 +29,7 @@ You can see the synchronised images with the `amc image list` command:
 +----------------------+------------------------+--------+----------+--------------+---------+
 ```
 
-## Default image
+## Set default image
 
 The first image that is synchronised (usually the newest image) is marked as the default image.
 The default image is used when you create an application without the `image` field or launch a raw instance without specifying any ID.
@@ -66,7 +66,7 @@ The following command removes version `1` of the image with the name `image-name
 
     amc image delete image-name --version=1
 
-## Use a specific release of an image
+## Use a specific release
 
 With every new Anbox Cloud release, updated images are published. By default, the latest image release is pulled by AMS, but you can request a specific release with the following syntax:
 

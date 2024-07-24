@@ -23,7 +23,7 @@ The output of this command provides the access token. Make a note of this token 
 
 See {ref}`howto-access-stream-gateway` for more information on creating, using and deleting the access token.
 
-### Download the Anbox Cloud streaming SDK
+### Download the streaming SDK
 
 Download the {ref}`sec-streaming-sdk` from GitHub:
 
@@ -107,7 +107,7 @@ If you experience any streaming issues, you can turn on debug information by add
 
 See {ref}`howto-ts-streaming-issues` for common issues related to streaming.
 
-## Create and enable the stream UI service
+## Enable the stream UI service
 
 Create `stream-ui.service` with the following content:
 ```service
@@ -131,9 +131,10 @@ sudo systemctl daemon-reload
 # Enable and start the service
 sudo systemctl enable --now stream-ui.service
 ```
-## Generate the HTTP basic authentication credentials
+## Generate necessary credentials
 
-Use the `htpasswd` tool to generate a user/password combination:
+To generate the HTTP basic authentication credentials, use the `htpasswd` tool.
+
 ```
 apt install -y apache2-utils
 htpasswd -n <your user name>

@@ -1,7 +1,7 @@
 (howto-configure-aar)=
 # How to configure an AAR
 
-The Anbox Application Registry (AAR) uses a certificate-based authentication system that uses TLS server and client certificates to establish a trusted connection between the AAR and AMS.
+The Anbox Application Registry (AAR) uses a certificate-based authentication system that uses TLS server and client certificates to establish a trusted connection between the AAR and the Anbox Management Service (AMS).
 
 AAR and AMS must exchange certificates to set up a trust relation. The recommended way to do this is with Juju. If you are using the Anbox Cloud Appliance, however, you must register the clients manually.
 
@@ -41,7 +41,7 @@ If you are running the Anbox Cloud Appliance, you must register the clients manu
 
 Adding clients manually requires access to the machines hosting AMS and the AAR.
 
-### Configure AMS
+### Import AAR certificate
 
 The first step is to import the AAR certificate into every AMS instance that should have access to the AAR. You can find the AAR certificate at `/var/snap/aar/common/certs/server.crt` on the machine hosting the AAR. Copy the certificate to the AMS machine and import it with the following command:
 
@@ -51,9 +51,9 @@ Use the following command to verify that the new certificate is listed in the AM
 
     amc config trust list
 
-### Configure AMS to use the AAR
+### Configure AMS-AAR sync
 
-To configure AMS to pull or push applications and new application versions to or from the AAR, you must tell AMS about the registry endpoint first:
+To configure AMS to sync applications and new application versions with the AAR, you must tell AMS about the registry endpoint first:
 
     amc config set registry.url https://192.168.178.45:3000
 
@@ -65,15 +65,15 @@ Set the certificate fingerprint with the following command:
 
     amc config set registry.fingerprint <fingerprint>
 
-Finally, set the interval in which AMS will check for new applications to push or pull to or from the AAR. By default, the interval is set to one hour. You can set it to a smaller interval of five minutes with the following command:
+Finally, set the interval in which AMS will check for new applications to sync with the AAR. By default, the interval is set to one hour. You can set it to a smaller interval of five minutes with the following command:
 
     amc config set registry.update_interval 5m
 
-AMS will now check every five minutes if any updates need to be pushed or pulled to or from the AAR.
+AMS will now check every five minutes if any updates need to be synced with the AAR.
 
-### Configure AMS to push applications to the AAR
+### Configure AMS to push
 
-To tell AMS to push any local applications to the AAR, set the `registry.mode` configuration item to `push`:
+To configure AMS to push any local applications to the AAR, set the `registry.mode` configuration item to `push`:
 
     amc config set registry.mode push
 
@@ -81,9 +81,9 @@ All existing and future applications and updates are now automatically pushed to
 
 Keep in mind that only published application versions are pushed to the AAR. If you don't publish a version, it will not be pushed.
 
-### Configure AMS to pull applications from the AAR
+### Configure AMS to pull
 
-To tell AMS to pull applications from the AAR, set the `registry.mode` configuration item to `pull`:
+To configure AMS to pull applications from the AAR, set the `registry.mode` configuration item to `pull`:
 
     amc config set registry.mode pull
 

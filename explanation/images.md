@@ -3,7 +3,7 @@
 
 An image represents the Anbox Cloud image available in the AMS node. An image is the base for an instance, which contains all necessary components like Anbox or the Android root file system. The image type can be container or virtual machine.
 
-# Possible image statuses
+## Possible image statuses
 
 The following table lists the different statuses that an image can have depending on its state and what each status means:
 

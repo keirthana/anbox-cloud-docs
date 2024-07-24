@@ -28,7 +28,7 @@ The entity is the unit, machine or application the message originates from (in t
 
 For a full description, run the command `juju help debug-log` or see the Juju documentation.
 
-### Examples
+### View historical logs
 
 To view the last 100 entries and tail the log, use the following command:
 
@@ -42,7 +42,7 @@ To replay the log from the very beginning, but filter to logs from `ams/0`:
 
     juju debug-log --replay --include=ams/0
 
-### Viewing logs on a machine
+### View logs live
 
 It is also possible to view logs directly on the running machine, if needed. A user with SSH access can connect to the relevant machine and find the logs for all the units running on that machine in the directory `/var/logs/juju`. The `juju ssh` command can be used for this, and you can connect to the relevant machine using a unit identifier. So for example, to look at the logs on the machine running the first unit of `ams`, log on to the machine with `juju ssh ams/0` and run the following command:
 
@@ -54,7 +54,7 @@ The result should show something similar to:
 
 Note that the logs from other units (in this case `ams-node-controller`) running on this machine can also be found here.
 
-### Logging level
+### Check logging level
 
 You can check the current logging level by running the following command:
 
@@ -93,7 +93,7 @@ If you encounter any problems, check the following logs:
 - `/var/lib/anbox-cloud-appliance/common/logs/upgrade.log` for upgrade issues
 - The output of the `anbox-cloud-appliance.buginfo` command
 
-## Aggregating logs
+## Aggregate logs
 
 When monitoring your deployment, it is a good idea to centralise all logs in a log aggregator to spot issues early.
 Below is a non-exhaustive list of useful log files as well as which machine they can be found on.

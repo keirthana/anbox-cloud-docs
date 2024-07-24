@@ -57,7 +57,7 @@ Make sure you have the following accounts:
 
 Complete the following steps to subscribe to the Anbox Cloud Appliance offering, get access to the required instances and configure them correctly.
 
-### 1. Start the launch wizard
+### Start the launch wizard
 
 Open the [Amazon EC2 console](https://console.aws.amazon.com/ec2/) and log in.
 
@@ -65,7 +65,7 @@ On the EC2 dashboard, click **Launch Instance** to start the Launch Instance Wiz
 
 ![Start the Launch Instance Wizard|690x451](https://assets.ubuntu.com/v1/17073a3d-install_appliance_launch-wizard.png)
 
-### 2. Select the AMI
+### Select the AMI
 
 To select the Amazon Machine Image (AMI), type "Anbox Cloud" in the search field of the **Application and OS Images** section.
 
@@ -77,7 +77,7 @@ Choose either the Arm variant or the x86 variant and click **Select**.
 
 You will be presented with the pricing information. Click **Continue** to confirm.
 
-### 3. Choose an instance type
+### Choose an instance type
 
 AWS offers various instance types. The Anbox Cloud Appliance images are supported for a subset of the available instance types only.
 
@@ -87,13 +87,13 @@ In the **Instance type** section, select the instance type that is most suitable
 
 In this example, we picked `g4dn.2xlarge`, which provides 8 vCPUs, 32 GB of memory and a single NVIDIA Tesla T4 GPU.
 
-### 4. Select a key pair
+### Select a key pair
 
 In the **Key pair (login)** section, choose an existing key pair or create one if you don't have one yet. Make sure to save the private key in a secure location.
 
 ![Choose or create a key pair](https://assets.ubuntu.com/v1/b58cd719-install_appliance_key-pair.png)
 
-### 5. Configure the network
+### Configure the network
 
 You do not need to customise any of the settings in the **Network settings** section, but you can fine-tune things. For example, you might want to put the instance onto a different VPC or subnet.
 
@@ -103,7 +103,7 @@ For reference, all required ports are documented in {ref}`ref-requirements`.
 
 ![Configure the security group](https://assets.ubuntu.com/v1/f0af08ae-install_appliance_security-group.png)
 
-### 6. Add storage
+### Add storage
 
 The instance requires sufficient storage to work correctly. For optimal performance, we recommend the following setup:
 
@@ -122,7 +122,7 @@ In this example, we use three storage volumes:
 
 If you don't have any specific requirements, we recommend choosing the same configuration.
 
-### 7. Review and launch
+### Review and launch
 
 You should now review the instance summary. If everything is correct, click **Launch instance**.
 
@@ -141,7 +141,7 @@ By default, the Anbox Cloud Appliance uses self-signed certificates, which might
 ![Appliance welcome screen|690x343, 100%](https://assets.ubuntu.com/v1/f35744dc-install_appliance_initialise.png)
 
 
-## Connect to the virtual machine using SSH
+## Connect to the VM
 
 Connect to the virtual machine hosting the appliance using SSH. To do so, use the user name `ubuntu` and provide the path to your private key file. See [Connect to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) for instructions on how to connect.
 

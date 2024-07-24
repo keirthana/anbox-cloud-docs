@@ -28,7 +28,7 @@ resources:
   gpu-slots: 3
 ```
 
-## Optionally extend the application
+## (Optional) extend the application
 
 If you want to install additional applications that you want to offer as part of the default virtual device, you can extend the application with {ref}`ref-hooks`. For example, you could replace the standard Android launcher with a custom one or change the system locale.
 
