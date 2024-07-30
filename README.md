@@ -6,14 +6,13 @@ orphan: true
 
 This repository hosts the product documentation for Anbox Cloud.
 
-```{important}
+**Important:**
 The concepts of the Anbox component in Anbox Cloud are similar to the [Anbox open source project](https://github.com/anbox/anbox), but the Anbox open source project is an independent project that is not related to or used in Anbox Cloud.
-```
 
 ## Contributing to Anbox Cloud documentation
 You can contribute to the Anbox Cloud documentation through either of the following channels:
-- Report an issue in GitHub
-- Raise a pull request with your changes
+- [Report a bug](https://bugs.launchpad.net/anbox-cloud/+bugs) in Launchpad
+- Create a pull request with your changes
 
 The Anbox Cloud team will review the issue/pull request and take the necessary action.
 
@@ -55,23 +54,3 @@ The following GitHub actions run automatically on every pull request:
 - Spellcheck
 - Accessibility check
 - Link check
-
-**Pre-commit hooks**
-
-To be able to run pre-commit checks, the following prerequisites should be fulfilled:
-
-* Install the `pre-commit` package from the Ubuntu repositories.
-* Install the `aspell` and `aspell-en` packages from the Ubuntu repositories. This is required by the spellchecker.
-* Navigate to the top-level directory of this repository and run `pre-commit install --install-hooks`.
-
-When the prerequisites are met, the following pre-commit checks are run automatically before every commit. They help in resolving basic issues before committing your changes.
-
-- Inclusive language checks (`woke`)
-- Spellcheck (`spellcheck`)
-
-Enabling pre-commit checks are optional as these checks are executed on pull requests automatically. If you do not want to run these checks before commits or to skip a particular check, use the following tips:
-
-* To disable the pre-commit hook, use `--no-verify` when running `git commit`.
-* To skip a particular pre-commit check, prefix `SKIP=<pre-commit-hook-name>` when running `git commit`.
-* To allow a valid word that is regularly used in the documentation but is flagged by `spellcheck`, add the word to `.wordlist.txt`.
-* In special cases, there are ways to avoid a particular file or text from being flagged by `woke`. See [woke user guide](https://docs.getwoke.tech/ignore/).
