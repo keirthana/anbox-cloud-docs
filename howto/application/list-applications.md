@@ -1,7 +1,7 @@
 (howto-list-applications)=
 # How to list applications
 
-To list all available applications, use the following command:
+When using the CLI, to list all available applications, run:
 
     amc application ls
 

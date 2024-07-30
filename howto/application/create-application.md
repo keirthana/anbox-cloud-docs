@@ -48,7 +48,7 @@ resources:
 
 ## Using the dashboard
 
-To create an application using the dashboard, use the *Add application* button on the *Applications* view, enter the required and any optional details that you want to provide and select *Add application*. This screen also provides the option to customise your application manifest.
+To create an application using the dashboard, click *Create application* from the applications view, enter the required and any optional details that you want to provide and confirm with *Create application* again. This screen also provides the option to customise your application manifest.
 
 There may be more advanced scenarios while creating an application that cannot be performed using the dashboard and may require using the `amc` CLI.
 

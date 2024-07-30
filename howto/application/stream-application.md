@@ -24,7 +24,9 @@ For example, to create an instance with a 1080p resolution, a frame rate of 60 a
 
 The dashboard has in-browser streaming capabilities through WebRTC. It uses the {ref}`sec-streaming-sdk`.
 
-You can start a streaming session for any of the successfully created applications. An application is ready to be streamed when its *Status* is *Ready*. When you select the *Start a new session* icon for an application, you can specify the desired streaming attributes such as the screen resolution, frame rate, screen orientation before launching the session.
+When creating an instance, make sure you select the *Enable Streaming* capability to be able to stream your application. You can also set the desired streaming attributes using the *Virtual display* options available for an instance.
+
+You can start a streaming session for any of the successfully created applications. Once the associated instance is created and ready, click *Join session* ( ![join session icon](/images/join-session-icon.png) ) to start the stream.
 
 To understand how the streaming stack of Anbox Cloud works, see {ref}`exp-application-streaming`.
 
@@ -56,7 +58,9 @@ The downloaded `.csv` file has the following statistics:
 
 ### Sharing a streaming session
 
-Use the **Sharing** button on the session page to share a streaming session with users without an account. The button generates a link using which users without an account can join your session.
+To share your stream with users without an account, click *Set up sharing* ( ![set up sharing icon](/images/share-stream-icon.png) ) in the instances list view.
+
+Set your stream title and validity and generate a link that can be shared with others.
 
 ## Related topics
 

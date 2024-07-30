@@ -21,32 +21,31 @@ Let's start exploring what Anbox Cloud can do by launching a virtual device that
 With "virtual device" we mean a simulated device that runs a plain Android operating system without any special apps installed. Technically speaking, Anbox Cloud treats such a virtual device as an "empty" application, thus an application that is not running a specific APK.
 ```
 
-Complete the following steps to create a virtual device:
-
 1. Open `https://<your-machine-address>/applications` in your browser. By default, the Anbox Cloud Appliance uses self-signed certificates, which might cause a security warning in your browser. Use the mechanism provided by your browser to proceed to the web page.
-2. Click **Add Application**.
-3. Enter a name for the application, for example, `virtual-device-web`.
-4. Keep the preselected resource type.
-5. Select the Android image that you want to use, for example, `jammy:android13:arm64`.
-6. Do not upload an APK file.
-7. Click **Add Application**.
+1. Click *Create application*.
+   - Select the application type: Mobile or Automotive.
+   - Enter a name for the application, for example, `virtual-device-web`.
+   - Keep the preselected resource type.
+   - Select if you want to create a container-based or a VM-based application
+   - Select the Android image that you want to use, for example, `jammy:android13:arm64`.
+   - Do not upload an APK file.
 
-   ![Add application](https://assets.ubuntu.com/v1/7cb08440-add-application.png)
-8. You are redirected to the application view. Wait until the application status changes to `ready`.
+Click *Create application* again to complete the process. You are redirected to the applications list view. Wait until the application status changes to `ready`.
 
 ## Test the virtual device
 
 When the application has been initialised and its status changes to `ready`, complete the following steps to launch and test the virtual device:
 
-1. In the list of applications, click the play button in the **Actions** column for the application to start a new session.
+1. In the list of applications, Click *Create an instance* ( ![create an instance icon](/images/create-instance-icon.png) ).
 
-   ![Start a new session](https://assets.ubuntu.com/v1/7f1553f5-start-new-session.png)
-2. Accept the default settings and click **Create Session**.
+2. Create an instance for your application:
 
-   ![Create session](https://assets.ubuntu.com/v1/11ee7ef4-create-session.png)
-3. When the stream has loaded, you can interact with your virtual device.
+   - Provide a name for the instance. Your application details will be auto-filled.
+   - Optionally, you can select the capabilities, virtual display specifications and other configuration options for your instance. For this tutorial, you can leave these options to the defaults.
 
-   ![Stream the virtual device](https://assets.ubuntu.com/v1/9d9ba326-interact-virtual-device.png)
+   Click *Create and start*. You will be directed to the instance list view where you can monitor the status of your instance.
+
+3. Once the instance status is *running*, you can stream it and interact with your virtual device.
 
 ## Create an application
 
@@ -66,46 +65,43 @@ You can have several versions of an application. See {ref}`howto-update-applicat
 
 Complete the following steps to add a new version to your application:
 
-1. Open `https://<your-machine-address>/applications` in your browser.
-2. Click the **Edit application** button  in the **Actions** column next to the application for which you want to add a new version.
+1. Go to the applications list view of the dashboard.
+2. Click *Edit application* (![edit application icon](/images/edit-application-icon.png)) to add a new version to your application.
 3. Upload a new APK, or do other changes to the configuration.
-4. Click **Update application**.
+4. Click *Update application*.
 
 ## Delete an application
 
-While following this tutorial, you created several applications. You can see them in the application view at `https://<your-machine-address>/applications`.
+While following this tutorial, you created several applications. You can see them in the applications list view.
 
-To delete an application, click the **Delete application** button in the **Actions** column and confirm the deletion.
+To delete an application, click *Delete* ( ![delete application icon](/images/delete-icon.png) ) and confirm the deletion.
 
 ```{tip}
-To skip the confirmation window, hold **Shift** when clicking the **Delete application** button.
+To skip the confirmation window, hold **Shift** when clicking *Delete*.
 ```
 
-## Inspect instances
-
-Every time you start a session for an application, Anbox Cloud creates an instance. The instance keeps running even if you exit the stream, until you either stop the session by clicking **Stop session** or delete the instance.
+## View instances
 
 You can see all instances in the instance list view at `https://<your-machine-address>/instances`.
 
-![Instance list view](https://assets.ubuntu.com/v1/57063a40-instance_list.png)
+To view an instance, click the name of the instance you wish to view. 
 
-Complete the following steps to inspect an instance:
+The *Overview* tab displays detailed information about the instance.
 
-1. Click on the ID of one of the running instances. The **Overview** tab displays detailed information for the instance.
-1. Switch to the **Terminal** tab. You will see a terminal for the Linux instance that runs the Android container.
+The *Terminal* tab displays the terminal for the Linux instance that runs the Android container.
 
-   You can run commands in the Linux instance, or you can enter `anbox-shell` to access the nested Android container (enter `exit` to go back to the Linux instance).
+   You can run commands in the Linux instance, or you can enter `anbox-shell` to access the nested Android container. 
+   ```{tip}
+   Enter `exit` to go back to the Linux instance.
+   ```
 
-   ![Use the instance terminal](https://assets.ubuntu.com/v1/bc5ad728-instance_terminal.png)
-1. Switch to the **Logs** tab. You will not see any logs, because log files are available only for instances that are in an error state, not for running instances.
+The *Logs* tab shows logs for instances that are in an error state. You will not see any logs for running instances.
 
-   To simulate a failure for the instance, switch to the **Terminal** tab and enter the following command:
+   To simulate a failure for the instance, switch to the *Terminal* tab and enter the following command:
 
-        amsctl notify-status error --message="My error message"
+      amsctl notify-status error --message="My error message"
 
-   Go back to the instance overview, and when the instance status changes to **error**, click on the instance ID and switch to the **Logs** tab. You can now see the error logs for the instance.
-
-   ![Instance logs](https://assets.ubuntu.com/v1/7004a76a-instance_logs.png)
+   Go back to the instance overview, and when the instance status changes to *error*, click on the instance name and switch to the *Logs* tab. You can now see the error logs for the instance.
 
 ## Done!
 
