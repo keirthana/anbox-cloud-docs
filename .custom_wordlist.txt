@@ -326,3 +326,9 @@ ZFS
 zpool
 Uber
 upscaling
+FSR
+FidelityFX
+uSampler
+vTextureCoord
+vec
+uResolution
