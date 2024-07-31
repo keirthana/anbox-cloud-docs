@@ -25,9 +25,8 @@ We welcome community involvement through suggestions, fixes and constructive fee
   - [Discourse](https://discourse.ubuntu.com/c/anbox-cloud/users/148)
   - [Matrix](https://matrix.to/#/#anbox-cloud:ubuntu.com)
 - {ref}`Troubleshoot Anbox Cloud <howto-ts-anbox-cloud>`
-- [Report a bug](https://bugs.launchpad.net/anbox-cloud/+bugs)
+- [Report a bug](https://bugs.launchpad.net/anbox-cloud/+bugs) with the product or documentation
 - {ref}`contribute`
-- [Report an issue with Anbox Cloud documentation](https://github.com/canonical/anbox-cloud-docs/issues/new)
 
 The following resources help you get familiar with Anbox Cloud, its releases and roadmap:
 
