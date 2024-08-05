@@ -5,6 +5,67 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.23.0
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.23/stable` | ? |
+| `ams-node-controller` | `1.23/stable` | ? |
+| `coturn` | `1.23/stable` | ? |
+| `ams` | `1.23/stable` | ? |
+| `aar` | `1.23/stable` | ? |
+| `anbox-stream-gateway` | `1.23/stable` | ? |
+| `ams-lxd` | `1.23/stable` | ? |
+| `anbox-stream-agent` | `1.23/stable` | ? |
+| `nats ` | `latest/stable` | 11 |
+
+#### Ubuntu 20.04 (Deprecated)
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.23/stable` | ? |
+| `ams-node-controller` | `1.23/stable` | ? |
+| `coturn` | `1.23/stable` | ? |
+| `ams` | `1.23/stable` | ? |
+| `aar` | `1.23/stable` | ? |
+| `anbox-stream-gateway` | `1.23/stable` | ? |
+| `ams-lxd` | `1.23/stable` | ? |
+| `anbox-stream-agent` | `1.23/stable` | ? |
+| `nats ` | `latest/stable` | 11 |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.23/stable` | ? |
+| `anbox-cloud-core` | `1.23/stable` | ? |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.23/stable` | 1.23.0 |
+| `aar`    | `1.23/stable` | 1.23.0 |
+| `ams-node-controller` | `1.23/stable` | 1.23.0 |
+| `anbox-cloud-dashboard` | `1.23/stable` | 1.23.0 |
+| `anbox-stream-agent` | `1.23/stable` | 1.23.0 |
+| `anbox-stream-gateway` | `1.23/stable` | 1.23.0 |
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.23.0 |
+| `jammy:android13:arm64` | 1.23.0 |
+| `jammy:android12:amd64` | 1.23.0 |
+| `jammy:android12:arm64` | 1.23.0 |
+| `jammy:aaos13:amd64`    | 1.23.0 |
+| `jammy:aaos13:arm64`    | 1.23.0 |
+
 ## 1.22.2
 
 ### Charms
@@ -19,12 +80,13 @@ N/A
 
 | Name |  Channel | Version |
 |----------|--------------|---------|
-| `ams`    | `1.22/stable` | 1.22.2 |
-| `aar`    | `1.22/stable` | 1.22.2 |
-| `ams-node-controller` | `1.22/stable` | 1.22.2 |
-| `anbox-cloud-dashboard` | `1.22/stable` | 1.22.2 |
-| `anbox-stream-agent` | `1.22/stable` | 1.22.2 |
-| `anbox-stream-gateway` | `1.22/stable` | 1.22.2 |
+| `ams`    | `1.23/stable` | 1.23.0 |
+| `aar`    | `1.23/stable` | 1.23.0 |
+| `ams-node-controller` | `1.23/stable` | 1.23.0 |
+| `anbox-cloud-dashboard` | `1.23/stable` | 1.23.0 |
+| `anbox-stream-agent` | `1.23/stable` | 1.23.0 |
+| `anbox-stream-gateway` | `1.23/stable` | 1.23.0 |
+| `anbox-cloud-appliance` | `1.23/stable` | 1.23.0 |
 
 
 ### Anbox images

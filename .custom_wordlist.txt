@@ -124,6 +124,7 @@ HW
 HWE
 HVAC
 IAM
+IBT
 idmapped
 IDR
 IME
@@ -157,6 +158,7 @@ Livepatch
 LLVMpipe
 LMA
 localhost
+logcat
 LTS
 LXC
 LXD
@@ -328,6 +330,7 @@ Uber
 upscaling
 FSR
 FidelityFX
+ubuntu
 uSampler
 vTextureCoord
 vec
