@@ -116,7 +116,7 @@ Configure custom styles and colours:
 1. Go to **Extras** > **Configuration**.
 2. Paste the following configuration:
 
-```
+```json
 {
   "defaultFonts": [
     {
