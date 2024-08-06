@@ -17,4 +17,4 @@ Anbox Cloud follows a defined release cycle with frequent minor and patch releas
 |---------|-------------|---------------|
 | 1.23.1 | September 18 2024 | * Android security updates for September 2024<br/> * Bug fixes |
 | 1.23.2 | October 16 2024 | * Android security updates for October 2024<br/> * Bug fixes |
-| 1.24.0 | November 13 2024 | * VHAL improvements<br/> *Support for Bluetooth in AAOS<br/> * Support for generic application streaming<br/> * Vibration support with the streaming SDK<br/> * IBT integration<br/> * Android security updates for November 2024<br/> * Bug fixes
+| 1.24.0 | November 13 2024 | * VHAL improvements<br/> * Support for generic application streaming<br/> * IBT integration<br/> * Android security updates for November 2024<br/> * Bug fixes
