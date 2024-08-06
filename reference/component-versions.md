@@ -14,7 +14,7 @@ Not all components are updated with each release. When components are not update
 | Name | Channel | Revision |
 |----------|--------------|--------------|
 | `anbox-cloud-dashboard` | `1.23/stable` | ? |
-| `ams-node-controller` | `1.23/stable` | ? |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | ? |
 | `coturn` | `1.23/stable` | ? |
 | `ams` | `1.23/stable` | ? |
 | `aar` | `1.23/stable` | ? |
@@ -28,7 +28,7 @@ Not all components are updated with each release. When components are not update
 | Name | Channel | Revision |
 |----------|--------------|--------------|
 | `anbox-cloud-dashboard` | `1.23/stable` | ? |
-| `ams-node-controller` | `1.23/stable` | ? |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | ? |
 | `coturn` | `1.23/stable` | ? |
 | `ams` | `1.23/stable` | ? |
 | `aar` | `1.23/stable` | ? |
@@ -50,7 +50,7 @@ Not all components are updated with each release. When components are not update
 |----------|--------------|---------|
 | `ams`    | `1.23/stable` | 1.23.0 |
 | `aar`    | `1.23/stable` | 1.23.0 |
-| `ams-node-controller` | `1.23/stable` | 1.23.0 |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | 1.23.0 |
 | `anbox-cloud-dashboard` | `1.23/stable` | 1.23.0 |
 | `anbox-stream-agent` | `1.23/stable` | 1.23.0 |
 | `anbox-stream-gateway` | `1.23/stable` | 1.23.0 |
