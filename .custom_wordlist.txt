@@ -270,6 +270,7 @@ syscall
 syscalls
 systemd
 telegraf
+tooltip
 tryCapture
 TCP
 Telegraf
