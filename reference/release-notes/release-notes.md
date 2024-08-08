@@ -31,6 +31,8 @@ Along with bug fixes and general improvements, Anbox Cloud 1.22.x includes:
 * Seamless ADB connections to remote Android instances
 * Dashboard improvements
 * Improved documentation delivery
+* Android 14 based vendor images
+* Reworked charms that install snaps from the snap store
 * Android security updates
 
 ## Older releases
