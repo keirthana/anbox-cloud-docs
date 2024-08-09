@@ -9,7 +9,7 @@ Use of node controller to manage the port forwarding from an instance to expose 
 
 (sec-appliance-deprecation)=
 ## Anbox Cloud Appliance `epoch=0` snap
-*Deprecated in 1.22.0* ; *Removal in 1.24.2*
+*Deprecated in 1.22.0* ; *Removal in 1.25.0*
 
 The Anbox Cloud Appliance is being reworked. We will provide the new Anbox Cloud Appliance implementation using [Snap epochs](https://snapcraft.io/docs/snap-epochs). 
 

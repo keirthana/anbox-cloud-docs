@@ -20,8 +20,7 @@ Not all components are updated with each release. When components are not update
 | `anbox-stream-gateway` | `1.23/stable` | 467 |
 | `ams-lxd` | `1.23/stable` | 454 |
 | `anbox-stream-agent` | `1.23/stable` | 462 |
-| `nats` (For AMD64) | `latest/stable` | 9 |
-| `nats` (For ARM64) | `latest/stable` | 11 |
+| `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
 
 #### Ubuntu 20.04 (Deprecated)
 
@@ -34,8 +33,7 @@ Not all components are updated with each release. When components are not update
 | `anbox-stream-gateway` | `1.23/stable` | 466 |
 | `ams-lxd` | `1.23/stable` | 454 |
 | `anbox-stream-agent` | `1.23/stable` | 461 |
-| `nats` (For AMD64) | `latest/stable` | 10 |
-| `nats` (For ARM64) | `latest/stable` | 12 |
+| `nats` | `latest/stable` | 10 (AMD64), 12 (ARM64) |
 
 ### Bundles
 
@@ -50,6 +48,7 @@ Not all components are updated with each release. When components are not update
 |----------|--------------|---------|
 | `ams`    | `1.23/stable` | 1.23.0 |
 | `aar`    | `1.23/stable` | 1.23.0 |
+| `amc`    | `latest/stable` | 1.23.0 |
 | `ams-node-controller` (Deprecated) | `1.23/stable` | 1.23.0 |
 | `anbox-cloud-dashboard` | `1.23/stable` | 1.23.0 |
 | `anbox-stream-agent` | `1.23/stable` | 1.23.0 |
