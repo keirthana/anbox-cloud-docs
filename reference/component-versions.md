@@ -54,7 +54,7 @@ Not all components are updated with each release. When components are not update
 | `anbox-cloud-dashboard` | `1.23/stable` | 1.23.0 |
 | `anbox-stream-agent` | `1.23/stable` | 1.23.0 |
 | `anbox-stream-gateway` | `1.23/stable` | 1.23.0 |
-| `anbox-connect` | `1.23/stable` | 1.23.0 |
+| `anbox-connect` | `latest/stable` | 1.23.0 |
 | `anbox-cloud-appliance` | `1.23/stable` | 1.23.0 |
 
 ### Anbox images
