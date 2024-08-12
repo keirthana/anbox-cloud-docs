@@ -25,11 +25,13 @@ The following dates for upcoming releases are not final and could vary depending
 
 ### What's new in 1.23.x?
 
-Along with bug fixes and general improvements, Anbox Cloud 1.22.x includes:
+Along with bug fixes and general improvements, Anbox Cloud 1.23.x includes:
 
 * Improved Anbox Cloud Appliance
 * Seamless ADB connections to remote Android instances
 * Dashboard improvements
+    - Merge of sessions and instances pages
+    - Ability to authorise ADB connections
 * Improved documentation delivery
 * Android 14 based vendor images
 * Reworked charms that install snaps from the snap store
