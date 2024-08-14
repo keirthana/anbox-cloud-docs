@@ -94,7 +94,7 @@ There are different ways of configuring a dedicated block storage device:
 
 ### Existing storage pool
 
-To use an existing LXD storage pool, set the [`storage_pool`](https://charmhub.io/ams/configure#storage_pool) configuration on the AMS charm to the name of the LXD storage pool that you want Anbox Cloud to use.
+To use an existing LXD storage pool, set the [`storage_pool`](https://charmhub.io/ams/configuration#storage_pool) configuration on the AMS charm to the name of the LXD storage pool that you want Anbox Cloud to use.
 
 For example, to use an existing LXD storage pool with the name `my-zfs-pool`, use an overlay file with the following content:
 
@@ -111,7 +111,7 @@ The LXD storage pool must use the ZFS storage driver. Other storage drivers are 
 
 ### Dedicated storage device
 
-To use a dedicated storage device that is not defined by Juju for LXD storage, set the [`storage_device`](https://charmhub.io/ams/configure#storage_device) configuration on the AMS charm to the path of the storage device.
+To use a dedicated storage device that is not defined by Juju for LXD storage, set the [`storage_device`](https://charmhub.io/ams/configuration#storage_device) configuration on the AMS charm to the path of the storage device.
 
 For example, to use `/dev/sdb` as the dedicated storage device, use an overlay file with the following content:
 

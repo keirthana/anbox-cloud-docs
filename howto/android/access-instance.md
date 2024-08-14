@@ -20,20 +20,22 @@ First, install the `anbox-connect` snap from the snap store:
 
 Generate a presigned connection URL in either of the following ways:
 
-- **From the Dashboard**:
-  In the *Instances* list view, locate a running instance and click *Connect ADB* ( ![Connect ADB|16x16](https://assets.ubuntu.com/v1/51973cea-adb-connect-icon.png) ).
+**From the Dashboard**
+
+In the *Instances* list view, locate a running instance and click *Connect ADB* ( ![Connect ADB|16x16](https://assets.ubuntu.com/v1/51973cea-adb-connect-icon.png) ).
 *Authorise* the connection and copy the command provided.
 
-- **From the Command Line**:
-  * For a full Anbox Cloud deployment:
+**From the Command Line**:
 
-        anbox-stream-gateway session share <session_id>
+For a full Anbox Cloud deployment, run:
 
-  * For the Anbox Cloud Appliance:
+    anbox-stream-gateway session share <session_id>
 
-        anbox-cloud-appliance.gateway session share <session_id>
+For the Anbox Cloud Appliance, run:
 
-  This command will return a presigned URL that you can use to connect to the remote Android instance.
+    anbox-cloud-appliance.gateway session share <session_id>
+
+This command will return a presigned URL that you can use to connect to the remote Android instance.
 
 ```{note}
 Each presigned URL can only be used to establish a single ADB connection. If multiple users attempt to use the same presigned URL, any existing ADB connection will be interrupted to allow the new request to succeed.
@@ -47,7 +49,7 @@ Open a terminal and use the `anbox-connect` command to establish a secure ADB co
 
 After the ADB channel is established, the following output will be displayed:
 
-    Access to the remote Anbox Cloud instance over ADB is now possible. Please run
+    Access to the remote Anbox Cloud instance over ADB is now possible. Please run:
 
         $ adb connect 127.0.0.1:32985
 
