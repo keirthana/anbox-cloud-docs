@@ -8,7 +8,7 @@ For certain scenarios, accessing an individual instance for debugging or develop
 
 ## Access the Android instance using anbox-connect
 
-Since the 1.23.0 release, Anbox Cloud allows users to create a secure ADB connection through the `anbox-connect` command without exposing the [ADB service](https://anbox-cloud.io/docs/howto/instance/expose-services). This method is highly recommended for securely connecting to remote Android instances, offering a safe and efficient means of managing ADB connections.
+Since the 1.23.0 release, Anbox Cloud allows users to create a secure ADB connection through the `anbox-connect` command without exposing the [ADB service](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/instance/expose-services/). This method is highly recommended for securely connecting to remote Android instances, offering a safe and efficient means of managing ADB connections.
 
 ### Install `anbox-connect` snap
 
@@ -64,7 +64,7 @@ The `anbox-connect` command sets up a secure ADB channel and routes traffic betw
 (sec-expose-adb-service)=
 ## Expose ADB service upon Anbox instance creation
 
-The AMS services allow for remote connections to instances over a network by exposing the [ADB service](https://anbox-cloud.io/docs/howto/instance/expose-services).
+The AMS services allow for remote connections to instances over a network by exposing the [ADB service](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/instance/expose-services/).
 
 ```{caution}
 Exposing the ADB service over the public internet brings security risks from having plain text data intercepted by third parties. It's always preferable to run anbox-connect to setup a secure ADB connection for the remote access to Android instance.
