@@ -5,25 +5,13 @@ orphan: true
 
 The Anbox Cloud team is pleased to announce the release of Anbox Cloud < release-version >.
 
-Please see [component versions](https://anbox-cloud.io/docs/reference/component-versions) for a list of updated components.
+Please see [component versions](https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/component-versions) for a list of updated components.
 
 ## New features & improvements
 
-### Core stack improvements
+< List features here as sub sections>
 
-< List enhancements to core stack here. >
-
-### Streaming improvements
-
-< List enhancements to streaming stack here. >
-
-### Dashboard improvements
-
-< List enhancements to the dashboard here. You can screenshots to illustrate something new or enhanced. >
-
-### Other
-
-< In addition to the below placeholder points, list minor features that are part of the release but were not elaborated as separate sections >
+< Remember to include the below information >
 
 * Android security updates for < insert-month-year > (see Android Security Bulletin - < insert-month-year along with the link to bulletin > for more information).
 * The Android WebView has been updated to < insert-version-along-with-link >.
@@ -46,4 +34,4 @@ Please see [component versions](https://anbox-cloud.io/docs/reference/component-
 
 ## Upgrade instructions
 
-See [Upgrade Anbox Cloud](https://anbox-cloud.io/docs/howto/update/upgrade-anbox) or [Upgrade the Anbox Cloud Appliance](https://anbox-cloud.io/docs/howto/update/upgrade-appliance) for instructions on how to update your Anbox Cloud deployment to the < release-version > release.
+See [Upgrade Anbox Cloud](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/update/upgrade-anbox) or [Upgrade the Anbox Cloud Appliance](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/update/upgrade-appliance) for instructions on how to update your Anbox Cloud deployment to the < release-version > release.
