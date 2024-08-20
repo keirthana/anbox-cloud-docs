@@ -58,7 +58,7 @@ The downloaded `.csv` file has the following statistics:
 
 ### Sharing a streaming session
 
-To share your stream with users without an account, click *Set up sharing* ( ![set up sharing icon](/images/share-stream-icon.png) ) in the instances list view.
+To share your stream with users without an account, click *Set up sharing* ( ![set up sharing icon](/images/share-stream-icon.png) ) on the *Instances* page.
 
 Set your stream title and expiration details and generate a link that can be shared with others.
 

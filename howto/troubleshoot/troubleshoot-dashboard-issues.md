@@ -29,7 +29,7 @@ See {ref}`howto-view-instance-logs` to find reasons for the session failure.
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
-The instances list view shows instances with *Error* status.
+The *Instances* page of the dashboard shows instances with *Error* status.
 
 An instance can end up with an error status due to various reasons. It may not always be simple and easy to resolve this because of the variable factors involved, for example, the application that the instance is hosting or any installed addons.
 
