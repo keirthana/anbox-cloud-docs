@@ -37,24 +37,13 @@ Now, let's enter the values required for creating the application:
 
 Confirm with *Add application* and wait till the *Applications* list screen shows that your application is ready.
 
-## Stream the application with a specific screen resolution
+## Stream the application
 
-In the *Sessions* screen, create a session to view the application (**Create session**).
+Go to the *Instances* screen and wait until you see an instance for the created application with a *running* status.
 
-Select the application that you created earlier.
+Click *Stream* ( ![stream icon](/images/join-session-icon.png) ) to stream the application.
 
-Any of the *Screen resolution* options listed for the application will work but to set a custom resolution, select *Custom* from the drop-down and set the following values:
-```
-Width = 2304
-Height = 3072
-```
-The screen resolutions for AAOS (automotive) applications will be different from those of the AOSP (mobile) applications because the target devices are different.
-
-It is important to understand that higher screen resolutions consume more resources.
-
-Select a desired *Frame rate*, for example, 60.
-
-Confirm with *Create session*.
+If you want to stream with specific capabilities and display options, create your custom instance from the *Instances* screen and specify the desired *Capabilities* and *Virtual display* options.
 
 ## Set automotive temperature using the VHAL panel
 
