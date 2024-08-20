@@ -72,6 +72,8 @@ customisable
 customisation
 customisations
 CustomLocale
+cryptographic
+Cryptographic
 datacenter
 dataset
 deallocate
@@ -117,6 +119,7 @@ Graviton
 gRPC
 HAProxy
 HIDL
+HMAC
 Honkai
 hotfix
 HTTPS
@@ -143,6 +146,7 @@ JS
 JSON
 Juju
 Juju's
+JWT
 kb
 keybinding
 KeyError
