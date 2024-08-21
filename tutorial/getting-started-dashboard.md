@@ -30,7 +30,7 @@ With "virtual device" we mean a simulated device that runs a plain Android opera
    - Select the Android image that you want to use, for example, `jammy:android13:arm64`.
    - Do not upload an APK file.
 
-Click *Create application* again to complete the process. You are redirected to the applications list view. Wait until the application status changes to `ready`.
+Click *Create application* again to complete the process. You are redirected to the *Applications* page. Wait until the application status changes to `ready`.
 
 ## Test the virtual device
 
@@ -43,7 +43,7 @@ When the application has been initialised and its status changes to `ready`, com
    - Provide a name for the instance. Your application details will be auto-filled.
    - Optionally, you can select the capabilities, virtual display specifications and other configuration options for your instance. For this tutorial, you can leave these options to the defaults.
 
-   Click *Create and start*. You will be directed to the instance list view where you can monitor the status of your instance.
+   Click *Create and start*. You will be directed to the *Instances* page where you can monitor the status of your instance.
 
 3. Once the instance status is *running*, you can stream it and interact with your virtual device.
 
@@ -65,14 +65,14 @@ You can have several versions of an application. See {ref}`howto-update-applicat
 
 Complete the following steps to add a new version to your application:
 
-1. Go to the applications list view of the dashboard.
+1. Go to the *Applications* page of the dashboard.
 2. Click *Edit application* (![edit application icon](/images/edit-application-icon.png)) to add a new version to your application.
 3. Upload a new APK, or do other changes to the configuration.
 4. Click *Update application*.
 
 ## Delete an application
 
-While following this tutorial, you created several applications. You can see them in the applications list view.
+While following this tutorial, you created several applications. You can see them on the *Applications* page.
 
 To delete an application, click *Delete* ( ![delete application icon](/images/delete-icon.png) ) and confirm the deletion.
 
@@ -82,7 +82,7 @@ To skip the confirmation window, hold **Shift** when clicking *Delete*.
 
 ## View instances
 
-You can see all instances in the instance list view at `https://<your-machine-address>/instances`.
+You can see all instances on the *Instances* page at `https://<your-machine-address>/instances`.
 
 To view an instance, click the name of the instance you wish to view. 
 

@@ -22,7 +22,7 @@ Generate a presigned connection URL in either of the following ways:
 
 **From the Dashboard**
 
-In the *Instances* list view, locate a running instance and click *Connect ADB* ( ![Connect ADB|16x16](https://assets.ubuntu.com/v1/51973cea-adb-connect-icon.png) ).
+On the *Instances* page, locate a running instance and click *Connect ADB* ( ![Connect ADB|16x16](https://assets.ubuntu.com/v1/51973cea-adb-connect-icon.png) ).
 *Authorise* the connection and copy the command provided.
 
 **From the Command Line**:
