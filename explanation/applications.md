@@ -60,7 +60,7 @@ In general, the bootstrap process goes through the following steps in order:
 8. Install the extra data as listed in the application manifest.
 9. Execute the `post-start` hook provided by each addon listed in the application manifest.
 
-![Application bootstrap process|571x653](https://assets.ubuntu.com/v1/7eed04fd-application-bootstrap.png)
+![Application bootstrap process|571x653](/images/application-bootstrap.png)
 
 The bootstrap process fails if one or more of the following situations happen:
 

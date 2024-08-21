@@ -37,7 +37,7 @@ Most of the configuration depends on your deployment and its location. For the s
 
 Configure the boot disk by selecting **Boot disk > Change** to choose the operating system and boot disk size.
 
-![Configure boot disk|690x440](https://assets.ubuntu.com/v1/884d0b10-boot-disk-config-2.png)
+![Configure boot disk|690x440](/images/appliance-on-google-cloud/boot-disk-config.png)
 
 Select the operating system. Google Cloud has two options - Ubuntu and Ubuntu Pro. If you have an Ubuntu Pro subscription already, you can choose Ubuntu and attach your subscription(see {ref}`tut-installing-appliance`) manually. If you don’t, you can choose the Ubuntu Pro option which will include a Ubuntu Pro subscription through Google Cloud.
 
@@ -51,7 +51,7 @@ Define your preferred boot disk size. We recommend allocating at least 100 GB of
 
 For Anbox Cloud Appliance, adding an additional disk is recommended for efficient instance storage. Under **Advanced Options > Disks**, Select **Add new disk**. Add a disk name and choose the disk size as 100 GB. For the other fields, you can choose your preferred value or proceed with the default values.
 
-![Add new disk|690x440](https://assets.ubuntu.com/v1/8acf5d22-add-new-disk-2.png)
+![Add new disk|690x440](/images/appliance-on-google-cloud/add-new-disk.png)
 
 ### Configure firewall mapping
 

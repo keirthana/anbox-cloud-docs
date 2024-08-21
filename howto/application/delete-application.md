@@ -7,7 +7,7 @@ Once you're sure you want to remove the application, you can delete it via the d
 
 ## Using the dashboard
 
-On the *Applications* page, click *Delete* ( ![delete application icon](/images/delete-icon.png) ) and confirm the deletion.
+On the *Applications* page, click *Delete* ( ![delete application icon](/images/icons/delete-icon.png) ) and confirm the deletion.
 
 ## Using the CLI
 

@@ -148,6 +148,8 @@ This might damage your hardware!
 
 ## Images
 
+The following example uses the Canonical assets manager:
+
 ![Alt text](https://assets.ubuntu.com/v1/b3b72cb2-canonical-logo-166.png)
 
 ```{figure} https://assets.ubuntu.com/v1/b3b72cb2-canonical-logo-166.png
@@ -156,6 +158,10 @@ This might damage your hardware!
 
    Figure caption
 ```
+
+The following example uses local images folder:
+
+![Alt text](/images/icons/create-instance-icon.png)
 
 ## Tabs
 
