@@ -19,7 +19,7 @@ A failed hook will cause the instance to stop immediately and end up in an error
 
 The following figure shows when the different hooks are executed in the life cycle of a base or a regular instance.
 
-![Hooks execution in the life cycle of an instance |471x601](https://assets.ubuntu.com/v1/8441e690-addons-reference-hook-order.png)
+![Hooks execution in the life cycle of an instance |471x601](/images/addons-reference-hook-order.png)
 
 (sec-env-variables)=
 ## Environment variables

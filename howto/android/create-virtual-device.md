@@ -42,4 +42,4 @@ Once the configuration is in place, create the application in AMS:
 
 After creating the application, you can stream it through the UI of the Anbox Stream Gateway (see {ref}`tut-getting-started-dashboard`) or your own custom client application built with the Streaming SDK (see {ref}`sec-streaming-sdk`).
 
-![Virtual device|690x662,100%](https://assets.ubuntu.com/v1/4cc5a115-application_virtual-device.png)
+![Virtual device|690x662,100%](/images/application_virtual-device.png)

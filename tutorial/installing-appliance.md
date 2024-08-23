@@ -99,7 +99,7 @@ You will be asked a few questions. If you don't want to make any specific change
 
 Once the initialisation process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation. This registration is needed to access the {ref}`exp-web-dashboard`.
 
-![Instructions for registering Ubuntu SSO account|690x442](https://assets.ubuntu.com/v1/93b47634-install_appliance_register.png)
+![Instructions for registering Ubuntu SSO account|690x442](/images/install_appliance_register.png)
 
 ### Register your Ubuntu SSO account
 

@@ -36,7 +36,7 @@ Click *Create application* again to complete the process. You are redirected to 
 
 When the application has been initialised and its status changes to `ready`, complete the following steps to launch and test the virtual device:
 
-1. In the list of applications, Click *Create an instance* ( ![create an instance icon](/images/create-instance-icon.png) ).
+1. In the list of applications, Click *Create an instance* ( ![create an instance icon](/images/icons/create-instance-icon.png) ).
 
 2. Create an instance for your application:
 
@@ -66,7 +66,7 @@ You can have several versions of an application. See {ref}`howto-update-applicat
 Complete the following steps to add a new version to your application:
 
 1. Go to the *Applications* page of the dashboard.
-2. Click *Edit application* (![edit application icon](/images/edit-application-icon.png)) to add a new version to your application.
+2. Click *Edit application* (![edit application icon](/images/icons/edit-application-icon.png)) to add a new version to your application.
 3. Upload a new APK, or do other changes to the configuration.
 4. Click *Update application*.
 
@@ -74,7 +74,7 @@ Complete the following steps to add a new version to your application:
 
 While following this tutorial, you created several applications. You can see them on the *Applications* page.
 
-To delete an application, click *Delete* ( ![delete application icon](/images/delete-icon.png) ) and confirm the deletion.
+To delete an application, click *Delete* ( ![delete application icon](/images/icons/delete-icon.png) ) and confirm the deletion.
 
 ```{tip}
 To skip the confirmation window, hold **Shift** when clicking *Delete*.
