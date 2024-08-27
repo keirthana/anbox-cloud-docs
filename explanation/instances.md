@@ -38,7 +38,7 @@ When you create an instance by either launching or initialising an application o
 1. Launch the Android container.
 1. Execute the `post-start` hook provided by the installed addons.
 
-![Instance start|584x646](https://assets.ubuntu.com/v1/45389cab-instance_start.png)
+![Instance start|584x646](/images/instance_start.png)
 
 Launching an instance is successful only if all of the above steps succeed. If there are issues during the process, the status of the instance changes to `error`. You can view the available logs from the instance for further troubleshooting. See {ref}`howto-view-instance-logs`.
 
@@ -57,7 +57,7 @@ When an instance is stopped, it executes the following steps in order:
 3. Shut down the instance.
 
 Beyond that, the instance will be removed from AMS either because you deleted it or because an error occurred during its runtime.
-![Instance stop|575x521](https://assets.ubuntu.com/v1/abb5becf-instance_stop.png)
+![Instance stop|575x521](/images/instance_stop.png)
 
 ### Possible instance statuses
 

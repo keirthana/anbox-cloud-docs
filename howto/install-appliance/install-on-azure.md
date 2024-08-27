@@ -45,11 +45,11 @@ Once you have the prerequisites, the first step is to create a virtual machine o
 
 Log on to the [Microsoft Azure Portal](https://portal.azure.com/) and select the **Quickstart Center** service.
 
-![Quickstart Center](https://assets.ubuntu.com/v1/0ca30941-azure_quickstart-co.png)
+![Quickstart Center](/images/appliance-on-azure/azure_quickstart-co.png)
 
 In the Quickstart Center, select **Deploy a virtual machine**. On the resulting screen, select **Create a Linux virtual machine**.
 
-![Deploy a virtual machine](https://assets.ubuntu.com/v1/d0ac4cf5-azure_deploy-vm-co.png)
+![Deploy a virtual machine](/images/appliance-on-azure/azure_deploy-vm-co.png)
 
 ### Configure basic settings
 
@@ -60,7 +60,7 @@ On the **Basics** tab of the virtual machine configuration, specify the required
 * Change the user name of the administrator account to `ubuntu`.
 * Accept the defaults for the inbound port rules for now; these rules will be configured later in the setup process.
 
-![Basics tab](https://assets.ubuntu.com/v1/9c8844a2-azure_config-basics-co.png)
+![Basics tab](/images/appliance-on-azure/azure_config-basics-co.png)
 
 Click **Next: Disks** to continue to the next tab.
 
@@ -70,7 +70,7 @@ Azure separates the main disk for the operating system and any data disks. On th
 
 For the Anbox Cloud Appliance, you should attach a separate data disk of at least 50 GB. To do so, click **Create and attach a new disk**. You can accept the default settings and change the disk size according to your requirements. For performance reasons, we recommend using 100 GB or more.
 
-![Create and attach a new disk](https://assets.ubuntu.com/v1/8fea8b11-azure_config-disk.png)
+![Create and attach a new disk](/images/appliance-on-azure/azure_config-disk.png)
 
 Click **Next: Networking** to continue to the next tab.
 
@@ -82,7 +82,7 @@ For networking, the Anbox Cloud Appliance requires the following change to the d
 1. Add an inbound security rule that allows access to the following destination port ranges: `80,443,8444,5349,10000-11000,60000-60100`
 1. Change the name of the rule and, if relevant for your setup, adapt the priority of the rule.
 
-![Network security group configuration](https://assets.ubuntu.com/v1/a7be81a2-azure_config-secgroup-co.png)
+![Network security group configuration](/images/appliance-on-azure/azure_config-secgroup-co.png)
 
 ### Finalise the configuration
 
@@ -92,11 +92,11 @@ Check the configuration settings on the remaining tabs and make sure they are su
 
 On the **Review + create** tab, check the final configuration. If everything looks good, click **Create** to launch the virtual machine.
 
-![Review + create](https://assets.ubuntu.com/v1/c6ff12de-azure_config-review.png)
+![Review + create](/images/appliance-on-azure/azure_config-review.png)
 
 Azure will prompt you to download your private key before it starts creating the virtual machine. Make sure to save the private key in a secure location and with secure permissions (0600).
 
-![Deployment](https://assets.ubuntu.com/v1/fafd883f-azure_progress.png)
+![Deployment](/images/appliance-on-azure/azure_progress.png)
 
 When deployment is complete, you can log on to the machine and install the Anbox Cloud Appliance.
 

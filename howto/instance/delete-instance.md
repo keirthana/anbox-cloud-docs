@@ -5,7 +5,7 @@ An instance can be deleted, which will cause any connected user to be disconnect
 
 ## Using the dashboard
 
-In the instances list view, click *Delete* ( ![delete application icon](/images/delete-icon.png) ) and confirm the deletion.
+On the *Instances* page, click *Delete* ( ![delete application icon](/images/icons/delete-icon.png) ) and confirm the deletion.
 
 ## Using the CLI
 

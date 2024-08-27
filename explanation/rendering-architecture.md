@@ -17,7 +17,7 @@ For communication between the hardware composer module on the Android side and A
 
 ### For NVIDIA
 
-![Anbox Cloud NVIDIA pipeline|690x440](https://assets.ubuntu.com/v1/73881ec7-NVIDIA_pipeline_updated.png)
+![Anbox Cloud NVIDIA pipeline|690x440](/images/rendering-pipelines/NVIDIA_pipeline.png)
 
 For NVIDIA GPUs, we cannot use the NVIDIA driver inside Android because of compatibility issues. Instead, Anbox Cloud uses the [Venus driver](https://docs.mesa3d.org/drivers/venus.html) from the [Mesa project](https://mesa3d.org) to provide a fully conformant Vulkan driver to Android. The Venus driver is located on the Android side and streams Vulkan API calls to a renderer on the Ubuntu side based on the [virglrenderer](https://gitlab.freedesktop.org/virgl/virglrenderer) project. The renderer executes all Vulkan API calls against the actual NVIDIA driver.
 
@@ -31,7 +31,7 @@ Starting 1.22.0, Anbox Cloud uses VirGL as the default renderer for NVIDIA GPUs.
 
 ### For Intel and AMD
 
-![Anbox Cloud Intel and AMD pipeline|690x440](https://assets.ubuntu.com/v1/70d97e49-Intel_AMD_pipeline_updated.png)
+![Anbox Cloud Intel and AMD pipeline|690x440](/images/rendering-pipelines/Intel_AMD_pipeline.png.png)
 
 For AMD and Intel GPUs, Anbox Cloud uses Vulkan as API in the Android space and we use [ANGLE](https://chromium.googlesource.com/angle/angle) on top of Vulkan to circumvent OpenGL ES and EGL. Since the Mesa driver (vendor GPU driver) is available directly in the Android space, we do not have the overhead of the remote procedure call implementation as in the pipeline for NVIDIA.
 

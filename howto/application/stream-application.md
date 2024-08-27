@@ -26,7 +26,7 @@ The dashboard has in-browser streaming capabilities through WebRTC. It uses the 
 
 When creating an instance, make sure you select the *Enable Streaming* capability to be able to stream your application. You can also set the desired streaming attributes using the *Virtual display* options available for an instance.
 
-You can start a streaming session for any of the successfully created applications. Once the associated instance is created and ready, click *Stream* ( ![stream icon](/images/join-session-icon.png) ) to start the stream.
+You can start a streaming session for any of the successfully created applications. Once the associated instance is created and ready, click *Stream* ( ![stream icon](/images/icons/stream-icon.png) ) to start the stream.
 
 To understand how the streaming stack of Anbox Cloud works, see {ref}`exp-application-streaming`.
 
@@ -58,7 +58,7 @@ The downloaded `.csv` file has the following statistics:
 
 ### Sharing a streaming session
 
-To share your stream with users without an account, click *Set up sharing* ( ![set up sharing icon](/images/share-stream-icon.png) ) in the instances list view.
+To share your stream with users without an account, click *Set up sharing* ( ![set up sharing icon](/images/icons/share-stream-icon.png) ) on the *Instances* page.
 
 Set your stream title and expiration details and generate a link that can be shared with others.
 

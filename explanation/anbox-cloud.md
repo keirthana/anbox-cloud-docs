@@ -49,7 +49,7 @@ The diagrams used to explain the architecture in this topic show the recommended
 
 The diagram below depicts the core stack and its components:
 
-![Anbox Cloud core stack|690x398](https://assets.ubuntu.com/v1/2a7f484d-core_stack_updated.png)
+![Anbox Cloud core stack|690x398](/images/anbox-cloud-architecture-diagrams/core_stack.png)
 
 The core stack contains one or more Anbox subclusters, a Juju controller, and the Anbox Application Registry (AAR).
 
@@ -84,7 +84,7 @@ Outside the Anbox subcluster, you have the following machines:
 
 The diagram below depicts the streaming stack along with the core stack and user specific components:
 
-![Anbox Cloud streaming stack|690x440](https://assets.ubuntu.com/v1/29aa27b6-core_and_streaming_stack_updated.png)
+![Anbox Cloud streaming stack|690x440](/images/anbox-cloud-architecture-diagrams/core_and_streaming_stack.png)
 
 When the streaming stack is in use, each Anbox subcluster has the following additional components:
 
