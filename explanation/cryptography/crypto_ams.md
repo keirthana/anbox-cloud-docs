@@ -1,5 +1,5 @@
 (exp-security-crypto-ams)=
-# Cryptographic information: AMS
+# AMS
 
 Anbox Management Service (AMS) is using cryptographic technology for:
 

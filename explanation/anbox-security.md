@@ -1,5 +1,5 @@
 (exp-security)=
-# Security
+# Security in Anbox Cloud
 
 Anbox Cloud is secure by design, which means that its architecture, its components and all communication between components are designed to be fundamentally secure.
 
