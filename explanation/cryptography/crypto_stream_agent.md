@@ -1,5 +1,5 @@
 (exp-security-crypto-ams)=
-# Cryptographic information: Anbox Stream Agent
+# Anbox Stream Agent
 
 Anbox Streaming Agent is using cryptographic technology for:
 

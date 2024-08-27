@@ -52,6 +52,7 @@ applications
 application-streaming
 capacity-planning
 clustering
+cryptography/landing
 custom-images
 gpus-instances
 images
@@ -61,6 +62,6 @@ performance
 production-planning
 rendering-architecture
 resources
-security
+anbox-security
 platforms
 ```
