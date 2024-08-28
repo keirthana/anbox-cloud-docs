@@ -17,7 +17,7 @@ using {ref}`exp-addons`.
 
 Your custom VHAL implementation must provide an
 [HIDL VHAL interface](https://source.android.com/docs/automotive/vhal/hidl-vhal-interface)
-and be built against VNDK 29.
+and be built against VNDK 34.
 
 If your VHAL implementation requires additional libraries, they must also be
 bundled with the addon and copied in the ODM partition.
