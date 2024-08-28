@@ -147,6 +147,7 @@ JS
 JSON
 Juju
 Juju's
+JWKS
 JWT
 kb
 keybinding
@@ -201,6 +202,7 @@ OOM
 OpenAPI
 OpenGL
 OpenID
+OpenSSL
 OpenStack
 PCI
 Perfetto
@@ -212,6 +214,7 @@ powershell
 pre
 preseed
 preselected
+PyJWT
 Quickstart
 quickstart
 radv
