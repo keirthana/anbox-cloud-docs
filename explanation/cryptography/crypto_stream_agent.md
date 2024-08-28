@@ -1,4 +1,4 @@
-(exp-security-crypto-ams)=
+(exp-security-crypto-stream-agent)=
 # Anbox Stream Agent
 
 Anbox Streaming Agent is using cryptographic technology for:
