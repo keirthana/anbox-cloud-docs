@@ -2,19 +2,8 @@
 # How to create an instance
 To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
 
-## Using the dashboard
-
-Create an instance on the *Instances* page to launch an instance. The information required for launching an instance depends on whether you are creating the instance from an application or an image.
-
-When you create the instance from an application, the attributes you define for the application decide most of the properties of the instance.
-
-When you create the instance from an image, you can define the properties of the instance during its creation.
-
-Once you create an instance by providing the necessary attributes, you can view the instance and its status on the *Instances* page.
-
-There may be more advanced scenarios while creating an instance that cannot be performed using the dashboard and may require using the `amc` CLI.
-
-## Using the CLI
+`````{tabs}
+````{group-tab} CLI
 
 Depending on what you need, you can use the either of the following commands to create an instance for a registered application or an image.
 
@@ -26,7 +15,7 @@ By default, the instance will run headless.
 The following examples demonstrate different ways of launching instances using `amc launch`, but you can use `amc init` in the same way.
 
 (sec-launch-application-instances)=
-### Launch application instances
+## Launch application instances
 
 Before launching an instance for an application, get the ID of the application that for which you want to launch an instance. To do this, run:
 
@@ -55,7 +44,7 @@ The `amc launch` command fails if you provide the ID of an application that is n
 
     amc launch --application-version=0 bcmap7u5nof07arqa2ag
 
-### Launch a raw instance
+## Launch a raw instance
 
 You can launch a raw instance from an image. To do so, get the ID of the image by running:
 
@@ -80,7 +69,7 @@ Launch a raw instance by providing the image ID in the following command:
 
 See {ref}`ref-provided-images` for a list of images that are available in Anbox Cloud.
 
-### Launch an instance with streaming enabled
+## Launch an instance with streaming enabled
 
 *since 1.22.0*
 
@@ -96,7 +85,7 @@ If you want to to further customise the streaming configuration such as display 
 
     amc launch --enable-streaming --display-size=1920x1080 --display-density=120 --fps=60 ...
 
-### Launch an instance with a specific name
+## Launch an instance with a specific name
 
 *since 1.22.0*
 
@@ -110,7 +99,7 @@ This will create an instance with the name "foo" which can then be used in other
 
     amc shell foo
 
-### Launch an instance on a specific node
+## Launch an instance on a specific node
 
 By default, every instance is scheduled by AMS onto a LXD node. Alternatively, you can launch an instance directly on a specific node:
 
@@ -120,7 +109,7 @@ By default, every instance is scheduled by AMS onto a LXD node. Alternatively, y
 AMS will still verify that the selected node has enough resources to host the instance. If not, the instance will fail to launch.
 ```
 
-### Launch an instance with a different Anbox platform
+## Launch an instance with a different Anbox platform
 
 By default, instances start with the `webrtc` platform if `--enable-graphics` is specified. Otherwise, they start with the `null` platform. To select a different platform, specify it with the `-p` flag. The platform cannot be changed at runtime and must be selected when the instance is created. For example, you can launch an instance with the `webrtc` platform with the following command:
 
@@ -132,13 +121,31 @@ If you have built your own platform named `foo` and you built it via an addon in
 
 For more information, see {ref}`exp-platforms` and {ref}`sec-supported-platforms`.
 
-### Launch an instance with development mode enabled
+## Launch an instance with development mode enabled
 
 You can launch instances with additional development features turned on. This development mode must be enabled when an instance is launched, and it cannot be turned off afterwards. You should never enable development mode for instances used in a production environment.
 
 To launch an instance with development mode enabled, add the `--devmode` flag to the launch command:
 
     amc launch --devmode <application_id>
+
+````
+
+```{group-tab} Dashboard
+
+Create an instance on the *Instances* page to launch an instance. The information required for launching an instance depends on whether you are creating the instance from an application or an image.
+
+When you create the instance from an application, the attributes you define for the application decide most of the properties of the instance.
+
+When you create the instance from an image, you can define the properties of the instance during its creation.
+
+Once you create an instance by providing the necessary attributes, you can view the instance and its status on the *Instances* page.
+
+There may be more advanced scenarios while creating an instance that cannot be performed using the dashboard and may require using the `amc` CLI.
+
+```
+
+`````
 
 ## Related topics
 

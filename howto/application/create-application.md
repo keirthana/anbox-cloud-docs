@@ -13,7 +13,7 @@ The application manifest is a `yaml` file and is used to define various attribut
 
 A default application manifest is created based on the *Resource type* you choose for your application. You can further customise various attributes of your application including the resource requirements for your application.
 
-**Example manifest file**
+An example manifest file:
 
 ```yaml
 name: candy
@@ -46,13 +46,8 @@ resources:
   disk-size: 8GB
 ```
 
-## Using the dashboard
-
-To create an application using the dashboard, click *Create application* on the applications page, enter the required and any optional details that you want to provide and confirm with *Create application* again. The *Create application* form also provides an option to customise your application manifest.
-
-There may be more advanced scenarios while creating an application that cannot be performed using the dashboard and may require using the `amc` CLI.
-
-## Using the CLI
+`````{tabs}
+````{group-tab} CLI
 
 An application can be created from a directory, a zip archive or a tarball file. If you cannot use a directory, the second best option is to use a zip archive that provides better optimisation when compared to a tarball.
 
@@ -60,13 +55,11 @@ If you are using a directory or a zip archive, ensure that the directory/zip con
 
 If you are using a tarball file, compress the file with bzip2 and use the same components and structure as the directory.
 
-**Tips to create a zip or a tarball file:**
-
-  A zip archive file can be created with the following command:
+A zip archive file can be created with the following command:
 
     zip -r foo.zip <package-folder-path> app.apk extra-data manifest.yaml
 
-  A tarball can be created with the following command:
+A tarball can be created with the following command:
 
     tar cvjf foo.tar.bz2 -C <package-folder-path> app.apk extra-data manifest.yaml
 
@@ -125,6 +118,16 @@ resources:
   memory: 4GB
   disk-size: 8GB
 ```
+
+````
+
+```{group-tab} Dashboard
+
+Click *Create application* on the applications page, enter the required and any optional details that you want to provide and confirm with *Create application* again. The *Create application* form also provides an option to customise your application manifest.
+
+There may be more advanced scenarios while creating an application that cannot be performed using the dashboard and may require using the `amc` CLI.
+```
+`````
 
 Once the status of the application switches to `ready`, the application is ready and can be used. See {ref}`howto-wait-for-application` for information about how to monitor the application status.
 
