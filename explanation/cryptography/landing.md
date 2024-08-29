@@ -14,4 +14,5 @@ crypto_anbox_runtime
 crypto_stream_agent
 crypto_stream_gateway
 crypto_dashboard
+crypto_charms
 ```
