@@ -43,7 +43,7 @@ The Anbox Management Service (AMS) provides various configuration items to custo
 | `registry.mode`<br/>*(string, `pull`)*  | Mode in which the {ref}`exp-aar` client in AMS operates: `manual`, `pull`, `push` |
 | `registry.update_interval`<br/>*(string, `1h`)*  | Frequency of {ref}`exp-aar` updates (for example: 1h, 30m). |
 | `registry.url`<br/>*(string, N/A)*  | URL of the {ref}`exp-aar` to use. |
-| `scheduler.strategy`<br/>*(string, `spread`)*  | Strategy that the internal instance scheduler in AMS uses to distribute instances across available LXD nodes: `binpack`, `spread` |
+| `scheduler.strategy`<br/>*(string, `spread`)*  | Strategy that the internal instance scheduler in AMS uses to distribute instances across available LXD nodes: `binpack`, `spread`<br/> Choose a scheduling strategy that best suits your needs:<br/> - `spread` provides a distributed workload, picking the node with the most free resources.<br/>- `binpack` is useful when you are working with a small cluster as it picks the node that is most used until it is out of capacity before moving on to the next node. |
 
 (sec-node-configuration)=
 ## Node-specific configuration
