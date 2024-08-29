@@ -3,7 +3,8 @@
 
 You can stream applications using the Anbox Cloud dashboard or your custom stream client. You can also stream applications by launching an instance with streaming enabled, using the `amc` CLI.
 
-## Using the CLI
+````{tabs}
+```{group-tab} CLI
 
 If you are using the `amc` CLI, you can use the `--enable-streaming` option at the time of launching the instance:
 
@@ -19,8 +20,8 @@ To further customise the streaming configuration, use the following arguments:
 For example, to create an instance with a 1080p resolution, a frame rate of 60 and a DPI of 120, run:
 
     amc launch --enable-streaming --display-size=1920x1080 --display-density=120 --fps=60 <application_id>
-
-## Using the dashboard
+```
+```{group-tab} Dashboard
 
 The dashboard has in-browser streaming capabilities through WebRTC. It uses the {ref}`sec-streaming-sdk`.
 
@@ -30,9 +31,9 @@ You can start a streaming session for any of the successfully created applicatio
 
 To understand how the streaming stack of Anbox Cloud works, see {ref}`exp-application-streaming`.
 
-### Streaming statistics
+## Streaming statistics
 
-View the streaming statistics for your running sessions by selecting the **Statistics** button on the session. The statistics display on the right pane and also have a download option to download the statistics in a `.csv` format for further analysis.
+You can view the streaming statistics for your running sessions by selecting the **Statistics** button on the session. The statistics display on the right pane and also have a download option to download the statistics in a `.csv` format for further analysis.
 
 The downloaded `.csv` file has the following statistics:
 
@@ -61,6 +62,9 @@ The downloaded `.csv` file has the following statistics:
 To share your stream with users without an account, click *Set up sharing* ( ![set up sharing icon](/images/icons/share-stream-icon.png) ) on the *Instances* page.
 
 Set your stream title and expiration details and generate a link that can be shared with others.
+
+```
+````
 
 ## Related topics
 
