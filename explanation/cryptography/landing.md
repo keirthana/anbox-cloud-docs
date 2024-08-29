@@ -10,6 +10,7 @@ This information is currently available for the following components:
   :maxdepth: 1
 
 crypto_ams
+crypto_anbox_runtime
 crypto_stream_agent
 crypto_stream_gateway
 crypto_dashboard

@@ -28,6 +28,7 @@ APKs
 AppArmor
 Appium
 ARMv
+ASN
 async
 AttributeError
 AudioTrack
@@ -44,6 +45,7 @@ Bluetooth
 BombSquad
 bool
 boolean
+BoringSSL
 BPF
 bzip
 CDN
@@ -85,6 +87,7 @@ Dev
 devmode
 DNS
 dnsmasq
+DER
 Dqlite
 DrArm
 drawio
