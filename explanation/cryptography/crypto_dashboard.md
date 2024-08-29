@@ -48,6 +48,6 @@ The dashboard uses mutual TLS authentication to establish a trusted TLS communic
 
 ## Packages used
 
-* [PyJWT](https://github.com/jpadilla/pyjwt)
-* [`python-jose`](https://github.com/mpdavis/python-jose/)
+* [PyJWT](https://github.com/jpadilla/pyjwt), supplied by [PyPI](https://pypi.org/project/PyJWT/)
+* [`python-jose`](https://github.com/mpdavis/python-jose/), supplied by [PyPI](https://pypi.org/project/python-jose/)
 * [OpenSSL](https://launchpad.net/ubuntu/+source/openssl/)
