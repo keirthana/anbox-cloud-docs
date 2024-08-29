@@ -11,5 +11,6 @@ This information is currently available for the following components:
 
 crypto_ams
 crypto_stream_agent
+crypto_stream_gateway
 crypto_dashboard
 ```
