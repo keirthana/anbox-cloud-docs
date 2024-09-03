@@ -1,3 +1,4 @@
+(ref-deprecation-notes)=
 # Deprecation notices
 
 This document contains a list of deprecation notices for Anbox Cloud and its components.
