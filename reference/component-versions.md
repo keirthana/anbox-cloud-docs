@@ -62,12 +62,12 @@ The following Anbox images are available in two variants: one based on a contain
 
 | Name | Version |
 |----------|--------------|
-| `jammy:android13:amd64` | 1.23.0 |
-| `jammy:android13:arm64` | 1.23.0 |
-| `jammy:android12:amd64` | 1.23.0 |
-| `jammy:android12:arm64` | 1.23.0 |
-| `jammy:aaos13:amd64`    | 1.23.0 |
-| `jammy:aaos13:arm64`    | 1.23.0 |
+| `jammy:android13:amd64` | 1.23.0-20240809080136.4a6ba963a |
+| `jammy:android13:arm64` | 1.23.0-20240809080136.4a6ba963a |
+| `jammy:android12:amd64` | 1.23.0-20240809080136.4a6ba963a |
+| `jammy:android12:arm64` | 1.23.0-20240809080136.4a6ba963a |
+| `jammy:aaos13:amd64`    | 1.23.0-20240809080136.4a6ba963a |
+| `jammy:aaos13:arm64`    | 1.23.0-20240809080136.4a6ba963a |
 
 ## 1.22.2
 
@@ -294,7 +294,7 @@ N/A
 
 ## 1.21.0
 
-### Charms 
+### Charms
 
 #### Ubuntu 22.04
 
