@@ -21,6 +21,11 @@ Understand the different objects used in the product stack and how to use them t
 |--|--|
 | {ref}`exp-applications` | Application requirements and the application bootstrap process |
 | {ref}`exp-instances` | Learn about an instance and its life cycle |
+| {ref}`exp-images` | Learn about an image and its relationship with an instance |
+| {ref}`exp-nodes` | Learn about a node and its purposes |
+| {ref}`exp-addons` | Learn about an addon and best practices for using it |
+| {ref}`exp-web-dashboard` | The capabilities provided by the Anbox Cloud dashboard |
+| {ref}`exp-aaos` | Anbox Cloud's support for Android Automotive OS (AAOS) images |
 | {ref}`exp-platforms` | Configuring supported platforms |
 | {ref}`exp-clustering` | Clustering and managing the load over multiple machines|
 | {ref}`exp-performance` | Aspects that are relevant for tuning the performance of Anbox Cloud |
@@ -34,6 +39,8 @@ Understand deployment configurations to plan your deployment.
 | {ref}`exp-capacity-planning` | How to estimate the required capacity for your Anbox Cloud deployment |
 | {ref}`exp-gpus-instances` | How to manage GPUs and make them available to instances |
 | {ref}`exp-security` | Important aspects to keep your Anbox Cloud deployment secure |
+| {ref}`exp-security-landing` | The cryptographic technology used by various Anbox Cloud components |
+| {ref}`exp-resources-presets` | Learn about resource presets and how to customise required resources for applications |
 | {ref}`exp-custom-images` | Learn about customising AAOS images |
 
 

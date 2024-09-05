@@ -20,13 +20,15 @@ Learn about applications, instances and more in Anbox Cloud and how to use them.
 * {ref}`howto-instance`
 * {ref}`howto-addons`
 * {ref}`howto-streaming`
+* {ref}`howto-use-web-dashboard`
 
 ## Managing Anbox Cloud
 
-Learn how to manage the different variants of Anbox Cloud, distribute the load of Anbox Cloud over several machines in a cluster and work with Anbox runtime.
+Learn how to manage the different variants of Anbox Cloud, distribute the load of Anbox Cloud over several machines in a cluster, manage the Anbox Application Registry (AAR), and work with Anbox runtime.
 
 * {ref}`howto-manage-anbox`
 * {ref}`howto-manage-cluster`
+* {ref}`howto-aar`
 * {ref}`howto-anbox-runtime`
 
 ## Monitoring Anbox Cloud

@@ -5,18 +5,19 @@ The reference guides in this section provide additional information about using 
 
 ## Releases and versions
 
-Learn about Anbox Cloud releases, release roadmap, supported product versions and component versions.
+Learn about Anbox Cloud releases, release roadmap, deprecations, supported product versions and component versions.
 
 | Guides | Description  |
 |--|--|
 | {ref}`ref-roadmap` | Information about general release cycle, currently supported version and future releases |
 | {ref}`ref-release-notes` | Release notes for all versions of Anbox Cloud |
+| {ref}`ref-deprecation-notes` | Deprecation notices for Anbox Cloud and its components |
 | {ref}`ref-component-versions` | Version information about different components of Anbox Cloud for each release |
 | {ref}`ref-supported-versions` | Information about supported Anbox Cloud versions and professional support |
 
 ## Usage
 
-Understand the difference aspects of using Anbox Cloud such as requirements, supported Android features, provided SDKs, images, APIs, available network ports for communication, extending Anbox Cloud through addons and hooks.
+Understand the difference aspects of using Anbox Cloud such as requirements, supported features, provided SDKs, images, APIs, available network ports for communication, extending Anbox Cloud through addons and hooks.
 
 | Guides | Description  |
 |--|--|
@@ -25,6 +26,7 @@ Understand the difference aspects of using Anbox Cloud such as requirements, sup
 | {ref}`ref-rendering-resources`| A list of supported GPU vendors, drivers, platforms, APIs etc. |
 | {ref}`ref-codecs`| A list of supported video codecs |
 | {ref}`ref-android-features`| Overview of Android features and which of them are supported by Anbox Cloud |
+| {ref}`ref-aosp-aaos`| Supported features for AOSP vs AAOS images as well as feature flags for enabling some features |
 | {ref}`ref-api`| APIs that Anbox Cloud provides |
 | {ref}`ref-sdks`| Overview of the SDKs that Anbox Cloud provides to facilitate integrating and extending the solution |
 | {ref}`ref-network-ports`| A list of network ports that Anbox Cloud exposes for each service |
