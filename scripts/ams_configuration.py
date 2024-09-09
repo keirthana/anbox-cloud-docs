@@ -2,6 +2,7 @@
 
 import argparse
 import json
+from typing import Dict
 
 import requests
 from jinja2 import Environment
@@ -29,22 +30,29 @@ def main() -> int:
         "--output",
         dest="output_file",
         help="Destination of the rendered configuration file",
-        default="ams-configuration.md",
+        default="reference/ams-configuration.md",
     )
     args = parser.parse_args()
     if args.swagger_path:
         with open(args.swagger_path, mode="r") as f:
             swagger = json.load(f)
     else:
-        response = requests.get(SWAGGER_URL)
-        swagger = response.json()
+        swagger = get_swagger_from_url()
+    parse_swagger(swagger, args.output_file)
 
+
+def get_swagger_from_url() -> Dict:
+    response = requests.get(SWAGGER_URL)
+    return response.json()
+
+
+def parse_swagger(swagger, output_file):
     configs = _parse_config_schema(swagger)
     nodes = _parse_node_schema(swagger)
     env = Environment(loader=FileSystemLoader("."))
-    templ = env.get_template("template.md.j2")
+    templ = env.get_template("scripts/ams-configuration.md.j2")
     text = templ.render(configs=configs, nodes=nodes)
-    with open(args.output_file, mode="w+") as op:
+    with open(output_file, mode="w+") as op:
         op.write(text)
 
 
