@@ -3,8 +3,13 @@
 import argparse
 import json
 
+import requests
 from jinja2 import Environment
 from jinja2.loaders import FileSystemLoader
+
+SWAGGER_URL = (
+    "https://canonical.github.io/anbox-cloud.github.com/latest/ams/swagger.json"
+)
 
 
 def main() -> int:
@@ -13,18 +18,26 @@ def main() -> int:
         description="Extracts AMS configuration data",
     )
     parser.add_argument(
-        "swagger_path",
+        "-i",
+        "--input-file",
+        dest="swagger_path",
+        required=False,
         help="Path to the swagger json file (Should conform to swagger spec 2.0)",
     )
     parser.add_argument(
+        "-o",
         "--output",
         dest="output_file",
         help="Destination of the rendered configuration file",
         default="ams-configuration.md",
     )
     args = parser.parse_args()
-    with open(args.swagger_path, mode="r") as f:
-        swagger = json.load(f)
+    if args.swagger_path:
+        with open(args.swagger_path, mode="r") as f:
+            swagger = json.load(f)
+    else:
+        response = requests.get(SWAGGER_URL)
+        swagger = response.json()
 
     configs = _parse_config_schema(swagger)
     nodes = _parse_node_schema(swagger)
