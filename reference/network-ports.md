@@ -29,9 +29,14 @@ For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cl
 
 ## Anbox Cloud Appliance
 
-| Service             | Port(s)     | Protocol  | Required | Description                            |
-|---------------------|-------------|-----------|----------|----------------------------------------|
-| AMS node controller | 10000-11000 | UDP & TCP | no       | Instance service ports                 |
-| Coturn              | 5349        | UDP       | yes      | STUN/TURN                              |
-| Coturn              | 60000-60100 | UDP       | yes      | TURN relay ports                       |
-| UI and API          | 443         | TCP       | yes      | Redirects to the Anbox Cloud dashboard |
+| Service               | Port(s)     | Protocol  | Exposed externally | Required | Description                            |
+|-----------------------|-------------|-----------|--------------------|----------|----------------------------------------|
+| AMS node controller   | 10000-11000 | UDP & TCP | yes                | no       | Instance service ports                 |
+| Coturn                | 5349        | UDP       | yes                | no       | STUN/TURN                              |
+| Coturn                | 60000-60100 | UDP       | yes                | no       | TURN relay ports                       |
+| UI and API            | 443         | TCP       | yes                | yes      | Reverse proxy providing access to UI and subset of API endpoints |
+| AMS API               | 8444        | TCP       | no                 | yes      | API endpoint for the AMS service       |
+| NATS                  | 4004        | TCP       | no                 | yes      | API endpoint for the [NATS](https://nats.io) message queue |
+| Anbox Stream Gateway  | 9031        | TCP       | no                 | yes      | API endpoint for the Anbox Stream Gateway |
+| Anbox Stream Agent    | 9033        | TCP       | no                 | yes      | API endpoint for the Anbox Strem Agent |
+| Anbox Cloud Dashboard | 5000        | TCP       | no                 | yes      | Endpoint providing access to the UI    |
