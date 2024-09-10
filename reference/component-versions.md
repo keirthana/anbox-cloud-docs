@@ -46,15 +46,15 @@ Not all components are updated with each release. When components are not update
 
 | Name |  Channel | Version |
 |----------|--------------|---------|
-| `ams`    | `1.23/stable` | 1.23.0 |
-| `aar`    | `1.23/stable` | 1.23.0 |
-| `amc`    | `latest/stable` | 1.23.0 |
-| `ams-node-controller` (Deprecated) | `1.23/stable` | 1.23.0 |
-| `anbox-cloud-dashboard` | `1.23/stable` | 1.23.0 |
-| `anbox-stream-agent` | `1.23/stable` | 1.23.0 |
-| `anbox-stream-gateway` | `1.23/stable` | 1.23.0 |
-| `anbox-connect` | `latest/stable` | 1.23.0 |
-| `anbox-cloud-appliance` | `1.23/stable` | 1.23.0 |
+| `ams`    | `1.23/stable` | `1.23.0-b66df9d8c` |
+| `aar`    | `1.23/stable` | `1.23.0-b66df9d8c` |
+| `amc`    | `latest/stable` | `1.23.0-b66df9d8c` |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | `1.23.0-b66df9d8c` |
+| `anbox-cloud-dashboard` | `1.23/stable` | `1.23.0-b66df9d8c` |
+| `anbox-stream-agent` | `1.23/stable` | `1.23.0-b66df9d8c` |
+| `anbox-stream-gateway` | `1.23/stable` | `1.23.0-b66df9d8c` |
+| `anbox-connect` | `latest/stable` | `1.23.0-b66df9d8c` |
+| `anbox-cloud-appliance` | `1.23/stable` | `1.23.0-b66df9d8c` |
 
 ### Anbox images
 
