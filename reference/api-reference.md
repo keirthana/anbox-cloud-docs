@@ -1,18 +1,29 @@
 (ref-api)=
 # API reference
 
-All communication between AMS and its clients happen using a RESTful API over HTTP. This API is encapsulated over either TLS (for remote operations) or a Unix socket (for local operations).
+Anbox Cloud includes various APIs to help you build solutions with it. This page provides an overview of the available APIs and their uses.
 
-## APIs and their structure
+All these APIs except for the {ref}`anbox-https-api` have an auto-generated Open API specification describing its API endpoints.
 
-Anbox Cloud provides the following APIs:
+## Available APIs
 
-* AMS HTTP API
-* Anbox Cloud HTTP API
-* Stream Gateway API
-* Anbox Platform SDK API
+### AMS HTTP API
 
-All these APIs except for the {ref}`anbox-https-api` have an auto-generated specification describing its API endpoints.
+The AMS services provide an HTTP based API to help you manage all of its objects. Internally the `amc` client uses the same API to perform its operation.
+
+You can find the OpenAPI specification [here](https://canonical.github.io/anbox-cloud.github.com/latest/ams/).
+
+### Anbox HTTP API
+
+The Anbox runtime inside each instance managed by the AMS provides an HTTP API over a UNIX domain socket that helps interacting with various functionalities offered by Anbox. This includes the injection of position or sensor events into Android, among other things.
+
+You can find the API specification at {ref}`anbox-https-api`.
+
+### Anbox Stream Gateway API
+
+The Anbox Stream Gateway service provides an API endpoint to help you to manage streaming sessions.
+
+You can find the OpenAPI specification [here](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-stream-gateway).
 
 ```{toctree}
 :hidden:
