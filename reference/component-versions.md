@@ -5,6 +5,43 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.23.1
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+
+
+#### Ubuntu 20.04 (Deprecated)
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+
+
+
 ## 1.23.0
 
 ### Charms

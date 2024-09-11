@@ -5,15 +5,6 @@ This page outlines the release notes of all versions of Anbox Cloud. If you're i
 
 For instructions on how to update your Anbox Cloud deployment to later versions, see {ref}`howto-upgrade-anbox-cloud` or {ref}`howto-upgrade-appliance`.
 
-## Upcoming releases
-The following dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release. See the {ref}`ref-roadmap` to know the targeted features for a future release.
-
-| Tentative Release date | Planned release version |
-|----|----|
-| September 18 2024 | Anbox Cloud 1.23.1 |
-| October 16 2024 | Anbox Cloud 1.23.2 |
-| November 14 2024 | Anbox Cloud 1.24.0 |
-
 ## Recent releases
 
 | Release date   |  Release notes  |
@@ -22,6 +13,35 @@ The following dates for upcoming releases are not final and could vary depending
 | July 18 2024 | [Anbox Cloud 1.22.2](1.22.2.md) |
 | June 13 2024 | [Anbox Cloud 1.22.1](1.22.1.md) |
 | May 15 2024 | [Anbox Cloud 1.22.0](1.22.0.md) |
+
+## Upcoming release roadmap
+The following dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release.
+
+| Target date | Version | Planned updates |
+|----|----|----|
+| October 16 2024 | Anbox Cloud 1.23.2 |* Android security updates for October 2024<br/> * Bug fixes |
+| November 14 2024 | Anbox Cloud 1.24.0 | * VHAL improvements<br/> * Android 14 images<br/> * Support for additional upscaling algorithms in the streaming SDK<br/> * Android security updates for November 2024<br/> * Reworked charms<br/> * Bug fixes |
+| December 11 2024 | Anbox Cloud 1.24.1 | * Android security updates for December 2024<br/> * Bug fixes |
+| January 15 2025 | Anbox Cloud 1.24.2 | * Android security updates for January 2025<br/> * Bug fixes |
+
+## Release and support policy
+
+Anbox Cloud follows a defined release cycle with frequent minor and patch releases.
+
+Minor releases
+: A new minor release of Anbox Cloud is released every three months. It includes new features and bug fixes.
+
+Patch releases
+: A patch release for Anbox Cloud is released at the beginning of every month and includes Android and Chrome security updates alongside Anbox Cloud specific bug fixes.
+
+Anbox Cloud currently officially supports only the most recent release. Older releases are only supported for a short time after a new minor release was published. 
+
+Feature deprecations are generally announced two releases in advance before the deprecated features are dropped. See {ref}`ref-deprecation-notes` for details.
+
+To ensure you receive latest security updates and bug fixes, you should upgrade to a new release of Anbox Cloud shortly after it is released.
+
+If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/support). Canonical can also provide [managed solutions](https://ubuntu.com/managed) for Anbox Cloud.
+
 
 ### What's new in 1.23.x?
 
