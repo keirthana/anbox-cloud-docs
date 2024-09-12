@@ -8,6 +8,8 @@ In this tutorial, we will be focusing on the following tasks:
 - Streaming the application you created with a specific screen resolution.
 - Setting the temperature of the automotive using the Vehicle Hardware Abstraction Layer (VHAL) controls.
 
+You can also choose to watch a [video of this tutorial on Youtube](https://www.youtube.com/watch?v=irx2ylMalos).
+
 ## Preparation
 
 We will use the appliance dashboard to perform the tasks for this tutorial. So if you haven’t installed the Anbox Cloud Appliance yet, you must do that first.
