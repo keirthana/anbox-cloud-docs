@@ -11,7 +11,7 @@ Please see {ref}`ref-component-versions` for a list of updated components.
 
 ## Requirements
 
-See {ref}`ref-requirements` to run Anbox Cloud < version >.
+See the {ref}`ref-requirements` for details on general and deployment specific requirements to run Anbox Cloud.
 
 ## New features & improvements
 
