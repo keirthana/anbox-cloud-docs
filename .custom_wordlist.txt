@@ -79,6 +79,7 @@ customisation
 customisations
 CustomLocale
 CVE
+CVEs
 datacenter
 dataset
 deallocate
@@ -207,6 +208,7 @@ OOB
 OOM
 OpenAPI
 OpenGL
+OpenID
 OpenSSL
 OpenStack
 PCI
@@ -353,3 +355,5 @@ vTextureCoord
 vec
 uResolution
 presigned
+upstream
+upstreams
