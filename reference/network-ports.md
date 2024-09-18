@@ -38,5 +38,5 @@ For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cl
 | AMS API               | 8444        | TCP       | no                 | yes      | API endpoint for the AMS service       |
 | NATS                  | 4004        | TCP       | no                 | yes      | API endpoint for the [NATS](https://nats.io) message queue |
 | Anbox Stream Gateway  | 9031        | TCP       | no                 | yes      | API endpoint for the Anbox Stream Gateway |
-| Anbox Stream Agent    | 9033        | TCP       | no                 | yes      | API endpoint for the Anbox Strem Agent |
+| Anbox Stream Agent    | 9033        | TCP       | no                 | yes      | API endpoint for the Anbox Stream Agent |
 | Anbox Cloud Dashboard | 5000        | TCP       | no                 | yes      | Endpoint providing access to the UI    |
