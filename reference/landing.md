@@ -75,6 +75,7 @@ addon-manifest
 ams-configuration
 Anbox Cloud images <provided-images>
 appliance-preseed
+appliance-configuration
 sdks
 api-reference
 application-manifest
