@@ -90,6 +90,7 @@ prometheus
 release-notes/release-notes.md
 requirements
 roadmap
+security-notices
 android-features
 Supported features <anbox-features>
 supported-rendering-resources
