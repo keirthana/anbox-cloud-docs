@@ -32,6 +32,7 @@ ASN
 async
 AttributeError
 AudioTrack
+Auth
 backend
 balancer
 balancers
@@ -203,6 +204,7 @@ OOB
 OOM
 OpenAPI
 OpenGL
+OpenID
 OpenSSL
 OpenStack
 PCI
