@@ -5,23 +5,47 @@ This page outlines the release notes of all versions of Anbox Cloud. If you're i
 
 For instructions on how to update your Anbox Cloud deployment to later versions, see {ref}`howto-upgrade-anbox-cloud` or {ref}`howto-upgrade-appliance`.
 
-## Upcoming releases
-The following dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release. See the {ref}`ref-roadmap` to know the targeted features for a future release.
-
-| Tentative Release date | Planned release version |
-|----|----|
-| September 18 2024 | Anbox Cloud 1.23.1 |
-| October 16 2024 | Anbox Cloud 1.23.2 |
-| November 14 2024 | Anbox Cloud 1.24.0 |
-
 ## Recent releases
 
 | Release date   |  Release notes  |
 |----|----|
+| September 18 2024 | [Anbox Cloud 1.23.1](1.23.1.md) |
 | August 14 2024 | [Anbox Cloud 1.23.0](1.23.0.md) |
 | July 18 2024 | [Anbox Cloud 1.22.2](1.22.2.md) |
 | June 13 2024 | [Anbox Cloud 1.22.1](1.22.1.md) |
 | May 15 2024 | [Anbox Cloud 1.22.0](1.22.0.md) |
+
+## Upcoming release roadmap
+
+The current minor release is **1.23.0** and the next one will be **1.24.0**.
+
+The following target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release.
+
+| Target date | Version | Planned updates |
+|----|----|----|
+| October 16 2024 | Anbox Cloud 1.23.2 |* Android security updates for October 2024<br/> * Bug fixes |
+| November 14 2024 | Anbox Cloud 1.24.0 | * VHAL improvements<br/> * Android 14 images<br/> * Support for additional upscaling algorithms in the streaming SDK<br/> * Android security updates for November 2024<br/> * Reworked charms<br/> * Bug fixes |
+| December 11 2024 | Anbox Cloud 1.24.1 | * Android security updates for December 2024<br/> * Bug fixes |
+| January 15 2025 | Anbox Cloud 1.24.2 | * Android security updates for January 2025<br/> * Bug fixes |
+
+## Release and support policy
+
+Anbox Cloud follows a defined release cycle with frequent minor and patch releases.
+
+Minor releases
+: A new minor release of Anbox Cloud is released every three months. It includes new features and bug fixes.
+
+Patch releases
+: A patch release for Anbox Cloud is released every month and includes Android and Chrome security updates alongside Anbox Cloud specific bug fixes.
+
+Anbox Cloud currently officially supports only the most recent release. Older releases are only supported for a short time after a new minor release was published. 
+
+Feature deprecations are generally announced two releases in advance before the deprecated features are dropped. See {ref}`ref-deprecation-notes` for details.
+
+To ensure you receive latest security updates and bug fixes, you should upgrade to a new release of Anbox Cloud shortly after it is released.
+
+If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/support). Canonical can also provide [managed solutions](https://ubuntu.com/managed) for Anbox Cloud.
+
 
 ### What's new in 1.23.x?
 
@@ -37,19 +61,14 @@ Along with bug fixes and general improvements, Anbox Cloud 1.23.x includes:
 * Reworked charms that install snaps from the snap store
 * Android security updates
 
-## Older releases
+<details><summary>Click to view earlier releases' notes</summary>
 
-## 2024
 |  Release date  |  Release notes  |
 |----|----|
 | January 17 2024 | [Anbox Cloud 1.20.2](1.20.2.md) |
 | February 14 2024 | [Anbox Cloud 1.21.0](1.21.0.md) |
 | March 13 2024 | [Anbox Cloud 1.21.1](1.21.1.md) |
 | April 18 2024 | [Anbox Cloud 1.21.2](1.21.2.md) |
-
-### 2023
-|  Release date  |  Release notes  |
-|----|----|
 |December 13 2023| [Anbox Cloud 1.20.1](1.20.1.md) |
 |November 16 2023 | [Anbox Cloud 1.20.0](1.20.0.md) |
 |October 11 2023|[Anbox Cloud 1.19.2](1.19.2.md)|
@@ -65,10 +84,6 @@ Along with bug fixes and general improvements, Anbox Cloud 1.23.x includes:
 |January 24 2023|[Anbox Cloud 1.16.4](1.16.4.md)|
 |January 17 2023|[Anbox Cloud 1.16.3](1.16.3.md)|
 |January 12 2023|[Anbox Cloud 1.16.2](1.16.2.md)|
-
-### 2022
-|  Release date  |  Release notes  |
-|----|----|
 |December 14 2022|[Anbox Cloud 1.16.1](1.16.1.md)|
 |November 16 2022|[Anbox Cloud 1.16.0](1.16.0.md)|
 |October 20 2022|[Anbox Cloud 1.15.3](1.15.3.md)|
@@ -85,10 +100,6 @@ Along with bug fixes and general improvements, Anbox Cloud 1.23.x includes:
 |January 28 2022|[Anbox Cloud 1.12.5](1.12.5.md)|
 |January 21 2022|[Anbox Cloud 1.12.4](1.12.4.md)|
 |January 20 2022|[Anbox Cloud 1.12.3](1.12.3.md)|
-
-### 2021
-|  Release date  |  Release notes  |
-|----|----|
 |December 16 2021|[Anbox Cloud 1.12.2](1.12.2.md)|
 |November 30 2021|[Anbox Cloud 1.12.1](1.12.1.md)|
 |November 16 2021|[Anbox Cloud 1.12.0](1.12.0.md)|
@@ -108,10 +119,6 @@ Along with bug fixes and general improvements, Anbox Cloud 1.23.x includes:
 |March 4 2021|[Anbox Cloud 1.9.1](1.9.1.md)|
 |February 10 2021|[Anbox Cloud 1.9.0](1.9.0.md)|
 |January 19 2021|[Anbox Cloud 1.8.3](1.8.3.md)|
-
-### 2020
-|  Release date  |  Release notes  |
-|----|----|
 |December 17 2020|[Anbox Cloud 1.8.2](1.8.2.md)|
 |November 12 2020|[Anbox Cloud 1.8.1](1.8.1.md)|
 |November 4 2020|[Anbox Cloud 1.8.0](1.8.0.md)|
@@ -129,8 +136,6 @@ Along with bug fixes and general improvements, Anbox Cloud 1.23.x includes:
 |April 2020|[Anbox Cloud 1.5.0](1.5.0.md)|
 |March 2020|[Anbox Cloud 1.4.0](1.4.0.md)|
 |January 2020|[Anbox Cloud 1.3.3](1.3.3.md)|
-
-### 2019
 |October 2019|[Anbox Cloud 1.3.2](1.3.2.md)|
 |September 2019|[Anbox Cloud 1.3.1](1.3.1.md)|
 |August 2019|[Anbox Cloud 1.3.0](1.3.0.md)|
@@ -138,7 +143,6 @@ Along with bug fixes and general improvements, Anbox Cloud 1.23.x includes:
 |April 2019|[Anbox Cloud 1.2.0](1.2.0.md)|
 |February 2019|[Anbox Cloud 1.1.1](1.1.1.md)|
 |January 2019|[Anbox Cloud 1.1.0](1.1.0.md)|
-
-### 2018
 |December 2018|[Anbox Cloud 1.0.1](1.0.1.md)|
 |November 2018|[Anbox Cloud 1.0.0](1.0.0.md)|
+</details>

@@ -5,6 +5,71 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.23.1
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.23/stable` | 515 |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | 524 |
+| `coturn` | `1.23/stable` | 517 |
+| `ams` | `1.23/stable` | 547 |
+| `anbox-stream-gateway`  | `1.23/stable` | 533 |
+| `ams-lxd` | `1.23/stable` | 520 |
+| `anbox-stream-agent` | `1.23/stable` | 528 |
+| `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
+
+
+#### Ubuntu 20.04 (Deprecated)
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.23/stable` | 514 |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | 523 |
+| `coturn` | `1.23/stable` | 516 |
+| `ams` | `1.23/stable` | 546 |
+| `anbox-stream-gateway` | `1.23/stable` | 532 |
+| `ams-lxd` | `1.23/stable` | 519 |
+| `anbox-stream-agent` | `1.23/stable` | 527 |
+| `nats` | `latest/stable` | 10 (AMD64), 12 (ARM64) |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.23/stable` | 356|
+| `anbox-cloud-core` | `1.23/stable` | 365 |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.23/stable` | `1.23.1-2eb71a49d` |
+| `aar`    | `1.23/stable` | `1.23.1-2eb71a49d` |
+| `amc`    | `latest/stable` | `1.23.1-2eb71a49d` |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | `1.23.1-2eb71a49d` |
+| `anbox-cloud-dashboard` | `1.23/stable` | `1.23.1-2eb71a49d` |
+| `anbox-stream-agent` | `1.23/stable` | `1.23.1-2eb71a49d` |
+| `anbox-stream-gateway` | `1.23/stable` | `1.23.1-2eb71a49d` |
+| `anbox-connect` | `latest/stable` | `1.23.1-2eb71a49d` |
+| `anbox-cloud-appliance` | `1.23/stable` | `1.23.1-2eb71a49d` |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | `1.23.1-20240909122006.gitbfce81154` |
+| `jammy:android13:arm64` | `1.23.1-20240909122006.gitbfce81154` |
+| `jammy:android12:amd64` | `1.23.1-20240909122006.gitbfce81154` |
+| `jammy:android12:arm64` | `1.23.1-20240909122006.gitbfce81154` |
+| `jammy:aaos13:amd64`    | `1.23.1-20240909122006.gitbfce81154` |
+| `jammy:aaos13:arm64`    | `1.23.1-20240909122006.gitbfce81154` |
+
 ## 1.23.0
 
 ### Charms

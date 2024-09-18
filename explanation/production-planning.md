@@ -55,7 +55,7 @@ See {ref}`exp-security` for more information.
 
 You should keep your Anbox deployment updated to the latest available stable version. You should also update the other applications which make up Anbox. Keeping up to date ensures you have the latest fixes and security patches for smooth operation of your cluster.
 
-For details about the Anbox Cloud release roadmap, see {ref}`ref-roadmap`.
+For details about the Anbox Cloud release roadmap, see {ref}`ref-release-notes`.
 
 ## Data backup
 
@@ -89,4 +89,4 @@ You need the Ubuntu Pro subscription to use Anbox Cloud. Depending on the type o
 
 When you consider a production deployment, it is important to assess your upgrade roadmap. For more information about upgrading Anbox Cloud and the prerequisites required for the upgrade process, see {ref}`howto-upgrade-anbox-cloud`. 
 
-You can also choose to subscribe to the [announcements about Anbox Cloud releases](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on discourse. For insights into the Anbox Cloud release roadmap, see {ref}`ref-roadmap`.
+You can also choose to subscribe to the [announcements about Anbox Cloud releases](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on discourse. For insights into the Anbox Cloud release roadmap, see {ref}`ref-release-notes`.

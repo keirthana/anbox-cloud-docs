@@ -119,6 +119,8 @@ slug = "docs"
 # the sphinx_reredirects extension will be disabled.
 redirects = {
     'howto/container': 'howto/instance',
+    'reference/roadmap': 'reference/release-notes',
+    'reference/supported-versions': 'reference-release-notes',
 }
 
 ############################################################

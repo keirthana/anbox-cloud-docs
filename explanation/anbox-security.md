@@ -7,7 +7,7 @@ Anbox Cloud uses the secure [LXD](https://ubuntu.com/lxd) for container and virt
 
 Consider the following simple yet impactful measures to ensure that you run a secure Anbox Cloud deployment:
 
-- Always run the latest and supported version of Anbox Cloud. See {ref}`ref-roadmap`.
+- Always run the latest and supported version of Anbox Cloud. See {ref}`ref-release-notes`.
 - Do not set the `application.auto_update`, `instance.security_updates`, `container.security_updates` to `false`. See {ref}`ref-ams-configuration`.
 - Monitor resources used by instances regularly.
 - Do not disable TLS pinning when you are not using a load balancer.
