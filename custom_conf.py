@@ -218,6 +218,7 @@ custom_tags = []
 rst_prolog = """
 .. role:: center
    :class: align-center
+
 """
 
 ## Generate dynamic configuration using scripts
@@ -254,4 +255,3 @@ if not os.path.islink('.sphinx/_static/swagger-ui/swagger-ui-standalone-preset.j
     os.symlink('../../deps/swagger-ui/dist/swagger-ui-standalone-preset.js', '.sphinx/_static/swagger-ui/swagger-ui-standalone-preset.js')
 if not os.path.islink('.sphinx/_static/swagger-ui/swagger-ui.css'):
     os.symlink('../../deps/swagger-ui/dist/swagger-ui.css', '.sphinx/_static/swagger-ui/swagger-ui.css')
-
