@@ -77,7 +77,7 @@ Anbox Cloud images <provided-images>
 appliance-preseed
 appliance-configuration
 sdks
-api-reference
+api-reference/landing.md
 application-manifest
 cmd-ref/landing.md
 component-versions
