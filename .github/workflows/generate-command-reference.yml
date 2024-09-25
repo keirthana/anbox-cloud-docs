@@ -1,0 +1,24 @@
+name: Automatically generate command reference topics
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-24.04
+    steps:
+    - name: Setup Anbox Cloud
+      uses: canonical/anbox-cloud-github-action@main
+      with:
+        ubuntu-pro-token: ${{ secrets.UBUNTU_PRO_TOKEN }}
+    - name: Checkout repo
+      uses: actions/checkout@v4
+    - name: Generate AMC command reference documentation
+      run: amc generate documentation -f markdown -d ./reference/cmd-ref/amc-command-reference
+    - name: Commit changes
+      if: ${{ github.ref == 'refs/heads/main' }}
+      uses: EndBug/add-and-commit@v9
+      with:
+        default_author: github_actions
+        message: 'Generate AMC command reference documentation'
+        add: './reference/cmd-ref/amc-command-reference'
