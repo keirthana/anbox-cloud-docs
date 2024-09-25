@@ -48,5 +48,16 @@ lxd:
   project: anbox-cloud
 ams:
   api:
+    # List of UIDs which are allowed to talk to the AMS UNIX domain
+    # socket. In this example both UID 0 (root) and 1000 are allowed
+    # to connect to AMS. All other users will be denied.
     allowed-uids: [0, 1000]
+oidc:
+  # OpenID Connect issuer URL
+  issuer: https://my.auth.com
+  # OpenID Connect client ID
+  client_id: afeff2f23f23f32f23f2
+  # (optional) OpenID Connect audience URL, as required by some
+  # providers.
+  audience: https://my.auth.com/api/v2
 ```

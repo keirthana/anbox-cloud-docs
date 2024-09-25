@@ -28,10 +28,7 @@ We welcome community involvement through suggestions, fixes and constructive fee
 - [Report a bug](https://bugs.launchpad.net/anbox-cloud/+bugs) with the product or documentation
 - {ref}`contribute`
 
-The following resources help you get familiar with Anbox Cloud, its releases and roadmap:
-
-- {ref}`Release roadmap <ref-roadmap>`
-- {ref}`ref-release-notes`
+The {ref}`ref-release-notes` helps you get familiar with Anbox Cloud, its releases and roadmap.
 
 For official support requirements, you can get support through [Ubuntu Pro](https://ubuntu.com/support).
 

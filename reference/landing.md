@@ -9,11 +9,9 @@ Learn about Anbox Cloud releases, release roadmap, deprecations, supported produ
 
 | Guides | Description  |
 |--|--|
-| {ref}`ref-roadmap` | Information about general release cycle, currently supported version and future releases |
-| {ref}`ref-release-notes` | Release notes for all versions of Anbox Cloud |
+| {ref}`ref-release-notes` | Release notes for all versions of Anbox Cloud, information about supported versions, release cycle, and future releases |
 | {ref}`ref-deprecation-notes` | Deprecation notices for Anbox Cloud and its components |
 | {ref}`ref-component-versions` | Version information about different components of Anbox Cloud for each release |
-| {ref}`ref-supported-versions` | Information about supported Anbox Cloud versions and professional support |
 
 ## Usage
 
@@ -77,8 +75,9 @@ addon-manifest
 ams-configuration
 Anbox Cloud images <provided-images>
 appliance-preseed
+appliance-configuration
 sdks
-api-reference
+api-reference/landing.md
 application-manifest
 cmd-ref/landing.md
 component-versions
@@ -92,6 +91,7 @@ prometheus
 release-notes/release-notes.md
 requirements
 roadmap
+security-notices
 android-features
 Supported features <anbox-features>
 supported-rendering-resources

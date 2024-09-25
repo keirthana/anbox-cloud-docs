@@ -32,6 +32,7 @@ ASN
 async
 AttributeError
 AudioTrack
+Auth
 backend
 balancer
 balancers
@@ -57,6 +58,8 @@ cgroup-v1
 cgroup-v2
 config
 conformant
+CORS
+coturn
 Charmhub
 Charmstore
 CLI
@@ -67,6 +70,8 @@ Coturn
 CPUs
 crashdump
 Crashpad
+Cryptographic
+cryptographic
 CSV
 CTS
 CUDA
@@ -74,8 +79,8 @@ customisable
 customisation
 customisations
 CustomLocale
-Cryptographic
-cryptographic
+CVE
+CVEs
 datacenter
 dataset
 deallocate
@@ -171,6 +176,7 @@ LXC
 LXD
 MAAS
 macOS
+micromatch
 middleware
 Minetest
 monospaced
@@ -203,6 +209,7 @@ OOB
 OOM
 OpenAPI
 OpenGL
+OpenID
 OpenSSL
 OpenStack
 PCI
@@ -349,3 +356,6 @@ vTextureCoord
 vec
 uResolution
 presigned
+upstream
+upstreams
+YouTube
