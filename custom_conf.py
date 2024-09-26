@@ -218,7 +218,6 @@ custom_tags = []
 rst_prolog = """
 .. role:: center
    :class: align-center
-
 """
 
 ## Generate dynamic configuration using scripts

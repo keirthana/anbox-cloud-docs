@@ -46,9 +46,21 @@ def get_swagger_from_url() -> Dict:
     return response.json()
 
 
+def insert_custom_fields(props: Dict):
+    for prop in props.values():
+        val = prop.pop("x-docs-ref", "")
+        if val:
+            prop["x_docs_ref"] = val
+        val = prop.pop("x-deprecated-since", "")
+        if val:
+            prop["x_deprecated_since"] = val
+
+
 def parse_swagger(swagger, output_file):
     configs = _parse_config_schema(swagger)
     nodes = _parse_node_schema(swagger)
+    insert_custom_fields(configs)
+    insert_custom_fields(nodes)
     env = Environment(loader=FileSystemLoader("."))
     templ = env.get_template("scripts/ams-configuration.md.j2")
     text = templ.render(configs=configs, nodes=nodes)
