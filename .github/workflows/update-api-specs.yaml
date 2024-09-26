@@ -24,7 +24,8 @@ jobs:
       run: |
         echo "value=$(snap info anbox-cloud-appliance | awk '/installed/{print $2}')" >> "$GITHUB_OUTPUT"
     - name: Extra API spec from AMS
-      run:
+      run: |
+        sudo apt update
         sudo apt install -y yq
         curl \
           --unix-socket /var/snap/anbox-cloud-appliance/common/ams-unix.socket \
