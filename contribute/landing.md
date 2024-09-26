@@ -9,7 +9,9 @@ We welcome contributions, suggestions, fixes and constructive feedback from the 
 - Report it as a bug on [Launchpad](https://bugs.launchpad.net/anbox-cloud/+bugs) or on [GitHub](https://github.com/canonical/anbox-cloud-docs/issues/new).
 - Talk to us on the [public Matrix channel](https://matrix.to/#/#anbox-cloud:ubuntu.com).
 
-Contributing to our documentation is straightforward. We only require that all contributors sign the [Canonical contributor license agreement](https://ubuntu.com/legal/contributors), have a GitHub account, and set up a [git environment](https://github.com/canonical/open-documentation-academy/blob/main/getting-started/get_started.md#getting-your-environment-set-up). 
+Contributing to our documentation is straightforward. We only require that all contributors sign the [Canonical contributor license agreement](https://ubuntu.com/legal/contributors). 
+
+In order to contribute, you will need to set up a [GitHub](https://github.com/) account and a [git environment](https://github.com/canonical/open-documentation-academy/blob/main/getting-started/install_git.md). The [Getting Started guide](https://github.com/canonical/open-documentation-academy/blob/main/getting-started/get_started.md) from the Canonical Open Documentation Academy is a useful resource for people who are new to contributing using the Ubuntu command line.
 
 The navigational structure, style, and content of our documentation follows the Diátaxis systematic framework for technical documentation. This categorises the documentation into tutorials, how-to guides, reference material and explanatory text. 
 
@@ -18,7 +20,7 @@ Consistency is vital in documentation, which is why we request contributors to f
 - Inclusive language check 
 - Spellcheck
 - Accessibility check
-- Link check.
+- Link check
 
 However, do not let this be a barrier to your contribution. You can still submit contributions to the best of your ability, and if something is inconsistent, we will fix it. We are targeting continuous improvement rather than delayed perfection.
 
