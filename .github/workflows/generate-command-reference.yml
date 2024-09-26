@@ -26,9 +26,12 @@ jobs:
       run: amc generate documentation -f markdown -d $AMC_COMMAND_REFERENCE_DIR
     - name: List generated docs
       run: tree $AMC_COMMAND_REFERENCE_DIR
+    - name: Set $AMC_COMMAND_REFERENCE_DIR as an output
+      run: echo "value=$AMC_COMMAND_REFERENCE_DIR" >> "$GITHUB_OUTPUT"
+      id: amc_command_reference_dir
     - name: Commit changes
       uses: EndBug/add-and-commit@v9
       with:
         default_author: github_actions
         message: 'Generate AMC command reference documentation'
-        add: './reference/cmd-ref/amc'
+        add: ${{ steps.amc_command_reference_dir.outputs.value }}
