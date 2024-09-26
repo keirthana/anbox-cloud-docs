@@ -31,4 +31,4 @@ jobs:
       with:
         default_author: github_actions
         message: 'Generate AMC command reference documentation'
-        add: '$AMC_COMMAND_REFERENCE_DIR'
+        add: './reference/cmd-ref/amc'
