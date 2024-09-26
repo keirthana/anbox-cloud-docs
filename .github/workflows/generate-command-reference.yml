@@ -18,13 +18,14 @@ jobs:
       uses: canonical/anbox-cloud-github-action@39490d442cc0921fe614f7044b9f3dc8bd89725c
       with:
         channel: ${{ steps.base_version.outputs.value }}/stable
-      #  ubuntu-pro-token: ${{ secrets.UBUNTU_PRO_TOKEN }}
     - name: Checkout repo
       uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
     - name: Delete existing files
       run: rm -rf $AMC_COMMAND_REFERENCE_DIR/*
     - name: Generate AMC command reference documentation
       run: amc generate documentation -f markdown -d $AMC_COMMAND_REFERENCE_DIR
+    - name: List generated docs
+      run: tree $AMC_COMMAND_REFERENCE_DIR
     - name: Commit changes
       uses: EndBug/add-and-commit@v9
       with:
