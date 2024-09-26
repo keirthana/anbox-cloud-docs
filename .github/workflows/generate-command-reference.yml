@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  AMC_COMMAND_REFERENCE_DIR: "./reference/cmd-ref/amc-command-reference"
+  AMC_COMMAND_REFERENCE_DIR: "./reference/cmd-ref/amc"
 
 jobs:
   run-tests:
