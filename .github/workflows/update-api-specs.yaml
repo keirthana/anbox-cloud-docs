@@ -26,7 +26,7 @@ jobs:
     - name: Extra API spec from AMS
       run: |
         sudo apt update
-        sudo apt install -y yq
+        sudo apt install -y jq yq
         curl \
           --unix-socket /var/snap/anbox-cloud-appliance/common/ams-unix.socket \
           s/1.0/swagger.json | yq -P > ./reference/api-reference/ams-api.yaml
