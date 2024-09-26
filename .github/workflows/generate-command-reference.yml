@@ -45,7 +45,7 @@ jobs:
     - name: ls -al
       run: ls -al $APPLIANCE_COMMAND_REFERENCE_DIR
     - name: Generate appliance command reference documentation
-      run: anbox-cloud-appliance generate documentation -f markdown -d $APPLIANCE_COMMAND_REFERENCE_DIR
+      run: sudo anbox-cloud-appliance generate documentation -f markdown -d $APPLIANCE_COMMAND_REFERENCE_DIR
     - name: Set $APPLIANCE_COMMAND_REFERENCE_DIR as an output
       run: echo "value=$APPLIANCE_COMMAND_REFERENCE_DIR" >> "$GITHUB_OUTPUT"
       id: appliance_command_reference_dir
