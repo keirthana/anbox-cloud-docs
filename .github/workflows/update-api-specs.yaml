@@ -11,15 +11,18 @@ jobs:
     steps:
     - name: Check out repository
       uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
-    - name: Determine versions
-      id: versions
+    - name: Determine base version
+      id: base_version
       run: |
-        echo "base=$(cat .base_version)" >> "$GITHUB_OUTPUT"
-        echo "snap=$(snap info anbox-cloud-appliance | awk '/installed/{print $2}')" >> "$GITHUB_OUTPUT"
+        echo "value=$(cat .base_version)" >> "$GITHUB_OUTPUT"
     - name: Setup Anbox Cloud
       uses: canonical/anbox-cloud-github-action@39490d442cc0921fe614f7044b9f3dc8bd89725c
       with:
-        channel: ${{ steps.versions.outputs.base }}/stable
+        channel: ${{ steps.base_version.outputs.value }}/stable
+    - name: Determine appliance version
+      id: snap_version
+      run: |
+        echo "value=$(snap info anbox-cloud-appliance | awk '/installed/{print $2}')" >> "$GITHUB_OUTPUT"
     - name: Extra API spec from AMS
       run:
         sudo apt install -y yq
@@ -30,12 +33,12 @@ jobs:
       uses: canonical/create-pull-request@5b97f11bd11d44ed8c4ad49f60d6f529374b1e87
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        commit-message: "feat: update API specs from ${{ steps.versions.outputs.snap }}"
+        commit-message: "feat: update API specs from ${{ steps.snap_version.outputs.value }}"
         branch-name: new-branch
-        title: Update API specs from ${{ steps.versions.outputs.snap }}
+        title: Update API specs from ${{ steps.snap_version.outputs.value }}
         body: |
           This updates the AMS API specification as taken from the `anbox-cloud-appliance` as of
-          version ${{ steps.versions.outputs.snap }}.
+          version ${{ steps.snap_version.outputs.value }}.
         repository: canonical/anbox-cloud-docs
         upsert: true
         ignore-no-changes: true
