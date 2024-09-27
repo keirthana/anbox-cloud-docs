@@ -215,10 +215,10 @@ custom_tags = []
 ## Add any configuration that is not covered by the common conf.py file.
 
 # Define a :center: role that can be used to center the content of table cells.
-rst_prolog = '''
+rst_prolog = """
 .. role:: center
    :class: align-center
-'''
+"""
 
 ## Generate dynamic configuration using scripts
 # Inject AMS configuration valuues and Node configuration values from the swagger
