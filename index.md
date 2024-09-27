@@ -41,6 +41,6 @@ tutorial/landing
 howto/landing
 explanation/landing
 reference/landing
-Project and community <contribute/landing>
+Contribute <contribute/landing>
 reference/release-notes/release-notes
 ```
