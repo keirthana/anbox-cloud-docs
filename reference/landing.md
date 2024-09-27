@@ -72,7 +72,7 @@ Also check out the {ref}`tutorials` for step-by-step instructions that help you 
 :hidden:
 
 addon-manifest
-ams-configuration
+ams-configuration-public
 Anbox Cloud images <provided-images>
 appliance-preseed
 appliance-configuration
