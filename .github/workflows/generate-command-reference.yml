@@ -5,7 +5,7 @@ on:
 
 env:
   AMC_COMMAND_REFERENCE_DIR: "./reference/cmd-ref/amc"
-  APPLIANCE_COMMAND_REFERENCE_DIR: "./reference/cmd-ref/appliance-command-reference"
+  APPLIANCE_COMMAND_REFERENCE_DIR: "./reference/cmd-ref/appliance"
 
 jobs:
   run-tests:
