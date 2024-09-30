@@ -28,7 +28,7 @@ jobs:
     - name: Set $AMC_COMMAND_REFERENCE_DIR as an output
       run: echo "value=$AMC_COMMAND_REFERENCE_DIR" >> "$GITHUB_OUTPUT"
       id: amc_command_reference_dir
-    - name: Commit AMC command reference changes
+    - name: Commit changes
       uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
       with:
         default_author: github_actions
@@ -37,11 +37,15 @@ jobs:
     - name: Delete existing files - appliance reference
       run: rm -rf $APPLIANCE_COMMAND_REFERENCE_DIR/*
     - name: Generate appliance command reference documentation
-      run: sudo anbox-cloud-appliance generate documentation -f markdown -d $APPLIANCE_COMMAND_REFERENCE_DIR
+      run: |
+        SNAP_DOCS_DIR="/var/snap/anbox-cloud-appliance/common/docs" && \
+        sudo mkdir -p $SNAP_DOCS_DIR && \
+        sudo anbox-cloud-appliance generate documentation -f markdown -d $SNAP_DOCS_DIR && \
+        cp -r $SNAP_DOCS_DIR/* $APPLIANCE_COMMAND_REFERENCE_DIR
     - name: Set $APPLIANCE_COMMAND_REFERENCE_DIR as an output
       run: echo "value=$APPLIANCE_COMMAND_REFERENCE_DIR" >> "$GITHUB_OUTPUT"
       id: appliance_command_reference_dir
-    - name: Commit appliance command reference changes
+    - name: Commit changes
       uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
       with:
         default_author: github_actions
