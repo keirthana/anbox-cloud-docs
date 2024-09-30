@@ -29,6 +29,7 @@ jobs:
       run: echo "value=$AMC_COMMAND_REFERENCE_DIR" >> "$GITHUB_OUTPUT"
       id: amc_command_reference_dir
     - name: Commit changes
+      if: ${{ github.ref == 'refs/heads/main' }}
       uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
       with:
         default_author: github_actions
@@ -46,6 +47,7 @@ jobs:
       run: echo "value=$APPLIANCE_COMMAND_REFERENCE_DIR" >> "$GITHUB_OUTPUT"
       id: appliance_command_reference_dir
     - name: Commit changes
+      if: ${{ github.ref == 'refs/heads/main' }}
       uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
       with:
         default_author: github_actions
