@@ -23,12 +23,12 @@ jobs:
       uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
       # Remove existing files, generate AMC command reference
     - name: Generate AMC command reference documentation
-      id: amc_command_reference_dir
       run: |
         set -e
         rm -rf $AMC_COMMAND_REFERENCE_DIR/*
         amc generate documentation -f markdown -d $AMC_COMMAND_REFERENCE_DIR
     - name: Commit changes
+      if: ${{ github.ref == 'refs/heads/main' }}
       uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
       with:
         default_author: github_actions
@@ -36,7 +36,6 @@ jobs:
         add: ${{ env.AMC_COMMAND_REFERENCE_DIR }}
       # Remove existing files, generate appliance command reference
     - name: Generate appliance command reference documentation
-      id: appliance_command_reference_dir
       env:
         SNAP_DOCS_DIR: "/var/snap/anbox-cloud-appliance/common/docs"
       # For the appliance command, the files have to be generated inside the Snap
@@ -48,6 +47,7 @@ jobs:
         sudo anbox-cloud-appliance generate documentation -f markdown -d $SNAP_DOCS_DIR
         cp -r $SNAP_DOCS_DIR/* $APPLIANCE_COMMAND_REFERENCE_DIR
     - name: Commit changes
+      if: ${{ github.ref == 'refs/heads/main' }}
       uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
       with:
         default_author: github_actions
