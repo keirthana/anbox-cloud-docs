@@ -21,13 +21,13 @@ jobs:
         channel: ${{ steps.base_version.outputs.value }}/stable
     - name: Checkout repo
       uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
-    - name: Delete existing files - amc reference
-      run: rm -rf $AMC_COMMAND_REFERENCE_DIR/*
+      # Remove existing files, generate AMC command reference and store directory path as output
     - name: Generate AMC command reference documentation
-      run: amc generate documentation -f markdown -d $AMC_COMMAND_REFERENCE_DIR
-    - name: Set $AMC_COMMAND_REFERENCE_DIR as an output
-      run: echo "value=$AMC_COMMAND_REFERENCE_DIR" >> "$GITHUB_OUTPUT"
       id: amc_command_reference_dir
+      run: |
+        rm -rf $AMC_COMMAND_REFERENCE_DIR/*
+        amc generate documentation -f markdown -d $AMC_COMMAND_REFERENCE_DIR
+        echo "value=$AMC_COMMAND_REFERENCE_DIR" >> "$GITHUB_OUTPUT"
     - name: Commit changes
       uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
       with:
