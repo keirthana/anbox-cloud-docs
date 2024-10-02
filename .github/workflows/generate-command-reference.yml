@@ -33,7 +33,7 @@ jobs:
         default_author: github_actions
         message: 'Generate AMC command reference documentation'
         add: ${{ env.AMC_COMMAND_REFERENCE_DIR }}
-      # Remove existing files, generate appliance command reference and store directory path as output
+      # Remove existing files, generate appliance command reference
     - name: Generate appliance command reference documentation
       id: appliance_command_reference_dir
       env:
@@ -42,12 +42,11 @@ jobs:
         rm -rf $APPLIANCE_COMMAND_REFERENCE_DIR/* && \
         sudo mkdir -p $SNAP_DOCS_DIR && \
         sudo anbox-cloud-appliance generate documentation -f markdown -d $SNAP_DOCS_DIR && \
-        cp -r $SNAP_DOCS_DIR/* $APPLIANCE_COMMAND_REFERENCE_DIR && \
-        echo "value=$APPLIANCE_COMMAND_REFERENCE_DIR" >> "$GITHUB_OUTPUT"
+        cp -r $SNAP_DOCS_DIR/* $APPLIANCE_COMMAND_REFERENCE_DIR
     - name: Commit changes
       uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
       with:
         default_author: github_actions
         message: 'Generate appliance command reference documentation'
-        add: ${{ steps.appliance_command_reference_dir.outputs.value }}
+        add: ${{ env.APPLIANCE_COMMAND_REFERENCE_DIR }}
       
