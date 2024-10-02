@@ -38,10 +38,13 @@ jobs:
       id: appliance_command_reference_dir
       env:
         SNAP_DOCS_DIR: "/var/snap/anbox-cloud-appliance/common/docs"
+      # For the appliance command, the files have to be generated inside the Snap
+      # and then copied to the desired directory because of Snap confinement
       run: |
-        rm -rf $APPLIANCE_COMMAND_REFERENCE_DIR/* && \
-        sudo mkdir -p $SNAP_DOCS_DIR && \
-        sudo anbox-cloud-appliance generate documentation -f markdown -d $SNAP_DOCS_DIR && \
+        set -e
+        rm -rf $APPLIANCE_COMMAND_REFERENCE_DIR/*
+        sudo mkdir -p $SNAP_DOCS_DIR
+        sudo anbox-cloud-appliance generate documentation -f markdown -d $SNAP_DOCS_DIR
         cp -r $SNAP_DOCS_DIR/* $APPLIANCE_COMMAND_REFERENCE_DIR
     - name: Commit changes
       uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
@@ -49,4 +52,3 @@ jobs:
         default_author: github_actions
         message: 'Generate appliance command reference documentation'
         add: ${{ env.APPLIANCE_COMMAND_REFERENCE_DIR }}
-      
