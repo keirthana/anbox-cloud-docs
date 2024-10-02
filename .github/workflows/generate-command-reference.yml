@@ -25,6 +25,7 @@ jobs:
     - name: Generate AMC command reference documentation
       id: amc_command_reference_dir
       run: |
+        set -e
         rm -rf $AMC_COMMAND_REFERENCE_DIR/*
         amc generate documentation -f markdown -d $AMC_COMMAND_REFERENCE_DIR
     - name: Commit changes
