@@ -31,7 +31,7 @@ jobs:
           --unix-socket /var/snap/anbox-cloud-appliance/common/ams-unix.socket \
           s/1.0/swagger.json | yq -P > ./reference/api-reference/ams-api.yaml
     - name: Create PR
-      uses: canonical/create-pull-request@5b97f11bd11d44ed8c4ad49f60d6f529374b1e87
+      uses: canonical/create-pull-request@3ad9cef62791c00f1c71d4aca902f4ea6abe0302
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "feat: update API specs from ${{ steps.snap_version.outputs.value }}"
