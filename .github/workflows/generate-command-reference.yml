@@ -15,41 +15,39 @@ jobs:
       id: base_version
       run: |
         echo "value=$(cat .base_version)" >> "$GITHUB_OUTPUT"
-    - name: Setup Anbox Cloud
+    - name: Set up Anbox Cloud
       uses: canonical/anbox-cloud-github-action@39490d442cc0921fe614f7044b9f3dc8bd89725c
       with:
         channel: ${{ steps.base_version.outputs.value }}/stable
     - name: Checkout repo
       uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
-      # Remove existing files, generate AMC command reference
     - name: Generate AMC command reference documentation
       run: |
         set -e
+        # Remove existing files, generate AMC command reference
         rm -rf $AMC_COMMAND_REFERENCE_DIR/*
         amc generate documentation -f markdown -d $AMC_COMMAND_REFERENCE_DIR
-    - name: Commit changes
-      if: ${{ github.ref == 'refs/heads/main' }}
-      uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
-      with:
-        default_author: github_actions
-        message: 'Generate AMC command reference documentation'
-        add: ${{ env.AMC_COMMAND_REFERENCE_DIR }}
-      # Remove existing files, generate appliance command reference
     - name: Generate appliance command reference documentation
       env:
         SNAP_DOCS_DIR: "/var/snap/anbox-cloud-appliance/common/docs"
-      # For the appliance command, the files have to be generated inside the Snap
-      # and then copied to the desired directory because of Snap confinement
       run: |
         set -e
+        # Remove existing files, generate appliance command reference
         rm -rf $APPLIANCE_COMMAND_REFERENCE_DIR/*
+        # For the appliance command, the files have to be generated inside the Snap
+        # and then copied to the desired directory because of Snap confinement
         sudo mkdir -p $SNAP_DOCS_DIR
         sudo anbox-cloud-appliance generate documentation -f markdown -d $SNAP_DOCS_DIR
         cp -r $SNAP_DOCS_DIR/* $APPLIANCE_COMMAND_REFERENCE_DIR
-    - name: Commit changes
-      if: ${{ github.ref == 'refs/heads/main' }}
-      uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
+    - name: Create pull request
+      uses: canonical/create-pull-request@3ad9cef62791c00f1c71d4aca902f4ea6abe0302
       with:
-        default_author: github_actions
-        message: 'Generate appliance command reference documentation'
-        add: ${{ env.APPLIANCE_COMMAND_REFERENCE_DIR }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: "Commit changes to command reference documentation"
+        branch-name: update-cmd-ref
+        title: Update command reference documentation
+        body: |
+          This updates the command reference topics for the AMC and Anbox Cloud Appliance.
+        repository: canonical/anbox-cloud-docs
+        upsert: true
+        ignore-no-changes: true
