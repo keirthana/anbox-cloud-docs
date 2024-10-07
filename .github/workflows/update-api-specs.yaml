@@ -6,7 +6,7 @@ on:
   - cron: '0 1 * * *'
 
 jobs:
-  backport:
+  update-api-specs:
     runs-on: ubuntu-24.04
     steps:
     - name: Check out repository
@@ -29,7 +29,7 @@ jobs:
         sudo apt install -y jq yq
         curl \
           --unix-socket /var/snap/anbox-cloud-appliance/common/ams-unix.socket \
-          s/1.0/swagger.json | yq -P > ./reference/api-reference/ams-api.yaml
+          s/1.0/swagger.json | yq -y > ./reference/api-reference/ams-api.yaml
     - name: Create PR
       uses: canonical/create-pull-request@3ad9cef62791c00f1c71d4aca902f4ea6abe0302
       with:
