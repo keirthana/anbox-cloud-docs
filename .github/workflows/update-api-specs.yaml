@@ -15,7 +15,7 @@ jobs:
       id: base_version
       run: |
         echo "value=$(cat .base_version)" >> "$GITHUB_OUTPUT"
-    - name: Setup Anbox Cloud
+    - name: Set up Anbox Cloud
       uses: canonical/anbox-cloud-github-action@39490d442cc0921fe614f7044b9f3dc8bd89725c
       with:
         channel: ${{ steps.base_version.outputs.value }}/stable
@@ -23,7 +23,7 @@ jobs:
       id: snap_version
       run: |
         echo "value=$(snap info anbox-cloud-appliance | awk '/installed/{print $2}')" >> "$GITHUB_OUTPUT"
-    - name: Extra API spec from AMS
+    - name: Extract API spec from AMS
       run: |
         sudo apt update
         sudo apt install -y jq yq
