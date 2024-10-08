@@ -27,9 +27,9 @@ Before you start the installation, ensure that you have the required credentials
 
 Juju is a tool for deploying, configuring and operating complex software on public or private clouds.
 
-To install Juju 2.9, enter the following command:
+To install Juju 3.x, enter the following command:
 
-    sudo snap install --classic --channel=2.9/stable juju
+    sudo snap install --classic --channel=3/stable juju
 
 See {ref}`sec-juju-version-requirements` for information about which Juju version is required for your version of Anbox Cloud.
 
