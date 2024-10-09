@@ -1,7 +1,9 @@
 name: Automatically generate command reference topics
 on:
-  push:
   workflow_dispatch:
+  # Run daily after midnight UTC
+  schedule:
+  - cron: '22 1 * * *'
 
 env:
   AMC_COMMAND_REFERENCE_DIR: "./reference/cmd-ref/amc"
@@ -49,6 +51,8 @@ jobs:
         title: Update command reference documentation
         body: |
           This updates the command reference topics for the AMC and Anbox Cloud Appliance.
+          
+          You have to close and reopen the PR to trigger checks.
         repository: canonical/anbox-cloud-docs
         upsert: true
         ignore-no-changes: true
