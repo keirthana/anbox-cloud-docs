@@ -45,6 +45,10 @@ Anbox Cloud comes with support for High Availability (HA) for both Core and the 
 
 Consider the following security aspects when you are planning for a production deployment:
 
+### Protection against DDoS attacks
+
+DDoS attacks can severely impact the availability of critical services. It is important to assess your threat model and decide on protection mechanisms to safeguard your public endpoints and critical services. While deploying Anbox Cloud, consider addressing potential threats, such as overwhelming the signalling WebSocket or other public-facing resources to ensure service availability and resilience.
+
 ### Secure communication
 
 Communication between the Anbox Cloud components uses TLS encryption and authentication. Access is controlled through secure authentication tokens or temporary passwords. Secure communication is achieved using TLS and public-key encryption with a chain of trust up to a shared root Certificate Authority (CA). However, when the cluster is being brought up or a new unit is being added, the chain of trust and certificates required must be bootstrapped into the machines.
