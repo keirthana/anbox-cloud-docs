@@ -13,26 +13,51 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| | | |
+| `anbox-cloud-dashboard` | `1.23/stable` | 545 |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | 554 |
+| `coturn` | `1.23/stable` | 547 |
+| `ams` | `1.23/stable` | 619 |
+| `anbox-stream-gateway`  | `1.23/stable` | 573 |
+| `ams-lxd` | `1.23/stable` | 550 |
+| `anbox-stream-agent` | `1.23/stable` | 568 |
+| `aar` | `1.23/stable` | 600 |
+| `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
 
 
 #### Ubuntu 20.04 (Deprecated)
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| | | |
+| `anbox-cloud-dashboard` | `1.23/stable` | 544 |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | 553 |
+| `coturn` | `1.23/stable` | 546 |
+| `ams` | `1.23/stable` | 618 |
+| `anbox-stream-gateway`  | `1.23/stable` | 572 |
+| `ams-lxd` | `1.23/stable` | 549 |
+| `anbox-stream-agent` | `1.23/stable` | 567 |
+| `aar` | `1.23/stable` | 599 |
+| `nats` | `latest/stable` | 10 (AMD64), 12 (ARM64) |
 
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| | | |
+| `anbox-cloud` | `1.23/stable` | 434|
+| `anbox-cloud-core` | `1.23/stable` | 443 |
 
 ### Snaps
 
 | Name |  Channel | Version |
 |----------|--------------|---------|
-| | | |
+| `ams`    | `1.23/stable` | `1.23.2-047136ecf` |
+| `aar`    | `1.23/stable` | `1.23.2-047136ecf` |
+| `amc`    | `latest/stable` | `1.23.2-047136ecf` |
+| `ams-node-controller` (Deprecated) | `1.23/stable` | `1.23.2-047136ecf` |
+| `anbox-cloud-dashboard` | `1.23/stable` | `1.23.2-047136ecf` |
+| `anbox-stream-agent` | `1.23/stable` | `1.23.2-047136ecf` |
+| `anbox-stream-gateway` | `1.23/stable` | `1.23.2-047136ecf` |
+| `anbox-connect` | `latest/stable` | `1.23.2-047136ecf` |
+| `anbox-cloud-appliance` | `1.23/stable` | `1.23.2-047136ecf` |
 
 ### Anbox images
 
