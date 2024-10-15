@@ -65,12 +65,12 @@ The following Anbox images are available in two variants: one based on a contain
 
 | Name | Version |
 |----------|--------------|
-| `jammy:android13:amd64` |  |
-| `jammy:android13:arm64` |  |
-| `jammy:android12:amd64` |  |
-| `jammy:android12:arm64` |  |
-| `jammy:aaos13:amd64`    |  |
-| `jammy:aaos13:arm64`    |  |
+| `jammy:android13:amd64` | `1.23.2-20241012130214.git273ce8dc2` |
+| `jammy:android13:arm64` | `1.23.2-20241012130214.git273ce8dc2` |
+| `jammy:android12:amd64` | `1.23.2-20241012130214.git273ce8dc2` |
+| `jammy:android12:arm64` | `1.23.2-20241012130214.git273ce8dc2` |
+| `jammy:aaos13:amd64`    | `1.23.2-20241012130214.git273ce8dc2` |
+| `jammy:aaos13:arm64`    | `1.23.2-20241012130214.git273ce8dc2` |
 
 ## 1.23.1
 
