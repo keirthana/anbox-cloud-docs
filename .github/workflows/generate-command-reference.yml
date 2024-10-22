@@ -18,7 +18,7 @@ jobs:
       run: |
         echo "value=$(cat .base_version)" >> "$GITHUB_OUTPUT"
     - name: Set up Anbox Cloud
-      uses: canonical/anbox-cloud-github-action@118f33a9d428f1a42940333fad8ff108be757908
+      uses: canonical/anbox-cloud-github-action@1313af204abc19f4ba5f655d3d0717eba2516c6f
       with:
         channel: ${{ steps.base_version.outputs.value }}/stable
     - name: Checkout repo
