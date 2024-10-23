@@ -18,7 +18,7 @@ Not all components are updated with each release. When components are not update
 | `coturn` | `1.23/stable` | 547 |
 | `ams` | `1.23/stable` | 619 |
 | `anbox-stream-gateway`  | `1.23/stable` | 573 |
-| `ams-lxd` | `1.23/stable` | 550 |
+| `ams-lxd` | `1.23/stable` | 566 |
 | `anbox-stream-agent` | `1.23/stable` | 568 |
 | `aar` | `1.23/stable` | 600 |
 | `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
@@ -33,7 +33,7 @@ Not all components are updated with each release. When components are not update
 | `coturn` | `1.23/stable` | 546 |
 | `ams` | `1.23/stable` | 618 |
 | `anbox-stream-gateway`  | `1.23/stable` | 572 |
-| `ams-lxd` | `1.23/stable` | 549 |
+| `ams-lxd` | `1.23/stable` | 565 |
 | `anbox-stream-agent` | `1.23/stable` | 567 |
 | `aar` | `1.23/stable` | 599 |
 | `nats` | `latest/stable` | 10 (AMD64), 12 (ARM64) |
