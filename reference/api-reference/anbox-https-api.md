@@ -603,7 +603,7 @@ Example input:
   "float_values": [],    # (Optional) Float array
   "int32_values": [],    # (Optional) 32-bit signed integer array
   "int64_values": [],    # (Optional) 64-bit signed integer array
-  "string_value": "Foo", # (Optioanl) UTF-8 string
+  "string_value": "Foo"  # (Optional) UTF-8 string
 }
 ```
 
