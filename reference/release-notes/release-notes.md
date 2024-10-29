@@ -9,8 +9,8 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
-| October 23 2023 | [Anbox Cloud 1.23.2 hotfix 1](1.23.2-hotfix1.md) |
-| October 16 2023 | [Anbox Cloud 1.23.2](1.23.2.md) |
+| October 23 2024 | [Anbox Cloud 1.23.2 hotfix 1](1.23.2-hotfix1.md) |
+| October 16 2024 | [Anbox Cloud 1.23.2](1.23.2.md) |
 | September 18 2024 | [Anbox Cloud 1.23.1](1.23.1.md) |
 | August 14 2024 | [Anbox Cloud 1.23.0](1.23.0.md) |
 
