@@ -16,7 +16,7 @@ jobs:
       run: |
         echo "value=$(cat .base_version)" >> "$GITHUB_OUTPUT"
     - name: Set up Anbox Cloud
-      uses: canonical/anbox-cloud-github-action@1313af204abc19f4ba5f655d3d0717eba2516c6f
+      uses: canonical/anbox-cloud-github-action@ef27ae90bda26fcdb2d33cddcb527ec32f3adc6e
       with:
         channel: ${{ steps.base_version.outputs.value }}/stable
     - name: Determine appliance version
