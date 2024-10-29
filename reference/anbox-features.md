@@ -10,6 +10,9 @@ The following table lists some Anbox features and whether they are supported for
 | boot-package and boot-activity in {ref}`ref-application-manifest` | ✓    |   -   |
 | {ref}`howto-install-apk-system-app`             | ✓    |   -   |
 | [Custom Android ID](#custom-android-id)                    | ✓    |   -   |
+| [System UI](#system-ui)                    | ✓    |   -   |
+| [Virtual Keyboard](#virtual-keyboard)                    | ✓    |   -   |
+| [Client-Side Virtual Keyboard](#client-side-virtual-keyboard)                    | ✓    |   -   |
 | {ref}`VHAL HTTP API <sec-anbox-https-api-vhal>`                                   | -    |   ✓   |
 | [VhalConnector](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-platform-sdk/classanbox_1_1VhalConnector.html) in Platform SDK API                                                    | -    |   ✓   |
 | {ref}`exp-custom-images`     | -    |   ✓   | 
@@ -33,23 +36,27 @@ To configure a feature for one application in the manifest, use a syntax similar
 
 ### System UI
 
-*since 1.10.2*
+*since 1.10.2, supported on AOSP images only*
 
 By default, Anbox hides the Android system UI when an application is running in foreground mode. In some use cases, however, it's required to have the system UI available for navigation purposes. This can be enabled with the `enable_system_ui` feature flag.
 
 The feature flag will be considered by all new launched instances once set.
 
+On AAOS, the Android Car system UI is always enabled and cannot be disabled.
+
 ### Virtual Keyboard
 
-*since 1.9.0*
+*since 1.9.0, supported on AOSP images only*
 
 The Android virtual keyboard is disabled by default but can be enabled with the `enable_virtual_keyboard` feature flag.
 
 For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the application {ref}`bootstrap process <sec-application-bootstrap>`.
 
+On AAOS, the Android virtual keyboard is always enabled and cannot be disabled.
+
 ### Client-Side Virtual Keyboard
 
-*since 1.11.0*
+*since 1.11.0, supported on AOSP images only*
 
 The client-side virtual keyboard is disabled by default but can be enabled with the `enable_anbox_ime` feature flag. It requires the client application to embed {ref}`Anbox WebView <sec-application-bootstrap>` which interacts with the client-side virtual keyboard for text editing and sends the text to the Android container.
 
