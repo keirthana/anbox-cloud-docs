@@ -18,11 +18,11 @@ jobs:
       run: |
         echo "value=$(cat .base_version)" >> "$GITHUB_OUTPUT"
     - name: Set up Anbox Cloud
-      uses: canonical/anbox-cloud-github-action@39490d442cc0921fe614f7044b9f3dc8bd89725c
+      uses: canonical/anbox-cloud-github-action@1313af204abc19f4ba5f655d3d0717eba2516c6f
       with:
         channel: ${{ steps.base_version.outputs.value }}/stable
     - name: Checkout repo
-      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       # Remove existing files, generate AMC command reference
     - name: Generate AMC command reference documentation
       run: |

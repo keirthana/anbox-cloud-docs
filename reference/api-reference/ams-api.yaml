@@ -1150,79 +1150,127 @@ paths:
                         default: ''
                         example: foobar
                       agent.api.url:
-                        description: URL for stream agent API endpoint
+                        description: URL for stream agent API endpoint.
                         type: string
                         default: ''
                         example: https://foo.bar:9001
                       application.addons:
-                        description: Enable addons globally for applications
+                        description: 'Comma-separated list of addons that every
+
+                          application managed by AMS will use.'
                         type: string
                         default: ''
+                        x-docs-ref: howto-enable-addons-globally
                         example: my-addon
                       application.auto_publish:
-                        description: Automatically publish the latest version for
-                          an application
+                        description: 'If set to `true`, AMS automatically published
+
+                          new application versions when the bootstrap
+
+                          process is finished. `false` disables this.'
                         type: boolean
                         default: true
+                        x-docs-ref: sec-publish-app-versions
                       application.auto_update:
-                        description: Automatically update the images and applications
-                          to the latest versions
+                        description: 'If set to `true`, AMS automatically updates
+
+                          applications whenever any dependencies
+
+                          (parent image, addons, global configuration) change.
+
+                          `false` disables this.'
                         type: boolean
                         default: true
+                        x-docs-ref: sec-configure-automatic-app-updates
                       application.default_abi:
-                        description: Set a default support ABI architecture globally
+                        description: 'Default Android ABI that applications
+
+                          should use. See [Android ABIs](https://developer.android.com/ndk/guides/abis)
+
+                          for a list of available ABIs.'
                         type: string
                         default: ''
                         example: arm64-v8a
                       application.max_published_versions:
-                        description: Set the maximum number of application versions
-                          to publish
+                        description: 'Maximum number of published versions per
+
+                          application. If the number of versions of
+
+                          an application exceeds this configuration,
+
+                          AMS will automatically clean up older versions.'
                         type: integer
                         format: int32
                         default: 3
                         example: 3
                       container.apt_mirror:
-                        description: APT mirror to use for downloading dependencies
-                          inside the container
+                        description: '*(Deprecated)* APT mirror to use within
+
+                          the containers. This configuration item
+
+                          is deprecated since 1.20, use `instance.apt_mirror`
+
+                          instead.'
                         type: string
                         default: ''
+                        x-deprecated-since: '1.20'
                         example: http://ports.ubuntu.com/ubuntu-ports
                       container.default_platform:
-                        description: Platform to be forwarded to the container for
-                          running audio/video operations
+                        description: '*(Deprecated)* The name of the platform
+
+                          that Anbox Cloud uses by default to launch
+
+                          containers. This configuration item is deprecated
+
+                          since 1.20, use `instance.default_platform` instead.'
                         type: string
                         default: 'null'
                         enum:
                           - 'null'
                           - webrtc
                           - swrast
+                        x-deprecated-since: '1.20'
                         example: webrtc
                       container.features:
-                        description: Enable additional android features
+                        description: '"*(Deprecated)* Comma-separated list of
+
+                          features to enable. This configuration
+
+                          item is deprecated since 1.20, use `instance.features`
+
+                          instead."'
                         type: string
                         default: ''
+                        x-deprecated-since: '1.20'
                         example: enable_virtual_keyboard,foo
                       container.security_updates:
-                        description: Enable/disable security update for containers
+                        description: '*(Deprecated)* If set to `true`, automatic Ubuntu
+                          security updates are applied during the application bootstrap
+                          process. `false` disables this.'
                         type: boolean
                         default: true
+                        x-deprecated-since: '1.20'
                       core.debug_address:
                         description: Address used to expose debug information on
                         type: string
                         default: ''
                         example: https://127.0.0.1:9090
                       core.proxy_http:
-                        description: Proxy variables inside container
+                        description: HTTP proxy to use for HTTP requests that AMS
+                          performs.
                         type: string
                         default: ''
                         example: http://my-proxy:8000
                       core.proxy_https:
-                        description: Proxy variables inside container
+                        description: HTTPS proxy to use for HTTPS requests that AMS
+                          performs.
                         type: string
                         default: ''
                         example: http://my-proxy:8000
                       core.proxy_ignore_hosts:
-                        description: Proxy variables inside container
+                        description: 'Comma-separated list that defines the hosts
+
+                          for which a configured proxy is not used.'
                         type: string
                         default: ''
                         example: localhost,127.0.0.1
@@ -1236,15 +1284,26 @@ paths:
                         default: ''
                         example: sUp3rS3cR3t
                       cpu.limit_mode:
-                        description: CPU limiting strategies used for a container
+                        description: 'The mode AMS uses to limit CPU access
+
+                          for an instance. Possible values are:
+
+                          `scheduler`, `pinning`.'
                         type: string
                         default: scheduler
                         enum:
                           - scheduler
                           - pinning
+                        x-docs-ref: exp-performance
                         example: scheduler
                       gpu.allocation_mode:
-                        description: GPU allocation mode
+                        description: 'Method of allocating GPUs: `all` tells
+
+                          AMS to allocate all available GPUs on a
+
+                          system to an instance. `single` allocates
+
+                          only a single GPU.'
                         type: string
                         default: single
                         enum:
@@ -1252,8 +1311,7 @@ paths:
                           - single
                         example: single
                       gpu.type:
-                        description: GPU type. Can be `none`, `nvidia`, `intel` or
-                          `amd`
+                        description: 'Type of GPU: `none`, `intel`, `nvidia`, `amd`'
                         type: string
                         default: none
                         enum:
@@ -1263,38 +1321,58 @@ paths:
                           - intel
                         example: none
                       images.allow_insecure:
-                        description: Allow insecure TLS for accessing image registry
+                        description: 'If set to `true`, AMS allows accepting
+
+                          untrusted certificates provided by the
+
+                          configured image server."'
                         type: boolean
                         default: false
                       images.auth:
-                        description: Auth token required to access the image registry
+                        description: 'Authentication details for AMS to access
+
+                          the image server. When reading this configuration,
+
+                          a Boolean value that indicates whether the item
+
+                          is set is returned, to avoid exposing credentials.'
                         type: string
                         default: ''
                         example: user:password
                       images.update_interval:
-                        description: Interval used to check for image updates
+                        description: 'Frequency of image updates (for example: 1h,
+                          30m).'
                         type: string
                         default: 5m
                         example: 5m
                       images.url:
-                        description: Image registry URL
+                        description: URL of the image server to use.
                         type: string
                         default: https://images.anbox-cloud.io/stable/
                         example: https://images.anbox-cloud.io/stable/
                       images.version_lockstep:
-                        description: Lock latest image version to align with latest
-                          AMS version
+                        description: 'Whether to put the version of the latest
+
+                          pulled image and the AMS version in a lockstep.
+
+                          This ensures that a deployment is not automatically
+
+                          updated to newer image versions if AMS is still at
+
+                          an older version. This only applies for new major
+
+                          and minor but not patch version updates.'
                         type: boolean
                         default: true
                       instance.apt_mirror:
-                        description: APT mirror to use for downloading dependencies
-                          inside the instance
+                        description: APT mirror to use within the instances.
                         type: string
                         default: ''
                         example: http://ports.ubuntu.com/ubuntu-ports
                       instance.default_platform:
-                        description: Platform to be forwarded to the instance for
-                          running audio/video operations
+                        description: 'The name of the platform that Anbox Cloud
+
+                          uses by default to launch instances.'
                         type: string
                         default: 'null'
                         enum:
@@ -1303,64 +1381,124 @@ paths:
                           - swrast
                         example: webrtc
                       instance.features:
-                        description: Enable additional android features
+                        description: Comma-separated list of features to enable.
                         type: string
                         default: ''
                         example: enable_virtual_keyboard,foo
+                      instance.network_proxy:
+                        description: 'Network proxy to use inside the instances.
+
+                          This value must have the format `<hostname>:<port>`'
+                        type: string
+                        default: ''
+                        example: myproxy.com:9090
                       instance.security_updates:
-                        description: Enable/disable security update for instance
+                        description: 'If set to `true`, automatic Ubuntu security
+
+                          updates are applied during the application
+
+                          bootstrap process. `false` disables this.'
                         type: boolean
                         default: true
                       load_balancer.url:
-                        description: Set host URL for AMS to loadbalancer's URL
+                        description: 'URL of the load balancer behind which AMS sits.
+
+                          The URL is handed to instances started by AMS to
+
+                          allow them to contact AMS through the load balancer
+
+                          and not via the address of an individual AMS instance.'
                         type: string
                         default: ''
                         example: https://load-balanced-ams.com
                       node.queue_size:
-                        description: Queue size for internal AMS workers
+                        description: 'Maximum size of the queue containing requests
+
+                          to start and stop instances per LXD node.
+
+                          Changing the value requires a restart of AMS.'
                         type: integer
                         format: int32
                         default: 100
                         example: 100
                       node.workers_per_queue:
-                        description: Number of internal workers for AMS
+                        description: 'Number of workers processing instance start
+
+                          and stop requests. Changing the value requires
+
+                          a restart of AMS.'
                         type: integer
                         format: int32
                         default: 4
                         example: 4
                       registry.filter:
-                        description: Tag filters used for selecting applications when
-                          interacting with the registry
+                        description: 'Comma-separated list of tags to filter
+
+                          for when applications are fetched from
+
+                          aar. If empty, no filter is applied.'
                         type: string
                         default: ''
+                        x-docs-ref: exp-aar
                         example: foo,bar
                       registry.fingerprint:
-                        description: Fingerprint used to verify the ceritifcate of
-                          the application registry
+                        description: 'Fingerprint of the certificate that the
+
+                          AAR uses to TLS-secure its HTTPS endpoint.
+
+                          This is used by AMS for mutual TLS authentication
+
+                          with the registry.'
                         type: string
                         default: ''
+                        x-docs-ref: exp-aar
                         example: my-registry-fingerprint
                       registry.mode:
-                        description: Mode used to interact with the registry
+                        description: 'Mode in which the AAR client in AMS
+
+                          operates: `manual`, `pull`, `push`.'
                         type: string
                         default: pull
                         enum:
                           - push
                           - pull
                           - manual
+                        x-docs-ref: exp-aar
                         example: pull
                       registry.update_interval:
-                        description: Interval used for checking for updates to applications
+                        description: 'Frequency of AAR updates (for example: 1h, 30m).'
                         type: string
                         default: 1h
+                        x-docs-ref: exp-aar
                         example: 1h
                       registry.url:
-                        description: Application registry URL
+                        description: URL of the AAR to use.
                         type: string
                         default: ''
+                        x-docs-ref: exp-aar
                         example: https://foo.bar/
                       scheduler.strategy:
-                        description: Container scheduling startegy
+                        description: 'Strategy that the internal instance scheduler
+
+                          in AMS uses to distribute instances across
+
+                          available LXD nodes: `binpack`, `spread`<br/>
+
+                          Choose a scheduling strategy that best suits
+
+                          your needs:<br/> - `spread` provides a distributed
+
+                          workload, picking the node with the most
+
+                          free resources.<br/> - `binpack` is useful
+
+                          when you are working with a small cluster
+
+                          as it picks the node that is most used
+
+                          until it is out of capacity before moving
+
+                          on to the next node.'
                         type: string
                         default: spread
                         enum:
@@ -5193,19 +5331,27 @@ definitions:
     type: object
     properties:
       cpu_allocation_rate:
-        description: Update the CPU allocation rate for the node
+        description: CPU allocation rate used for over-committing resources
         type: number
         format: float
+        x-docs-ref: sec-over-committing
         example: 4
       cpus:
-        description: Update the number of CPUs for the node
+        description: Number of CPUs dedicated to instances.
         type: integer
         format: int64
         example: 4
       gpu_encoder_slots:
-        description: Update the number of GPU encoder slots to configure on the node
+        description: 'Number of GPU encoder slots available on the node.
+
+          `0` for nodes without GPU
+
+          `32` for nodes with NVIDIA GPU
+
+          `10` for nodes with AMD or Intel GPU'
         type: integer
         format: int64
+        x-docs-ref: sec-gpu-slots
         example: 4
       gpu_slots:
         description: Update the number of GPU slots to configure on the node
@@ -5221,23 +5367,23 @@ definitions:
         type: string
         example: 2GB
       memory_allocation_rate:
-        description: Update the memory allocation rate for the node
+        description: Memory allocation rate used for over-committing resources.
         type: number
         format: float
+        x-docs-ref: sec-over-committing
         example: 2
       public_address:
-        description: Update the public IP Address of the node
+        description: The public, reachable address of the node.
         type: string
         format: ipv4
         example: 10.0.0.1
       subnet:
-        description: Update the subnet info of the node if the subnet of a node is
-          changed
+        description: The network subnet of the machine where the node runs.
         type: string
         format: ipv4
         example: 10.0.0.1/24
       tags:
-        description: Update the tags of the node
+        description: Tags to identify the node.
         type: array
         items:
           type: string
@@ -5247,10 +5393,11 @@ definitions:
       unscheduable:
         description: DEPRECATED Flag in favour of `unschedulable` flag
         type: boolean
+        x-deprecated-since: '1.20'
         example: false
       unschedulable:
-        description: Flag used to remove the node from scheduler and not schedule
-          containers on it
+        description: When set to `true`, the node cannot be scheduled, which prevents
+          new instances from being launched on it.
         type: boolean
         example: true
   NodeStatus:
