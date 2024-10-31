@@ -5,6 +5,58 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.24.0
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.24/stable` |   |
+| `coturn` | `1.24/stable` |   |
+| `ams` | `1.24/stable` |   |
+| `anbox-stream-gateway`  | `1.24/stable` |   |
+| `ams-lxd` | `1.24/stable` |   |
+| `anbox-stream-agent` | `1.24/stable` |   |
+| `aar` | `1.24/stable` |   |
+| `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.24/stable` |  |
+| `anbox-cloud-core` | `1.24/stable` |   |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.24/stable` |   |
+| `aar`    | `1.24/stable` |   |
+| `amc`    | `latest/stable` |   |
+| `anbox-cloud-dashboard` | `1.24/stable` |   |
+| `anbox-stream-agent` | `1.24/stable` |   |
+| `anbox-stream-gateway` | `1.24/stable` |   |
+| `anbox-connect` | `latest/stable` |   |
+| `anbox-cloud-appliance` | `1.24/stable` |   |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android14:amd64` |   |
+| `jammy:android14:arm64` |   |
+| `jammy:android13:amd64` |   |
+| `jammy:android13:arm64` |   |
+| `jammy:android12:amd64` |   |
+| `jammy:android12:arm64` |   |
+| `jammy:aaos13:amd64`    |   |
+| `jammy:aaos13:arm64`    |   |
+
 ## 1.23.2
 
 ### Charms

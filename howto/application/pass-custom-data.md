@@ -9,7 +9,13 @@ The structure of the `/var/lib/anbox/userdata` file and the way how you pass in 
 
 ## Pass custom data when launching an instance
 
-When you launch an instance, you can pass in custom data through the `--userdata` or the `--userdata-path` flags:
+When you launch an instance, you can pass in custom data through the `--userdata` option:
+
+    amc launch <app-name> .... --enable-streaming --userdata="field=value"
+
+or the `--userdata-path` option, if you prefer all the custom data to be collated in a single file:
+
+    amc launch <app-name> .... --enable-streaming --userdata-path="my-user-data.json"
 
 * `--userdata` takes a string and stores the provided data in the `/var/lib/anbox/userdata` file in the instance.
 * `--userdata-path` takes a file name and copies the contents of the file to the `/var/lib/anbox/userdata` file in the instance.

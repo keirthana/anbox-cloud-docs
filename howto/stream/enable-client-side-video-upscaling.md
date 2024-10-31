@@ -28,6 +28,7 @@ The option `experimental.upscaling.useTargetFrameRate` allows canvas to use the 
 On a WebView where the `HTMLVideoElement.requestVideoFrameCallback` function is not supported, this option will be enabled by default.
 ```
 
+(sec-custom-fragment-shader)=
 ### Use custom fragment shader
 
 The option `options.experimental.upscaling.fragmentShaders` allows the use of custom fragment shader-based upscaling algorithms for video streaming. By providing an array of fragment shader source codes, you can apply multiple shaders sequentially to perform multi-pass upscaling. This replaces the default [AMD FidelityFX Super Resolution 1.0](https://gpuopen.com/fidelityfx-superresolution/) shader.

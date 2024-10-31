@@ -9,6 +9,7 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 | Release date   |  Release notes  |
 |----|----|
+| November 13 2024 | [Anbox Cloud 1.24.0](1.24.0.md) |
 | October 23 2024 | [Anbox Cloud 1.23.2 hotfix 1](1.23.2-hotfix1.md) |
 | October 16 2024 | [Anbox Cloud 1.23.2](1.23.2.md) |
 | September 18 2024 | [Anbox Cloud 1.23.1](1.23.1.md) |
@@ -16,15 +17,15 @@ For instructions on how to update your Anbox Cloud deployment to later versions,
 
 ## Upcoming release roadmap
 
-The current minor release is **1.23.0** and the next one will be **1.24.0**.
+The current minor release is **1.24.0** and the next one will be **1.25.0**.
 
 The following target dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release.
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| November 14 2024 | Anbox Cloud 1.24.0 | * VHAL improvements<br/> * Android 14 images<br/> * Support for additional upscaling algorithms in the streaming SDK<br/> * Android security updates for November 2024<br/> * Reworked charms<br/> * Bug fixes |
 | December 11 2024 | Anbox Cloud 1.24.1 | * Android security updates for December 2024<br/> * Bug fixes |
 | January 15 2025 | Anbox Cloud 1.24.2 | * Android security updates for January 2025<br/> * Bug fixes |
+| February 12 2025 | Anbox Cloud 1.25.0 | * Integration with the Canonical Observability Stack<br/> * Backup and restore support for the Anbox Cloud dashboard charm<br/> * Support for Ubuntu 24.04 (Noble Numbat) for all charms<br/> * Terraform plan replacing the Anbox Cloud bundles<br/> * Improvements to the Anbox Management Service (AMS)<br/> * Upgrade to LXD 5.21<br/> * Android security updates for February 2025<br/> * Bug fixes |
 
 ## Release and support policy
 
@@ -45,18 +46,16 @@ To ensure you receive latest security updates and bug fixes, you should upgrade 
 If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/support). Canonical can also provide [managed solutions](https://ubuntu.com/managed) for Anbox Cloud.
 
 
-### What's new in 1.23.x?
+### What's new in 1.24.x?
 
-Along with bug fixes and general improvements, Anbox Cloud 1.23.x includes:
+Along with bug fixes and general improvements, Anbox Cloud 1.24.x includes:
 
-* Improved Anbox Cloud Appliance
-* Seamless ADB connections to remote Android instances
-* Dashboard improvements
-    - Merge of sessions and instances pages
-    - Ability to authorise ADB connections
-* Improved documentation delivery
-* Android 14 based vendor images
-* Reworked charms that install snaps from the snap store
+* VHAL improvements
+* Android 14 images
+* Support for generic application streaming
+* Support for additional upscaling algorithms in the streaming SDK
+* Support for managing multiple subclusters
+* Reworked charms
 * Android security updates
 
 <details><summary>Click to view earlier releases' notes</summary>

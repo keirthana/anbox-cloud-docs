@@ -18,10 +18,10 @@ The snap with `epoch=0` is the existing implementation that was deprecated in 1.
 
 Starting from 1.23.0, the snap with `epoch=1` will be the new implementation which is the default for new appliance installations. This implementation of the appliance will no longer use the Juju charmed operators internally but package all necessary service components directly within the snap. This helps to simplify the installation process and reduce overall footprint.
 
-## Ubuntu 20.04 (focal)
+## Ubuntu 20.04 (Focal Fossa)
 *Deprecated in 1.22.0* ; *Removal in 1.24.0*
 
-Support for Ubuntu 20.04 (focal) is deprecated in 1.22.0 and is planned to be removed in Anbox Cloud 1.24.0.
+Support for Ubuntu 20.04 (Focal Fossa) is deprecated in 1.22.0 and is planned to be removed in Anbox Cloud 1.24.0.
 
 ## EmuGL
 *Deprecated in 1.22.0* ; *Removal in 1.23.0*
