@@ -1,6 +1,10 @@
-This tutorial guides you through the process of setting up a web-based streaming client using the Anbox Cloud streaming stack. The connection between the stream client and the server uses WebRTC backed by web sockets which enable the real time communications required for streaming. To know more about the WebRTC configuration, see [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195).
+(tut-set-up-stream-client)=
 
-TBD add more context from https://discourse.ubuntu.com/t/issues-with-anbox-streaming-sdk/47778
+# Set up a stream client
+
+This tutorial guides you through the process of setting up a web-based streaming client using the Anbox Cloud streaming stack. The connection between the stream client and the server uses WebRTC backed by web sockets that enable the real time communications required for streaming. To know more about the WebRTC configuration, see {ref}`ref-webrtc`.
+
+For security reasons, there are limits on what APIs are exposed through the reverse proxy configured by the appliance. The API provided by the Anbox Stream Gateway is typically meant to be used in service to service communication and not on public endpoints. If you want to use the API from a client application, you should use a proxy service that communicates with the Anbox Stream Gateway and also provides the user with an authentication method specific to your service. We will see how to set this up in this tutorial.
 
 ## Preparation
 
@@ -8,7 +12,7 @@ Complete the following preparatory steps:
 
 ### Install the Anbox Cloud Appliance
 
-We need the Anbox Cloud streaming stack to be deployed already to set up a streaming client. So let's get the streaming stack ready by installing the Anbox Cloud Appliance. Follow the instructions in the [appliance installation tutorial](https://discourse.ubuntu.com/t/22681) until you finish initialising the Appliance.
+We need the Anbox Cloud streaming stack to be deployed already to set up a streaming client. So let's get the streaming stack ready by installing the Anbox Cloud Appliance. Follow the instructions in the {ref}`tut-installing-appliance` until initialising the appliance. When you have installed and initialised the appliance, let's proceed to the next step.
 
 ### Create an access token
 
@@ -20,7 +24,7 @@ On the machine where Anbox Cloud Appliance is installed, create the service acco
 
 The output of this command provides the access token. Make a note of this token to use when you make a request to the stream gateway API.
 
-See [How to access the stream gateway](https://discourse.ubuntu.com/t/how-to-access-the-stream-gateway/17784) for more information on creating, using and deleting the access token.
+See {ref}`howto-access-stream-gateway` for more information on creating, using and deleting the access token.
 
 ### Create an Android Instance
 
@@ -30,24 +34,24 @@ Create a streaming enabled Android instance:
 
 ### Determine session ID of the Android instance
 
-For the next step we need the session ID which AMS assigned to the instance:
+For the next step, we need the session ID which AMS assigned to the instance. So let's get that using the following command:
 
     amc ls --filter name=a13 --format=csv | cut -d, -f6 | awk -F"session=" '{ print $2 }'
 
 ## Implement the stream client
 
-Create a directory to set up the stream client:
+Now that we have everything ready, let's create a directory to set up the stream client:
 
     mkdir -p stream-client/{templates,static}
 
-Create a `requirements.txt` file inside `stream-client`
+Create a `requirements.txt` file inside `stream-client` with the following code:
 
 ```
 flask==3.0.3
 requests==2.32.3
 ```
 
-Create a `service.py` file inside `stream-client`:
+Create a `service.py` file inside `stream-client` with the following code:
 
 ```python
 import os
@@ -91,7 +95,6 @@ class GatewayAPI:
             data=data,
             headers={"Content-Type": "application/json"},
         ).json()
-
 
 app = Flask(__name__)
 
@@ -159,7 +162,7 @@ def index():
     return "Welcome to the Anbox Cloud Stream SDK tutorial!"
 ```
 
-Create a `stream.html` file inside `stream-client/static`:
+Create a `stream.html` file inside `stream-client/static` with the following code:
 
 ```html
 <!doctype html>
@@ -221,39 +224,37 @@ Create a `stream.html` file inside `stream-client/static`:
 </html>
 ```
 
-Next we need to take a copy of the Anbox Stream Gateway server to allow the service to validate it
+Next, let's make a copy of the Anbox Stream Gateway server to allow the service to validate it:
 
     # We use cat here to ensure gateway.crt has the users permissions
     sudo cat /var/snap/anbox-cloud-appliance/common/gateway/server.crt > gateway.crt
 
-Last we have to retrieve a copy of the Anbox Stream SDK and place it inside `stream-client/static`
+As a final step, download a copy of the Anbox streaming SDK and place it inside `stream-client/static`
 
     curl -o stream-client/static/anbox-stream-sdk.js \
         https://raw.githubusercontent.com/canonical/anbox-streaming-sdk/refs/heads/main/js/anbox-stream-sdk.js
 
-## Run stream client
+## Run the stream client
 
-First we setup a virtual environment for Python to install necessary dependencies
+To run the stream client, let's set up a virtual environment for Python to install necessary dependencies:
 
     cd stream-client
     python3 -m venv .venv
     . .venv/bin/activate
 
-Now we can use `pip` to install all required dependencies
+Now, we can use `pip` to install all required dependencies
 
     pip3 install -r requirements.txt
 
-To run the stream client service application we can now set the necessary environment variables and execute the service via flask
+To run the stream client service application, we need to set the necessary environment variables and execute the service via flask.
 
-FIXME we have to describe where the IP and port comes from (the port is what the appliance statically configures for the gateway)
+When installing and initialising the appliance, we would have configured the private IP address of the machine running the appliance. The gateway API is accessible on the local listen address of the appliance on port `9031/tcp`. So that's the IP address and port we use in the GATEWAY_URL.
 
     export GATEWAY_URL=https://1.2.3.4:9031
     export GATEWAY_API_TOKEN=xxx
     export GATEWAY_SERVER_CERT="$PWD"/gateway.crt
     FLASK_APP=service.py python3 -m flask run -h 1.2.3.4 -p 8080
 
-This will start service it make it accessible at http://1.2.3.4:8080 and print out a username and password needed to access the site.
+This will start the service and make it accessible at http://1.2.3.4:8080 and print out a username and password needed to access the site.
 
-To access the stream of the instance we created earlier, you can access `http://1.2.3.4:8080/<session id>` in your browser.
-
-
+To access the stream of the instance we created earlier, you can access `http://1.2.3.4:8080/<session_id>` in your browser. Remember to use the session ID of the Android instance we retrieved earlier in place of `<session_id>`.
