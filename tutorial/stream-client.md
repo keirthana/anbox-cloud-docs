@@ -2,9 +2,9 @@
 
 # Set up a stream client
 
-This tutorial guides you through the process of setting up a web-based streaming client using the Anbox Cloud streaming stack. The connection between the stream client and the server uses WebRTC backed by web sockets that enable the real time communications required for streaming. To know more about the WebRTC configuration, see {ref}`ref-webrtc`.
+This tutorial guides you through the process of setting up a web-based streaming client using the Anbox Cloud streaming stack. The connection between the stream client and the server uses WebRTC backed by WebSockets that enable the real time communications required for streaming. To know more about the WebRTC configuration, see {ref}`ref-webrtc`.
 
-For security reasons, there are limits on what APIs are exposed through the reverse proxy configured by the appliance. The API provided by the Anbox Stream Gateway is typically meant to be used in service to service communication and not on public endpoints. If you want to use the API from a client application, you should use a proxy service that communicates with the Anbox Stream Gateway and also provides the user with an authentication method specific to your service. We will see how to set this up in this tutorial.
+For security reasons, there are limits on what APIs are exposed through the reverse proxy configured by the appliance. The API provided by the Anbox Stream Gateway is typically meant to be used in service-to-service communication and not on public endpoints. If you want to use the API from a client application, you should use a proxy service that communicates with the Anbox Stream Gateway and also provides the user with an authentication method specific to your service. We will see how to set this up in this tutorial.
 
 ## Preparation
 
@@ -14,13 +14,14 @@ Complete the following preparatory steps:
 
 We need the Anbox Cloud streaming stack to be deployed already to set up a streaming client. So let's get the streaming stack ready by installing the Anbox Cloud Appliance. Follow the instructions in the {ref}`tut-installing-appliance` until initialising the appliance. When you have installed and initialised the appliance, let's proceed to the next step.
 
+(sec-create-access-token)=
 ### Create an access token
 
 To access the HTTP API of the Anbox Cloud stream gateway, an access token is required. Each access token is associated with a service account.
 
 On the machine where Anbox Cloud Appliance is installed, create the service account by running the following command:
 
-    anbox-cloud-appliance gateway account create test
+    anbox-cloud-appliance gateway account create your-username
 
 The output of this command provides the access token. Make a note of this token to use when you make a request to the stream gateway API.
 
@@ -44,11 +45,12 @@ Now that we have everything ready, let's create a directory to set up the stream
 
     mkdir -p stream-client/{templates,static}
 
-Create a `requirements.txt` file inside `stream-client` with the following code:
+We will be using [Flask](https://flask.palletsprojects.com/en/stable/) for the purpose of this tutorial. First, let us create a `requirements.txt` file inside `stream-client` with the following code:
 
 ```
 flask==3.0.3
 requests==2.32.3
+pyopenssl=24.2.1
 ```
 
 Create a `service.py` file inside `stream-client` with the following code:
@@ -112,8 +114,8 @@ gateway = GatewayAPI(gateway_api_url, Session(), gateway_api_token, gateway_serv
 
 
 def render_error_response(msg, code):
-    resp = {"error_msg": msg}
-    return jsonify(resp), code
+    response = {"error_msg": msg}
+    return jsonify(response), code
 
 
 def check_auth(username, password):
@@ -141,13 +143,13 @@ def api_1_0_sessions_join_post(session_id):
     if not gateway_enabled:
         return render_error_response("no gateway connected", 503)
 
-    req = {"disconnect_clients": True}
-    resp = gateway.join_session(session_id, req)
+    request_data = {"disconnect_clients": True}
+    response = gateway.join_session(session_id, request_data)
 
-    if "status_code" not in resp or resp["status_code"] != 200:
+    if "status_code" not in response or response["status_code"] != 200:
         return render_error_response("failed to join session", 500)
 
-    return jsonify(resp), 200
+    return jsonify(response), 200
 
 
 @app.route("/<session_id>")
@@ -188,27 +190,26 @@ Create a `stream.html` file inside `stream-client/static` with the following cod
       class Connector {
         async connect() {
           var url = `${window.location.origin}/1.0/sessions/${sessionId}/join`;
-          const resp = await fetch(url, { method: "POST" });
-          if (resp === undefined || resp.status !== 200)
+          const rawResponse = await fetch(url, { method: "POST" });
+          if (rawResponse === undefined || rawResponse.status !== 200)
             throw new Error("failed to join session");
 
-          const response = await resp.json();
-          if (response === undefined || response.status !== "success")
-            throw new Error(response.error);
+          const jsonResponse = await rawResponse.json();
+          if (jsonResponse === undefined || jsonResponse.status !== "success")
+            throw new Error(jsonResponse.error ?? "Failed to parse the response object");
 
           return {
-            id: response.metadata.id,
-            websocket: response.metadata.url,
-            stunServers: response.metadata.stun_servers,
+            id: jsonResponse.metadata.id,
+            websocket: jsonResponse.metadata.url,
+            stunServers: jsonResponse.metadata.stun_servers,
           };
         }
 
         disconnect() {}
       }
-      var stream;
       window.onload = () => {
         const connector = new Connector();
-        stream = new AnboxStream({
+        const stream = new AnboxStream({
           connector: connector,
           targetElement: "anbox-stream",
           enableStats: false,
@@ -250,11 +251,17 @@ To run the stream client service application, we need to set the necessary envir
 
 When installing and initialising the appliance, we would have configured the private IP address of the machine running the appliance. The gateway API is accessible on the local listen address of the appliance on port `9031/tcp`. So that's the IP address and port we use in the GATEWAY_URL.
 
-    export GATEWAY_URL=https://1.2.3.4:9031
-    export GATEWAY_API_TOKEN=xxx
+For the `GATEWAY_API_TOKEN`, use the access token you noted earlier in {ref}`sec-create-access-token`.
+
+    export GATEWAY_URL=https://<appliance_private_ip>>:9031
+    export GATEWAY_API_TOKEN=<access-token>
     export GATEWAY_SERVER_CERT="$PWD"/gateway.crt
-    FLASK_APP=service.py python3 -m flask run -h 1.2.3.4 -p 8080
+    FLASK_APP=service.py python3 -m flask --cert=adhoc run -h <appliance_private_ip> -p 8080
 
-This will start the service and make it accessible at http://1.2.3.4:8080 and print out a username and password needed to access the site.
+This will start the service and make it accessible at `https://<appliance_private_ip>:8080` and print out a username and password needed to access the site.
 
-To access the stream of the instance we created earlier, you can access `http://1.2.3.4:8080/<session_id>` in your browser. Remember to use the session ID of the Android instance we retrieved earlier in place of `<session_id>`.
+```{note}
+This example uses a Flask server with an adhoc certificate. Such an implementation is not recommended for production deployments. For better ways to deploy to production, see the [Flask documentation](https://flask.palletsprojects.com/en/stable/deploying/).
+```
+
+To view the stream of the instance we created earlier, you can access `https://<appliance_private_ip>:8080/<session_id>` in your browser. Remember to use the session ID of the Android instance we retrieved earlier in place of `<session_id>` and for credentials, use `anbox` as username and the password that the example printed.
