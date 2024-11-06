@@ -102,18 +102,6 @@ On the virtual machine instance page, connect to the instance using SSH. See [Go
 
 ## Finish the installation
 
-To complete the installation:
-
-1. Install the Anbox Cloud Appliance on the virtual machine.
-
-    ```{note}
-    If you choose Ubuntu Pro as your operating system, you can ignore the step in the installation instructions that guides you to attach your machine to the Ubuntu Pro subscription as the subscription is included with the Google Cloud resources. You can check the status of the Ubuntu Pro subscription by running `pro status`.
-    ```
-
-1. Initialise the appliance.
-1. Register your Ubuntu SSO account with the appliance dashboard.
-
-```{note}
-If you are not already familiar with how to perform these steps, see {ref}`tut-installing-appliance` for detailed instructions.```
+Finally, install the Anbox Cloud Appliance on the virtual machine by following the instructions in {ref}`tut-installing-appliance`. Remember to follow all the steps in order to have a successful installation
 
 When you are done, you can log into the appliance dashboard using `https://your-machine-address` with your Ubuntu SSO account.

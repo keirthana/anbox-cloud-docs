@@ -66,6 +66,7 @@ Running this command does the following:
 1. Installs `anbox-cloud-appliance` snap from the `latest/stable` track.
 1. Configures the `apt` repositories for Anbox Cloud.
 
+(sec-prepare-machine)=
 ### Prepare the machine
 
 In order to prepare the machine and install additional required packages, run the following command to review the generated preparation script:
@@ -95,6 +96,7 @@ On your machine, enter the following command to invoke the initialisation proces
 
 You will be asked a few questions. If you don't want to make any specific changes, you can safely stay with the offered default answers. When the command returns, the initialisation process has been completed.
 
+(sec-register-dashboard)=
 ## Register with the dashboard
 
 Once the initialisation process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation. This registration is needed to access the {ref}`exp-web-dashboard`.

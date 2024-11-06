@@ -144,7 +144,8 @@ Connect to the virtual machine hosting the appliance using SSH. To do so, use th
 
 Perform the following steps to finish the appliance installation on the virtual machine. If you are not already familiar with how to perform these steps, see {ref}`tut-installing-appliance` for detailed instructions.
 
-1. Initialise the appliance
-1. Register your Ubuntu SSO account with the appliance dashboard
+1. Prepare the virtual machine and install additional required packages. See {ref}`sec-prepare-machine` for instructions.
+1. Initialise the appliance. See {ref}`sec-initialise-appliance` for instructions.
+1. Register your Ubuntu SSO account with the appliance dashboard. See {ref}`sec-register-dashboard` for instructions.
 
 When you are done, you can log into the appliance dashboard using `https://your-machine-address` with your Ubuntu SSO account.
