@@ -56,6 +56,8 @@ The following Anbox images are available in two variants: one based on a contain
 | `jammy:android12:arm64` |   |
 | `jammy:aaos13:amd64`    |   |
 | `jammy:aaos13:arm64`    |   |
+| `jammy:aaos14:amd64`    |   |
+| `jammy:aaos14:arm64`    |   |
 
 ## 1.23.2
 
