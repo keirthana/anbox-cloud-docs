@@ -94,7 +94,7 @@ The Anbox Application Registry (AAR) can be updated independently of the other s
 
 To upgrade the registry, run
 
-    juju refresh --channel=1.22/stable aar
+    juju refresh --channel=1.23/stable aar
 
 ### Upgrade control plane
 
