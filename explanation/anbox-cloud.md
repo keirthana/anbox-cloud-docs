@@ -26,7 +26,7 @@ See the following table for a comparison of features for the different variants:
 |---------|-----------------------|-------------|
 | {ref}`exp-application-streaming` | ✓ | ✓ |
 | {ref}`exp-web-dashboard` | ✓ | ✓ |
-| {ref}`Android versions <ref-provided-images>` | 12, 13, 14** | 12, 13, 14** |
+| {ref}`Android versions <ref-provided-images>` | 12, 13, 14 | 12, 13, 14 |
 | [Security updates](https://ubuntu.com/support) | ✓ | ✓ |
 | [Community support](https://discourse.ubuntu.com/c/anbox-cloud/users/148) | ✓ | ✓ |
 | [Vendor support available](https://ubuntu.com/support) | ✓* | ✓ |
@@ -34,8 +34,6 @@ See the following table for a comparison of features for the different variants:
 | {ref}`exp-custom-images`| ✓ | ✓ |
 
 *\* When purchasing the Anbox Cloud Appliance through the AWS Marketplace, the Ubuntu Pro subscription does not include vendor support.*
-
-*\*\* Android 14 images are available only for AOSP images and not AAOS.*
 
 We recommend starting with the Anbox Cloud Appliance. You can choose to expand to a full Anbox Cloud installation later.
 
