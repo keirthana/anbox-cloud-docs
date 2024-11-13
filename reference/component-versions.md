@@ -28,8 +28,8 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.24/stable` | 497 |
-| `anbox-cloud-core` | `1.24/stable` | 509 |
+| `anbox-cloud` | `1.24/stable` | 501 |
+| `anbox-cloud-core` | `1.24/stable` | 513 |
 
 ### Snaps
 
