@@ -44,7 +44,6 @@ For external access to the Anbox Cloud Appliance, you must expose a couple of ne
 
 The Anbox Cloud Appliance supports the following Ubuntu versions:
 
-* Ubuntu 20.04 (Focal Fossa)
 * Ubuntu 22.04 (Jammy Jellyfish)
 * Ubuntu 24.04 (Noble Numbat)
 
@@ -62,7 +61,6 @@ Anbox Cloud deployments are managed by Juju. They can be created on all the [sup
 
 Anbox Cloud supports the following Ubuntu versions:
 
-* 20.04 (focal)
 * 22.04 (jammy)
 
 For new deployments, Ubuntu 22.04 (jammy) is preferred.
