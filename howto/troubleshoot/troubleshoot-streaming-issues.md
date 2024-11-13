@@ -33,20 +33,17 @@ If the connection could not be established, check the table of ICE candidates. T
 
 If you are still not able to get the streaming to start, check if it is a problem with the public IP address configuration. Run the following command:
 
-    sudo anbox-cloud-appliance internal generate-cloud-info
+    sudo anbox-cloud-appliance config show
 
 In the output, verify if the public address and location of the cloud is displayed correctly. Verify if the public address is reachable.
-
-The public location is typically a DNS name for the public address of the instance. If there is no DNS name, the public location must match the public address.
 
 If you want to override the public address or location, try running the following commands:
 
 ```
-sudo snap set anbox-cloud-appliance experimental.public-address=x.x.x.x experimental.location=foo.bar
-sudo snap restart anbox-cloud-appliance.reboot-checker
+sudo anbox-cloud-appliance config set network.public-address=1.2.3.4 network.location=foo.bar
 ```
 
-Note that these values will be configured but running the `sudo anbox-cloud-appliance internal generate-cloud-info` command again will not reflect these changes. To check if the correct public address is now applied, run:
+To check if the correct public address is now applied, run:
 
     amc node ls
 
