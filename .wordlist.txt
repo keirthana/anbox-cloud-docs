@@ -52,3 +52,5 @@ UI
 UUID
 VM
 YAML
+shaders
+adapter

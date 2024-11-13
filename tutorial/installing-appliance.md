@@ -18,7 +18,7 @@ This tutorial guides you through the steps that are required to install and init
 Make sure you have the following prerequisites:
 
 * An Ubuntu SSO account. If you don't have one yet, [create it](https://login.ubuntu.com).
-* A virtual or bare metal machine running Ubuntu 20.04 or 22.04. See the detailed {ref}`ref-requirements`.
+* A virtual or bare metal machine running Ubuntu 22.04. See the detailed {ref}`ref-requirements`.
 ```{caution}
 It is not recommended to run Anbox Cloud on an Ubuntu desktop appliance. Always use the [server](https://ubuntu.com/download/server) or the [cloud](https://ubuntu.com/download/cloud) variant.
 ```

@@ -129,6 +129,7 @@ HIDL
 HMAC
 Honkai
 hotfix
+http
 https
 HW
 HWE
@@ -284,6 +285,7 @@ subcommand
 subcommands
 subnet
 subnets
+sgsr
 SurfaceFlinger
 swiftshader
 swrast
@@ -296,6 +298,7 @@ tryCapture
 TCP
 Telegraf
 Tensorflow
+terraform
 TLS
 Traefik
 TypeError
