@@ -21,7 +21,7 @@ To access the HTTP API of the Anbox Cloud stream gateway, an access token is req
 
 On the machine where Anbox Cloud Appliance is installed, create the service account by running the following command:
 
-    anbox-cloud-appliance gateway account create your-username
+    sudo anbox-cloud-appliance gateway account create streaming-tutorial
 
 The output of this command provides the access token. Make a note of this token to use when you make a request to the stream gateway API.
 
@@ -31,7 +31,8 @@ See {ref}`howto-access-stream-gateway` for more information on creating, using a
 
 Create a streaming enabled Android instance:
 
-    amc launch --enable-streaming --raw --name a13 jammy:android13:amd64
+    arch="$(dpkg-architecture -q DEB_HOST_ARCH)"
+    amc launch --enable-streaming --raw --name a13 jammy:android13:"$arch"
 
 ### Determine session ID of the Android instance
 
@@ -50,7 +51,7 @@ We will be using [Flask](https://flask.palletsprojects.com/en/stable/) for the p
 ```
 flask==3.0.3
 requests==2.32.3
-pyopenssl=24.2.1
+pyopenssl==24.2.1
 ```
 
 Create a `service.py` file inside `stream-client` with the following code:
@@ -164,7 +165,7 @@ def index():
     return "Welcome to the Anbox Cloud Stream SDK tutorial!"
 ```
 
-Create a `stream.html` file inside `stream-client/static` with the following code:
+Create a `stream.html` file inside `stream-client/templates` with the following code:
 
 ```html
 <!doctype html>
@@ -237,14 +238,17 @@ As a final step, download a copy of the Anbox streaming SDK and place it inside 
 
 ## Run the stream client
 
-To run the stream client, let's set up a virtual environment for Python to install necessary dependencies:
+To run the stream client, let's set up a virtual environment for Python to install necessary dependencies.
+
+Assuming that you are working on a fresh installation of Ubuntu, let's start by installing the `venv` module:
 
     cd stream-client
+    sudo apt install -y python3.12-venv
+
+Next, let's create and activate the virtual environment and use `pip` to install all the required dependencies:
+
     python3 -m venv .venv
     . .venv/bin/activate
-
-Now, we can use `pip` to install all required dependencies
-
     pip3 install -r requirements.txt
 
 To run the stream client service application, we need to set the necessary environment variables and execute the service via flask.
@@ -253,15 +257,20 @@ When installing and initialising the appliance, we would have configured the pri
 
 For the `GATEWAY_API_TOKEN`, use the access token you noted earlier in {ref}`sec-create-access-token`.
 
-    export GATEWAY_URL=https://<appliance_private_ip>>:9031
+    addr="$(sudo anbox-cloud-appliance config show | yq -r .network.listen_address)"
+    export GATEWAY_URL=https://"$addr":9031
     export GATEWAY_API_TOKEN=<access-token>
     export GATEWAY_SERVER_CERT="$PWD"/gateway.crt
-    FLASK_APP=service.py python3 -m flask --cert=adhoc run -h <appliance_private_ip> -p 8080
+    FLASK_APP=service.py python3 -m flask run --cert=adhoc -h "$addr" -p 8080
 
 This will start the service and make it accessible at `https://<appliance_private_ip>:8080` and print out a username and password needed to access the site.
 
 ```{note}
-This example uses a Flask server with an adhoc certificate. Such an implementation is not recommended for production deployments. For better ways to deploy to production, see the [Flask documentation](https://flask.palletsprojects.com/en/stable/deploying/).
+This example uses a Flask server with a spontaneous certificate. Note that this implementation is used only for demonstration purposes in this tutorial and is not recommended for production deployments. For better ways to deploy to production, see the [Flask documentation](https://flask.palletsprojects.com/en/stable/deploying/).
 ```
 
 To view the stream of the instance we created earlier, you can access `https://<appliance_private_ip>:8080/<session_id>` in your browser. Remember to use the session ID of the Android instance we retrieved earlier in place of `<session_id>` and for credentials, use `anbox` as username and the password that the example printed.
+
+Remember that to access the stream URL, you will be required to accept both the spontaneous certificate for the server and also the certificate from `https://<appliance_private_ip>`.
+
+You have now successfully set up a web client that you can use for streaming your applications.
