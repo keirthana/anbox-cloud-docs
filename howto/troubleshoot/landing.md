@@ -36,7 +36,7 @@ A Juju crash dump may include the following debugging information:
 
 Use the following command to generate a crash dump:
 
-    juju crash-dump -s -a --as-root debug-layer
+    juju-crashdump -s --as-root -a debug-layer
 
 The Anbox Management Service (AMS) charm implements the `debug-layer` addon which will add a `debug-*.tar.gz` archive to the crash dump for the AMS units. The tarball may contain logs for the instances that are in `error` state in AMS and other information about the Anbox runtime process.
 
