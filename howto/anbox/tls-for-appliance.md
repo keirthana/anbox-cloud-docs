@@ -21,43 +21,15 @@ To generate and install a certificate yourself, complete the following steps:
 
 Setting up DNS redirection depends on your DNS provider. Refer to the documentation of your provider to create a DNS record pointing to the IP/DNS of the AWS instance where the Anbox Cloud Appliance is running.
 
-```{note}
-This option is experimental. It will be removed in a future release when a better replacement exists.
-```
 
 (ref-appliance-tls-location)=
 ### Configure the location
 
-Configure the location for the appliance using the created DNS name. For the following configuration files need to be updated:
+Configure the location for the appliance using the created DNS name by running the following command:
 
-#### `/var/snap/anbox-cloud-appliance/common/gateway/config.yaml`
+   sudo anbox-cloud-appliance config set network.location=your.dns.name
 
-The configuration file needs to be changed to look as follows
-
-```yaml
-...
-endpoint:
-  address: 192.168.11.195:9031
-  public-address: 192.168.11.195
-  # Add the location element here if it doesn't exist and set it to your
-  # DNS name.
-  location: your.dns.name
-...
-```
-
-#### `/var/snap/anbox-cloud-appliance/common/config.yaml`
-
-The configuration file needs to be changed to look as follows
-
-```yaml
-log-level: error
-listen-address: 192.168.11.195
-location: your.dns.name
-...
-tls:
-  # Drop or comment the following line
-  # ca: /var/snap/anbox-cloud-appliance/common/tls/ca.crt
-```
+The change will be automatically applied and will cause all services components of the appliance to restart. If you want to defer the restart to a later point, you can use the `--no-restart` option.
 
 ### Generate an SSL certificate
 
@@ -66,10 +38,6 @@ There are many ways to create a valid SSL certificate. One way is to use [Let's 
 First, connect and SSH into your appliance instance, and install the `certbot` snap:
 
     sudo snap install --classic certbot
-
-Before generating your certificate using `certbot`, stop the appliance service from listening on port 80 for the certificate creation:
-
-    sudo snap stop anbox-cloud-appliance.daemon
 
 Then run the following command to generate your certificate:
 
@@ -93,42 +61,28 @@ Copy the generated certificate to the `/var/snap/anbox-cloud-appliance/common/da
     sudo cp /etc/letsencrypt/live/<your domain name>/fullchain.pem /var/snap/anbox-cloud-appliance/common/daemon/server.crt
     sudo cp /etc/letsencrypt/live/<your domain name>/privkey.pem /var/snap/anbox-cloud-appliance/common/daemon/server.key
 
-Then start the appliance service:
+Then restart the appliance service to make it load the new key and certificate:
 
-    sudo snap start anbox-cloud-appliance.daemon
+    sudo snap restart anbox-cloud-appliance.daemon
 
-With the certificate installed on the appliance, you now can access the appliance using the created domain name.
+With the certificate installed on the appliance, you now can access the appliance using the created domain name and will be presented with a valid certificate.
 
 ### Renew the SSL certificate
 
-The `certbot` snap packages installed on your machine already set up a systemd timer that will automatically renew your certificates before they expire. However, in order to get the certificate renewed successfully for the appliance, you must complete the following steps:
-
-1. Stop the appliance service to release port 80 right before the certificate is going to be renewed. This can be done through the `pre-hook`:
-
-   ```bash
-   cat <<EOF | sudo tee /etc/letsencrypt/renewal-hooks/pre/001-stop-appliance.sh
-   #!/bin/bash
-   sudo snap stop anbox-cloud-appliance.daemon
-   EOF
-   sudo chmod +x /etc/letsencrypt/renewal-hooks/pre/001-stop-appliance.sh
-   ```
-
-2. Install the certificate right after it has been renewed and start the appliance service through the `post-hook`:
+The `certbot` snap packages installed on your machine would have already set up a systemd timer that automatically renews your certificates before they expire. However, to get the certificate renewed successfully for the appliance, you can create `post-start` hook for `certbot` which will automatically reconfigure it:
 
    ```bash
    cat <<EOF | sudo tee /etc/letsencrypt/renewal-hooks/post/001-start-appliance.sh
    #!/bin/bash
    sudo cp /etc/letsencrypt/live/<your domain name>/fullchain.pem /var/snap/anbox-cloud-appliance/common/daemon/server.crt
    sudo cp /etc/letsencrypt/live/<your domain name>/privkey.pem /var/snap/anbox-cloud-appliance/common/daemon/server.key
-   sudo snap start anbox-cloud-appliance.daemon
+   sudo snap restart anbox-cloud-appliance.daemon
    EOF
    sudo chmod +x /etc/letsencrypt/renewal-hooks/post/001-start-appliance.sh
    ```
 
-In this way, the SSL certificate auto-renewal is in place.
-
 ```{note}
-The appliance will face a short downtime during the renewal of the SSL certificate but will come back online once the process is completed.
+The appliance will be restarted when the renewal of the SSL certificate is complete, to let the reverse proxy reload the certificate.
 ```
 
 ## Use the AWS Certificate Manager
