@@ -335,6 +335,7 @@ Wayland
 WebGL
 WebRTC
 WebSocket
+WebSockets
 websocket
 websockets
 WebView
