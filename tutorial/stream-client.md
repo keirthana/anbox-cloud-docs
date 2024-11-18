@@ -21,7 +21,7 @@ To access the HTTP API of the Anbox Cloud stream gateway, an access token is req
 
 On the machine where Anbox Cloud Appliance is installed, create the service account by running the following command:
 
-    sudo anbox-cloud-appliance gateway account create streaming-tutorial
+    sudo anbox-cloud-appliance.gateway account create streaming-tutorial
 
 The output of this command provides the access token. Make a note of this token to use when you make a request to the stream gateway API.
 
@@ -107,7 +107,7 @@ gateway_server_cert = os.getenv("GATEWAY_SERVER_CERT") or False
 gateway_enabled = bool(gateway_api_url and gateway_api_token)
 
 auth_user = os.getenv("AUTH_USER") or "anbox"
-auth_password = os.getenv("AUTH_PASSOWRD") or secrets.token_urlsafe(16)
+auth_password = os.getenv("AUTH_PASSWORD") or secrets.token_urlsafe(16)
 
 print(f"You can login with username {auth_user} and password {auth_password}")
 
