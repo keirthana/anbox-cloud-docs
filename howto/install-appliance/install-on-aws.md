@@ -140,12 +140,31 @@ When the instance is successfully launched, you can find its public IP address i
 
 Connect to the virtual machine hosting the appliance using SSH. To do so, use the user name `ubuntu` and provide the path to your private key file. See [Connect to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) for instructions on how to connect.
 
-## Finish the installation
+## Install additional packages
 
-Perform the following steps to finish the appliance installation on the virtual machine. If you are not already familiar with how to perform these steps, see {ref}`tut-installing-appliance` for detailed instructions.
+Some preparation is required for using Anbox Cloud that involves installing additional packages. To prepare your machine for further steps, run:
 
-1. Prepare the virtual machine and install additional required packages. See {ref}`sec-prepare-machine` for instructions.
-1. Initialise the appliance. See {ref}`sec-initialise-appliance` for instructions.
-1. Register your Ubuntu SSO account with the appliance dashboard. See {ref}`sec-register-dashboard` for instructions.
+    anbox-cloud-appliance prepare-node-script
+    anbox-cloud-appliance prepare-node-script | sudo bash -ex
 
-When you are done, you can log into the appliance dashboard using `https://your-machine-address` with your Ubuntu SSO account.
+These commands take you through the steps of reviewing and applying the script that installs required kernel modules and any necessary GPU driver packages. See {ref}`sec-prepare-machine` for more information.
+
+## Initialise the installation
+
+To initialise the appliance, run:
+
+    sudo anbox-cloud-appliance init
+
+You will be asked a few questions when you run the `init` command. Accept the default answers if you do not want to make any changes.
+
+## Register with the dashboard
+
+After initialisation, you must register your user account with the Anbox Cloud dashboard to access it. Run:
+
+    sudo anbox-cloud-appliance dashboard register <your Ubuntu SSO email address>
+
+See {ref}`sec-register-dashboard` for more information.
+
+## Done
+
+You can now log in to the appliance dashboard using `https://your-machine-address` with your Ubuntu SSO credentials.
