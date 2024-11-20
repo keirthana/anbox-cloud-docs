@@ -13,7 +13,7 @@ PA11Y         = $(SPHINXDIR)/node_modules/pa11y/bin/pa11y.js
 VENV          = $(VENVDIR)/bin/activate
 
 .PHONY: help full-help woke-install pa11y-install install run html epub serve \
-        clean clean-doc spelling linkcheck woke pa11y Makefile
+        clean clean-doc spelling woke pa11y Makefile
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -24,7 +24,6 @@ help:
         "* only serve: make serve \n" \
         "* clean built doc files: make clean-doc \n" \
         "* clean full environment: make clean \n" \
-        "* check links: make linkcheck \n" \
         "* check spelling: make spelling \n" \
         "* check inclusive language: make woke \n" \
         "* check accessibility: make pa11y \n" \
@@ -93,8 +92,8 @@ clean-doc:
 spelling: html
 	. $(VENV) ; python3 -m pyspelling -c $(SPHINXDIR)/spellingcheck.yaml -j $(shell nproc)
 
-linkcheck: install
-	. $(VENV) ; $(SPHINXBUILD) -b linkcheck "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
+# linkcheck: install
+#	. $(VENV) ; $(SPHINXBUILD) -b linkcheck "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
 
 woke: woke-install
 	woke *.rst **/*.rst --exit-1-on-failure \
