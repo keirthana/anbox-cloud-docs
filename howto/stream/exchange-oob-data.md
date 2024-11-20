@@ -1,3 +1,4 @@
+
 (howto-exchange-oob-data)=
 # How to exchange out-of-band data
 
@@ -22,6 +23,8 @@ The following instructions guide you to exchange OOB data using a specific imple
 ## Version 2: full-duplex bidirectional data transmission
 
 The following instructions will walk you through how to set up data channels and perform data transmission in both directions between an Android application and a WebRTC platform.
+
+Before proceeding, ensure that you have set up a web-based streaming client using the Anbox Cloud streaming stack. If you haven't done so, please follow our setup [guide](https://documentation.ubuntu.com/anbox-cloud/en/latest/tutorial/stream-client/).
 
 ### Prepare your web application
 
@@ -117,10 +120,6 @@ To build up the communication bridge between an Android application and the Anbo
 
 The `anbox-webrtc-data-proxy` system daemon runs in the instance and registers an Android system service named `org.anbox.webrtc.IDataProxyService`. This service allows Android developers to easily make use of binder interprocess communication (IPC) for data communication between an Android application and the Anbox WebRTC platform through a file descriptor.
 
-```{note}
-To interact with the `org.anbox.webrtc.IDataProxyService` system service, the Android application must be installed as a system app. See {ref}`howto-install-apk-system-app` for instructions.
-```
-
 #### Get notified about the availability of data channels
 
 To get notified about the availability of data channels, an Android application can register the following broadcast receiver in the `AndroidManifest.xml` file:
@@ -157,6 +156,10 @@ public class DataChannelEventReceiver extends BroadcastReceiver {
         Log.i(TAG, "channels: [" + TextUtils.join(",", names) + "] event type: " + event);
     }
 }
+```
+
+```{note}
+If an instance is running on Android 14 image, enabling the out-of-band v2 feature requires the Android app to be running in order to receive broadcasts. If the app is in the [cached state](https://developer.android.com/guide/components/activities/process-lifecycle), the system places [context-registered broadcasts in a queue]((https://developer.android.com/develop/background-work/background-tasks/broadcasts#android-14)),meaning the app may not receive broadcasts immediately, as it would when the app is actively running.
 ```
 
 #### Access the data proxy service
@@ -269,6 +272,55 @@ try {
     ex.printStackTrace();
 }
 ```
+
+#### Install the APK as system app
+
+To connect the data channel to the Anbox WebRTC data proxy service within an Android container, the Android app must be installed and running as a system app. To do so, proceed with the following steps:
+1. Add the attribute `android:sharedUserId="android.uid.system"` into the `<manifest>` tag in the `AndroidManifest.xml` file of your Android app
+2. Create an addon to install your APK as a system app through the pre-start hook with the following content:
+    ```
+    #!/bin/bash -ex
+
+    # Only install the APK as a system app when bootstrapping an application.
+    if  [ "$INSTANCE_TYPE" = "regular" ]; then
+      exit 0
+    fi
+
+    aam install-system-app \
+      --apk="${ADDON_DIR}"/app.apk \
+      --permissions=<comma-separated list of permissions that the application requires> \
+      --package-name=<package_name>
+      --access-hidden-api
+    ```
+
+   See [How to install an APK as a system app](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/port/install-apk-system-app/#howto-install-apk-system-app) for details.
+
+3. Navigate to the addon directory and add it to AMS:
+    ```
+    amc addon add install-out-of-band-app .
+    ```
+
+#### Run end-to-end test
+
+To launch a streamable instance with the addon you created, run:
+```
+amc launch --raw jammy:android12:amd64 \
+  --enable-streaming \
+  --features allow_custom_system_signatures \
+  --addons install-out-of-band-app
+```
+
+```{note}
+Enabling the `allow_custom_system_signatures` feature is required to run the Android application as a system app in an Android container.
+```
+
+Once the session is active:
+
+1. Use the web client, which creates a custom data channel `foo` to initiate the WebRTC connection.
+2. After the WebRTC connection is established, verify that the Android application receives a notification indicating the availability of the `foo` data channel.
+3. Confirm that the Android application can connect to the `foo` data channel created by the web client.
+4. Send messages from either the Android application or the WebRTC client, and ensure that the messages are successfully sent and and received over the `foo` data channel.
+
 <!-- wokeignore:rule=master -->
 For a complete Android example, see the [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project.
 
