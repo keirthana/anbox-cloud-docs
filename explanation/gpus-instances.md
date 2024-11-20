@@ -11,17 +11,21 @@ Anbox Cloud automatically adjusts its behaviour depending on the availability of
 
     amc launch --enable-graphics my-application
 
-The use of `--enable-graphics` flag when you launch an instance decides which platform (WebRTC or `null`) is used for rendering.
+The use of `--enable-graphics` flag when you launch an instance decides which [platform](https://documentation.ubuntu.com/anbox-cloud/en/latest/reference/supported-rendering-resources/#supported-platforms)(WebRTC or `null`) is used for rendering.
 
 If the flag is used and there is a GPU available, Anbox Cloud launches an instance using the WebRTC platform that detects and uses the GPU.
 If the flag is used and there is no GPU available, Anbox Cloud uses software rendering.
 If the flag is not used, irrespective of GPU availability, Anbox Cloud uses the `null` platform and cannot perform any rendering. See {ref}`sec-null-platform` for the `null` platform configuration.
 
+```{note}
+The use of `--enable-streaming` flag with the `amc launch` command also influences which rendering platform is used. When the `--enable-streaming` flag is used, Anbox Cloud uses WebRTC which then detects the presence or absence of a GPU and adjusts the rendering behaviour accordingly.
+```
+
 ## With a GPU
 
 If Anbox Cloud detects a GPU device during deployment, it configures the cluster to use the GPU. AMS configures each LXD instance to pass through a GPU device from the host. Currently, all GPUs that are available to a machine are passed to every instance that owns a GPU slot. For NVIDIA GPUs, LXD uses the [NVIDIA container runtime](https://github.com/NVIDIA/nvidia-container-runtime) to make the GPU driver of the host available to the instance.
 
-To use instances instances with a GPU,
+To use instances with a GPU,
 
 - Configure the number of available GPU slots on the node. This decides how many instances can run on a given node because GPUs have limited sharing capacity amongst multiple instances. See {ref}`sec-gpu-slots` for detailed information.
 - Check the list of supported GPUs ({ref}`sec-supported-gpus`) to see if Anbox Cloud includes a driver for your GPU device. If a GPU driver is available inside the instance, there are no further differences in how to use it in comparison to a regular environment. If no GPU driver is available, you must provide it through an addon.
@@ -30,7 +34,7 @@ To use instances instances with a GPU,
 (sec-sw-rendering-video-encoding)=
 ## Without a GPU
 
-Anbox Cloud provides a way to run entirely without GPU by using software rendering. You can enable software rendering and video encoding by launching your application with the `--enable-graphics` flag. When there is no GPU and this flag is enabled, Anbox Cloud falls back to using the `null` platform.
+Anbox Cloud supports deployment in environments without GPUs by utilising software or headless rendering. In such environments, when no GPU is available, you can enable software rendering and video encoding by launching your application with the `--enable-graphics` flag. When there is no GPU and this flag is enabled, Anbox Cloud falls back to using the `null` platform.
 
 To use instances without a GPU and still perform rendering,
 
