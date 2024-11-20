@@ -302,7 +302,7 @@ To connect the data channel to the Anbox WebRTC data proxy service within an And
 
 #### Run end-to-end test
 
-To launch a streamable instance with the addon you created, run:
+To launch a stream-enabled instance with the addon you created, run:
 ```
 amc launch --raw jammy:android12:amd64 \
   --enable-streaming \
