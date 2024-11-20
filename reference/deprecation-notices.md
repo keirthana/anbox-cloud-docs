@@ -4,7 +4,7 @@
 This document contains a list of deprecation notices for Anbox Cloud and its components.
 
 ## Node controller
-*Deprecated in 1.23.0* ; *Removal in 1.25.0*
+*Deprecated in 1.23.0* ; *Removal in 1.26.0*
 
 Use of node controller to manage the port forwarding from an instance to expose a service is deprecated in 1.23.0. Instead, the Anbox Management Service (AMS) will use a LXD proxy device to manage the port forwarding.
 
