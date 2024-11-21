@@ -144,10 +144,9 @@ Connect to the virtual machine hosting the appliance using SSH. To do so, use th
 
 Some preparation is required for using Anbox Cloud that involves installing additional packages. To prepare your machine for further steps, run:
 
-    anbox-cloud-appliance prepare-node-script
     anbox-cloud-appliance prepare-node-script | sudo bash -ex
 
-These commands take you through the steps of reviewing and applying the script that installs required kernel modules and any necessary GPU driver packages. See {ref}`sec-prepare-machine` for more information.
+This command applies a script that installs required kernel modules and any necessary GPU driver packages. See {ref}`sec-prepare-machine` for more information.
 
 ## Initialise the installation
 
