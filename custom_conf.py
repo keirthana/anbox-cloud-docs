@@ -121,9 +121,10 @@ slug = "docs"
 # NOTE: If this variable is not defined, set to None, or the dictionary is empty,
 # the sphinx_reredirects extension will be disabled.
 redirects = {
-    'howto/container': 'howto/instance',
-    'reference/roadmap': 'reference/release-notes',
-    'reference/supported-versions': 'reference-release-notes',
+
+    'reference/roadmap': '../release-notes/release-notes',
+    'reference/supported-versions': '../release-notes/release-notes',
+    'explanation/gpus-instances': '../rendering-graphics',
 }
 
 ############################################################

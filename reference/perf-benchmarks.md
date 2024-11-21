@@ -15,7 +15,7 @@ All benchmarks were performed with a variation of the following `amc benchmark` 
         <app name>
 
 ```{note}
-All benchmarks include rendering and video encoding. On machines/VMs without a GPU, rendering and video encoding are performed in software on the CPU. See {ref}`sec-sw-rendering-video-encoding` for more information.
+All benchmarks include rendering and video encoding. On machines/VMs without a GPU, rendering and video encoding are performed in software on the CPU.
 ```
 
 ## Bare metal
