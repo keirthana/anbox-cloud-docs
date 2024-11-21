@@ -27,7 +27,7 @@ Setting up DNS redirection depends on your DNS provider. Refer to the documentat
 
 Configure the location for the appliance using the created DNS name by running the following command:
 
-   sudo anbox-cloud-appliance config set network.location=your.dns.name
+    sudo anbox-cloud-appliance config set network.location=your.dns.name
 
 The change will be automatically applied and will cause all services components of the appliance to restart. If you want to defer the restart to a later point, you can use the `--no-restart` option.
 
@@ -39,7 +39,7 @@ First, connect and SSH into your appliance instance, and install the `certbot` s
 
     sudo snap install --classic certbot
 
-Using certbot requires that TCP port 80 is not in use as certbot will use it to verify your ownership of the requested DNS name. The Anbox Cloud Appliance only occupies TCP port 443. Please ensure that nothing is listening on the machine on TCP port 80 before you continue.
+Using `certbot` requires that TCP port 80 is not in use as it will use the port to verify your ownership of the requested DNS name. The Anbox Cloud Appliance only occupies TCP port 443. Please ensure that nothing is listening on the machine on TCP port 80 before you continue.
 
 Then run the following command to generate your certificate:
 
