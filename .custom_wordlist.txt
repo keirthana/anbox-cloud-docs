@@ -89,7 +89,7 @@ Debian
 deprecations
 Dev
 devmode
-DNS
+dns
 dnsmasq
 DER
 Dqlite
