@@ -140,6 +140,18 @@ When the instance is successfully launched, you can find its public IP address i
 
 Connect to the virtual machine hosting the appliance using SSH. To do so, use the user name `ubuntu` and provide the path to your private key file. See [Connect to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) for instructions on how to connect.
 
+## Enable the service
+
+The Anbox Cloud service must be enabled using the [Ubuntu Pro Client (`pro`)](https://canonical-ubuntu-pro-client.readthedocs-hosted.com/en/latest/) to be ready for use.
+
+```{tip}
+You can check the status of services using `pro status`.
+```
+
+To enable the Anbox Cloud service, run:
+
+    $ sudo pro enable anbox-cloud
+
 ## Install additional packages
 
 Some preparation is required for using Anbox Cloud that involves installing additional packages. To prepare your machine for further steps, run:
