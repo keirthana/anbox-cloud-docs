@@ -37,7 +37,7 @@ Understand deployment configurations to plan your deployment.
 |--|--|
 | {ref}`exp-production-planning` | Aspects to consider for best results when you are planning a production deployment |
 | {ref}`exp-capacity-planning` | How to estimate the required capacity for your Anbox Cloud deployment |
-| {ref}`exp-rendering-graphics` | How to manage GPUs and make them available to instances |
+| {ref}`exp-rendering-graphics` | Rendering graphical output |
 | {ref}`exp-security` | Important aspects to keep your Anbox Cloud deployment secure |
 | {ref}`exp-security-landing` | The cryptographic technology used by various Anbox Cloud components |
 | {ref}`exp-resources-presets` | Learn about resource presets and how to customise required resources for applications |
