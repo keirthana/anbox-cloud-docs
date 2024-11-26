@@ -27,6 +27,8 @@ jobs:
       run: |
         sudo apt update
         sudo apt install -y jq yq
+        # Don't allow us to succeed if the actual curl command fails
+        set -o pipefail
         curl \
           --unix-socket /var/snap/anbox-cloud-appliance/common/ams-unix.socket \
           s/1.0/swagger.json | yq -y > ./reference/api-reference/ams-api.yaml
