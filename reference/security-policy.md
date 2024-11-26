@@ -21,5 +21,10 @@ If you discover a security vulnerability with Anbox Cloud, report it using the f
 
 The [Ubuntu Security disclosure and embargo policy](https://ubuntu.com/security/disclosure-policy) contains more information about what you can expect when you contact us and what we expect from you.
 
-The Anbox Cloud team will be notified of the issue and review the vulnerability. We may reach out to you for further information or clarification if needed. 
-If the issue is confirmed as a valid security vulnerability, we will assign a CVE and coordinate the release of the fix. We also document them as {ref}`ref-security-notices`.
+## Response to reported vulnerabilities
+
+The Anbox Cloud team will be notified of the issue and review the vulnerability. We may reach out to you for further information or clarification if needed.
+
+If the issue is confirmed as a valid security vulnerability, we use the [NVD scoring system](https://nvd.nist.gov/vuln-metrics/cvss) for deciding the severity and assign a CVE number.
+
+We fix vulnerabilities classified as _critical_ or _high_ with the subsequent monthly release of Anbox Cloud and also document them as {ref}`ref-security-notices`.
