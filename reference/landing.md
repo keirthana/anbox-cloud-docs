@@ -59,6 +59,14 @@ Learn about the available metrics and benchmarks for measuring performance.
 | {ref}`ref-prometheus-metrics`| Performance metrics that Anbox Cloud provides |
 | {ref}`ref-performance-benchmarks`| Benchmarks for the performance that you can achieve with different versions and configurations of Anbox Cloud |
 
+## Security
+
+Learn about our security policies and about the fixes we have provided for vulnerabilities.
+|Guides | Description |
+|--|--|
+| {ref}`ref-security-notices`| Details on the CVEs we have fixed |
+| {ref}`ref-security-policy` | Anbox Cloud security policy and reporting a vulnerability |
+
 ## Other
 
 | Guides | Description |
@@ -92,6 +100,7 @@ release-notes/release-notes.md
 requirements
 roadmap
 security-notices
+security-policy
 android-features
 Supported features <anbox-features>
 supported-rendering-resources

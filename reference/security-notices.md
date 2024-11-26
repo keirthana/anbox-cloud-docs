@@ -1,7 +1,9 @@
 (ref-security-notices)=
 # Security notices
 
-This page contains information about security vulnerabilities found and fixed in Anbox Cloud:
+This page contains information about security vulnerabilities found and fixed in Anbox Cloud.
+
+For information about our security policy, see {ref}`ref-security-policy`.
 
 (sec-CVE-2024-8287)=
 ## CVE-2024-8287
