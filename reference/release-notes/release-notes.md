@@ -144,3 +144,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.24.x includes:
 |December 2018|[Anbox Cloud 1.0.1](1.0.1.md)|
 |November 2018|[Anbox Cloud 1.0.0](1.0.0.md)|
 </details>
+
+## Security policy
+
+The Anbox Cloud security policy is available at {ref}`ref-security-policy`.

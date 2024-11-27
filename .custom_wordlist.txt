@@ -197,6 +197,7 @@ nrpe
 null
 NUMA
 numpad
+nvd
 NvEnc
 NVIDIA
 NVMe
