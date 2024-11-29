@@ -37,7 +37,7 @@ If an instance stops with an error, its disk space is preserved for inspection. 
 (sec-gpu-slots)=
 ### GPU slots
 
-An additional aspect to take into account when planning your resources is the number of required GPU slots (see {ref}`exp-gpus-instances` for more information).
+An additional aspect to take into account when planning your resources is the number of required GPU slots.
 
 ```{note}
 Currently, Anbox Cloud does not have GPU support for virtual machines. This feature is planned for a future release.
