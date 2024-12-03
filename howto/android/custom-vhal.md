@@ -1,5 +1,5 @@
 (howto-replace-anbox-vhal)=
-# Customise the Anbox VHAL
+# How to replace the Anbox VHAL with your custom implementation
 
 *since 1.22.0*
 
@@ -136,99 +136,7 @@ addons:
   - custom-vhal
 ```
 
-## Integrate Anbox VHAL interface
-
-To use and integrate the [Anbox VHAL interface](https://github.com/canonical/vendor_canonical_interfaces/tree/main/vehicle) into a VHAL implementation, the implementation must be built against Android 14. Before proceeding, ensure you have downloaded the Android 14 source. If you haven't done so yet, please follow the [official documentation](https://source.android.com/docs/setup/download) to set it up.
-
-1. Add a new remote definition named `github` to `.repo/manifests/manifest.xml` file.
-
-       <remote name="aosp"
-          fetch=".."
-          review="https://android-review.googlesource.com/" />
-
-       <remote name="github"
-          fetch="https://github.com/canonical/" />
-
-1. Add a new project named `vendor_canonical_interfaces` to the newly added remote and set it to use the `main` branch.
-
-       <project path="vendor/canonical/interfaces"
-                name="vendor_canonical_interfaces"
-                remote="github"
-                revision="main" />
-
-1. Sync the project with the remote.
-
-        repo sync vendor_canonical_interfaces
-
-1. In the VHAL implementation, create a VHAL manifest fragment named `vendor.canonical.interfaces.vehicle@1.0.xml`.
-
-       <manifest version="1.0" type="device">
-           <hal format="hidl">
-               <name>vendor.canonical.interfaces.vehicle</name>
-               <transport>hwbinder</transport>
-               <fqname>@1.0::IVehicle/default</fqname>
-           </hal>
-       </manifest>
-
-   Place the VHAL manifest fragment file in the same folder as the `Android.bp` file that declares the VHAL service, and include the Anbox VHAL manifest fragment in the VHAL service declaration within the `Android.bp` file. Additionally, add the HIDL module as a shared library that the VHAL service links to in the `Android.bp` file.
-
-
-       cc_binary {
-           name: "vendor.<company>.vehicle@<version>-service",
-           vintf_fragments: [
-               ...
-               "vendor.canonical.interfaces.vehicle@1.0.xml",
-           ],
-           shared_libs: [
-               ...
-               "vendor.canonical.interfaces.vehicle@1.0",
-           ],
-           ...
-       }
-
-1. Take the [example](https://github.com/canonical/vendor_canonical_interfaces/tree/main/vehicle/1.0/default) as a reference, which implements the `IVehicle` interface.
-
-        Return<void> VHalService::get(
-            const VehiclePropValue& requestedPropValue, IVehicle::get_cb _hidl_cb) {
-          uid_t uid = android::IPCThreadState::self()->getCallingUid();
-          if (uid != AID_VEHICLE_NETWORK) {
-            _hidl_cb(StatusCode::ACCESS_DENIED, kEmptyValue);
-            return Void();
-          }
-
-          // NOTE: a VHAL implementation must allow access to non-readable vehicle properties.
-          return Void();
-        }
-
-        Return<StatusCode> VHalService::set(const VehiclePropValue& value) {
-          uid_t uid = android::IPCThreadState::self()->getCallingUid();
-          if (uid != AID_VEHICLE_NETWORK)
-            return StatusCode::ACCESS_DENIED;
-
-          // NOTE: a VHAL implementation must allow modification of non-writable vehicle properties.
-          return StatusCode::NOT_AVAILABLE;
-        }
-
-   Please note that each function must implement a security mechanism to restrict access to vehicle properties to the authorised `AID_VEHICLE_NETWORK` process.
-
-1. Instantiate the VHAL service that implements the interface and register it as a binder service in the VHAL implementation.
-
-        #include <VHalService.h>
-
-        int main(int /* argc */, char* /* argv */[]) {
-            ...
-            ...
-            configureRpcThreadpool(4, true);
-            auto vendor_vhal_service = std::make_unique<VHalService>();
-            status_t status = vendor_vhal_service->registerAsService();
-            if (status != OK) {
-                return 1;
-            }
-            joinRpcThreadpool();
-            return 1;
-        }
-
-After implementing the Anbox HIDL interfaces and integrating them into your VHAL implementation, [build](https://source.android.com/docs/setup/build/building) the VHAL module. Then follow the instructions for [customising the Anbox VHAL](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/android/custom-vhal/) and load it as an addon during the Android runtime. Once registered, the service can be accessed by the Anbox VHAL adapter.
+If you would like to further your custom implementation and integrate the Anbox HIDL interface with your custom VHAL implementation, follow the instructions in {ref}`howto-integrate-hidl`.
 
 ## Related topics
 
