@@ -5,6 +5,24 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.23.3
+
+The following Anbox images are the only artefacts released for this patch.
+
+```{note}
+There are no VM images for ARM64.
+```
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | `1.23.3-20241128155118.git5e43037d8` |
+| `jammy:android13:arm64` | `1.23.3-20241128155118.git5e43037d8` |
+| `jammy:android12:amd64` | `1.23.3-20241128155118.git5e43037d8` |
+| `jammy:android12:arm64` | `1.23.3-20241128155118.git5e43037d8` |
+| `jammy:aaos13:amd64`    | `1.23.3-20241128155118.git5e43037d8` |
+| `jammy:aaos13:arm64`    | `1.23.3-20241128155118.git5e43037d8` |
+
+
 ## 1.24.0
 
 ### Charms
