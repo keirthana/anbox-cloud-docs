@@ -9,6 +9,10 @@ Not all components are updated with each release. When components are not update
 
 The following Anbox images are the only artefacts released for this patch.
 
+```{note}
+There are no VM images for ARM64.
+```
+
 | Name | Version |
 |----------|--------------|
 | `jammy:android13:amd64` | `1.23.3-20241128155118.git5e43037d8` |
