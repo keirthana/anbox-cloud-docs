@@ -5,7 +5,7 @@ The Anbox HIDL interface is used in the default Anbox VHAL implementation. This 
 
 Due to the technical requirements of this procedure, this document assumes familiarity with AOSP development on your part. 
 
-If you are looking for a replacing the default VHAL implementation with a custom one, see {ref}`replace the Anbox VHAL <howto-replace-anbox-vhal>`.
+If you are looking for a replacement of the default VHAL implementation with a custom one, see {ref}`replace the Anbox VHAL <howto-replace-anbox-vhal>`.
 
 ## Prerequisites
 
