@@ -95,7 +95,7 @@ At the same time, a Unix domain socket is created under the `/run/user/1000/anbo
 
 To simulate data transmission between the Anbox runtime and the web client, you can use the [`socat`](https://manpages.ubuntu.com/manpages/bionic/man1/socat.1.html) command to connect the Unix domain socket and perform bidirectional asynchronous data sending and receiving:
 
-1. Install the socat package:
+1. Install the `socat` package:
 
    ```
    sudo apt install socat
