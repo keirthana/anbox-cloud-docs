@@ -2,84 +2,104 @@
 (howto-exchange-oob-data)=
 # How to exchange out-of-band data
 
-Enabling out-of-band (OOB) data transmission between an Android application and a WebRTC client makes it possible to exchange data and trigger actions between an Android application and a WebRTC client.
-
-Anbox Cloud provides two versions of this OOB data exchange:
-
-* [Version 2](#version-2) provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
-
-  Use this version if you start your implementation now. If you already have an existing implementation, you should plan to update it to use version 2.
-* [Version 1](#version-1) enables Android application developers to trigger an action from an Android application running in an instance and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
-
-  This version supports only half-duplex data transmission. It allows sending data from an Android application to a WebRTC client through the Anbox WebRTC platform, but it is not possible to receive data from the WebRTC client to an Android application.
-
-```{caution}
-The support for [version 1](#version-1) of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release. Therefore, you should migrate your integration of version 1 of the OOB data exchange to [version 2](#version-2) for full-duplex data transmission and better performance.
-```
-
-The following instructions guide you to exchange OOB data using a specific implementation version:
-
-(sec-oob-data-version-2)=
-## Version 2: full-duplex bidirectional data transmission
+Enabling out-of-band (OOB) data transmission between an Android application and a WebRTC client makes it possible to exchange data and trigger actions between an Android application and a WebRTC client. Anbox Cloud provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
 
 The following instructions will walk you through how to set up data channels and perform data transmission in both directions between an Android application and a WebRTC platform.
 
-Before proceeding, ensure that you have set up a web-based streaming client using the Anbox Cloud streaming stack. If you haven't done so, please follow our setup [guide](https://documentation.ubuntu.com/anbox-cloud/en/latest/tutorial/stream-client/).
-
 ### Prepare your web application
 
-In your web-based client application, import the {ref}`sec-streaming-sdk`.
+This guide builds upon the [streaming client setup tutorial](https://documentation.ubuntu.com/anbox-cloud/en/latest/tutorial/stream-client/) for Anbox Cloud. Ensure you have completed the setup of a web-based streaming client as described in the tutorial till the [step where you set up stream client](https://documentation.ubuntu.com/anbox-cloud/en/latest/tutorial/stream-client/#implement-the-stream-client).
 
-Create a data channel (named `foo` in the following example) under the `dataChannels` property of an `AnboxStream` object and register event handlers that respond to the events sent from an Android application:
+#### Extend `AnboxStream` Configuration
+
+Now, to extend an `AnboxStream` object, add the `dataChannels` property to define a new data channel. For example:
 
 ```
-let stream = new AnboxStream({
-  ...
-  ...
-  dataChannels: {
-    "foo": {
-      callbacks: {
-        close: () => {
-          console.log('data channel is closed')
-        },
-        open: () => {
-          console.log('data channel is open')
-        },
-        error: (err) => {
-          console.log(`error: ${err}`)
-        },
-        message: (data) => {
-          console.log(`data received: ${data}`)
-        }
-      }
-    }
-  }
-});
+  <body>
+    <div id="anbox-stream"></div>
+    <div id="controls" style="position: absolute; top: 20px; left: 20px; z-index: 10">
+      <input type="text" id="textBox" placeholder="Send message">
+      <button id="sendButton">Send</button>
+    </div>
+
+    <script>
+      ...
+      window.onload = () => {
+        const stream = new AnboxStream({
+          targetElement: "anbox-stream",
+          ...
+          dataChannels: {
+            "foo": {
+              callbacks: {
+                close: () => {
+                  console.log('data channel is closed')
+                },
+                open: () => {
+                  console.log('data channel is open')
+                },
+                error: (err) => {
+                  console.log(`error: ${err}`)
+                },
+                message: (data) => {
+                  console.log(`data received: ${data}`)
+                }
+              }
+            }
+          }
+        });
+        stream.connect();
+
+        const sendButton = document.getElementById("sendButton");
+        const textBox = document.getElementById("textBox");
+        sendButton.addEventListener("click", () => {
+          const message = textBox.value;
+          if (message) {
+            stream.sendData('foo', message);
+          }
+        });
+      };
+    </script>
+  </body>
+
 ```
+
+1. This extends a `AnboxStream` object to create a data channel named `foo` and registers event handlers for data communication between the Anbox instance and web client.
+2. It also adds a new section to the web page, containing an input field to type and send a message to Anbox runtime through the created data channel.
+
+When joining an existing stream-enabled instance, the data channel can be created dynamically based on the specific configuration of the instance.
 
 ```{note}
 An `AnboxStream` object can create a maximum of five data channels. If the number of data channels exceeds the allowed maximum, an exception is thrown when instantiating the `AnboxStream` object.
 ```
 
-To launch a new WebRTC session, the client must call `stream.connect()`. The `AnboxStream` object then builds up a WebRTC native data channel internally, based on the name declared under its `dataChannels` property for peer-to-peer communication (`foo` in the example).
+### Data exchange between Anbox runtime and web client
 
-To send data to an Android application through the channel, the client must use the member function `sendData` of the `AnboxStream` class:
+Launch a stream-enabled instance for web client to join
 
 ```
-stream.sendData('foo', 'hello world');
+amc launch --name test-app \
+  --raw jammy:android13:arm64 \
+  --enable-streaming
 ```
 
+Once the instance is up and running, retrieve the session ID:
 
-### Anbox WebRTC platform
+    amc ls --filter name=test-app --format=csv | awk -F',' '{split($6, r, "="); print r[2]}'
 
-When establishing a peer connection, a number of data channels are set up in the Anbox WebRTC platform on the server side, upon request by the client.
+Next, launch the web client by opening `https://<appliance_private_ip>:8080/<session_id>` in your browser. Please replace <session_id> with the session ID retrieved. Once the web page is fully loaded, streaming will be established with the active session, after the streaming connection is successfully made, the `foo` data channel will be created on the Anbox runtime server side, in response to the client's request.
 
-At the same time, a number of Unix domain sockets are created under the `/run/user/1000/anbox/sockets` folder. They use the format `webrtc_data_<channel_name>` and represent the established communication bridge between a WebRTC client and the Anbox WebRTC platform. Those Unix domain sockets can be used by a service or daemon to:
+At the same time, a Unix domain socket is created under the `/run/user/1000/anbox/sockets` folder in the format of `webrtc_data_<channel_name>` (`webrtc_data_foo` in the example) within the Anbox instance and represent the established communication bridge between a web client and the Anbox runtime. This Unix domain socket can be used by a service or daemon to:
 
-- Receive data sent from a WebRTC client over the data channel and forward it to an Android application.
-- Receive data sent from an Android application and forward it to a WebRTC client over the data channel.
+- Receive data sent from a web client over the data channel and forward it to an Android application.
+- Receive data sent from an Android application and forward it to a web client over the data channel.
 
-A trivial example to simulate the data transmission between an instance and a WebRTC client is using the [`socat`](https://manpages.ubuntu.com/manpages/bionic/man1/socat.1.html) command to connect the Unix domain socket and perform bidirectional asynchronous data sending and receiving:
+To simulate data transmission between the Anbox runtime and the web client, you can use the [`socat`](https://manpages.ubuntu.com/manpages/bionic/man1/socat.1.html) command to connect the Unix domain socket and perform bidirectional asynchronous data sending and receiving:
+
+1. Install the `socat` package:
+
+   ```
+   sudo apt install socat
+   ```
 
 1. Connect the Unix domain socket:
 
@@ -87,42 +107,46 @@ A trivial example to simulate the data transmission between an instance and a We
    socat - UNIX-CONNECT:/run/user/1000/anbox/sockets/webrtc_data_foo
    ```
 
-1. After the Unix domain socket is connected, type a message and hit the `Enter` key:
+1. This command establishes a connection to the `webrtc_data_foo` Unix domain socket, allowing you to send and receive data directly through the established data channel between Anbox runtime and the web client. After the Unix domain socket is connected, type a message and hit the `Enter` key:
 
        hello world
 
-   The data is now sent from the Anbox WebRTC platform over the data channel to the WebRTC client.
-1. Observe that the message is displayed in the console of a web browser, responding to the message event:
+   The data is now sent from the Anbox runtime over the data channel to the web client.
+1. Observe that the message is displayed in the [console](https://developer.chrome.com/docs/devtools/console) of a web client, responding to the message event:
 
        data received: hello world
 
-1. To test the other direction of the communication, send a message from a WebRTC client to the Anbox WebRTC platform through the data channel:
-
-   ```
-   session.sendData('foo', 'anbox cloud')
-   ```
+1. To test the other direction of the communication, in the web client, type a message and send the message over the `foo` data channel to the Anbox runtime.
 
 1. Observe that the received data is printed out in the `socat` TCP session:
 
    ```
    socat - UNIX-CONNECT:/run/user/1000/anbox/sockets/webrtc_data_foo
-   hello world <--  the sent data
-   anbox cloud <--  the received data
+   hello world
+   anbox cloud
    ```
 
-### Anbox WebRTC data proxy
+This enables data exchange between a service running on the Anbox instance and the web client. However, it does not yet facilitate data exchange between an Android application running inside the Android container and the web client.
 
-To build up the communication bridge between an Android application and the Anbox WebRTC platform, Anbox Cloud provides a system daemon named `anbox-webrtc-data-proxy`. This daemon is responsible for:
 
+### Data exchange between Android application and web client
+
+In the [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk), there is an [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project. You can either:
+- compile and modify the example application to meet your needs.
+- use the pre-built out-of-band v2 APK from the [release tarball](https://github.com/canonical/anbox-streaming-sdk/releases) to get started and immediately try out this feature by [running end-to-end tests](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/stream/exchange-oob-data/#run-end-to-end-test).
+
+To build up the communication bridge between an Android application and the web client, Anbox Cloud provides a system daemon named `anbox-webrtc-data-proxy`.  This daemon is responsible for:
+
+ * Registering a system service named `org.anbox.webrtc.IDataProxyService` to the Android system
  * Accepting connection requests from an Android application
- * Connecting to one specific data channel via the Unix domain socket exposed by the Anbox WebRTC platform
+ * Connecting to a specific data channel via the Unix domain socket exposed by the Anbox runtime
  * Passing the connected socket as a file descriptor to the Android application
 
-The `anbox-webrtc-data-proxy` system daemon runs in the instance and registers an Android system service named `org.anbox.webrtc.IDataProxyService`. This service allows Android developers to easily make use of binder interprocess communication (IPC) for data communication between an Android application and the Anbox WebRTC platform through a file descriptor.
+This allows developers to easily make use of the Android system service for data communication between an Android application and the Anbox runtime through a file descriptor, enabling further data exchange with the web client.
 
 #### Get notified about the availability of data channels
 
-To get notified about the availability of data channels, an Android application can register the following broadcast receiver in the `AndroidManifest.xml` file:
+To receive notifications about the availability of data channels, your Android application should register the following broadcast receiver in the `AndroidManifest.xml` file:
 
 ```
 <receiver
@@ -142,7 +166,7 @@ Whenever the availability of data channels changes, a broadcast is sent out to t
 | `event`                  | string                                          | Can be `created` (which means the data channels are created and open for Android applications to use) or `destroyed` (which means that the data channels are closed and destroyed) |
 | `data-channel-names`     | string array                                    | Comma-separated list of data channel names that identify the changed data channels
 
-The Android application should implement a subclass of the [`BroadcastReceiver`](https://developer.android.com/guide/components/broadcasts#effects-process-state), which responds to the above events that are sent by the Android system.
+Your Android application is required to implement a subclass of the [`BroadcastReceiver`](https://developer.android.com/guide/components/broadcasts#effects-process-state), which responds to the above events that are sent by the Android system.
 
 ```
 public class DataChannelEventReceiver extends BroadcastReceiver {
@@ -159,12 +183,12 @@ public class DataChannelEventReceiver extends BroadcastReceiver {
 ```
 
 ```{note}
-If an instance is running on Android 14 image, enabling the out-of-band v2 feature requires the Android app to be running in order to receive broadcasts. If the app is in the [cached state](https://developer.android.com/guide/components/activities/process-lifecycle), the system places [context-registered broadcasts in a queue]((https://developer.android.com/develop/background-work/background-tasks/broadcasts#android-14)),meaning the app may not receive broadcasts immediately, as it would when the app is actively running.
+If an instance is running on Android 14 image, enabling the out-of-band v2 feature requires the Android app to be running in order to receive broadcasts. If the app is in the [cached state](https://developer.android.com/guide/components/activities/process-lifecycle), the system places [context-registered broadcasts in a queue]((https://developer.android.com/develop/background-work/background-tasks/broadcasts#android-14)),meaning the app may not receive broadcasts immediately, as it would when the app is actively running. Hence, your application, which integrates the out-of-band feature, must be in a running state to receive notifications about the availability of data channels.
 ```
 
 #### Access the data proxy service
 
-There are two ways to access the `org.anbox.webrtc.IDataProxyService` from an Android application:
+There are two ways to access the `org.anbox.webrtc.IDataProxyService` binder service from an Android application:
 
 * If you develop the application with Android studio, you can access the service by using Android's reflection API.
 
@@ -223,9 +247,9 @@ try {
 }
 ```
 
-#### Receive data from the Anbox WebRTC platform
+#### Receive data from the Anbox runtime
 
-Once the valid file descriptor is returned, launch an asynchronous task to read data from the Anbox WebRTC platform:
+Once the valid file descriptor is returned, launch an asynchronous task to read data from the Anbox runtime:
 
 ```
 public class DataReadTask extends AsyncTask<Void, Void, Void> {
@@ -259,13 +283,13 @@ public class DataReadTask extends AsyncTask<Void, Void, Void> {
 }
 ```
 
-#### Send data to the Anbox WebRTC platform
+#### Send data to the Anbox runtime
 
-To send data to the Anbox WebRTC platform through the file descriptor:
+To send data to the Anbox runtime platform through the file descriptor:
 
 ```
-OutputStream ostream = new FileOutputStream(mFd.getFileDescriptor());
 try {
+    OutputStream ostream = new FileOutputStream(mFd.getFileDescriptor());
     ostream.write(data.getBytes(), 0, data.length());
 } catch (IOException ex) {
     Log.i(TAG, "Failed to write data: " + ex.getMessage());
@@ -276,156 +300,68 @@ try {
 #### Install the APK as system app
 
 To connect the data channel to the Anbox WebRTC data proxy service within an Android container, the Android app must be installed and running as a system app. To do so, proceed with the following steps:
-1. Add the attribute `android:sharedUserId="android.uid.system"` into the `<manifest>` tag in the `AndroidManifest.xml` file of your Android app
-2. Create an addon to install your APK as a system app through the pre-start hook with the following content:
-    ```
-    #!/bin/bash -ex
+1. Add the attribute `android:sharedUserId="android.uid.system"` to the `<manifest>` tag in the `AndroidManifest.xml` file of your Android app, then build your application.
+1. Create an Addon to install your APK as a system app
+   - First, create a directory for your addon. Inside this directory, create a `manifest.yaml` file that defines your addon.
 
-    # Only install the APK as a system app when bootstrapping an application.
-    if  [ "$INSTANCE_TYPE" = "regular" ]; then
-      exit 0
-    fi
+     ```
+     name: install-system-app
+     description: Install APK as a system app through the pre-start hook
+     ```
 
-    aam install-system-app \
-      --apk="${ADDON_DIR}"/app.apk \
-      --permissions=<comma-separated list of permissions that the application requires> \
-      --package-name=<package_name>
-      --access-hidden-api
-    ```
+   - Place your APK in the same directory, create a `pre-start` hook under the `hooks` folder with the following content:
+
+     ```
+     #!/bin/bash -ex
+
+     # Only install the APK as a system app when bootstrapping an application.
+     if  [ "$INSTANCE_TYPE" = "regular" ]; then
+       exit 0
+     fi
+
+     aam install-system-app \
+       --apk="${ADDON_DIR}"/<your_apk_file> \
+       --permissions=<comma-separated list of permissions that the application requires> \
+       --package-name=<package_name>
+       --access-hidden-api
+     ```
+
+   - Make sure the `pre-start` hook is executable:
+
+     ```
+     chmod +x hooks/pre-start
+     ```
+
+   - Navigate to the addon root folder and add it to AMS:
+
+     ```
+     amc addon add install-system-app .
+     ```
 
    See [How to install an APK as a system app](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/port/install-apk-system-app/#howto-install-apk-system-app) for details.
 
-3. Navigate to the addon directory and add it to AMS:
-    ```
-    amc addon add install-out-of-band-app .
-    ```
-
 #### Run end-to-end test
 
-To launch a stream-enabled instance with the addon you created, run:
-```
-amc launch --raw jammy:android12:amd64 \
-  --enable-streaming \
-  --features allow_custom_system_signatures \
-  --addons install-out-of-band-app
-```
+  1. To launch a stream-enabled instance with the addon you created above, run:
 
-```{note}
-Enabling the `allow_custom_system_signatures` feature is required to run the Android application as a system app in an Android container.
-```
+      ```
+      amc launch --name test-oobv2 \
+        --raw jammy:android13:arm64 \
+        --enable-streaming \
+        --features allow_custom_system_signatures \
+        --addons install-out-of-band-app
+      ```
 
-Once the session is active:
 
-1. Use the web client, which creates a custom data channel `foo` to initiate the WebRTC connection.
-2. After the WebRTC connection is established, verify that the Android application receives a notification indicating the availability of the `foo` data channel.
-3. Confirm that the Android application can connect to the `foo` data channel created by the web client.
-4. Send messages from either the Android application or the WebRTC client, and ensure that the messages are successfully sent and and received over the `foo` data channel.
+     ```{note}
+     Enabling the `allow_custom_system_signatures` feature is required to run the Android application as a system app in an Android container.
+     ```
 
-<!-- wokeignore:rule=master -->
-For a complete Android example, see the [out_of_band_v2](https://github.com/canonical/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project.
+  1. Retrieve the session ID that associated to the `test-oobv2` instance once it's up and running
 
-(sec-oob-data-version-1)=
-## Version 1 : half-duplex unidirectional data
+         amc ls --filter name=test-oobv2 --format=csv | awk -F',' '{split($6, r, "="); print r[2]}'
 
-```{caution}
-The support for version 1 of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release.
-```
-
-### Android application
-
-The following instructions will walk you through how to send a message from an Android application
-running in an instance to the client application developed with the Anbox Streaming
-SDK.
-
-#### Add required permissions
-
-For the Android application running in the instance, add the
-following required permission to the `AndroidManifest.xml` to allow the
-application to send messages to the Anbox runtime:
-
-```
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="<your_application>">
-
-    …
-    <uses-permission android:name="android.permission.ANBOX_SEND_MESSAGE" />
-    …
-</manifest>
-```
-
-Any attempt of an application that lacks the `android.permission.ANBOX_SEND_MESSAGE`
-permission to invoke APIs that are provided by the Anbox platform library will
-be disallowed, and a security exception will be raised.
-
-#### Import Java library
-
-Check out the [Anbox Streaming SDK](https://github.com/canonical/anbox-streaming-sdk) from GitHub:
-
-    git clone https://github.com/canonical/anbox-streaming-sdk.git
-
-To import the `com.canonical.anbox.platform_api_skeleton.jar` library into your
-Android project, refer to the official [documentation](https://developer.android.com/studio/build/dependencies)
-on how to import an external library into an Android application project.
-
-Alternatively, you can follow the steps below:
-
-1. Copy `com.canonical.anbox.platform_api_skeleton.jar` to the `project_root/app/libs`
-   directory (if the folder doesn’t exist, just create it).
-
-2. Edit `build.gradle` under the app folder by adding the following line
-   under the dependencies scope.
-
-   ```
-   dependencies {
-       implementation fileTree(dir: 'libs', include: ['*.jar'])
-       …
-       …
-       implementation files('libs/com.canonical.anbox.platform_api_skeleton.jar')
-   }
-   ```
-
-#### Send message from Android
-
-The following example demonstrates how to send a message with the Anbox
-Platform API to a remote client:
-
-```java
-import com.canonical.anbox.PlatformAPISkeleton;
-
-public class FakeCameraActivity extends AppCompatActivity {
-     ….
-     ….
-     public void onResume() {
-        super.onResume();
-
-        String type = "message-type"; //Size is limited to 256 KB
-        String data = "message-data"; //Size is limited to 1 MB
-        PlatformAPISkeleton api_skeleton = new PlatformAPISkeleton();
-        if (!api_skeleton.sendMessage(type, data)) {
-            Log.e(TAG, "Failed to send a message type " + type + " to Anbox session");
-        }
-    }
-}
-```
-
-### Receive message on the client
-
-A client application that receives a message from the Android application can be written
-in JavaScript, C or C++ by using the Anbox Streaming SDK.
-
-For a web-based application, you can use the JavaScript SDK which you can find under {ref}`sec-streaming-sdk`. To receive the data sent from the Android application running in the instance, implement the `messageReceived` callback
-of the `AnboxStream` object:
-
-```
-    let stream = new AnboxStream({
-      ...
-      ...
-      callbacks: {
-        ….
-        messageReceived: (type, data) => {
-          console.log("type: ", type, "  data: ", data);
-        }
-      }
-    });
-```
+  1. Launch the stream client that extends to [create the `foo` data channel](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/stream/exchange-oob-data/#prepare-your-web-application) by opening `https://<appliance_private_ip>:8080/<session_id>` in your browser. Please replace `<session_id>` with the session ID retrieved above.
+  1. Once the WebRTC connection is established, open the Out of Band v2 application in the Android container. enter 'foo' as the channel name in the line edit widget, then click the *CONNECT* button. Check if a toast message saying 'Channel "foo" is connected' appears.
+  1. Next, in the edit text widget, enter 'hello' as the text and click *SEND*. In the web client console, verify if the message is printed.
+  1. In the web client, type 'world' in the text box and click *Send*, Then, check the Android application to see if the message appears in the *Received Data* edit box.
