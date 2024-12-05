@@ -51,7 +51,6 @@ To use and integrate the [Anbox VHAL interface](https://github.com/canonical/ven
 
    Place the VHAL manifest fragment file in the same folder as the `Android.bp` file that declares the VHAL service, and include the Anbox VHAL manifest fragment in the VHAL service declaration within the `Android.bp` file. Additionally, add the HIDL module as a shared library that the VHAL service links to in the `Android.bp` file.
 
-
        cc_binary {
            name: "vendor.<company>.vehicle@<version>-service",
            vintf_fragments: [
@@ -67,6 +66,7 @@ To use and integrate the [Anbox VHAL interface](https://github.com/canonical/ven
 
 1. Let's consider an [example](https://github.com/canonical/vendor_canonical_interfaces/tree/main/vehicle/1.0/default) that implements the `IVehicle` interface.
 
+    ```cpp
         Return<void> VHalService::get(
             const VehiclePropValue& requestedPropValue, IVehicle::get_cb _hidl_cb) {
           uid_t uid = android::IPCThreadState::self()->getCallingUid();
@@ -87,11 +87,13 @@ To use and integrate the [Anbox VHAL interface](https://github.com/canonical/ven
           // NOTE: a VHAL implementation must allow modification of non-writable vehicle properties.
           return StatusCode::NOT_AVAILABLE;
         }
+    ```
 
    Note that you must implement your own access control methods to vehicle properties to ensure secure access. When implementing, this translates to each function having a security mechanism that disallows access to vehicle properties for anything except the authorised `AID_VEHICLE_NETWORK` process.
 
 1. Instantiate the VHAL service that implements the interface and register it as a binder service in the VHAL implementation.
 
+    ```cpp
         #include <VHalService.h>
 
         int main(int /* argc */, char* /* argv */[]) {
@@ -106,6 +108,7 @@ To use and integrate the [Anbox VHAL interface](https://github.com/canonical/ven
             joinRpcThreadpool();
             return 1;
         }
+    ```
 
 Now, [build](https://source.android.com/docs/setup/build/building) the VHAL module.
 
