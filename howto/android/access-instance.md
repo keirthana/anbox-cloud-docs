@@ -28,7 +28,7 @@ On the *Instances* page, locate a running instance and click *Connect ADB* ( ![C
 
 **From the Command Line**:
 
-For a full Anbox Cloud deployment, run:
+For the charmed Anbox Cloud deployment, run:
 
     anbox-stream-gateway session share <session_id>
 

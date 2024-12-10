@@ -24,7 +24,7 @@ How and where to run `amc` depends on your use case:
 
   Note that you must use the user name `ubuntu` and provide the path to your private key file when connecting. See [Connect to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) for instructions on how to connect.
 - If you are running the Anbox Cloud Appliance on a physical or virtual machine, log on to that machine and ensure that you have performed the instructions mentioned in {ref}`sec-enable-anbox-pro`.
-- If you are running a full Anbox Cloud deployment, access the `ams/0` machine to run `amc`. You can do this by opening an SSH session with the `juju` command:
+- If you are running the charmed Anbox Cloud deployment, access the `ams/0` machine to run `amc`. You can do this by opening an SSH session with the `juju` command:
 
         juju ssh ams/0
 

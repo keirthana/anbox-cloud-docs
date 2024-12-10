@@ -18,7 +18,7 @@ The Anbox Cloud Appliance is a self-contained deployment variant of Anbox Cloud.
 
 **Anbox Cloud**
 
-The regular Anbox Cloud uses [Juju](https://juju.is/) for deployment and operations. It provides rich features and is best suited for a large scale deployment.
+The charmed Anbox Cloud uses [Juju](https://juju.is/) for deployment and operations. It provides rich features and is best suited for a large scale deployment.
 
 See the following table for a comparison of features for the different variants:
 
@@ -35,7 +35,7 @@ See the following table for a comparison of features for the different variants:
 
 *\* When purchasing the Anbox Cloud Appliance through the AWS Marketplace, the Ubuntu Pro subscription does not include vendor support.*
 
-We recommend starting with the Anbox Cloud Appliance. You can choose to expand to a full Anbox Cloud installation later.
+We recommend starting with the Anbox Cloud Appliance. You can choose to expand to a charmed Anbox Cloud installation later.
 
 ## Anbox Cloud Components
 
@@ -139,7 +139,7 @@ If you are using the Anbox Cloud Appliance, you are prompted during the initiali
 (sec-juju-bundles)=
 ## Juju bundles
 
-The regular Anbox Cloud variant provides two different Juju bundles:
+The charmed Anbox Cloud variant provides two different Juju bundles:
 
 * The `anbox-cloud-core` bundle provides a minimised version of Anbox Cloud. This version is sufficient if you don't want to use the Anbox Cloud streaming stack.
 

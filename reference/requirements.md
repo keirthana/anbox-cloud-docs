@@ -78,7 +78,7 @@ Anbox Cloud currently supports the following LXD versions:
 (sec-juju-version-requirements)=
 ### Juju version
 
-The regular Anbox Cloud variant requires [Juju 2.9 or later](https://juju.is/) to be installed to manage the different components and their dependencies. You can install Juju with the following command:
+The charmed Anbox Cloud variant requires [Juju 2.9 or later](https://juju.is/) to be installed to manage the different components and their dependencies. You can install Juju with the following command:
 
     snap install --classic --channel=3.1/stable juju
 
@@ -95,7 +95,7 @@ See the [Juju documentation](https://juju.is/docs/installing) for more informati
 
 While you can run Anbox Cloud on a single machine, we strongly recommend using several machines for a production environment.
 
-To run a full Anbox Cloud deployment including the streaming stack, we recommend the following setup:
+To run an Anbox Cloud deployment including the streaming stack, we recommend the following setup:
 
 | ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 |----|----------------|-----------|------|------------|------|------------|
