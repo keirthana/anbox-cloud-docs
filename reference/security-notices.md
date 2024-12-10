@@ -30,9 +30,9 @@ Anbox will not make use of the signaling endpoint unless being instructed to do 
 
 This situation is unlikely and only possible after an attacker has already gained access to the internal network. In the unlikely event of an attacker having access to the internal network and having control over outgoing connections from Anbox, the WebRTC signaling information will be available to the attacker and thereby the attacker will be able to interact with the Anbox instance.
 
-### Update instructions
+### Upgrade instructions
 
-The issue can be fixed by updating your deployment to the latest 1.23.1 release of Anbox Cloud. See {ref}`howto-upgrade-anbox-cloud` and {ref}`howto-upgrade-appliance` for instructions on how to update your Anbox Cloud deployment.
+The issue can be fixed by upgrading your deployment to 1.23.1 or later release of Anbox Cloud. See {ref}`howto-upgrade-anbox-cloud` and {ref}`howto-upgrade-appliance` for instructions on how to update your Anbox Cloud deployment.
 
 ### References
 

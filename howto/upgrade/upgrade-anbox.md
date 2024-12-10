@@ -1,5 +1,5 @@
 (howto-upgrade-anbox-cloud)=
-# How to upgrade Anbox Cloud
+# How to upgrade the charmed deployment
 
 ```{note}
 If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.

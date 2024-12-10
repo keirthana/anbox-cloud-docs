@@ -125,6 +125,10 @@ redirects = {
     'reference/roadmap': '../release-notes/release-notes',
     'reference/supported-versions': '../release-notes/release-notes',
     'explanation/gpus-instances': '../rendering-graphics',
+    'howto/update/landing': '../../upgrade/landing',
+    'howto/update/upgrade-anbox': '../../upgrade/upgrade-anbox',
+    'howto/update/upgrade-appliance': '../../upgrade/upgrade-appliance',
+    'howto/update/control-updates': '../../upgrade/landing',
 }
 
 ############################################################
