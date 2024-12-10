@@ -40,4 +40,4 @@ See the {ref}`ref-requirements` for details on general and deployment specific r
 
 ## Upgrade instructions
 
-See {ref}`howto-upgrade-anbox-cloud` and {ref}`howto-upgrade-appliance` for instructions on how to update your Anbox Cloud deployment to the < release-version > release.
+See {ref}`howto-upgrade-anbox-cloud` and {ref}`howto-upgrade-appliance` for instructions on how to upgrade your Anbox Cloud deployment to the < release-version > release.

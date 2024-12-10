@@ -1,5 +1,21 @@
-(howto-control-updates)=
-# How to control updates
+(howto-upgrade)=
+# How to upgrade Anbox Cloud
+
+The following guides in this section describe how to upgrade your charmed or appliance installation.
+
+```{note}
+When possible, Anbox Cloud automatically enables [Livepatch](https://ubuntu.com/security/livepatch). Livepatch applies critical Linux kernel patches with zero downtime. You can check whether Livepatch is available for your platform by running `pro status`.
+```
+
+```{toctree}
+:titlesonly:
+
+Upgrade the Appliance <upgrade-appliance>
+Upgrade Anbox Cloud <upgrade-anbox>
+```
+
+(sec-control-updates)=
+## Controlling snap updates
 
 For security reasons, you should keep your systems up-to-date at all times. To ensure this, [snaps](https://snapcraft.io/about) update automatically, and the snap daemon is by default configured to check for updates four times a day.
 
