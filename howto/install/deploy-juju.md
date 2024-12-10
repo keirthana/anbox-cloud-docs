@@ -6,7 +6,7 @@ Anbox Cloud supports various public clouds, such as AWS, Azure and Google. To de
 See the following sections for detailed instructions. If you want to install Anbox Cloud on bare metal instead of a public cloud, see {ref}`howto-deploy-anbox-baremetal` instead.
 
 ```{note}
-There are differences between the full Anbox Cloud installation and the Anbox Cloud Appliance (see {ref}`sec-variants`). This section focuses on **Anbox Cloud**. For instructions on how to install the **Anbox Cloud Appliance**, see {ref}`tut-installing-appliance`.
+There are differences between the charmed Anbox Cloud installation and the Anbox Cloud Appliance (see {ref}`sec-variants`). This section focuses on **Anbox Cloud**. For instructions on how to install the **Anbox Cloud Appliance**, see {ref}`tut-installing-appliance`.
 ```
 
 ## Prerequisites

@@ -3,7 +3,7 @@
 
 Anbox Cloud exposes certain network ports for access and communication.
 
-For the regular Anbox Cloud deployment, these ports are used for communication between components, and to allow accessing the Anbox Cloud interface.
+For the charmed Anbox Cloud deployment, these ports are used for communication between components, and to allow accessing the Anbox Cloud interface.
 
 For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cloud interface since all components are installed on the same machine.
 
