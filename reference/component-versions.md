@@ -13,13 +13,23 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| | | |
+| `anbox-cloud-dashboard` | `1.24/stable` | 601 |
+| `ams-node-controller` (Deprecated) | `1.24/stable` | 610 |
+| `coturn` | `1.24/stable` | 601 |
+| `ams` | `1.24/stable` | 737 |
+| `anbox-stream-gateway`  | `1.24/stable` |  692 |
+| `ams-lxd` | `1.24/stable` | 652  |
+| `anbox-stream-agent` | `1.24/stable` | 685 |
+| `aar` | `1.24/stable` |  723 |
+| `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
 
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| | | |
+| `anbox-cloud` | `1.24/stable` | 554 |
+| `anbox-cloud-core` | `1.24/stable` | 566 |
+
 ### Snaps
 
 | Name |  Channel | Version |
