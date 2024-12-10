@@ -38,6 +38,10 @@ On your machine, run the following commands to ensure that all installed package
     sudo apt update
     sudo apt upgrade
 
+```{caution}
+Please reboot your system after the upgrade (if required) before proceeding with the other steps.
+```
+
 ### Attach your machine to Ubuntu Pro
 
 The Anbox Cloud Appliance requires a valid Ubuntu Pro subscription.
