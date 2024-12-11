@@ -27,20 +27,20 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.24/stable` | 554 |
-| `anbox-cloud-core` | `1.24/stable` | 566 |
+| `anbox-cloud` | `1.24/stable` | 571 |
+| `anbox-cloud-core` | `1.24/stable` | 583 |
 
 ### Snaps
 
 | Name |  Channel | Version |
 |----------|--------------|---------|
-| `ams`    | `1.24/stable` | `1.24.1-f58845a77`  |
-| `aar`    | `1.24/stable` | `1.24.1-f58845a77`  |
-| `anbox-cloud-dashboard` | `1.24/stable` | `1.24.1-f58845a77`  |
-| `anbox-stream-agent` | `1.24/stable` | `1.24.1-f58845a77`  |
-| `anbox-stream-gateway` | `1.24/stable` |  `1.24.1-f58845a77` |
-| `anbox-cloud-appliance` | `1.24/stable` | `1.24.1-f58845a77`  |
-| `nats` | `latest/stable` | `1.24.1-f58845a77` |
+| `ams`    | `1.24/stable` | `1.24.1-fcc9cd96b`  |
+| `aar`    | `1.24/stable` | `1.24.1-fcc9cd96b`  |
+| `anbox-cloud-dashboard` | `1.24/stable` | `1.24.1-fcc9cd96b`  |
+| `anbox-stream-agent` | `1.24/stable` | `1.24.1-fcc9cd96b`  |
+| `anbox-stream-gateway` | `1.24/stable` |  `1.24.1-fcc9cd96b` |
+| `anbox-cloud-appliance` | `1.24/stable` | `1.24.1-fcc9cd96b`  |
+| `nats` | `latest/stable` | `1.24.1-fcc9cd96b` |
 
 ### Anbox images
 
@@ -48,16 +48,16 @@ The following Anbox images are available in two variants: one based on a contain
 
 | Name | Version |
 |----------|--------------|
-| `jammy:android14:amd64` |  |
-| `jammy:android14:arm64` |  |
-| `jammy:android13:amd64` |  |
-| `jammy:android13:arm64` |  |
-| `jammy:android12:amd64` |  |
-| `jammy:android12:arm64` |  |
-| `jammy:aaos13:amd64`    |  |
-| `jammy:aaos13:arm64`    |  |
-| `jammy:aaos14:amd64`    |  |
-| `jammy:aaos14:arm64`    |  |
+| `jammy:android14:amd64` | `1.24.1-20241206164338.gitcd0f11b18` |
+| `jammy:android14:arm64` | `1.24.1-20241206164338.gitcd0f11b18` |
+| `jammy:android13:amd64` | `1.24.1-20241206164338.gitcd0f11b18` |
+| `jammy:android13:arm64` | `1.24.1-20241206164338.gitcd0f11b18` |
+| `jammy:android12:amd64` | `1.24.1-20241206164338.gitcd0f11b18` |
+| `jammy:android12:arm64` | `1.24.1-20241206164338.gitcd0f11b18` |
+| `jammy:aaos13:amd64`    | `1.24.1-20241206164338.gitcd0f11b18` |
+| `jammy:aaos13:arm64`    | `1.24.1-20241206164338.gitcd0f11b18` |
+| `jammy:aaos14:amd64`    | `1.24.1-20241206164338.gitcd0f11b18` |
+| `jammy:aaos14:arm64`    | `1.24.1-20241206164338.gitcd0f11b18` |
 
 
 ## 1.23.3
