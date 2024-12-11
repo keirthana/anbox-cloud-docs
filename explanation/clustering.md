@@ -1,9 +1,9 @@
 (exp-clustering)=
 # Clustering
 
-While it is possible to install Anbox Cloud on a single machine, Anbox Cloud Appliance does not support multi-node setups. If you intend to distribute the load across multiple machines in a cluster, it is recommended to use Anbox Cloud for full deployments instead.
+While it is possible to install Anbox Cloud on a single machine, Anbox Cloud Appliance does not support multi-node setups. If you intend to distribute the load across multiple machines in a cluster, it is recommended to use charmed Anbox Cloud instead.
 
-In a clustering setup for a full Anbox Cloud deployment, one node is dedicated as the management node to host the Anbox Management Service (AMS). If you use the Streaming Stack, two additional nodes are dedicated to host the extra services required for streaming. All other nodes are used as worker nodes.
+In a clustering setup for a charmed Anbox Cloud deployment, one node is dedicated as the management node to host the Anbox Management Service (AMS). If you use the Streaming Stack, two additional nodes are dedicated to host the extra services required for streaming. All other nodes are used as worker nodes.
 
 Each worker node runs [LXD](https://ubuntu.com/lxd) in [clustering mode](https://documentation.ubuntu.com/lxd/en/latest/clustering/), and this LXD cluster is used to host the Android containers.
 

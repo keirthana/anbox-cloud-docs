@@ -16,7 +16,7 @@ To access the stream gateway,
 An internal HTTP API is exposed for managing client tokens. This API is only accessible via a Unix domain socket which resides at `/var/snap/anbox-stream-gateway/common/service/unix.socket` by default.
 For convenience, the stream gateway has a built-in client designed to communicate to that API.
 
-If you are running a full Anbox Cloud deployment, use the following command to create a token:
+If you are running the charmed Anbox Cloud deployment, use the following command to create a token:
 
     anbox-stream-gateway account create my-client
 
@@ -48,7 +48,7 @@ curl -X GET https://20.234.75.29:4000/1.0/sessions?api_token=AgEUYW5ib3...QSyzaA
 
 ### Deleting a token
 
-If you are running a full Anbox Cloud deployment, use the following command to delete a token:
+If you are running the charmed Anbox Cloud deployment, use the following command to delete a token:
 
     anbox-stream-gateway account delete my-client
 

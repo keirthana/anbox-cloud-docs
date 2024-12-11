@@ -5,7 +5,7 @@ When you are planning a production deployment, you should consider the aspects t
 
 ## Compute resource requirements 
 
-Depending on your workload and the type of deployment you choose, hardware or cloud resource requirements can differ. See {ref}`ref-requirements` to get an idea about the kind of resources that are required to run a full Anbox Cloud deployment with the streaming stack or a minimal core version of the deployment without the streaming stack. 
+Depending on your workload and the type of deployment you choose, hardware or cloud resource requirements can differ. See {ref}`ref-requirements` to get an idea about the kind of resources that are required to run a charmed Anbox Cloud deployment with the streaming stack or a minimal core version of the deployment without the streaming stack.
 
 You should pay special attention to the hardware requirements of applications that are used but not maintained by Anbox Cloud. 
 

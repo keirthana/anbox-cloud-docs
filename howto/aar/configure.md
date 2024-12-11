@@ -7,7 +7,7 @@ AAR and AMS must exchange certificates to set up a trust relation. The recommend
 
 ## Register an instance using Juju (recommended)
 
-If you are running a full Anbox Cloud deployment, use Juju relations to register an instance with the AAR.
+If you are running a charmed Anbox Cloud deployment, use Juju relations to register an instance with the AAR.
 
 To register an instance as a client, use the following command:
 

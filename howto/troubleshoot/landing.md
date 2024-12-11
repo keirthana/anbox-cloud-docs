@@ -22,7 +22,7 @@ If the deployment is older than 3 months, you must upgrade Anbox Cloud to the la
 If you still need help, use any of the following utilities to collect troubleshooting information and report an [issue](https://bugs.launchpad.net/anbox-cloud/+filebug).
 
 
-The following utilities could be applicable for the regular Anbox Cloud deployed with Juju or for the Anbox Cloud Appliance or both. The *Applies to* tag in each section indicates whether it is applicable to a particular variant. To know more about Anbox Cloud variants, see {ref}`sec-variants`.
+The following utilities could be applicable for the charmed Anbox Cloud deployed with Juju or for the Anbox Cloud Appliance or both. The *Applies to* tag in each section indicates whether it is applicable to a particular variant. To know more about Anbox Cloud variants, see {ref}`sec-variants`.
 
 ## Juju crashdump
 

@@ -15,12 +15,12 @@ You can access the AMS metrics from any machine that is on the same network as y
 
 Replace `<AMS_server>` with the IP address of your AMS server, which you can determine by running one of the following commands:
 
-* For a full Anbox Cloud deployment: `juju run --wait=5m --unit ams/0 -- unit-get private-address`
+* For the charmed Anbox Cloud deployment: `juju run --wait=5m --unit ams/0 -- unit-get private-address`
 * For the Anbox Cloud Appliance: `juju run --wait=5m -m appliance:anbox-cloud --unit ams/0 -- unit-get private-address`
 
 Replace `<AMS_port>` with the port for the API endpoint, which you can determine by running one of the following commands:
 
-* For a full Anbox Cloud deployment: `juju config ams prometheus_target_port`
+* For the charmed Anbox Cloud deployment: `juju config ams prometheus_target_port`
 * For the Anbox Cloud Appliance: `juju config -m appliance:anbox-cloud ams prometheus_target_port`
 
 You can then access the endpoint with `curl`, for example:
@@ -150,17 +150,17 @@ You can access the Anbox Stream Gateway metrics from any machine that is on the 
 
 Replace `<gateway_server>` with the IP address of your Anbox Stream Gateway server, which you can determine by running one of the following commands:
 
-* For a full Anbox Cloud deployment: `juju run --unit anbox-stream-gateway/0 --wait=5m -- unit-get private-address`
+* For the charmed Anbox Cloud deployment: `juju run --unit anbox-stream-gateway/0 --wait=5m -- unit-get private-address`
 * For the Anbox Cloud Appliance: `juju run --wait=5m -m appliance:anbox-cloud --unit anbox-stream-gateway/0 -- unit-get private-address`
 
 Replace `<gateway_port>` with the port for the API endpoint, which you can determine by running one of the following commands:
 
-* For a full Anbox Cloud deployment: `juju config anbox-stream-gateway prometheus_port`
+* For the charmed Anbox Cloud deployment: `juju config anbox-stream-gateway prometheus_port`
 * For the Anbox Cloud Appliance: `juju config -m appliance:anbox-cloud anbox-stream-gateway prometheus_port`
 
 The Anbox Stream Gateway endpoint is on HTTPS, and therefore you must authenticate to access it. You can retrieve the credentials from the `/var/snap/anbox-stream-gateway/common/service/config.yaml` file on the gateway server:
 
-* For a full Anbox Cloud deployment:
+* For the charmed Anbox Cloud deployment:
 
   ```
   juju ssh anbox-stream-gateway/0
@@ -241,7 +241,7 @@ You can access the LXD metrics through the following endpoint:
 
 Replace `<LXD_server>` with the IP address of your LXD server, which you can determine by running one of the following commands:
 
-* For a full Anbox Cloud deployment: `juju run --wait=5m --unit lxd/0 -- unit-get private-address`
+* For the charmed Cloud deployment: `juju run --wait=5m --unit lxd/0 -- unit-get private-address`
 * For the Anbox Cloud Appliance: `juju run --wait=5m -m appliance:anbox-cloud --unit lxd/0 -- unit-get private-address`
 
 The LXD metrics endpoint is on HTTPS, and therefore you must authenticate to access it. See [Create metrics certificate](https://documentation.ubuntu.com/lxd/en/latest/metrics/#add-a-metrics-certificate-to-lxd) in the LXD documentation for instructions on how to create a certificate.

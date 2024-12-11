@@ -4,7 +4,7 @@
 There are two types of logs that help you understand what is happening in your Anbox Cloud installation:
 
 - Logs for the applications that you are running, on a cluster or node level. See {ref}`howto-view-instance-logs` for more information.
-- Infrastructure logs for the deployment. These logs differ depending on whether you run a full Anbox Cloud deployment or the Anbox Cloud Appliance. See the following sections for more information.
+- Infrastructure logs for the deployment. These logs differ depending on whether you run the charmed Anbox Cloud deployment or the Anbox Cloud Appliance. See the following sections for more information.
 
 ## View logs for Anbox Cloud
 

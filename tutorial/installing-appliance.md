@@ -3,7 +3,7 @@
 
 The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machine. This offering is well suited for initial prototype and small scale deployments.
 
-There are differences between the Anbox Cloud Appliance and the full Anbox Cloud installation (see {ref}`sec-variants`). This tutorial focuses on installing the **Anbox Cloud Appliance** on a single dedicated machine.
+There are differences between the Anbox Cloud Appliance and the charmed Anbox Cloud installation (see {ref}`sec-variants`). This tutorial focuses on installing the **Anbox Cloud Appliance** on a single dedicated machine.
 
 ```{caution}
 Remember that installing the Anbox Cloud Appliance will take over the entire instance, install packages and override existing components to configure them as required. If you have existing components, for example, LXD containers, installing and initialising the appliance could override any existing configuration. Hence, it is important to try this tutorial on a machine dedicated for Anbox Cloud.
@@ -37,6 +37,10 @@ On your machine, run the following commands to ensure that all installed package
 
     sudo apt update
     sudo apt upgrade
+
+```{caution}
+Please reboot your system after the upgrade (if required) before proceeding with the other steps.
+```
 
 ### Attach your machine to Ubuntu Pro
 

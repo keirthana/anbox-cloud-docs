@@ -9,7 +9,7 @@ Learn how to install, configure and update Anbox Cloud.
 
 * {ref}`howto-install-anbox-cloud`
 * {ref}`howto-install-appliance`
-* {ref}`howto-update`
+* {ref}`howto-upgrade`
 
 ## Using Anbox Cloud
 
