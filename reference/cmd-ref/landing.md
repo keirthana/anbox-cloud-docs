@@ -1,3 +1,4 @@
+(ref-cmd-ref)=
 # Command reference
 
 This section provides command reference for the following command line utilities:

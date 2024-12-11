@@ -13,4 +13,4 @@ Run benchmarks <benchmarks>
 Set up TLS <tls-for-appliance>
 ```
 
-You can also refer to {ref}`ref-appliance-commands` and {ref}`ref-amc-commands` for commands that you can use with the CLI.
+You can also refer to {ref}`ref-cmd-ref` for commands that you can use with the CLI.

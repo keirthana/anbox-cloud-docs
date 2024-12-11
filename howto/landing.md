@@ -3,9 +3,9 @@
 
 The *How-to* guides in this section give directions on how to achieve your goals when configuring, managing or using Anbox Cloud. These *How-to*  guides are more useful when you are familiar with Anbox Cloud and seek to achieve specific tasks. They help you complete your tasks but may require you to understand and adapt the steps to fit your specific requirements.
 
-## Installing and configuring Anbox Cloud
+## Installation and deployment
 
-Learn how to install, configure and update Anbox Cloud.
+Learn how to install, configure and upgrade Anbox Cloud.
 
 * {ref}`howto-install-anbox-cloud`
 * {ref}`howto-install-appliance`
@@ -15,12 +15,13 @@ Learn how to install, configure and update Anbox Cloud.
 
 Learn about applications, instances and more in Anbox Cloud and how to use them.
 
-* {ref}`howto-port-android-apps`
 * {ref}`howto-manage-applications`
 * {ref}`howto-instance`
 * {ref}`howto-addons`
 * {ref}`howto-streaming`
+* {ref}`howto-port-android-apps`
 * {ref}`howto-use-web-dashboard`
+* {ref}`howto-Android`
 
 ## Managing Anbox Cloud
 
