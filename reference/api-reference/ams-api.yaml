@@ -597,6 +597,11 @@ paths:
           name: id
           in: path
           required: true
+        - description: List of applications to delete
+          name: details
+          in: body
+          schema:
+            $ref: '#/definitions/ApplicationDelete'
       responses:
         '202':
           description: Success response of the service
