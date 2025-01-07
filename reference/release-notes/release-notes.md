@@ -25,7 +25,6 @@ The following target dates for upcoming releases are not final and could vary de
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| December 11 2024 | Anbox Cloud 1.24.1 | * Android security updates for December 2024<br/> * Bug fixes |
 | January 15 2025 | Anbox Cloud 1.24.2 | * Android security updates for January 2025<br/> * Bug fixes |
 | February 12 2025 | Anbox Cloud 1.25.0 | * Integration with the [Canonical Observability Stack](https://charmhub.io/topics/canonical-observability-stack)<br/> * Backup and restore support for the Anbox Cloud dashboard charm<br/> * Support for Ubuntu 24.04 (Noble Numbat) for all charms<br/> * (Alpha release) Terraform plan replacing the Anbox Cloud bundles<br/> * Improvements to the Anbox Management Service (AMS)<br/> * Reworked charms<br/> * Upgrade to LXD 5.21<br/> * Android security updates for February 2025<br/> * Bug fixes |
 
