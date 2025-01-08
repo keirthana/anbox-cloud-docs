@@ -139,7 +139,8 @@ redirects = {
 linkcheck_ignore = [
     'http://127.0.0.1:8000',
     'https://support.canonical.com/',
-    'https://assets.ubuntu.com/manager'
+    'https://assets.ubuntu.com/manager',
+    'https://images.anbox-cloud.io/stable/'
     ]
 
 # This setting will check the links but not the anchors
