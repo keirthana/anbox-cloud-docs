@@ -21,11 +21,13 @@ N/A
 |----------|--------------|---------|
 | `ams`    | `1.24/stable` | `1.24.2-c816e2633` |
 | `aar`    | `1.24/stable` | `1.24.2-c816e2633` |
+| `amc`    | `1.24/stable` | `1.24.2-c816e2633` |
+| `ams-node-controller` (Deprecated) | `1.24/stable` | `1.24.2-c816e2633` |
 | `anbox-cloud-dashboard` | `1.24/stable` | `1.24.2-c816e2633` |
 | `anbox-stream-agent` | `1.24/stable` | `1.24.2-c816e2633` |
 | `anbox-stream-gateway` | `1.24/stable` | `1.24.2-c816e2633` |
+| `anbox-connect` | `1.24/stable` | `1.24.2-c816e2633` |
 | `anbox-cloud-appliance` | `1.24/stable` | `1.24.2-c816e2633` |
-| `nats` | `latest/stable` | `1.24.2-c816e2633` |
 
 ### Anbox images
 
@@ -79,7 +81,6 @@ The following Anbox images are available in two variants: one based on a contain
 | `anbox-stream-agent` | `1.24/stable` | `1.24.1-fcc9cd96b`  |
 | `anbox-stream-gateway` | `1.24/stable` |  `1.24.1-fcc9cd96b` |
 | `anbox-cloud-appliance` | `1.24/stable` | `1.24.1-fcc9cd96b`  |
-| `nats` | `latest/stable` | `1.24.1-fcc9cd96b` |
 
 ### Anbox images
 
@@ -153,7 +154,6 @@ There are no VM images for ARM64.
 | `anbox-stream-agent` | `1.24/stable` | `1.24.0-599f42a84`  |
 | `anbox-stream-gateway` | `1.24/stable` |  `1.24.0-599f42a84` |
 | `anbox-cloud-appliance` | `1.24/stable` | `1.24.0-599f42a84`  |
-| `nats` | `latest/stable` | `1.24.0-599f42a84` |
 
 ### Anbox images
 
