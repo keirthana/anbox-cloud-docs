@@ -140,7 +140,9 @@ linkcheck_ignore = [
     'http://127.0.0.1:8000',
     'https://support.canonical.com/',
     'https://assets.ubuntu.com/manager',
-    'https://images.anbox-cloud.io/stable/'
+    'https://images.anbox-cloud.io/stable/',
+    'https://10.2.9.2/',
+    'http://Add-SECURITY.md'
     ]
 
 # This setting will check the links but not the anchors
