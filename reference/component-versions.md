@@ -21,12 +21,12 @@ N/A
 |----------|--------------|---------|
 | `ams`    | `1.24/stable` | `1.24.2-c816e2633` |
 | `aar`    | `1.24/stable` | `1.24.2-c816e2633` |
-| `amc`    | `1.24/stable` | `1.24.2-c816e2633` |
+| `amc`    | `latest/stable` | `1.24.2-c816e2633` |
 | `ams-node-controller` (Deprecated) | `1.24/stable` | `1.24.2-c816e2633` |
 | `anbox-cloud-dashboard` | `1.24/stable` | `1.24.2-c816e2633` |
 | `anbox-stream-agent` | `1.24/stable` | `1.24.2-c816e2633` |
 | `anbox-stream-gateway` | `1.24/stable` | `1.24.2-c816e2633` |
-| `anbox-connect` | `1.24/stable` | `1.24.2-c816e2633` |
+| `anbox-connect` | `latest/stable` | `1.24.2-c816e2633` |
 | `anbox-cloud-appliance` | `1.24/stable` | `1.24.2-c816e2633` |
 
 ### Anbox images
