@@ -139,9 +139,19 @@ When you create the instance from an application, the attributes you define for 
 
 When you create the instance from an image, you can define the properties of the instance during its creation.
 
+There may be more advanced scenarios while creating an instance that cannot be performed using the dashboard and may require using the `amc` CLI.
+
 Once you create an instance by providing the necessary attributes, you can view the instance and its status on the *Instances* page.
 
-There may be more advanced scenarios while creating an instance that cannot be performed using the dashboard and may require using the `amc` CLI.
+You can view details about a particular instance when you click on the instance name in the *Instances* list page. The instance details page offers three types of information: *Overview*, *Terminal*, and *Logs*.
+
+The *Overview* tab provides detailed information about the instance, including sections for the instance details, associated image or application, streaming configurations, network settings, and tags.
+
+The *Terminal* tab features a terminal interface for the Anbox instance, helping you to monitor system processes in real-time, check memory usage, view android and system logs, and much more.
+
+The *Logs* tab helps you debug issues with the instances as it provides  downloadable logs for instances in an error state.
+
+The instance details page also contains all the available actions including streaming, setting up sharing, connecting ADB, starting or stopping the instance, and deleting the instance.
 
 ```
 

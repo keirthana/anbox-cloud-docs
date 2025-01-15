@@ -123,7 +123,13 @@ resources:
 
 ```{group-tab} Dashboard
 
-Click *Create application* on the applications page, enter the required and any optional details that you want to provide and confirm with *Create application* again. The *Create application* form also provides an option to customise your application manifest.
+Click *Create application* on the applications page, enter the required and any optional details that you want to provide and confirm with *Create application* again.
+
+An application can be created either in a VM or a container. Selecting one of these options will update the image field to only show images of the chosen type. The default image for the selected type is automatically populated in the image field.
+
+The advanced fields allows you to define a {ref}`version <ref-application-manifest>`, specify a {ref}`boot package <ref-application-manifest>`, add multiple {ref}`tags <ref-application-manifest>`, and disable {ref}`sec-application-manifest-watchdog`.
+
+The *Create application* form also provides an option to customise your application manifest.
 
 There may be more advanced scenarios while creating an application that cannot be performed using the dashboard and may require using the `amc` CLI.
 ```

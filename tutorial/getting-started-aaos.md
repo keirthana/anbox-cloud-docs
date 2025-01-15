@@ -43,7 +43,7 @@ Confirm with *Add application* and wait till the *Applications* list screen show
 
 Go to the *Instances* screen and wait until you see an instance for the created application with a *running* status.
 
-Click *Stream* ( ![stream icon](/images/join-session-icon.png) ) to stream the application.
+Click *Stream* ( ![stream icon](/images/icons/stream-icon.png) ) to stream the application.
 
 If you want to stream with specific capabilities and display options, create your custom instance from the *Instances* screen and specify the desired *Capabilities* and *Virtual display* options.
 
