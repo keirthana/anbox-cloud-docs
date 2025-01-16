@@ -63,6 +63,22 @@ To share your stream with users without an account, click *Set up sharing* ( ![s
 
 Set your stream title and expiration details and generate a link that can be shared with others.
 
+### Developer Tools
+
+Toggle the *Developer Tools* panel on the *Stream* page to interact with your Android stream and monitor its performance. It helps you to track resource usage, view logs, and perform various actions while interacting with your Android stream in real-time to enhance your workflow. This panel is resizable, allowing you to customise your layout as needed, and can also be undocked into a separate window.
+
+The *Terminal* tab allows you to interact with the *Ubuntu* terminal and the *Android* terminal.
+
+The *Ubuntu* terminal is a bash shell on the Ubuntu instance hosting Anbox Cloud, where you can run commands such as `top` to monitor system processes in real-time or `free -h` to check memory usage. Other starter commands are listed within the terminal for your reference.
+
+The *Android* terminal provides shell access to the Android operating system, allowing you to perform actions equivalent to having ADB access. Commands such as `service list` to view running Android services or `pm list packages` to list packages can be executed here. Starter commands are also included for easy reference within the terminal.
+
+The *Logs* tabs allows you to view logs as you interact with your Android stream in real-time. It supports two types of logs: *logcat*, which displays Android-specific logs, and *syslog*, which displays system-wide logs.
+
+In the *Logs* tabs, you can toggle auto-scroll, pause and resume log messages, clear the logs, adjust the verbosity of the logs, search using free text search or regular expressions, and export the logs.
+
+For a detailed demonstration of the *Developer Tools* and their full capabilities, refer to: [Developer Tools](https://youtu.be/M1N8pfIUjOI?t=257&si=DJsoziD0NRTrLPff).
+
 ```
 ````
 
