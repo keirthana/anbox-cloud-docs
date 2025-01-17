@@ -62,7 +62,7 @@ Monitor Anbox Cloud <monitor/landing>
 Port Android apps <port/landing>
 Stream <stream/landing>
 Troubleshoot Anbox Cloud <troubleshoot/landing>
-Update Anbox Cloud <update/landing>
+Upgrade Anbox Cloud <upgrade/landing>
 Use web dashboard <dashboard/landing>
 Work with Anbox runtime <anbox-runtime/landing>
 Work with Android <android/landing>
