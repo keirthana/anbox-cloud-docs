@@ -16,7 +16,6 @@ amd
 AMI
 ams
 anbox
-anonymization
 ANR
 anv
 AOSP
@@ -69,14 +68,10 @@ Coturn
 CPUs
 crashdump
 Crashpad
-Cryptographic
 cryptographic
 CSV
 CTS
 CUDA
-customisable
-customisation
-customisations
 CustomLocale
 CVE
 CVEs
@@ -103,6 +98,7 @@ EFI
 EFS
 EGL
 EINVAL
+emugl
 EmuGL
 EOL
 ERD
@@ -227,17 +223,14 @@ preseed
 preselected
 PyJWT
 PyPI
-Quickstart
 quickstart
 radv
-Rasterization
 rasterization
 RDNA
 rc
 README
 rebased
 RenderDoc
-Renderdoc
 renderdoc
 renderer
 RenderThread
@@ -367,3 +360,4 @@ presigned
 upstream
 upstreams
 YouTube
+Authorise

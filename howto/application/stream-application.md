@@ -12,7 +12,7 @@ If you are using the `amc` CLI, you can use the `--enable-streaming` option at t
 
 When the `--enable-streaming` option is specified, the Anbox Management Service (AMS) automatically creates a streaming session for the instance. You can find the id of the session as a tag on the instance in the format `session=<id>`.
 
-To further customise the streaming configuration, use the following arguments:
+To further customize the streaming configuration, use the following arguments:
 * `--display-size`
 * `--display-density`
 * `--fps`
@@ -65,7 +65,7 @@ Set your stream title and expiration details and generate a link that can be sha
 
 ### Developer Tools
 
-Toggle the *Developer Tools* panel on the *Stream* page to interact with your Android stream and monitor its performance. It helps you to track resource usage, view logs, and perform various actions while interacting with your Android stream in real-time to enhance your workflow. This panel is resizable, allowing you to customise your layout as needed, and can also be undocked into a separate window.
+Toggle the *Developer Tools* panel on the *Stream* page to interact with your Android stream and monitor its performance. It helps you to track resource usage, view logs, and perform various actions while interacting with your Android stream in real-time to enhance your workflow. This panel is resizable, allowing you to customize your layout as needed, and can also be undocked into a separate window.
 
 The *Terminal* tab allows you to interact with the *Ubuntu* terminal and the *Android* terminal.
 

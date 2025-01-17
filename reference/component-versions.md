@@ -102,7 +102,7 @@ The following Anbox images are available in two variants: one based on a contain
 
 ## 1.23.3
 
-The following Anbox images are the only artefacts released for this patch.
+The following Anbox images are the only artifacts released for this patch.
 
 ```{note}
 There are no VM images for ARM64.
