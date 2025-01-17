@@ -90,7 +90,7 @@ Once set, this feature flag will be considered by all newly launched instances.
 
 *since 1.21.0*
 
-GL Async swap support is disabled by default for explicit signals of buffer swaps completion. To enable the GL async swap feature, add the feature flag `emugl.enable_async_swap_support` upon application creation. Once the async swap support is enabled, Anbox Cloud will use the host GL driver fence commands and file descriptors to synchronise the finished frames between the host and guest instead fully relying on the host GPU driver to do so. The environment variable `ANBOX_ASYNC_SWAP_ENABLED_PACKAGES` that accepts a comma-separated list of package names can be used to allow certain packages to use the GL async swap feature.
+GL Async swap support is disabled by default for explicit signals of buffer swaps completion. To enable the GL async swap feature, add the feature flag `emugl.enable_async_swap_support` upon application creation. Once the async swap support is enabled, Anbox Cloud will use the host GL driver fence commands and file descriptors to synchronize the finished frames between the host and guest instead fully relying on the host GPU driver to do so. The environment variable `ANBOX_ASYNC_SWAP_ENABLED_PACKAGES` that accepts a comma-separated list of package names can be used to allow certain packages to use the GL async swap feature.
 
 Once set, this feature flag will be considered by all newly launched instances.
 
@@ -99,7 +99,7 @@ Once set, this feature flag will be considered by all newly launched instances.
 *since 1.20.2*
 
 ```{caution}
-Enabling this will print IP addresses of WebRTC clients connecting to the Anbox Cloud instances in the logs without anonymization in clear text.
+Enabling this will print IP addresses of WebRTC clients connecting to the Anbox Cloud instances in the logs without masking in clear text.
 ```
 
 For debugging purposes, Anbox Cloud can log ICE candidates from the server and client inside the system log of an instance. This is disabled by default and needs to be explicitly turned on with the feature flag `webrtc.enable_ice_logging`.

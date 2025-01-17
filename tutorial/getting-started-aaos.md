@@ -14,7 +14,7 @@ You can also choose to watch a [video of this tutorial on YouTube](https://www.y
 
 We will use the appliance dashboard to perform the tasks for this tutorial. So if you haven’t installed the Anbox Cloud Appliance yet, you must do that first.
 
-Follow the installation instructions available at {ref}`tut-installing-appliance` to install and initialise the appliance. Proceed with the tutorial when you can access the appliance dashboard.
+Follow the installation instructions available at {ref}`tut-installing-appliance` to install and initialize the appliance. Proceed with the tutorial when you can access the appliance dashboard.
 
 ## Create an AAOS-based application
 
