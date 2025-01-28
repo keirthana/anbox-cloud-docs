@@ -82,7 +82,7 @@ For security reasons, always keep your systems up-to-date at all times. To ensur
 
 ## Data security
 
-We avoid storing user data as much as possible and don't provide any data encryption. The following table helps you understand how data related to you or provided by you is used within Anbox Cloud by various components.
+The following table helps you understand how data related to you or provided by you is used within Anbox Cloud by various components so that you can encrypt and backup information that needs to be secured.
 
 | Component | Databases | Data stored|
 |-----------|-----------|------------|
@@ -91,7 +91,30 @@ We avoid storing user data as much as possible and don't provide any data encryp
 | Anbox Stream Gateway | Dqlite | Session and management metadata, service account IDs that identify the web client |
 | Anbox Cloud dashboard | SQLite | User email that are used for authentication |
 
-Services used by Anbox Cloud have configuration files that contain secrets. For the Anbox Stream Gateway, the secrets are stored in Juju relation data.
+Services used by Anbox Cloud have configuration files that contain secrets. A charmed Anbox Cloud deployment contains the following configuration files that contain secrets:
+
+`/var/snap/ams/common/server/settings.yaml`
+`/var/snap/aar/common/conf/main.yaml`
+`/var/snap/anbox-cloud-dashboard/common/service/config.yaml`
+`/var/snap/anbox-stream-agent/common/agent/config.yaml`
+`/var/snap/anbox-stream-gateway/common/service/config.yaml`
+`/etc/turnserver.conf`
+`/etc/coturn/auth_secret`
+`/var/snap/nats/common/server/nats.cfg`
+
+An Anbox Cloud Appliance deployment contains the following configuration files that contain secrets:
+
+`/var/snap/anbox-cloud-appliance/common/daemon/config.yaml`
+`/var/snap/anbox-cloud-appliance/common/telegraf/main.conf`
+`/var/snap/anbox-cloud-appliance/common/agent/config.yaml`
+`/var/snap/anbox-cloud-appliance/common/coturn/turnserver.conf`
+`/var/snap/anbox-cloud-appliance/common/ams/server/settings.yaml`
+`/var/snap/anbox-cloud-appliance/common/dashboard/config.yaml`
+`/var/snap/anbox-cloud-appliance/common/nats/nats.cfg`
+`/var/snap/anbox-cloud-appliance/common/gateway/config.yaml`
+`/var/snap/anbox-cloud-appliance/common/config.yaml`
+
+For the Anbox Stream Gateway, the secrets are stored in Juju relation data.
 
 The data that you provide to your applications in Android is stored within the instance, for the duration of the instance.
 
