@@ -82,14 +82,14 @@ For security reasons, always keep your systems up-to-date at all times. To ensur
 
 ## Data security
 
-The following table helps you understand how data related to you or provided by you is used within Anbox Cloud by various components so that you can encrypt and backup information that needs to be secured.
+The following table helps you understand how data related to you or provided by you is used within Anbox Cloud by various components.
 
 | Component | Databases | Data stored|
 |-----------|-----------|------------|
 | LXD instances | Dqlite and SQLite | Information about instances, their management, authentication and certificates |
 | AMS | etcd | Information about instance management and configuration, {ref}`custom user data <howto-pass-custom-data-application>` when explicitly provided |
 | Anbox Stream Gateway | Dqlite | Session and management metadata, service account IDs that identify the web client |
-| Anbox Cloud dashboard | SQLite | User email that are used for authentication |
+| Anbox Cloud dashboard | SQLite | User emails that are used for authentication |
 
 Services used by Anbox Cloud have configuration files that contain secrets. A charmed Anbox Cloud deployment contains the following configuration files that contain secrets:
 
