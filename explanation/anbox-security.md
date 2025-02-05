@@ -96,24 +96,39 @@ Services used by Anbox Cloud have configuration files that contain secrets. The 
 A charmed Anbox Cloud deployment contains the following configuration files that contain secrets:
 
 `/var/snap/ams/common/server/settings.yaml`
+
 `/var/snap/aar/common/conf/main.yaml`
+
 `/var/snap/anbox-cloud-dashboard/common/service/config.yaml`
+
 `/var/snap/anbox-stream-agent/common/agent/config.yaml`
+
 `/var/snap/anbox-stream-gateway/common/service/config.yaml`
+
 `/etc/turnserver.conf`
+
 `/etc/coturn/auth_secret`
+
 `/var/snap/nats/common/server/nats.cfg`
 
 An Anbox Cloud Appliance deployment contains the following configuration files that contain secrets:
 
 `/var/snap/anbox-cloud-appliance/common/daemon/config.yaml`
+
 `/var/snap/anbox-cloud-appliance/common/telegraf/main.conf`
+
 `/var/snap/anbox-cloud-appliance/common/agent/config.yaml`
+
 `/var/snap/anbox-cloud-appliance/common/coturn/turnserver.conf`
+
 `/var/snap/anbox-cloud-appliance/common/ams/server/settings.yaml`
+
 `/var/snap/anbox-cloud-appliance/common/dashboard/config.yaml`
+
 `/var/snap/anbox-cloud-appliance/common/nats/nats.cfg`
+
 `/var/snap/anbox-cloud-appliance/common/gateway/config.yaml`
+
 `/var/snap/anbox-cloud-appliance/common/config.yaml`
 
 For the Anbox Stream Gateway, the secrets are stored in Juju relation data.
