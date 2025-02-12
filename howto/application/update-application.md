@@ -3,6 +3,9 @@
 
 Updating an existing application works similar to creating a new one. Each time an existing application is updated, it is extended with a new version. All versions that an application currently has are individually usable, but only one can be launched at a time.
 
+`````{tabs}
+````{group-tab} CLI
+
 When you want to update an existing application with a new manifest or APK, provide both in the same format as when the application was created. The `amc application update` command accepts both a directory and an absolute file path.
 
 From a path:
@@ -81,6 +84,26 @@ resources:
   memory: 4GB
   disk-size: 8GB
 ```
+
+````
+
+```{group-tab} Dashboard
+
+You can edit an application from the *Applications* list page.
+
+In the guided form, you can customize most of the fields that are available during {ref}`application creation <howto-create-application>`. Some of the fields, like the application name, or the container/VM option, cannot be modified and are disabled. When a field is disabled, hovering over it will display a tooltip explaining the reason.
+
+Similar to the application creation process, you can unlock advanced customization capabilities by toggling the *Customize manifest.yaml* switch at the bottom of the page. Note that customizing the manifest or updating one of the following fields will create a new version of the application:
+* APK
+* {ref}`manifest version name <ref-application-manifest>`
+* {ref}`boot activity <ref-application-manifest>`
+* {ref}`features <ref-feature-flags>` 
+* {ref}`sec-application-manifest-watchdog`
+
+When you click *Update*, you will be redirected either to the *Overview* tab of the application detail page - if the fields changed did not trigger a new version creation - or to the *Versions* tab of that page, when a new version of the application was created.
+
+```
+`````
 
 Each version gets a monotonically increasing number assigned (here we have version `0` and version `1`).
 In addition, each version has a status which indicates the status of the bootstrap process AMS is performing for it. Once an application version is marked as `active`, it is ready to be used.

@@ -344,6 +344,7 @@ WGS
 workspaces
 WX
 xz
+yaml
 YAML
 ZFS
 zpool
