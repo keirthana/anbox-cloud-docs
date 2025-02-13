@@ -73,7 +73,7 @@ See {ref}`ref-provided-images` for a list of images that are available in Anbox 
 
 *since 1.22.0*
 
-If you want to stream the visual output from an instance, specify it at the time of instance creation. Otherwise, the instance cannot be streamed. In previous versions of Anbox Cloud, it was only possible to create an instance that has streaming enabled via the [Stream Gateway API](https://canonical.github.io/anbox-cloud.github.com/latest/anbox-stream-gateway/). The same can now be achieved through the [AMS API](https://canonical.github.io/anbox-cloud.github.com/latest/ams/) or the `amc` CLI.
+If you want to stream the visual output from an instance, specify it at the time of instance creation. Otherwise, the instance cannot be streamed. In previous versions of Anbox Cloud, it was only possible to create an instance that has streaming enabled via the [Stream Gateway API](https://documentation.ubuntu.com/anbox-cloud/reference/api-reference/gateway-api/). The same can now be achieved through the [AMS API](https://documentation.ubuntu.com/anbox-cloud/reference/api-reference/ams-api/) or the `amc` CLI.
 
 To enable streaming for a new instance, simply run:
 
