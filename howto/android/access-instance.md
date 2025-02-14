@@ -1,5 +1,5 @@
 (howto-access-instance)=
-# How to access an instance
+# How to access an Android instance
 
 For certain scenarios, accessing an individual instance for debugging or development might be necessary. You can do this by:
 
