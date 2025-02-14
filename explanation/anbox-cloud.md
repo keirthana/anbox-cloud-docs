@@ -155,7 +155,7 @@ For detailed information about the charm, check the `bundle.yaml` file in the bu
 You can download the bundle with `juju download <charm_name>`, thus `juju download anbox-cloud-core` or `juju download anbox-cloud`. Unzip the bundle to access the `bundle.yaml` file.
 ```
 
-If you don't need to stream the visual output of the Android containers, you can use the `anbox-cloud-core` bundle. Otherwise, you should use the `anbox-cloud` bundle. However, even without the streaming stack, there are still ways to get visual access for inspection purposes. See {ref}`howto-access-instance` for more information.
+If you don't need to stream the visual output of the Android containers, you can use the `anbox-cloud-core` bundle. Otherwise, you should use the `anbox-cloud` bundle. However, even without the streaming stack, there are still ways to get visual access for debugging. See {ref}`howto-access-android-instance` for more information.
 
 ## Related topics
 

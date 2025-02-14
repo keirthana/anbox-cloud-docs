@@ -29,7 +29,7 @@ The device will show up in the output of
 
     adb devices
 
-See {ref}`howto-access-instance` for more information.
+See {ref}`howto-access-android-instance` for more information.
 
 Renderdoc can only inject itself into applications which have debug mode turn on. See [How do I use RenderDoc on Android?](https://renderdoc.org/docs/how/how_android_capture.html#how-do-i-use-renderdoc-on-android) for more information.
 

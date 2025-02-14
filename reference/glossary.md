@@ -67,7 +67,7 @@ Anbox Platform SDK
 Anbox shell
     A command-line tool (`anbox-shell`) that provides an ADB shell with root permissions granted, which you can use to access the Android system in the instance.
 
-    See {ref}`howto-access-instance` for more information.
+    See {ref}`howto-access-android-instance` for more information.
 
 Anbox Streaming SDK
     An SDK that allows the development of custom streaming clients, using JavaScript.
