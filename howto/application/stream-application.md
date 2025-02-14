@@ -74,7 +74,7 @@ You can share an authenticated session with another user by running:
 
 Running this command generates a presigned URL for the session, that is valid for a specified duration.
 
-You can later update the expiration date and description of a shared session. See {ref}`howto-access-instance` for detailed steps.
+You can later update the expiration date and description of a shared session. See {ref}`howto-access-android-instance` for detailed steps.
 
 ```
 

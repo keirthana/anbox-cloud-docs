@@ -1,12 +1,12 @@
-(howto-access-instance)=
+(howto-access-android-instance)=
 # How to access an Android instance
 
-For certain scenarios, accessing an individual instance for debugging or development might be necessary. You can do this by:
+For certain scenarios, accessing an individual instance for debugging or development might be necessary. You can do this through either of these options:
 
-- Running `anbox-connect` for secure Android Debug Bridge (ADB) connections.
-- Exposing the ADB service upon Anbox instance creation.
+- Using the `anbox-connect` command. This establishes secure Android Debug Bridge (ADB) connections.
+- Exposing the ADB service upon Anbox instance creation. This allows remote connections to instances over a network.
 
-## Access the Android instance using anbox-connect
+## Access the Android instance using `anbox-connect`
 
 Since the 1.23.0 release, Anbox Cloud allows users to create a secure ADB connection through the `anbox-connect` command without exposing the [ADB service](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/instance/expose-services/). This method is highly recommended for securely connecting to remote Android instances, offering a safe and efficient means of managing ADB connections.
 
@@ -109,7 +109,7 @@ To revoke a particular share, run:
 The AMS services allow for remote connections to instances over a network by exposing the [ADB service](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/instance/expose-services/).
 
 ```{caution}
-Exposing the ADB service over the public internet brings security risks from having plain text data intercepted by third parties. It's always preferable to run anbox-connect to setup a secure ADB connection for the remote access to Android instance.
+Exposing the ADB service over the public internet brings security risks from having plain text data intercepted by third parties.
 ```
 
 ### Launch instance
