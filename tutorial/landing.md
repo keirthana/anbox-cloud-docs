@@ -1,27 +1,21 @@
 (tutorials)=
 # Tutorials
 
-This section of our documentation helps you learn the installation process of the Anbox Cloud Appliance and go through the first steps of using Anbox Cloud. Our tutorials aim to make as few assumptions as possible and provide a learning experience as you begin using Anbox Cloud.
+If you are beginner, we recommend these tutorials:
 
-The following tutorials help you install the Anbox cloud Appliance and start using it either through the web dashboard or through the command line interface:
-1. {ref}`tut-installing-appliance`
-1. {ref}`tut-getting-started-dashboard`
-1. {ref}`tut-getting-started-cli`
+1. Install {term}`Anbox Cloud Appliance`
+2. Create and test a virtual Android device
 
-The following tutorials are optional and help you further explore features of Anbox Cloud:
-1. {ref}`tut-aaos`
-1. {ref}`tut-create-addon`
-1. {ref}`tut-set-up-stream-client`
+If you want to learn beyond basic installation and usage, we recommend our {ref}`how-to-guides` and the following tutorials:
 
-Also check out the {ref}`how-to-guides` for instructions on how to achieve specific goals when using Anbox Cloud, as well as the {ref}`reference` and {ref}`explanation` sections for other helpful information.
+1. Create an addon
+2. Set up a stream client
 
 ```{toctree}
 :hidden:
 
-Install Anbox Cloud Appliance <installing-appliance>
-Get started (AAOS) <getting-started-aaos>
-Get started (dashboard) <getting-started-dashboard>
-Get started (CLI) <getting-started>
+installing-appliance
+create-test-virtual-device
 creating-addon
 stream-client
 ```
