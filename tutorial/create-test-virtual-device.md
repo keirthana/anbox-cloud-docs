@@ -24,7 +24,7 @@ In the home directory, let's first create a directory for the application conten
 
 This directory is the location where the application manifest file and any relevant APK must reside.
 
-For this tutorial, we are going to create a device with a plain Android operating system and so we don't need an APK. Let's create a simple `manifest.yaml` inside the `my-app` directory with the following contents:
+For this tutorial, we are going to create a device with a basic application without an APK that will start directly with the Android system launcher. Let's create the `manifest.yaml` inside the `my-app` directory with the following contents:
 
 ```yaml
 name: my-first-app
