@@ -55,6 +55,8 @@ After you authorize the connection, copy the `anbox-connect <connection_url>` pr
 ```
 ````
 
+Watch this [video](https://youtu.be/qsFF0eqj_JE) for a detailed demonstration of how to use an ADB connection to debug an Android application with Android studio.
+
 Each presigned URL can only be used to establish a single ADB connection. If multiple users attempt to use the same presigned URL, any existing ADB connection will be interrupted, to allow the new request to succeed.
 
 ### Connect to the instance
