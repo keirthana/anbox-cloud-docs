@@ -66,7 +66,7 @@ Create an SSH key in your addon directory and move the private key to a location
         ssh-keygen -f ssh-addon-key -t ecdsa -b 521
         mv ssh-addon-key ~/
 
-Alternatively, you can use an existing key and move the public key into the addon directory.
+Alternatively, you can use an existing key and move the public key into the addon directory and rename it as `ssh-addon-key.pub`.
 
 ## Create the addon
 
@@ -113,7 +113,7 @@ The `amc wait` command returns when your application is ready to launch. You can
         amc launch my-application --service +ssh
 
 ```{note}
-The SSH port 22 is closed by default. In the above command, we open it by exposing its service by using `--service`. See {ref}`howto-expose-services` for more information.
+The SSH port 22 is closed by default. In the above command, we open it by exposing its service by using `--service`. You can find out the exposed port from the _ENDPOINTS_ column when you run `amc ls`. See {ref}`howto-expose-services` for more information.
 ```
 
 You can now access your container via SSH:

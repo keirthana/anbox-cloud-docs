@@ -9,6 +9,8 @@ Before beginning the tutorial, it is important to understand that:
 
 - Remember that installing the appliance will take over the entire instance, install packages and override existing components. For example, if you have existing LXD containers, installing and initializing the appliance could override any existing configuration.
 
+> A [video version](https://youtu.be/D9iEd88IYBs) of this tutorial is also available.
+
 ## Prerequisites
 
 To proceed with the tutorial, we need:
@@ -28,7 +30,9 @@ The *Ubuntu Pro (Infra-only)* token does not work and will result in a failed de
 
 2. Create a virtual machine:
 
-        multipass launch anbox
+        multipass launch --name=anbox --cpus 8 --disk 50G --memory 8G
+    
+Make sure to allocate sufficient disk space, memory and CPUs as shown in the example. Otherwise, the VM will run out of space while creating the application. See {ref}`ref-requirements` for information on minimum resource requirements.
 
 3. Shell into the virtual machine:
 

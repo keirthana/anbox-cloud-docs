@@ -12,7 +12,7 @@ This tutorial has two paths - you can use the CLI or the dashboard, depending on
 `````{tabs}
 ````{group-tab} CLI
 
-We will use the {term}`Anbox Management Client (AMC)` in this tutorial to work with applications and instances. AMC communicates with the {term}`Anbox Management Service (AMS)`, the management module of Anbox Cloud.
+We will use the {term}`Anbox Management Client (AMC)` in this tutorial to work with applications and instances. AMC communicates with the {term}`Anbox Management Service (AMS)`, the instance management module of Anbox Cloud.
 
 ## Create the device
 
@@ -22,9 +22,11 @@ In the home directory, let's first create a directory for the application conten
 
       mkdir my-app
 
-This directory is the location where the application manifest file and any relevant APK must reside.
+This directory is the location where the application manifest file and any relevant application artifacts must reside.
 
-For this tutorial, we are going to create a device with a basic application without an APK that will start directly with the Android system launcher. Let's create the `manifest.yaml` inside the `my-app` directory with the following contents:
+For this tutorial, we are going to create a device with a basic application without an APK that will start directly with the Android system launcher.
+
+Let's first create the `manifest.yaml` inside the `my-app` directory with the following contents:
 
 ```yaml
 name: my-first-app
@@ -33,18 +35,44 @@ resources:
    memory: 4GB
    disk-size: 3GB
 ```
+This example will use the default image as we haven't mentioned a specific image.
 
 Now, let's create the application:
 
       amc application create my-app/
 
-`my-app/` is the application directory where the manifest and any other application related artifacts are available.
+This command will return the application ID.
+
+```{terminal}
+      :input: amc application create my-app/
+      :user: ubuntu
+      :host: vm
+      :dir: ~
+
+cv3a7ofg2e7td2g9smt0
+```
+
+`my-app/` is the application directory where the manifest and any other application related artifacts are available. The command should return the application ID.
 
 The application is created and bootstrapped. Now, to see the application details and its status, run:
 
       amc application list
 
-Watch the output of this command till the application becomes *ready*.
+The output of this command should look similar to the following. Watch this output till the application becomes *ready*. The time taken for the application to become ready could depend on your network speed but with a good network connection, it shouldn't take more than 10 minutes.
+
+```{terminal}
+      :input: amc application list
+      :user: ubuntu
+      :host: vm
+      :dir: ~
+      :scroll:
+
++----------------------+--------------+---------------+--------+------+-----------+--------------+---------------------+-------+
+|          ID          |     NAME     | INSTANCE TYPE | ADDONS | TAGS | PUBLISHED |    STATUS    |    LAST UPDATED     |  VM   |
++----------------------+--------------+---------------+--------+------+-----------+--------------+---------------------+-------+
+| cv3a7ofg2e7td2g9smt0 | my-first-app | a2.3          |        |      | false     | initializing | 2025-03-04 12:25:29 | false |
++----------------------+--------------+---------------+--------+------+-----------+--------------+---------------------+-------+
+```
 
 ## Test the virtual device
 
@@ -52,7 +80,16 @@ Watch the output of this command till the application becomes *ready*.
 
 When the application is *ready*, let's launch an instance:
 
-      amc launch my-first-app --vm --enable-streaming
+      amc launch my-first-app --enable-streaming
+
+```{terminal}
+      :input: amc launch my-first-app --enable-streaming
+      :user: ubuntu
+      :host: vm
+      :dir: ~
+
+cv3ct202cdutj02fttsg
+```
 
 This command creates and starts an instance for the application.
 
@@ -60,13 +97,44 @@ This command creates and starts an instance for the application.
 
 The `--enable-streaming` flag indicates that we want to stream this instance.
 
-The `--vm` flag indicates that we want to create the application inside a virtual machine instance instead of the default container instance.
-
 To see the instance details and its status, run:
 
       amc ls
 
-When the instance status reaches the *running* status, let's try to access it. We will need to copy the instance ID from the previous command's output.
+You will see an output similar to the following:
+
+```{terminal}
+   :input: amc ls
+   :user: ubuntu
+   :host: vm
+   :dir: ~
+   :scroll:
+
++----------------------+------+--------------+------+---------+------+------+---------+-----------+-------+----------------+
+|          ID          | NAME | APPLICATION  | TYPE | STATUS  | TAGS | NODE | ADDRESS | ENDPOINTS |  VM   | STATUS MESSAGE |
++----------------------+------+--------------+------+---------+------+------+---------+-----------+-------+----------------+
+| cv3ct202cdutj02fttsg |      | my-first-app | base | created |      |      |         |           | false |                |
++----------------------+------+--------------+------+---------+------+------+---------+-----------+-------+----------------+
+```
+
+When the instance reaches the *running* status, the output for `amc ls` should look like:
+
+```{terminal}
+:input: amc ls
+   :user: ubuntu
+   :host: vm
+   :dir: ~
+   :scroll:
+
++----------------------+------+--------------+---------+---------+------------------------------+------+--------------+-----------+-------+----------------+
+|          ID          | NAME | APPLICATION  |  TYPE   | STATUS  |             TAGS             | NODE |   ADDRESS    | ENDPOINTS |  VM   | STATUS MESSAGE |
++----------------------+------+--------------+---------+---------+------------------------------+------+--------------+-----------+-------+----------------+
+| cv3ct202cdutj02fttsg |      | my-first-app | regular | running | session=cv3ct202cduikviuu6rg | lxd0 | 192.168.96.1 |           | false |                |
++----------------------+------+--------------+---------+---------+------------------------------+------+--------------+-----------+-------+----------------+
+
+```
+
+Now, let's try to access the instance. We will need to copy the instance ID from the previous command's output.
 
       amc shell instance_id
 
@@ -86,7 +154,7 @@ Now, we are inside the Android container. Play around by running some of the fol
 
 We can have several versions of an application. Let's try and update the application:
 
-Go to the application directory and create a new manifest. This manifest introduces a change to the disk-size and also has a tag to associate with the application.
+Go to the application directory and update the manifest file. This manifest introduces a change to the disk-size.
 
 ```yaml
 name: my-first-app
@@ -94,8 +162,6 @@ resources:
    cpus: 4
    memory: 4GB
    disk-size: 8GB
-tags:
-   game
 ```
 
 Now, run the following commands and observe the output:
@@ -106,9 +172,79 @@ Now, run the following commands and observe the output:
 
 The `list` command displays the list of applications available. As an application becomes *active*, it is automatically published and a new version of the `my-first-app` is created.
 
-The `show` command displays the application information along with its versions.
+The `show` command displays the application information along with its versions:
 
-Now if we launch our application without explicitly specifying a version, our latest published version will be considered.
+```{terminal}
+:input: amc application show my-first-app
+   :user: ubuntu
+   :host: vm
+   :dir: ~
+   :scroll:
+
+id: cv3a7ofg2e7td2g9smt0
+name: my-first-app
+created-at: 2025-03-04 15:19:32 +0530 IST
+status: ready
+published: true
+immutable: false
+inhibit-auto-updates: false
+tags: []
+node-selector: []
+parent-image: jammy:android14:amd64
+parent-image-variant: android
+abi: x86_64
+vm: false
+config:
+  instance-type: a2.3
+versions:
+  0:
+    image: jammy:android14:amd64 (version 0)
+    published: true
+    status: active
+    extra-data: {}
+    video-encoder: gpu-preferred
+    watchdog:
+      disabled: false
+      allowed-packages: []
+  1:
+    image: jammy:android14:amd64 (version 0)
+    published: true
+    status: active
+    extra-data: {}
+    video-encoder: gpu-preferred
+    watchdog:
+      disabled: false
+      allowed-packages: []
+resources:
+  cpus: 4
+  memory: 4GB
+  disk-size: 8GB
+```
+
+Now if we launch our application without explicitly specifying a version, our latest published version will be considered:
+
+```{terminal}
+:input: amc launch my-first-app
+   :user: ubuntu
+   :host: vm
+   :dir: ~
+   :scroll:
+
+cv3d5ag2cdutj02fttvg
+
+:input: amc ls
+
++----------------------+------+--------------+---------+---------+------------------------------+------+--------------+-----------+-------+----------------+
+|          ID          | NAME | APPLICATION  |  TYPE   | STATUS  |             TAGS             | NODE |   ADDRESS    | ENDPOINTS |  VM   | STATUS MESSAGE |
++----------------------+------+--------------+---------+---------+------------------------------+------+--------------+-----------+-------+----------------+
+| cv3ct202cdutj02fttsg |      | my-first-app | regular | running | session=cv3ct202cduikviuu6rg | lxd0 | 192.168.96.1 |           | false |                |
++----------------------+------+--------------+---------+---------+------------------------------+------+--------------+-----------+-------+----------------+
+| cv3d5ag2cdutj02fttvg |      | my-first-app | regular | running |                              | lxd0 | 192.168.96.2 |           | false |                |
++----------------------+------+--------------+---------+---------+------------------------------+------+--------------+-----------+-------+----------------+
+
+```
+
+Notice how the second instance launched without the `--enable-streaming` flag does not have a session ID. This instance cannot be streamed while the earlier one we created can be streamed.
 
 **Streaming the application**
 
@@ -183,7 +319,7 @@ Let's try a simple operation of sharing our stream: Click *Set up sharing*, give
 
 When we click *Set up*, we are provided with a URL to our Android stream that can be shared.
 
-**Simulate a failure in the instance**
+**Troubleshoot instance failures**
 
 If we click on our instance name, we can explore the instance details, interact with it using a terminal and view logs for debugging.
 
@@ -191,13 +327,7 @@ This terminal is the shell for the Linux instance that runs the Android containe
 
 The `exit` command takes you back from the Android container shell to the Linux instance shell.
 
-Let us simulate a failure for the instance. In the *Terminal* tab of the instance, run:
-
-      amsctl notify-status error --message="My error message"
-
-As you watch the instance status turn to *error*, you can also see logs being generated. Click on the *Logs* tab and explore the different types of logs available.
-
-When you are done, click *Start* at the top right to return the instance to the running status.
+If you have an instance with an *error* status, you can explore the different types of logs available for the instance.
 
 ## Success!
 
