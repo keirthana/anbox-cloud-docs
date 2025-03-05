@@ -113,7 +113,9 @@ The `amc wait` command returns when your application is ready to launch. You can
         amc launch my-application --service +ssh
 
 ```{note}
-The SSH port 22 is closed by default. In the above command, we open it by exposing its service by using `--service`. You can find out the exposed port from the _ENDPOINTS_ column when you run `amc ls`. See {ref}`howto-expose-services` for more information.
+SSH is one of the services that is supported without explicitly defining in the application manifest file. The SSH port 22 is closed by default. In the above command, we open the SSH port by exposing its service by using `--service`.
+
+You can find out which ports are exposed from the _ENDPOINTS_ column in the output of the `amc ls` command. See {ref}`howto-expose-services` for more information.
 ```
 
 You can now access your container via SSH:
