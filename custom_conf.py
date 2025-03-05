@@ -136,6 +136,7 @@ redirects = {
     'tutorial/getting-started-dashboard': '../create-test-virtual-device',
     'tutorial/getting-started': '../create-test-virtual-device',
     'tutorial/creating-addon': '../../howto/addons/create-addon',
+    'howto/android/create-virtual-device': '../../../tutorial/create-test-virtual-device',
 }
 
 ############################################################
