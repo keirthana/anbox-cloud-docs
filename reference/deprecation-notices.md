@@ -14,9 +14,8 @@ The support for kernels older than 6.8 is deprecated as of 1.25.0. Starting from
 The support for LXD 5.0 snap is deprecated as of 1.25.0. Upgrade your deployment to use LXD 5.21 instead.
 
 ## Node controller
-*Deprecated in 1.23.0* ; *Removal in 1.26.0*
 
-Use of node controller to manage the port forwarding from an instance to expose a service is deprecated in 1.23.0. Instead, the Anbox Management Service (AMS) will use a LXD proxy device to manage the port forwarding.
+The use of node controller to manage the port forwarding from an instance to expose a service was deprecated from 1.23.0 till 1.25.0. However, considering the requirements of a charm based deployment, the node controller will be retained and remain supported.
 
 (sec-appliance-deprecation)=
 ## Anbox Cloud Appliance `epoch=0` snap
