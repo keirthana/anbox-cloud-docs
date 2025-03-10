@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import os
 from typing import Dict
 
 import requests
@@ -64,8 +65,19 @@ def parse_swagger(swagger, output_file):
     env = Environment(loader=FileSystemLoader("."))
     templ = env.get_template("scripts/ams-configuration.md.j2")
     text = templ.render(configs=configs, nodes=nodes)
-    with open(output_file, mode="w+") as op:
-        op.write(text)
+
+    # Write the output file only if the new text is different from
+    # the existing text. This function is called during the Sphinx
+    # build and writing it unconditionally causes Sphinx to treat
+    # the generated output file as modified and trigger another build,
+    # thereby causing an infinite loop.
+    existing_text = ""
+    if os.path.exists(output_file):
+        with open(output_file) as op:
+            existing_text = op.read()
+    if text != existing_text:
+        with open(output_file, mode="w+") as op:
+            op.write(text)
 
 
 def _parse_config_schema(swagger) -> dict:
