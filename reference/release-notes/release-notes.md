@@ -51,7 +51,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.25.x includes:
 * Enhancements to the Anbox Management Service (AMS)
 * Enhancements to Anbox Cloud dashboard
 * Upgrade to LXD 5.21
-* Android security updates for February 2025
+* Android security updates
 * Bug fixes
 
 <details><summary>Click to view earlier releases' notes</summary>
