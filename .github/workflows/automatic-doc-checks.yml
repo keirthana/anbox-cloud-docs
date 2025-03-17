@@ -7,10 +7,10 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true  
+  cancel-in-progress: true
 
 jobs:
   documentation-checks:
-    uses: canonical/documentation-workflows/.github/workflows/documentation-checks.yaml@main
+    uses: canonical/documentation-workflows/.github/workflows/documentation-checks.yaml@d86428a8aa00b3d8c5b3f43af0a1ffe42028d4ad
     with:
       working-directory: '.'
