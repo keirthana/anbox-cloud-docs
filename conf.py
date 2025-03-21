@@ -278,7 +278,12 @@ extensions = [
 
 # Excludes files or directories from processing
 
-exclude_patterns = []
+exclude_patterns = [
+    'contribute/doc-cheat-sheet.md',
+    'README.md',
+    'SECURITY.md',
+    '.github/pull_request_template.md',
+]
 
 # Adds custom CSS files, located under 'html_static_path'
 
