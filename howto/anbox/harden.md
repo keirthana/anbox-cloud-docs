@@ -9,7 +9,6 @@ Consider the following simple yet impactful measures to ensure that you run a se
 
 - Always run the latest supported version of Anbox Cloud and keep your deployment up to date. See {ref}`ref-release-notes`.
 - Make sure your deployment uses machines running a supported Ubuntu version. See {ref}`ref-requirements`.
-- Do not disable TLS pinning when you are not using a load balancer.
 - If you find a security issue, report it to the [Ubuntu security team](https://wiki.ubuntu.com/SecurityTeam/FAQ#Contact).
 
 ## Reduce attack surface
@@ -20,7 +19,7 @@ The following diagram illustrates the attack surface and potential points of thr
 
 ### 1 - Web client
 
-- Make sure you have `CIS/USG` and Livepatch enabled on Ubuntu Pro. See {ref}`enable Livepatch <https://documentation.ubuntu.com/pro/pro-client/enable_livepatch/>` and {ref}`enable CIS or USG <https://documentation.ubuntu.com/pro/pro-client/enable_cis/>` for more information.
+- Consider the security measures, guidelines and benchmarks offered by Ubuntu Pro such as CIS, USG and Livepatch. For more information, see the Ubuntu Pro Client documentation for enabling [CIS/USG](https://canonical-ubuntu-pro-client.readthedocs-hosted.com/en/latest/howtoguides/enable_cis/) and [Livepatch](https://canonical-ubuntu-pro-client.readthedocs-hosted.com/en/latest/howtoguides/enable_livepatch/).
 
 - Use the {ref}`exp-web-dashboard` as your default stream client. If you want to use a custom client, ensure you have set it up securely as described in the {ref}`tut-set-up-stream-client` tutorial.
 
@@ -28,13 +27,16 @@ The following diagram illustrates the attack surface and potential points of thr
 
 - Limit the ports and services that you expose over the network. {ref}`ref-network-ports` lists the ports that are exposed externally by default. If your deployment exposes additional ports for communication between components, consider other ways the communication channel can be implemented without exposing more ports.
 
-  Disable services on inactive instances. The ideal scenario is to never expose an Anbox cloud service over the internet. Instead, use a proxy.
+  Disable services on inactive instances. The ideal scenario is to never expose a service endpoint over the internet. Instead, use a proxy.
 
   Exposing service endpoints is typically required when the instance needs to communicate with the service. Design your deployment to allow the instance to reach out and communicate with the control plane.
 
 - Do not set the `application.auto_update`, `instance.security_updates`, `container.security_updates` to `false`. These settings will disable automatic updates at the application or the instance level. See {ref}`ref-ams-configuration` for more information.
 
-- Monitor resources used by instances regularly.
+- When considering the communication between the instance and the stream agent, if your deployment does not use a load balancer, do not disable TLS pinning.
+Without a load balancer, the instance is directly communicating with the stream agent. So it is important to keep TLS pinning enabled to ensure that the communication is directly and securely established with the correct stream agent.
+
+- Monitor resources used by instances regularly. See {ref}`howto-monitor-anbox` for detailed steps.
 
 ### 3 - AMC
 
