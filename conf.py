@@ -154,13 +154,23 @@ html_context = {
     'github_issues': 'enabled',
 }
 
+# To enable the edit button on pages, uncomment and change the link to a
+# public repository on GitHub or Launchpad. Any of the following link domains
+# are accepted:
+# - https://github.com/example-org/example"
+# - https://launchpad.net/example
+# - https://git.launchpad.net/example
+#
+html_theme_options = {
+ 'source_edit_link': 'https://github.com/canonical/anbox-cloud-docs',
+}
+
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
 #
 # If your documentation is hosted on https://docs.ubuntu.com/,
 #       uncomment and update as needed.
 
-# slug = ''
-
+slug = 'anbox-cloud'
 
 # Template and asset locations
 
@@ -243,7 +253,7 @@ linkcheck_exclude_documents = [
 ]
 
 # give linkcheck multiple tries on failure
-# linkcheck_timeout = 30
+linkcheck_timeout = 30
 linkcheck_retries = 3
 
 ########################
@@ -294,9 +304,7 @@ exclude_patterns = [
 
 # Adds custom CSS files, located under 'html_static_path'
 
-html_css_files = [
-    "css/pdf.css",
-]
+# html_css_files = []
 
 
 # Adds custom JavaScript files, located under 'html_static_path'
@@ -348,6 +356,12 @@ rst_prolog = """
 if "discourse_prefix" not in html_context and "discourse" in html_context:
     html_context["discourse_prefix"] = html_context["discourse"] + "/t/"
 
+#============================================#
+# Anbox Cloud specific configurations
+# The following configuration won't be available
+# in the starter pack. It is maintained by the
+# Anbox cloud team.
+#============================================#
 
 ## Generate dynamic configuration using scripts
 # Inject AMS configuration valuues and Node configuration values from the swagger
