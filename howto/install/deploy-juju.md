@@ -246,9 +246,16 @@ machines:
     constraints: "instance-type=m6g.2xlarge root-disk=50G"
 ```
 
-To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
+The default bundles for `anbox-cloud` and `anbox-cloud-core` available on Charmhub are suitable only for pure AMD64/X86 based deployments.
+Applying the overlay given above, to the bundle directly does not properly deploy the correct architecture for the charms.
+You need to download the bundle using,
 
-    juju deploy anbox-cloud --overlay ua.yaml --overlay overlay.yaml
+    juju download anbox-cloud --channel <bundle_channel>
+
+Unzip the bundle to extract the `bundle.yaml` file and remove the revisions for all Anbox Cloud charms from the bundle.
+Now use this `bundle.yaml` file to deploy `anbox-cloud` using your own overlay as follows,
+
+    juju deploy ./bundle.yaml --overlay ua.yaml --overlay overlay.yaml
 
 ## Monitor the deployment
 
