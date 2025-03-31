@@ -37,6 +37,7 @@ The Anbox Cloud Appliance is currently available on the following CI/CD platform
 ```{toctree}
 :hidden:
 
+Enable custom identity provider support <setup-oidc/landing>
 Install on AWS <install-on-aws>
 Install on Azure <install-on-azure>
 Install on Google Cloud <install-on-google-cloud>
