@@ -1,9 +1,9 @@
-(howto-install-appliance-setup-oidc-configure-oidc)=
-# Configure OIDC Connect
+(howto-configure-oidc)=
+# Configure OpenID Connect
 
-It is only possible to configure support for OpenID Connect only when the Anbox Cloud Appliance is being initialized with a preseed (see {ref}`ref-appliance-preseed-config`). The other steps to install the Anbox Cloud Appliance as described in {ref}`tut-installing-appliance` remain the same.
+It is possible to configure OpenID Connect only when the appliance is initialized with a preseed (see {ref}`ref-appliance-preseed-config`) during the installation.
 
-The issuer URL, client ID and optional audience URL are set in the preseed configuration as follows:
+When you have the issuer URL, client ID and optional audience URL, set the values in the preseed configuration:
 
 ```yaml
 $ cat preseed.yaml
@@ -16,15 +16,15 @@ dashboard:
     audience: https://my.auth.com/api/v2
 ```
 
-With the preseed configuration you can initiate the initialization process by running:
+To start the initialization process with the preseed configuration, run:
 
     sudo anbox-cloud-appliance init --preseed < preseed.yaml
 
-Once the initialization has been completed, you can register a new user by running:
+When the initialization is complete, to register a new user, run:
 
     sudo anbox-cloud-appliance dashboard register <email address>
 
-Once the user has been registered by following the printed URL and authenticated with your identity provider, access is granted to the web UI.
+This prints a URL to complete the registration. Access that URL and complete the registration. Finally, log in to access the dashboard user interface.
 
 ## Related topics
 

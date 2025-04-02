@@ -214,6 +214,7 @@ redirects = {
     'explanation/cryptography/crypto_stream_agent': '../../security/crypto_stream_agent',
     'explanation/cryptography/crypto_stream_gateway': '../../security/crypto_stream_gateway',
     'explanation/anbox-security': '../security/landing',
+    'howto/install-appliance/enable-oidc': '../setup-oidc/landing/',
 }
 
 

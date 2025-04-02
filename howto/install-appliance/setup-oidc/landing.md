@@ -9,7 +9,7 @@ Anbox Cloud uses the [authorization code flow](https://openid.net/specs/openid-c
 
 In order to allow discovery of the necessary endpoints on the identity provider, it must support the [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) protocol.
 
-The following will show you how to configure an [OpenID Connect](https://openid.net/developers/discover-openid-and-openid-connect/) based identity provider for the Anbox Cloud Appliance.
+This section shows you how to configure an [OpenID Connect](https://openid.net/developers/discover-openid-and-openid-connect/) based identity provider for the appliance.
 
 ## Preparation
 
@@ -21,9 +21,9 @@ In order to configure [OpenID Connect](https://openid.net/developers/discover-op
 
 To set up your identity provider and retrieve the required values, follow the guide below based on the identity provider you are using:
 
-* [How to configure Auth0 as the Login Provider for the Anbox Cloud Dashboard](/howto/install-appliance/setup-oidc/auth0.md)
-* [How to configure Keycloak as the Login Provider for the Anbox Cloud Dashboard](/howto/install-appliance/setup-oidc/keycloak.md)
-* [How to configure Ory Hydra as the Login Provider for the Anbox Cloud Dashboard](/howto/install-appliance/setup-oidc/ory.md)
+* {ref}`howto-oidc-auth0`
+* {ref}`howto-oidc-keycloak`
+* {ref}`howto-oidc-ory`
 
 
 ```{toctree}
