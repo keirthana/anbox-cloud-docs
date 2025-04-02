@@ -51,6 +51,7 @@ CDN
 Center
 Centered
 CFS
+CIS
 cgroup
 cgroup-v1
 cgroup-v2
@@ -258,6 +259,7 @@ sendfile
 SensorManager
 SHA
 shader
+shaders
 shiftfs
 SIGBUS
 signaling
@@ -368,3 +370,4 @@ prometheus
 MicroK
 Multipass
 uid
+USG
