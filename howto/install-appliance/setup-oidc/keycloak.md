@@ -3,8 +3,7 @@
 
 Keycloak is a self-hosted open source tool for authentication. Keycloak supports OIDC and can be used to authenticate users in the Anbox Cloud Dashboard. This guide shows you how to set up Keycloak as the login provider for the dashboard.
 
-{note}
-```
+```{note}
 For this guide, it is assumed that Keycloak is available over HTTPS.
 ```
 
