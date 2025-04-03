@@ -8,7 +8,8 @@ For this guide, it is assumed that Keycloak is available over HTTPS.
 ```
 
 1. Set up Keycloak by following their guide on [configuring Keycloak for production](https://www.keycloak.org/server/configuration-production).
-   Alternatively, you can run the development version: Download [Keycloak-25.0.4](https://github.com/keycloak/keycloak/releases/download/25.0.4/keycloak-25.0.4.zip), extract the file and run `bin/kc.sh start-dev`. Open `http://localhost:8080/` and create an admin user with password.
+
+   Alternatively, you can run the development version: download [Keycloak-25.0.4](https://github.com/keycloak/keycloak/releases/download/25.0.4/keycloak-25.0.4.zip), extract the file and run `bin/kc.sh start-dev`. Open `http://localhost:8080/` and create an admin user with password.
 
 1. Sign in to Keycloak with an admin account. Select the *Keycloak* dropdown in the top left corner of the admin console. Click *Create realm*. Enter a *Realm name* such as `anbox-cloud-dashboard-realm` and click *Create*.
 
