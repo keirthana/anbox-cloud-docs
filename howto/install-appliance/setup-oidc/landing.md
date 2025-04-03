@@ -17,7 +17,6 @@ In order to configure [OpenID Connect](https://openid.net/developers/discover-op
 
 * The issuer URL
 * The client ID
-* (Optional) The audience URL, required by some providers.
 
 To set up your identity provider and retrieve the required values, follow the guide below based on the identity provider you are using:
 
