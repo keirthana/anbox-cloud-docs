@@ -20,7 +20,7 @@ Anbox Streaming Gateway is using cryptographic technology for:
 
 ### TLS transport encryption
 
-All network endpoints exposed by the Anbox Stream Gateway are secured with TLS using an 4096 bit RSA key. The Anbox Stream Gateway strictly enforces TLS 1.3 or later and does not provide backward compatibility with older TLS versions.
+All network endpoints exposed by the Anbox Stream Gateway are secured with TLS using a 4096 bit RSA key. The Anbox Stream Gateway strictly enforces TLS 1.3 or later and does not provide backward compatibility with older TLS versions.
 
 ### Mutual TLS based authentication
 
@@ -46,11 +46,11 @@ Anbox Streaming Agent is using cryptographic technology for:
 
 ### TLS transport encryption
 
-All network endpoints exposed by the Anbox Stream Agent are secured with TLS using an 4096 bit RSA key. The Anbox Stream Agent strictly enforces TLS 1.3 or better and does not provide backward compatibility with older TLS versions.
+All network endpoints exposed by the Anbox Stream Agent are secured with TLS using a 4096 bit RSA key. The Anbox Stream Agent strictly enforces TLS 1.3 or better and does not provide backward compatibility with older TLS versions.
 
 ### Mutual TLS based authentication
 
-The Anbox Stream Agent uses mutual TLS authentication to establish a trusted TLS communication channel with AMS to call its API. For this it generates a TLS certificate using an 4096 bit RSA key.
+The Anbox Stream Agent uses mutual TLS authentication to establish a trusted TLS communication channel with AMS to call its API. For this it generates a TLS certificate using a 4096 bit RSA key.
 
 In order to exchange messages with the Anbox Stream Gateway through the [NATS](https://nats.io/) message queue, the Anbox Stream Agent uses a CA certificated signed by a 4096 bit RSA key to ensure trust with the NATS server.
 
