@@ -271,16 +271,12 @@ Check the output of the `juju status` command to see whether you need to reboot:
 
 ```sh
 ...
-Unit       Workload  Agent  Machine  Public address  Ports  Message
-lxd/0*     active    idle   3        10.75.96.23            reboot required to activate new kernel
+Unit       Workload  Agent  Machine  Public address  Ports      Message
+lxd/0*     active    idle   3        10.75.96.23     8443/tcp   Actions: Reboot Required, Role: Database-leader
 ...
 ```
 To reboot the machine hosting LXD, run the following command:
 
     juju ssh lxd/0 -- sudo reboot
-
-When the machine is back running, you must manually clear the status of the LXD units:
-
-    juju run --wait=5m lxd/0 clear-notification
 
 Once done, the reboot operation is finished.
