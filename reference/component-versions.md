@@ -13,14 +13,14 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud-dashboard` | `1.25/stable` |  |
-| `ams-node-controller` | `1.25/stable` |  |
-| `coturn` | `1.25/stable` |  |
-| `ams` | `1.25/stable` |  |
-| `anbox-stream-gateway`  | `1.25/stable` |   |
-| `ams-lxd` | `1.25/stable` |   |
-| `anbox-stream-agent` | `1.25/stable` |  |
-| `aar` | `1.25/stable` |  |
+| `anbox-cloud-dashboard` | `1.25/stable` | 842 (AMD64), 843 (ARM64)  |
+| `ams-node-controller` | `1.25/stable` | 834 (AMD64), 835 (ARM64) |
+| `coturn` | `1.25/stable` | 815 (AMD64), 816 (ARM64) |
+| `ams` | `1.25/stable` | 1003 (AMD64), 1004 (ARM64) |
+| `anbox-stream-gateway`  | `1.25/stable` | 934 (AMD64), 935 (ARM64)  |
+| `ams-lxd` | `1.25/stable` |  894 (AMD64), 895 (ARM64) |
+| `anbox-stream-agent` | `1.25/stable` | 927 (AMD64), 928 (ARM64) |
+| `aar` | `1.25/stable` | 987 (AMD64), 988 (ARM64) |
 | `anbox-cloud-cos-configuration` | `1.25/stable` |  |
 | `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
 
@@ -28,22 +28,22 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.25/stable` |  |
-| `anbox-cloud-core` | `1.25/stable` |  |
+| `anbox-cloud` | `1.25/stable` | 723 |
+| `anbox-cloud-core` | `1.25/stable` | 734 |
 
 ### Snaps
 
 | Name |  Channel | Version |
 |----------|--------------|---------|
-| `ams`    | `1.25/stable` |  |
-| `aar`    | `1.25/stable` |  |
-| `amc`    | `latest/stable` |  |
-| `ams-node-controller` | `1.25/stable` |  |
-| `anbox-cloud-dashboard` | `1.25/stable` |  |
-| `anbox-stream-agent` | `1.25/stable` |  |
-| `anbox-stream-gateway` | `1.25/stable` |  |
-| `anbox-connect` | `latest/stable` |  |
-| `anbox-cloud-appliance` | `1.25/stable` |  |
+| `ams`    | `1.25/stable` | `1.25.2-39dc73d32` |
+| `aar`    | `1.25/stable` | `1.25.2-39dc73d32` |
+| `amc`    | `latest/stable` | `1.25.2-39dc73d32` |
+| `ams-node-controller` | `1.25/stable` | `1.25.2-39dc73d32` |
+| `anbox-cloud-dashboard` | `1.25/stable` | `1.25.2-39dc73d32` |
+| `anbox-stream-agent` | `1.25/stable` | `1.25.2-39dc73d32` |
+| `anbox-stream-gateway` | `1.25/stable` | `1.25.2-39dc73d32` |
+| `anbox-connect` | `latest/stable` | `1.25.2-39dc73d32` |
+| `anbox-cloud-appliance` | `1.25/stable` | `1.25.2-39dc73d32` |
 
 ### Anbox images
 
@@ -51,16 +51,16 @@ The following Anbox images are available in two variants: one based on a contain
 
 | Name | Version |
 |----------|--------------|
-| `jammy:android14:amd64` |  |
-| `jammy:android14:arm64` |  |
-| `jammy:android13:amd64` |  |
-| `jammy:android13:arm64` |  |
-| `jammy:android12:amd64` |  |
-| `jammy:android12:arm64` |  |
-| `jammy:aaos13:amd64`    |  |
-| `jammy:aaos13:arm64`    |  |
-| `jammy:aaos14:amd64`    |  |
-| `jammy:aaos14:arm64`    |  |
+| `jammy:android14:amd64` | `1.25.2-20250410095632.gitb48e1c614` |
+| `jammy:android14:arm64` | `1.25.2-20250410095632.gitb48e1c614` |
+| `jammy:android13:amd64` | `1.25.2-20250410095632.gitb48e1c614` |
+| `jammy:android13:arm64` | `1.25.2-20250410095632.gitb48e1c614` |
+| `jammy:android12:amd64` | `1.25.2-20250410095632.gitb48e1c614` |
+| `jammy:android12:arm64` | `1.25.2-20250410095632.gitb48e1c614` |
+| `jammy:aaos13:amd64`    | `1.25.2-20250410095632.gitb48e1c614` |
+| `jammy:aaos13:arm64`    | `1.25.2-20250410095632.gitb48e1c614` |
+| `jammy:aaos14:amd64`    | `1.25.2-20250410095632.gitb48e1c614` |
+| `jammy:aaos14:arm64`    | `1.25.2-20250410095632.gitb48e1c614` |
 
 ## 1.25.1
 
