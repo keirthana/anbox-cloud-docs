@@ -11,18 +11,18 @@ Not all components are updated with each release. When components are not update
 
 #### Ubuntu 22.04
 
-| Name | Channel | Revision |
-|----------|--------------|--------------|
-| `anbox-cloud-dashboard` | `1.25/stable` | 842 (AMD64), 843 (ARM64)  |
-| `ams-node-controller` | `1.25/stable` | 834 (AMD64), 835 (ARM64) |
-| `coturn` | `1.25/stable` | 815 (AMD64), 816 (ARM64) |
-| `ams` | `1.25/stable` | 1003 (AMD64), 1004 (ARM64) |
-| `anbox-stream-gateway`  | `1.25/stable` | 934 (AMD64), 935 (ARM64)  |
-| `ams-lxd` | `1.25/stable` |  894 (AMD64), 895 (ARM64) |
-| `anbox-stream-agent` | `1.25/stable` | 927 (AMD64), 928 (ARM64) |
-| `aar` | `1.25/stable` | 987 (AMD64), 988 (ARM64) |
-| `anbox-cloud-cos-configuration` | `1.25/stable` |  |
-| `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
+| Name | Channel | Revision (AMD64) | Revision (ARM64) |
+|----------|--------------|--------------|-------------|
+| `anbox-cloud-dashboard` | `1.25/stable` | 842 | 843 |
+| `ams-node-controller` | `1.25/stable` | 834  | 835 |
+| `coturn` | `1.25/stable` | 815 | 816 |
+| `ams` | `1.25/stable` | 1003 | 1004 |
+| `anbox-stream-gateway`  | `1.25/stable` | 934 | 935 |
+| `ams-lxd` | `1.25/stable` |  894 | 895 |
+| `anbox-stream-agent` | `1.25/stable` | 927 | 928 |
+| `aar` | `1.25/stable` | 987 | 988 |
+| `anbox-cloud-cos-configuration` | `1.25/stable` | | |
+| `nats` | `latest/stable` | 9 | 11 |
 
 ### Bundles
 
@@ -68,18 +68,18 @@ The following Anbox images are available in two variants: one based on a contain
 
 #### Ubuntu 22.04
 
-| Name | Channel | Revision |
-|----------|--------------|--------------|
-| `anbox-cloud-dashboard` | `1.25/stable` | 807 |
-| `ams-node-controller` | `1.25/stable` | 799 |
-| `coturn` | `1.25/stable` | 780 |
-| `ams` | `1.25/stable` | 968 |
-| `anbox-stream-gateway`  | `1.25/stable` | 899  |
-| `ams-lxd` | `1.25/stable` | 859  |
-| `anbox-stream-agent` | `1.25/stable` | 892 |
-| `aar` | `1.25/stable` | 952 |
-| `anbox-cloud-cos-configuration` | `1.25/stable` | 86 |
-| `nats` | `latest/stable` | 9 (AMD64), 11 (ARM64) |
+| Name | Channel | Revision (AMD64)| Revision (ARM64) |
+|----------|--------------|--------------|------------|
+| `anbox-cloud-dashboard` | `1.25/stable` | 806 | 807 |
+| `ams-node-controller` | `1.25/stable` | 798 | 799 |
+| `coturn` | `1.25/stable` | 779 | 780 |
+| `ams` | `1.25/stable` | 967 | 968 |
+| `anbox-stream-gateway`  | `1.25/stable` | 898 | 899  |
+| `ams-lxd` | `1.25/stable` | 858 | 859 |
+| `anbox-stream-agent` | `1.25/stable` | 891 | 892 |
+| `aar` | `1.25/stable` | 951 | 952 |
+| `anbox-cloud-cos-configuration` | `1.25/stable` | 85 | 86 |
+| `nats` | `latest/stable` | 9 | 11 |
 
 ### Bundles
 
