@@ -156,6 +156,7 @@ JWKS
 JWT
 kb
 keybinding
+keycloak
 KeyError
 Keystore
 KSM
@@ -202,6 +203,7 @@ OAuth
 OBB
 OBD
 observability
+oidc
 ODM
 OES
 OOB
@@ -211,6 +213,7 @@ OpenGL
 OpenID
 OpenSSL
 OpenStack
+ory
 PCI
 Perfetto
 PKI
@@ -311,6 +314,7 @@ unhandled
 unschedulable
 untrusted
 uptime
+URIs
 userspace
 UTF
 validator

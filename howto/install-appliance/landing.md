@@ -9,14 +9,6 @@ We strongly recommend that you follow the {ref}`tut-installing-appliance` tutori
 
 Also, see {ref}`ref-requirements` before you start your installation.
 
-The following additional guides provide you instructions on how to enable certain features of the Anbox Cloud Appliance:
-
-```{toctree}
-:titlesonly:
-
-Enable support for custom identity provider <enable-oidc>
-```
-
 ## Supported cloud platforms
 
 The Anbox Cloud Appliance is currently available for the following cloud platforms:
@@ -37,6 +29,7 @@ The Anbox Cloud Appliance is currently available on the following CI/CD platform
 ```{toctree}
 :hidden:
 
+Enable custom identity provider support <setup-oidc/landing>
 Install on AWS <install-on-aws>
 Install on Azure <install-on-azure>
 Install on Google Cloud <install-on-google-cloud>

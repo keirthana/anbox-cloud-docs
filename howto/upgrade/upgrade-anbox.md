@@ -57,14 +57,7 @@ If your deployment uses an earlier Juju version, you must upgrade your controlle
 
 ## Upgrade all charms
 
-```{important}
-
-The latest 1.25.0 release does not include charms. So the latest channel of charms that you can currently use is `1.24/stable` for all charms and `latest/stable` for the `nats` charm.
-```
-
-The deployed Juju charms need to be upgraded next.
-
-You can find a list of all charm, snap, bundle and Debian package versions for each Anbox Cloud release in the {ref}`ref-component-versions` overview. This also includes the charm and bundle revisions and channels for each release.
+The deployed Juju charms need to be upgraded next. You can find a list of all charm, snap, bundle and Debian package versions for each Anbox Cloud release in the {ref}`ref-component-versions` overview. This also includes the charm and bundle revisions and channels for each release.
 
 If you want to deploy a particular revision of a charm, you can do so by adding `--revision=<rev>` to the `juju upgrade-charm` command.
 
