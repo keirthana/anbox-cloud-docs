@@ -5,9 +5,9 @@
 If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to the [Anbox Cloud category](https://discourse.ubuntu.com/c/anbox-cloud/49) on the Ubuntu discourse.
 ```
 
-Anbox Cloud officially supports only the latest release. This means that we support upgrades from n-1 to nth minor version, where n is the most recent minor version released.
+Anbox Cloud supports only the latest release. This means that we support upgrades from n-1 to nth minor version, where n is the most recent minor version released.
 
-If you are on an earlier version of Anbox Cloud than the most recent one, we recommend upgrading to the latest version as soon as possible. If you are multiple versions behind the supported version, there could be potential disruptions if you upgrade directly to the current version. You should keep this in consideration while planning your upgrade.
+If you are on an earlier version of Anbox Cloud than the most recent one, we recommend upgrading to the latest version as soon as possible. If you are multiple versions behind the supported version, there could be potential disruptions if you upgrade directly to the current version. The best practice in such a scenario is to upgrade incrementally, version by version.
 
 This guide contains upgrade instructions for the charmed Anbox Cloud deployment. In addition to the upgrade of the charms, any used images or addons need to be updated as well.
 
@@ -157,7 +157,7 @@ If you are running LXD clusters with the LXD snap from a channel other than 5.21
 
     juju config lxd channel=5.0/stable
 
-where `5.0/stable` is the current LXD channel. Not doing this might lead to a broken LXD cluster.
+where `5.0/stable` is the currently installed LXD snap channel. Not doing this might lead to a broken LXD cluster.
 ```
 
 To start, upgrade the AMS LXD charm to the latest revision using:
@@ -168,11 +168,11 @@ Upgrading the charm does not upgrade the LXD snap or any of the internal package
 
     juju run lxd/0 upgrade-info
 
-Make a note of all the Juju units having available updates. Before proceeding, make sure that there are no active instances on the nodes. Then mark each LXD node that has updates available as unschedulable within AMS.
+Make a note of all the Juju units having available updates. Before proceeding, make sure that there are no active instances on the nodes. Then mark each LXD node that has updates available as unschedulable in AMS.
 
     juju run ams/leader node-start-maintenance node=”<node_name>”
 
-where `<node_name>` refers to the LXD node name stored within AMS, e.g. `lxd0` if the Juju unit is `lxd/0`. This ensures that no new instances are spawned on those LXD nodes.
+where `<node_name>` refers to the LXD node name stored in AMS, e.g. `lxd0` if the Juju unit is `lxd/0`. This ensures that no new instances are spawned on those LXD nodes.
 
 After a node is successfully marked as unschedulable, we can safely upgrade it. To do this, run:
 
@@ -210,10 +210,10 @@ Existing applications will be automatically updated by AMS as soon as the new im
 
 You can check the status of an existing application by running:
 
-    amc application show <application id or name>
+    amc application show <application_id_or_name>
 
 In case automatic updates are disabled for applications, AMS cannot update the application. You need to manually update the applications using:
 
-    amc application update <application id or name>
+    amc application update <application_id_or_name> <path_of_new_application_payload>
 
 See {ref}`sec-configure-automatic-app-updates` for instructions on enabling automatic updates.
