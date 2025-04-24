@@ -45,6 +45,7 @@ Most clouds require credentials so that the cloud knows which operations are aut
 
 For a different cloud, just substitute the cloud name (use the name returned by  the `juju clouds` command). The data you need to supply varies depending on the cloud.
 
+(sec-setup-juju-controller)=
 ## Add a controller and model
 
 The [Juju controller](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/controller/) is used to manage the software deployed through Juju, from deployment to upgrades to day-two operations. One Juju controller can manage multiple projects or workspaces, which in Juju are known as [models](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/model/).
