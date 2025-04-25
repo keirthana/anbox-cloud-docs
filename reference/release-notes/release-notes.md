@@ -35,7 +35,7 @@ Minor releases
 Patch releases
 : A patch release for Anbox Cloud is released every month and includes Android and Chrome security updates alongside Anbox Cloud specific bug fixes.
 
-Anbox Cloud officially supports only the most recent release. Older releases are only supported for a short time after a new minor release was published.
+Anbox Cloud supports only the most recent release. Older releases are only supported for a short time after a new minor release was published.
 
 Feature deprecations are generally announced two releases in advance before the deprecated features are dropped. See {ref}`ref-deprecation-notes` for details.
 
