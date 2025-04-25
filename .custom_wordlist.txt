@@ -55,6 +55,7 @@ CIS
 cgroup
 cgroup-v1
 cgroup-v2
+codebase
 config
 conformant
 CORS
@@ -80,6 +81,7 @@ datacenter
 dataset
 deallocate
 deallocated
+deauthorize
 DDoS
 Debian
 deprecations

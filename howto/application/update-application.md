@@ -150,7 +150,7 @@ To enable automatic updates:
 
 When automatic updates are disabled, applications must be manually updated for any changed dependencies. To do this, use the following command:
 
-    amc application update <application id or name>
+    amc application update <application_id_or_name> <path_of_new_application_payload>
 
 This will initiate the update process and create a new application version.
 
@@ -158,6 +158,6 @@ This will initiate the update process and create a new application version.
 
 The image an application is based on can be changed with the following command:
 
-    amc application set com.canonical.candy image <image name or id>
+    amc application set com.canonical.candy image <image_name_or_id>
 
 Changing the image will cause AMS to generate a new version for the application. Previous versions will continue using the image the application used before.
