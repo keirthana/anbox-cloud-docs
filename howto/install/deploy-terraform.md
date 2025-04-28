@@ -44,7 +44,7 @@ The current reference terraform plan maps a basic Anbox Cloud deployment with a 
 Create a `deploy.tfvars` file and provide necessary configuration values to the terraform plan. Your `deploy.tfvars` file could look like this:
 
     ubuntu_pro_token = "<your_ubuntu_pro_token>"
-    constraints      = ["arch=arm64"]
+    constraints      = ["arch=amd64"]
     anbox_channel    = "1.26/stable" // Channel to use for deploying Anbox Cloud
     subclusters = [
       {
@@ -88,7 +88,7 @@ Terraform generates a diff of the current state and the expected state in the de
 To add another subcluster, modify the `deploy.tfvars` file:
 
     ubuntu_pro_token = "<your_ubuntu_pro_token>"
-    constraints      = ["arch=arm64"]
+    constraints      = ["arch=amd64"]
     anbox_channel    = "1.26/stable" // Channel to use for deploying Anbox Cloud
     subclusters = [
       {
@@ -119,7 +119,7 @@ The terraform plan comes with a recommended high availability (HA) configuration
 To deploy the AAR alongside Anbox Cloud, set the `registry_config` and `deploy_registry` parameters:
 
     ubuntu_pro_token = "<your_ubuntu_pro_token>"
-    constraints      = ["arch=arm64"]
+    constraints      = ["arch=amd64"]
     anbox_channel    = "1.26/stable" // Channel to use for deploying Anbox Cloud
     subclusters = [
       {
@@ -139,7 +139,7 @@ This deploys a new Juju model dedicated to the Anbox Application Registry.
 Set the `enable_cos` configuration to `true` to deploy the required resources/charms to integrate Anbox Cloud components with COS.
 
 ```{note}
-The current plan does NOT create Juju relations for integrating with a COS model deployed externally.
+The plan only deploys the `grafana-agent` charm internally in the models and creates the required relations with other anbox charms. The plan does NOT create Juju relations for integrating with a COS model deployed externally.
 If you want to use an external COS model, follow the instructions as described in the [COS tutorial](https://charmhub.io/topics/canonical-observability-stack/tutorials/instrumenting-machine-charms#step-4-relate-grafana-agent-to-cos-lite-prometheus-loki-and-grafana) to create those relations manually.
 ```
 
