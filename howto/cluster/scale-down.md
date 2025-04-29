@@ -3,18 +3,18 @@
 
 Scaling down a LXD cluster involves more checks than scaling up.
 
-There are two important requirements when scaling down:
+### Prerequisites
+
+The following are important requirements when scaling down:
  - The node you remove must not have any instances left.
  - You must wait for a node to be fully removed before you can start removing another one.
-
-```{important}
-Since Anbox Cloud 1.25.0, the default channel for the LXD charm has changed to 5.21/stable.
+ - Unless you are removing the entire cluster or are prepared for breaking changes, you should not remove database nodes. Especially, never remove a database leader node unless you are planning to remove the entire cluster.
+- Since Anbox Cloud 1.25.0, the default channel for the LXD charm has changed to 5.21/stable.
 For users running LXD clusters with the LXD snap tracking a channel which is different than 5.21/stable, it is important that you set the charm configuration item `channel` *explicitly* to the currently running channel for LXD before scaling up or down, e.g. if the current LXD cluster consists of the LXD snap tracking the 5.0/stable channel, you should run:
 
     juju config lxd channel=5.0/stable
 
-Not doing this might lead to a broken LXD cluster.
-```
+Bypassing any of these requirements could lead to a broken LXD cluster.
 
 ## Prepare the node for removal
 
