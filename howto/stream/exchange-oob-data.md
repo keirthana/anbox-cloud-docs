@@ -183,7 +183,7 @@ public class DataChannelEventReceiver extends BroadcastReceiver {
 ```
 
 ```{note}
-If an instance is running on Android 14 image, enabling the out-of-band v2 feature requires the Android app to be running in order to receive broadcasts. If the app is in the [cached state](https://developer.android.com/guide/components/activities/process-lifecycle), the system places [context-registered broadcasts in a queue](https://developer.android.com/develop/background-work/background-tasks/broadcasts#android-14),meaning the app may not receive broadcasts immediately, as it would when the app is actively running. Hence, your application, which integrates the out-of-band feature, must be in a running state to receive notifications about the availability of data channels.
+If an instance is running on Android 14 or later, enabling the out-of-band v2 feature requires the Android app to be running in order to receive broadcasts. If the app is in the [cached state](https://developer.android.com/guide/components/activities/process-lifecycle), the system places [context-registered broadcasts in a queue](https://developer.android.com/develop/background-work/background-tasks/broadcasts#android-14),meaning the app may not receive broadcasts immediately, as it would when the app is actively running. Hence, your application, which integrates the out-of-band feature, must be in a running state to receive notifications about the availability of data channels.
 ```
 
 ### Access the data proxy service
