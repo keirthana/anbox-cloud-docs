@@ -28,6 +28,7 @@ creativity to invent new mobile user experiences with Anbox Cloud Appliance.
 
 ### SEE ALSO
 
+* [anbox-cloud-appliance ams](anbox-cloud-appliance_ams.md)	 - Manage the AMS service of the Anbox Cloud Appliance
 * [anbox-cloud-appliance buginfo](anbox-cloud-appliance_buginfo.md)	 - Collection information for effective bug reports
 * [anbox-cloud-appliance completion](anbox-cloud-appliance_completion.md)	 - Generate the autocompletion script for the specified shell
 * [anbox-cloud-appliance config](anbox-cloud-appliance_config.md)	 - Managed the Anbox Cloud Appliance configuration
