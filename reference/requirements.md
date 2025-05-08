@@ -28,7 +28,7 @@ The appliance supports the following Ubuntu versions:
 * Ubuntu 22.04 (Jammy Jellyfish)
 * Ubuntu 24.04 (Noble Numbat)
 
-### LXD 
+### LXD
 
 The appliance supports LXD >= 5.0.
 
@@ -92,10 +92,9 @@ To run an Anbox Cloud deployment including the streaming stack, we recommend the
 | ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 |----|----------------|-----------|------|------------|------|------------|
 | -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://juju.is/docs/juju/controller)  |
-| 0  | amd64 or arm64 | 2         | 2GB  | 100GB SSD  | no   |  Hosts the load balancer |
-| 1  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the streaming stack control plane |
-| 2  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS) |
-| 3  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual containers or virtual machines  |
+| 0  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the load balancer, streaming stack control plane |
+| 1  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS) |
+| 2  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual containers or virtual machines  |
 
 To run the core version of Anbox Cloud without the streaming stack, we recommend the following setup:
 
