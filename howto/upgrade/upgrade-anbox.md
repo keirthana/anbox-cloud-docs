@@ -198,7 +198,7 @@ For security reasons, any ports previously exposed by the node controller will b
 
        juju refresh --channel=1.26/stable ams-node-controller
 
-If there is no need to expose services from Anbox instances, revokes the application's exposure to the public network:
+If there is no need to expose services from Anbox instances, revokes the application's exposure to the public network after the AMS node controller is upgraded:
 
        juju unexpose ams-node-controller
 
@@ -206,6 +206,10 @@ If you do need to allow external access to services running inside LXD nodes, ru
 
        juju expose lxd
        juju config lxd exposed_instance_ports=10000-11000
+
+To revoke external access to services after enabling it for the LXD charm, run:
+
+       juju unexpose lxd
 
 
 ## Upgrade Debian packages
