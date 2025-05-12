@@ -13,36 +13,37 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
-| `anbox-cloud-dashboard` | `1.25/stable` |  |  |
-| `ams-node-controller` | `1.25/stable` |   |  |
-| `coturn` | `1.25/stable` |  |  |
-| `ams` | `1.25/stable` |  |  |
+| `anbox-cloud-dashboard` | `1.25/stable` | 890 | 891 |
+| `ams-node-controller` (Deprecated) | `1.25/stable` | 886 | 887 |
+| `coturn` | `1.25/stable` | 863 | 864 |
+| `ams` | `1.25/stable` | 1055 | 1056 |
 | `anbox-stream-gateway`  | `1.25/stable` | 982 | 983 |
-| `ams-lxd` | `1.25/stable` |   |  |
-| `anbox-stream-agent` | `1.25/stable` |  |  |
-| `aar` | `1.25/stable` |  |  |
-| `anbox-cloud-cos-configuration` | `1.25/stable` | | |
+| `ams-lxd` | `1.25/stable` | 942  | 943 |
+| `anbox-stream-agent` | `1.25/stable` | 975 | 976 |
+| `aar` | `1.25/stable` | 1040 | 1041 |
+| `anbox-cloud-cos-configuration` | `1.25/stable` | 173 | 174 |
 | `nats` | `latest/stable` | 9 | 11 |
 
 #### Ubuntu 24.04
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
-| `anbox-cloud-dashboard` | `1.25/stable` |  |  |
-| `ams-node-controller` | `1.25/stable` |   |  |
-| `coturn` | `1.25/stable` |  |  |
-| `ams` | `1.25/stable` |  |  |
+| `anbox-cloud-dashboard` | `1.25/stable` | 892 | 893 |
+| `ams-node-controller` | `1.25/stable` | 888  | 889 |
+| `coturn` | `1.25/stable` | 865 | 866 |
+| `ams` | `1.25/stable` | 1057 | 1058 |
 | `anbox-stream-gateway`  | `1.25/stable` | 984 | 985 |
-| `ams-lxd` | `1.25/stable` |   |  |
-| `anbox-stream-agent` | `1.25/stable` |  |  |
-| `aar` | `1.25/stable` |  |  |
-| `anbox-cloud-cos-configuration` | `1.25/stable` | | |
-| `nats` | `latest/stable` | 9 | 11 |
+| `ams-lxd` | `1.25/stable` |  944 | 945 |
+| `anbox-stream-agent` | `1.25/stable` | 977 | 978 |
+| `aar` | `1.25/stable` | 1042 | 1043 |
+| `anbox-cloud-cos-configuration` | `1.25/stable` | 175 | 176 |
 
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
+| `anbox-cloud` | `1.25/stable` | 766 |
+| `anbox-cloud-core` | `1.25/stable` | 739 |
 
 ### Snaps
 
@@ -58,42 +59,26 @@ Not all components are updated with each release. When components are not update
 | `anbox-connect` | `latest/stable` | `1.26.0-b5ea9c1b5` |
 | `anbox-cloud-appliance` | `1.26/stable` | `1.26.0-b5ea9c1b5` |
 
-
-
 ### Anbox images
 
 The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
 
 | Name | Version |
 |----------|--------------|
-| `jammy:aaos15:amd64`    | |
-| `jammy:aaos15:arm64`    | |
-| `jammy:android15:amd64` | |
-| `jammy:android15:arm64` | |
-| `jammy:aaos14:amd64`    | |
-| `jammy:aaos14:arm64`    | |
-| `jammy:android14:amd64` | |
-| `jammy:android14:arm64` | |
-| `jammy:aaos13:amd64`    | |
-| `jammy:aaos13:arm64`    | |
-| `jammy:android13:amd64` | |
-| `jammy:android13:arm64` | |
-| `jammy:android12:amd64` | |
-| `jammy:android12:arm64` | |
-| `noble:aaos15:amd64`    | |
-| `noble:aaos15:arm64`    | |
-| `noble:android15:amd64` | |
-| `noble:android15:arm64` | |
-| `noble:aaos14:amd64`    | |
-| `noble:aaos14:arm64`    | |
-| `noble:android14:amd64` | |
-| `noble:android14:arm64` | |
-| `noble:aaos13:amd64`    | |
-| `noble:aaos13:arm64`    | |
-| `noble:android13:amd64` | |
-| `noble:android13:arm64` | |
-| `noble:android12:amd64` | |
-| `noble:android12:arm64` | |
+| `jammy:aaos15:amd64`    | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:aaos15:arm64`    | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:android15:amd64` | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:android15:arm64` | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:aaos14:amd64`    | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:aaos14:arm64`    | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:android14:amd64` | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:android14:arm64` | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:aaos13:amd64`    | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:aaos13:arm64`    | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:android13:amd64` | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:android13:arm64` | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:android12:amd64` | `1.26.0-20250508063520.git5fb41808e` |
+| `jammy:android12:arm64` | `1.26.0-20250508063520.git5fb41808e` |
 
 
 ## 1.25.2
