@@ -13,12 +13,31 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
-
+| `anbox-cloud-dashboard` | `1.25/stable` |  |  |
+| `ams-node-controller` | `1.25/stable` |   |  |
+| `coturn` | `1.25/stable` |  |  |
+| `ams` | `1.25/stable` |  |  |
+| `anbox-stream-gateway`  | `1.25/stable` | 982 | 983 |
+| `ams-lxd` | `1.25/stable` |   |  |
+| `anbox-stream-agent` | `1.25/stable` |  |  |
+| `aar` | `1.25/stable` |  |  |
+| `anbox-cloud-cos-configuration` | `1.25/stable` | | |
+| `nats` | `latest/stable` | 9 | 11 |
 
 #### Ubuntu 24.04
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
+| `anbox-cloud-dashboard` | `1.25/stable` |  |  |
+| `ams-node-controller` | `1.25/stable` |   |  |
+| `coturn` | `1.25/stable` |  |  |
+| `ams` | `1.25/stable` |  |  |
+| `anbox-stream-gateway`  | `1.25/stable` | 984 | 985 |
+| `ams-lxd` | `1.25/stable` |   |  |
+| `anbox-stream-agent` | `1.25/stable` |  |  |
+| `aar` | `1.25/stable` |  |  |
+| `anbox-cloud-cos-configuration` | `1.25/stable` | | |
+| `nats` | `latest/stable` | 9 | 11 |
 
 ### Bundles
 

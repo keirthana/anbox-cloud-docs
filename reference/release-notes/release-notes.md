@@ -50,7 +50,8 @@ If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/s
 Along with bug fixes and general improvements, Anbox Cloud 1.26.x includes:
 
 * Alpha release of a reference plan to deploy Anbox Cloud using Terraform
-* Ubuntu 24.04 (Noble Numbat) images
+* Preparatory work for secret management of all Anbox Cloud charms using Juju secrets
+* Support for Anbox Cloud charms on Ubuntu 24.04 (Noble Numbat)
 * Android 15 images
 * Enhancements to the Anbox Management Service (AMS)
 * Enhancements to Anbox Cloud dashboard
