@@ -3,6 +3,11 @@
 
 This document contains a list of deprecation notices for Anbox Cloud and its components.
 
+## Node controller charm
+*Deprecated in 1.26.0* ; *Unsupported in 1.28.0*
+
+The [AMS node controller charm](https://charmhub.io/ams-node-controller) is deprecated as of 1.26.0. The charm is mainly responsible for installing the `ams-node-controller`. In future releases, this snap installation will be done using the `ams-lxd` charm.
+
 ## Juju 2.9
 *Deprecated in 1.25.1* ; *Unsupported in 1.27.0*
 
