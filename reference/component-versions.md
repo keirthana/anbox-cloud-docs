@@ -13,37 +13,37 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
-| `anbox-cloud-dashboard` | `1.25/stable` | 890 | 891 |
-| `ams-node-controller` (Deprecated) | `1.25/stable` | 886 | 887 |
-| `coturn` | `1.25/stable` | 863 | 864 |
-| `ams` | `1.25/stable` | 1055 | 1056 |
-| `anbox-stream-gateway`  | `1.25/stable` | 982 | 983 |
-| `ams-lxd` | `1.25/stable` | 942  | 943 |
-| `anbox-stream-agent` | `1.25/stable` | 975 | 976 |
-| `aar` | `1.25/stable` | 1040 | 1041 |
-| `anbox-cloud-cos-configuration` | `1.25/stable` | 173 | 174 |
+| `anbox-cloud-dashboard` | `1.26/stable` | 890 | 891 |
+| `ams-node-controller` (Deprecated) | `1.26/stable` | 886 | 887 |
+| `coturn` | `1.26/stable` | 863 | 864 |
+| `ams` | `1.26/stable` | 1055 | 1056 |
+| `anbox-stream-gateway`  | `1.26/stable` | 982 | 983 |
+| `ams-lxd` | `1.26/stable` | 942  | 943 |
+| `anbox-stream-agent` | `1.26/stable` | 975 | 976 |
+| `aar` | `1.26/stable` | 1040 | 1041 |
+| `anbox-cloud-cos-configuration` | `1.26/stable` | 173 | 174 |
 | `nats` | `latest/stable` | 9 | 11 |
 
 #### Ubuntu 24.04
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
-| `anbox-cloud-dashboard` | `1.25/stable` | 892 | 893 |
-| `ams-node-controller` | `1.25/stable` | 888  | 889 |
-| `coturn` | `1.25/stable` | 865 | 866 |
-| `ams` | `1.25/stable` | 1057 | 1058 |
-| `anbox-stream-gateway`  | `1.25/stable` | 984 | 985 |
-| `ams-lxd` | `1.25/stable` |  944 | 945 |
-| `anbox-stream-agent` | `1.25/stable` | 977 | 978 |
-| `aar` | `1.25/stable` | 1042 | 1043 |
-| `anbox-cloud-cos-configuration` | `1.25/stable` | 175 | 176 |
+| `anbox-cloud-dashboard` | `1.26/stable` | 892 | 893 |
+| `ams-node-controller` | `1.26/stable` | 888  | 889 |
+| `coturn` | `1.26/stable` | 865 | 866 |
+| `ams` | `1.26/stable` | 1057 | 1058 |
+| `anbox-stream-gateway`  | `1.26/stable` | 984 | 985 |
+| `ams-lxd` | `1.26/stable` |  944 | 945 |
+| `anbox-stream-agent` | `1.26/stable` | 977 | 978 |
+| `aar` | `1.26/stable` | 1042 | 1043 |
+| `anbox-cloud-cos-configuration` | `1.26/stable` | 175 | 176 |
 
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.25/stable` | 766 |
-| `anbox-cloud-core` | `1.25/stable` | 739 |
+| `anbox-cloud` | `1.26/stable` | 766 |
+| `anbox-cloud-core` | `1.26/stable` | 739 |
 
 ### Snaps
 
