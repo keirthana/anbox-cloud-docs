@@ -10,6 +10,7 @@ The configuration file uses the JSON format. It has the following structure:
 | Name | Value type | Default | Description |
 |------|------------|---------|-------------|
 | `video.bitrate_limits` | array of objects | `[]` | Bitrate limits to apply to the video encoder. |
+| `video.disabled_codecs` | array of strings | `[]` | List of video codecs which should be explicitly disabled and not advertised, even if supported by the client. Possible values are: AV1, H264, VP8
 | `nvidia_h264.multipass`<br>`nvidia_av1.multipass` | bool | `false` | If set to true, multi-pass encoding is enabled. |
 | `nvidia_h264.multipass_quarter_resolution`<br>`nvidia_av1.multipass_quarter_resolution` | bool | `false` | If set to true, multi-pass encoding will be run only for a quarter of a frame's resolution. |
 | `nvidia_h264.aq`<br>`nvidia_av1.aq` | bool | `false` | If set to true, adaptive quantization is enabled. |
