@@ -37,6 +37,6 @@ creativity to invent new mobile user experiences with Anbox Cloud Appliance.
 * [anbox-cloud-appliance disable](anbox-cloud-appliance_disable.md)	 - Disable individual features of the Anbox Cloud Appliance
 * [anbox-cloud-appliance enable](anbox-cloud-appliance_enable.md)	 - Enable individual features of the Anbox Cloud Appliance
 * [anbox-cloud-appliance init](anbox-cloud-appliance_init.md)	 - Initialize and configure the Anbox Cloud Appliance
-* [anbox-cloud-appliance prepare-node-script](anbox-cloud-appliance_prepare-node-script.md)	 - Generate a shell script to prepare a machine for the Anbox Cloud Appliance
+* [anbox-cloud-appliance prepare-node-script](anbox-cloud-appliance_prepare-node-script.md)	 - Generate a shell script to prepare or upgrade a machine for the Anbox Cloud Appliance
 * [anbox-cloud-appliance status](anbox-cloud-appliance_status.md)	 - Retrieves the current status of the Anbox Cloud Appliance
 

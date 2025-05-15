@@ -11,6 +11,9 @@ over the local UNIX domain socket. For the user to be authorized, their
 UID must be specified in the AMS configuration. The root user always has access
 to the AMS service and can register additional UIDs for access.
 
+The command will automatically restart AMS after applying the change unless
+explicitly disabled.
+
 To register their UID, a user with `sudo` privileges must run:
 
     sudo anbox-cloud-appliance ams authorize
@@ -39,8 +42,9 @@ $ sudo anbox-cloud-appliance ams authorize
 ### Options
 
 ```
-      --force   Force deauthorizing specified UID
-  -h, --help    help for authorize
+      --force        Force deauthorizing specified UID
+  -h, --help         help for authorize
+      --no-restart   Do not restart AMS after applying the change
 ```
 
 ### SEE ALSO
