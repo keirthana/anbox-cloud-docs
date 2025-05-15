@@ -27,6 +27,7 @@ $ amc node remove lxd2
   -f, --force             Force the removal of the node
   -h, --help              help for remove
       --keep-in-cluster   Keep the LXD node as part of the cluster and just remove it from the AMS database
+  -t, --timeout string    DEPRECATED: Maximum time to wait for the operation to complete (default "5m")
   -y, --yes               Assume 'yes' as answer to all prompts and run non-interactively
 ```
 

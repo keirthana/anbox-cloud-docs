@@ -35,6 +35,7 @@ nodes:
       --storage-device string    Storage device that the LXD node should use
       --storage-pool string      Existing LXD storage pool to use
       --tags string              Comma-separated list of tags to set for the node
+  -t, --timeout string           DEPRECATED: Maximum time to wait for the operation to complete (default "5m")
       --trust-password string    Trust password for the remote LXD node to authenticate client (supported until LXD 5.21; deprecated in LXD 6.0)
       --trust-token string       Trust token for the remote LXD node to authenticate client (introduced in LXD 5.21; required for LXD 6.0 and later)
       --unmanaged                Expect the node to already be clustered

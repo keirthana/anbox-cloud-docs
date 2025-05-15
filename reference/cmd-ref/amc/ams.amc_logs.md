@@ -34,9 +34,9 @@ $ amc logs -f burp70p3p7j1icvtebig
 ### Options
 
 ```
-  -f, --follow       Show only the most recent log entries and continuously print new entries as they are appended to the log
-  -h, --help         help for logs
-  -t, --type anbox   Type of logs to show - anbox or `android` (default "anbox")
+  -f, --follow        Show only the most recent log entries and continuously print new entries as they are appended to the log
+  -h, --help          help for logs
+  -t, --type string   Type of logs to show: anbox, android, console, container (default "anbox")
 ```
 
 ### SEE ALSO

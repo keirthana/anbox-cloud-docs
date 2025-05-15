@@ -12,6 +12,9 @@ UID must be specified in the AMS configuration. The root user always has access
 to the AMS service and can remove registered UIDs to remove their access
 rights.
 
+The command will automatically restart AMS after applying the change unless
+explicitly disabled.
+
 To deauthorize a user's UID, run:
 
     sudo anbox-cloud-appliance ams deauthorize 1000
@@ -33,8 +36,9 @@ $ sudo anbox-cloud-appliance ams deauthorize 1000
 ### Options
 
 ```
-      --force   Force deauthorizing specified UID
-  -h, --help    help for deauthorize
+      --force        Force deauthorizing specified UID
+  -h, --help         help for deauthorize
+      --no-restart   Do not restart AMS after applying the change
 ```
 
 ### SEE ALSO
