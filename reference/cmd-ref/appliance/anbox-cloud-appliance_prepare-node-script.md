@@ -1,10 +1,10 @@
 ## anbox-cloud-appliance prepare-node-script
 
-Generate a shell script to prepare a machine for the Anbox Cloud Appliance
+Generate a shell script to prepare or upgrade a machine for the Anbox Cloud Appliance
 
 ### Synopsis
 
-Generate a shell script to prepare a machine for the Anbox Cloud Appliance
+Generate a shell script to prepare or upgrade a machine for the Anbox Cloud Appliance
 
 The command generates a shell script which needs to be executed outside
 of the snap execution environment to install additional dependency and

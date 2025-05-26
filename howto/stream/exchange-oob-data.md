@@ -78,7 +78,7 @@ Launch a stream-enabled instance for web client to join
 
 ```
 amc launch --name test-app \
-  --raw jammy:android13:arm64 \
+  jammy:android13:arm64 \
   --enable-streaming
 ```
 
@@ -183,7 +183,7 @@ public class DataChannelEventReceiver extends BroadcastReceiver {
 ```
 
 ```{note}
-If an instance is running on Android 14 image, enabling the out-of-band v2 feature requires the Android app to be running in order to receive broadcasts. If the app is in the [cached state](https://developer.android.com/guide/components/activities/process-lifecycle), the system places [context-registered broadcasts in a queue](https://developer.android.com/develop/background-work/background-tasks/broadcasts#android-14),meaning the app may not receive broadcasts immediately, as it would when the app is actively running. Hence, your application, which integrates the out-of-band feature, must be in a running state to receive notifications about the availability of data channels.
+If an instance is running on Android 14 or later, enabling the out-of-band v2 feature requires the Android app to be running in order to receive broadcasts. If the app is in the [cached state](https://developer.android.com/guide/components/activities/process-lifecycle), the system places [context-registered broadcasts in a queue](https://developer.android.com/develop/background-work/background-tasks/broadcasts#android-14),meaning the app may not receive broadcasts immediately, as it would when the app is actively running. Hence, your application, which integrates the out-of-band feature, must be in a running state to receive notifications about the availability of data channels.
 ```
 
 ### Access the data proxy service
@@ -346,7 +346,7 @@ To connect the data channel to the Anbox WebRTC data proxy service within an And
 
       ```
       amc launch --name test-oobv2 \
-        --raw jammy:android13:arm64 \
+        jammy:android13:arm64 \
         --enable-streaming \
         --features allow_custom_system_signatures \
         --addons install-out-of-band-app

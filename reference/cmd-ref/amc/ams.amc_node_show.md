@@ -46,9 +46,10 @@ config:
 ### Options
 
 ```
-      --allocations     Show resource allocations
-  -f, --format string   Output format - 'json' or 'yaml' (default "yaml")
-  -h, --help            help for show
+      --allocations       Show resource allocations
+  -f, --format string     Output format - 'json' or 'yaml' (default "yaml")
+      --gpu-allocations   Show GPU allocations
+  -h, --help              help for show
 ```
 
 ### SEE ALSO
