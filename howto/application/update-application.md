@@ -3,8 +3,9 @@
 
 Updating an existing application works similar to creating a new one. Each time an existing application is updated, it is extended with a new version. All versions that an application currently has are individually usable, but only one can be launched at a time.
 
-`````{tabs}
-````{group-tab} CLI
+::::{tab-set}
+:::{tab-item} CLI
+:sync: cli
 
 When you want to update an existing application with a new manifest or APK, provide both in the same format as when the application was created. The `amc application update` command accepts both a directory and an absolute file path.
 
@@ -85,9 +86,10 @@ resources:
   disk-size: 8GB
 ```
 
-````
+:::
 
-```{group-tab} Dashboard
+:::{tab-item} Dashboard
+:sync: dashboard
 
 You can edit an application from the *Applications* list page.
 
@@ -102,8 +104,8 @@ Similar to the application creation process, you can unlock advanced customizati
 
 When you click *Update*, you will be redirected either to the *Overview* tab of the application detail page - if the fields changed did not trigger a new version creation - or to the *Versions* tab of that page, when a new version of the application was created.
 
-```
-`````
+:::
+::::
 
 Each version gets a monotonically increasing number assigned (here we have version `0` and version `1`).
 In addition, each version has a status which indicates the status of the bootstrap process AMS is performing for it. Once an application version is marked as `active`, it is ready to be used.

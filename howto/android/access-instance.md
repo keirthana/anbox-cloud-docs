@@ -34,8 +34,9 @@ If you are using the dashboard, you can also find the session ID in the *Instanc
 
 ### Create a share for the session
 
-````{tabs}
-```{group-tab} CLI
+::::{tab-set}
+:::{tab-item} CLI
+:sync: cli
 
 Using the session's ID, share it the session:
 
@@ -45,15 +46,16 @@ Providing a description helps you identify a share later on, if you are sharing 
 
 The output returns a presigned URL that you can use to connect to the remote Android instance.
 
-```
-```{group-tab} Dashboard
+:::
+
+:::{tab-item} Dashboard
+:sync: dashboard
 
 On the *Instances* page, locate a running instance and click *Connect ADB* ( ![Connect ADB|16x16](/images/icons/adb-connect-icon.png) ).
 
 After you authorize the connection, copy the `anbox-connect <connection_url>` provided.
-
-```
-````
+:::
+::::
 
 Watch this [video](https://youtu.be/qsFF0eqj_JE) for a detailed demonstration of how to use an ADB connection to debug an Android application with Android studio.
 
