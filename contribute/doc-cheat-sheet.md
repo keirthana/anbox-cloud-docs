@@ -165,16 +165,15 @@ The following example uses local images folder:
 
 ## Tabs
 
-````{tabs}
-```{group-tab} Tab 1
-
+::::{tab-set}
+:::{tab-item} Tab 1
 Content Tab 1
-```
+:::
 
-```{group-tab} Tab 2
+:::{tab-item} Tab 2
 Content Tab 2
-```
-````
+:::
+::::
 
 ## Glossary
 

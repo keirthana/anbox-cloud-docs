@@ -7,8 +7,9 @@ By the end of this tutorial, we will be familiar with an {term}`Application` and
 
 This tutorial has two paths - you can use the CLI or the dashboard, depending on your learning goals. The CLI is more powerful and gives you access to all features of Anbox Cloud, while the dashboard is a simpler user interface. For this tutorial, it does not matter which path you choose.
 
-`````{tabs}
-````{group-tab} CLI
+::::{tab-set}
+:::{tab-item} CLI
+:sync: cli
 
 We will use the {term}`Anbox Management Client (AMC)` in this tutorial to work with applications and instances. AMC communicates with the {term}`Anbox Management Service (AMS)`, the instance management module of Anbox Cloud.
 
@@ -271,9 +272,10 @@ Go to `https://machine-address` using a browser and go to the *Instances* page w
 ## Success!
 You now know how to use the command line to create and test an Android virtual device in Anbox Cloud. 
 
-````
+:::
 
-````{group-tab} Dashboard
+:::{tab-item} Dashboard
+:sync: dashboard
 
 ## Create the device
 
@@ -349,8 +351,8 @@ If you have an instance with an *error* status, you can explore the different ty
 
 You now know how to use the Anbox Cloud dashboard to create and test an Android virtual device. 
 
-````
-`````
+:::
+::::
 
 > Next: You can check out the following how-to sections to try out other applications with applications and instances:
 
