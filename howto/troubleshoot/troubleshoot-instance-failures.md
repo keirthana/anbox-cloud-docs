@@ -5,7 +5,7 @@ The following information should help you in determining issues related to insta
 
 ## Images not available
 
-*Applies to: Anbox Cloud Appliance*
+*Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
 > I completed the installation and initialization process correctly. When I try creating an instance, I don't see any available images.
 
