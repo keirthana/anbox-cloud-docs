@@ -46,8 +46,9 @@ resources:
   disk-size: 8GB
 ```
 
-`````{tabs}
-````{group-tab} CLI
+::::{tab-set}
+:::{tab-item} CLI
+:sync: cli
 
 An application can be created from a directory, a zip archive or a tarball file. If you cannot use a directory, the second best option is to use a zip archive that provides better optimization when compared to a tarball.
 
@@ -119,9 +120,10 @@ resources:
   disk-size: 8GB
 ```
 
-````
+:::
 
-```{group-tab} Dashboard
+:::{tab-item} Dashboard
+:sync: dashboard
 
 Click *Create application* on the applications page, enter the required and any optional details that you want to provide and confirm with *Create*.
 
@@ -142,8 +144,8 @@ There may be more advanced scenarios while creating an application that cannot b
 After you create an application, the *Applications* page lists all the available applications. Clicking an application name opens the *Application details* page that displays information about the application, its configuration, and deployment features in the *Overview* section.
 
 The *Versions* section lists all created versions of the application. Use the *Actions* menu to either upload to the registry, unpublish, or delete a specific version. Click a specific version to open the version side panel, which provides detailed information about the version related to the parent image and watchdog.
-```
-`````
+:::
+::::
 
 Once the status of the application switches to `ready`, the application is ready and can be used. See {ref}`howto-wait-for-application` for information about how to monitor the application status.
 

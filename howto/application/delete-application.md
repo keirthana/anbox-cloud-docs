@@ -7,19 +7,21 @@ When an application is no longer needed, it can be fully removed from Anbox Clou
 
 Once you're sure you want to remove the application, you can delete it via the dashboard or the CLI.
 
-````{tabs}
+::::{tab-set}
 
-```{group-tab} CLI
+:::{tab-item} CLI
+:sync:cli
 
 Run:
 
     amc application delete bcmap7u5nof07arqa2ag
 
 The command will ask for your approval before the application is removed. If you want to bypass the check, you can add the `--yes` flag to the command.
-```
+:::
 
-```{group-tab} Dashboard
+:::{tab-item} Dashboard
+:sync: dashboard
 
 On the *Applications* page, click *Delete* ( ![delete application icon](/images/icons/delete-icon.png) ) and confirm the deletion.
-```
-````
+:::
+::::

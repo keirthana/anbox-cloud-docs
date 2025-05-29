@@ -2,8 +2,11 @@
 # How to create an instance
 To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
 
-`````{tabs}
-````{group-tab} CLI
+> Check out [this video](https://youtu.be/nBUqb_Bnx2Y) that explains the differences between an instance created from an application vs an instance created from an image.
+
+::::{tab-set}
+:::{tab-item} CLI
+:sync: cli
 
 Depending on what you need, you can use the either of the following commands to create an instance for a registered application or an image.
 
@@ -128,10 +131,10 @@ You can launch instances with additional development features turned on. This de
 To launch an instance with development mode enabled, add the `--devmode` flag to the launch command:
 
     amc launch --devmode <application_id>
+:::
 
-````
-
-```{group-tab} Dashboard
+:::{tab-item} Dashboard
+:sync: dashboard
 
 You can create instances from the *Images* and *Applications* pages using the *Create an Instance* button ( ![create instance icon](/images/icons/create-instance-icon.png) ). You can also create instances from the details page of an image and an application.
 
@@ -142,7 +145,6 @@ When you create the instance from an application, the attributes you define for 
 ```{note}
 There may be more advanced scenarios while creating an instance that cannot be performed using the dashboard and may require using the `amc` CLI.
 ```
-
 Once you create an instance by providing the necessary attributes, you can view the instance and its status on the *Instances* page.
 
 You can view details about a particular instance when you click on the instance name in the *Instances* list page. The instance details page offers three types of information: *Overview*, *Terminal*, and *Logs*.
@@ -155,9 +157,8 @@ The *Logs* tab helps you debug issues with the instances as it provides  downloa
 
 The instance details page also contains all the available actions including streaming, setting up sharing, connecting ADB, starting or stopping the instance, and deleting the instance.
 
-```
-
-`````
+:::
+::::
 
 ## Related topics
 
