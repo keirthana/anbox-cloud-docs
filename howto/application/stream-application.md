@@ -74,7 +74,7 @@ If you are running the appliance, use `anbox-cloud-appliance.gateway` for all ga
 
 You can share an authenticated session with another user by running:
 
-    anbox-stream-gateway share <session_id> --description="Grant access to xxx"
+    anbox-stream-gateway session share <session_id> --description="Grant access to xxx"
 
 Running this command generates a presigned URL for the session, that is valid for a specified duration.
 
