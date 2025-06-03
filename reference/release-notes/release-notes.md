@@ -22,7 +22,7 @@ The following target dates for upcoming releases are not final and could vary de
 
 | Target date | Version | Planned updates |
 |----|----|----|
-| June 12, 2025 | Anbox Cloud 1.26.1 | * Android security updates<br/> * Bug fixes |
+| June 11, 2025 | Anbox Cloud 1.26.1 | * Android security updates<br/> * Bug fixes |
 | July 16, 2025 | Anbox Cloud 1.26.2 | * Android security updates<br/> * Bug fixes |
 | August 13, 2025 | Anbox Cloud 1.27.0 | * Improvements to the Terraform plan<br/> * User authentication and authorization<br/> * Secret management via Juju secretes<br/> * Android security updates<br/> * Bug fixes |
 
