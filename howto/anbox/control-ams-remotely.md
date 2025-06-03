@@ -1,21 +1,19 @@
 (howto-access-ams-remote)=
-# How to control AMS remotely
+# How to access AMS remotely
 
 By default, the Anbox Management Client (AMC) runs on the same machine as the Anbox Management Service (AMS) and connects to it through a UNIX socket.
 
-If you want to control AMS remotely, you can install the AMC on a separate machine and configure it to connect to AMS through a secure HTTP connection.
+You can also choose to install the AMC on a different machine and configure it to connect to AMS through a secure HTTP connection.
 
-## Install the AMC on a separate machine
+## Install AMC
 
-To install the AMC on a machine other than the machine running AMS, you must first install it.
-
-To do so, use the following command:
+Install the AMC snap:
 
     snap install amc
 
 ## Install a trusted certificate
 
-Controlling AMS remotely requires trusted security certificates. You can generate self-signed certificates or use certificates signed by a Certificate Authority. See {ref}`sec-security-cert-remote-clients` for more information.
+If you have installed AMC on a different machine than the AMS, controlling AMS remotely requires trusted security certificates. You can generate self-signed certificates or use certificates signed by a Certificate Authority. See {ref}`sec-security-cert-remote-clients` for more information.
 
 ### Self-signed certificates
 
@@ -49,16 +47,6 @@ To use a CA certificate, complete the following steps:
    * Copy the client certificate to `$HOME/snap/amc/current/client/client.crt`.
    * Copy the client key to `$HOME/snap/amc/current/client/client.key`
 
-## Expose the AMS HTTPS service
-
-To be able to access AMS remotely, its HTTPS service must be exposed.
-
-If you are running the Anbox Cloud Appliance, you can expose the service with the following command:
-
-    anbox-cloud-appliance ams expose
-
-If you are running a charmed Anbox Cloud deployment, the service is automatically exposed within the internal subnet. If this is sufficient, you do not need further configuration. If you want to access AMS from a machine that is in a different subnet, use `juju expose` to expose the service (see [How to expose a deployed application](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-applications/#manage-an-applications-public-availability-over-the-network) for instructions). Note that if you expose services externally, you should also add a load balancer or proxy to your deployment.
-
 ## Configure AMC to connect to AMS
 
 After setting up the security certificates, configure AMC to connect to the remote AMS. To do this, choose a name for the remote and enter the following command:
@@ -75,7 +63,7 @@ Finally, switch to the new remote by running the following command:
 
     amc remote set-default <your remote name>
 
-All invocations of the `amc` command will from now on use the new remote.
+After this step, all invocations of the `amc` command use the new remote.
 
 ## Related topics
 
