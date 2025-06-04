@@ -31,6 +31,7 @@ For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cl
 
 | Service               | Port(s)     | Protocol  | Exposed externally | Required | Description                            |
 |-----------------------|-------------|-----------|--------------------|----------|----------------------------------------|
+| LXD                   | 10000-11000 | UDP & TCP | yes                | no       | Instance service ports                 |
 | Coturn                | 5349        | UDP       | yes                | no       | STUN/TURN                              |
 | Coturn                | 60000-60100 | UDP       | yes                | no       | TURN relay ports                       |
 | UI and API            | 443         | TCP       | yes                | yes      | Reverse proxy providing access to UI and subset of API endpoints |
