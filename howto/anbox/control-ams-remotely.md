@@ -3,7 +3,7 @@
 
 By default, the Anbox Management Client (AMC) runs on the same machine as the Anbox Management Service (AMS) and connects to it through a UNIX socket.
 
-You can also choose to install the AMC on a different machine and configure it to connect to AMS through a secure HTTP connection.
+You can also choose to install AMC on a different machine and configure it to connect to AMS through a secure HTTP connection.
 
 ## Install AMC
 
