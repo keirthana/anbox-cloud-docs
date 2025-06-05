@@ -13,51 +13,51 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
-| `anbox-cloud-dashboard` | `1.26/stable` |  |  |
-| `ams-node-controller` (Deprecated) | `1.26/stable` |  |  |
-| `coturn` | `1.26/stable` |  |  |
-| `ams` | `1.26/stable` |  |  |
-| `anbox-stream-gateway`  | `1.26/stable` |  |  |
-| `ams-lxd` | `1.26/stable` |   |  |
-| `anbox-stream-agent` | `1.26/stable` |  |  |
-| `aar` | `1.26/stable` |  |  |
-| `anbox-cloud-cos-configuration` | `1.26/stable` |  |  |
+| `anbox-cloud-dashboard` | `1.26/stable` | 898 | 899 |
+| `ams-node-controller` (Deprecated) | `1.26/stable` | 894 | 895 |
+| `coturn` | `1.26/stable` | 871 | 872 |
+| `ams` | `1.26/stable` | 1063 | 1064 |
+| `anbox-stream-gateway`  | `1.26/stable` | 990 | 991 |
+| `ams-lxd` | `1.26/stable` | 950 | 951 |
+| `anbox-stream-agent` | `1.26/stable` | 983 | 984 |
+| `aar` | `1.26/stable` | 1048 | 1049 |
+| `anbox-cloud-cos-configuration` | `1.26/stable` | 181 | 182 |
 | `nats` | `latest/stable` | 9 | 11 |
 
 #### Ubuntu 24.04
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
-| `anbox-cloud-dashboard` | `1.26/stable` |  |  |
-| `ams-node-controller` | `1.26/stable` |   |  |
-| `coturn` | `1.26/stable` |  |  |
-| `ams` | `1.26/stable` |  |  |
-| `anbox-stream-gateway`  | `1.26/stable` |  |  |
-| `ams-lxd` | `1.26/stable` |   |  |
-| `anbox-stream-agent` | `1.26/stable` |  |  |
-| `aar` | `1.26/stable` |  |  |
-| `anbox-cloud-cos-configuration` | `1.26/stable` |  |  |
+| `anbox-cloud-dashboard` | `1.26/stable` | 900 | 901 |
+| `ams-node-controller` | `1.26/stable` | 896 | 897 |
+| `coturn` | `1.26/stable` | 873 | 874 |
+| `ams` | `1.26/stable` | 1065 | 1066 |
+| `anbox-stream-gateway`  | `1.26/stable` | 992 | 993 |
+| `ams-lxd` | `1.26/stable` | 952 | 953 |
+| `anbox-stream-agent` | `1.26/stable` | 985 | 986 |
+| `aar` | `1.26/stable` | 1050 | 1051 |
+| `anbox-cloud-cos-configuration` | `1.26/stable` | 183 | 184 |
 
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.26/stable` |  |
-| `anbox-cloud-core` | `1.26/stable` |  |
+| `anbox-cloud` | `1.26/stable` | 760 |
+| `anbox-cloud-core` | `1.26/stable` | 773 |
 
 ### Snaps
 
 | Name |  Channel | Version |
 |----------|--------------|---------|
-| `ams`    | `1.26/stable` |  |
-| `aar`    | `1.26/stable` |  |
-| `amc`    | `latest/stable` |  |
-| `ams-node-controller` | `1.26/stable` |  |
-| `anbox-cloud-dashboard` | `1.26/stable` |  |
-| `anbox-stream-agent` | `1.26/stable` |  |
-| `anbox-stream-gateway` | `1.26/stable` |  |
-| `anbox-connect` | `latest/stable` |  |
-| `anbox-cloud-appliance` | `1.26/stable` |  |
+| `ams`    | `1.26/stable` | `1.26.1-ba75d11df` |
+| `aar`    | `1.26/stable` | `1.26.1-ba75d11df` |
+| `amc`    | `latest/stable` | `1.26.1-ba75d11df` |
+| `ams-node-controller` | `1.26/stable` | `1.26.1-ba75d11df` |
+| `anbox-cloud-dashboard` | `1.26/stable` | `1.26.1-ba75d11df` |
+| `anbox-stream-agent` | `1.26/stable` | `1.26.1-ba75d11df` |
+| `anbox-stream-gateway` | `1.26/stable` | `1.26.1-ba75d11df` |
+| `anbox-connect` | `latest/stable` | `1.26.1-ba75d11df` |
+| `anbox-cloud-appliance` | `1.26/stable` | `1.26.1-ba75d11df` |
 
 ### Anbox images
 
@@ -65,20 +65,20 @@ The following Anbox images are available in two variants: one based on a contain
 
 | Name | Version |
 |----------|--------------|
-| `jammy:aaos15:amd64`    |  |
-| `jammy:aaos15:arm64`    |  |
-| `jammy:android15:amd64` |  |
-| `jammy:android15:arm64` |  |
-| `jammy:aaos14:amd64`    |  |
-| `jammy:aaos14:arm64`    |  |
-| `jammy:android14:amd64` |  |
-| `jammy:android14:arm64` |  |
-| `jammy:aaos13:amd64`    |  |
-| `jammy:aaos13:arm64`    |  |
-| `jammy:android13:amd64` |  |
-| `jammy:android13:arm64` |  |
-| `jammy:android12:amd64` |  |
-| `jammy:android12:arm64` |  |
+| `jammy:aaos15:amd64`    | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:aaos15:arm64`    | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:android15:amd64` | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:android15:arm64` | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:aaos14:amd64`    | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:aaos14:arm64`    | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:android14:amd64` | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:android14:arm64` | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:aaos13:amd64`    | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:aaos13:arm64`    | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:android13:amd64` | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:android13:arm64` | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:android12:amd64` | `1.26.1-20250604070547.gitd1402c1ff` |
+| `jammy:android12:arm64` | `1.26.1-20250604070547.gitd1402c1ff` |
 
 ## 1.26.0
 
