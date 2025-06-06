@@ -9,7 +9,7 @@ If you are on the `latest` track, upgrade to the newest snap version by running:
 
 Automatic updates may install the new version without manual intervention.
 
-For installations on a versioned track (e.g. 1.25), change the track explicitly with:
+For installations on a versioned track (e.g. 1.26), change the track explicitly with:
 
     sudo snap refresh --channel=1.26/stable anbox-cloud-appliance
 
