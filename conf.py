@@ -172,6 +172,22 @@ html_context = {
 
 slug = 'anbox-cloud'
 
+#######################
+# Sitemap configuration: https://sphinx-sitemap.readthedocs.io/
+#######################
+
+# Base URL of RTD hosted project
+
+html_baseurl = 'https://documentation.ubuntu.com/anbox-cloud/'
+
+# When configured with RTD variables, check for RTD environment so manual runs succeed:
+
+if 'READTHEDOCS_VERSION' in os.environ:
+    version = os.environ["READTHEDOCS_VERSION"]
+    sitemap_url_scheme = '{link}'
+else:
+    sitemap_url_scheme = '{link}'
+
 # Template and asset locations
 
 html_static_path = [".sphinx/_static"]
@@ -292,6 +308,7 @@ extensions = [
     "canonical_sphinx",
     "sphinxcontrib.cairosvgconverter",
     "sphinx_last_updated_by_git",
+    "sphinx_sitemap",
 ]
 
 # Excludes files or directories from processing
