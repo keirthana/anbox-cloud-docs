@@ -3,7 +3,17 @@
 
 This how-to guide explains the steps of how to set the automotive properties when using an AAOS application.
 
-> Watch the [video tutorial](https://www.youtube.com/watch?v=irx2ylMalos).
+**A video version of this guide is also available:**
+
+```{raw} html
+<iframe width="640" height="360"
+        src="https://www.youtube.com/embed/irx2ylMalos"
+        title="Set automotive properties using VHAL"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+</iframe>
+```
 
 ## Prerequisites
 
