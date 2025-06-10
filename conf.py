@@ -177,16 +177,13 @@ slug = 'anbox-cloud'
 #######################
 
 # Base URL of RTD hosted project
+# Include the trailing slash in the URL, it makes a difference
 
 html_baseurl = 'https://documentation.ubuntu.com/anbox-cloud/'
 
-# When configured with RTD variables, check for RTD environment so manual runs succeed:
+# URL scheme; {link} is the default configuration
 
-if 'READTHEDOCS_VERSION' in os.environ:
-    version = os.environ["READTHEDOCS_VERSION"]
-    sitemap_url_scheme = '{link}'
-else:
-    sitemap_url_scheme = '{link}'
+sitemap_url_scheme = "{link}"
 
 # Template and asset locations
 
