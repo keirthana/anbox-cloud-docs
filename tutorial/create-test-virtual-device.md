@@ -7,7 +7,17 @@ By the end of this tutorial, we will be familiar with an {term}`Application` and
 
 This tutorial has two paths - you can use the CLI or the dashboard, depending on your learning goals. The CLI is more powerful and gives you access to all features of Anbox Cloud, while the dashboard is a simpler user interface. For this tutorial, it does not matter which path you choose.
 
-> A [video version](https://youtu.be/_F2hGlpe0OY) of this tutorial using the dashboard is also available.
+**A video version of this tutorial using the dashboard is also available:**
+
+```{raw} html
+<iframe width="640" height="360"
+        src="https://www.youtube.com/embed/_F2hGlpe0OY"
+        title="Create a virtual Android device"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+</iframe>
+```
 
 ::::{tab-set}
 :::{tab-item} CLI
