@@ -52,7 +52,7 @@ When using Juju secrets to protect data shared across units in different models,
     juju offer nats:client
     ```
 
-    This command returns the offer name, for example: my-controller/my-model.nats
+    This command returns the offer name, for example: `my-controller/my-model.nats`
 2. Switch to the model containing `anbox-stream-agent` and relate it to the offer:
 
     ```
@@ -60,4 +60,4 @@ When using Juju secrets to protect data shared across units in different models,
     juju relate anbox-stream-agent <offer name>
     ```
 
-This establishs the relation and allows secrets to be securely shared across models.
+This establishes the relation and allows secrets to be securely shared across models.
