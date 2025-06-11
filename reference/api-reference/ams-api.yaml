@@ -672,12 +672,13 @@ paths:
         \         |\n   resources               |   no                           \
         \           |\n   inhibit_auto_updates    |   no                         \
         \             |\n   services                |   yes                      \
-        \               |\n   watchdog                |   yes                    \
-        \                 |\n   boot_activity           |   yes                  \
-        \                   |\n   required_permissions    |   yes                \
-        \                     |\n   video_encoder           |   yes              \
-        \                       |\n   manifest_version        |   yes            \
-        \                         |\n\nRequired Extensions:\n`application_partial_updates`:\
+        \               |\n   features                |   yes                    \
+        \                 |\n   watchdog                |   yes                  \
+        \                   |\n   boot_activity           |   yes                \
+        \                     |\n   required_permissions    |   yes              \
+        \                       |\n   video_encoder           |   yes            \
+        \                         |\n   manifest_version        |   yes          \
+        \                           |\n\nRequired Extensions:\n`application_partial_updates`:\
         \ To use those fields that would create a new\napplication version on application\
         \ update."
       consumes:
@@ -725,7 +726,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - application/json
+        - application/octet-stream
       tags:
         - applications
       summary: Get an application's manifest
@@ -887,7 +888,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - application/json
+        - application/octet-stream
       tags:
         - applications
       summary: Get the manifest for a specific version of an application
@@ -1219,13 +1220,13 @@ paths:
                     properties:
                       agent.api.fingerprint:
                         description: Fingerprint of certificate in the AMS trust store
-                          which is trusted when communicating with the stream agent
+                          which is trusted when communicating with the stream agent.
                         type: string
                         default: ''
                         example: fd42316b32df
                       agent.api.token:
                         description: Token to be used for API authentication with
-                          stream agent
+                          stream agent.
                         type: string
                         default: ''
                         example: foobar
@@ -1312,29 +1313,49 @@ paths:
                         x-deprecated-since: '1.20'
                         example: webrtc
                       container.features:
-                        description: '"*(Deprecated)* Comma-separated list of
+                        description: '*(Deprecated)* Comma-separated list of
 
                           features to enable. This configuration
 
                           item is deprecated since 1.20, use `instance.features`
 
-                          instead."'
+                          instead.'
                         type: string
                         default: ''
                         x-deprecated-since: '1.20'
                         example: enable_virtual_keyboard,foo
                       container.security_updates:
-                        description: '*(Deprecated)* If set to `true`, automatic Ubuntu
-                          security updates are applied during the application bootstrap
-                          process. `false` disables this.'
+                        description: '*(Deprecated)* If set to `true`, automatic
+
+                          Ubuntu security updates are applied during
+
+                          the application bootstrap process. `false`
+
+                          disables this. This configuration item is
+
+                          deprecated since 1.20, use `instance.security_updates`
+
+                          instead.'
                         type: boolean
                         default: true
                         x-deprecated-since: '1.20'
                       core.debug_address:
-                        description: Address used to expose debug information on
+                        description: Address used to expose debug information on.
                         type: string
                         default: ''
                         example: https://127.0.0.1:9090
+                      core.https_address:
+                        description: (read only) Address which the AMS servicewill
+                          listen on
+                        type: string
+                        default: ''
+                        example: 127.0.0.1:8444
+                      core.max_requests_per_second:
+                        description: Maximum number of requests allowed on the HTTPS
+                          endpoint
+                        type: int32
+                        default: 1000
+                        example: 100
                       core.proxy_http:
                         description: HTTP proxy to use for HTTP requests that AMS
                           performs.
@@ -1391,7 +1412,7 @@ paths:
                           - single
                         example: single
                       gpu.type:
-                        description: 'Type of GPU: `none`, `intel`, `nvidia`, `amd`'
+                        description: 'Type of GPU: `none`, `intel`, `nvidia`, `amd`.'
                         type: string
                         default: none
                         enum:
@@ -1405,7 +1426,7 @@ paths:
 
                           untrusted certificates provided by the
 
-                          configured image server."'
+                          configured image server.'
                         type: boolean
                         default: false
                       images.auth:
@@ -1468,7 +1489,7 @@ paths:
                       instance.network_proxy:
                         description: 'Network proxy to use inside the instances.
 
-                          This value must have the format `<hostname>:<port>`'
+                          This value must have the format `<hostname>:<port>`.'
                         type: string
                         default: ''
                         example: myproxy.com:9090
@@ -1562,7 +1583,7 @@ paths:
 
                           in AMS uses to distribute instances across
 
-                          available LXD nodes: `binpack`, `spread`<br/>
+                          available LXD nodes: `binpack`, `spread`.<br/>
 
                           Choose a scheduling strategy that best suits
 
@@ -2163,6 +2184,26 @@ paths:
             dictionaries of the given format for events'
           schema:
             $ref: '#/definitions/Event'
+        default:
+          $ref: '#/responses/InternalServerError'
+  /1.0/events/auth:
+    post:
+      description: 'This endpoint will issue a JWT token which can be used to connect
+        to
+
+        the events websocket endpoint GET /1.0/events'
+      produces:
+        - application/json
+      tags:
+        - events
+      summary: Get authentication token for events websocket
+      operationId: events_auth
+      responses:
+        '200':
+          description: This api endpoint returns a signed JWT token with expiry in
+            the payload.
+          schema:
+            $ref: '#/definitions/EventAuth'
         default:
           $ref: '#/responses/InternalServerError'
   /1.0/images:
@@ -3025,6 +3066,27 @@ paths:
           $ref: '#/responses/ErrorNotFound'
         '500':
           $ref: '#/responses/InternalServerError'
+  /1.0/metrics:
+    get:
+      description: 'Required Extensions:
+
+        `metrics_api_endpoint`: The use of this API requires this extension to be
+        present'
+      produces:
+        - application/octet-stream
+      tags:
+        - metrics
+      summary: Get metrics in the Prometheus data format from AMS.
+      operationId: metrics_get
+      responses:
+        '200':
+          description: Success response of the service
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '403':
+          $ref: '#/responses/ErrorForbidden'
+        default:
+          $ref: '#/responses/InternalServerError'
   /1.0/nodes:
     get:
       description: This endpoint returns a list of available nodes known to AMS.
@@ -3457,6 +3519,108 @@ paths:
                   $ref: '#/definitions/Operation'
         default:
           $ref: '#/responses/InternalServerError'
+  /1.0/registry/applications:
+    get:
+      produces:
+        - application/json
+      tags:
+        - registry_applications
+      summary: Get a list of applications stored in the registry.
+      operationId: registry_applications_get
+      responses:
+        '200':
+          description: Success response of the service
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/CollectionResponse'
+            properties:
+              metadata:
+                type: array
+                items:
+                  $ref: '#/definitions/RegistryApplication'
+        default:
+          $ref: '#/responses/InternalServerError'
+  /1.0/registry/applications/pull:
+    post:
+      description: This endpoints allows pulling a single application from the registry.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      tags:
+        - registry_applications
+      summary: Pull an application from the registry
+      operationId: registry_applications_pull
+      parameters:
+        - type: string
+          description: ID of the application to pull
+          name: id
+          in: path
+          required: true
+      responses:
+        '202':
+          description: Success response of the service
+          schema:
+            $ref: '#/definitions/OperationResponse'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        default:
+          $ref: '#/responses/InternalServerError'
+  /1.0/registry/applications/push:
+    post:
+      description: This endpoints allows pushing a single application to the registry.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      tags:
+        - registry_applications
+      summary: Push an application to the registry
+      operationId: registry_applications_push
+      parameters:
+        - type: string
+          description: ID of the application to push
+          name: id
+          in: path
+          required: true
+      responses:
+        '202':
+          description: Success response of the service
+          schema:
+            $ref: '#/definitions/OperationResponse'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        default:
+          $ref: '#/responses/InternalServerError'
+  /1.0/registry/applications/{id}:
+    delete:
+      description: This endpoint deletes a single application from the registry.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      tags:
+        - registry_applications
+      summary: Delete an application from the registry
+      operationId: registry_applications_delete
+      parameters:
+        - type: string
+          description: ID of the application to delete
+          name: id
+          in: path
+          required: true
+      responses:
+        '202':
+          description: Success response of the service
+          schema:
+            $ref: '#/definitions/OperationResponse'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        default:
+          $ref: '#/responses/InternalServerError'
   /1.0/tasks:
     get:
       description: This endpoint returns a list of tasks in AMS.
@@ -3820,6 +3984,14 @@ definitions:
         type: integer
         format: int64
         example: 2
+      gpu-type:
+        description: 'Type of the GPU to select for the instance. If not given the
+
+          GPU with the minimum usage is assigned to the instance on the
+
+          node it is scheduled on. Possible values are: amd, intel, nvidia'
+        type: string
+        example: amd
       memory:
         description: Memory to be assigned to the application
         type: string
@@ -3848,6 +4020,14 @@ definitions:
         type: integer
         format: int64
         example: 2
+      gpu-type:
+        description: 'Type of the GPU to select for the instance. If not given the
+
+          GPU with the minimum usage is assigned to the instance on the
+
+          node it is scheduled on. Possible values are: amd, intel, nvidia'
+        type: string
+        example: amd
       memory:
         description: Memory to be assigned to the application
         type: string
@@ -4526,6 +4706,14 @@ definitions:
         enum:
           - operation
           - lifecycle
+  EventAuth:
+    description: EventAuth defines the structure of the response sent as metadata
+      for events authentication endpoint
+    type: object
+    properties:
+      token:
+        description: Token represents a signed JWT token issued by AMS.
+        type: string
   Image:
     description: Image represents an image available in AMS
     type: object
@@ -4618,6 +4806,11 @@ definitions:
         type: integer
         format: int64
         example: 1610641117
+      error_message:
+        description: 'ErrorMessage describes a potential error which has occured while
+
+          downloading the image.'
+        type: string
       fingerprint:
         description: Fingerprint of the image version
         type: string
@@ -4882,7 +5075,8 @@ definitions:
         type: array
         items:
           type: string
-        example: /bin/ls
+        example:
+          - /bin/ls
       environment:
         description: Environment to setup when the command is executed.
         type: object
@@ -4931,6 +5125,14 @@ definitions:
         type: integer
         format: int64
         example: 1
+      gpu-type:
+        description: 'Type of the GPU to select for the instance. If not given the
+
+          GPU with the minimum usage is assigned to the instance on the
+
+          node it is scheduled on. Possible values are: amd, intel, nvidia'
+        type: string
+        example: amd
       memory:
         description: Memory assigned to the instance in bytes
         type: integer
@@ -5152,6 +5354,15 @@ definitions:
             type: integer
             format: int64
             example: 1
+          gpu-type:
+            description: 'Type of the GPU to select for the instance. If not given
+              the
+
+              GPU with the minimum usage is assigned to the instance on the
+
+              node it is scheduled on. Possible values are: amd, intel, nvidia'
+            type: string
+            example: amd
           memory:
             description: Memory the instance should get assigned in bytes.
             type: integer
@@ -5404,6 +5615,11 @@ definitions:
         type: integer
         format: int64
         example: 20
+      type:
+        description: 'Type is the type of the GPU. Possible values are: nvidia, amd,
+          intel'
+        type: string
+        example: nvidia
   NodeGPUAllocation:
     description: NodeGPUAllocation describes a single allocation on a GPU
     type: object
@@ -5650,6 +5866,10 @@ definitions:
         description: Trust password for the LXD instance
         type: string
         example: sUp3rs3cr3t
+      trust_token:
+        description: Trust token for the LXD instance
+        type: string
+        example: csdflkj3lks
       unmanaged:
         description: Flag used to control if AMS can manage the LXD node
         type: boolean
@@ -5735,6 +5955,28 @@ definitions:
       type:
         type: string
         example: async
+  RegistryApplication:
+    description: RegistryApplication describes a single application available in the
+      registry
+    type: object
+    properties:
+      architectures:
+        type: array
+        items:
+          type: string
+      boot_package:
+        type: string
+      instance_type:
+        type: string
+      name:
+        type: string
+      tags:
+        type: array
+        items:
+          type: string
+      versions: {}
+      vm:
+        type: boolean
   ServiceStatus:
     description: ServiceStatus represents the status of the AMS service
     type: object
