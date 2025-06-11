@@ -74,7 +74,7 @@ If you are running the appliance, use `anbox-cloud-appliance.gateway` for all ga
 
 You can share an authenticated session with another user by running:
 
-    anbox-stream-gateway share <session_id> --description="Grant access to xxx"
+    anbox-stream-gateway session share <session_id> --description="Grant access to xxx"
 
 Running this command generates a presigned URL for the session, that is valid for a specified duration.
 
@@ -103,7 +103,17 @@ The *Logs* tabs allows you to view logs as you interact with your Android stream
 
 In the *Logs* tabs, you can toggle auto-scroll, pause and resume log messages, clear the logs, adjust the verbosity of the logs, search using free text search or regular expressions, and export the logs.
 
-For a detailed demonstration of the *Developer Tools* and their full capabilities, refer to: [Developer Tools](https://youtu.be/M1N8pfIUjOI?t=257&si=DJsoziD0NRTrLPff).
+**For a detailed demonstration of the *Developer Tools* and their full capabilities, see this video:**
+
+```{raw} html
+<iframe width="640" height="360"
+        src="https://www.youtube.com/embed/M1N8pfIUjOI?start=257"
+        title="Developer tools demonstration"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+</iframe>
+```
 
 :::
 ::::

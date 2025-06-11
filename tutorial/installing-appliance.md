@@ -9,7 +9,17 @@ Before beginning the tutorial, it is important to understand that:
 
 - Remember that installing the appliance will take over the entire instance, install packages and override existing components. For example, if you have existing LXD containers, installing and initializing the appliance could override any existing configuration.
 
-> A [video version](https://youtu.be/D9iEd88IYBs) of this tutorial is also available.
+**A video version of this tutorial is also available:**
+
+```{raw} html
+<iframe width="640" height="360"
+        src="https://www.youtube.com/embed/D9iEd88IYBs"
+        title="How to install Anbox Cloud Appliance"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+</iframe>
+```
 
 ## Prerequisites
 

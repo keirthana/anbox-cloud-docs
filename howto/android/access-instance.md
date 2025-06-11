@@ -6,6 +6,18 @@ For certain scenarios, accessing an individual instance for debugging or develop
 - Using the `anbox-connect` command. This establishes secure Android Debug Bridge (ADB) connections.
 - Exposing the ADB service upon Anbox instance creation. This allows remote connections to instances over a network.
 
+**A video demonstration of how to use an ADB connection to debug an Android application with Android studio is available:**
+
+```{raw} html
+<iframe width="640" height="360"
+        src="https://www.youtube.com/embed/qsFF0eqj_JE"
+        title="Debug an Android application with Android studio"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+</iframe>
+```
+
 ## Access the Android instance using `anbox-connect`
 
 Since the 1.23.0 release, Anbox Cloud allows users to create a secure ADB connection through the `anbox-connect` command without exposing the [ADB service](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/instance/expose-services/). This method is highly recommended for securely connecting to remote Android instances, offering a safe and efficient means of managing ADB connections.
@@ -56,8 +68,6 @@ On the *Instances* page, locate a running instance and click *Connect ADB* ( ![C
 After you authorize the connection, copy the `anbox-connect <connection_url>` provided.
 :::
 ::::
-
-Watch this [video](https://youtu.be/qsFF0eqj_JE) for a detailed demonstration of how to use an ADB connection to debug an Android application with Android studio.
 
 Each presigned URL can only be used to establish a single ADB connection. If multiple users attempt to use the same presigned URL, any existing ADB connection will be interrupted, to allow the new request to succeed.
 

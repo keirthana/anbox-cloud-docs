@@ -172,6 +172,19 @@ html_context = {
 
 slug = 'anbox-cloud'
 
+#######################
+# Sitemap configuration: https://sphinx-sitemap.readthedocs.io/
+#######################
+
+# Base URL of RTD hosted project
+# Include the trailing slash in the URL, it makes a difference
+
+html_baseurl = 'https://documentation.ubuntu.com/anbox-cloud/'
+
+# URL scheme; {link} is the default configuration
+
+sitemap_url_scheme = "{link}"
+
 # Template and asset locations
 
 html_static_path = [".sphinx/_static"]
@@ -292,6 +305,7 @@ extensions = [
     "canonical_sphinx",
     "sphinxcontrib.cairosvgconverter",
     "sphinx_last_updated_by_git",
+    "sphinx_sitemap",
 ]
 
 # Excludes files or directories from processing
@@ -301,6 +315,8 @@ exclude_patterns = [
     'README.md',
     'SECURITY.md',
     '.github/pull_request_template.md',
+    'venv/**',
+    '**/*.dist-info/**',
 ]
 
 # Adds custom CSS files, located under 'html_static_path'
