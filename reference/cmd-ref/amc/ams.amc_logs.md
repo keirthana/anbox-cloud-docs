@@ -1,14 +1,16 @@
 ## ams.amc logs
 
-Show runtime logs of an instance
+Show runtime logs of a running instance
 
 ### Synopsis
 
-Show runtime logs of an instance.
+Show runtime logs of a running instance.
 
 Anbox instances run a regular Ubuntu system with a nested Android container.
 You can display system-level logs of the Anbox instance or the nested Android
 instance.
+
+NOTE: The specified instance must be in the 'started' or 'running' state for this command to show output.
 
 ```
 ams.amc logs <instance_id> [flags]
@@ -17,7 +19,7 @@ ams.amc logs <instance_id> [flags]
 ### Examples
 
 ```
-Show the logs of the Ubuntu instance:
+Show the runtime logs of the Ubuntu instance:
 
 $ amc logs burp70p3p7j1icvtebig
 

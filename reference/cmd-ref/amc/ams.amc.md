@@ -32,7 +32,7 @@ with Anbox Cloud.
 * [ams.amc init](ams.amc_init.md)	 - Create an instance but do not start it immediately
 * [ams.amc launch](ams.amc_launch.md)	 - Launch an instance
 * [ams.amc list](ams.amc_list.md)	 - List instances
-* [ams.amc logs](ams.amc_logs.md)	 - Show runtime logs of an instance
+* [ams.amc logs](ams.amc_logs.md)	 - Show runtime logs of a running instance
 * [ams.amc monitor](ams.amc_monitor.md)	 - Listen for events generated in AMS
 * [ams.amc node](ams.amc_node.md)	 - Manage nodes
 * [ams.amc remote](ams.amc_remote.md)	 - Interact with remote AMS daemons
