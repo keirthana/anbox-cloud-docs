@@ -6,6 +6,7 @@ Show an instance log file
 
 Show an instance log file.
 
+This command is used to get logs from an instance in 'stopped' or 'error' state.
 There are different log files that you can display. Use the following
 command to get the names of the available log files:
 	amc show <instance_id>
