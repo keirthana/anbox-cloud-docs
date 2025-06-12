@@ -61,6 +61,8 @@ Use the following command to prevent the node from accepting new instances:
 
 GPU slots are used to share GPUs among instances. Each GPU-equipped cluster node is configured with a number of GPU slots and a number of GPU encoder slots. See {ref}`sec-node-configuration` for the default values that are used. Nodes without GPU are configured with 0 GPU slots and 0 GPU encoder slots.
 
+The number of GPU slots assigned per node is arbitrary and can be changed when creating an application or an instance. It is used only to manage and assign hardware resources. When using GPU encoding, the number of GPU slots per node is limited by the number of GPU encoder slots, i.e., the number of GPU slots cannot exceed the number of GPU encoder slots. When using software encoding, GPU slots can be more than the GPU encoder slots.
+
 Use the following commands to change the number of GPU slots and GPU encoder slots for a node:
 
     amc node set <node> gpu-slots <number>
