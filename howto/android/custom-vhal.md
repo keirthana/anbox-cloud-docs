@@ -1,5 +1,5 @@
 (howto-replace-anbox-vhal)=
-# How to replace the Anbox VHAL with your custom implementation
+# Replace Anbox VHAL
 
 *since 1.22.0*
 

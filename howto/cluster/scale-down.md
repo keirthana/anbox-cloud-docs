@@ -1,5 +1,5 @@
 (howto-scale-down-cluster)=
-# How to scale down a LXD cluster
+# Scale down a LXD cluster
 
 Scaling down a LXD cluster involves more checks than scaling up.
 

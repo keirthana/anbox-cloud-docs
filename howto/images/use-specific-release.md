@@ -1,5 +1,5 @@
 (howto-use-specific-release)=
-# How to use a specific release
+# Use a specific release
 
 With every new Anbox Cloud release, updated images are published. By default, the latest image release is pulled by AMS, but you can request a specific release with the following syntax:
 

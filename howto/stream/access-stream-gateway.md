@@ -1,5 +1,5 @@
 (howto-access-stream-gateway)=
-# How to access the stream gateway
+# Access the stream gateway
 
 Similar to the Anbox Management Service (AMS), the stream gateway exposes its API over an HTTP interface. Clients can be anything from the Anbox Cloud web dashboard to any custom client that you develop.
 

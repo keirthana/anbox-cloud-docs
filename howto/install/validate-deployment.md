@@ -1,5 +1,5 @@
 (howto-validate-deployment)=
-# How to validate the deployment
+# Validate your deployment
 
 Anbox Cloud includes a test suite which allows the validation of an Anbox Cloud deployment. It comes with various tests covering different features of Anbox Cloud and can be used to ensure everything works as expected.
 

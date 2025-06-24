@@ -1,5 +1,5 @@
 (howto-deploy-aar)=
-# How to deploy an AAR
+# Deploy
 
 An Anbox Application Registry (AAR) should be deployed on a single unit. After deploying, you can continue to configure and connect it with all AMS units that you want to synchronize.
 

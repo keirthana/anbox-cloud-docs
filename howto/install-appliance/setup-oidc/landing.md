@@ -1,5 +1,5 @@
 (howto-appliance-enable-oidc)=
-# How to enable custom identity provider support
+# Enable custom identity provider
 
 The Anbox Cloud Appliance has support for custom identity providers for authentication through the use of [OpenID Connect](https://openid.net/developers/discover-openid-and-openid-connect/).
 

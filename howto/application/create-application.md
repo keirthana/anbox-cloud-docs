@@ -1,5 +1,5 @@
 (howto-create-application)=
-# How to create an application
+# Create an application
 
 An application can be created using the Anbox Cloud dashboard or through the CLI.
 

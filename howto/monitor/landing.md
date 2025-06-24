@@ -1,5 +1,5 @@
 (howto-monitor-anbox)=
-# How to monitor Anbox Cloud
+# Monitor Anbox Cloud
 
 Anbox Cloud collects various metrics and makes them accessible through API endpoints. While Anbox Cloud does not provide its own observability solution, it supports integrating with external solutions.
 

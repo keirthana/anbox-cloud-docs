@@ -1,5 +1,5 @@
 (howto-expose-services)=
-# How to expose services on an instance
+# Expose services on an instance
 
 AMS allows an instance to expose a service to the outer network. For that, it provides a feature called instance services which let you define a port to expose on the instance endpoints. The set of services to expose is defined when the instance is launched. For example, the following command exposes port `22` on the instance's private endpoint:
 

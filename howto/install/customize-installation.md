@@ -1,5 +1,5 @@
 (howto-customize-installation)=
-# How to customize your installation
+# Customize installation
 
 There are two main ways to customize the Anbox Cloud deployment:
 

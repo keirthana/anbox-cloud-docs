@@ -1,5 +1,5 @@
 (howto-integrate-hidl)=
-# How to integrate Anbox HIDL interface with a custom VHAL implementation
+# Integrate Anbox HIDL interface
 
 The Anbox HIDL interface is used in the default Anbox VHAL implementation. This document guides you through the steps for setting up and integrating the Anbox HIDL interface with your custom VHAL implementation.
 

@@ -1,5 +1,5 @@
 (howto-install-appliance-github)=
-# How to install the appliance within a GitHub Action workflow
+# Install on GitHub
 
 For use within a [GitHub Action workflow](https://github.com/features/actions), a simple action named [`canonical/anbox-cloud-github-action`](https://github.com/canonical/anbox-cloud-github-action) is available. This action can be easily integrated into existing workflows and it will install and configure the Anbox Cloud Appliance for direct use on a GitHub runner.
 

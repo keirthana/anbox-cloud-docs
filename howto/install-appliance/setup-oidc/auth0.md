@@ -1,5 +1,5 @@
 (howto-oidc-auth0)=
-# How to configure Auth0
+# Configure Auth0
 
 Auth0 is a flexible, drop-in solution to add authentication services to your applications. Auth0 supports OIDC and can be used to authenticate users in the Anbox Cloud Dashboard. This guide shows you how to set up Auth0 as the login provider for the dashboard.
 

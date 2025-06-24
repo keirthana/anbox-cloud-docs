@@ -1,5 +1,5 @@
 (howto-create-addon)=
-# How to create an addon
+# Create an addon
 
 Addons help you extend and customize your applications in Anbox Cloud. To create or update an addon, you need a specific file structure for the directory containing your addon files.
 

@@ -1,5 +1,5 @@
 (howto-access-ams-remote)=
-# How to access AMS remotely
+# Access AMS remotely
 
 By default, the Anbox Management Client (AMC) runs on the same machine as the Anbox Management Service (AMS) and connects to it through a UNIX socket.
 

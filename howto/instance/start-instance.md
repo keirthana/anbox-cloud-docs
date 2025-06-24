@@ -1,5 +1,5 @@
 (howto-start-instance)=
-# How to start an instance
+# Start an instance
 
 When an instance is either initialized with the `amc init` command or stopped with the `amc stop` command, you must start it explicitly with the `amc start` command:
 

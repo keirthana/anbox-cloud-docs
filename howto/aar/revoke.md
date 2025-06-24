@@ -1,6 +1,6 @@
 (howto-revoke-aar)=
 
-# How to revoke an AAR client
+# Revoke a client
 
 If a client gets compromised, it's important to block its access to the Anbox Application Registry (AAR) by revoking its certificate.
 
