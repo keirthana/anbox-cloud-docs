@@ -228,6 +228,7 @@ redirects = {
     'explanation/cryptography/crypto_stream_gateway': '../../security/streaming-stack',
     'explanation/anbox-security': '../security/landing',
     'howto/install-appliance/enable-oidc': '../setup-oidc/landing/',
+    'howto/android/access-instance': '../access-android-instance',
 }
 
 

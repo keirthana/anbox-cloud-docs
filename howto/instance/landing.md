@@ -13,9 +13,10 @@ Delete an instance <delete-instance>
 Expose services on an instance <expose-services>
 Configure geographic location <configure-geographic-location>
 List instances <list-instances>
-View instance logs <view-instance-logs>
+share-session
 Start an instance <start-instance>
 Stop an instance <stop-instance>
+View instance logs <view-instance-logs>
 Wait for an instance <wait-for-instance>
 ```
 See {ref}`exp-instances` for an introduction to how instances are used in Anbox Cloud.

@@ -6,7 +6,7 @@ The following guides in this section describe how to work with Android in Anbox 
 ```{toctree}
 :titlesonly:
 
-Access Android instance <access-instance>
+Access Android instance <access-android-instance>
 Debug graphics with Renderdoc <debug-graphics-renderdoc>
 Integrate Anbox HIDL interface <integrate-hidl>
 Replace the Anbox VHAL <custom-vhal>
