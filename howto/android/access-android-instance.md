@@ -15,15 +15,13 @@ Here's a video demonstration of how to access an Android instance securely using
 </iframe>
 ```
 
-```{note}
-This guide demonstrates the steps using the appliance deployment. If you are using the charmed deployment, use `anbox-stream-gateway` instead of `anbox-cloud-appliance.gateway` in the commands.
-```
-
 ## Preparation
 
-- {ref}`tut-installing-appliance`
-- Install anbox-connect on your host machine: `snap install anbox-connect`
-- [Install ADB](https://developer.android.com/studio/releases/platform-tools) on your host machine. You can [install Android Studio](https://developer.android.com/studio) which also installs the Android SDK (which includes ADB as part of the platform tools). You can choose to use another IDE of your choice and install ADB independently.
+{ref}`tut-installing-appliance`.
+
+Install anbox-connect on your host machine: `snap install anbox-connect`.
+
+[Install ADB](https://developer.android.com/studio/releases/platform-tools) on your host machine. You can [install Android Studio](https://developer.android.com/studio) which also installs the Android SDK (which includes ADB as part of the platform tools). You can choose to use another IDE of your choice and install ADB independently.
 
 ## Connect to the Android instance
 
@@ -38,6 +36,10 @@ Wait until the instance is running. To check, run:
     amc ls
 
 After verifying that the instance is running and has a session ID, share the session:
+
+```{note}
+This guide demonstrates the steps using the appliance deployment. If you are using the charmed deployment, use `anbox-stream-gateway` instead of `anbox-cloud-appliance.gateway` in the commands.
+```
 
     sudo anbox-cloud-appliance.gateway session share <session_id> --description="remote access to demo instance"
 
