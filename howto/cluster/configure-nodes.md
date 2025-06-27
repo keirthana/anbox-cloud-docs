@@ -1,5 +1,5 @@
 (howto-configure-cluster-nodes)=
-# How to configure cluster nodes
+# Configure cluster nodes
 
 Your cluster or multi-node appliance might contain nodes with different resources and different capacity. Therefore, each node can be configured separately.
 

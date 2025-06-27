@@ -1,5 +1,5 @@
 (howto-upgrade)=
-# How to upgrade Anbox Cloud
+# Upgrade Anbox Cloud
 
 The following guides in this section describe how to upgrade your charmed or appliance installation.
 
@@ -10,8 +10,8 @@ When possible, Anbox Cloud automatically enables [Livepatch](https://ubuntu.com/
 ```{toctree}
 :titlesonly:
 
-Upgrade the Appliance <upgrade-appliance>
-Upgrade Anbox Cloud <upgrade-anbox>
+upgrade-appliance
+upgrade-anbox
 ```
 
 (sec-control-updates)=

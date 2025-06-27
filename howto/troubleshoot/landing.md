@@ -1,5 +1,5 @@
 (howto-ts-anbox-cloud)=
-# How to troubleshoot Anbox Cloud
+# Troubleshoot Anbox Cloud
 
 The following troubleshooting guides describe some commonly encountered problems with Anbox Cloud and provide instructions for resolving them. If you encounter an issue with Anbox Cloud, check if any of the following scenarios help in resolving your issue.
 
@@ -12,7 +12,7 @@ Issues with clustering <troubleshoot-cluster-issues>
 Issues with initial setup <troubleshoot-initial-setup>
 Issues with streaming <troubleshoot-streaming-issues>
 Issues with web dashboard <troubleshoot-dashboard-issues>
-View logs <view-logs>
+view-logs
 ```
 
 ```{note}

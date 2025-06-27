@@ -1,5 +1,5 @@
 (howto-deploy-anbox-juju)=
-# How to deploy Anbox Cloud with Juju
+# Deploy with Juju
 
 Anbox Cloud supports various public clouds, such as AWS, Azure and Google. To deploy Anbox Cloud in a cloud environment, you use Juju.
 

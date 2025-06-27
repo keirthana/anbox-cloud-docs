@@ -1,5 +1,5 @@
 (howto-port-android-apps)=
-# How to port Android apps
+# Port Android apps
 
 When porting an Android app to Anbox Cloud (usually in the form of an APK), there are a few issues that might cause your app to not function properly:
 
@@ -13,9 +13,9 @@ When porting an Android app to Anbox Cloud (usually in the form of an APK), ther
 ```{toctree}
 :hidden:
 
-Choose APK architecture <choose-apk-architecture>
-Configure Watchdog <configure-watchdog>
-Grant runtime permissions <grant-runtime-permissions>
-Install APK as system app <install-apk-system-app>
-Port APKs with OBB file <port-apk-obb-files>
+choose-apk-architecture
+configure-watchdog
+grant-runtime-permissions
+install-apk-system-app
+port-apk-obb-files
 ```

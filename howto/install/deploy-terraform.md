@@ -1,5 +1,5 @@
 (howto-deploy-anbox-terraform)=
-# How to deploy Anbox Cloud with Terraform
+# Deploy with Terraform
 
 To deploy Anbox Cloud using Terraform, you need the Juju provider for it.
 

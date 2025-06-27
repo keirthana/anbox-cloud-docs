@@ -1,5 +1,5 @@
 (howto-resize-lxd-storage)=
-# How to resize LXD storage
+# Resize LXD storage
 
 Resizing the LXD storage pool that Anbox Cloud uses is not recommended. Before you deploy Anbox Cloud, you should analyze and plan the capacity you need, so that you can size the storage that you need correctly right from the start. See {ref}`exp-capacity-planning` for detailed information.
 

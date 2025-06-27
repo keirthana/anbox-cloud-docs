@@ -1,5 +1,5 @@
 (howto-update-application)=
-# How to update an application
+# Update an application
 
 Updating an existing application works similar to creating a new one. Each time an existing application is updated, it is extended with a new version. All versions that an application currently has are individually usable, but only one can be launched at a time.
 

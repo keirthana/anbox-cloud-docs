@@ -1,5 +1,5 @@
 (howto-install-appliance-aws)=
-# How to install the appliance on AWS
+# Install on AWS
 
 You can install the Anbox Cloud Appliance on AWS in one of two ways:
 

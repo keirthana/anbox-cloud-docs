@@ -1,5 +1,5 @@
 (howto-develop-platform-plugin)=
-# How to develop a platform plugin
+# Develop a platform plugin
 
 Anbox Cloud provides a platform SDK that allows the development of custom platform plugins for the Anbox runtime, for use cases where the default platforms (see {ref}`exp-platforms`) don't fit. For example, a custom platform can be used to integrate a custom streaming protocol with the Anbox runtime.
 

@@ -1,5 +1,5 @@
 (howto-oidc-ory)=
-# How to configure Ory Hydra
+# Configure Ory Hydra
 
 Ory Hydra is an easy solution to authenticate users in the Anbox Cloud Dashboard. It supports both local user accounts and social login options, including Google, Facebook, Microsoft, GitHub, Apple and others. This guide shows you how to set up Ory Hydra as the login provider for the dashboard.
 

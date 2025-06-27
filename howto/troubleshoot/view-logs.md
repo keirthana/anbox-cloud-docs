@@ -1,5 +1,5 @@
 (howto-ts-view-logs)=
-# How to view logs
+# View logs
 
 There are two types of logs that help you understand what is happening in your Anbox Cloud installation:
 

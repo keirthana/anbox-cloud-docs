@@ -1,5 +1,5 @@
 (howto-set-automotive-properties)=
-# How to set automotive properties using VHAL
+# Set automotive properties using VHAL
 
 This how-to guide explains the steps of how to set the automotive properties when using an AAOS application.
 

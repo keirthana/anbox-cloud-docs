@@ -1,5 +1,5 @@
 (howto-install-appliance)=
-# How to install the Anbox Cloud Appliance
+# Install the appliance
 
 The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machine. This offering is well suited for initial prototype and small scale deployments.
 
@@ -29,9 +29,9 @@ The Anbox Cloud Appliance is currently available on the following CI/CD platform
 ```{toctree}
 :hidden:
 
-Enable custom identity provider support <setup-oidc/landing>
-Install on AWS <install-on-aws>
-Install on Azure <install-on-azure>
-Install on Google Cloud <install-on-google-cloud>
-Install on GitHub <install-on-github>
+Enable custom IdP <setup-oidc/landing>
+install-on-aws
+install-on-azure
+install-on-google-cloud
+install-on-github
 ```

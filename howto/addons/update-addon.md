@@ -1,5 +1,5 @@
 (howto-update-addons)=
-# How to update addons
+# Update addons
 
 You can update an existing addon with a new version by using the following command:
 

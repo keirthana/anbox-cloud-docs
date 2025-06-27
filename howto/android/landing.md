@@ -1,14 +1,14 @@
 (howto-Android)=
-# How to work with Android in Anbox Cloud
+# Work with Android
 
 The following guides in this section describe how to work with Android in Anbox Cloud:
 
 ```{toctree}
 :titlesonly:
 
-Access Android instance <access-android-instance>
-Debug graphics with Renderdoc <debug-graphics-renderdoc>
-Integrate Anbox HIDL interface <integrate-hidl>
-Replace the Anbox VHAL <custom-vhal>
-Set automotive properties <set-automotive-properties>
+access-instance
+debug-graphics-renderdoc
+integrate-hidl
+custom-vhal
+set-automotive-properties
 ```

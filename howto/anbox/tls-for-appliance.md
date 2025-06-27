@@ -1,5 +1,5 @@
 (howto-set-up-tls)=
-# Set up TLS for the Anbox Cloud Appliance
+# Set up TLS for the appliance
 
 The Anbox Cloud Appliance uses a self-signed certificate to provide HTTPS services. If you want to serve the appliance over HTTPS using a valid SSL/TLS certificate, follow the steps in this document to generate and install a valid SSL/TLS certificate on the Anbox Cloud Appliance.
 

@@ -1,5 +1,5 @@
 (howto-develop-addons-devmode)=
-# How to develop addons in `--devmode`
+# Develop addons in `--devmode`
 
 Developing and testing addons using the Anbox Management Service (AMS) may be time-consuming. Instead, an instance with `--devmode` enabled can provide a safe environment to develop and test addons and their hooks without having to upload the addon to the AMS.
 

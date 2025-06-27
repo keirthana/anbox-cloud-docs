@@ -1,5 +1,5 @@
 (howto-add-image)=
-# How to add an image
+# Add an image
 
 ::::{tab-set}
 

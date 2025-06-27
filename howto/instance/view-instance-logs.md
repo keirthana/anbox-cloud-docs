@@ -1,5 +1,5 @@
 (howto-view-instance-logs)=
-# How to view the instance logs
+# View instance logs
 
 You can view the Anbox and the Android system logs while an instance is running, or check the collected logs if an instance fails.
 ```{note}

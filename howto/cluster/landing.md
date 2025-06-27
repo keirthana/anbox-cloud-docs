@@ -1,5 +1,5 @@
 (howto-manage-cluster)=
-# How to manage cluster nodes
+# Manage cluster nodes
 
 The guides in this section describe how to distribute the load of your Anbox Cloud installation over several machines in a cluster.
 
@@ -13,7 +13,7 @@ The following how-to guides are available for operations related to clustering i
 ```{toctree}
 :titlesonly:
 
-Configure cluster nodes <configure-nodes>
-Scale down a cluster <scale-down>
-Scale up a cluster <scale-up>
+configure-nodes
+Scale down <scale-down>
+Scale up <scale-up>
 ```

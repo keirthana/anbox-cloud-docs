@@ -1,5 +1,5 @@
 (howto-manage-applications)=
-# How to manage applications
+# Manage applications
 
 The guides in this section describe how to manage your applications.
 
@@ -9,13 +9,13 @@ The following how-to guides are available for operations on applications:
 
 ```{toctree}
 :titlesonly:
-Create an application <create-application>
-Delete an application <delete-application>
-Extend an application <extend-application>
-List applications <list-applications>
-Stream applications <stream-application>
-Test an application <test-application>
-Update an application <update-application>
-Pass custom data to an application <pass-custom-data>
-Wait for an application <wait-for-application>
+create-application
+delete-application
+extend-application
+list-applications
+stream-application
+test-application
+update-application
+Pass custom data <pass-custom-data>
+wait-for-application
 ```

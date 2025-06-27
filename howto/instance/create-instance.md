@@ -1,5 +1,5 @@
 (howto-create-instance)=
-# How to create an instance
+# Create an instance
 To launch an application or an image, Anbox Cloud creates an instance for it. To create and launch an instance, you can use the Anbox Cloud dashboard or the CLI.
 
 **Check out this video that explains the differences between an instance created from an application vs an instance created from an image:**

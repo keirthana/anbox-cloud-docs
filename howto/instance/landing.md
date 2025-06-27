@@ -1,22 +1,21 @@
 (howto-instance)=
-# How to manage instances
+# Manage instances
 
 The following guides in this section describe how to work with instances in Anbox Cloud.
 
 ```{toctree}
 :titlesonly:
 
-Access an instance <access-instance>
-Backup and restore data <backup-restore-application-data>
-Create an instance <create-instance>
-Delete an instance <delete-instance>
-Expose services on an instance <expose-services>
-Configure geographic location <configure-geographic-location>
-List instances <list-instances>
-share-session
-Start an instance <start-instance>
-Stop an instance <stop-instance>
-View instance logs <view-instance-logs>
-Wait for an instance <wait-for-instance>
+access-instance
+backup-restore-application-data
+create-instance
+delete-instance
+expose-services
+configure-geographic-location
+list-instances
+view-instance-logs
+start-instance
+stop-instance
+wait-for-instance
 ```
 See {ref}`exp-instances` for an introduction to how instances are used in Anbox Cloud.

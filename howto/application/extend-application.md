@@ -1,5 +1,5 @@
 (howto-extend-application)=
-# How to extend an application
+# Extend an application
 
 You can extend an application either by adding hooks directly to the application or by creating an addon that includes one or more hooks and adding it to the application.
 

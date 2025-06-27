@@ -1,5 +1,5 @@
 (howto-addons)=
-# How to manage addons
+# Addons
 
 In Anbox Cloud, addons can be used to customize images that are used for instances. See {ref}`exp-addons` and {ref}`ref-addon-manifest` to learn about addons in detail.
 
@@ -17,9 +17,9 @@ If you have used addons before Anbox Cloud 1.12, see {ref}`howto-migrate-addons`
 :hidden:
 
 
-Create an addon <create-addon>
-Enable an addon globally <enable-addons-globally>
-Migrate addons <migrate-addon>
-Update addons <update-addon>
-Examples <examples>
+create-addon
+enable-addons-globally
+migrate-addon
+update-addon
+examples
 ```

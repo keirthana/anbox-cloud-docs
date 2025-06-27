@@ -1,5 +1,5 @@
 (howto-install-appliance-google-cloud)=
-# How to install the appliance on Google Cloud
+# Install on Google Cloud
 
 The Anbox Cloud Appliance is not yet available from the Google Marketplace. However, you can install the Anbox Cloud Appliance snap on a Google Cloud instance by using this guide.
 

@@ -1,5 +1,5 @@
 (howto-delete-image)=
-# How to delete an image
+# Delete an image
 
 ::::{tab-set}
 

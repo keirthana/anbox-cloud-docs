@@ -1,5 +1,5 @@
 (howto-configure-aar)=
-# How to configure an AAR
+# Configure
 
 The Anbox Application Registry (AAR) uses a certificate-based authentication system that uses TLS server and client certificates to establish a trusted connection between the AAR and the Anbox Management Service (AMS).
 

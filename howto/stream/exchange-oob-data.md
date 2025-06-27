@@ -1,6 +1,6 @@
 
 (howto-exchange-oob-data)=
-# How to exchange out-of-band data
+# Exchange out-of-band data
 
 Enabling out-of-band (OOB) data transmission between an Android application and a WebRTC client makes it possible to exchange data and trigger actions between an Android application and a WebRTC client. Anbox Cloud provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
 
@@ -338,7 +338,7 @@ To connect the data channel to the Anbox WebRTC data proxy service within an And
      amc addon add install-system-app .
      ```
 
-   See [How to install an APK as a system app](https://documentation.ubuntu.com/anbox-cloud/en/latest/howto/port/install-apk-system-app/#howto-install-apk-system-app) for details.
+   See {ref}`howto-install-apk-system-app` for details.
 
 ### Run end-to-end test
 

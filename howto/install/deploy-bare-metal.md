@@ -1,5 +1,5 @@
 (howto-deploy-anbox-baremetal)=
-# How to deploy Anbox Cloud on bare metal
+# Deploy on bare metal
 
 To deploy Anbox Cloud on a public cloud (such as AWS, Azure or Google) or using MAAS or OpenStack, see the instructions in {ref}`howto-deploy-anbox-juju`.
 

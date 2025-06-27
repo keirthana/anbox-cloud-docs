@@ -1,5 +1,5 @@
 (howto-upgrade-appliance)=
-# How to Upgrade the Appliance
+# Upgrade appliance
 
 The upgrade process for the Anbox Cloud Appliance is as simple as updating the snap package to the appropriate channel. Before upgrading the appliance, consider the changes that the new version brings as downgrades are not supported.
 
