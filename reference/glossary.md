@@ -64,10 +64,11 @@ Anbox Platform SDK
 
     See {ref}`sec-platform-sdk` for more information.
 
-Anbox shell
-    A command-line tool (`anbox-shell`) that provides an ADB shell with root permissions granted, which you can use to access the Android system in the instance.
+anbox-connect
+    A tool that helps you to remotely connect to an Android container that is running inside the Anbox instance. through a secure ADB connection. It must be installed on your host machine.
 
-    See {ref}`howto-access-android-instance` for more information.
+anbox-shell
+    A command-line tool for interacting with the Android container within the Anbox instance. It acts as a streamlined Android Debug Bridge(ADB) interface, allowing access to the Android environment with `root` privileges. It must be used within the context of an Anbox instance.
 
 Anbox Streaming SDK
     An SDK that allows the development of custom streaming clients, using JavaScript.
