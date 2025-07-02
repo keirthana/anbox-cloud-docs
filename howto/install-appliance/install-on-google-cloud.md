@@ -87,8 +87,8 @@ Source IPv4 ranges : 0.0.0.0/0
 Second source filter : None
 Destination filter : None
 Protocols and ports : Specified protocols and ports
-    TCP ports : 443,10000-11000
-    UDP ports : 5349,10000-11000,60000-60100
+    TCP ports : 443
+    UDP ports : 5349,60000-60100
 ```
 The target tag `foo` will be used as the network tag in the virtual machine settings. This tag should match the network tag of the virtual machine.
 

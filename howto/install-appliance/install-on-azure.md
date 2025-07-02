@@ -79,7 +79,7 @@ Click **Next: Networking** to continue to the next tab.
 For networking, the Anbox Cloud Appliance requires the following change to the default settings:
 
 1. For the **NIC network security group**, select **Advanced** and create a network security group.
-1. Add an inbound security rule that allows access to the following destination port ranges: `80,443,8444,5349,10000-11000,60000-60100`
+1. Add an inbound security rule that allows access to the following destination port ranges: `80,443,8444,5349,60000-60100`
 1. Change the name of the rule and, if relevant for your setup, adapt the priority of the rule.
 
 ![Network security group configuration](/images/appliance-on-azure/azure_config-secgroup-co.png)
