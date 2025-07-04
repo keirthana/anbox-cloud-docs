@@ -143,8 +143,8 @@ The `resources` directive helps you define the required resources for your appli
 Name           | Value type | Minimum value  | Description
 ---------------|------------|----------------|-------------------------
 `cpus`         | integer    |     1          | Number of vCPU cores
-`memory`       | string     |     3 GB       | Memory to be assigned to the application
-`disk-size`    | string     |     3 GB       | Disk size to be assigned to the application
+`memory`       | string     |     3GB       | Memory to be assigned to the application
+`disk-size`    | string     |     3GB       | Disk size to be assigned to the application
 `gpu-slots`(optional) | integer |     0      | Number of GPU slots to be assigned to the application
 
 Note that if all required fields (`cpus`/`memory`/`disk-size`) of `resources` are supplied in the application manifest and the deprecated `instance-type` field is also provided, `instance-type` will be overridden by the requirements in the `resources` fields upon application installation.
