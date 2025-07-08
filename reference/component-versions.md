@@ -13,37 +13,37 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
-| `anbox-cloud-dashboard` | `1.26/stable` |  |  |
-| `ams-node-controller` (Deprecated) | `1.26/stable` |  |  |
-| `coturn` | `1.26/stable` |  |  |
-| `ams` | `1.26/stable` |  |  |
-| `anbox-stream-gateway`  | `1.26/stable` |  |  |
-| `ams-lxd` | `1.26/stable` |  |  |
-| `anbox-stream-agent` | `1.26/stable` |  |  |
-| `aar` | `1.26/stable` |  |  |
-| `anbox-cloud-cos-configuration` | `1.26/stable` |  |  |
+| `anbox-cloud-dashboard` | `1.26/stable` | 938 | 939 |
+| `ams-node-controller` (Deprecated) | `1.26/stable` | 934 | 935 |
+| `coturn` | `1.26/stable` | 911 | 912 |
+| `ams` | `1.26/stable` | 1103 | 1104 |
+| `anbox-stream-gateway`  | `1.26/stable` | 1030 | 1031 |
+| `ams-lxd` | `1.26/stable` | 990 | 991 |
+| `anbox-stream-agent` | `1.26/stable` | 1023 | 1024 |
+| `aar` | `1.26/stable` | 1088 | 1089 |
+| `anbox-cloud-cos-configuration` | `1.26/stable` | 221 | 222 |
 | `nats` | `latest/stable` | 9 | 11 |
 
 #### Ubuntu 24.04
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
-| `anbox-cloud-dashboard` | `1.26/stable` |  |  |
-| `ams-node-controller` | `1.26/stable` |  |  |
-| `coturn` | `1.26/stable` |  |  |
-| `ams` | `1.26/stable` |  |  |
-| `anbox-stream-gateway`  | `1.26/stable` |  |  |
-| `ams-lxd` | `1.26/stable` |  |  |
-| `anbox-stream-agent` | `1.26/stable` |  |  |
-| `aar` | `1.26/stable` |  |  |
-| `anbox-cloud-cos-configuration` | `1.26/stable` |  |  |
+| `anbox-cloud-dashboard` | `1.26/stable` | 940 | 941 |
+| `ams-node-controller` | `1.26/stable` | 936 | 937 |
+| `coturn` | `1.26/stable` | 913 | 914 |
+| `ams` | `1.26/stable` | 1105 | 1106 |
+| `anbox-stream-gateway`  | `1.26/stable` | 1032 | 1033 |
+| `ams-lxd` | `1.26/stable` | 992 | 993 |
+| `anbox-stream-agent` | `1.26/stable` | 1025 | 1026 |
+| `aar` | `1.26/stable` | 1090 | 1091 |
+| `anbox-cloud-cos-configuration` | `1.26/stable` | 223 | 224 |
 
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.26/stable` | 762 |
-| `anbox-cloud-core` | `1.26/stable` | 774 |
+| `anbox-cloud` | `1.26/stable` | 786 |
+| `anbox-cloud-core` | `1.26/stable` | 798 |
 
 ### Snaps
 
