@@ -18,8 +18,9 @@ Auth0 is a flexible, drop-in solution to add authentication services to your app
     - Enable *Allow Refresh Token Rotation*.
     - Select *Save Changes*.
 
-1. Near the top of the *Settings* tab, locate the *Domain* field. Copy the value and prefix it with `https://`. This is your issuer URL.
+1. Copy the following values for the preseed YAML configuration:
+    - Near the top of the *Settings* tab, locate the *Domain* field, and prefix it with `https://`. This is your issuer URL.
+    - From the *Settings* tab, copy the *Client ID*.
+    - Select *Applications > APIs* and copy the *API Audience* value.
 
-1. From the *Settings* tab and copy the *Client ID*.
-
-1. {ref}`Configure the preseed YAML <howto-configure-oidc>` with the client ID and issuer URL values obtained in the previous steps.
+1. {ref}`Configure the preseed YAML <howto-configure-oidc>` with the issuer URL, client ID, and API audience URL values obtained in the previous steps.
