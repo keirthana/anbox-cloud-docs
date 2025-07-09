@@ -187,8 +187,16 @@ sitemap_url_scheme = "{link}"
 
 # Template and asset locations
 
-html_static_path = [".sphinx/_static"]
-templates_path = [".sphinx/_templates"]
+html_static_path = [
+    ".sphinx/_static",
+    # This is required for Google Analytics to work till we unify
+    # all the static files into one well-known directory.
+    "_static",
+]
+templates_path = [
+    # This is required for Google Analytics to work.
+    "_templates",
+]
 
 
 #############
