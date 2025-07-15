@@ -12,7 +12,7 @@ For charmed deployments, external access is blocked by the [LXD charm](https://c
     juju expose lxd
     juju config lxd exposed_instance_ports=10000-11000
 
-For appliance deployments on public clouds, external access is controlled by the [cloud platform](https://documentation.ubuntu.com/anbox-cloud/howto/install-appliance/landing/#supported-cloud-platforms). To enable access to Anbox instances, you must manually update the firewall or security group settings:
+For appliance deployments on public clouds, external access is controlled by the [cloud platform](https://documentation.ubuntu.com/anbox-cloud/howto/install-appliance/#supported-cloud-platforms). To enable access to Anbox instances, you must manually update the firewall or security group settings:
 
 For AWS, [configure the associated security group](https://docs.aws.amazon.com/vpc/latest/userguide/working-with-security-group-rules.html) to allow inbound traffic on ports 10000-11000.
 

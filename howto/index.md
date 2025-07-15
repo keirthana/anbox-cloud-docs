@@ -51,21 +51,21 @@ Also check out the {ref}`tutorials` for step-by-step instructions that help you 
 ```{toctree}
 :hidden:
 
-Install the Appliance <install-appliance/landing>
-Install Anbox Cloud <install/landing>
-Manage AAR <aar/landing>
-Manage Addons <addons/landing>
-Manage Anbox Cloud <anbox/landing>
-Manage Images <images/landing>
-Manage Applications <application/landing>
-Manage cluster nodes <cluster/landing>
-Manage Instances <instance/landing>
-Monitor Anbox Cloud <monitor/landing>
-Port Android apps <port/landing>
-Stream <stream/landing>
-Troubleshoot Anbox Cloud <troubleshoot/landing>
-Upgrade Anbox Cloud <upgrade/landing>
-Use web dashboard <dashboard/landing>
-Work with Anbox runtime <anbox-runtime/landing>
-Work with Android <android/landing>
+Install the Appliance <install-appliance/index>
+Install Anbox Cloud <install/index>
+Manage AAR <aar/index>
+Manage Addons <addons/index>
+Manage Anbox Cloud <anbox/index>
+Manage Images <images/index>
+Manage Applications <application/index>
+Manage cluster nodes <cluster/index>
+Manage Instances <instance/index>
+Monitor Anbox Cloud <monitor/index>
+Port Android apps <port/index>
+Stream <stream/index>
+Troubleshoot Anbox Cloud <troubleshoot/index>
+Upgrade Anbox Cloud <upgrade/index>
+Use web dashboard <dashboard/index>
+Work with Anbox runtime <anbox-runtime/index>
+Work with Android <android/index>
 ```
