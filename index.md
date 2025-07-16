@@ -12,36 +12,36 @@ Due to its highly scalable nature and performance optimization, delivering devic
 
 
 ````{grid} 1 1 2 2
-```{grid-item-card} [Tutorial](/tutorial/landing.md)
+```{grid-item-card} [Tutorial](/tutorial/index.md)
 **Start here** - a hands-on introduction to Anbox Cloud, guiding you through your first steps. You can choose a CLI or a web UI path.
 - [Install Anbox Cloud Appliance](/tutorial/installing-appliance.md)
 - [Create a virtual device](/tutorial/create-test-virtual-device.md)
 ```
 
-```{grid-item-card} [How-to guides](/howto/landing.md)
+```{grid-item-card} [How-to guides](/howto/index.md)
 **Step-by-step guides** covering key operations and common tasks
-- [Install the appliance on cloud](/howto/install-appliance/landing.md)
-- [Install charmed Anbox Cloud](/howto/install/landing.md)
-- [Manage applications](/howto/application/landing.md)
-- [Manage instances](/howto/instance/landing.md)
+- [Install the appliance on cloud](/howto/install-appliance/index.md)
+- [Install charmed Anbox Cloud](/howto/install/index.md)
+- [Manage applications](/howto/application/index.md)
+- [Manage instances](/howto/instance/index.md)
 - [Harden your deployment](/howto/anbox/harden.md)
 ```
 ````
 ````{grid} 1 1 2 2
 :reverse:
-```{grid-item-card} [Reference](/reference/landing.md)
+```{grid-item-card} [Reference](/reference/index.md)
 **Technical information**
 - [AMS configuration](/reference/ams-configuration.md)
 - [Application manifest](/reference/application-manifest.md)
-- [CLI commands](/reference/cmd-ref/landing.md)
-- [API](/reference/api-reference/landing.md)
+- [CLI commands](/reference/cmd-ref/index.md)
+- [API](/reference/api-reference/index.md)
 - [Release notes](/reference/release-notes/release-notes.md)
 ```
 
-```{grid-item-card} [Explanation](/explanation/landing.md)
+```{grid-item-card} [Explanation](/explanation/index.md)
 **Discussion and clarification** of key topics
 - [Architecture](/explanation/anbox-cloud.md)
-- [Security](/explanation/security/landing.md)
+- [Security](/explanation/security/index.md)
 - [Capacity planning](/explanation/capacity-planning.md)
 - [Production deployment](/explanation/production-planning.md)
 ```
@@ -74,17 +74,17 @@ We welcome community involvement through suggestions, fixes and constructive fee
 ```
 
 ```{grid-item-card} Contribute
-[Contribution guide](/contribute/landing.md) | [Style guide](/contribute/anbox-style-guide.md)
+[Contribution guide](/contribute/index.md) | [Style guide](/contribute/anbox-style-guide.md)
 
 ```
 ````
 
 ```{toctree}
 :hidden:
-tutorial/landing
-howto/landing
-explanation/landing
-reference/landing
-Contribute <contribute/landing>
+tutorial/index
+howto/index
+explanation/index
+reference/index
+Contribute <contribute/index>
 reference/release-notes/release-notes
 ```
