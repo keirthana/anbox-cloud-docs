@@ -85,9 +85,9 @@ Anbox Cloud images <provided-images>
 appliance-preseed
 appliance-configuration
 sdks
-api-reference/landing.md
+api-reference/index.md
 application-manifest
-cmd-ref/landing.md
+cmd-ref/index.md
 component-versions
 charm-configuration
 deprecation-notices

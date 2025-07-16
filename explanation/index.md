@@ -60,7 +60,7 @@ applications
 application-streaming
 capacity-planning
 clustering
-security/landing
+security/index
 custom-images
 images
 instances
