@@ -358,7 +358,18 @@ paths:
 
         returned object contains a URL with the required credentials for a client
 
-        to join the signaling process.'
+        to join the signaling process.
+
+
+        Note: The `disconnect_clients` field, previously accepted in the POST body
+
+        of the join session endpoint, is now deprecated and ignored. Any existing
+
+        clients will be disconnected automatically when a new client joins the session
+
+        even if the `disconnect_clients` field is included in the request body with
+
+        any value.'
       tags:
         - session
       summary: Join session

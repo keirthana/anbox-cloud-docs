@@ -1432,11 +1432,11 @@ paths:
                       images.auth:
                         description: 'Authentication details for AMS to access
 
-                          the image server. When reading this configuration,
+                          the image server. To avoid exposing credentials,
 
-                          a Boolean value that indicates whether the item
+                          a boolean value indicating if the item
 
-                          is set is returned, to avoid exposing credentials.'
+                          is set is returned.'
                         type: string
                         default: ''
                         example: user:password
@@ -5648,7 +5648,7 @@ definitions:
     type: object
     properties:
       encoder_slots:
-        description: Update the number of GPU encoder slots
+        description: Number of GPU encoder slots.
         type: integer
         format: int64
         example: 4
@@ -5658,7 +5658,7 @@ definitions:
         format: uint64
         example: 0
       slots:
-        description: Update the number of the GPU slots available on the Node
+        description: Number of GPU slots available on the node.
         type: integer
         format: int64
         example: 20
@@ -5667,7 +5667,7 @@ definitions:
     type: object
     properties:
       cpu_allocation_rate:
-        description: CPU allocation rate used for over-committing resources
+        description: CPU allocation rate used for over-committing resources.
         type: number
         format: float
         x-docs-ref: sec-over-committing
@@ -5680,17 +5680,19 @@ definitions:
       gpu_encoder_slots:
         description: 'Number of GPU encoder slots available on the node.
 
-          `0` for nodes without GPU
+          Default values: 0 for nodes without GPU;
 
-          `32` for nodes with NVIDIA GPU
+          32 for nodes with NVIDIA GPU;
 
-          `10` for nodes with AMD or Intel GPU'
+          5 for nodes with AMD;
+
+          10 for nodes with Intel GPU.'
         type: integer
         format: int64
         x-docs-ref: sec-gpu-slots
         example: 4
       gpu_slots:
-        description: Update the number of GPU slots to configure on the node
+        description: Number of GPU slots to configure on the node.
         type: integer
         format: int64
         example: 2
@@ -5699,7 +5701,7 @@ definitions:
         items:
           $ref: '#/definitions/NodeGPUPatch'
       memory:
-        description: Update the memory (in GB) for the node
+        description: Update the memory (in GB) for the node.
         type: string
         example: 2GB
       memory_allocation_rate:
@@ -5714,7 +5716,7 @@ definitions:
         format: ipv4
         example: 10.0.0.1
       subnet:
-        description: The network subnet of the machine where the node runs.
+        description: The network subnet of the machine hosting the node.
         type: string
         format: ipv4
         example: 10.0.0.1/24
@@ -5727,7 +5729,7 @@ definitions:
           - created_by=anbox
           - gpu=nvidia
       unscheduable:
-        description: DEPRECATED Flag in favour of `unschedulable` flag
+        description: DEPRECATED Flag in favour of `unschedulable` flag.
         type: boolean
         x-deprecated-since: '1.20'
         example: false
