@@ -25,6 +25,8 @@ Due to its highly scalable nature and performance optimization, delivering devic
 - [Manage applications](/howto/application/index.md)
 - [Manage instances](/howto/instance/index.md)
 - [Harden your deployment](/howto/anbox/harden.md)
+- [Troubleshoot](/howto/troubleshoot/index.md)
+- [View logs](/howto/troubleshoot/view-logs.md)
 ```
 ````
 ````{grid} 1 1 2 2
@@ -53,28 +55,21 @@ Anbox Cloud is a product developed by Canonical. While it was initially based on
 
 We welcome community involvement through suggestions, fixes and constructive feedback both on the product and its documentation. You can engage with the Anbox Cloud team and the community using the following channels:
 
-````{grid}
-```{grid-item-card} Engage
-[Discourse](https://discourse.ubuntu.com/c/anbox-cloud/users/148) | [Matrix](https://matrix.to/#/#anbox-cloud:ubuntu.com) |
-[Contact us](https://anbox-cloud.io/contact-us)
-
-```
-
-```{grid-item-card} Solve
-{ref}`Troubleshoot <howto-ts-anbox-cloud>` | {ref}`View logs <howto-ts-view-logs>`
-
-```
-````
 
 ````{grid}
 :reverse:
 ```{grid-item-card} Get help
-[File a bug](https://bugs.launchpad.net/anbox-cloud/+bugs) | [Get support via Ubuntu Pro](https://ubuntu.com/support)
+[File a bug](https://bugs.launchpad.net/anbox-cloud/+bugs) | [Get support](https://ubuntu.com/support)
 
 ```
 
 ```{grid-item-card} Contribute
 [Contribution guide](/contribute/index.md) | [Style guide](/contribute/anbox-style-guide.md)
+
+```
+```{grid-item-card} Engage
+[Discourse](https://discourse.ubuntu.com/c/anbox-cloud/users/148) | [Matrix](https://matrix.to/#/#anbox-cloud:ubuntu.com) |
+[Contact us](https://anbox-cloud.io/contact-us)
 
 ```
 ````
