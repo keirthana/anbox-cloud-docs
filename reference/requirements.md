@@ -21,7 +21,7 @@ The later sections of this topic provide information about the supported Ubuntu 
 
 ### CPU Architecture compatibility
 
-Ensure that your deployment environment uses a CPU architecture officially supported by Android. Unsupported architectures are not compatible with Anbox Cloud and may lead to unexpected behavior or failure to run workloads. For a complete list of supported ABIs (Application Binary Interfaces), refer to the official Android documentation: https://developer.android.com/ndk/guides/abis.
+Ensure that your deployment environment uses a CPU architecture officially supported by Android. Unsupported architectures are not compatible with Anbox Cloud and using them in an Anbox Cloud deployment will lead to errors and unexpected behavior. For a complete list of supported ABIs (Application Binary Interfaces), refer to the official Android documentation: https://developer.android.com/ndk/guides/abis.
 
 ## Requirements for the appliance
 
