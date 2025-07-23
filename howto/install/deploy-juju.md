@@ -284,5 +284,3 @@ lxd/0*     active    idle   3        10.75.96.23     8443/tcp   Actions: Reboot 
 To reboot the machine hosting LXD, run the following command:
 
     juju ssh lxd/0 -- sudo reboot
-
-Once done, the reboot operation is finished.
