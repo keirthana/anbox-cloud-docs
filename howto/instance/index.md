@@ -13,6 +13,7 @@ start-instance
 wait-for-instance
 share-session
 stop-instance
+restart-instance
 view-instance-logs
 delete-instance
 backup-restore-application-data
