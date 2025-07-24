@@ -58,8 +58,6 @@ A Juju model holds a specific deployment. It is a good idea to create a new one 
 
     juju add-model anbox-cloud
 
-You can have multiple models on each controller, which means that you can deploy multiple versions of Anbox Cloud, or other applications.
-
 (sec-attach-pro-subscription)=
 ## Attach your Ubuntu Pro subscription
 

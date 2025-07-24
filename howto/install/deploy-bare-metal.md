@@ -37,8 +37,6 @@ When the controller is set up, create a model to hold the Anbox Cloud deployment
 
     juju add-model main
 
-You can have multiple models on each controller, which means that you can deploy multiple versions of Anbox Cloud, or other applications.
-
 ## Add all machines
 
 Before starting the deployment, you must add all machines to the Juju model. See {ref}`sec-minimum-hardware-requirements` for the list of machines that you need.
