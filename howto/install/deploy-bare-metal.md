@@ -1,9 +1,7 @@
 (howto-deploy-anbox-baremetal)=
 # Deploy on bare metal
 
-To deploy Anbox Cloud on a public cloud (such as AWS, Azure or Google) or using MAAS or OpenStack, see the instructions in {ref}`howto-deploy-anbox-juju`.
-
-Alternatively, you can follow the instructions in this document to use the [manual cloud provider](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/cloud/list-of-supported-clouds/the-manual-cloud-and-juju/) that Juju offers. This method allows you to deploy Anbox Cloud with Juju on a set of SSH connected machines.
+This document guides you through the steps to install Anbox Cloud on a [manual cloud](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/cloud/list-of-supported-clouds/the-manual-cloud-and-juju/) that Juju offers i.e., you can deploy Anbox Cloud with Juju on a set of SSH connected machines.
 
 ## Prerequisites
 
@@ -19,15 +17,15 @@ Before you start the installation, ensure that you have the required prerequisit
 
 Juju is a tool for deploying, configuring and operating complex software on public or private clouds.
 
-You must install a Juju client on the machine that you use to run the deployment commands. To install Juju 3.x, enter the following command:
+To install Juju 3.x, enter the following command:
 
-    sudo snap install --classic --channel=3/stable juju
+    sudo snap install --channel=3/stable juju
 
 See {ref}`sec-juju-version-requirements` for information about which Juju version is required for your version of Anbox Cloud.
 
 ## Add a controller and model
 
-The [Juju controller](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/controller/) is used to manage the software deployed through Juju, from deployment to upgrades to day-two operations. One Juju controller can manage multiple projects or workspaces, which in Juju are known as [models](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/model/).
+The [Juju controller](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/controller/) is used to manage the software deployed through Juju, including deployments, upgrades and other operations. One Juju controller can manage multiple projects or workspaces, known as [models](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/model/).
 
 You should dedicate one machine as the Juju controller. Run the following command to bootstrap the controller onto that machine:
 
@@ -143,6 +141,24 @@ Choose between the available Juju bundles (see {ref}`sec-juju-bundles`):
 
         juju deploy anbox-cloud --overlay ua.yaml --map-machines 0=0,1=1,2=2,3=3
 
-You can watch the status of the deployment with the following command:
+## Monitor the deployment
 
-     watch -c juju status --color --relations=true
+After starting the deployment, Juju will create instances, install software and connect the different parts of the cluster together. This can take several minutes. You can monitor what's going on by running the following command:
+
+    watch -c juju status --color --relations=true
+
+## Perform necessary reboots
+
+In some cases, a reboot of the LXD machines is necessary.
+
+Check the output of the `juju status` command to see whether you need to reboot:
+
+```sh
+...
+Unit       Workload  Agent  Machine  Public address  Ports      Message
+lxd/0*     active    idle   3        10.75.96.23     8443/tcp   Actions: Reboot Required
+...
+```
+To reboot the machine hosting LXD, run the following command:
+
+    juju ssh lxd/0 -- sudo reboot

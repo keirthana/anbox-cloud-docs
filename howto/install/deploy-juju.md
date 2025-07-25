@@ -1,5 +1,5 @@
 (howto-deploy-anbox-juju)=
-# Deploy with Juju
+# Deploy on a public cloud
 
 Anbox Cloud supports various public clouds, such as AWS, Azure and Google. To deploy Anbox Cloud in a cloud environment, you use Juju.
 
@@ -29,13 +29,13 @@ Juju is a tool for deploying, configuring and operating complex software on publ
 
 To install Juju 3.x, enter the following command:
 
-    sudo snap install --classic --channel=3/stable juju
+    sudo snap install --channel=3/stable juju
 
 See {ref}`sec-juju-version-requirements` for information about which Juju version is required for your version of Anbox Cloud.
 
 ## Authenticate with your cloud
 
-Juju has baked in knowledge of many public clouds, such as AWS, Azure and Google. You can see which ones are ready to use by running the following command:
+Confirm if your cloud is available to Juju:
 
     juju clouds
 
@@ -43,12 +43,12 @@ Most clouds require credentials so that the cloud knows which operations are aut
 
     juju add-credential aws
 
-For a different cloud, just substitute the cloud name (use the name returned by  the `juju clouds` command). The data you need to supply varies depending on the cloud.
+For a different cloud, just substitute the cloud name with the name returned by the `juju clouds` command. The data you need to supply varies depending on the cloud. See [Juju documentation](https://documentation.ubuntu.com/juju/3.6/reference/juju-cli/list-of-juju-cli-commands/add-credential/) for details on the command.
 
 (sec-setup-juju-controller)=
 ## Add a controller and model
 
-The [Juju controller](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/controller/) is used to manage the software deployed through Juju, from deployment to upgrades to day-two operations. One Juju controller can manage multiple projects or workspaces, which in Juju are known as [models](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/model/).
+The [Juju controller](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/controller/) is used to manage the software deployed through Juju, including deployments, upgrades and other operations. One Juju controller can manage multiple projects or workspaces, known as [models](https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/model/).
 
 For example, run the following command to bootstrap the controller for AWS:
 
@@ -57,8 +57,6 @@ For example, run the following command to bootstrap the controller for AWS:
 A Juju model holds a specific deployment. It is a good idea to create a new one specifically for each deployment:
 
     juju add-model anbox-cloud
-
-You can have multiple models on each controller, which means that you can deploy multiple versions of Anbox Cloud, or other applications.
 
 (sec-attach-pro-subscription)=
 ## Attach your Ubuntu Pro subscription
@@ -267,7 +265,7 @@ Now use this `bundle.yaml` file to deploy `anbox-cloud` using your own overlay a
 
 After starting the deployment, Juju will create instances, install software and connect the different parts of the cluster together. This can take several minutes. You can monitor what's going on by running the following command:
 
-    watch -c juju status --color
+    watch -c juju status --color --relations=true
 
 ## Perform necessary reboots
 
@@ -284,5 +282,3 @@ lxd/0*     active    idle   3        10.75.96.23     8443/tcp   Actions: Reboot 
 To reboot the machine hosting LXD, run the following command:
 
     juju ssh lxd/0 -- sudo reboot
-
-Once done, the reboot operation is finished.

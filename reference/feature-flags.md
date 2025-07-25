@@ -89,15 +89,6 @@ To enable the Android container to use a custom Android ID, add the feature flag
 
 Once set, this feature flag will be considered by all newly launched instances.
 
-(sec-gl-async-swap)=
-## `emugl.enable_async_swap_support`
-
-*since 1.21.0*
-
-GL Async swap support is disabled by default for explicit signals of buffer swaps completion. To enable the GL async swap feature, add the feature flag `emugl.enable_async_swap_support` upon application creation. Once the async swap support is enabled, Anbox Cloud will use the host GL driver fence commands and file descriptors to synchronize the finished frames between the host and guest instead fully relying on the host GPU driver to do so. The environment variable `ANBOX_ASYNC_SWAP_ENABLED_PACKAGES` that accepts a comma-separated list of package names can be used to allow certain packages to use the GL async swap feature.
-
-Once set, this feature flag will be considered by all newly launched instances.
-
 ## `webrtc.enable_ice_logging`
 
 *since 1.20.2*

@@ -17,7 +17,7 @@ This command allows changing the following configuration items:
 Multiple configuration items can be set in a single call, e.g.
 
   $ sudo anbox-cloud-appliance config set \
-      network.public-address=5.6.7.8 network.location=foo.bar
+      network.public_address=5.6.7.8 network.location=foo.bar
 
 Changes made are immediately effective and will require a restart
 of all services the Anbox Cloud Appliance includes. Once the
@@ -32,7 +32,7 @@ anbox-cloud-appliance config set [flags]
 ### Examples
 
 ```
-$ sudo anbox-cloud-appliance config set network.public-address=1.2.3.4
+$ sudo anbox-cloud-appliance config set network.public_address=1.2.3.4
 ```
 
 ### Options

@@ -19,6 +19,10 @@ Anbox Cloud is supported only on the [Ubuntu](https://ubuntu.com/) operating sys
 
 The later sections of this topic provide information about the supported Ubuntu versions.
 
+### CPU Architecture compatibility
+
+Ensure that your deployment environment uses a CPU architecture officially supported by Android. Unsupported architectures are not compatible with Anbox Cloud and using them in an Anbox Cloud deployment will lead to errors and unexpected behavior. For a complete list of supported ABIs (Application Binary Interfaces), refer to the official Android documentation: https://developer.android.com/ndk/guides/abis.
+
 ## Requirements for the appliance
 
 ### Ubuntu
@@ -65,7 +69,7 @@ Charmed Anbox Cloud supports the following Ubuntu versions:
 ```{note}
 Currently, the Juju bundle uses Ubuntu 20.04 for the machine that runs a [HAProxy load balancer](https://charmhub.io/haproxy). However, all supported Anbox Cloud charms use Ubuntu 22.04 or 24.04. So if you are using a load balancer, you should manually upgrade the revision of your HAProxy charm.
 
-In the 1.26.1 release of Anbox Cloud, we plan to switch to the latest version of the HAProxy charm.
+In the 1.27.0 release of Anbox Cloud, we plan to switch to the latest version of the HAProxy charm.
 ```
 
 ### LXD

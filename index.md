@@ -13,18 +13,18 @@ Due to its highly scalable nature and performance optimization, delivering devic
 
 ````{grid} 1 1 2 2
 ```{grid-item-card} [Tutorial](/tutorial/index.md)
-**Start here** - a hands-on introduction to Anbox Cloud, guiding you through your first steps. You can choose a CLI or a web UI path.
+**Start here** - a hands-on introduction to Anbox Cloud
 - [Install Anbox Cloud Appliance](/tutorial/installing-appliance.md)
 - [Create a virtual device](/tutorial/create-test-virtual-device.md)
 ```
 
 ```{grid-item-card} [How-to guides](/howto/index.md)
-**Step-by-step guides** covering key operations and common tasks
-- [Install the appliance on cloud](/howto/install-appliance/index.md)
-- [Install charmed Anbox Cloud](/howto/install/index.md)
-- [Manage applications](/howto/application/index.md)
-- [Manage instances](/howto/instance/index.md)
+**Key operations and common tasks**
+- Install: [appliance](/howto/install-appliance/index.md) | [charmed Anbox Cloud](/howto/install/index.md)
+- Work with [applications](/howto/application/index.md) and [instances](/howto/instance/index.md)
 - [Harden your deployment](/howto/anbox/harden.md)
+- [Upgrade](/howto/upgrade/index.md)
+- [Troubleshoot](/howto/troubleshoot/index.md) | [View logs](/howto/troubleshoot/view-logs.md)
 ```
 ````
 ````{grid} 1 1 2 2
@@ -32,18 +32,17 @@ Due to its highly scalable nature and performance optimization, delivering devic
 ```{grid-item-card} [Reference](/reference/index.md)
 **Technical information**
 - [AMS configuration](/reference/ams-configuration.md)
-- [Application manifest](/reference/application-manifest.md)
-- [CLI commands](/reference/cmd-ref/index.md)
-- [API](/reference/api-reference/index.md)
+- [Application manifest](/reference/application-manifest.md) | [Addon manifest](/reference/addon-manifest.md)
+- [CLI help](/reference/cmd-ref/index.md) | [API help](/reference/api-reference/index.md)
 - [Release notes](/reference/release-notes/release-notes.md)
 ```
 
 ```{grid-item-card} [Explanation](/explanation/index.md)
-**Discussion and clarification** of key topics
+**To understand how Anbox Cloud works**
 - [Architecture](/explanation/anbox-cloud.md)
 - [Security](/explanation/security/index.md)
-- [Capacity planning](/explanation/capacity-planning.md)
-- [Production deployment](/explanation/production-planning.md)
+- [Resource and capacity estimation](/explanation/capacity-planning.md)
+- [Preparing to deploy in production](/explanation/production-planning.md)
 ```
 ````
 
@@ -53,28 +52,21 @@ Anbox Cloud is a product developed by Canonical. While it was initially based on
 
 We welcome community involvement through suggestions, fixes and constructive feedback both on the product and its documentation. You can engage with the Anbox Cloud team and the community using the following channels:
 
-````{grid}
-```{grid-item-card} Engage
-[Discourse](https://discourse.ubuntu.com/c/anbox-cloud/users/148) | [Matrix](https://matrix.to/#/#anbox-cloud:ubuntu.com) |
-[Contact us](https://anbox-cloud.io/contact-us)
-
-```
-
-```{grid-item-card} Solve
-{ref}`Troubleshoot <howto-ts-anbox-cloud>` | {ref}`View logs <howto-ts-view-logs>`
-
-```
-````
 
 ````{grid}
 :reverse:
 ```{grid-item-card} Get help
-[File a bug](https://bugs.launchpad.net/anbox-cloud/+bugs) | [Get support via Ubuntu Pro](https://ubuntu.com/support)
+[File a bug](https://bugs.launchpad.net/anbox-cloud/+bugs) | [Get support](https://ubuntu.com/support)
 
 ```
 
 ```{grid-item-card} Contribute
 [Contribution guide](/contribute/index.md) | [Style guide](/contribute/anbox-style-guide.md)
+
+```
+```{grid-item-card} Engage
+[Discourse](https://discourse.ubuntu.com/c/anbox-cloud/users/148) | [Matrix](https://matrix.to/#/#anbox-cloud:ubuntu.com) |
+[Contact us](https://anbox-cloud.io/contact-us)
 
 ```
 ````
