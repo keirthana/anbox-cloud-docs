@@ -21,6 +21,8 @@ Install and initialize Anbox Cloud. Register with the dashboard and log in with 
 
 You need an automotive instance that you can stream. {ref}`tut-create-virtual-device` shows how to create an instance. Remember to choose *Automotive* as your instance type.
 
+## Change an automotive property
+
 When you have an AAOS instance streaming, you can adjust the automotive properties using the dashboard or the API.
 
 ::::{tab-set}
