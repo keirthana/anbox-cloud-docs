@@ -31,16 +31,16 @@ You can adjust the automotive properties with the {ref}`Anbox HTTP API <sec-anbo
 
 Inside the instance terminal, install `curl` to send HTTP requests using the API:
 
-  sudo apt update
-  sudo apt install curl
+        sudo apt update
+        sudo apt install curl
 
 Install `jq` so that you can parse JSON responses better:
 
-  sudo apt install jq
+        sudo apt install jq
 
 Check the value set for the temperature property currently and observe the response:
 
-  curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/vhal/358614275/49 | jq .
+        curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/vhal/358614275/49 | jq .
 
 The output could look like:
 
