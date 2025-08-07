@@ -49,9 +49,8 @@ If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/s
 
 Along with bug fixes and general improvements, Anbox Cloud 1.26.x includes:
 
-* Improvements to the Terraform plan
 * User authentication and authorization (alpha release)
-* Secrets management using Juju secrets
+* Enhancements to the dashboard to show Notifications and asynchronous operations
 * Android security updates
 * Bug fixes
 
