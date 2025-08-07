@@ -190,6 +190,14 @@ sitemap_url_scheme = "{link}"
 html_static_path = [".sphinx/_static"]
 templates_path = [".sphinx/_templates"]
 
+# Exclude unnecessary URLs for better indexing
+
+sitemap_excludes = [
+    "genindex/",
+    "404/",
+    "search/",
+]
+
 
 #############
 # Redirects #
