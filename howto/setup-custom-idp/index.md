@@ -1,4 +1,4 @@
-(howto-appliance-enable-oidc)=
+(howto-set-up-idp)=
 # Set up a custom identity provider
 
 Anbox Cloud has support for custom identity providers for authentication through [OpenID Connect](https://openid.net/developers/discover-openid-and-openid-connect/). To allow discovery of necessary endpoints, the identity provider must support the [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) protocol.
