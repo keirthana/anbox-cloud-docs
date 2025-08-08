@@ -42,22 +42,22 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.27/stable` |  |
-| `anbox-cloud-core` | `1.27/stable` |  |
+| `anbox-cloud` | `1.27/stable` | 832 |
+| `anbox-cloud-core` | `1.27/stable` | 844 |
 
 ### Snaps
 
 | Name |  Channel | Version |
 |----------|--------------|---------|
-| `ams`    | `1.27/stable` |  |
-| `aar`    | `1.27/stable` |  |
-| `amc`    | `latest/stable` |  |
-| `ams-node-controller` | `1.27/stable` |  |
-| `anbox-cloud-dashboard` | `1.27/stable` |  |
-| `anbox-stream-agent` | `1.27/stable` |   |
-| `anbox-stream-gateway` | `1.27/stable` |  |
-| `anbox-connect` | `latest/stable` |  |
-| `anbox-cloud-appliance` | `1.27/stable` |  |
+| `ams`    | `1.27/stable` | `1.27.0-32d5b207e` |
+| `aar`    | `1.27/stable` | `1.27.0-32d5b207e` |
+| `amc`    | `latest/stable` | `1.27.0-32d5b207e` |
+| `ams-node-controller` | `1.27/stable` | `1.27.0-32d5b207e` |
+| `anbox-cloud-dashboard` | `1.27/stable` | `1.27.0-32d5b207e` |
+| `anbox-stream-agent` | `1.27/stable` | `1.27.0-32d5b207e`  |
+| `anbox-stream-gateway` | `1.27/stable` | `1.27.0-32d5b207e` |
+| `anbox-connect` | `latest/stable` | `1.27.0-32d5b207e` |
+| `anbox-cloud-appliance` | `1.27/stable` | `1.27.0-32d5b207e` |
 
 ### Anbox images
 
@@ -65,20 +65,20 @@ The following Anbox images are available in two variants: one based on a contain
 
 | Name | Version |
 |----------|--------------|
-| `jammy:aaos15:amd64`    |  |
-| `jammy:aaos15:arm64`    |  |
-| `jammy:android15:amd64` |  |
-| `jammy:android15:arm64` |  |
-| `jammy:aaos14:amd64`    |  |
-| `jammy:aaos14:arm64`    |  |
-| `jammy:android14:amd64` |  |
-| `jammy:android14:arm64` |  |
-| `jammy:aaos13:amd64`    |  |
-| `jammy:aaos13:arm64`    |  |
-| `jammy:android13:amd64` |  |
-| `jammy:android13:arm64` |  |
-| `jammy:android12:amd64` |  |
-| `jammy:android12:arm64` |  |
+| `jammy:aaos15:amd64`    | `1.27.0-20250729162123.git6575d89` |
+| `jammy:aaos15:arm64`    | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android15:amd64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android15:arm64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:aaos14:amd64`    | `1.27.0-20250729162123.git6575d89` |
+| `jammy:aaos14:arm64`    | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android14:amd64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android14:arm64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:aaos13:amd64`    | `1.27.0-20250729162123.git6575d89` |
+| `jammy:aaos13:arm64`    | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android13:amd64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android13:arm64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android12:amd64` | `1.27.0-20250729162123.git6575d89` |
+| `jammy:android12:arm64` | `1.27.0-20250729162123.git6575d89` |
 
 ## 1.26.2
 

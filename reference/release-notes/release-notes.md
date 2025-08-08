@@ -45,13 +45,12 @@ To ensure you receive latest security updates and bug fixes, you should upgrade 
 If you are looking for additional support, see [Ubuntu Pro](https://ubuntu.com/support). Canonical can also provide [managed solutions](https://ubuntu.com/managed) for Anbox Cloud.
 
 
-### What's new in 1.26.x?
+### What's new in 1.27.x?
 
-Along with bug fixes and general improvements, Anbox Cloud 1.26.x includes:
+Along with bug fixes and general improvements, Anbox Cloud 1.27.x includes:
 
-* User authentication and authorization (alpha release)
+* CLI client authentication using OIDC compatible identity providers (alpha release)
 * Enhancements to the dashboard to show Notifications and asynchronous operations
-* Android security updates
 * Bug fixes
 
 <details><summary>Click to view earlier releases' notes</summary>
