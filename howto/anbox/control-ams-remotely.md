@@ -15,9 +15,9 @@ You need the AMC snap to connect to AMS:
     snap install amc
 
 
-## Use a trusted client with trusted certificates
+## Use trusted client certificates
 
-If you have installed AMC on a different machine than the AMS, controlling AMS remotely requires trusted security certificates. To establish trusted security certificates, you can generate self-signed certificates or use certificates signed by a Certificate Authority. See {ref}`sec-security-cert-remote-clients` for more information.
+If you have installed AMC on a different machine than the AMS, controlling AMS remotely requires trusted security certificates, as a default. To establish trusted security certificates, you can generate self-signed certificates or use certificates signed by a Certificate Authority. See {ref}`sec-security-cert-remote-clients` for more information.
 
 ### Self-signed certificates
 
@@ -71,7 +71,12 @@ Now, switch to the new remote:
 
 From here on, all invocations of the `amc` command will use the new remote.
 
+(sec-oidc-idp)=
 ## Use an OpenID Connect identity provider
+
+```{important}
+Authenticating command line clients using OIDC is an experimental feature in 1.27.0. Hence, the interface and the API endpoints may change in future releases.
+```
 
 To authenticate with AMS through a supported identity provider, you need to first configure the identity provider. Follow the instructions in {ref}`howto-set-up-idp` to configure Auth0 or Keycloak.
 

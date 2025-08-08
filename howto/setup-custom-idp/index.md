@@ -7,6 +7,10 @@ Anbox Cloud uses the [authorization code flow](https://openid.net/specs/openid-c
 
 Anbox Cloud also supports authenticating command line clients using [device code flow](https://www.rfc-editor.org/rfc/rfc8628). However, this is an experimental feature and under active development.
 
+```{important}
+Authenticating command line clients using OIDC is an experimental feature in 1.27.0. Hence, the interface and the API endpoints may change in future releases.
+```
+
 To configure OpenID Connect based authentication, you will need an issuer URL and a client ID from your identity provider. This guide shows you how to get those values with different custom identity providers.
 
 ::::{tab-set}
@@ -24,7 +28,7 @@ For authenticating a web client, create a *Single Page Application* (type of the
 
 Navigate to the *Settings* tab of your application.
 
-**For authenticating a web client**, add your web client's address to the *Allowed Callback URLs*, followed by `/oidc/callback`. For example: `https://example.com:8406/oidc/callback`.You can choose to use an IP address instead of a domain name and `:8406` is the default listening port. This default port might differ for your setup.
+**For authenticating a web client**, add your web client's address to the *Allowed Callback URLs*, followed by `/oidc/callback`. This could be your Anbox Cloud dashboard or a custom web client. For example: `https://example.com:8406/oidc/callback`.You can choose to use an IP address instead of a domain name and `:8406` is the default listening port. This default port might differ for your setup.
 
 To the *Allowed Logout URLs*, add your web client's address, for example, `https://example.com:8406`. Enable *Allow Refresh Token Rotation* and save.
 
@@ -56,21 +60,19 @@ Navigate to *Clients > Create client*. Select the client type as *OpenID Connect
 
 **For authenticating a command line client,**  you will need to select the authentication flow too — Select *OAuth2.0 Device Authorization Grant* in the *Authentication Flow* option.
 
-Leave the default login settings and save. Now, you can proceed to adding a client scope.
+Leave the default login settings and save. Now, you can proceed to creating a user.
 
 **For authenticating a web client,** you need to add redirect URIs:
 
 In *Valid redirect URIs*, enter your web client's address, followed by `/oidc/callback`. This could be your Anbox Cloud dashboard or a custom web client. For example: `https://example.com:8406/oidc/callback`. You can choose to use an IP address instead of a domain name and `:8406` is the default listening port. This default port might differ for your setup.
 
-In the field for *Valid post logout redirect URIs*, enter your Anbox Cloud Dashboard address. For example, `https://example.com:8406`. Save and proceed to adding a client scope.
+In the field for *Valid post logout redirect URIs*, enter your Anbox Cloud dashboard address. For example, `https://example.com:8406`. Save and proceed to adding a client scope.
 
-## 3. Add a client scope
+## 3. Add a client scope (only for a web client)
 
 Navigate to your client (*Clients* > your client name). Select *Client Scopes* and add one.
 
-Select *email*, *profile* scopes from the list of available scopes.
-
-For authenticating a command line client, select *offline_access* too.
+Select *email*, *profile* and *offline_access* scopes from the list of available scopes.
 
 ## 4. Create a user
 
@@ -115,9 +117,9 @@ No users exist within ORY by default. New users can use the sign-up link during 
 
 Once you have the issuer URL, client ID, audience API:
 
-For the appliance, {ref}`howto-configure-oidc`.
+For using the appliance with the dashboard (web client), your next step is to {ref}`initialize the appliance with a preseed <howto-configure-oidc>`.
 
-For the charmed deployment, {ref}`howto-access-ams-remote`.
+For using the appliance with the command line client or using the charmed deployment, your next step is to {ref}`connect to the remote AMS using the IdP <sec-oidc-idp>`.
 
 ```{toctree}
 :hidden:
