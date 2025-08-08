@@ -87,9 +87,9 @@ We recommend using Juju 3.6, so that you will be using the latest LTS version of
 
 You can install Juju with the following command:
 
-    snap install --channel=3.0/stable juju
+    snap install --channel=3/stable juju
 
-If you wish to install a different version, replace `3.0` in the command with the desired version.
+If you wish to install a different version, replace `3` in the command with the desired version.
 
 See the [Juju documentation](https://canonical-juju.readthedocs-hosted.com/en/latest/user/howto/manage-juju/#install-juju) for more information.
 
