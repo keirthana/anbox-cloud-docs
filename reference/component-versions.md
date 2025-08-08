@@ -13,30 +13,30 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
-| `anbox-cloud-dashboard` | `1.27/stable` |  |  |
-| `ams-node-controller` (Deprecated) | `1.27/stable` |  |  |
-| `coturn` | `1.27/stable` |  |  |
-| `ams` | `1.27/stable` |  |  |
-| `anbox-stream-gateway`  | `1.27/stable` |  |  |
-| `ams-lxd` | `1.27/stable` |  |  |
-| `anbox-stream-agent` | `1.27/stable` |  |  |
-| `aar` | `1.27/stable` |  |  |
-| `anbox-cloud-cos-configuration` | `1.27/stable` |  |  |
+| `anbox-cloud-dashboard` | `1.27/stable` | 1014 | 1015 |
+| `ams-node-controller` (Deprecated) | `1.27/stable` | 1010 | 1011 |
+| `coturn` | `1.27/stable` | 987 | 988 |
+| `ams` | `1.27/stable` | 1179 | 1180 |
+| `anbox-stream-gateway` | `1.27/stable` | 1106 | 1107 |
+| `ams-lxd` | `1.27/stable` | 1066 | 1067 |
+| `anbox-stream-agent` | `1.27/stable` | 1099 | 1100 |
+| `aar` | `1.27/stable` | 1166 | 1167 |
+| `anbox-cloud-cos-configuration` | `1.27/stable` | 297 | 298 |
 | `nats` | `latest/stable` | 9 | 11 |
 
 #### Ubuntu 24.04
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) |
 |----------|--------------|--------------|-------------|
-| `anbox-cloud-dashboard` | `1.27/stable` |  |  |
-| `ams-node-controller` | `1.27/stable` |  |  |
-| `coturn` | `1.27/stable` |  |  |
-| `ams` | `1.27/stable` |  |  |
-| `anbox-stream-gateway`  | `1.27/stable` |  |  |
-| `ams-lxd` | `1.27/stable` |  |  |
-| `anbox-stream-agent` | `1.26/stable` |  |  |
-| `aar` | `1.27/stable` |  |  |
-| `anbox-cloud-cos-configuration` | `1.27/stable` |  |  |
+| `anbox-cloud-dashboard` | `1.27/stable` | 1016 | 1017 |
+| `ams-node-controller` (Deprecated) | `1.27/stable` | 1012 | 1013 |
+| `coturn` | `1.27/stable` | 989 | 990 |
+| `ams` | `1.27/stable` | 1181 | 1182 |
+| `anbox-stream-gateway` | `1.27/stable` | 1108 | 1109 |
+| `ams-lxd` | `1.27/stable` | 1068 | 1069 |
+| `anbox-stream-agent` | `1.27/stable` | 1101 | 1102 |
+| `aar` | `1.27/stable` | 1168 | 1169 |
+| `anbox-cloud-cos-configuration` | `1.27/stable` | 299 | 300 |
 
 ### Bundles
 
