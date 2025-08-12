@@ -49,15 +49,15 @@ Not all components are updated with each release. When components are not update
 
 | Name |  Channel | Version |
 |----------|--------------|---------|
-| `ams`    | `1.27/stable` | `1.27.0-32d5b207e` |
-| `aar`    | `1.27/stable` | `1.27.0-32d5b207e` |
-| `amc`    | `latest/stable` | `1.27.0-32d5b207e` |
-| `ams-node-controller` | `1.27/stable` | `1.27.0-32d5b207e` |
-| `anbox-cloud-dashboard` | `1.27/stable` | `1.27.0-32d5b207e` |
-| `anbox-stream-agent` | `1.27/stable` | `1.27.0-32d5b207e`  |
-| `anbox-stream-gateway` | `1.27/stable` | `1.27.0-32d5b207e` |
-| `anbox-connect` | `latest/stable` | `1.27.0-32d5b207e` |
-| `anbox-cloud-appliance` | `1.27/stable` | `1.27.0-32d5b207e` |
+| `ams`    | `1.27/stable` | `1.27.0-90403b118` |
+| `aar`    | `1.27/stable` | `1.27.0-90403b118` |
+| `amc`    | `latest/stable` | `1.27.0-90403b118` |
+| `ams-node-controller` | `1.27/stable` | `1.27.0-90403b118` |
+| `anbox-cloud-dashboard` | `1.27/stable` | `1.27.0-90403b118` |
+| `anbox-stream-agent` | `1.27/stable` | `1.27.0-90403b118`  |
+| `anbox-stream-gateway` | `1.27/stable` | `1.27.0-90403b118` |
+| `anbox-connect` | `latest/stable` | `1.27.0-90403b118` |
+| `anbox-cloud-appliance` | `1.27/stable` | `1.27.0-90403b118` |
 
 ### Anbox images
 
