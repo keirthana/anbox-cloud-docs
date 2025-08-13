@@ -75,7 +75,7 @@ The Anbox Application Registry (AAR) can be upgraded independently of other serv
 
 Upgrade the registry:
 
-    juju refresh --channel=1.26/stable aar
+    juju refresh --channel=1.27/stable aar
 
 ### Upgrade control plane
 
@@ -87,10 +87,10 @@ If you don't run any of the services in a high availability configuration, upgra
 
 To upgrade all charms, run the following commands:
 
-    juju refresh --channel=1.26/stable anbox-cloud-dashboard
-    juju refresh --channel=1.26/stable anbox-stream-gateway
-    juju refresh --channel=1.26/stable anbox-stream-agent
-    juju refresh --channel=1.26/stable coturn
+    juju refresh --channel=1.27/stable anbox-cloud-dashboard
+    juju refresh --channel=1.27/stable anbox-stream-gateway
+    juju refresh --channel=1.27/stable anbox-stream-agent
+    juju refresh --channel=1.27/stable coturn
     juju refresh --channel=latest/stable nats
 
 ```{note}
@@ -103,14 +103,14 @@ Since the NATS charm has been overhauled to use the modern charm framework (Ops 
 
 Upgrade the AMS service independently of the other service components to ensure minimal down time:
 
-    juju refresh --channel=1.26/stable ams
+    juju refresh --channel=1.27/stable ams
 
 ### Upgrade LXD
 
 As the last step, upgrade the LXD cluster. Upgrading LXD will not restart running instances but it's recommended to take a backup before continuing.
 
 ```{note}
-In Anbox Cloud's 1.25.0 release, the LXD charm has been reworked and hence there are changes in the upgrade instructions for the charm.
+Since Anbox Cloud's 1.25.0 release, the LXD charm has been reworked and hence there are changes in the upgrade instructions for the charm.
 ```
 
 <details>
@@ -151,7 +151,7 @@ where `5.0/stable` is the currently installed LXD snap channel. Not doing this m
 
 To start, upgrade the AMS LXD charm to the latest revision using:
 
-    juju refresh --channel=1.26/stable lxd
+    juju refresh --channel=1.27/stable lxd
 
 Upgrading the charm does not upgrade the LXD snap or any of the internal packages on the LXD node. After updating the charm, check which nodes have package updates available using:
 
@@ -185,7 +185,7 @@ As a subordinate charm deployed alongside the LXD charm, and following the [depr
 
 For security reasons, any ports previously exposed by the node controller will be closed after upgrading it via:
 
-       juju refresh --channel=1.26/stable ams-node-controller
+       juju refresh --channel=1.27/stable ams-node-controller
 
 If there is no need to expose services from Anbox instances, revokes the application's exposure to the public network after the AMS node controller is upgraded:
 
