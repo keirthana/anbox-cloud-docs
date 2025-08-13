@@ -18,5 +18,6 @@ This includes management of users allowed to access the dashboard.
 ### SEE ALSO
 
 * [anbox-cloud-appliance](anbox-cloud-appliance.md)	 - Anbox Cloud Appliance, bringing Android at scale to any cloud
+* [anbox-cloud-appliance dashboard export-identities](anbox-cloud-appliance_dashboard_export-identities.md)	 - Export user identities from the Anbox Cloud dashboard
 * [anbox-cloud-appliance dashboard register](anbox-cloud-appliance_dashboard_register.md)	 - Register a new user for access to the Anbox Cloud dashboard
 
