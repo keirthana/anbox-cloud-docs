@@ -7,30 +7,53 @@ info:
     \ to the\nunix socket. For remote users, the default authentication method is\
     \ TLS client\ncertificates.\n\n## Authentication\n\nNot all REST API endpoints\
     \ require authentication, for example, the following API calls are allowed for\
-    \ everyone:\n\n`GET /`\n`GET /1.0`\n`GET /1.0/version`\n\nSome endpoints require\
-    \ an additional authentication token to ensure that the requester is authorised\
-    \ to access the resource, for example:\n\n`GET /1.0/artifacts`\n`PATCH /1.0/instances/<name>`\n\
-    \n## API versioning\n\nThe details of a version of the API can be retrieved using\
-    \ `GET /<version>`. For example, `GET /1.0`.\n\nIf an API version is bumped to\
-    \ a major version, it indicates that backward compatibility is affected.\n\nFeature\
-    \ additions done without breaking backward compatibility only result in additions\
-    \ to `api_extensions` which can be used by the client to check if a given feature\
-    \ is supported by the server.\n\n## Return values\n\nThere are three standard\
-    \ return types:\n\nStandard return value\nBackground operation\nError\n\n### Standard\
-    \ return value\n\nFor a standard synchronous operation, the following dict is\
-    \ returned:\n\n```json\n{\n\"type\": \"sync\",\n\"status\": \"Success\",\n\"status_code\"\
-    : 200,\n\"metadata\": {}\n}\n```\n\nHTTP response status code is 200.\n\n### Background\
-    \ operation\n\nWhen a request results in a background operation, the HTTP code\
-    \ is set to 202 (Accepted) and the Location HTTP header is set to the operation\
-    \ URL.\n\nThe response body is a dict with the following structure:\n\n```json\n\
-    {\n\"type\": \"async\",\n\"status\": \"OK\",\n\"status_code\": 100,\n\"operation\"\
-    : \"/1.0/containers/<id>\",\n\"metadata\": {}\n}\n```\n\nThe operation metadata\
-    \ structure looks like:\n\n```json\n{\n\"id\": \"c6832c58-0867-467e-b245-2962d6527876\"\
-    ,\n\"class\": \"task\",\n\"created_at\": \"2018-04-02T16:49:36.341463206+02:00\"\
-    ,\n\"updated_at\": \"2018-04-02T16:49:36.341463206+02:00\",\n\"status\": \"Running\"\
-    ,\n\"status_code\": 103,\n\"resources\": {\n\"containers\": [\n\"/1.0/containers/3apqo5te\"\
-    \n]\n},\n\"metadata\": null,\n\"may_cancel\": false,\n\"err\": \"\"\n}\n```\n\n\
-    The body is mostly provided as a user friendly way of seeing what's going on without\
+    \ everyone:\n\n - `GET /`\n - `GET /1.0`\n - `GET /1.0/version`\n\n## API Authentication\n\
+    \nThe API can be accessed in one of the following ways:\n\n  * **Unix Domain Socket**:\n\
+    \  \tWhen using this type of connection, the API endpoints are protected using\
+    \ Unix Peer Cred authentication i.e. only certain unix uids\n  \tare given access\
+    \ to the API endpoints. These user uids can be configured in the AMS Daemon configuration\
+    \ by setting `allowed_uids`.\n\n  * **Standard HTTPS Connection**:\n  When using\
+    \ this type of connection, the API endpoints are protected depending on the service\
+    \ configuration. The APIs support two types\n  of authentication mechanisms:\n\
+    \ \t  - mTLS Authentication:\n \t\tBy default AMS uses certificate based authentication\
+    \ or mTLS (Mutual TLS) to protect its API endpoints. Only certificates added to\
+    \ AMS\n \t\tTrust Store are allowed access to the APIs. The certificates can be\
+    \ added or removed using `/1.0/certificates` endpoints by using a\n \t\tUnix Domain\
+    \ Socket connection. This client certificate can then be used to make requests\
+    \ to AMS.\n\n \t\t*NOTE*:\n \t \tSome endpoints require an additional authentication\
+    \ token to ensure that the requester is authorised to access the resource, for\
+    \ example:\n\n \t \t* `GET /1.0/artifacts`\n \t \t* `PATCH /1.0/instances/<name>`\n\
+    \n \t - OIDC Based Authentication\n \t   AMS supports token based authentication\
+    \ for all its endpoints. Enabling this feature requires configuring AMS with an\
+    \ OIDC (OpenID Connect 2.0)\n \t   Compliant Identity Provider. This can be configured\
+    \ in AMS daemon by setting the configuration items `oidc.*` to appropriate values.\n\
+    \ \t   This enables the AMS API server to enable token based authentication and\
+    \ authorization as issued by the identity provider.\n\nIf an API version is bumped\
+    \ to a major version, it indicates that backward compatibility is affected.\n\n\
+    Feature additions done without breaking backward compatibility only result in\
+    \ additions to `api_extensions` which can be used by the client to check if a\
+    \ given feature is supported by the server.\n\n## API versioning\n\nThe details\
+    \ of a version of the API can be retrieved using `GET /<version>`. For example,\
+    \ `GET /1.0`.\n\nIf an API version is bumped to a major version, it indicates\
+    \ that backward compatibility is affected.\n\nFeature additions done without breaking\
+    \ backward compatibility only result in additions to `api_extensions` which can\
+    \ be used by the client to check if a given feature is supported by the server.\n\
+    \n## Return values\n\nThere are three standard return types:\n\n * Standard return\
+    \ value\n * Background operation\n * Error\n\n### Standard return value\n\nFor\
+    \ a standard synchronous operation, the following dict is returned:\n\n```json\n\
+    {\n\"type\": \"sync\",\n\"status\": \"Success\",\n\"status_code\": 200,\n\"metadata\"\
+    : {}\n}\n```\n\nHTTP response status code is 200.\n\n### Background operation\n\
+    \nWhen a request results in a background operation, the HTTP code is set to 202\
+    \ (Accepted) and the Location HTTP header is set to the operation URL.\n\nThe\
+    \ response body is a dict with the following structure:\n\n```json\n{\n\"type\"\
+    : \"async\",\n\"status\": \"OK\",\n\"status_code\": 100,\n\"operation\": \"/1.0/containers/<id>\"\
+    ,\n\"metadata\": {}\n}\n```\n\nThe operation metadata structure looks like:\n\n\
+    ```json\n{\n\"id\": \"c6832c58-0867-467e-b245-2962d6527876\",\n\"class\": \"task\"\
+    ,\n\"created_at\": \"2018-04-02T16:49:36.341463206+02:00\",\n\"updated_at\": \"\
+    2018-04-02T16:49:36.341463206+02:00\",\n\"status\": \"Running\",\n\"status_code\"\
+    : 103,\n\"resources\": {\n\"containers\": [\n\"/1.0/containers/3apqo5te\"\n]\n\
+    },\n\"metadata\": null,\n\"may_cancel\": false,\n\"err\": \"\"\n}\n```\n\nThe\
+    \ body is mostly provided as a user friendly way of seeing what's going on without\
     \ having to pull the target operation, all information in the body can also be\
     \ retrieved from the background operation URL.\n\n### Error\n\nThere are various\
     \ situations in which something may immediately go wrong, in those cases, the\
@@ -95,6 +118,7 @@ info:
 paths:
   /1.0/:
     get:
+      security: []
       description: 'This endpoint returns the service status and its supported API
         extensions.
 
@@ -1023,6 +1047,168 @@ paths:
                   $ref: '#/definitions/Application'
         default:
           $ref: '#/responses/InternalServerError'
+  /1.0/auth/identites/{id}:
+    get:
+      description: This endpoint returns information about a specific identity.
+      produces:
+        - application/json
+      tags:
+        - identities
+      summary: Get information about a specific identity.
+      operationId: identity_get
+      parameters:
+        - type: string
+          name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: Identity details
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/NoMetaSyncResponse'
+            properties:
+              metadata:
+                $ref: '#/definitions/Identity'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        '500':
+          $ref: '#/responses/InternalServerError'
+  /1.0/auth/identities:
+    get:
+      description: This endpoint returns a list of identities known to AMS.
+      produces:
+        - application/json
+      tags:
+        - identities
+      summary: Get a list of identities
+      operationId: identities_get
+      parameters:
+        - type: integer
+          description: Maximum number of identities to provide
+          name: limit
+          in: query
+        - type: integer
+          description: Offset at which to start with listing identities
+          name: offset
+          in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Expand the returned resource definition
+          name: recursion
+          in: query
+        - type: string
+          example: cilsreunfpfec9b1ktg0
+          description: Filter identities by id. This is an exact match for the string.
+          name: id
+          in: query
+        - enum:
+            - oidc
+            - tls
+          type: string
+          description: Filter identities by authentication type.
+          name: auth_type
+          in: query
+      responses:
+        '200':
+          description: API endpoints
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/NoMetaSyncResponse'
+            properties:
+              metadata:
+                description: List of identities
+                type: array
+                items:
+                  type: string
+                example: "[\n  \"/1.0/auth/identities/foo\",\n  \"/1.0/auth/identities/bar\"\
+                  \n]"
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        '500':
+          $ref: '#/responses/InternalServerError'
+    post:
+      description: 'This endpoint adds a new OIDC based Identity to AMS.
+
+        NOTE**: This is an experimental endpoint and may change or be removed in the
+        future.'
+      produces:
+        - application/json
+      tags:
+        - auth
+      summary: Register an identity into AMS
+      operationId: oidc_identity_post
+      responses:
+        '200':
+          $ref: '#/definitions/NoMetaSyncResponse'
+        default:
+          $ref: '#/responses/InternalServerError'
+  /1.0/auth/identities/{id}:
+    delete:
+      description: 'This endpoint deletes a specific identity. The deletion process
+        happens
+
+        asynchronously. The operation progress can be checked via the returned
+
+        operation object.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      tags:
+        - identities
+      summary: Delete a specific identity
+      operationId: identities_delete
+      parameters:
+        - type: string
+          name: id
+          in: path
+          required: true
+      responses:
+        '202':
+          description: Success response of the service
+          schema:
+            $ref: '#/definitions/OperationResponse'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        '500':
+          $ref: '#/responses/InternalServerError'
+  /1.0/auth/oidc:
+    get:
+      security: []
+      description: 'This endpoint returns the service status and its supported API
+        extensions.
+
+        It also returns whether the connection is trusted or not.'
+      produces:
+        - application/json
+      tags:
+        - auth
+      summary: Get the status and features supported by the service
+      operationId: oidc_get
+      responses:
+        '200':
+          description: Current config for the service
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/NoMetaSyncResponse'
+            properties:
+              metadata:
+                $ref: '#/definitions/OIDCResponse'
+        default:
+          $ref: '#/responses/InternalServerError'
   /1.0/certificates:
     get:
       description: This endpoint returns a list of certificates of trusted clients
@@ -1219,36 +1405,39 @@ paths:
                     type: object
                     properties:
                       agent.api.fingerprint:
-                        description: Fingerprint of certificate in the AMS trust store
-                          which is trusted when communicating with the stream agent.
+                        description: 'Fingerprint of the certificate
+
+                          in the AMS trust store that is trusted
+
+                          for communicating with the Stream Agent.'
                         type: string
                         default: ''
                         example: fd42316b32df
                       agent.api.token:
-                        description: Token to be used for API authentication with
-                          stream agent.
+                        description: Token used for API authentication with Stream
+                          Agent.
                         type: string
                         default: ''
                         example: foobar
                       agent.api.url:
-                        description: URL for stream agent API endpoint.
+                        description: URL for Stream Agent's API endpoint.
                         type: string
                         default: ''
                         example: https://foo.bar:9001
                       application.addons:
                         description: 'Comma-separated list of addons that every
 
-                          application managed by AMS will use.'
+                          application managed by AMS uses.'
                         type: string
                         default: ''
                         x-docs-ref: howto-enable-addons-globally
                         example: my-addon
                       application.auto_publish:
-                        description: 'If set to `true`, AMS automatically published
+                        description: 'If set to `true`, AMS automatically publishes
 
                           new application versions when the bootstrap
 
-                          process is finished. `false` disables this.'
+                          process is complete.'
                         type: boolean
                         default: true
                         x-docs-ref: sec-publish-app-versions
@@ -1257,9 +1446,7 @@ paths:
 
                           applications whenever any dependencies
 
-                          (parent image, addons, global configuration) change.
-
-                          `false` disables this.'
+                          (parent image, addons, global configuration) change.'
                         type: boolean
                         default: true
                         x-docs-ref: sec-configure-automatic-app-updates
@@ -1273,13 +1460,14 @@ paths:
                         default: ''
                         example: arm64-v8a
                       application.max_published_versions:
-                        description: 'Maximum number of published versions per
+                        description: 'Maximum number of published versions allowed
+                          for
 
-                          application. If the number of versions of
+                          application. If the number of application versions
 
-                          an application exceeds this configuration,
+                          exceeds this configuration, AMS automatically
 
-                          AMS will automatically clean up older versions.'
+                          cleans up older versions.'
                         type: integer
                         format: int32
                         default: 3
@@ -1287,9 +1475,7 @@ paths:
                       container.apt_mirror:
                         description: '*(Deprecated)* APT mirror to use within
 
-                          the containers. This configuration item
-
-                          is deprecated since 1.20, use `instance.apt_mirror`
+                          the containers. Use `instance.apt_mirror`
 
                           instead.'
                         type: string
@@ -1301,9 +1487,7 @@ paths:
 
                           that Anbox Cloud uses by default to launch
 
-                          containers. This configuration item is deprecated
-
-                          since 1.20, use `instance.default_platform` instead.'
+                          containers. Use `instance.default_platform` instead.'
                         type: string
                         default: 'null'
                         enum:
@@ -1315,9 +1499,7 @@ paths:
                       container.features:
                         description: '*(Deprecated)* Comma-separated list of
 
-                          features to enable. This configuration
-
-                          item is deprecated since 1.20, use `instance.features`
+                          features to enable. Use `instance.features`
 
                           instead.'
                         type: string
@@ -1329,49 +1511,42 @@ paths:
 
                           Ubuntu security updates are applied during
 
-                          the application bootstrap process. `false`
+                          the application bootstrap process.
 
-                          disables this. This configuration item is
-
-                          deprecated since 1.20, use `instance.security_updates`
-
-                          instead.'
+                          Use `instance.security_updates` instead.'
                         type: boolean
                         default: true
                         x-deprecated-since: '1.20'
                       core.debug_address:
-                        description: Address used to expose debug information on.
+                        description: The address used to serve debugging information.
                         type: string
                         default: ''
                         example: https://127.0.0.1:9090
                       core.https_address:
-                        description: (read only) Address which the AMS servicewill
-                          listen on
+                        description: (read only) The address on which AMS listens.
                         type: string
                         default: ''
                         example: 127.0.0.1:8444
                       core.max_requests_per_second:
                         description: Maximum number of requests allowed on the HTTPS
-                          endpoint
+                          endpoint.
                         type: int32
                         default: 1000
                         example: 100
                       core.proxy_http:
-                        description: HTTP proxy to use for HTTP requests that AMS
-                          performs.
+                        description: HTTP proxy for HTTP requests performed by AMS.
                         type: string
                         default: ''
                         example: http://my-proxy:8000
                       core.proxy_https:
-                        description: HTTPS proxy to use for HTTPS requests that AMS
-                          performs.
+                        description: HTTPS proxy for HTTPS requests performed by AMS.
                         type: string
                         default: ''
                         example: http://my-proxy:8000
                       core.proxy_ignore_hosts:
-                        description: 'Comma-separated list that defines the hosts
+                        description: 'Comma-separated list of hosts
 
-                          for which a configured proxy is not used.'
+                          that bypass the configured proxy.'
                         type: string
                         default: ''
                         example: localhost,127.0.0.1
@@ -1380,7 +1555,7 @@ paths:
 
                           AMS does not expose the actual password
 
-                          but only the fact that it is set or not.'
+                          but only whether it is set.'
                         type: string
                         default: ''
                         example: sUp3rS3cR3t
@@ -1397,22 +1572,10 @@ paths:
                           - pinning
                         x-docs-ref: exp-performance
                         example: scheduler
-                      gpu.allocation_mode:
-                        description: 'Method of allocating GPUs: `all` tells
-
-                          AMS to allocate all available GPUs on a
-
-                          system to an instance. `single` allocates
-
-                          only a single GPU.'
-                        type: string
-                        default: single
-                        enum:
-                          - all
-                          - single
-                        example: single
                       gpu.type:
-                        description: 'Type of GPU: `none`, `intel`, `nvidia`, `amd`.'
+                        description: 'Type of GPU.
+
+                          Possible values are: `none`, `intel`, `nvidia`, `amd`.'
                         type: string
                         default: none
                         enum:
@@ -1447,31 +1610,32 @@ paths:
                         default: 5m
                         example: 5m
                       images.url:
-                        description: URL of the image server to use.
+                        description: URL of the image server.
                         type: string
                         default: https://images.anbox-cloud.io/stable/
                         example: https://images.anbox-cloud.io/stable/
                       images.version_lockstep:
-                        description: 'Whether to put the version of the latest
+                        description: 'If set to `true`, enables version lockstep between
+                          AMS and
 
-                          pulled image and the AMS version in a lockstep.
+                          the last downloaded image. This ensures that
 
-                          This ensures that a deployment is not automatically
+                          a deployment is not automatically updated to
 
-                          updated to newer image versions if AMS is still at
+                          newer image versions if AMS is still at
 
-                          an older version. This only applies for new major
+                          an earlier version. This only applies for new major
 
-                          and minor but not patch version updates.'
+                          and minor version upgrades but not for patch release updates.'
                         type: boolean
                         default: true
                       instance.apt_mirror:
-                        description: APT mirror to use within the instances.
+                        description: APT mirror to be used inside instances.
                         type: string
                         default: ''
                         example: http://ports.ubuntu.com/ubuntu-ports
                       instance.default_platform:
-                        description: 'The name of the platform that Anbox Cloud
+                        description: 'The platform that Anbox Cloud
 
                           uses by default to launch instances.'
                         type: string
@@ -1487,9 +1651,9 @@ paths:
                         default: ''
                         example: enable_virtual_keyboard,foo
                       instance.network_proxy:
-                        description: 'Network proxy to use inside the instances.
+                        description: 'The network proxy to be used inside instances.
 
-                          This value must have the format `<hostname>:<port>`.'
+                          This value must be provided in the format `<hostname>:<port>`.'
                         type: string
                         default: ''
                         example: myproxy.com:9090
@@ -1502,13 +1666,15 @@ paths:
                         type: boolean
                         default: true
                       load_balancer.url:
-                        description: 'URL of the load balancer behind which AMS sits.
+                        description: 'URL of the load balancer in front of AMS.
 
-                          The URL is handed to instances started by AMS to
+                          This URL is provided to instances started by AMS to
 
-                          allow them to contact AMS through the load balancer
+                          allow them to communicate with AMS
 
-                          and not via the address of an individual AMS instance.'
+                          via the load balancer instead of direct communication
+
+                          with an individual AMS instance.'
                         type: string
                         default: ''
                         example: https://load-balanced-ams.com
@@ -1517,7 +1683,7 @@ paths:
 
                           to start and stop instances per LXD node.
 
-                          Changing the value requires a restart of AMS.'
+                          Changing this value requires a restart of AMS.'
                         type: integer
                         format: int32
                         default: 100
@@ -1525,7 +1691,7 @@ paths:
                       node.workers_per_queue:
                         description: 'Number of workers processing instance start
 
-                          and stop requests. Changing the value requires
+                          and stop requests. Changing this value requires
 
                           a restart of AMS.'
                         type: integer
@@ -1537,7 +1703,7 @@ paths:
 
                           for when applications are fetched from
 
-                          aar. If empty, no filter is applied.'
+                          AAR. If empty, no filter is applied.'
                         type: string
                         default: ''
                         x-docs-ref: exp-aar
@@ -1573,7 +1739,7 @@ paths:
                         x-docs-ref: exp-aar
                         example: 1h
                       registry.url:
-                        description: URL of the AAR to use.
+                        description: URL of the AAR.
                         type: string
                         default: ''
                         x-docs-ref: exp-aar
@@ -3655,6 +3821,7 @@ paths:
           $ref: '#/responses/InternalServerError'
   /1.0/version:
     get:
+      security: []
       description: This endpoint returns the current running version for the service.
       produces:
         - application/json
@@ -4714,6 +4881,47 @@ definitions:
       token:
         description: Token represents a signed JWT token issued by AMS.
         type: string
+  Identity:
+    type: object
+    title: Identity represents an authenticated party that can make requests to the
+      HTTPS API.
+    properties:
+      authentication_method:
+        description: 'The authentication method that the identity
+
+          authenticates to AMS with.'
+        type: string
+        example: tls
+      created_at:
+        description: CreatedAt specifies the time at which the identity was created
+        type: integer
+        format: int64
+        example: 1689604498
+      email:
+        description: Email of the new OIDC user
+        type: string
+        example: john.doe@example.com
+      groups:
+        description: The list of groups for which the identity is a member.
+        type: array
+        items:
+          type: string
+        example:
+          - foo
+          - bar
+      id:
+        description: A unique identifier for the identity
+        type: string
+        example: btavtegj1qm58qg7ru50
+      name:
+        description: Name of the new OIDC user
+        type: string
+        example: Jhon Doe
+      updated_at:
+        description: CreatedAt specifies the time at which the identity was last updated
+        type: integer
+        format: int64
+        example: 1689604498
   Image:
     description: Image represents an image available in AMS
     type: object
@@ -5876,6 +6084,52 @@ definitions:
         description: Flag used to control if AMS can manage the LXD node
         type: boolean
         example: false
+  OIDCIdentityPost:
+    description: OIDCIdentityPost is the input body adding for an OIDC based Identity
+    type: object
+    properties:
+      email:
+        description: Email of the new OIDC user
+        type: string
+        example: john.doe@example.com
+      name:
+        description: Name of the new OIDC user
+        type: string
+        example: Jhon Doe
+  OIDCResponse:
+    description: OIDCResponse represents the OIDC configuration accepted by AMS
+    type: object
+    properties:
+      audience:
+        description: 'Audience to use when using flows that do not require a client_secret
+          on
+
+          identity provider e.g Device flow grant.'
+        type: string
+        example: http://ams.example.com
+      client_id:
+        description: 'ClientID to use when using flows that do not require a client_secret
+          on
+
+          identity provider e.g Device flow grant.'
+        type: string
+        example: web
+      issuer:
+        description: Issuer URL as configured in AMS
+        type: string
+        example: '"https://myauth.auth0.com/"'
+      required_scopes:
+        description: 'Required Scope for AMS to work. These scopes should be request
+          by clients
+
+          when performing OIDC based authentication with an Identity Provider.'
+        type: array
+        items:
+          type: string
+        example:
+          - openid
+          - email
+          - profile
   Operation:
     description: Operation represents a background operation
     type: object
@@ -6198,3 +6452,12 @@ responses:
         type:
           type: string
           example: error
+securityDefinitions:
+  bearerAuth:
+    description: 'Provide the Bearer token in the format: "Bearer {token}".'
+    type: apiKey
+    name: Authorization
+    in: header
+security:
+  - bearerAuth:
+      - '[]'

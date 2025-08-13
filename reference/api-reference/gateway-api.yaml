@@ -119,7 +119,7 @@ paths:
           in: query
         - type: boolean
           description: Return full session objects rather than just their ID
-          name: recursive
+          name: recursion
           in: query
         - type: integer
           description: Limit number of results returned
@@ -454,7 +454,7 @@ paths:
         - type: boolean
           description: Return detailed information about a share, rather than just
             its ID.
-          name: recursive
+          name: recursion
           in: query
         - type: integer
           description: Limit number of results returned
@@ -464,9 +464,13 @@ paths:
           description: Offset to list results from
           name: offset
           in: query
+        - type: string
+          description: Filter shares by a specific session ID.
+          name: session_id
+          in: query
       responses:
         '200':
-          description: List of shares
+          description: List of share IDs
           schema:
             $ref: '#/definitions/api.ShareGetResponse'
         '400':
@@ -1267,6 +1271,41 @@ definitions:
         allOf:
           - $ref: '#/definitions/api.ResponseType'
         example: sync
+  api.SessionsGetResponseRecursive:
+    type: object
+    properties:
+      error:
+        description: Error is an optional error message
+        type: string
+        example: invalid body format
+      metadata:
+        type: array
+        items:
+          $ref: '#/definitions/api.Session'
+      status:
+        description: Status of the response
+        enum:
+          - success
+          - failed
+          - unknown
+        allOf:
+          - $ref: '#/definitions/github_com_canonical_ams_api_gateway.ResponseStatus'
+      status_code:
+        description: StatusCode is the HTTP code of the response
+        type: integer
+      total_size:
+        description: TotalSize specifies how many session objects are available in
+          total
+        type: integer
+      type:
+        description: Type of the operation
+        enum:
+          - sync
+          - async
+          - error
+        allOf:
+          - $ref: '#/definitions/api.ResponseType'
+        example: sync
   api.Share:
     type: object
     properties:
@@ -1318,6 +1357,42 @@ definitions:
       status_code:
         description: StatusCode is the HTTP code of the response
         type: integer
+      type:
+        description: Type of the operation
+        enum:
+          - sync
+          - async
+          - error
+        allOf:
+          - $ref: '#/definitions/api.ResponseType'
+        example: sync
+  api.SharesGetResponseRecursive:
+    type: object
+    properties:
+      error:
+        description: Error is an optional error message
+        type: string
+        example: invalid body format
+      metadata:
+        type: array
+        items:
+          $ref: '#/definitions/api.Share'
+      status:
+        description: Status of the response
+        enum:
+          - success
+          - failed
+          - unknown
+        allOf:
+          - $ref: '#/definitions/github_com_canonical_ams_api_gateway.ResponseStatus'
+      status_code:
+        description: StatusCode is the HTTP code of the response
+        type: integer
+      total_size:
+        description: TotalSize specifies how many shares objects are available in
+          total
+        type: integer
+        example: 10
       type:
         description: Type of the operation
         enum:
