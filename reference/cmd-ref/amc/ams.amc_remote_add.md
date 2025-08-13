@@ -25,6 +25,7 @@ $ amc remote add local unix://
 
 ```
       --accept-certificate   Implicitly accept remote server certificate
+      --auth-type string     Server authentication type (tls or oidc) (default "tls")
   -h, --help                 help for add
 ```
 

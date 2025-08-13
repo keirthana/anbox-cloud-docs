@@ -22,6 +22,7 @@ with Anbox Cloud.
 
 * [ams.amc addon](ams.amc_addon.md)	 - Manage addons
 * [ams.amc application](ams.amc_application.md)	 - Manage applications
+* [ams.amc auth](ams.amc_auth.md)	 - Manage authentication & authorization
 * [ams.amc benchmark](ams.amc_benchmark.md)	 - Benchmark your Anbox Cloud deployment
 * [ams.amc completion](ams.amc_completion.md)	 - Generate the autocompletion script for the specified shell
 * [ams.amc config](ams.amc_config.md)	 - Manage AMS configuration
@@ -36,6 +37,7 @@ with Anbox Cloud.
 * [ams.amc monitor](ams.amc_monitor.md)	 - Listen for events generated in AMS
 * [ams.amc node](ams.amc_node.md)	 - Manage nodes
 * [ams.amc remote](ams.amc_remote.md)	 - Interact with remote AMS daemons
+* [ams.amc restart](ams.amc_restart.md)	 - Restart a running instance
 * [ams.amc shell](ams.amc_shell.md)	 - Open a shell inside a running instance
 * [ams.amc show](ams.amc_show.md)	 - Show information about an instance
 * [ams.amc show-log](ams.amc_show-log.md)	 - Show an instance log file
