@@ -51,7 +51,7 @@ The output returns the command you need to run next from your host machine: `anb
 
 Copy this output. The `<connection_url>` is a presigned URL that establishes a single ADB connection — if multiple users attempt to use the same presigned URL, any existing ADB connection will be interrupted and only the last request succeeds.
 
-> If you are using the dashboard, locate your running instance and click *Connect ADB > Authorise* to get the command with the presigned URL.
+> If you are using the dashboard, locate your running instance and click *Connect ADB > Authorize* to create your first ADB share. After that, you can use the show/hide toggle in the ADB share table to display and copy the command with the presigned URL.
 
 Now, create the connection from the terminal of your host machine (where ADB is installed). Run:
 
