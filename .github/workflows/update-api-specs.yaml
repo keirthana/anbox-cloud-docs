@@ -32,7 +32,7 @@ jobs:
           --unix-socket /var/snap/anbox-cloud-appliance/common/gateway/internal.sock \
           s/1.0/swagger.json | yq -y > ./reference/api-reference/gateway-api.yaml
     - name: Create PR
-      uses: canonical/create-pull-request@737e8fba9e3925a74c2c0cc08c4f13c5bbd7465e
+      uses: canonical/create-pull-request@5636eb9adb472d290062a9cf9727aa99f66c3dc2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "feat: update API specs from ${{ steps.snap_version.outputs.value }}"
