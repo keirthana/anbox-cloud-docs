@@ -12,7 +12,7 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
     - name: Set up Anbox Cloud
-      uses: canonical/anbox-cloud-github-action@dc99b94280cfcf44a86b62aeac25ba34f14725e0
+      uses: canonical/anbox-cloud-github-action@ef0690184b1c8fd11e3385669726297bc2e3d368
       with:
         channel: latest/stable
     - name: Determine appliance version
@@ -32,7 +32,7 @@ jobs:
           --unix-socket /var/snap/anbox-cloud-appliance/common/gateway/internal.sock \
           s/1.0/swagger.json | yq -y > ./reference/api-reference/gateway-api.yaml
     - name: Create PR
-      uses: canonical/create-pull-request@57a089513936a5a732555a9264e4984743985293
+      uses: canonical/create-pull-request@cc046b2fe4e26db1087d2233c068c6d9605b1fc1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "feat: update API specs from ${{ steps.snap_version.outputs.value }}"
