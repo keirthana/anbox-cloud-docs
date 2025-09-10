@@ -24,6 +24,11 @@ The following charms for Anbox Cloud make use of cryptographic technology for cr
 
 When Anbox Cloud is deployed without the use of an external CA, the charms will generate self-signed certificates using the [cryptography](https://pypi.org/project/cryptography/) Python package. The private key used for signing has a size of 4096 bits.
 
+### Certificate separation
+
+When using a TLS charm (e.g. [Easy-RSA](https://charmhub.io/easyrsa)) as the CA to issue certificates for etcd, it is essential to keep etcd certificates isolated. Granting leaf certificates from this CA effectively allows direct access to etcd data, and such access must be restricted strictly to AMS. Since Easy-RSA charm also serves as the base for mTLS, maintaining this separation enforces clear trust boundaries between AMS and other components such as Anbox-stream-gateway, Anbox-stream-agent, and other related services.
+
+
 ### Packages used
 
 * [cryptography from PyPI](https://pypi.org/project/cryptography/)
