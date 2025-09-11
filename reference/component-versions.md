@@ -15,15 +15,15 @@ No new versions of charms are released with 1.27.1.
 
 | Name |  Channel | Version |
 |----------|--------------|---------|
-| `ams`    | `1.27/stable` |  |
-| `aar`    | `1.27/stable` |  |
-| `amc`    | `latest/stable` |  |
-| `ams-node-controller` | `1.27/stable` |  |
-| `anbox-cloud-dashboard` | `1.27/stable` |  |
-| `anbox-stream-agent` | `1.27/stable` |   |
-| `anbox-stream-gateway` | `1.27/stable` |  |
-| `anbox-connect` | `latest/stable` |  |
-| `anbox-cloud-appliance` | `1.27/stable` |  |
+| `ams`    | `1.27/stable` | `1.27.1-9d42947db` |
+| `aar`    | `1.27/stable` | `1.27.1-9d42947db` |
+| `amc`    | `latest/stable` | `1.27.1-9d42947db` |
+| `ams-node-controller` | `1.27/stable` | `1.27.1-9d42947db` |
+| `anbox-cloud-dashboard` | `1.27/stable` | `1.27.1-9d42947db` |
+| `anbox-stream-agent` | `1.27/stable` | `1.27.1-9d42947db` |
+| `anbox-stream-gateway` | `1.27/stable` | `1.27.1-9d42947db` |
+| `anbox-connect` | `latest/stable` | `1.27.1-9d42947db` |
+| `anbox-cloud-appliance` | `1.27/stable` | `1.27.1-9d42947db`  |
 
 ### Anbox images
 
@@ -31,20 +31,20 @@ The following Anbox images are available in two variants: one based on a contain
 
 | Name | Version |
 |----------|--------------|
-| `jammy:aaos15:amd64`    |  |
-| `jammy:aaos15:arm64`    |  |
-| `jammy:android15:amd64` |  |
-| `jammy:android15:arm64` |  |
-| `jammy:aaos14:amd64`    |  |
-| `jammy:aaos14:arm64`    |  |
-| `jammy:android14:amd64` |  |
-| `jammy:android14:arm64` |  |
-| `jammy:aaos13:amd64`    |  |
-| `jammy:aaos13:arm64`    |  |
-| `jammy:android13:amd64` |  |
-| `jammy:android13:arm64` |  |
-| `jammy:android12:amd64` |  |
-| `jammy:android12:arm64` |  |
+| `jammy:aaos15:amd64`    | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:aaos15:arm64`    | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:android15:amd64` | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:android15:arm64` | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:aaos14:amd64`    | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:aaos14:arm64`    | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:android14:amd64` | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:android14:arm64` | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:aaos13:amd64`    | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:aaos13:arm64`    | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:android13:amd64` | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:android13:arm64` | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:android12:amd64` | `1.27.1-20250908232521.gite93faa2` |
+| `jammy:android12:arm64` | `1.27.1-20250908232521.gite93faa2` |
 
 
 ## 1.27.0
