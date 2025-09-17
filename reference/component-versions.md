@@ -197,17 +197,17 @@ The following Anbox images are available in two variants: one based on a contain
 
 ### Snaps
 
-| Name |  Channel | Version |
-|----------|--------------|---------|
-| `ams`    | `1.26/stable` | `1.26.1-ba75d11df` |
-| `aar`    | `1.26/stable` | `1.26.1-ba75d11df` |
-| `amc`    | `latest/stable` | `1.26.1-ba75d11df` |
-| `ams-node-controller` | `1.26/stable` | `1.26.1-ba75d11df` |
-| `anbox-cloud-dashboard` | `1.26/stable` | `1.26.1-ba75d11df` |
-| `anbox-stream-agent` | `1.26/stable` | `1.26.1-ba75d11df` |
-| `anbox-stream-gateway` | `1.26/stable` | `1.26.1-ba75d11df` |
-| `anbox-connect` | `latest/stable` | `1.26.1-ba75d11df` |
-| `anbox-cloud-appliance` | `1.26/stable` | `1.26.1-ba75d11df` |
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| `ams` | 1.27/stable | 2403 | 2404 | `1.27.1-9d42947db` |
+| `ams-node-controller` | 1.27/stable | 1982 | 1983 | `1.27.1-9d42947db` |
+| `amc` | latest/stable | 2201 | 2202 | `1.27.1-9d42947db` |
+| `aar` | 1.27/stable | 2355 | 2356 | `1.27.1-9d42947db` |
+| `anbox-stream-agent` | 1.27/stable | 2625 | 2626 | `1.27.1-9d42947db` |
+| `anbox-stream-gateway` | 1.27/stable | 2591 | 2592 | `1.27.1-9d42947db` |
+| `anbox-cloud-appliance` | 1.27/stable | 2264 | 2265 | `1.27.1-9d42947db` |
+| `anbox-cloud-dashboard` | 1.27/stable | 4094 | 4095 | `1.27.1-9d42947db` |
+| `anbox-connect` | latest/stable | 1420 | 1421 | `1.27.1-9d42947db` |
 
 ### Anbox images
 
