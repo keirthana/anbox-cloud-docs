@@ -3,6 +3,11 @@
 
 This document contains a list of deprecation notices for Anbox Cloud and its components.
 
+## Android 12, Android 13, and AAOS 13
+*Deprecated in 1.27.1* ; *Unsupported in 1.29.0*
+
+Support for the Android 12, Android 13, and AAOS 13 images will be deprecated starting with release 1.27.1 and will be unsupported as of release 1.29.0.
+
 ## Node controller charm
 *Deprecated in 1.26.0* ; *Unsupported in 1.28.0*
 
