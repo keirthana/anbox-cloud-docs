@@ -1,0 +1,98 @@
+name: Version Update
+
+on:
+  schedule:
+    # Runs every Thursday at 6 AM UTC
+    - cron: '0 6 * * 4'
+  workflow_dispatch:  # Allow manual triggering of the action
+
+jobs:
+  update_version:
+    runs-on: ubuntu-24.04
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          ref: ${{ github.ref }}  # Ensure we're working on the correct branch (usually `main`)
+
+      # Step 2: Set up Git
+      - name: Set up Git
+        uses: actions/setup-git@v2
+        with:
+          git_config_name: "github-actions"
+          git_config_email: "github-actions@users.noreply.github.com"
+
+      # Step 3: Clone the repository
+      - name: Clone the repository
+        run: |
+          if [ ! -d "anbox-cloud-docs" ]; then
+            echo "Cloning the repository..."
+            git clone "https://github.com/${{ github.repository }}.git"
+          else
+            echo "Repository already cloned."
+          fi
+
+      # Step 4: Fetch the latest changes
+      - name: Fetch latest changes
+        run: |
+          cd anbox-cloud-docs
+          git fetch origin main
+          git checkout main
+
+      # Step 5: Read the current version from the .base_version file
+      - name: Read current version
+        run: |
+          cd anbox-cloud-docs
+          if [ -f ".base_version" ]; then
+            CURRENT_VERSION=$(cat .base_version)
+            echo "Current base version: $CURRENT_VERSION"
+            echo "CURRENT_VERSION=$CURRENT_VERSION" >> $GITHUB_ENV
+          else
+            echo "Error: Base version file '.base_version' not found."
+            exit 1
+          fi
+
+      # Step 6: Determine the next minor version
+      - name: Determine next minor version
+        run: |
+          IFS='.' read -r -a version_parts <<< "$CURRENT_VERSION"
+          MAJOR=${version_parts[0]}
+          MINOR=${version_parts[1]}
+          NEXT_MINOR=$((MINOR + 1))
+          NEXT_VERSION="${MAJOR}.${NEXT_MINOR}.0"
+          echo "Next version: $NEXT_VERSION"
+          echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_ENV
+
+      # Step 7: Check for release note file
+      - name: Check for release note file
+        run: |
+          cd anbox-cloud-docs
+          RELEASE_FILE="reference/release-notes/${CURRENT_VERSION}.md"
+          echo "Checking for release note file '$RELEASE_FILE'"
+          if [ -f "$RELEASE_FILE" ]; then
+            echo "Release note file found. Proceeding with version update."
+            echo "RELEASE_FILE_EXISTS=true" >> $GITHUB_ENV
+          else
+            echo "Release note file not found. No changes will be made."
+            echo "RELEASE_FILE_EXISTS=false" >> $GITHUB_ENV
+            exit 0
+          fi
+
+      # Step 8: Create PR
+      - name: Create a PR for updating base version
+        uses: canonical/create-pull-request@ec202b7032d3715833596f96bd3dbac62aefb3b0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update base version to $NEXT_VERSION"
+          branch-name: update-base-version
+          title: Update base version
+          body: |
+            This updates the base version of Anbox Cloud after a minor release.
+
+            You have to close and reopen the PR to trigger checks.
+          repository: canonical/anbox-cloud-docs
+          upsert: true
+          ignore-no-changes: true
+
