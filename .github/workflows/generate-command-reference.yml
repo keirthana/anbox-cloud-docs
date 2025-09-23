@@ -2,7 +2,7 @@ name: Automatically generate command reference topics
 on:
   workflow_dispatch:
   schedule:
-  - cron: '22 1 * * THU,FRI'
+  - cron: '22 1 10-31 * THU,FRI'
 
 env:
   AMC_COMMAND_REFERENCE_DIR: "./reference/cmd-ref/amc"

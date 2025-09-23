@@ -2,7 +2,7 @@ name: Update API specs
 on:
   workflow_dispatch:
   schedule:
-  - cron: '0 1 * * THU,FRI'
+  - cron: '0 1 10-31 * THU,FRI'
 
 jobs:
   update-api-specs:
