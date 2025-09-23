@@ -47,7 +47,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "feat: update command reference documentation from ${{ steps.snap_version.outputs.value }}"
-        branch-name: update-cmd-ref
+        branch-name: update-cmd-ref-${{ steps.snap_version.outputs.value }}
         title: Update command reference documentation from ${{ steps.snap_version.outputs.value }}
         body: |
           This updates the command reference topics for the AMC and Anbox Cloud Appliance as of
