@@ -46,11 +46,12 @@ jobs:
       uses: canonical/create-pull-request@ec202b7032d3715833596f96bd3dbac62aefb3b0
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        commit-message: "feat: update command reference documentation"
+        commit-message: "feat: update command reference documentation from ${{ steps.snap_version.outputs.value }}"
         branch-name: update-cmd-ref
-        title: Update command reference documentation
+        title: Update command reference documentation from ${{ steps.snap_version.outputs.value }}
         body: |
-          This updates the command reference topics for the AMC and Anbox Cloud Appliance.
+          This updates the command reference topics for the AMC and Anbox Cloud Appliance as of
+          version ${{ steps.snap_version.outputs.value }}.
 
           You have to close and reopen the PR to trigger checks.
         repository: canonical/anbox-cloud-docs
