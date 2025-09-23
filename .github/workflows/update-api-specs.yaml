@@ -31,7 +31,7 @@ jobs:
         sudo curl \
           --unix-socket /var/snap/anbox-cloud-appliance/common/gateway/internal.sock \
           s/1.0/swagger.json | yq -y > ./reference/api-reference/gateway-api.yaml
-    - name: Create PR
+    - name: Create pull request
       uses: canonical/create-pull-request@ec202b7032d3715833596f96bd3dbac62aefb3b0
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
