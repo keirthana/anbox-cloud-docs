@@ -47,7 +47,7 @@ jobs:
         title: Update command reference documentation
         body: |
           This updates the command reference topics for the AMC and Anbox Cloud Appliance.
-          
+
           You have to close and reopen the PR to trigger checks.
         repository: canonical/anbox-cloud-docs
         upsert: true
