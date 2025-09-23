@@ -28,20 +28,20 @@ jobs:
       run: |
         set -e
         # Remove existing files, generate AMC command reference
-        rm -rf $AMC_COMMAND_REFERENCE_DIR/*
-        amc generate documentation -f markdown -d $AMC_COMMAND_REFERENCE_DIR
+        rm -rf "${AMC_COMMAND_REFERENCE_DIR}"/*
+        amc generate documentation -f markdown -d "${AMC_COMMAND_REFERENCE_DIR}"
     - name: Generate appliance command reference documentation
       env:
         SNAP_DOCS_DIR: "/var/snap/anbox-cloud-appliance/common/docs"
       run: |
         set -e
         # Remove existing files, generate appliance command reference
-        rm -rf $APPLIANCE_COMMAND_REFERENCE_DIR/*
+        rm -rf "${APPLIANCE_COMMAND_REFERENCE_DIR}"/*
         # For the appliance command, the files have to be generated inside the Snap
         # and then copied to the desired directory because of Snap confinement
-        sudo mkdir -p $SNAP_DOCS_DIR
-        sudo anbox-cloud-appliance generate documentation -f markdown -d $SNAP_DOCS_DIR
-        cp -r $SNAP_DOCS_DIR/* $APPLIANCE_COMMAND_REFERENCE_DIR
+        sudo mkdir -p "${SNAP_DOCS_DIR}"
+        sudo anbox-cloud-appliance generate documentation -f markdown -d "${SNAP_DOCS_DIR}"
+        cp -r "${SNAP_DOCS_DIR}"/* "${APPLIANCE_COMMAND_REFERENCE_DIR}"
     - name: Create pull request
       uses: canonical/create-pull-request@ec202b7032d3715833596f96bd3dbac62aefb3b0
       with:
