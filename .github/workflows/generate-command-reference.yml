@@ -13,12 +13,12 @@ jobs:
   run-tests:
     runs-on: ubuntu-24.04
     steps:
+    - name: Checkout repo
+      uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
     - name: Set up Anbox Cloud
       uses: canonical/anbox-cloud-github-action@ef0690184b1c8fd11e3385669726297bc2e3d368
       with:
         channel: latest/stable
-    - name: Checkout repo
-      uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       # Remove existing files, generate AMC command reference
     - name: Generate AMC command reference documentation
       run: |
