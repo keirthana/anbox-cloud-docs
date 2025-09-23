@@ -19,6 +19,10 @@ jobs:
       uses: canonical/anbox-cloud-github-action@ef0690184b1c8fd11e3385669726297bc2e3d368
       with:
         channel: latest/stable
+    - name: Determine appliance version
+      id: snap_version
+      run: |
+        echo "value=$(snap info anbox-cloud-appliance | awk '/installed/{print $2}')" >> "$GITHUB_OUTPUT"
       # Remove existing files, generate AMC command reference
     - name: Generate AMC command reference documentation
       run: |
