@@ -1,9 +1,8 @@
 name: Update API specs
 on:
   workflow_dispatch:
-  # Run daily after midnight UTC
   schedule:
-  - cron: '0 1 * * *'
+  - cron: '0 1 * * THU,FRI'
 
 jobs:
   update-api-specs:

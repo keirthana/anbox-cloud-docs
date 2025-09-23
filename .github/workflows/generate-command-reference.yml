@@ -1,9 +1,8 @@
 name: Automatically generate command reference topics
 on:
   workflow_dispatch:
-  # Run daily after midnight UTC
   schedule:
-  - cron: '22 1 * * *'
+  - cron: '22 1 * * THU,FRI'
 
 env:
   AMC_COMMAND_REFERENCE_DIR: "./reference/cmd-ref/amc"
