@@ -9,6 +9,15 @@
   ],
   "packageRules": [
     {
+      "description": "Schedule canonical/create-pull-request updates on the first day of each week to decrease noise.",
+      "matchPackageNames": [
+        "canonical/create-pull-request"
+      ],
+      "schedule": [
+        "on the first day of the week"
+      ]
+    },
+    {
       "groupName": "GitHub actions",
       "matchManagers": [
         "github-actions"
