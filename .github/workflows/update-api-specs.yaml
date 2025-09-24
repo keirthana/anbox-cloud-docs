@@ -1,9 +1,8 @@
 name: Update API specs
 on:
   workflow_dispatch:
-  # Run daily after midnight UTC
   schedule:
-  - cron: '0 1 * * *'
+  - cron: '0 1 10-31 * THU,FRI'
 
 jobs:
   update-api-specs:
@@ -31,12 +30,12 @@ jobs:
         sudo curl \
           --unix-socket /var/snap/anbox-cloud-appliance/common/gateway/internal.sock \
           s/1.0/swagger.json | yq -y > ./reference/api-reference/gateway-api.yaml
-    - name: Create PR
+    - name: Create pull request
       uses: canonical/create-pull-request@ec202b7032d3715833596f96bd3dbac62aefb3b0
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "feat: update API specs from ${{ steps.snap_version.outputs.value }}"
-        branch-name: new-branch
+        branch-name: update-api-specs-${{ steps.snap_version.outputs.value }}
         title: Update API specs from ${{ steps.snap_version.outputs.value }}
         body: |
           This updates the AMS API specification as taken from the `anbox-cloud-appliance` as of
