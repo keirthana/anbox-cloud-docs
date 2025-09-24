@@ -98,6 +98,10 @@ If you want to to further customize the streaming configuration such as display 
 
     amc launch --enable-streaming --display-size=1920x1080 --display-density=120 --fps=60 ...
 
+```{note}
+If you provide a display width or height that is an odd number, Anbox will automatically adjust it to the nearest even number by increasing it by 1 for proper video encoding.
+```
+
 ## Launch an instance with a specific name
 
 *since 1.22.0*
