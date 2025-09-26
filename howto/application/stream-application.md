@@ -21,6 +21,11 @@ To further customize the streaming configuration, use the following arguments:
 For example, to create an instance with a 1080p resolution, a frame rate of 60 and a DPI of 120, run:
 
     amc launch --enable-streaming --display-size=1920x1080 --display-density=120 --fps=60 <application_id>
+
+```{note}
+If you provide a display width or height that is an odd number, Anbox will automatically adjust it to the nearest even number by increasing it by 1 for proper video encoding.
+```
+
 :::
 :::{tab-item} Dashboard
 :sync: dashboard
