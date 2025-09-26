@@ -91,12 +91,12 @@ To upgrade all charms, run the following commands:
     juju refresh --channel=1.27/stable anbox-stream-gateway
     juju refresh --channel=1.27/stable anbox-stream-agent
     juju refresh --channel=1.27/stable coturn
-    juju refresh --channel=latest/stable nats
+    juju refresh --channel=2/stable nats
 
 ```{note}
 Since the NATS charm has been overhauled to use the modern charm framework (Ops Framework), a new charm source is needed to upgrade to its latest version. The charm source can be switched or replaced using the following command:
 
-    juju refresh nats --switch=nats  --channel=stable
+    juju refresh nats --switch=nats  --channel=2/stable
 ```
 
 ### Upgrade AMS
