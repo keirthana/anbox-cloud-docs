@@ -5,6 +5,65 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.27.2
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|----------|--------------|--------------|-------------|---------|
+
+
+#### Ubuntu 24.04
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) |
+|----------|--------------|--------------|-------------|
+
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+
+
+
+### Snaps
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| `ams` | 1.27/stable | 2467 | 2468 | `1.27.2-e373298aa` |
+| `ams-node-controller` | 1.27/stable | 2046 | 2047 | `1.27.2-e373298aa` |
+| `amc` | latest/stable | 2265 | 2266 | `1.27.2-e373298aa` |
+| `aar` | 1.27/stable | 2419 | 2420 | `1.27.2-e373298aa` |
+| `anbox-stream-agent` | 1.27/stable | 2689 | 2690 | `1.27.2-e373298aa` |
+| `anbox-stream-gateway` | 1.27/stable | 2655 | 2656 | `1.27.2-e373298aa` |
+| `anbox-cloud-appliance` | 1.27/stable | 2330 | 2331 | `1.27.2-e373298aa` |
+| `anbox-cloud-dashboard` | 1.27/stable | 4158 | 4159 | `1.27.2-e373298aa` |
+| `anbox-connect` | latest/stable | 1484 | 1485 | `1.27.2-e373298aa` |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:aaos15:amd64`    | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:aaos15:arm64`    | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android15:amd64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android15:arm64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:aaos14:amd64`    | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:aaos14:arm64`    | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android14:amd64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android14:arm64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:aaos13:amd64`    | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:aaos13:arm64`    | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android13:amd64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android13:arm64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android12:amd64` | `1.27.2-20251008173258.gite5e138f` |
+| `jammy:android12:arm64` | `1.27.2-20251008173258.gite5e138f` |
+
+
 ## 1.27.1
 
 No new versions of charms are released with 1.27.1.
