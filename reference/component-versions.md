@@ -11,21 +11,42 @@ Not all components are updated with each release. When components are not update
 
 #### Ubuntu 22.04
 
+
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |----------|--------------|--------------|-------------|---------|
+| `anbox-cloud-dashboard` | `1.27/stable` | 1058 | 1059 | `1.27.2-fc85e76` |
+| `ams-node-controller` (Deprecated) | `1.27/stable` | 1054 | 1055 | `1.27.2-fc85e76` |
+| `coturn` | `1.27/stable` | 1031 | 1032 | `1.27.2-fc85e76` |
+| `ams` | `1.27/stable` | 1223 | 1224 | `1.27.2-fc85e76` |
+| `anbox-stream-gateway` | `1.27/stable` | 1150 | 1151 | `1.27.2-fc85e76` |
+| `ams-lxd` | `1.27/stable` | 1110 | 1111 | `1.27.2-fc85e76` |
+| `anbox-stream-agent` | `1.27/stable` | 1143 | 1144 | `1.27.2-fc85e76` |
+| `aar` | `1.27/stable` | 1210 | 1211 | `1.27.2-fc85e76` |
+| `anbox-cloud-cos-configuration` | `1.27/stable` | 341 | 342 | `1.27.2-fc85e76` |
+| `nats` | `latest/stable` | 9 | 11 | `1.27.2-fc85e76` |
 
 
 #### Ubuntu 24.04
 
-| Name | Channel | Revision (AMD64) | Revision (ARM64) |
-|----------|--------------|--------------|-------------|
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|----------|--------------|--------------|-------------|---------|
+| `anbox-cloud-dashboard` | `1.27/stable` | 1060 | 1061 | `1.27.2-fc85e76` |
+| `ams-node-controller` (Deprecated) | `1.27/stable` | 1056 | 1057 | `1.27.2-fc85e76` |
+| `coturn` | `1.27/stable` | 1033 | 1034 | `1.27.2-fc85e76` |
+| `ams` | `1.27/stable` | 1225 | 1226 | `1.27.2-fc85e76` |
+| `anbox-stream-gateway` | `1.27/stable` | 1152 | 1153 | `1.27.2-fc85e76` |
+| `ams-lxd` | `1.27/stable` | 1112 | 1113 | `1.27.2-fc85e76` |
+| `anbox-stream-agent` | `1.27/stable` | 1145 | 1146 | `1.27.2-fc85e76` |
+| `aar` | `1.27/stable` | 1212 | 1213 | `1.27.2-fc85e76` |
+| `anbox-cloud-cos-configuration` | `1.27/stable` | 299 | 300 | `1.27.2-fc85e76` |
 
 
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-
+| `anbox-cloud` | `1.27/stable` | 857 |
+| `anbox-cloud-core` | `1.27/stable` | 869 |
 
 
 ### Snaps
