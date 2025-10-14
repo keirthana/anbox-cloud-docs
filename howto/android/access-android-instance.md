@@ -1,31 +1,56 @@
 (howto-access-android-instance)=
 # Access an Android instance
 
-As an Android application developer, you need access to the Android instance when developing and debugging applications. With our [anbox-connect](https://snapcraft.io/anbox-connect) snap, you can securely connect to an Android instance via the Android Debug Bridge (ADB).
+As an Android application developer, you need access to the Android instance when developing and debugging applications. Depending on the kind of access you would like to the Android instance, you can use [anbox-connect](https://snapcraft.io/anbox-connect) to connect over the network from a remote machine or use {term}`anbox-shell` to connect from within the machine where you have Anbox Cloud installed.
 
-Here's a video demonstration of how to access an Android instance securely using anbox-connect:
+This guide uses the Anbox Cloud Appliance to demonstrate both ways of connecting to an Android instance. So if you don't have an existing Anbox Cloud deployment already, first {ref}`install the appliance <tut-installing-appliance>`.
 
-```{raw} html
-<iframe width="640" height="360"
-        src="https://www.youtube.com/embed/qsFF0eqj_JE"
-        title="Debug an Android application with Android studio"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-</iframe>
-```
+## Private access: Connect to the Android instance using anbox-shell
 
-## Preparation
+On the machine where appliance is installed, create an instance with streaming enabled:
 
-{ref}`tut-installing-appliance`.
+    amc launch --name=demo --enable-streaming
 
-Install anbox-connect on your host machine: `snap install anbox-connect`.
+This creates an instance using the default image available and also creates a session for the instance.
+
+Wait until the instance is running. To check, run:
+
+    amc ls
+
+The output will list the instance ID, copy that and run:
+
+    amc shell <instance-id>
+
+Now, you should be inside the shell of the Anbox instance.
+
+To gain access to the Android instance, run:
+
+    anbox-shell
+
+Running anbox-shell provides you root access to the Android instance.
+
+## Public access: Connect to the Android instance using ADB
+
+Using anbox-connect lets you securely connect to an Android instance via the Android Debug Bridge (ADB).
+
+> Video demonstration:
+> ```{raw} html
+> <iframe width="640" height="360"
+>        src="https://www.youtube.com/embed/qsFF0eqj_JE"
+>        title="Debug an Android application with Android studio"
+>        frameborder="0"
+>        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+>        allowfullscreen>
+> </iframe>
+> ```
+
+Install anbox-connect on your host machine:
+
+    snap install anbox-connect
 
 [Install ADB](https://developer.android.com/studio/releases/platform-tools) on your host machine. You can [install Android Studio](https://developer.android.com/studio) which also installs the Android SDK (which includes ADB as part of the platform tools). You can choose to use another IDE of your choice and install ADB independently.
 
-## Connect to the Android instance
-
-In the appliance, create an instance with streaming enabled:
+On the machine where appliance is installed, create an instance with streaming enabled:
 
     amc launch --name=demo --enable-streaming
 
@@ -38,7 +63,7 @@ Wait until the instance is running. To check, run:
 After verifying that the instance is running and has a session ID, share the session:
 
 ```{note}
-This guide demonstrates the steps using the appliance deployment. If you are using the charmed deployment, use `anbox-stream-gateway` instead of `anbox-cloud-appliance.gateway` in the commands.
+If you are using the charmed deployment, use `anbox-stream-gateway` instead of `anbox-cloud-appliance.gateway` in the commands.
 ```
 
     sudo anbox-cloud-appliance.gateway session share <session_id> --description="remote access to demo instance"
