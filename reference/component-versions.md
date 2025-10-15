@@ -20,10 +20,10 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.27/stable` | 1223 | 1224 | `1.27.2-fc85e76` |
 | `anbox-stream-gateway` | `1.27/stable` | 1150 | 1151 | `1.27.2-fc85e76` |
 | `ams-lxd` | `1.27/stable` | 1110 | 1111 | `1.27.2-fc85e76` |
+| `lxd-integrator` | `1.27/stable` | 509 | 510 | `1.27.2-fc85e76` |
 | `anbox-stream-agent` | `1.27/stable` | 1143 | 1144 | `1.27.2-fc85e76` |
 | `aar` | `1.27/stable` | 1210 | 1211 | `1.27.2-fc85e76` |
 | `anbox-cloud-cos-configuration` | `1.27/stable` | 341 | 342 | `1.27.2-fc85e76` |
-| `nats` | `latest/stable` | 9 | 11 | `1.27.2-fc85e76` |
 
 
 #### Ubuntu 24.04
@@ -36,17 +36,18 @@ Not all components are updated with each release. When components are not update
 | `ams` | `1.27/stable` | 1225 | 1226 | `1.27.2-fc85e76` |
 | `anbox-stream-gateway` | `1.27/stable` | 1152 | 1153 | `1.27.2-fc85e76` |
 | `ams-lxd` | `1.27/stable` | 1112 | 1113 | `1.27.2-fc85e76` |
+| `lxd-integrator` | `1.27/stable` | 511 | 512 | `1.27.2-fc85e76` |
 | `anbox-stream-agent` | `1.27/stable` | 1145 | 1146 | `1.27.2-fc85e76` |
 | `aar` | `1.27/stable` | 1212 | 1213 | `1.27.2-fc85e76` |
-| `anbox-cloud-cos-configuration` | `1.27/stable` | 299 | 300 | `1.27.2-fc85e76` |
+| `anbox-cloud-cos-configuration` | `1.27/stable` | 343 | 344 | `1.27.2-fc85e76` |
 
 
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.27/stable` | 857 |
-| `anbox-cloud-core` | `1.27/stable` | 869 |
+| `anbox-cloud` | `1.27/stable` | 858 |
+| `anbox-cloud-core` | `1.27/stable` | 870 |
 
 
 ### Snaps
