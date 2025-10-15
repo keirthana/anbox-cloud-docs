@@ -1,13 +1,13 @@
 (howto-access-android-instance)=
 # Access an Android instance
 
-As an Android application developer, you need access to the Android instance when developing and debugging applications. Depending on the kind of access you would like to the Android instance, you can use [anbox-connect](https://snapcraft.io/anbox-connect) to connect over the network from a remote machine or use {term}`anbox-shell` to connect from within the machine where you have Anbox Cloud installed.
+As an Android application developer, you need access to the Android instance when developing and debugging applications. Depending on the kind of access you would like to the Android instance, you can use [anbox-connect](https://snapcraft.io/anbox-connect) to connect over the network from a remote machine or use {term}`anbox-shell` to connect from within the Anbox instance.
 
 This guide uses the Anbox Cloud Appliance to demonstrate both ways of connecting to an Android instance. So if you don't have an existing Anbox Cloud deployment already, first {ref}`install the appliance <tut-installing-appliance>`.
 
 ## Private access: Connect to the Android instance using anbox-shell
 
-On the machine where appliance is installed, create an instance with streaming enabled:
+On the machine where the appliance is installed, create an instance with streaming enabled:
 
     amc launch --name=demo --enable-streaming
 
@@ -19,7 +19,7 @@ Wait until the instance is running. To check, run:
 
 The output will list the instance ID, copy that and run:
 
-    amc shell <instance-id>
+    amc shell demo
 
 Now, you should be inside the shell of the Anbox instance.
 
