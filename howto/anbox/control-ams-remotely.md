@@ -95,7 +95,7 @@ You would have copied the issuer URL, client ID and audience API values when you
 
 To configure AMC to connect to the remote AMS:
 
-    amc remote add <your remote name> https://<IP address of the AMS machine>:8444 --auth-type oidc
+    amc remote add <your remote name> https://<IP address of the AMS machine>:8444 --auth-type
 
 ```{tip}
 If you haven't changed the port AMS is listening on, it's 8444 by default.
