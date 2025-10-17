@@ -11,7 +11,9 @@ Anbox Cloud also supports authenticating command line clients using [device code
 Authenticating command line clients using OIDC is an experimental feature in 1.27.0. Hence, the interface and the API endpoints may change in future releases.
 ```
 
-To configure OpenID Connect based authentication, you will need an issuer URL and a client ID from your identity provider. This guide shows you how to get those values with different custom identity providers.
+To configure OpenID Connect based authentication, you will need an issuer URL and a client ID from your identity provider. [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) support by your identity provider is mandatory.
+
+This guide shows you how to get necessary values with different custom identity providers.
 
 ::::{tab-set}
 :::{tab-item} Auth0
