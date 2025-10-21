@@ -31,7 +31,7 @@ jobs:
           --unix-socket /var/snap/anbox-cloud-appliance/common/gateway/internal.sock \
           s/1.0/swagger.json | yq -y > ./reference/api-reference/gateway-api.yaml
     - name: Create pull request
-      uses: canonical/create-pull-request@a39eb08b74e754043d189f904aaddf04bc430e15
+      uses: canonical/create-pull-request@bb7692ee31fbfece39c0161d087d461e40545049
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "feat: update API specs from ${{ steps.snap_version.outputs.value }}"
