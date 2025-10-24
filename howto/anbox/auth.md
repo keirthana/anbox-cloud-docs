@@ -3,6 +3,10 @@
 
 To be able to configure user permissions in Anbox Cloud, you need to first configure OpenFGA.
 
+::::{tab-set}
+:::{tab-item} CLI
+:sync: cli
+
 ## Configure OpenFGA
 
 ```{important}
@@ -112,3 +116,14 @@ To provide read and edit access to a particular LXD node (`lxd0`) to the develop
 To revoke the global admin permission, run:
 
     amc auth group permissions delete developer server --permissions admin
+:::
+
+:::{tab-item} Dashboard
+:sync: dashboard
+
+If you are using the web dashboard, the *Permissions* section help you to view and manage your identities, groups and their associated permissions.
+
+Note that the authorization actions that can be performed through the dashboard are currently limited as compared to that of the CLI. Subsequent releases will bring feature parity between dashboard and the CLI.
+
+:::
+::::
