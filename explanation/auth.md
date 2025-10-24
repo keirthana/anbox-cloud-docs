@@ -23,9 +23,9 @@ There are two types of permissions:
 
 **Global permissions** are a set of pre-defined permissions that can be assigned to a group to provide access to server level operations. In case of global permissions, the targeted resource name is `server`.   
 
-**Resource permissions** help in providing entitlements to existing resources in AMS. For example, specific entitlements can be assigned at instance level to control what operations can be performed on that instance. The resource types can be any of these: *identity*, *group*, *addon*, *application*, *image*, *instance*, *node*. 
+**Resource permissions** help in providing entitlements to existing resources in AMS. For example, specific entitlements can be assigned at instance level to control what operations can be performed on that instance. The resource types can be any of these: *identity*, *group*, *addon*, *application*, *image*, *instance*, *node*.
 
-The endpoints of these resource types will be of the form `/1.0/auth/<resource-type-plural-form>/<id>`. The entitlements for resource permissions can be for all resource types in general or for a specific resource type. 
+The entitlements for resource permissions can be for all resource types in general or for a specific resource type. 
 
 For a complete list of the global and resource level entitlements, see {ref}`ref-auth`.
 
