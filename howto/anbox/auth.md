@@ -1,11 +1,12 @@
 (howto-auth)=
+# Configure user permissions
 
-## Configure user permissions in Anbox Cloud
+To be able to configure user permissions in Anbox Cloud, you need to first configure OpenFGA.
 
 ## Configure OpenFGA
 
 ```{important}
-This section is required only for the charmed deployment. For the Anbox Cloud Appliance, you can skip this step and proceed to creating identities.
+In the Anbox Cloud Appliance, OpenFGA is pre-configured and the steps in this section can be skipped.
 ```
 Anbox Management Service(AMS) requires a store ID in OpenFGA to manage authorization data. To generate a store ID in OpenFGA, follow the steps in the [OpenFGA documentation](https://openfga.dev/docs/getting-started/create-store) and create a store. 
 
@@ -26,25 +27,31 @@ When the API URL and store ID are set, AMS starts synchronizing the data with Op
 
 To create an OIDC identity, run:
 
-    $ amc auth identity create oidc/test@example.com
+    amc auth identity create oidc/test@example.com
 
 To create a TLS identity, run:
 
-    $ cat client.crt | amc auth identity create tls/test-user
+    cat client.crt | amc auth identity create tls/test-user
+
+See {ref}`howto-access-ams-remote` for understanding how to connect to AMS remotely.
 
 You can view the identities you created by using:  
 
-    $ amc auth identity ls
+    amc auth identity ls
 
 The output will look similar to this:
-
-`+--------------------+---------------------+----------------------+----------------------+--------------+`  
-`|    ID       | AUTHENTICATION TYPE |      NAME        |                            IDENTIFIER          |    GROUPS    |`  
-`+----------------------+---------------------+------------------+------------------------+--------------+`  
-`| d3kb9pvriueuguose410 | oidc  | test@example.com   | test@example.com    | image_viewer |`  
-`+----------------------+---------------------+-------------------------+----------------------+---------+`  
-`| d3o2u7vriuenvvlfcae0 | tls   | test-user | 9cbb1aced3fb587405c7abaa7c83ec59b4bb9bd567843703884632e77e0aa455 |   |`  
+```{terminal}
+   :input: amc auth identity ls
+   :user: user
+   :host: host
+`+--------------------+---------------------+----------------------+----------------------+--------------+`
+`|    ID                | AUTHENTICATION TYPE |      NAME          |     IDENTIFIER       |    GROUPS    |`
+`+----------------------+---------------------+------------------+------------------------+--------------+`
+`| d3kb9pvriueuguose410 | oidc                | test@example.com   | test@example.com     | image_viewer |`
+`+----------------------+---------------------+-------------------------+----------------------+---------+`
+`| d3o2u7vriuenvvlfcae0 | tls                 | test-user          | 9cbb1aced3fb587405c7abaa7c83ec59b4bb9bd567843703884632e77e0aa455 |   |`
 `+----------------------+---------------------+-----------------------+--------------------+-------------+`
+```
 
 ## Create authorization groups with identities
 
@@ -52,12 +59,14 @@ The output will look similar to this:
 
 Create a new authorization group:
 
-    $ amc auth group create developer
+    amc auth group create developer
 
 To verify details of the created group, use the `show` command:
 
-```terminal
-$ amc auth group show developer
+```{terminal}
+   :input: amc auth group show developer
+   :user: user
+   :host: host
 name: developer
 created-at: 2025-10-17 12:06:33 +0530 IST
 updated-at: 2025-10-17 12:06:33 +0530 IST
@@ -70,7 +79,7 @@ immutable: false
 
 Notice that there are currently no identities added to the group yet. The next step is to add an identity to the authorization group:
 
-    $ amc auth identity group add d3o2u7vriuenvvlfcae0 --groups 'developer'
+    amc auth identity group add d3o2u7vriuenvvlfcae0 --groups 'developer'
 
 Use the `show` command and verify if the identity was added.
 
@@ -78,7 +87,7 @@ Use the `show` command and verify if the identity was added.
 
 If you want to remove a particular identity from an authorization group, run:
 
-    $ amc auth identity group delete d3o2u7vriuenvvlfcae0 --groups 'developer'
+    amc auth identity group delete d3o2u7vriuenvvlfcae0 --groups 'developer'
 
 ## Assign permissions
 
@@ -86,20 +95,20 @@ If you want to remove a particular identity from an authorization group, run:
 
 To assign server administrative permissions to the developer group you created, run:
 
-    $ amc auth group permissions add developer server --permissions admin
+    amc auth group permissions add developer server --permissions admin
 
 To verify the access of the developer group, run:
 
-    $ amc config show  
+    amc config show  
 
 The developer group should have `admin` listed in the permissions.
 
 To provide read and edit access to a particular LXD node (`lxd0`) to the developer group, run:
 
-    $ amc auth group permissions delete developer node lxd0 --permissions "can_view,can_edit"
+    amc auth group permissions delete developer node lxd0 --permissions "can_view,can_edit"
 
 ### Remove permissions
 
 To revoke the global admin permission, run:
 
-    $ amc auth group permissions delete developer server --permissions admin
+    amc auth group permissions delete developer server --permissions admin
