@@ -107,9 +107,9 @@ To verify the access of the developer group, run:
 
 The developer group should have `admin` listed in the permissions.
 
-To provide read and edit access to a particular LXD node (`lxd0`) to the developer group, run:
+You can set permissions at the object level too. For example, to provide read and edit access to a particular LXD node (`lxd0`) to the developer group, run:
 
-    amc auth group permissions delete developer node lxd0 --permissions "can_view,can_edit"
+    amc auth group permissions add developer node lxd0 --permissions "can_view,can_edit"
 
 ### Remove permissions
 
