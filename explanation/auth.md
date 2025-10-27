@@ -6,7 +6,7 @@
 An identity in Anbox Cloud represents a user requiring access to resources in the Anbox Management Service (AMS) through its API endpoints. To get access to AMS and its resources, the identities first need to be added to AMS before they can make requests. Currently AMS supports OIDC and TLS identities.
 
 ```{note}
-In earlier versions of Anbox Cloud before 1.28.0, the amc config trust add command was used to add a TLS identity.  Starting with the 1.28.0 release, the amc config trust add command is deprecated and replaced by the `amc auth identity` command.
+In earlier versions of Anbox Cloud before 1.28.0, the `amc config trust` command was used to add a TLS identity.  Starting with the 1.28.0 release, this command is deprecated and replaced by the `amc auth identity` command.
 ```
 
 ## Authorization groups
@@ -35,7 +35,7 @@ AMS uses OpenFGA to implement fine grained authorization for identities and auth
 
 AMS has two authorization modes:
 
-**Basic authorization**, an authorization method in which only identities added to the admin group get unrestricted access to every resource within AMS. All existing authorization groups and their respective permissions are not evaluated when this method of authorization is used. This is the default method of authorization when fine grained authorization is not configured.
+**Unrestricted authorization**, an authorization method in which only identities added to the admin group get unrestricted access to every resource within AMS. All existing authorization groups and their respective permissions are not evaluated when this method of authorization is used. This is the default method of authorization when fine grained authorization is not configured.
 
 **Fine Grained authorization**, an advanced method of authorization in AMS which is enabled only if OpenFGA is configured within AMS. With this method, AMS scrutinizes permissions related to authorization groups using OpenFGA. 
 When using this method, each user can be assigned specific permissions related to each individual object in AMS. For example, a user can be given access to only perform a read operation on a specific application within AMS.
