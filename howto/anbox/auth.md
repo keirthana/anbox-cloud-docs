@@ -37,7 +37,7 @@ To create a TLS identity, run:
 
     cat client.crt | amc auth identity create tls/test-user
 
-See {ref}`howto-access-ams-remote` for understanding how to connect to AMS remotely.
+{ref}`The security explanation on AMS <exp-security-ams>` provides information about TLS based and token based authentication methods. See {ref}`howto-access-ams-remote` for understanding how to connect to AMS remotely.
 
 You can view the identities you created by using:  
 
