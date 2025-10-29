@@ -103,9 +103,9 @@ To assign server administrative permissions to the developer group you created, 
 
 To verify the access of the developer group, run:
 
-    amc config show  
+    amc auth group show developer
 
-The developer group should have `admin` listed in the permissions.
+The developer group should have `admin` permissions now. If your identity does not have access to the `developer` group, the command will notify you that you are unauthorized to do this operation.
 
 You can set permissions at the object level too. For example, to provide read and edit access to a particular LXD node (`lxd0`) to the developer group, run:
 
