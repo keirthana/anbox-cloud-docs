@@ -69,4 +69,5 @@ Upgrade Anbox Cloud <upgrade/index>
 Use web dashboard <dashboard/index>
 Work with Anbox runtime <anbox-runtime/index>
 Work with Android <android/index>
+Tuning GPU Configuration <gpu/index>
 ```
