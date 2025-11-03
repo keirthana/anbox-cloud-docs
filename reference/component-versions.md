@@ -52,15 +52,15 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
-| `ams` | `1.28/candidate` | 2562 | 2563 | `1.28.0-504d447de` |
-| `ams-node-controller` | `1.28/candidate` | 2139 | 2140 | `1.28.0-504d447de` |
-| `amc` | `latest/candidate` | 2358 | 2359 | `1.28.0-504d447de` |
-| `aar` | `1.28/candidate` | 2512 | 2513 | `1.28.0-504d447de` |
-| `anbox-stream-agent` | `1.28/candidate` | 2782 | 2783 | `1.28.0-504d447de` |
-| `anbox-stream-gateway` | `1.28/candidate` | 2748 | 2749 | `1.28.0-504d447de` |
-| `anbox-cloud-appliance` | `1.28/candidate` | 2424 | 2425 | `1.28.0-504d447de` |
-| `anbox-cloud-dashboard` | `1.28/candidate`| 4251 | 4252 | `1.28.0-504d447de` |
-| `anbox-connect` | `latest/candidate` | 1577 | 1578 | `1.28.0-504d447de` |
+| `ams` | `1.28/stable` | 2562 | 2563 | `1.28.0-504d447de` |
+| `ams-node-controller` | `1.28/stable` | 2139 | 2140 | `1.28.0-504d447de` |
+| `amc` | `latest/stable` | 2358 | 2359 | `1.28.0-504d447de` |
+| `aar` | `1.28/stable` | 2512 | 2513 | `1.28.0-504d447de` |
+| `anbox-stream-agent` | `1.28/stable` | 2782 | 2783 | `1.28.0-504d447de` |
+| `anbox-stream-gateway` | `1.28/stable` | 2748 | 2749 | `1.28.0-504d447de` |
+| `anbox-cloud-appliance` | `1.28/stable` | 2424 | 2425 | `1.28.0-504d447de` |
+| `anbox-cloud-dashboard` | `1.28/stable`| 4251 | 4252 | `1.28.0-504d447de` |
+| `anbox-connect` | `latest/stable` | 1577 | 1578 | `1.28.0-504d447de` |
 
 ### Anbox images
 
