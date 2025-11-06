@@ -71,11 +71,12 @@ Once the instance is running, verify that your modifications are present:
 
     amc shell test1
 
-Check for the test file you created earlier:
+List Android devices within Anbox instance with adb:
 
-    cat /tmp/test-file.txt
+    adb devices
+    List of devices attached
+    emulator-5558   device
 
-You should see the content "This is a test modification", confirming that the file system modifications were preserved in the published image.
 
 ## Related topics
 
