@@ -161,4 +161,4 @@ Along with bug fixes and general improvements, Anbox Cloud 1.28.x includes:
 
 ## Security policy
 
-The Anbox Cloud security policy is available at {ref}`ref-security-policy`.
+Read Anbox Cloud's security policy at {ref}`ref-security-policy`.
