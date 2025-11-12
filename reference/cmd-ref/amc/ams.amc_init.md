@@ -21,6 +21,7 @@ $ amc init foo
 ```
   -a, --addons string             Comma-separated list of addons to install in the instance (raw instances only)
       --application-version int   Specific version of an application to use when creating an instance
+      --config stringArray        Instance configuration, e.g., security.delete_protected=true (can be used multiple times)
   -c, --cpus int                  Number of CPU cores to be assigned for the instance (for example, 2). If not specified, the number of CPU cores specified by the instance type will be used. (default 2)
       --devmode                   Enable developer mode for the instance (default disabled)
       --disable-watchdog          Disable watchdog for the instance (regular instances only)

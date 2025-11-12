@@ -26,6 +26,7 @@ with Anbox Cloud.
 * [ams.amc benchmark](ams.amc_benchmark.md)	 - Benchmark your Anbox Cloud deployment
 * [ams.amc completion](ams.amc_completion.md)	 - Generate the autocompletion script for the specified shell
 * [ams.amc config](ams.amc_config.md)	 - Manage AMS configuration
+* [ams.amc connect](ams.amc_connect.md)	 - Connect to an instance via ADB
 * [ams.amc delete](ams.amc_delete.md)	 - Delete an instance
 * [ams.amc exec](ams.amc_exec.md)	 - Execute a command inside an instance
 * [ams.amc image](ams.amc_image.md)	 - Manage images
@@ -38,6 +39,7 @@ with Anbox Cloud.
 * [ams.amc node](ams.amc_node.md)	 - Manage nodes
 * [ams.amc remote](ams.amc_remote.md)	 - Interact with remote AMS daemons
 * [ams.amc restart](ams.amc_restart.md)	 - Restart a running instance
+* [ams.amc set](ams.amc_set.md)	 - Set a configuration value for an existing instance
 * [ams.amc shell](ams.amc_shell.md)	 - Open a shell inside a running instance
 * [ams.amc show](ams.amc_show.md)	 - Show information about an instance
 * [ams.amc show-log](ams.amc_show-log.md)	 - Show an instance log file

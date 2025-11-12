@@ -23,6 +23,7 @@ $ amc auth identity delete bknj0n9hpuo01q954fq0
 ### Options
 
 ```
+  -f, --force            force deletion of identity
   -h, --help             help for delete
       --no-wait          Don't wait for the delete operation to finish
   -t, --timeout string   Maximum time to wait for the operation to complete (default "5m")
