@@ -7,6 +7,7 @@ Add a trusted client
 Add a trusted client.
 
 Trust a new client to communicate with AMS by providing its certificate.
+Use '-' as certificate_path to read from stdin.
 
 
 ```
@@ -17,6 +18,7 @@ ams.amc config trust add <certificate_path> [flags]
 
 ```
 $ amc config trust add client.crt
+$ cat client.crt | amc config trust add -
 ```
 
 ### Options
