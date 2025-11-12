@@ -44,8 +44,8 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.28/stable` | 884 |
-| `anbox-cloud-core` | `1.28/stable` | 897 |
+| `anbox-cloud` | `1.28/stable` | 885 |
+| `anbox-cloud-core` | `1.28/stable` | 898 |
 
 
 ### Snaps
