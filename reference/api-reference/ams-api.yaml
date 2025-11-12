@@ -1047,6 +1047,178 @@ paths:
                   $ref: '#/definitions/Application'
         default:
           $ref: '#/responses/InternalServerError'
+  /1.0/auth/groups:
+    get:
+      description: This endpoint returns a list of groups known to AMS.
+      produces:
+        - application/json
+      tags:
+        - groups
+      summary: Get a list of groups
+      operationId: groups_get
+      parameters:
+        - type: integer
+          description: Maximum number of groups to provide
+          name: limit
+          in: query
+        - type: integer
+          description: Offset at which to start with listing groups
+          name: offset
+          in: query
+        - enum:
+            - 0
+            - 1
+          type: integer
+          default: 0
+          description: Expand the returned resource definition
+          name: recursion
+          in: query
+        - type: string
+          example: test-group
+          description: Filter groups by name. This is an fuzzy match for the string.
+          name: name
+          in: query
+      responses:
+        '200':
+          description: API endpoints
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/NoMetaSyncResponse'
+            properties:
+              metadata:
+                description: List of groups
+                type: array
+                items:
+                  type: string
+                example: "[\n  \"/1.0/auth/groups/foo\",\n  \"/1.0/auth/groups/bar\"\
+                  \n]"
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        '500':
+          $ref: '#/responses/InternalServerError'
+    post:
+      description: This endpoint adds a new authorization group to AMS.
+      produces:
+        - application/json
+      tags:
+        - groups
+      summary: Create a new AMS authorization group
+      operationId: auth_groups_post
+      responses:
+        '202':
+          $ref: '#/definitions/OperationResponse'
+        '400':
+          $ref: '#/definitions/ErrorBadRequest'
+        default:
+          $ref: '#/responses/InternalServerError'
+  /1.0/auth/groups/{name}:
+    get:
+      description: This endpoint returns information about a specific group.
+      produces:
+        - application/json
+      tags:
+        - groups
+      summary: Get information about a specific group.
+      operationId: auth_group_get
+      parameters:
+        - type: string
+          name: name
+          in: path
+          required: true
+      responses:
+        '200':
+          description: Auth Group details
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/NoMetaSyncResponse'
+            properties:
+              metadata:
+                $ref: '#/definitions/AuthGroup'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        '500':
+          $ref: '#/responses/InternalServerError'
+    delete:
+      description: 'This endpoint deletes a specific group. The deletion process happens
+
+        asynchronously. The operation progress can be checked via the returned
+
+        operation object.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      tags:
+        - groups
+      summary: Delete a specific group
+      operationId: groups_delete
+      parameters:
+        - type: string
+          name: name
+          in: path
+          required: true
+        - description: Deletion options for an auth group
+          name: details
+          in: body
+          schema:
+            $ref: '#/definitions/AuthGroupDelete'
+      responses:
+        '202':
+          description: Success response of the service
+          schema:
+            $ref: '#/definitions/OperationResponse'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        '500':
+          $ref: '#/responses/InternalServerError'
+  /1.0/auth/groups/{name}/:
+    put:
+      description: 'This endpoint updates an auth group. This endpoint can be used
+        to assign or
+
+        revoke entitlements from the auth group.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      tags:
+        - groups
+      summary: Update an auth group
+      operationId: group_put
+      parameters:
+        - type: string
+          description: name of the auth group
+          name: name
+          in: path
+          required: true
+        - description: Details of the attributes to update
+          name: details
+          in: body
+          schema:
+            $ref: '#/definitions/AuthGroupPut'
+      responses:
+        '202':
+          description: Success response of the service
+          schema:
+            $ref: '#/definitions/OperationResponse'
+          headers:
+            Etag:
+              type: string
+              description: E-Tag of the resource
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        default:
+          $ref: '#/responses/InternalServerError'
   /1.0/auth/identites/{id}:
     get:
       description: This endpoint returns information about a specific identity.
@@ -1137,22 +1309,53 @@ paths:
         '500':
           $ref: '#/responses/InternalServerError'
     post:
-      description: 'This endpoint adds a new OIDC based Identity to AMS.
+      description: 'This endpoint adds a new identity to AMS.
 
         NOTE**: This is an experimental endpoint and may change or be removed in the
         future.'
       produces:
         - application/json
       tags:
-        - auth
+        - identities
       summary: Register an identity into AMS
-      operationId: oidc_identity_post
+      operationId: identity_post
       responses:
         '200':
           $ref: '#/definitions/NoMetaSyncResponse'
         default:
           $ref: '#/responses/InternalServerError'
   /1.0/auth/identities/{id}:
+    put:
+      description: This endpoint allows modification to groups of an identity.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      tags:
+        - identities
+      summary: Edit group membership of identity
+      operationId: identities_put
+      parameters:
+        - type: string
+          name: id
+          in: path
+          required: true
+        - description: Specification of the modifiable fields of an identity
+          name: details
+          in: body
+          schema:
+            $ref: '#/definitions/IdentityPut'
+      responses:
+        '202':
+          description: Success response of the service
+          schema:
+            $ref: '#/definitions/OperationResponse'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        '500':
+          $ref: '#/responses/InternalServerError'
     delete:
       description: 'This endpoint deletes a specific identity. The deletion process
         happens
@@ -1173,6 +1376,11 @@ paths:
           name: id
           in: path
           required: true
+        - description: Deletion optionf for an identity
+          name: details
+          in: body
+          schema:
+            $ref: '#/definitions/IdentityDelete'
       responses:
         '202':
           description: Success response of the service
@@ -1405,14 +1613,20 @@ paths:
                     type: object
                     properties:
                       agent.api.fingerprint:
-                        description: 'Fingerprint of the certificate
+                        description: 'Fingerprint of the certificate used by stream
+                          agent on
 
-                          in the AMS trust store that is trusted
+                          its HTTPS endpoint. This is used by AMS for
 
-                          for communicating with the Stream Agent.'
+                          mutual TLS authentication with Stream Agent. The fingerprint
+
+                          must be provided as a 64 character hexadecimal string and
+                          represents
+
+                          the SHA256 hash of the DER encoded certificate.'
                         type: string
                         default: ''
-                        example: fd42316b32df
+                        example: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
                       agent.api.token:
                         description: Token used for API authentication with Stream
                           Agent.
@@ -1698,6 +1912,73 @@ paths:
                         format: int32
                         default: 4
                         example: 4
+                      oidc.allow_insecure:
+                        description: 'Allow AMS to connect to OpenID Connect
+
+                          provider without verifying TLS certificates'
+                        type: boolean
+                        default: false
+                      oidc.audience:
+                        description: 'Audience to use while requesting for a token
+
+                          from the OpenID Connect provider.'
+                        type: string
+                        default: ''
+                        example: https://myinstance.us.auth0.com/api/v2/
+                      oidc.client_id:
+                        description: 'Client ID to use while authenticating or
+
+                          validating the access token from the
+
+                          identity provider.'
+                        type: string
+                        default: ''
+                        example: asfASDweIOBjnDFggFSj
+                      oidc.issuer_url:
+                        description: 'Issuer URL to use for connecting to the
+
+                          OpenID Connect compatible identity provider.'
+                        type: string
+                        default: ''
+                        example: https://myinstance.us.auth0.com/
+                      openfga.api.fingerprint:
+                        description: 'Fingerprint of the certificate used by OpenFGA
+                          on
+
+                          its HTTPS endpoint. This is used by AMS for
+
+                          mutual TLS authentication with OpenFGA. The fingerprint
+
+                          must be provided as a 64 character hexadecimal string and
+                          represents
+
+                          the SHA256 hash of the DER encoded certificate.'
+                        type: string
+                        default: ''
+                        example: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+                      openfga.api.token:
+                        description: Token to use while connecting to OpenFGA
+                        type: string
+                        default: ''
+                        example: fd42316b32dfdsafas
+                      openfga.api.url:
+                        description: 'URL for the openfga instance to connect
+
+                          to for authorization.'
+                        type: string
+                        default: ''
+                        example: https://test.openfga.net:8080
+                      openfga.store.id:
+                        description: 'A pre-created OpenFGA store to load the
+
+                          the authrorization model and data from.
+
+                          This is required and will be used for
+
+                          all OpenFGA queries.'
+                        type: string
+                        default: ''
+                        example: 01K5B31JNF0QYCQMRDAGNVJZGW
                       registry.filter:
                         description: 'Comma-separated list of tags to filter
 
@@ -1709,17 +1990,21 @@ paths:
                         x-docs-ref: exp-aar
                         example: foo,bar
                       registry.fingerprint:
-                        description: 'Fingerprint of the certificate that the
+                        description: 'Fingerprint of the certificate used by registry
+                          on
 
-                          AAR uses to TLS-secure its HTTPS endpoint.
+                          its HTTPS endpoint. This is used by AMS for
 
-                          This is used by AMS for mutual TLS authentication
+                          mutual TLS authentication with the registry. The fingerprint
 
-                          with the registry.'
+                          must be provided as a 64 character hexadecimal string and
+                          represents
+
+                          the SHA256 hash of the DER encoded certificate.'
                         type: string
                         default: ''
                         x-docs-ref: exp-aar
-                        example: my-registry-fingerprint
+                        example: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
                       registry.mode:
                         description: 'Mode in which the AAR client in AMS
 
@@ -3115,6 +3400,104 @@ paths:
           $ref: '#/responses/ErrorNotFound'
         '500':
           $ref: '#/responses/InternalServerError'
+  /1.0/instances/{id}/shares:
+    post:
+      description: 'Create a share for the specified instance which allows accessing
+
+        the instance over WebRTC with the specified transport protocol
+
+        (e.g. ADB).'
+      produces:
+        - application/json
+      tags:
+        - instances
+      summary: Create a share for an instance
+      operationId: instances_shares_post
+      parameters:
+        - description: Details of the share to create
+          name: details
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/SharesPost'
+      responses:
+        '200':
+          description: Share created successfully
+          schema:
+            $ref: '#/definitions/SharesPostResponse'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        '500':
+          $ref: '#/responses/InternalServerError'
+  /1.0/instances/{id}/shares/{shareId}:
+    post:
+      description: Delete a share by ID for an instance
+      produces:
+        - application/json
+      tags:
+        - instances
+      summary: Delete a share
+      operationId: instance_share_delete
+      parameters:
+        - type: string
+          description: ID of the instance the share belongs to
+          name: id
+          in: path
+          required: true
+        - type: string
+          description: ID of the share to delete
+          name: shareId
+          in: path
+          required: true
+      responses:
+        '202':
+          description: Success response of the service
+          schema:
+            $ref: '#/definitions/OperationResponse'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        default:
+          $ref: '#/responses/InternalServerError'
+    patch:
+      description: Update a share by ID
+      produces:
+        - application/json
+      tags:
+        - instances
+      summary: Update a share
+      operationId: instance_share_patch
+      parameters:
+        - type: string
+          description: ID of the instance the share belongs to
+          name: id
+          in: path
+          required: true
+        - type: string
+          description: ID of the share to update
+          name: shareId
+          in: path
+          required: true
+        - description: Details of the share to update
+          name: details
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/SharePatch'
+      responses:
+        '200':
+          description: Success response of the service
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          $ref: '#/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/responses/ErrorNotFound'
+        default:
+          $ref: '#/responses/InternalServerError'
   /1.0/instances?recursion=1:
     get:
       description: This endpoint returns a list of instances.
@@ -4351,6 +4734,93 @@ definitions:
           - cilsreunfpfec9b1ktg0
           - cilsreunfpfec9b1ktg1
           - myapp
+  AuthGroup:
+    type: object
+    title: AuthGroup is the type for an AMS authorization group.
+    properties:
+      created_at:
+        description: CreatedAt specifies the time at which the group was created.
+          The value is a UTC timestamp.
+        type: integer
+        format: int64
+        example: 1689604498
+      description:
+        description: Description is a short description of the group.
+        type: string
+        example: Developers of application foo.
+      identities:
+        description: Identities is a list of authentication method to slice of group
+          identifiers.
+        type: array
+        items:
+          type: string
+      immutable:
+        description: Immutable defines whether a group is immutable and cannot be
+          deleted or renamed
+        type: boolean
+        example: false
+      name:
+        description: Name is the name of the group.
+        type: string
+        example: default-c1-viewers
+      permissions:
+        description: Permissions represent the list of permissions assigned to an
+          auth group
+        type: array
+        items:
+          $ref: '#/definitions/Permission'
+        example:
+          - entitlement: can_view
+            resource: application:foo
+          - entitlement: can_edit
+            resource: instance:bar
+      updated_at:
+        description: UpdatedAt specifies the time at which the group was last updated.
+          The value is a UTC timestamp.
+        type: integer
+        format: int64
+        example: 1689604498
+  AuthGroupDelete:
+    description: AuthGroupDelete represent the body in a delete method
+    type: object
+    properties:
+      force:
+        description: Force allows the group to be deleted even if it is a part of
+          groups
+        type: boolean
+        example: true
+  AuthGroupPost:
+    type: object
+    title: AuthGroupPost is used for creating a group.
+    properties:
+      description:
+        description: Description is a short description of the group.
+        type: string
+        example: Developers of application foo.
+      name:
+        description: Name is the name of the group.
+        type: string
+        example: default-c1-viewers
+  AuthGroupPut:
+    type: object
+    title: AuthGroupPut replaces the editable fields for an auth group with the required
+      values.
+    properties:
+      description:
+        description: Description is a short description of the group.
+        type: string
+        example: Developers of application foo.
+      permissions:
+        description: Permissions represent the list of permissions assigned to an
+          auth group
+        type: array
+        items:
+          $ref: '#/definitions/Permission'
+        example:
+          - entitlement: can_view
+            resource: application:foo
+          - entitlement: can_edit
+            resource: instance:bar
   Certificate:
     description: Certificate represents an available client certificate
     type: object
@@ -4892,15 +5362,23 @@ definitions:
           authenticates to AMS with.'
         type: string
         example: tls
+      certificate:
+        description: Base64 encoded certificate content without the header or the
+          footer (for TLS based identities)
+        type: string
+        example: MIIFUTCCAzmgAw...xjKoUEEQOzJ9
       created_at:
         description: CreatedAt specifies the time at which the identity was created
         type: integer
         format: int64
         example: 1689604498
       email:
-        description: Email of the new OIDC user
+        description: Email of the new user for OIDC based identities
         type: string
         example: john.doe@example.com
+      fingerprint:
+        description: The certificate fingerprint for TLS based identities
+        type: string
       groups:
         description: The list of groups for which the identity is a member.
         type: array
@@ -4914,14 +5392,56 @@ definitions:
         type: string
         example: btavtegj1qm58qg7ru50
       name:
-        description: Name of the new OIDC user
+        description: Name of the new user
         type: string
-        example: Jhon Doe
+        example: john-doe
       updated_at:
-        description: CreatedAt specifies the time at which the identity was last updated
+        description: UpdatedAt specifies the time at which the identity was last updated
         type: integer
         format: int64
         example: 1689604498
+  IdentityDelete:
+    description: IdentityDelete represent the body in a delete method
+    type: object
+    properties:
+      force:
+        description: Force allows the identity to be deleted even if it is a part
+          of groups
+        type: boolean
+        example: true
+  IdentityPost:
+    description: IdentityPost is the input body adding for an identity
+    type: object
+    properties:
+      authentication_method:
+        description: AuthenticationMethod is the method used to authenticate the identity
+        type: string
+        example: oidc
+      certificate:
+        description: Base64 encoded certificate content without the header or the
+          footer (for TLS based identities)
+        type: string
+        example: MIIFUTCCAzmgAw...xjKoUEEQOzJ9
+      email:
+        description: Email of the new user (for OIDC based identities)
+        type: string
+        example: john.doe@example.com
+      name:
+        description: Name of the new identity
+        type: string
+        example: john-doe
+  IdentityPut:
+    type: object
+    title: IdentityPut contains the editable fields of an Identity.
+    properties:
+      groups:
+        description: Groups is the list of groups for which the identity is a member.
+        type: array
+        items:
+          type: string
+        example:
+          - foo
+          - bar
   Image:
     description: Image represents an image available in AMS
     type: object
@@ -5167,6 +5687,11 @@ definitions:
               with
             type: string
             example: webrtc
+          security:
+            type: object
+            properties:
+              delete_protected:
+                type: boolean
       created_at:
         description: CreatedAt specifies the time at which the instance was created
         type: integer
@@ -5310,6 +5835,17 @@ definitions:
       instance
     type: object
     properties:
+      config:
+        description: Configuration of the instance
+        type: object
+        properties:
+          security:
+            description: Security settings for the instance
+            type: object
+            properties:
+              delete_protected:
+                description: Delete protection for the instance
+                type: boolean
       desired_status:
         description: Desired status of the instance
         type: string
@@ -5411,6 +5947,36 @@ definitions:
         example:
           - tcp
           - udp
+  InstanceSharesPostResponse:
+    description: InstanceSharesPostResponse is returned when sharing an instance
+    type: object
+    properties:
+      error:
+        type: string
+      metadata:
+        $ref: '#/definitions/InstanceSharesPostResponseData'
+      status:
+        type: string
+      status_code:
+        type: integer
+        format: int64
+  InstanceSharesPostResponseData:
+    description: InstanceSharesPostResponseData contains the share URL
+    type: object
+    properties:
+      expiry_at:
+        description: ExpiryAt specifies the exact expiration time for the share
+        type: integer
+        format: int64
+      id:
+        description: ID of the share
+        type: string
+      type:
+        description: Type of the share
+        type: string
+      url:
+        description: URL is the endpoint to reach to start the WebRTC signaling process
+        type: string
   InstanceStatus:
     description: InstanceStatus represents the status a instance can be in
     type: integer
@@ -5518,6 +6084,13 @@ definitions:
               with
             type: string
             example: webrtc
+          security:
+            description: Security settings for the instance
+            type: object
+            properties:
+              delete_protected:
+                description: Delete protection for the instance
+                type: boolean
       image_id:
         description: ID of the image to use. Can be empty if an application ID is
           specified instead.
@@ -5712,6 +6285,14 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/NodeGPU'
+      instance_types:
+        description: Instance Types supported by the LXD node.
+        type: array
+        items:
+          $ref: '#/definitions/InstanceType'
+        example:
+          - container
+          - vm
       is_master:
         description: Flag to represent the master node for the AMS cluster
         type: boolean
@@ -6084,18 +6665,6 @@ definitions:
         description: Flag used to control if AMS can manage the LXD node
         type: boolean
         example: false
-  OIDCIdentityPost:
-    description: OIDCIdentityPost is the input body adding for an OIDC based Identity
-    type: object
-    properties:
-      email:
-        description: Email of the new OIDC user
-        type: string
-        example: john.doe@example.com
-      name:
-        description: Name of the new OIDC user
-        type: string
-        example: Jhon Doe
   OIDCResponse:
     description: OIDCResponse represents the OIDC configuration accepted by AMS
     type: object
@@ -6211,6 +6780,24 @@ definitions:
       type:
         type: string
         example: async
+  Permission:
+    type: object
+    title: Permission represents a structure defining a permission within AMS.
+    properties:
+      entitlement:
+        description: Entitlement represents the type of action allowed on a resource
+        type: string
+        example: can_edit
+      resource:
+        description: 'Resource represents the object on which a permission is being
+          assigned.
+
+          The resource can be for the format `<resource_type>:<resource_id>` or `server`
+
+          `server` is a special resource used to assign permissions globally for the
+          server.'
+        type: string
+        example: instance:foo
   RegistryApplication:
     description: RegistryApplication describes a single application available in the
       registry
@@ -6233,6 +6820,17 @@ definitions:
       versions: {}
       vm:
         type: boolean
+  Response:
+    description: Response is a standard response for AMS API operations
+    type: object
+    properties:
+      error:
+        type: string
+      status:
+        type: string
+      status_code:
+        type: integer
+        format: int64
   ServiceStatus:
     description: ServiceStatus represents the status of the AMS service
     type: object
@@ -6332,7 +6930,8 @@ responses:
       type: object
       properties:
         metadata:
-          example: '{}'
+          type: object
+          example: {}
         status:
           type: string
           example: Success
@@ -6371,7 +6970,8 @@ responses:
           format: int64
           example: 400
         metadata:
-          example: '{}'
+          type: object
+          example: {}
         type:
           type: string
           example: error
@@ -6448,7 +7048,8 @@ responses:
           format: int64
           example: 500
         metadata:
-          example: '{}'
+          type: object
+          example: {}
         type:
           type: string
           example: error

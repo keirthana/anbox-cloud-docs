@@ -49,6 +49,45 @@ paths:
           description: List of applications
           schema:
             $ref: '#/definitions/api.ApplicationsGetResponse'
+  /1.0/config:
+    get:
+      description: Get all config items
+      produces:
+        - application/json
+      tags:
+        - config
+      summary: Retrieves all config items managed by the stream gateway.
+      operationId: handle-get-config-items
+      responses:
+        '200':
+          description: List of all config items
+          schema:
+            $ref: '#/definitions/api.ShareGetResponse'
+        '500':
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
+    patch:
+      description: Update the value of the given config item
+      produces:
+        - application/json
+      tags:
+        - config
+      summary: Update the value of a specific configuration item in the stream gateway.
+      operationId: handle-update-config-item
+      responses:
+        '200':
+          description: Empty response to indicate the operation succeeded
+          schema:
+            $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
+        '400':
+          description: Malformed request, invalid value, or unsupported config item
+          schema:
+            $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
+        '500':
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_canonical_ams_api_gateway.Response'
   /1.0/regions:
     get:
       security:
@@ -1393,41 +1432,6 @@ definitions:
         allOf:
           - $ref: '#/definitions/api.ResponseType'
         example: sync
-  api.SharesGetResponse:
-    type: object
-    properties:
-      error:
-        description: Error is an optional error message
-        type: string
-        example: invalid body format
-      metadata:
-        type: array
-        items:
-          type: string
-      status:
-        description: Status of the response
-        enum:
-          - success
-          - failed
-          - unknown
-        allOf:
-          - $ref: '#/definitions/github_com_canonical_ams_api_gateway.ResponseStatus'
-      status_code:
-        description: StatusCode is the HTTP code of the response
-        type: integer
-      total_size:
-        description: TotalSize specifies how many share objects are available in total
-        type: integer
-        example: 10
-      type:
-        description: Type of the operation
-        enum:
-          - sync
-          - async
-          - error
-        allOf:
-          - $ref: '#/definitions/api.ResponseType'
-        example: sync
   api.SharesGetResponseRecursive:
     type: object
     properties:
@@ -1547,6 +1551,41 @@ definitions:
     x-enum-varnames:
       - ServiceStatusHealthy
       - ServiceStatusUnhealthy
+  github_com_canonical_ams_api_gateway.SharesGetResponse:
+    type: object
+    properties:
+      error:
+        description: Error is an optional error message
+        type: string
+        example: invalid body format
+      metadata:
+        type: array
+        items:
+          type: string
+      status:
+        description: Status of the response
+        enum:
+          - success
+          - failed
+          - unknown
+        allOf:
+          - $ref: '#/definitions/github_com_canonical_ams_api_gateway.ResponseStatus'
+      status_code:
+        description: StatusCode is the HTTP code of the response
+        type: integer
+      total_size:
+        description: TotalSize specifies how many share objects are available in total
+        type: integer
+        example: 10
+      type:
+        description: Type of the operation
+        enum:
+          - sync
+          - async
+          - error
+        allOf:
+          - $ref: '#/definitions/api.ResponseType'
+        example: sync
   github_com_canonical_ams_api_gateway.StunServer:
     type: object
     properties:
