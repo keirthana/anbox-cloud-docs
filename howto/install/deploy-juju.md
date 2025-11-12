@@ -76,9 +76,6 @@ applications:
   ams:
     options:
       ua_token: <your token>
-  ams-node-controller:
-    options:
-      ua_token: <your token>
   lxd:
     options:
       ua_token: <your token>
@@ -98,9 +95,6 @@ For the `anbox-cloud-core` bundle, the `ua.yaml` file should look like this:
 ```yaml
 applications:
   ams:
-    options:
-      ua_token: <your token>
-  ams-node-controller:
     options:
       ua_token: <your token>
   lxd:

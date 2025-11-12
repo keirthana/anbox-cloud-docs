@@ -3,6 +3,16 @@
 
 This document contains a list of deprecation notices for Anbox Cloud and its components.
 
+## VM images
+*Deprecated in 1.28.0* ; *Unsupported in 1.30.0*
+
+The VM variant of Anbox images for all versions are deprecated  as of release 1.28.0. Use the container based images instead.
+
+## Bundles
+*Deprecated in 1.28.0* ; *Unsupported in 1.30.0*
+
+The bundles [Anbox Cloud](https://charmhub.io/anbox-cloud) and [Anbox Cloud Core](https://charmhub.io/anbox-cloud-core) are deprecated as of release 1.28.0.
+
 ## Android 12, Android 13, and AAOS 13
 *Deprecated in 1.27.1* ; *Unsupported in 1.29.0*
 

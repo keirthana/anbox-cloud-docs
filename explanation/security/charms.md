@@ -16,7 +16,6 @@ The following charms for Anbox Cloud make use of cryptographic technology for cr
 
 * [`ams`](https://charmhub.io/ams)
 * [`ams-lxd`](https://charmhub.io/ams-lxd)
-* [`ams-node-controller`](https://charmhub.io/ams-node-controller)
 * [`anbox-stream-gateway`](https://charmhub.io/anbox-stream-gateway)
 * [`anbox-stream-agent`](https://charmhub.io/anbox-stream-agent)
 * [`anbox-cloud-dashboard`](https://charmhub.io/anbox-cloud-dashboard)

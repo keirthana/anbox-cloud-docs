@@ -91,12 +91,12 @@ To upgrade all charms, run the following commands:
     juju refresh --channel=1.27/stable anbox-stream-gateway
     juju refresh --channel=1.27/stable anbox-stream-agent
     juju refresh --channel=1.27/stable coturn
-    juju refresh --channel=latest/stable nats
+    juju refresh --channel=2/stable nats
 
 ```{note}
 Since the NATS charm has been overhauled to use the modern charm framework (Ops Framework), a new charm source is needed to upgrade to its latest version. The charm source can be switched or replaced using the following command:
 
-    juju refresh nats --switch=nats  --channel=stable
+    juju refresh nats --switch=nats  --channel=2/stable
 ```
 
 ### Upgrade AMS
@@ -181,11 +181,10 @@ Finally after all the upgrades finish and the nodes are healthy, run:
 
 where `<node_name>` refers to the LXD node name stored within AMS.
 
-As a subordinate charm deployed alongside the LXD charm, and following the [deprecation of the node controller charm](https://documentation.ubuntu.com/anbox-cloud/reference/deprecation-notices/#node-controller-charm) in the Anbox Cloud 1.26.0 release, the node controller will no longer manage port forwarding for service exposure on Anbox instances.
+As a subordinate charm deployed alongside the LXD charm, and following the [deprecation of the node controller charm](https://documentation.ubuntu.com/anbox-cloud/reference/deprecation-notices/#node-controller-charm) in the Anbox Cloud 1.28.0 release is no longer supported, and has been removed from the release. Therefore, it should be removed from the deployment:
 
-For security reasons, any ports previously exposed by the node controller will be closed after upgrading it via:
-
-       juju refresh --channel=1.27/stable ams-node-controller
+       juju remove-relation ams-node-controller lxd
+       juju remove-application ams-node-controller --no-prompt
 
 If there is no need to expose services from Anbox instances, revokes the application's exposure to the public network after the AMS node controller is upgraded:
 

@@ -163,7 +163,7 @@ Once you create an instance by providing the necessary attributes, you can view 
 
 You can view details about a particular instance when you click on the instance name in the *Instances* list page. The instance details page offers three types of information: *Overview*, *Terminal*, and *Logs*.
 
-The *Overview* tab provides detailed information about the instance, including sections for the instance details, associated image or application, streaming configurations, network settings, and tags.
+The *Overview* tab provides detailed information about the instance, including sections for the instance details, associated image or application, streaming configurations, network settings, tags and security. In the security section you can enable the delete protection feature, to prevent instances from being accidentally deleted.
 
 The *Terminal* tab features a terminal interface for the Anbox instance, helping you to monitor system processes in real-time, check memory usage, view android and system logs, and much more.
 

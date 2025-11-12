@@ -23,6 +23,7 @@ Learn about applications, instances and more in Anbox Cloud and how to use them.
 * {ref}`howto-port-android-apps`
 * {ref}`howto-use-web-dashboard`
 * {ref}`howto-Android`
+* {ref}`howto-simulate-incoming-sms`
 
 ## Managing Anbox Cloud
 

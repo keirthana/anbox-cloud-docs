@@ -26,12 +26,19 @@ Understand the difference aspects of using Anbox Cloud such as requirements, sup
 * {ref}`ref-addon-manifest`
 * {ref}`ref-hooks`
 
+## Authorization
+
+Different levels of entitlements that can be assigned at a global level and at a resource level
+
+* {ref}`ref-auth`
+
 ## Configuration
 
 Know the configuration options that can be defined for various components of Anbox Cloud.
 
 * {ref}`Appliance preseed configuration <ref-appliance-preseed-config>`
 * {ref}`ref-ams-configuration`
+* {ref}`ref-ams-instance-configuration`
 * {ref}`Appliance configuration <ref-appliance-configuration>`
 * {ref}`ref-application-manifest`
 * {ref}`ref-feature-flags`
@@ -81,9 +88,11 @@ Also check out the {ref}`tutorials` for step-by-step instructions that help you 
 
 addon-manifest
 ams-configuration
+ams-instance-configuration
 Anbox Cloud images <provided-images>
 appliance-preseed
 appliance-configuration
+auth
 sdks
 api-reference/index.md
 application-manifest
