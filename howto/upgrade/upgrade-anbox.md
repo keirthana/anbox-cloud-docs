@@ -66,8 +66,8 @@ As a first step, upgrade all infrastructure components. This includes deployed i
 
 Upgrade easyrsa:
 
-    juju refresh internal-ca --channel=1.31/stable --revision=66
-    juju refresh etcd-ca --channel=1.31/stable --revision=66
+    juju refresh internal-ca --channel=1.33/stable --revision=74
+    juju refresh etcd-ca --channel=1.33/stable --revision=74
 
 ### Upgrade application registry
 
