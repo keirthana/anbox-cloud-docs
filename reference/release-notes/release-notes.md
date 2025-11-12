@@ -23,7 +23,7 @@ The following target dates for upcoming releases are not final and could vary de
 | Target date | Version | Planned updates |
 |----|----|----|
 | December 10, 2025 | Anbox Cloud 1.28.1 | * Android security updates<br/> * Bug fixes |
-| January 2026 | Anbox Cloud 1.28.2 | * Android security updated<br/> * Bug fixes |
+| January 21, 2026 | Anbox Cloud 1.28.2 | * Android security updated<br/> * Bug fixes |
 
 ## Release and support policy
 
