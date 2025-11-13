@@ -3,6 +3,18 @@
 
 As an Android application developer, you need access to the Android instance when developing and debugging applications. Depending on the kind of access you would like to the Android instance, you can use [anbox-connect](https://snapcraft.io/anbox-connect) to connect over the network from a remote machine or use {term}`anbox-shell` to connect from within the Anbox instance.
 
+Here's a video demonstration of how to access an Android instance securely using anbox-connect:
+
+```{raw} html
+<iframe width="640" height="360"
+        src="https://www.youtube.com/embed/bkmK2M9nlb4"
+        title="Debug an Android application with Android studio"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+</iframe>
+```
+
 This guide uses the Anbox Cloud Appliance to demonstrate both ways of connecting to an Android instance. So if you don't have an existing Anbox Cloud deployment already, first {ref}`install the appliance <tut-installing-appliance>`.
 
 ## Private access: Connect to the Android instance using anbox-shell
