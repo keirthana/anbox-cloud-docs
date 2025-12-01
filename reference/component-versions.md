@@ -5,6 +5,84 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, they are marked with `n/a` below.
 
+## 1.28.1
+
+### Charms
+
+#### Ubuntu 22.04
+
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|----------|--------------|--------------|-------------|---------|
+| `anbox-cloud-dashboard` | `1.28/stable` |  |  |  |
+| `coturn` | `1.28/stable` | 1087 | 1088 |  |
+| `ams` | `1.28/stable` | 1282 | 1283 |  |
+| `anbox-stream-gateway` | `1.28/stable` | 1206 | 1207 |  |
+| `ams-lxd` | `1.28/stable` | 1170 | 1171 |  |
+| `lxd-integrator` | `1.28/stable` | 565 | 566 |  |
+| `anbox-stream-agent` | `1.28/stable` | 1199 | 1200 |  |
+| `aar` | `1.28/stable` | 1270 | 1271 |  |
+| `anbox-cloud-cos-configuration` | `1.28/stable` | 397 | 398 |  |
+
+
+#### Ubuntu 24.04
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|----------|--------------|--------------|-------------|---------|
+| `anbox-cloud-dashboard` | `1.28/stable` |  |  |  |
+| `coturn` | `1.28/stable` |  |  |  |
+| `ams` | `1.28/stable` |  |  |  |
+| `anbox-stream-gateway` | `1.28/stable` |  |  |  |
+| `ams-lxd` | `1.28/stable` |  |  |  |
+| `lxd-integrator` | `1.28/stable` |  |  |  |
+| `anbox-stream-agent` | `1.28/stable` |  |  |  |
+| `aar` | `1.28/stable` |  |  |  |
+| `anbox-cloud-cos-configuration` | `1.28/stable` |  |  |  |
+
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.28/stable` |  |
+| `anbox-cloud-core` | `1.28/stable` |  |
+
+
+### Snaps
+
+| Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
+|------|---------|------------------|------------------|---------|
+| `ams` | `1.28/stable` |  |  |  |
+| `ams-node-controller` | `1.28/stable` |  |  |  |
+| `amc` | `latest/stable` |  |  |  |
+| `aar` | `1.28/stable` |  |  |  |
+| `anbox-stream-agent` | `1.28/stable` |  |  |  |
+| `anbox-stream-gateway` | `1.28/stable` |  |  |  |
+| `anbox-cloud-appliance` | `1.28/stable` |  |  |  |
+| `anbox-cloud-dashboard` | `1.28/stable`|  |  |  |
+| `anbox-connect` | `latest/stable` |  |  |  |
+
+### Anbox images
+
+The following Anbox images are available in two variants: one based on a container and one based on a virtual machine.
+
+| Name | Version |
+|----------|--------------|
+| `jammy:aaos15:amd64`    |  |
+| `jammy:aaos15:arm64`    |  |
+| `jammy:android15:amd64` |  |
+| `jammy:android15:arm64` |  |
+| `jammy:aaos14:amd64`    |  |
+| `jammy:aaos14:arm64`    |  |
+| `jammy:android14:amd64` |  |
+| `jammy:android14:arm64` |  |
+| `jammy:aaos13:amd64`    |  |
+| `jammy:aaos13:arm64`    |  |
+| `jammy:android13:amd64` |  |
+| `jammy:android13:arm64` |  |
+| `jammy:android12:amd64` |  |
+| `jammy:android12:arm64` |  |
+
 ## 1.28.0
 
 ### Charms
