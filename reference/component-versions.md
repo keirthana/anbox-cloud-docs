@@ -15,14 +15,14 @@ Not all components are updated with each release. When components are not update
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |----------|--------------|--------------|-------------|---------|
 | `anbox-cloud-dashboard` | `1.28/stable` |  |  |  |
-| `coturn` | `1.28/stable` | 1087 | 1088 |  |
-| `ams` | `1.28/stable` | 1282 | 1283 |  |
-| `anbox-stream-gateway` | `1.28/stable` | 1206 | 1207 |  |
-| `ams-lxd` | `1.28/stable` | 1170 | 1171 |  |
-| `lxd-integrator` | `1.28/stable` | 565 | 566 |  |
-| `anbox-stream-agent` | `1.28/stable` | 1199 | 1200 |  |
-| `aar` | `1.28/stable` | 1270 | 1271 |  |
-| `anbox-cloud-cos-configuration` | `1.28/stable` | 397 | 398 |  |
+| `coturn` | `1.28/stable` |  |  |  |
+| `ams` | `1.28/stable` |  |  |  |
+| `anbox-stream-gateway` | `1.28/stable` |  |  |  |
+| `ams-lxd` | `1.28/stable` |  |  |  |
+| `lxd-integrator` | `1.28/stable` |  |  |  |
+| `anbox-stream-agent` | `1.28/stable` |  |  |  |
+| `aar` | `1.28/stable` |  |  |  |
+| `anbox-cloud-cos-configuration` | `1.28/stable` |  |  |  |
 
 
 #### Ubuntu 24.04
