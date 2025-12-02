@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
     - name: Check out repository
-      uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+      uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
     - name: Set up Anbox Cloud
       uses: canonical/anbox-cloud-github-action@ef0690184b1c8fd11e3385669726297bc2e3d368
       with:
@@ -42,7 +42,7 @@ jobs:
         sudo anbox-cloud-appliance generate documentation -f markdown -d "${SNAP_DOCS_DIR}"
         cp -r "${SNAP_DOCS_DIR}"/* "${APPLIANCE_COMMAND_REFERENCE_DIR}"
     - name: Create pull request
-      uses: canonical/create-pull-request@689b0c2254a9a734d05d84509e890c4211a8c6c6
+      uses: canonical/create-pull-request@f30a0c4565ed0df1dfc5379c57e9a478bded4159
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "feat: update command reference documentation from ${{ steps.snap_version.outputs.value }}"
