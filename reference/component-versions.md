@@ -52,15 +52,15 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |------|---------|------------------|------------------|---------|
-| `ams` | `1.28/stable` |  |  |  |
-| `ams-node-controller` | `1.28/stable` |  |  |  |
-| `amc` | `latest/stable` |  |  |  |
-| `aar` | `1.28/stable` |  |  |  |
-| `anbox-stream-agent` | `1.28/stable` |  |  |  |
-| `anbox-stream-gateway` | `1.28/stable` |  |  |  |
-| `anbox-cloud-appliance` | `1.28/stable` |  |  |  |
-| `anbox-cloud-dashboard` | `1.28/stable`|  |  |  |
-| `anbox-connect` | `latest/stable` |  |  |  |
+| `ams` | `1.28/candidate` | 2630 | 2631 | `1.28.1-7ada3cf56` |
+| `ams-node-controller` | `1.28/candidate` | 2207 | 2208 | `1.28.1-7ada3cf56` |
+| `amc` | `latest/candidate` | 2426 | 2427 | `1.28.1-7ada3cf56` |
+| `aar` | `1.28/candidate` | 2580 | 2581 | `1.28.1-7ada3cf56` |
+| `anbox-stream-agent` | `1.28/candidate` | 2850 | 2851 | `1.28.1-7ada3cf56` |
+| `anbox-stream-gateway` | `1.28/candidate` | 2816 | 2817 | `1.28.1-7ada3cf56` |
+| `anbox-cloud-appliance` | `1.28/candidate` | 2492 | 2493 | `1.28.1-7ada3cf56` |
+| `anbox-cloud-dashboard` | `1.28/candidate` | 4319 | 4320 | `1.28.1-7ada3cf56` |
+| `anbox-connect` | `latest/candidate` | 1644 | 1645 | `1.28.1-7ada3cf56` |
 
 ### Anbox images
 
