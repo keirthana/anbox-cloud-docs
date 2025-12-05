@@ -14,38 +14,38 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |----------|--------------|--------------|-------------|---------|
-| `anbox-cloud-dashboard` | `1.28/stable` |  |  |  |
-| `coturn` | `1.28/stable` |  |  |  |
-| `ams` | `1.28/stable` |  |  |  |
-| `anbox-stream-gateway` | `1.28/stable` |  |  |  |
-| `ams-lxd` | `1.28/stable` |  |  |  |
-| `lxd-integrator` | `1.28/stable` |  |  |  |
-| `anbox-stream-agent` | `1.28/stable` |  |  |  |
-| `aar` | `1.28/stable` |  |  |  |
-| `anbox-cloud-cos-configuration` | `1.28/stable` |  |  |  |
+| `anbox-cloud-dashboard` | `1.28/stable` | 1142 | 1143 | `1.28.1-0d1153d` |
+| `coturn` | `1.28/stable` | 1111 | 1112 | `1.28.1-0d1153d` |
+| `ams` | `1.28/stable` | 1314 | 1315 | `1.28.1-0d1153d` |
+| `anbox-stream-gateway` | `1.28/stable` | 1234 | 1235 | `1.28.1-0d1153d` |
+| `ams-lxd` | `1.28/stable` | 1198 | 1199 | `1.28.1-0d1153d` |
+| `lxd-integrator` | `1.28/stable` | 589 | 590 | `1.28.1-0d1153d` |
+| `anbox-stream-agent` | `1.28/stable` | 1227 | 1228 | `1.28.1-0d1153d` |
+| `aar` | `1.28/stable` | 1309 | 1310 | `1.28.1-0d1153d` |
+| `anbox-cloud-cos-configuration` | `1.28/stable` | 426 | 427 | `1.28.1-0d1153d` |
 
 
 #### Ubuntu 24.04
 
 | Name | Channel | Revision (AMD64) | Revision (ARM64) | Version |
 |----------|--------------|--------------|-------------|---------|
-| `anbox-cloud-dashboard` | `1.28/stable` |  |  |  |
-| `coturn` | `1.28/stable` |  |  |  |
-| `ams` | `1.28/stable` |  |  |  |
-| `anbox-stream-gateway` | `1.28/stable` |  |  |  |
-| `ams-lxd` | `1.28/stable` |  |  |  |
-| `lxd-integrator` | `1.28/stable` |  |  |  |
-| `anbox-stream-agent` | `1.28/stable` |  |  |  |
-| `aar` | `1.28/stable` |  |  |  |
-| `anbox-cloud-cos-configuration` | `1.28/stable` |  |  |  |
+| `anbox-cloud-dashboard` | `1.28/stable` | 1144 | 1145 | `1.28.1-0d1153d` |
+| `coturn` | `1.28/stable` | 1113 | 1114 | `1.28.1-0d1153d` |
+| `ams` | `1.28/stable` | 1316 | 1317 | `1.28.1-0d1153d` |
+| `anbox-stream-gateway` | `1.28/stable` | 1236 | 1237 | `1.28.1-0d1153d` |
+| `ams-lxd` | `1.28/stable` | 1200 | 1201 | `1.28.1-0d1153d` |
+| `lxd-integrator` | `1.28/stable` | 591 | 592 | `1.28.1-0d1153d` |
+| `anbox-stream-agent` | `1.28/stable` | 1229 | 1230 | `1.28.1-0d1153d` |
+| `aar` | `1.28/stable` | 1311 | 1312 | `1.28.1-0d1153d` |
+| `anbox-cloud-cos-configuration` | `1.28/stable` | 428 | 429 | `1.28.1-0d1153d` |
 
 
 ### Bundles
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.28/stable` |  |
-| `anbox-cloud-core` | `1.28/stable` |  |
+| `anbox-cloud` | `1.28/stable` | 899 |
+| `anbox-cloud-core` | `1.28/stable` | 909 |
 
 
 ### Snaps
