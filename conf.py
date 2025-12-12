@@ -179,7 +179,7 @@ slug = 'anbox-cloud'
 # Base URL of RTD hosted project
 # Include the trailing slash in the URL, it makes a difference
 
-html_baseurl = 'https://canonical.com/anbox-cloud/docs'
+html_baseurl = 'https://documentation.ubuntu.com/anbox-cloud/'
 
 # URL scheme; {link} is the default configuration
 
